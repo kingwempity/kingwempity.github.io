@@ -13,6 +13,109 @@
       </tags>
   </entry>
   <entry>
+    <title>Python从入门到实践</title>
+    <url>/2024/01/21/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/</url>
+    <content><![CDATA[<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="概念定义"><a href="#概念定义" class="headerlink" title="概念定义"></a>概念定义</h3><blockquote>
+<p>字符串是一系列字符</p>
+</blockquote>
+<h3 id="使用字符串"><a href="#使用字符串" class="headerlink" title="使用字符串"></a>使用字符串</h3><blockquote>
+<ol>
+<li>字符串元素的大小写</li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">name=<span class="string">&quot;Ada Lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br><span class="line"><span class="built_in">print</span>(name.title())<span class="comment">#首字母大写</span></span><br><span class="line"><span class="built_in">print</span>(name.upper())<span class="comment">#所有字母大写</span></span><br><span class="line"><span class="built_in">print</span>(name.lower())<span class="comment">#所有字母小写</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Ada Lovelace</span><br><span class="line">Ada Lovelace</span><br><span class="line">ADA LOVELACE</span><br><span class="line">ada lovelace</span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li><p>删除字符串空白</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;language=<span class="string">&#x27; python </span></span><br><span class="line"><span class="string">&gt;&gt;&gt;language</span></span><br><span class="line"><span class="string">&#x27;</span> python <span class="string">&#x27;</span></span><br><span class="line"><span class="string">&gt;&gt;&gt;language.lstrip()#删除左端空白</span></span><br><span class="line"><span class="string">&#x27;</span>python <span class="string">&#x27;</span></span><br><span class="line"><span class="string">&gt;&gt;&gt;language.rstrip()#删除右端空白</span></span><br><span class="line"><span class="string">&#x27;</span> python<span class="string">&#x27;</span></span><br><span class="line"><span class="string">&gt;&gt;&gt;language.strip()#删除左右两端空白</span></span><br><span class="line"><span class="string">&#x27;</span>python<span class="string">&#x27;</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>删除前缀</p>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt;nostarch_url=<span class="string">&quot;https://nostarch.com&quot;</span></span><br><span class="line">&gt;&gt;&gt;nostarch_url.removeprefix(<span class="string">&#x27;https://&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;nostarch.com&#x27;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="概念定义-1"><a href="#概念定义-1" class="headerlink" title="概念定义"></a>概念定义</h3><blockquote>
+<p>列表(list)是由一系列按照特定顺序排列的元素组成</p>
+</blockquote>
+<h3 id="访问列表元素"><a href="#访问列表元素" class="headerlink" title="访问列表元素"></a>访问列表元素</h3><blockquote>
+<ol>
+<li>利用元素的索引来访问元素值</li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">bicycles=[<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(bicycles[-<span class="number">1</span>])</span><br><span class="line">messages=<span class="string">f&quot;My first bicycle was a <span class="subst">&#123;bicycles[<span class="number">0</span>].title()&#125;</span>&quot;</span><span class="string">&#x27;&#x27;&#x27;在字符串中插入变量的值，使用f字符串，f为format的简写，Python通过把花括号的变量替换成变量的值来设置字符串的格式&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(messages)</span><br><span class="line"><span class="comment">#列表元素的索引是从0开始</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;列表元素索引为3的元素为specialized,而不是redline&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;索引-1表示列表的最后一个元素&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment">#bicycles[0]为对象；title()为方法即函数；</span></span><br><span class="line"><span class="comment">#bicycles[0].title()为对象调用title()方法的形式</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">trek</span><br><span class="line">specialized</span><br><span class="line">specialized</span><br><span class="line">My first bicyvle was a Trek</span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li>修改列表元素</li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#motorcycles.py</span></span><br><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"></span><br><span class="line">motorcycles[<span class="number">0</span>]=<span class="string">&#x27;ducati&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;ducati&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br></pre></td></tr></table></figure></div>
+
+<ol start="3">
+<li>添加列表元素</li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#motorcycles.py</span></span><br><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"></span><br><span class="line">motorcycles.append(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br></pre></td></tr></table></figure></div>
+
+<ol start="4">
+<li><p>删除列表元素</p>
+<ul>
+<li><p>使用del语句删除列表元素</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#motorcycles.py</span></span><br><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>使用pop()方法删除列表元素，并返回删除值</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#motorcycles.py</span></span><br><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"></span><br><span class="line">motorcycle=motorcycles.pop(<span class="number">0</span>)<span class="comment">#括号内为标索引则默认删除最后一个元素，并将其返回</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;The first motorcycle I woned was a <span class="subst">&#123;motorcycle.title()&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;,&#x27;yamaha&#x27;,&#x27;suzuki&#x27;]</span><br><span class="line">The first motorcycle I woned was a honda.</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>根据值删除元素</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line">too_expensive=<span class="string">&#x27;ducati&#x27;</span></span><br><span class="line">mororcycles.remove(too_expensive)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\nA <span class="subst">&#123;too_expensive.title()&#125;</span> is too expensive for me!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"></span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</li>
+<li><p>使用sort()方法对列表进行永久排序</p>
+<ul>
+<li>正序(字母表)</li>
+</ul>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#cars.py</span></span><br><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">cars.sort()</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>]</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>反序(反字母表)</li>
+</ul>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#cars.py</span></span><br><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">cars.sort(reverse==<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>,<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>]</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>使用sorted()方法对列表进行临时排序</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#cars.py</span></span><br><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Here is the orignal list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Here is the sorted list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(cars))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(cars,reverse==<span class="literal">True</span>))</span><br><span class="line"></span><br><span class="line">pritn(<span class="string">&quot;Here is the orignal list agin:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Here is the orignal list:</span><br><span class="line">[<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">Here is the sorted list:</span><br><span class="line">[<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>,<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>]</span><br><span class="line">Here is the orignal list agin:</span><br><span class="line">[<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>反向打印列表</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#cars.py</span></span><br><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line"></span><br><span class="line">cars.reverse()</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">[<span class="string">&#x27;subaru&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;bmw&#x27;</span>]</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>使用len()方法列表长度</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#cars.py</span></span><br><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">len</span>(cars)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>-python -learning -记录 -笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++小型公司工资管理系统</title>
     <url>/2024/01/17/%E5%B0%8F%E5%9E%8B%E5%85%AC%E5%8F%B8%E5%B7%A5%E8%B5%84%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fcpp/</url>
     <content><![CDATA[<h2 id="课题要求"><a href="#课题要求" class="headerlink" title="课题要求"></a>课题要求</h2><p>“小型公司工资管理系统设计”</p>

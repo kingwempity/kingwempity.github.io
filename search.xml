@@ -76,7 +76,7 @@
 <li><p>根据值删除元素</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line">too_expensive=<span class="string">&#x27;ducati&#x27;</span></span><br><span class="line">mororcycles.remove(too_expensive)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\nA <span class="subst">&#123;too_expensive.title()&#125;</span> is too expensive for me!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"></span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">        </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 <li><p>使用sort()方法对列表进行永久排序</p>
@@ -111,8 +111,13 @@
 </ol>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>Languages</category>
+      </categories>
       <tags>
-        <tag>-python -learning -记录 -笔记</tag>
+        <tag>python</tag>
+        <tag>Learn</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>

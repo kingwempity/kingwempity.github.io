@@ -30,7 +30,7 @@
 <meta property="og:description" content="Python学习笔记">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-21T02:12:16.000Z">
-<meta property="article:modified_time" content="2024-01-21T07:09:05.070Z">
+<meta property="article:modified_time" content="2024-01-22T07:30:39.761Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="Learn">
@@ -548,8 +548,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-01-21 15:09:05</span>
-            <span class="mobile">2024-01-21 15:09:05</span>
+            <span class="desktop">2024-01-22 15:30:39</span>
+            <span class="mobile">2024-01-22 15:30:39</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -595,12 +595,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>10 Mins</span>
         </span>
     
     
@@ -680,7 +680,7 @@
 <li><p>根据值删除元素</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line">too_expensive=<span class="string">&#x27;ducati&#x27;</span></span><br><span class="line">mororcycles.remove(too_expensive)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\nA <span class="subst">&#123;too_expensive.title()&#125;</span> is too expensive for me!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">          </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">            </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 <li><p>使用sort()方法对列表进行永久排序</p>
@@ -779,10 +779,89 @@
 
 <ol start="6">
 <li><p>遍历切片</p>
-<p><strong>敬请T期待！</strong></p>
+<p>​		遍历列表中的部分元素，在for循环中使用列表切片。</p>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#players.py</span></span><br><span class="line">players = [<span class="string">&#x27;charles&#x27;</span>,<span class="string">&#x27;martina&#x27;</span>,<span class="string">&#x27;michael&#x27;</span>,<span class="string">&#x27;florence&#x27;</span>,<span class="string">&#x27;eil&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Here is the first three player on my team:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> player <span class="keyword">in</span> players[:<span class="number">3</span>]:<span class="comment">#只遍历前三名队员</span></span><br><span class="line">    <span class="built_in">print</span>(player.title())</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Here  is the first three player on my team:</span><br><span class="line">Charles</span><br><span class="line">Martina</span><br><span class="line">Michael</span><br></pre></td></tr></table></figure></div>
+
+<ol start="7">
+<li><p>复制列表</p>
+<p>​		复制列表，可以创建一个包含整个列表的切片，方法是同时省略起始索引和终止索引([:])。让Python创建一个起始于第一个元素，终止于最后一个元素的切片，即复制整个列表。</p>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#food.py</span></span><br><span class="line">my_foods=[<span class="string">&#x27;pizza&#x27;</span>,<span class="string">&#x27;falafel&#x27;</span>,<span class="string">&#x27;carrot cake&#x27;</span>]</span><br><span class="line">friend_foods=my_foods[:]<span class="comment">#[:]不能省略，此时是将my_foods的副本赋给friend_foods。</span></span><br><span class="line"><span class="comment">#如若是friend_foods=my_foods则是将my_foods赋值给friend_foods，两个指向同一个列表。</span></span><br><span class="line"></span><br><span class="line">my_foods.append(<span class="string">&#x27;cannoli&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;My favorite foods are:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(my_foods)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;My friend favorite foods are:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(friend_foods)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">My favorite foods are:</span><br><span class="line">[<span class="string">&#x27;pizza&#x27;</span>,<span class="string">&#x27;falafel&#x27;</span>,<span class="string">&#x27;carrot cake&#x27;</span>,<span class="string">&#x27;cannoli&#x27;</span>]</span><br><span class="line">My friend favorite foods are:</span><br><span class="line">[<span class="string">&#x27;pizza&#x27;</span>,<span class="string">&#x27;falafel&#x27;</span>,<span class="string">&#x27;carrot cake&#x27;</span>]</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><blockquote>
+<ol>
+<li><p><strong>元组定义概念</strong></p>
+<p>​		不可变的列表即为元组（tuple)</p>
+</li>
+<li><p>操作元组</p>
+<ul>
+<li><p>定义元组</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(dimensions[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(dimensions[<span class="number">1</span>])</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">200</span><br><span class="line">50</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>​	遍历元组</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions =(<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">200</span><br><span class="line">50</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>修改元组的值</p>
+<p>​	元组的元素是无法被修改的，但是可以给表示元组的变量进行赋值，重新定义元组</p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Orignal dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br><span class="line"></span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nModified dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Orignal dimensions:</span><br><span class="line">200</span><br><span class="line">50</span><br><span class="line"></span><br><span class="line">Modified dimensions:</span><br><span class="line">400</span><br><span class="line">100</span><br></pre></td></tr></table></figure></div></li>
+</ul>
 </li>
 </ol>
 </blockquote>
+<h2 id="条件判度if语句"><a href="#条件判度if语句" class="headerlink" title="条件判度if语句"></a>条件判度if语句</h2><h3 id="测试一个条件"><a href="#测试一个条件" class="headerlink" title="测试一个条件"></a>测试一个条件</h3><blockquote>
+<p>只适用仅有一个条件满足的情况</p>
+</blockquote>
+<ul>
+<li><p>if语句</p>
+<blockquote>
+<p>if 条件为true,执行后续程序；条件为false,跳出判断后续代码；</p>
+</blockquote>
+</li>
+<li><p>if-else语句</p>
+<blockquote>
+<p>if条件为true,执行if后面程序，否则执行else后面程序</p>
+</blockquote>
+</li>
+<li><p>if-elif-else语句</p>
+<blockquote>
+<p>if 条件为true，执行if后面程序，程序完成跳出条件判断，否则执行elif 判断条件，当条件为true时，执行elif后续程序，程序代码完成跳出判断，否则执行else后面程序代码，执行完成跳出条件判断</p>
+</blockquote>
+</li>
+<li><p>if-elif-elif语句</p>
+</li>
+</ul>
+<h3 id="测试多个条件"><a href="#测试多个条件" class="headerlink" title="测试多个条件"></a>测试多个条件</h3><blockquote>
+<p>需要测试多个条件是否满足的情况</p>
+</blockquote>
+<ul>
+<li>if-if-if</li>
+</ul>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="概念定义-2"><a href="#概念定义-2" class="headerlink" title="概念定义"></a>概念定义</h3><blockquote>
+<p>字典（dictionary)是一系列键值对。每一个键都与值关联，可以使用键来访问相关连的值。在Python中字典用放在花括号“{}”中的一系列键值对来表示的。</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#aline.py</span></span><br><span class="line">aline_0 = &#123;<span class="string">&#x27;color&#x27;</span>:<span class="string">&#x27;green&#x27;</span>;<span class="string">&#x27;points&#x27;</span>:<span class="number">5</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(aline_0[<span class="string">&#x27;color&#x27;</span>])</span><br><span class="line">new_points = cline_0[<span class="string">&#x27;points&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;You just earned <span class="subst">&#123;new_points&#125;</span> points!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">green</span><br><span class="line">You just earned 5 points!</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>敬请T期待！！</p>
 
         </div>
 
@@ -797,7 +876,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-01-21 15:09:05
+                    :</strong> 2024-01-22 15:30:39
             </li>
         
         <li>

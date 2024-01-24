@@ -1,76 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2024-计划书单</title>
-    <url>/2024/01/23/2024-%E8%AE%A1%E5%88%92%E4%B9%A6%E5%8D%95/</url>
-    <content><![CDATA[<h2 id="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"><a href="#预祝新的一年你会有更多的属于自己的时刻！❀❀❀" class="headerlink" title="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"></a>预祝新的一年你会有更多的属于自己的时刻！❀❀❀</h2><h3 id="《家山》-王跃文"><a href="#《家山》-王跃文" class="headerlink" title="《家山》-王跃文"></a>《家山》-王跃文</h3><ul>
-<li><p><input disabled="" type="checkbox"> 
-looking forward to </p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-reading </p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-over</p>
-</li>
-</ul>
-<blockquote>
-<p>每一个人心中都会有一座属于自己的家山。</p>
-</blockquote>
-<h3 id="《且听风吟》-村上春树"><a href="#《且听风吟》-村上春树" class="headerlink" title="《且听风吟》-村上春树"></a>《且听风吟》-村上春树</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>这世间，中有一个人懂你，让你抿起嘴，想念时流下眼泪。那些曾以为走不出的日子，现在都回不去了。~</p>
-</blockquote>
-<h3 id="《1973年的弹子球》-村上春树"><a href="#《1973年的弹子球》-村上春树" class="headerlink" title="《1973年的弹子球》-村上春树"></a>《1973年的弹子球》-村上春树</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>长大，或许就是终有一天你会知道，有些事物，当它从我们的生命中遗落时，就已经无法寻回。</p>
-</blockquote>
-<h3 id="《寻羊冒险记》-村上春树"><a href="#《寻羊冒险记》-村上春树" class="headerlink" title="《寻羊冒险记》-村上春树"></a>《寻羊冒险记》-村上春树</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>我喜欢我的懦弱，痛苦和难堪也喜欢，喜欢夏天的光照，风的气息，蝉的鸣叫，我喜欢这些，喜欢的不得了。</p>
-</blockquote>
-<h3 id="《了不起的盖茨比》-译村上春树"><a href="#《了不起的盖茨比》-译村上春树" class="headerlink" title="《了不起的盖茨比》-译村上春树"></a>《了不起的盖茨比》-译村上春树</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>这个世界，并不是所有人，都拥有你的那些优势。</p>
-</blockquote>
-<h3 id="《蛤蟆先生看心理医生》"><a href="#《蛤蟆先生看心理医生》" class="headerlink" title="《蛤蟆先生看心理医生》"></a>《蛤蟆先生看心理医生》</h3><ul>
-<li><input disabled="" type="checkbox"> looking forward to</li>
-<li><input checked="" disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>能帮助你的人，只有你自己的。请相信，你可以完成这一切的，你并不是自以为的那样弱小。</p>
-</blockquote>
-<h3 id="《The-Wind-in-the-Willows》《柳林风声》"><a href="#《The-Wind-in-the-Willows》《柳林风声》" class="headerlink" title="《The Wind in the Willows》《柳林风声》"></a>《The Wind in the Willows》《柳林风声》</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>关于四个小动物之间的友情陪伴和共同冒险的人生故事，蛤蟆先生的原型。</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>-2024 -书单 -Love -Book</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Open new world</title>
     <url>/2024/01/13/Open-new-world/</url>
     <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
@@ -149,7 +79,7 @@ over</p>
 <li><p>根据值删除元素</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line">too_expensive=<span class="string">&#x27;ducati&#x27;</span></span><br><span class="line">mororcycles.remove(too_expensive)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\nA <span class="subst">&#123;too_expensive.title()&#125;</span> is too expensive for me!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">                </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">                  </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 <li><p>使用sort()方法对列表进行永久排序</p>
@@ -286,9 +216,9 @@ over</p>
 <p>​	元组的元素是无法被修改的，但是可以给表示元组的变量进行赋值，重新定义元组</p>
 </li>
 </ul>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Orignal dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br><span class="line">          </span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nModified dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Orignal dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br><span class="line">               </span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nModified dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Orignal dimensions:</span><br><span class="line">200</span><br><span class="line">50</span><br><span class="line">          </span><br><span class="line">Modified dimensions:</span><br><span class="line">400</span><br><span class="line">100</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Orignal dimensions:</span><br><span class="line">200</span><br><span class="line">50</span><br><span class="line">               </span><br><span class="line">Modified dimensions:</span><br><span class="line">400</span><br><span class="line">100</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 </ol>
@@ -401,7 +331,6 @@ over</p>
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">The following languages have been mentioned:</span><br><span class="line">Python</span><br><span class="line">C</span><br><span class="line">Ruby</span><br></pre></td></tr></table></figure></div>
 
 <p>敬请T期待！</p>
-<h2 id="附上阅读书籍PDF链接"><a href="#附上阅读书籍PDF链接" class="headerlink" title="附上阅读书籍PDF链接"></a>附上阅读书籍PDF链接</h2><p> <a href="......%5CUniversity%5C%E4%B9%A6%E7%B1%8D%E8%B5%84%E6%96%99%5CPython%5CPython%E7%BC%96%E7%A8%8B%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5__%E8%B6%85%E6%B8%85%E7%89%88.PDF">Python编程：从入门到实践__超清版.PDF</a> </p>
 ]]></content>
       <categories>
         <category>Languages</category>
@@ -410,6 +339,76 @@ over</p>
         <tag>python</tag>
         <tag>Learn</tag>
         <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2024-计划书单</title>
+    <url>/2024/01/23/2024-%E8%AE%A1%E5%88%92%E4%B9%A6%E5%8D%95/</url>
+    <content><![CDATA[<h2 id="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"><a href="#预祝新的一年你会有更多的属于自己的时刻！❀❀❀" class="headerlink" title="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"></a>预祝新的一年你会有更多的属于自己的时刻！❀❀❀</h2><h3 id="《家山》-王跃文"><a href="#《家山》-王跃文" class="headerlink" title="《家山》-王跃文"></a>《家山》-王跃文</h3><ul>
+<li><p><input disabled="" type="checkbox"> 
+looking forward to </p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+reading </p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+over</p>
+</li>
+</ul>
+<blockquote>
+<p>每一个人心中都会有一座属于自己的家山。</p>
+</blockquote>
+<h3 id="《且听风吟》-村上春树"><a href="#《且听风吟》-村上春树" class="headerlink" title="《且听风吟》-村上春树"></a>《且听风吟》-村上春树</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>这世间，中有一个人懂你，让你抿起嘴，想念时流下眼泪。那些曾以为走不出的日子，现在都回不去了。~</p>
+</blockquote>
+<h3 id="《1973年的弹子球》-村上春树"><a href="#《1973年的弹子球》-村上春树" class="headerlink" title="《1973年的弹子球》-村上春树"></a>《1973年的弹子球》-村上春树</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>长大，或许就是终有一天你会知道，有些事物，当它从我们的生命中遗落时，就已经无法寻回。</p>
+</blockquote>
+<h3 id="《寻羊冒险记》-村上春树"><a href="#《寻羊冒险记》-村上春树" class="headerlink" title="《寻羊冒险记》-村上春树"></a>《寻羊冒险记》-村上春树</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>我喜欢我的懦弱，痛苦和难堪也喜欢，喜欢夏天的光照，风的气息，蝉的鸣叫，我喜欢这些，喜欢的不得了。</p>
+</blockquote>
+<h3 id="《了不起的盖茨比》-译村上春树"><a href="#《了不起的盖茨比》-译村上春树" class="headerlink" title="《了不起的盖茨比》-译村上春树"></a>《了不起的盖茨比》-译村上春树</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>这个世界，并不是所有人，都拥有你的那些优势。</p>
+</blockquote>
+<h3 id="《蛤蟆先生看心理医生》"><a href="#《蛤蟆先生看心理医生》" class="headerlink" title="《蛤蟆先生看心理医生》"></a>《蛤蟆先生看心理医生》</h3><ul>
+<li><input disabled="" type="checkbox"> looking forward to</li>
+<li><input checked="" disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>能帮助你的人，只有你自己的。请相信，你可以完成这一切的，你并不是自以为的那样弱小。</p>
+</blockquote>
+<h3 id="《The-Wind-in-the-Willows》《柳林风声》"><a href="#《The-Wind-in-the-Willows》《柳林风声》" class="headerlink" title="《The Wind in the Willows》《柳林风声》"></a>《The Wind in the Willows》《柳林风声》</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>关于四个小动物之间的友情陪伴和共同冒险的人生故事，蛤蟆先生的原型。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>-2024 -书单 -Love -Book</tag>
       </tags>
   </entry>
   <entry>

@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2024-计划书单</title>
+    <url>/2024/01/23/2024-%E8%AE%A1%E5%88%92%E4%B9%A6%E5%8D%95/</url>
+    <content><![CDATA[<h2 id="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"><a href="#预祝新的一年你会有更多的属于自己的时刻！❀❀❀" class="headerlink" title="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"></a>预祝新的一年你会有更多的属于自己的时刻！❀❀❀</h2><h3 id="《家山》-王跃文"><a href="#《家山》-王跃文" class="headerlink" title="《家山》-王跃文"></a>《家山》-王跃文</h3><ul>
+<li><p><input disabled="" type="checkbox"> 
+looking forward to </p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+reading </p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+over</p>
+</li>
+</ul>
+<blockquote>
+<p>每一个人心中都会有一座属于自己的家山。</p>
+</blockquote>
+<h3 id="《且听风吟》-村上春树"><a href="#《且听风吟》-村上春树" class="headerlink" title="《且听风吟》-村上春树"></a>《且听风吟》-村上春树</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>这世间，中有一个人懂你，让你抿起嘴，想念时流下眼泪。那些曾以为走不出的日子，现在都回不去了。~</p>
+</blockquote>
+<h3 id="《1973年的弹子球》-村上春树"><a href="#《1973年的弹子球》-村上春树" class="headerlink" title="《1973年的弹子球》-村上春树"></a>《1973年的弹子球》-村上春树</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>长大，或许就是终有一天你会知道，有些事物，当它从我们的生命中遗落时，就已经无法寻回。</p>
+</blockquote>
+<h3 id="《寻羊冒险记》-村上春树"><a href="#《寻羊冒险记》-村上春树" class="headerlink" title="《寻羊冒险记》-村上春树"></a>《寻羊冒险记》-村上春树</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>我喜欢我的懦弱，痛苦和难堪也喜欢，喜欢夏天的光照，风的气息，蝉的鸣叫，我喜欢这些，喜欢的不得了。</p>
+</blockquote>
+<h3 id="《了不起的盖茨比》-译村上春树"><a href="#《了不起的盖茨比》-译村上春树" class="headerlink" title="《了不起的盖茨比》-译村上春树"></a>《了不起的盖茨比》-译村上春树</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>这个世界，并不是所有人，都拥有你的那些优势。</p>
+</blockquote>
+<h3 id="《蛤蟆先生看心理医生》"><a href="#《蛤蟆先生看心理医生》" class="headerlink" title="《蛤蟆先生看心理医生》"></a>《蛤蟆先生看心理医生》</h3><ul>
+<li><input disabled="" type="checkbox"> looking forward to</li>
+<li><input checked="" disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>能帮助你的人，只有你自己的。请相信，你可以完成这一切的，你并不是自以为的那样弱小。</p>
+</blockquote>
+<h3 id="《The-Wind-in-the-Willows》《柳林风声》"><a href="#《The-Wind-in-the-Willows》《柳林风声》" class="headerlink" title="《The Wind in the Willows》《柳林风声》"></a>《The Wind in the Willows》《柳林风声》</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
+<li><input disabled="" type="checkbox"> reading</li>
+<li><input disabled="" type="checkbox"> over</li>
+</ul>
+<blockquote>
+<p>关于四个小动物之间的友情陪伴和共同冒险的人生故事，蛤蟆先生的原型。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>-2024 -书单 -Love -Book</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Open new world</title>
     <url>/2024/01/13/Open-new-world/</url>
     <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
@@ -79,7 +149,7 @@
 <li><p>根据值删除元素</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line">too_expensive=<span class="string">&#x27;ducati&#x27;</span></span><br><span class="line">mororcycles.remove(too_expensive)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\nA <span class="subst">&#123;too_expensive.title()&#125;</span> is too expensive for me!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">                  </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">                    </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 <li><p>使用sort()方法对列表进行永久排序</p>
@@ -216,9 +286,9 @@
 <p>​	元组的元素是无法被修改的，但是可以给表示元组的变量进行赋值，重新定义元组</p>
 </li>
 </ul>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Orignal dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br><span class="line">               </span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nModified dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Orignal dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br><span class="line">                    </span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nModified dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Orignal dimensions:</span><br><span class="line">200</span><br><span class="line">50</span><br><span class="line">               </span><br><span class="line">Modified dimensions:</span><br><span class="line">400</span><br><span class="line">100</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Orignal dimensions:</span><br><span class="line">200</span><br><span class="line">50</span><br><span class="line">                    </span><br><span class="line">Modified dimensions:</span><br><span class="line">400</span><br><span class="line">100</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 </ol>
@@ -330,7 +400,71 @@
 
 <div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">The following languages have been mentioned:</span><br><span class="line">Python</span><br><span class="line">C</span><br><span class="line">Ruby</span><br></pre></td></tr></table></figure></div>
 
-<p>敬请T期待！</p>
+<h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><blockquote>
+<p>可以在列表中嵌套字典、在字典中嵌套列表，可以在字典中嵌套字典。</p>
+</blockquote>
+<h3 id="字典列表"><a href="#字典列表" class="headerlink" title="字典列表"></a>字典列表</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#alien.py</span></span><br><span class="line">alien_0 = &#123;<span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: <span class="number">5</span>&#125;</span><br><span class="line">alien_1 = &#123;<span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;yellow&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: <span class="number">10</span>&#125;</span><br><span class="line">alien_2 = &#123;<span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: <span class="number">15</span>&#125;</span><br><span class="line">aliens = [alien_0, alien_1, alien_2]</span><br><span class="line"><span class="keyword">for</span> alien <span class="keyword">in</span> aliens:</span><br><span class="line">	<span class="built_in">print</span>(alien)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5&#125;</span><br><span class="line">&#123;&#x27;color&#x27;: &#x27;yellow&#x27;, &#x27;points&#x27;: 10&#125;</span><br><span class="line">&#123;&#x27;color&#x27;: &#x27;red&#x27;, &#x27;points&#x27;: 15&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>将前三个外星人修改为黄色的、速度为中等且值10个点</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#alien.py</span></span><br><span class="line"><span class="comment"># 创建一个用于存储外星人的空列表</span></span><br><span class="line">aliens = []</span><br><span class="line"><span class="comment"># 创建30个绿色的外星人</span></span><br><span class="line"><span class="keyword">for</span> alien_number <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">30</span>):</span><br><span class="line"> new_alien = &#123;<span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: <span class="number">5</span>, <span class="string">&#x27;speed&#x27;</span>: <span class="string">&#x27;slow&#x27;</span>&#125;</span><br><span class="line"> aliens.append(new_alien)</span><br><span class="line"><span class="comment">#将前三个外星人修改为黄色的、速度为中等且值10个点</span></span><br><span class="line"><span class="keyword">for</span> alien <span class="keyword">in</span> aliens[<span class="number">0</span>:<span class="number">3</span>]:</span><br><span class="line">    <span class="keyword">if</span> alien[<span class="string">&#x27;color&#x27;</span>] == <span class="string">&#x27;green&#x27;</span>:</span><br><span class="line">        alien[<span class="string">&#x27;color&#x27;</span>] = <span class="string">&#x27;yellow&#x27;</span></span><br><span class="line">        alien[<span class="string">&#x27;speed&#x27;</span>] = <span class="string">&#x27;medium&#x27;</span></span><br><span class="line">        alien[<span class="string">&#x27;points&#x27;</span>] = <span class="number">10</span></span><br><span class="line"><span class="comment"># 显示前五个外星人</span></span><br><span class="line"><span class="keyword">for</span> alien <span class="keyword">in</span> aliens[:<span class="number">5</span>]:</span><br><span class="line">    <span class="built_in">print</span>(alien)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;...&quot;</span>)</span><br><span class="line"><span class="comment"># 显示创建了多少个外星人</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Total number of aliens: &quot;</span> + <span class="built_in">str</span>(<span class="built_in">len</span>(aliens)))</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;speed&#x27;</span>: <span class="string">&#x27;medium&#x27;</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;yellow&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: 10&#125;</span><br><span class="line">&#123;<span class="string">&#x27;speed&#x27;</span>: <span class="string">&#x27;medium&#x27;</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;yellow&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: 10&#125;</span><br><span class="line">&#123;<span class="string">&#x27;speed&#x27;</span>: <span class="string">&#x27;medium&#x27;</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;yellow&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: 10&#125;</span><br><span class="line">&#123;<span class="string">&#x27;speed&#x27;</span>: <span class="string">&#x27;slow&#x27;</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: 5&#125;</span><br><span class="line">&#123;<span class="string">&#x27;speed&#x27;</span>: <span class="string">&#x27;slow&#x27;</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;points&#x27;</span>: 5&#125;</span><br><span class="line">...</span><br><span class="line">Total number of aliens: 30</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="字典中存储列表"><a href="#字典中存储列表" class="headerlink" title="字典中存储列表"></a>字典中存储列表</h3><blockquote>
+<p>在字典中将一个键关联到多个值时，可以在字典中嵌套一个列表.</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Pizza.py</span></span><br><span class="line"><span class="comment"># 存储所点比萨的信息</span></span><br><span class="line"> pizza = &#123;</span><br><span class="line"><span class="string">&#x27;crust&#x27;</span>: <span class="string">&#x27;thick&#x27;</span>,<span class="comment">#薄厚程度</span></span><br><span class="line"><span class="string">&#x27;toppings&#x27;</span>: [<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>],<span class="comment">#顾客要求添加的所有配料</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 概述所点的比萨</span></span><br><span class="line"> <span class="built_in">print</span>(<span class="string">&quot;You ordered a &quot;</span> + pizza[<span class="string">&#x27;crust&#x27;</span>] + <span class="string">&quot;-crust pizza &quot;</span> +</span><br><span class="line"><span class="string">&quot;with the following toppings:&quot;</span>)</span><br><span class="line"> <span class="keyword">for</span> topping <span class="keyword">in</span> pizza[<span class="string">&#x27;toppings&#x27;</span>]:</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\t&quot;</span> + topping)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">You ordered a thick-crust pizza with the following toppings:</span><br><span class="line">    mushrooms</span><br><span class="line">    extra cheese</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#favorite_languages.py</span></span><br><span class="line">favorite_languages = &#123;</span><br><span class="line">    <span class="string">&#x27;jen&#x27;</span>: [<span class="string">&#x27;python&#x27;</span>, <span class="string">&#x27;ruby&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;sarah&#x27;</span>: [<span class="string">&#x27;c&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;edward&#x27;</span>: [<span class="string">&#x27;ruby&#x27;</span>, <span class="string">&#x27;go&#x27;</span>],</span><br><span class="line">    <span class="string">&#x27;phil&#x27;</span>: [<span class="string">&#x27;python&#x27;</span>, <span class="string">&#x27;haskell&#x27;</span>],</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> name, languages <span class="keyword">in</span> favorite_languages.items():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span> + name.title() + <span class="string">&quot;&#x27;s favorite languages are:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> language <span class="keyword">in</span> languages:</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">&quot;\t&quot;</span> + language.title())</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Jen<span class="string">&#x27;s favorite languages are:</span></span><br><span class="line"><span class="string">    Python</span></span><br><span class="line"><span class="string">    Ruby</span></span><br><span class="line"><span class="string">Sarah&#x27;</span>s favorite languages are:</span><br><span class="line">    C</span><br><span class="line">Phil<span class="string">&#x27;s favorite languages are:</span></span><br><span class="line"><span class="string">    Python</span></span><br><span class="line"><span class="string">    Haskell</span></span><br><span class="line"><span class="string">Edward&#x27;</span>s favorite languages are:</span><br><span class="line">    Ruby</span><br><span class="line">    Go</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="字典中存储字典"><a href="#字典中存储字典" class="headerlink" title="字典中存储字典"></a>字典中存储字典</h3><blockquote>
+<p>例如，如果有多个网站用户，每个都有独特的用户名，可在字典中将用户名作为键，然后将每位用户的信息存储在一个字典中，并将该字典作为与用户名相关联的值。在下面的程序中，对于每位用户，我们都存储了其三项信息：名、姓和居地；为访问这些信息，我们遍历所有的用户名，并访问与每个用户名相关联的信息字典：</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#many_users.py</span></span><br><span class="line">users = &#123;</span><br><span class="line">    <span class="string">&#x27;aeinstein&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;first&#x27;</span>: <span class="string">&#x27;albert&#x27;</span>,<span class="comment">#名字</span></span><br><span class="line">        <span class="string">&#x27;last&#x27;</span>: <span class="string">&#x27;einstein&#x27;</span>,<span class="comment">#姓氏</span></span><br><span class="line">        <span class="string">&#x27;location&#x27;</span>: <span class="string">&#x27;princeton&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;mcurie&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;first&#x27;</span>: <span class="string">&#x27;marie&#x27;</span>,<span class="comment">#名字</span></span><br><span class="line">        <span class="string">&#x27;last&#x27;</span>: <span class="string">&#x27;curie&#x27;</span>,<span class="comment">#姓氏</span></span><br><span class="line">        <span class="string">&#x27;location&#x27;</span>: <span class="string">&#x27;paris&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> username, user_info <span class="keyword">in</span> users.items():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nUsername: &quot;</span> + username)</span><br><span class="line">    full_name = user_info[<span class="string">&#x27;first&#x27;</span>] + <span class="string">&quot; &quot;</span> + user_info[<span class="string">&#x27;last&#x27;</span>]</span><br><span class="line">    location = user_info[<span class="string">&#x27;location&#x27;</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\tFull name: &quot;</span> + full_name.title())</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\tLocation: &quot;</span> + location.title())</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Username: aeinstein</span><br><span class="line">    Full name: Albert Einstein</span><br><span class="line">    Location: Princeton</span><br><span class="line">Username: mcurie</span><br><span class="line">    Full name: Marie Curie</span><br><span class="line">    Location: Paris</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h2><h3 id="文本输入input-函数"><a href="#文本输入input-函数" class="headerlink" title="文本输入input()函数"></a>文本输入input()函数</h3><blockquote>
+<p><strong>函数input()让程序暂停运行，等待用户输入一些文本。获取用户输入Python将其存储在一个变量中。<u>input()函数获取的将被视为字符串，即使输入的文本为数字，也将以字符串的形式存储。</u></strong></p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#greeter.py</span></span><br><span class="line">prompt = <span class="string">&quot;If you tell us who you are, we can personalize the messages you see.&quot;</span></span><br><span class="line"><span class="comment">#运算符+=在存储在prompt中的字符串末尾附加一个字符串。</span></span><br><span class="line">prompt += <span class="string">&quot;\nWhat is your first name? &quot;</span></span><br><span class="line">name = <span class="built_in">input</span>(prompt)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHello, &quot;</span> + name + <span class="string">&quot;!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">If you tell us <span class="built_in">who</span> you are, we can personalize the messages you see.</span><br><span class="line">What is your first name? Eric</span><br><span class="line"></span><br><span class="line">Hello, Eric!</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="获取数值输入int-函数"><a href="#获取数值输入int-函数" class="headerlink" title="获取数值输入int()函数"></a>获取数值输入int()函数</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; age = input(<span class="string">&quot;How old are you? &quot;</span>)</span><br><span class="line">How old are you? 21</span><br><span class="line">&gt;&gt;&gt; age</span><br><span class="line"><span class="string">&#x27;21&#x27;</span><span class="comment">#返回的是&#x27;21&#x27;——用户输入的数值的字符串表示。</span></span><br><span class="line">&gt;&gt;&gt; age &gt;= 18</span><br><span class="line">Traceback (most recent call last):<span class="comment">#报错提示</span></span><br><span class="line">	File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: unorderable types: str() &gt;= int()</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p><u>Traceback (most recent call last):#报错提示</u></p>
+<p><u><strong>TypeError: unorderable types: str() &gt;&#x3D; int()</strong></u></p>
+<p>无法将字符串和整数进行比较：不能将存储在age中的字符串’21’与数值18进行比较</p>
+</blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; age = input(<span class="string">&quot;How old are you? &quot;</span>)</span><br><span class="line">How old are you? 21</span><br><span class="line">&gt;&gt;&gt; age = int(age)<span class="comment">#int()函数将字符串强制转换成数值</span></span><br><span class="line">&gt;&gt;&gt; age &gt;= 18</span><br><span class="line">True</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="求模运算-取余运算"><a href="#求模运算-取余运算" class="headerlink" title="求模运算(%)[取余运算]"></a>求模运算(%)[取余运算]</h3><blockquote>
+<p>求模运算符（%）是一个很有用的工具，它将两个数相除并返回<u><strong>余数</strong></u>：</p>
+</blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; 4 % 3</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; 5 % 3</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; 6 % 3</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; 7 % 3</span><br><span class="line">1</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>如果一个数可被另一个数整除，余数就为0，因此求模运算符将返回0。你可利用这一点来判<br>断一个数是奇数还是偶数：</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#even_or_odd.py</span></span><br><span class="line">number = <span class="built_in">input</span>(<span class="string">&quot;Enter a number, and I&#x27;ll tell you if it&#x27;s even or odd: &quot;</span>)</span><br><span class="line">number = <span class="built_in">int</span>(number)</span><br><span class="line"><span class="keyword">if</span> number % <span class="number">2</span> == <span class="number">0</span>:<span class="comment">#偶数</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nThe number &quot;</span> + <span class="built_in">str</span>(number) + <span class="string">&quot; is even.&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:<span class="comment">#奇数</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nThe number &quot;</span> + <span class="built_in">str</span>(number) + <span class="string">&quot; is odd.&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Enter a number, and I<span class="string">&#x27;ll tell you if it&#x27;</span>s even or odd: 42</span><br><span class="line">The number 42 is even.</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="While-循环"><a href="#While-循环" class="headerlink" title="While()循环"></a>While()循环</h2><blockquote>
+<p>for循环用于针对集合中的每个元素都一个代码块，而while循环不断地运行，直到指定的条<br>件不满足为止。</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">current_number = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> current_number &lt;= <span class="number">5</span>:</span><br><span class="line">    <span class="built_in">print</span>(current_number,end=<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">    current_number += <span class="number">1</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1,2,3,4,5</span><br></pre></td></tr></table></figure></div>
+
 ]]></content>
       <categories>
         <category>Languages</category>
@@ -342,73 +476,17 @@
       </tags>
   </entry>
   <entry>
-    <title>2024-计划书单</title>
-    <url>/2024/01/23/2024-%E8%AE%A1%E5%88%92%E4%B9%A6%E5%8D%95/</url>
-    <content><![CDATA[<h2 id="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"><a href="#预祝新的一年你会有更多的属于自己的时刻！❀❀❀" class="headerlink" title="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"></a>预祝新的一年你会有更多的属于自己的时刻！❀❀❀</h2><h3 id="《家山》-王跃文"><a href="#《家山》-王跃文" class="headerlink" title="《家山》-王跃文"></a>《家山》-王跃文</h3><ul>
-<li><p><input disabled="" type="checkbox"> 
-looking forward to </p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-reading </p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-over</p>
-</li>
-</ul>
-<blockquote>
-<p>每一个人心中都会有一座属于自己的家山。</p>
-</blockquote>
-<h3 id="《且听风吟》-村上春树"><a href="#《且听风吟》-村上春树" class="headerlink" title="《且听风吟》-村上春树"></a>《且听风吟》-村上春树</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>这世间，中有一个人懂你，让你抿起嘴，想念时流下眼泪。那些曾以为走不出的日子，现在都回不去了。~</p>
-</blockquote>
-<h3 id="《1973年的弹子球》-村上春树"><a href="#《1973年的弹子球》-村上春树" class="headerlink" title="《1973年的弹子球》-村上春树"></a>《1973年的弹子球》-村上春树</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>长大，或许就是终有一天你会知道，有些事物，当它从我们的生命中遗落时，就已经无法寻回。</p>
-</blockquote>
-<h3 id="《寻羊冒险记》-村上春树"><a href="#《寻羊冒险记》-村上春树" class="headerlink" title="《寻羊冒险记》-村上春树"></a>《寻羊冒险记》-村上春树</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>我喜欢我的懦弱，痛苦和难堪也喜欢，喜欢夏天的光照，风的气息，蝉的鸣叫，我喜欢这些，喜欢的不得了。</p>
-</blockquote>
-<h3 id="《了不起的盖茨比》-译村上春树"><a href="#《了不起的盖茨比》-译村上春树" class="headerlink" title="《了不起的盖茨比》-译村上春树"></a>《了不起的盖茨比》-译村上春树</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>这个世界，并不是所有人，都拥有你的那些优势。</p>
-</blockquote>
-<h3 id="《蛤蟆先生看心理医生》"><a href="#《蛤蟆先生看心理医生》" class="headerlink" title="《蛤蟆先生看心理医生》"></a>《蛤蟆先生看心理医生》</h3><ul>
-<li><input disabled="" type="checkbox"> looking forward to</li>
-<li><input checked="" disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>能帮助你的人，只有你自己的。请相信，你可以完成这一切的，你并不是自以为的那样弱小。</p>
-</blockquote>
-<h3 id="《The-Wind-in-the-Willows》《柳林风声》"><a href="#《The-Wind-in-the-Willows》《柳林风声》" class="headerlink" title="《The Wind in the Willows》《柳林风声》"></a>《The Wind in the Willows》《柳林风声》</h3><ul>
-<li><input checked="" disabled="" type="checkbox"> looking forward to</li>
-<li><input disabled="" type="checkbox"> reading</li>
-<li><input disabled="" type="checkbox"> over</li>
-</ul>
-<blockquote>
-<p>关于四个小动物之间的友情陪伴和共同冒险的人生故事，蛤蟆先生的原型。</p>
+    <title>敬请T期待</title>
+    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
+    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
+<p>敬请T期待</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
       <tags>
-        <tag>-2024 -书单 -Love -Book</tag>
+        <tag>Begin</tag>
       </tags>
   </entry>
   <entry>
@@ -450,20 +528,6 @@ over</p>
       </categories>
       <tags>
         <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敬请T期待</title>
-    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
-    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
-<p>敬请T期待</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Begin</tag>
       </tags>
   </entry>
 </search>

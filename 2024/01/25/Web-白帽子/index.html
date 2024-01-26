@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png">
 <meta property="article:published_time" content="2024-01-25T14:12:08.000Z">
-<meta property="article:modified_time" content="2024-01-26T04:03:33.197Z">
+<meta property="article:modified_time" content="2024-01-26T16:00:16.435Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="-Web -安全 -笔记">
 <meta name="twitter:card" content="summary">
@@ -550,8 +550,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-01-26 12:03:33</span>
-            <span class="mobile">2024-01-26 12:03:33</span>
+            <span class="desktop">2024-01-27 00:16</span>
+            <span class="mobile">2024-01-27 00:16</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -573,12 +573,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.1k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.8k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
         </span>
     
     
@@ -622,7 +622,7 @@
 <p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
 <p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
 <p>？query-string 发送给http服务器的数据</p>
-<p>[#anchor]	 锚(上面链接隐藏了)</p>
+<p>[#anchor]	 锚</p>
 </blockquote>
 <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
 <p>超文本传输协议（Hyper Text Transfer Protocol）</p>
@@ -702,6 +702,130 @@
 <hr>
 <p>详细状态码：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35887546/article/details/104216807" >https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 </blockquote>
+<h2 id="前端开发基础知识"><a href="#前端开发基础知识" class="headerlink" title="前端开发基础知识"></a>前端开发基础知识</h2><blockquote>
+<p>知识点罗列：</p>
+<p>​	–JavaScript</p>
+<p>​	–DOM</p>
+<p>​	–BOM</p>
+</blockquote>
+<h3 id="javaScript"><a href="#javaScript" class="headerlink" title="javaScript"></a>javaScript</h3><blockquote>
+<p>javaScript运行位置：</p>
+<ul>
+<li>HTML的<script></script></li>
+<li>HTML的事件属性中</li>
+<li>浏览器中的JavaScript控制台中的Console中</li>
+</ul>
+</blockquote>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
+<p>DOM本质：链接Web页面和编程语言</p>
+<p>JavaScript + DOM：访问和操作HTML文档的标准方法</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><p>获取一个HTML元素内容</p>
+<ul>
+<li><p>tep1：获取元素</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()<span class="comment">//获取元素</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep2：获取元素的内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.<span class="property">innerHTML</span><span class="comment">//获取元素的内容</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep3：显示获取信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>alert()方法在JavaScript中表示弹出一个警告框，可以用来展示信息</strong></p>
+</li>
+<li><pre><code class="html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Kinwempity&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;P id=&quot;intro&quot;&gt;
+            Hello!敬请T期待
+        &lt;/P&gt;
+        &lt;script&gt;
+        x=document.getElementById(&quot;intro&quot;);
+        alert(&#39;id为intro元素的文本是：&#39;+x.innerHTML);  
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 修改一个HTML元素</span><br><span class="line"></span><br><span class="line">  - tep1：获取元素</span><br><span class="line"></span><br><span class="line">    ```javascript</span><br><span class="line">    document.getElementById()</span><br></pre></td></tr></table></figure></div>
+</code></pre>
+</li>
+<li><p>tep2：获取元素内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.<span class="property">innerHTML</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><pre><code class="html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Kinwempity&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;P id=&quot;intro&quot;&gt;
+            Hello!敬请T期待
+        &lt;/P&gt;
+        &lt;script&gt;
+        x=document.getElementById(&quot;intro&quot;);
+        x.innerHTML=&#39;HELLO WORLD!&#39;; 
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 将元素该为框架iframe框架</span><br><span class="line"></span><br><span class="line">  ```javascript</span><br><span class="line">  document.getElementById(&quot;id&quot;).innerHTML=&quot;&lt;ifream src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifream&gt;&quot;</span><br></pre></td></tr></table></figure></div>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>动态创建HTML内容</p>
+<ul>
+<li><pre><code class="javascript">document.write(Date());//向页面中写入当前时间
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  document.write(&quot;&lt;ifrema src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifrema&gt;&quot;)//向页面中写入框架</span><br></pre></td></tr></table></figure></div>
+</code></pre>
+</li>
+<li><pre><code class="html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;kinwempity&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;P id=&quot;intro&quot;&gt;
+            Hello!敬请T期待
+        &lt;/P&gt;
+        &lt;script&gt;
+            function changetext(id)
+            &#123;
+                id.innerHTML=&quot;Kingwempity@敬请T期待&quot;;//点击后变化的内容
+            &#125;
+        &lt;/script&gt;
+        &lt;h1 onclick=&quot;changetext(this)&quot;&gt;
+            点我会发生变化o_o哦！
+        &lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### BOM</span><br><span class="line"></span><br><span class="line">BOM:浏览器对象模型(Browser Object Model)</span><br><span class="line"></span><br><span class="line">让浏览器来警告用户:</span><br><span class="line"></span><br><span class="line">警告弹窗alert()</span><br><span class="line"></span><br><span class="line">确认弹窗confirm()</span><br><span class="line"></span><br><span class="line">提示弹窗prompt()</span><br><span class="line"></span><br><span class="line">以上弹窗常用于简单的调试和信息展示。例如XSS漏洞测试</span><br><span class="line"></span><br><span class="line">获取用户cookie（通常为浏览器发给用户客户端的一小段文本信息）</span><br><span class="line"></span><br><span class="line">&gt; 常见场景：</span><br><span class="line">&gt;</span><br><span class="line">&gt; 用户输入用户名和密码成功登录网站后，网站会生成一个cookie给用户，当作用户凭证</span><br><span class="line"></span><br><span class="line">cookie一般在控制台的network或Application中可以查看</span><br><span class="line"></span><br><span class="line">- 获取Cookie</span><br><span class="line"></span><br><span class="line">  ```javascript</span><br><span class="line">  document.cookie//获取cookie</span><br></pre></td></tr></table></figure></div>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>修改写入Cookie</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doucment.<span class="property">cookie</span>=<span class="string">&quot;写入值&quot;</span>#值的形式key=value</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>显示cookie</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(document.cookie)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>获取浏览器屏幕信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)screen</span><br></pre></td></tr></table></figure></div>
+
+<p>获取&#x2F;控制用户页面的URL</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;https://kingwempity.github.io/&quot;</span><span class="comment">//控制当前页面url</span></span><br></pre></td></tr></table></figure></div>
+
+<p>获取访问者浏览器信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)navigator</span><br></pre></td></tr></table></figure></div>
+
+<p>操作浏览器窗口</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">open</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//打开页面</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">close</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//关闭页面</span></span><br></pre></td></tr></table></figure></div>
+
+
+</blockquote>
 <p>敬请T期待！</p>
 
         </div>
@@ -717,7 +841,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-01-26 12:03:33
+                    :</strong> 2024-01-27 00:00:16
             </li>
         
         <li>

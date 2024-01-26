@@ -476,6 +476,120 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>Web_白帽子</title>
+    <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
+    <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
+<p>知识点罗列：</p>
+<ul>
+<li>URL概念、结构格式</li>
+<li>HTTP报文结构</li>
+<li>cookie含义</li>
+<li>Set-cookie含义</li>
+<li>Referer的作用</li>
+<li>状态码301和302的含义</li>
+<li>Location的含义</li>
+</ul>
+</blockquote>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><blockquote>
+<p>统一资源定位符（Uniform Resource Locator）</p>
+</blockquote>
+<blockquote>
+<p>作用：定位服务器资源</p>
+</blockquote>
+<blockquote>
+<p>URL格式：schemna:&#x2F;&#x2F;host[:post#]&#x2F;path&#x2F;…&#x2F;[?query-string][#anchor]</p>
+<p>schemna	底层协议(例如：http,https,ftp…)</p>
+<p>host		  服务器的域名或IP地址</p>
+<p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
+<p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
+<p>？query-string 发送给http服务器的数据</p>
+<p>[#anchor]	 锚(上面链接隐藏了)</p>
+</blockquote>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
+<p>超文本传输协议（Hyper Text Transfer Protocol）</p>
+</blockquote>
+<blockquote>
+<p>作用：Web通信时使用的协议</p>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>HTTP报文</p>
+<p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
+</li>
+<li><p>HTTP报文结构</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
+                      alt="http报文结构"
+                ></p>
+<p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
+<p>空行</p>
+<p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
+</li>
+<li><p>HTTP请求报文结构</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
+                      alt="HTTP请求报文结构"
+                ></p>
+<p>GET和POST的区别：</p>
+<blockquote>
+<p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
+</blockquote>
+</li>
+<li><p>HTTP响应报文结构</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
+                      alt="HTTP响应报文结构"
+                ></p>
+</li>
+</ol>
+<hr>
+<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
+<p>参考文章</p>
+<p>原文链接：<a class="link"   href="https://blog.csdn.net/qq_35887546/article/details/104216286" >https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<blockquote>
+<p>HTTP请求的方式</p>
+<p>–GET</p>
+<p>–POST</p>
+<p>–HEAD				 与GET请求类似，不同在于与服务器只返回HTTP头部信息，没有页面内容</p>
+<p>–PUT					上传指定URL的描述</p>
+<p>–DELETE			 删除指定资源</p>
+<p>–OPTIONS 		 返回服务器支持的HTTP方法</p>
+</blockquote>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
+<p>cookie:相当于用户的凭证，类似与用户的通行证，很重要。</p>
+<p>set-cookie:服务器要求浏览器设置cookie</p>
+</blockquote>
+<h3 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h3><blockquote>
+<p>Referer的作用：</p>
+<p>–告知服务器该请求的来源（浏览器自动加上）</p>
+<p>–统计流量</p>
+<p>–判断来源合法性：防止盗链，防止CSRF漏洞</p>
+</blockquote>
+<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><blockquote>
+<p>Location：跳转到地址</p>
+</blockquote>
+<h3 id="响应报文状态码"><a href="#响应报文状态码" class="headerlink" title="响应报文状态码"></a>响应报文状态码</h3><blockquote>
+<p>响应报文状态码</p>
+<p><strong>3</strong>：完成此请求必须进一步处理**</p>
+<p>301——删除请求数据</p>
+<p>302——在其他地址发现了请求数据</p>
+<hr>
+<p>详细状态码：<a class="link"   href="https://blog.csdn.net/qq_35887546/article/details/104216807" >https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<p>敬请T期待！</p>
+]]></content>
+      <tags>
+        <tag>-Web -安全 -笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++小型公司工资管理系统</title>
     <url>/2024/01/17/%E5%B0%8F%E5%9E%8B%E5%85%AC%E5%8F%B8%E5%B7%A5%E8%B5%84%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fcpp/</url>
     <content><![CDATA[<h2 id="课题要求"><a href="#课题要求" class="headerlink" title="课题要求"></a>课题要求</h2><p><em><strong>“小型公司工资管理系统设计”</strong></em></p>
@@ -528,120 +642,6 @@ over</p>
       </categories>
       <tags>
         <tag>Begin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web_白帽子</title>
-    <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
-    <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
-<p>知识点罗列：</p>
-<ul>
-<li>URL概念、结构格式</li>
-<li>HTTP报文结构</li>
-<li>cookie含义</li>
-<li>Set-cookie含义</li>
-<li>Referer的作用</li>
-<li>状态码301和302的含义</li>
-<li>Location的含义</li>
-</ul>
-</blockquote>
-<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><blockquote>
-<p>统一资源定位符（Uniform Resource Locator）</p>
-</blockquote>
-<blockquote>
-<p>作用：定位服务器资源</p>
-</blockquote>
-<blockquote>
-<p>URL格式：schemna:&#x2F;&#x2F;host[:post#]&#x2F;path&#x2F;…&#x2F;[?query-string][#anchor]</p>
-<p>schemna	底层协议(例如：http,https,ftp…)</p>
-<p>host		  服务器的域名或IP地址</p>
-<p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
-<p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
-<p>？query-string 发送给http服务器的数据</p>
-<p>[#anchor]	 锚(上面链接隐藏了)</p>
-</blockquote>
-<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
-<p>超文本传输协议（Hyper Text Transfer Protocol）</p>
-</blockquote>
-<blockquote>
-<p>作用：Web通信时使用的协议</p>
-</blockquote>
-<blockquote>
-<ol>
-<li><p>HTTP报文</p>
-<p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
-</li>
-<li><p>HTTP报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="D:\Photo\typroa\http报文结构.png"
-                      alt="http报文结构"
-                ></p>
-<p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
-<p>空行</p>
-<p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
-</li>
-<li><p>HTTP请求报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="D:\Photo\typroa\http请求报文结构.png"
-                      alt="HTTP请求报文结构"
-                ></p>
-<p>GET和POST的区别：</p>
-<blockquote>
-<p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
-</blockquote>
-</li>
-<li><p>HTTP响应报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="D:\Photo\typroa\http响应报文结构.png"
-                      alt="HTTP响应报文结构"
-                ></p>
-</li>
-</ol>
-<hr>
-<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
-<p>参考文章</p>
-<p>原文链接：<a class="link"   href="https://blog.csdn.net/qq_35887546/article/details/104216286" >https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<blockquote>
-<p>HTTP请求的方式</p>
-<p>–GET</p>
-<p>–POST</p>
-<p>–HEAD				 与GET请求类似，不同在于与服务器只返回HTTP头部信息，没有页面内容</p>
-<p>–PUT					上传指定URL的描述</p>
-<p>–DELETE			 删除指定资源</p>
-<p>–OPTIONS 		 返回服务器支持的HTTP方法</p>
-</blockquote>
-<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
-<p>cookie:相当于用户的凭证，类似与用户的通行证，很重要。</p>
-<p>set-cookie:服务器要求浏览器设置cookie</p>
-</blockquote>
-<h3 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h3><blockquote>
-<p>Referer的作用：</p>
-<p>–告知服务器该请求的来源（浏览器自动加上）</p>
-<p>–统计流量</p>
-<p>–判断来源合法性：防止盗链，防止CSRF漏洞</p>
-</blockquote>
-<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><blockquote>
-<p>Location：跳转到地址</p>
-</blockquote>
-<h3 id="响应报文状态码"><a href="#响应报文状态码" class="headerlink" title="响应报文状态码"></a>响应报文状态码</h3><blockquote>
-<p>响应报文状态码</p>
-<p><strong>3</strong>：完成此请求必须进一步处理**</p>
-<p>301——删除请求数据</p>
-<p>302——在其他地址发现了请求数据</p>
-<hr>
-<p>详细状态码：<a class="link"   href="https://blog.csdn.net/qq_35887546/article/details/104216807" >https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<p>敬请T期待！</p>
-]]></content>
-      <tags>
-        <tag>-Web -安全 -笔记</tag>
       </tags>
   </entry>
 </search>

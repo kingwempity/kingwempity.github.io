@@ -74,6 +74,21 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>Open new world</title>
+    <url>/2024/01/13/Open-new-world/</url>
+    <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
+<p>路漫漫其修远兮，吾将上下而求索！</p>
+<p>​																–《离骚》屈原</p>
+<p>杨宪益先生 译：<br>The way was long, and wrapped in gloom did seem,<br>As I urged on to seek my vanished dream.</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Hope_flag</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python从入门到实践</title>
     <url>/2024/01/21/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/</url>
     <content><![CDATA[<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="概念定义"><a href="#概念定义" class="headerlink" title="概念定义"></a>概念定义</h3><blockquote>
@@ -137,7 +152,7 @@ over</p>
 <li><p>根据值删除元素</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles=[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line">too_expensive=<span class="string">&#x27;ducati&#x27;</span></span><br><span class="line">mororcycles.remove(too_expensive)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\nA <span class="subst">&#123;too_expensive.title()&#125;</span> is too expensive for me!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">                      </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">                        </span><br><span class="line">A Ducati is too expensive <span class="keyword">for</span> me!</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 <li><p>使用sort()方法对列表进行永久排序</p>
@@ -274,9 +289,9 @@ over</p>
 <p>​	元组的元素是无法被修改的，但是可以给表示元组的变量进行赋值，重新定义元组</p>
 </li>
 </ul>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Orignal dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br><span class="line">                         </span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nModified dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#dimensions.py</span></span><br><span class="line">dimensions = (<span class="number">200</span>,<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Orignal dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br><span class="line">                              </span><br><span class="line">dimensions = (<span class="number">400</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nModified dimensions:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> dimension <span class="keyword">in</span> dimensions:</span><br><span class="line">    <span class="built_in">print</span>(dimension)</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Orignal dimensions:</span><br><span class="line">200</span><br><span class="line">50</span><br><span class="line">                         </span><br><span class="line">Modified dimensions:</span><br><span class="line">400</span><br><span class="line">100</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Orignal dimensions:</span><br><span class="line">200</span><br><span class="line">50</span><br><span class="line">                              </span><br><span class="line">Modified dimensions:</span><br><span class="line">400</span><br><span class="line">100</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 </ol>
@@ -516,7 +531,56 @@ over</p>
 </ul>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一条名为Willie的小狗</span></span><br><span class="line">describe_pet(<span class="string">&#x27;willie&#x27;</span>)</span><br><span class="line">describe_pet(pet_name=<span class="string">&#x27;willie&#x27;</span>)</span><br><span class="line"><span class="comment"># 一只名为Harry的仓鼠</span></span><br><span class="line">describe_pet(<span class="string">&#x27;harry&#x27;</span>, <span class="string">&#x27;hamster&#x27;</span>)</span><br><span class="line">describe_pet(pet_name=<span class="string">&#x27;harry&#x27;</span>, animal_type=<span class="string">&#x27;hamster&#x27;</span>)</span><br><span class="line">describe_pet(animal_type=<span class="string">&#x27;hamster&#x27;</span>, pet_name=<span class="string">&#x27;harry&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<p>敬请T期待</p>
+<h3 id="实参可选择化"><a href="#实参可选择化" class="headerlink" title="实参可选择化"></a>实参可选择化</h3><blockquote>
+<p>使用空字符串，将实参进行可选择处理</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_formatted_name</span>(<span class="params">first_name, last_name, middle_name=<span class="string">&#x27;&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;注意:可选择的空字符串需要放在后面的位置&quot;&quot;&quot;</span></span><br><span class="line">	<span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line"> 	<span class="keyword">if</span> middle_name:</span><br><span class="line">		full_name = first_name + <span class="string">&#x27; &#x27;</span> + middle_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line"> 	<span class="keyword">else</span>:</span><br><span class="line">		full_name = first_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line">	<span class="keyword">return</span> full_name.title()</span><br><span class="line"></span><br><span class="line">musician = get_formatted_name(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(musician)</span><br><span class="line">musician = get_formatted_name(<span class="string">&#x27;john&#x27;</span>, <span class="string">&#x27;hooker&#x27;</span>, <span class="string">&#x27;lee&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(musician)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="传递任意数量的实参"><a href="#传递任意数量的实参" class="headerlink" title="传递任意数量的实参"></a>传递任意数量的实参</h3><blockquote>
+<p>形参名*toppings中的星号让Python创建一个名为toppings的空元组，并将收到的所有值都封<br>装到这个元组中。</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pizza.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_pizza</span>(<span class="params">*toppings</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;概述要制作的比萨&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nMaking a pizza with the following toppings:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> topping <span class="keyword">in</span> toppings:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;- &quot;</span> + topping)</span><br><span class="line">   </span><br><span class="line">make_pizza(<span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">make_pizza(<span class="string">&#x27;mushrooms&#x27;</span>,<span class="string">&#x27;green peppers&#x27;</span>,<span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">Making a pizza with the following toppings:</span><br><span class="line">- pepperoni</span><br><span class="line"></span><br><span class="line">Making a pizza with the following toppings:</span><br><span class="line">- mushrooms</span><br><span class="line">- green peppers</span><br><span class="line">- extra cheese</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a>函数返回值</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#formatted_name.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_formatted_name</span>(<span class="params">first_name, last_name</span>):</span><br><span class="line"><span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line"> full_name = first_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line"> <span class="keyword">return</span> full_name.title()</span><br><span class="line">musician = get_formatted_name(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(musician)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Jimi Hendrix</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="函数返回字典"><a href="#函数返回字典" class="headerlink" title="函数返回字典"></a>函数返回字典</h4><blockquote>
+<p>函数可返回任何类型的值，包括列表和字典等较复杂的数据结构。</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#person.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">build_person</span>(<span class="params">first_name, last_name, age=<span class="string">&#x27;&#x27;</span></span>):</span><br><span class="line">	<span class="string">&quot;&quot;&quot;返回一个字典，其中包含有关一个人的信息&quot;&quot;&quot;</span></span><br><span class="line">	person = &#123;<span class="string">&#x27;first&#x27;</span>: first_name, <span class="string">&#x27;last&#x27;</span>: last_name&#125;</span><br><span class="line">	<span class="keyword">if</span> age:</span><br><span class="line">	person[<span class="string">&#x27;age&#x27;</span>] = age</span><br><span class="line">	<span class="keyword">return</span> person</span><br><span class="line">musician = build_person(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>, age=<span class="number">27</span>)</span><br><span class="line"><span class="built_in">print</span>(musician)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;first&#x27;</span>: <span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;last&#x27;</span>: <span class="string">&#x27;hendrix&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:27&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="返回值搭配while循环"><a href="#返回值搭配while循环" class="headerlink" title="返回值搭配while循环"></a>返回值搭配while循环</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#greet.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_formatted_name</span>(<span class="params">first_name, last_name</span>):</span><br><span class="line">	<span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line">	full_name = first_name + <span class="string">&#x27; &#x27;</span> + last_name</span><br><span class="line">    <span class="keyword">return</span> full_name.title()</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nPlease tell me your name:&quot;</span>,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;(enter &#x27;q&#x27; to any time to quit)&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    f_name=<span class="built_in">input</span>(<span class="string">&quot;First name:&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> f_name == <span class="string">&#x27;q&#x27;</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    l_name=<span class="built_in">input</span>(<span class="string">&quot;Last name:&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> l_name == <span class="string">&#x27;q&#x27;</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    formatted_name = get_formatted_name(f_name,l_name)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nHello,&quot;</span>+formatted_name + <span class="string">&quot;!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Please tell me your name:</span><br><span class="line">(enter <span class="string">&#x27;q&#x27;</span> at any time to quit)</span><br><span class="line">First name: eric</span><br><span class="line">Last name: matthes</span><br><span class="line">Hello, Eric Matthes!</span><br><span class="line">Please tell me your name:</span><br><span class="line">(enter <span class="string">&#x27;q&#x27;</span> at any time to quit)</span><br><span class="line">First name: q</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="传递列表"><a href="#传递列表" class="headerlink" title="传递列表"></a>传递列表</h3><h4 id="向函数中传递列表"><a href="#向函数中传递列表" class="headerlink" title="向函数中传递列表"></a>向函数中传递列表</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#greet_users.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">greet_users</span>(<span class="params">names</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;向列表中的每一位用户发出简单的问候&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">        msg = <span class="string">&quot;Hello,&quot;</span> + name.title() + <span class="string">&quot;!&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(msg)</span><br><span class="line">usernames = [<span class="string">&#x27;hannah&#x27;</span>,<span class="string">&#x27;ty&#x27;</span>,<span class="string">&#x27;margot&#x27;</span>,<span class="string">&#x27;敬请T期待&#x27;</span>]</span><br><span class="line">greet_users(usernames)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Hello, Hannah!</span><br><span class="line">Hello, Ty!</span><br><span class="line">Hello, Margot!</span><br><span class="line">Hello, 敬请T期待!</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="在函数中修改列表"><a href="#在函数中修改列表" class="headerlink" title="在函数中修改列表"></a>在函数中修改列表</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#print_models.py</span></span><br><span class="line"><span class="comment">#首先创建一个列表，其中包含一些要打印的设计</span></span><br><span class="line">unprinted_designs = [<span class="string">&#x27;iphone case&#x27;</span>, <span class="string">&#x27;robot pendant&#x27;</span>, <span class="string">&#x27;dodecahedron&#x27;</span>]</span><br><span class="line">completed_models = []</span><br><span class="line"></span><br><span class="line"><span class="comment">#模拟打印每一个设计，直到没有未打印的设计为止</span></span><br><span class="line"><span class="comment">#打印每一个设计后，都将其移到列表completed_models中</span></span><br><span class="line"><span class="keyword">while</span> unprinted_designs:</span><br><span class="line">    current_design = unprinted_designs.pop()</span><br><span class="line">    <span class="comment">#模拟根据设计制作3D打印模型的过程</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Printing model:&quot;</span> + current_design)</span><br><span class="line">    completed_models.append(current_design)</span><br><span class="line"><span class="comment">#显示打印好的所有模型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nThe following models have been printed:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> completed_models <span class="keyword">in</span> completed_models:</span><br><span class="line">    <span class="built_in">print</span>(completed_model)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Printing model: dodecahedron</span><br><span class="line">Printing model: robot pendant</span><br><span class="line">Printing model: iphone case</span><br><span class="line"></span><br><span class="line">The following models have been printed:</span><br><span class="line">dodecahedron</span><br><span class="line">robot pendant</span><br><span class="line">iphone case</span><br></pre></td></tr></table></figure></div>
+
+<p>提高效率版</p>
+<blockquote>
+<p>每个函数都应只负责一项具体的工作。第一个函数打印每个设计，而第二个显示打印好的模型；这优于使用一个函数来完成两项工作。编写函数时，如果你发现它执行的任务太多，请尝试将这些代码划分到两个函数中。别忘了，总是可以在一个函数中调用另一个函数，这有助于将复杂的任务划分成一系列的步骤。</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#print_models()</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">print_models</span>(<span class="params">unprinted_designs, completed_models</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    模拟打印每个设计，直到没有未打印的设计为止</span></span><br><span class="line"><span class="string">    打印每个设计后，都将其移到列表completed_models中</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">while</span> unprinted_designs:</span><br><span class="line">        current_design = unprinted_designs.pop()</span><br><span class="line">        <span class="comment"># 模拟根据设计制作3D打印模型的过程</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Printing model: &quot;</span> + current_design)</span><br><span class="line">		completed_models.append(current_design)</span><br><span class="line"><span class="comment">#show_completed_models()    </span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">show_completed_models</span>(<span class="params">completed_models</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;显示打印好的所有模型&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nThe following models have been printed:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> completed_model <span class="keyword">in</span> completed_models:</span><br><span class="line">        <span class="built_in">print</span>(completed_model)</span><br><span class="line"></span><br><span class="line">unprinted_designs = [<span class="string">&#x27;iphone case&#x27;</span>, <span class="string">&#x27;robot pendant&#x27;</span>, <span class="string">&#x27;dodecahedron&#x27;</span>]</span><br><span class="line">completed_models = []</span><br><span class="line">print_models(unprinted_designs, completed_models)</span><br><span class="line">show_completed_models(completed_models)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="传递列表副本"><a href="#传递列表副本" class="headerlink" title="传递列表副本"></a>传递列表副本</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">function_name(list_name[:])</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>切片表示法[:]创建列表的副本。向函数传递列表的副本可保留原始列表的内容。</p>
+<p>但除非有充分的理由需要传递副本，否则还是应该将原始列表传递给函数，因为让函数使用现成列表可避免花时间和内存创建副本，从而提高效率，在处理大型列表时尤其如此。</p>
+</blockquote>
+<p>敬请T期待！</p>
 ]]></content>
       <categories>
         <category>Languages</category>
@@ -815,21 +879,6 @@ over</p>
       </categories>
       <tags>
         <tag>Begin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Open new world</title>
-    <url>/2024/01/13/Open-new-world/</url>
-    <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
-<p>路漫漫其修远兮，吾将上下而求索！</p>
-<p>​																–《离骚》屈原</p>
-<p>杨宪益先生 译：<br>The way was long, and wrapped in gloom did seem,<br>As I urged on to seek my vanished dream.</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Hope_flag</tag>
       </tags>
   </entry>
 </search>

@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java实战</title>
-    <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>2024-计划书单</title>
     <url>/2024/01/23/2024-%E8%AE%A1%E5%88%92%E4%B9%A6%E5%8D%95/</url>
     <content><![CDATA[<h2 id="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"><a href="#预祝新的一年你会有更多的属于自己的时刻！❀❀❀" class="headerlink" title="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"></a>预祝新的一年你会有更多的属于自己的时刻！❀❀❀</h2><h3 id="《家山》-王跃文"><a href="#《家山》-王跃文" class="headerlink" title="《家山》-王跃文"></a>《家山》-王跃文</h3><ul>
@@ -82,6 +77,11 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>Java实战</title>
+    <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Open new world</title>
     <url>/2024/01/13/Open-new-world/</url>
     <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
@@ -99,7 +99,46 @@ over</p>
   <entry>
     <title>Python实战</title>
     <url>/2024/02/07/Python%E5%AE%9E%E6%88%98/</url>
-    <content><![CDATA[<h2 id="外星人入侵游戏开发"><a href="#外星人入侵游戏开发" class="headerlink" title="外星人入侵游戏开发"></a>外星人入侵游戏开发</h2>]]></content>
+    <content><![CDATA[<h2 id="外星人入侵游戏开发"><a href="#外星人入侵游戏开发" class="headerlink" title="外星人入侵游戏开发"></a>外星人入侵游戏开发</h2><p>一、开发框架</p>
+<p>总文件：alien_invasion</p>
+<p>包含文件：</p>
+<ul>
+<li>image文件</li>
+<li>alien_invasion.py</li>
+<li>game_functions.py</li>
+<li>ship.py</li>
+<li>settings.py</li>
+</ul>
+<hr>
+<p><strong>alien.invasion.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pygame<span class="comment">#模块pygame包含开发游戏所需的功能</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> settings <span class="keyword">import</span> Settings</span><br><span class="line"><span class="keyword">from</span> ship <span class="keyword">import</span> Ship</span><br><span class="line"><span class="keyword">import</span> game_functions <span class="keyword">as</span> gf</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_game</span>():</span><br><span class="line">    <span class="comment">#初始化游戏并创建一个屏幕对象</span></span><br><span class="line">    pygame.init()<span class="comment">#初始化背景设置</span></span><br><span class="line">    ai_settings = Settings()</span><br><span class="line">    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    我们调用pygame.display.set_mode()来创建一个名为screen的显示窗口，这个游戏的所有图形元素都将在其中绘制。</span></span><br><span class="line"><span class="string">    通过将这些尺寸值传递给pygame.display.set_mode()，我们创建了一个宽1200像素、高800像素的游戏窗口</span></span><br><span class="line"><span class="string">    （你可以根据自己的显示器尺寸调整这些值）。</span></span><br><span class="line"><span class="string">    surface是屏幕的一部分，用于显示游戏元素。在这个游戏中，每个元素（如外星人或飞船）都是一个surface。</span></span><br><span class="line"><span class="string">    display.set_mode()返回的surface表示整个游戏窗口。</span></span><br><span class="line"><span class="string">    我们激活游戏的动画循环后，每经过一次循环都将自动重绘这个surface。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    pygame.display.set_caption(<span class="string">&quot;Alien Invasion&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#设置背景色</span></span><br><span class="line">    bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#创建一艘飞船</span></span><br><span class="line">    ship = Ship(ai_settings,screen)<span class="comment">#创建一个名为ship的Ship实例</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#开始游戏的主循环</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        gf.check_events(ship)</span><br><span class="line">        gf.ship.updat()<span class="comment">#玩家输入时，飞船位置更新</span></span><br><span class="line">        gf.update_screen(ai_settings,screen,ship)</span><br><span class="line"></span><br><span class="line">run_game()</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>game_functions.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_events</span>(<span class="params">ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> events <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">        <span class="keyword">if</span> events.<span class="built_in">type</span> == pygame.QUIT:</span><br><span class="line">            sys.exit()</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> == pygame.KEYDOWN:<span class="comment">#鼠标键按下时</span></span><br><span class="line">            <span class="keyword">if</span> events.key == pygame.K_RIGHT:<span class="comment">#右键</span></span><br><span class="line">                ship.moving_right = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">elif</span> events.key == pygame.K_LEFT:</span><br><span class="line">                ship.moving_left = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> ==pygame.KEYUP:<span class="comment">#鼠标键松开时</span></span><br><span class="line">            <span class="keyword">if</span> events.key == pygame.K_RIGHT:<span class="comment">#右键</span></span><br><span class="line">                ship.moving_right = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">elif</span> events.key == pygame.K_LEFT:</span><br><span class="line">                ship.moving_left = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_screen</span>(<span class="params">ai_settings,screen,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;更新屏幕上的图像，并切换到新屏幕&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 每次循环都重新绘制屏幕</span></span><br><span class="line">    screen.fill(ai_settings.bg_color)  <span class="comment"># 这个方法只接受一个实参：一种颜色。</span></span><br><span class="line">    ship.blitme()  <span class="comment"># 将飞船绘制到屏幕</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 让最近绘制的屏幕可见</span></span><br><span class="line">    pygame.display.flip()  <span class="comment"># 命令Pygame让最近绘制的屏幕可见。营造平滑移动的效果。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>ship.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ship</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,ai_settings,screen</span>):<span class="comment">#screen指定了要将飞船绘制到什么地方</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;初始化飞船并设置其初始位置&quot;&quot;&quot;</span></span><br><span class="line">        self.screen = screen</span><br><span class="line">        self.ai_settings = ai_settings</span><br><span class="line">        <span class="comment">#加载飞船图像并获取其外接矩形</span></span><br><span class="line">        self.image = pygame.image.load(<span class="string">&#x27;.\images\ship.bmp&#x27;</span>)</span><br><span class="line">        self.rect = self.image.get_rect()<span class="comment">#飞船图像</span></span><br><span class="line">        self.screen_rect = screen.get_rect()<span class="comment">#屏幕</span></span><br><span class="line">        <span class="comment">#将每艘新飞船放在屏幕底部中央</span></span><br><span class="line">        self.rect.centerx = self.screen_rect.centerx<span class="comment">#self.rect.centerx（飞船中心的x坐标）</span></span><br><span class="line">        self.rect.bottom = self.screen_rect.bottom<span class="comment">#self.rect.bottom（飞船下边缘的y坐标）</span></span><br><span class="line">        <span class="comment">#在飞船的属性center中存储小数值</span></span><br><span class="line">        self.center = <span class="built_in">float</span>(self.rect.centerx)</span><br><span class="line">        <span class="comment">#移动标志</span></span><br><span class="line">        self.moving_right = <span class="literal">False</span>  <span class="comment">#向右移动标志</span></span><br><span class="line">        self.mobing_left = <span class="literal">False</span> <span class="comment">#向左移动标志</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">updat</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;根据移动标志调整飞船的位置&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新飞船的center值，而不是rect</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_right:</span><br><span class="line">            self.rect.centerx += self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="keyword">if</span> self.moving_left:</span><br><span class="line">            self.rect.centerx -= self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#根据self.rect.center更新rect对象</span></span><br><span class="line">        self.rect.centerx = self.center</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">blitme</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;</span></span><br><span class="line">        self.screen.blit(self.image,self.rect)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>settings.py</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Settings</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;存储《外星入侵》的所有设置的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment">#初始化游戏的设置</span></span><br><span class="line">        <span class="comment">#屏幕设置</span></span><br><span class="line">        self.screen_width = <span class="number">1200</span></span><br><span class="line">        self.screen_height = <span class="number">800</span></span><br><span class="line">        self.bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)<span class="comment">#灰色</span></span><br><span class="line">        <span class="comment">#飞船的设置</span></span><br><span class="line">        self.ship_speed_factor = <span class="number">1.5</span></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>images文件</strong></p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/ship.bmp"
+                      alt="ship.bmp"
+                ></li>
+</ul>
+<hr>
+<p>项目进度：12.6.4</p>
+<p>敬请T期待</p>
+]]></content>
       <tags>
         <tag>语言</tag>
         <tag>实战项目</tag>

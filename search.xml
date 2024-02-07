@@ -80,6 +80,13 @@ over</p>
     <title>Java实战</title>
     <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>Languages</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>项目实战</tag>
+      </tags>
   </entry>
   <entry>
     <title>Open new world</title>
@@ -139,8 +146,11 @@ over</p>
 <p>项目进度：12.6.4</p>
 <p>敬请T期待</p>
 ]]></content>
+      <categories>
+        <category>Languages</category>
+      </categories>
       <tags>
-        <tag>语言</tag>
+        <tag>Python</tag>
         <tag>实战项目</tag>
       </tags>
   </entry>
@@ -1139,6 +1149,20 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>敬请T期待</title>
+    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
+    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
+<p>敬请T期待</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Begin</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++小型公司工资管理系统</title>
     <url>/2024/01/17/%E5%B0%8F%E5%9E%8B%E5%85%AC%E5%8F%B8%E5%B7%A5%E8%B5%84%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fcpp/</url>
     <content><![CDATA[<h2 id="课题要求"><a href="#课题要求" class="headerlink" title="课题要求"></a>课题要求</h2><p><em><strong>“小型公司工资管理系统设计”</strong></em></p>
@@ -1177,20 +1201,6 @@ over</p>
       </categories>
       <tags>
         <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敬请T期待</title>
-    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
-    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
-<p>敬请T期待</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Begin</tag>
       </tags>
   </entry>
 </search>

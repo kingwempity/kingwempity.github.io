@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java实战</title>
-    <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Languages</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>项目实战</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2024-计划书单</title>
     <url>/2024/01/23/2024-%E8%AE%A1%E5%88%92%E4%B9%A6%E5%8D%95/</url>
     <content><![CDATA[<h2 id="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"><a href="#预祝新的一年你会有更多的属于自己的时刻！❀❀❀" class="headerlink" title="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"></a>预祝新的一年你会有更多的属于自己的时刻！❀❀❀</h2><h3 id="《家山》-王跃文"><a href="#《家山》-王跃文" class="headerlink" title="《家山》-王跃文"></a>《家山》-王跃文</h3><ul>
@@ -89,6 +77,18 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>Java实战</title>
+    <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Languages</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>项目实战</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Open new world</title>
     <url>/2024/01/13/Open-new-world/</url>
     <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
@@ -101,6 +101,302 @@ over</p>
       </categories>
       <tags>
         <tag>Hope_flag</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Web_白帽子</title>
+    <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
+    <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
+<p>知识点罗列：</p>
+<ul>
+<li>URL概念、结构格式</li>
+<li>HTTP报文结构</li>
+<li>cookie含义</li>
+<li>Set-cookie含义</li>
+<li>Referer的作用</li>
+<li>状态码301和302的含义</li>
+<li>Location的含义</li>
+</ul>
+</blockquote>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><blockquote>
+<p>统一资源定位符（Uniform Resource Locator）</p>
+</blockquote>
+<blockquote>
+<p>作用：定位服务器资源</p>
+</blockquote>
+<blockquote>
+<p>URL格式：schemna:&#x2F;&#x2F;host[:post#]&#x2F;path&#x2F;…&#x2F;[?query-string][#anchor]</p>
+<p>schemna	底层协议(例如：http,https,ftp…)</p>
+<p>host		  服务器的域名或IP地址</p>
+<p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
+<p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
+<p>？query-string 发送给http服务器的数据</p>
+<p>[#anchor]	 锚</p>
+</blockquote>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
+<p>超文本传输协议（Hyper Text Transfer Protocol）</p>
+</blockquote>
+<blockquote>
+<p>作用：Web通信时使用的协议</p>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>HTTP报文</p>
+<p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
+</li>
+<li><p>HTTP报文结构</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
+                      alt="http报文结构"
+                ></p>
+<p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
+<p>空行</p>
+<p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
+</li>
+<li><p>HTTP请求报文结构</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
+                      alt="HTTP请求报文结构"
+                ></p>
+<p>GET和POST的区别：</p>
+<blockquote>
+<p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
+</blockquote>
+</li>
+<li><p>HTTP响应报文结构</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
+                      alt="HTTP响应报文结构"
+                ></p>
+</li>
+</ol>
+<hr>
+<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
+<p>参考文章</p>
+<p>原文链接：<a class="link"   href="https://blog.csdn.net/qq_35887546/article/details/104216286" >https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<blockquote>
+<p>HTTP请求的方式</p>
+<p>–GET</p>
+<p>–POST</p>
+<p>–HEAD				 与GET请求类似，不同在于与服务器只返回HTTP头部信息，没有页面内容</p>
+<p>–PUT					上传指定URL的描述</p>
+<p>–DELETE			 删除指定资源</p>
+<p>–OPTIONS 		 返回服务器支持的HTTP方法</p>
+</blockquote>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
+<p>cookie:相当于用户的凭证，类似与用户的通行证，很重要。</p>
+<p>set-cookie:服务器要求浏览器设置cookie</p>
+</blockquote>
+<h3 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h3><blockquote>
+<p>Referer的作用：</p>
+<p>–告知服务器该请求的来源（浏览器自动加上）</p>
+<p>–统计流量</p>
+<p>–判断来源合法性：防止盗链，防止CSRF漏洞</p>
+</blockquote>
+<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><blockquote>
+<p>Location：跳转到地址</p>
+</blockquote>
+<h3 id="响应报文状态码"><a href="#响应报文状态码" class="headerlink" title="响应报文状态码"></a>响应报文状态码</h3><blockquote>
+<p>响应报文状态码</p>
+<p><strong>3</strong>：完成此请求必须进一步处理**</p>
+<p>301——删除请求数据</p>
+<p>302——在其他地址发现了请求数据</p>
+<hr>
+<p>详细状态码：<a class="link"   href="https://blog.csdn.net/qq_35887546/article/details/104216807" >https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<h2 id="前端开发基础知识"><a href="#前端开发基础知识" class="headerlink" title="前端开发基础知识"></a>前端开发基础知识</h2><blockquote>
+<p>知识点罗列：</p>
+<p>​	–JavaScript</p>
+<p>​	–DOM</p>
+<p>​	–BOM</p>
+</blockquote>
+<h3 id="javaScript"><a href="#javaScript" class="headerlink" title="javaScript"></a>javaScript</h3><blockquote>
+<p>javaScript运行位置：</p>
+<ul>
+<li>HTML的<script></script></li>
+<li>HTML的事件属性中</li>
+<li>浏览器中的JavaScript控制台中的Console中</li>
+</ul>
+</blockquote>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
+<p>DOM本质：链接Web页面和编程语言</p>
+<p>JavaScript + DOM：访问和操作HTML文档的标准方法</p>
+</blockquote>
+<blockquote>
+<p>获取一个HTML元素内容</p>
+<ul>
+<li><p>tep1：获取元素</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()<span class="comment">//获取元素</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep2：获取元素的内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span><span class="comment">//获取元素的内容</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep3：显示获取信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>alert()方法在JavaScript中表示弹出一个警告框，可以用来展示信息</strong></p>
+</li>
+</ul>
+</blockquote>
+<p>示例</p>
+<blockquote>
+  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       <span class="title function_">alert</span>(<span class="string">&#x27;id为intro元素的文本是：&#x27;</span>+x.<span class="property">innerHTML</span>);  </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<blockquote>
+<p>修改一个HTML元素</p>
+<ul>
+<li><p>tep1：获取元素</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep2：获取元素内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</blockquote>
+<p>示例</p>
+<blockquote>
+  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       x.<span class="property">innerHTML</span>=<span class="string">&#x27;HELLO WORLD!&#x27;</span>; </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<blockquote>
+<p>将元素该为框架iframe框架</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>=<span class="string">&quot;&lt;ifream src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifream&gt;&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>动态创建HTML内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title class_">Date</span>());<span class="comment">//向页面中写入当前时间</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&lt;ifrema src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifrema&gt;&quot;</span>)<span class="comment">//向页面中写入框架</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>示例</p>
+<blockquote>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">         Hello!敬请T期待</span><br><span class="line">     <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     	<span class="keyword">function</span> <span class="title function_">changetext</span>(<span class="params">id</span>)</span></span><br><span class="line"><span class="language-javascript">         &#123;</span></span><br><span class="line"><span class="language-javascript">             id.<span class="property">innerHTML</span>=<span class="string">&quot;Kingwempity@敬请T期待&quot;</span>;<span class="comment">//点击后变化的内容</span></span></span><br><span class="line"><span class="language-javascript">         &#125;</span></span><br><span class="line"><span class="language-javascript">     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">h1</span> <span class="attr">onclick</span>=<span class="string">&quot;changetext(this)&quot;</span>&gt;</span></span><br><span class="line">         点我会发生变化o_o哦！</span><br><span class="line">     <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><blockquote>
+<p>BOM:浏览器对象模型(Browser Object Model)</p>
+</blockquote>
+<blockquote>
+<p>让浏览器来警告用户:</p>
+<p>警告弹窗alert()</p>
+<p>确认弹窗confirm()</p>
+<p>提示弹窗prompt()</p>
+<p>以上弹窗常用于简单的调试和信息展示。例如XSS漏洞测试</p>
+</blockquote>
+<blockquote>
+<p>获取用户cookie（通常为浏览器发给用户客户端的一小段文本信息）</p>
+<blockquote>
+<p>常见场景：</p>
+<p>用户输入用户名和密码成功登录网站后，网站会生成一个cookie给用户，当作用户凭证</p>
+</blockquote>
+<p>cookie一般在控制台的network或Application中可以查看</p>
+<ul>
+<li><p>获取Cookie</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">cookie</span><span class="comment">//获取cookie</span></span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><p>修改写入Cookie</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">doucment.<span class="property">cookie</span>=<span class="string">&quot;写入值&quot;</span>#值的形式key=value</span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><p>显示cookie</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(document.cookie)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>获取浏览器屏幕信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)screen</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>获取&#x2F;控制用户页面的URL</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;https://kingwempity.github.io/&quot;</span><span class="comment">//控制当前页面url</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>获取访问者浏览器信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)navigator</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>操作浏览器窗口</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">open</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//打开页面</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">close</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//关闭页面</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+</blockquote>
+<p>敬请T期待！</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>安全</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python实战</title>
+    <url>/2024/02/07/Python%E5%AE%9E%E6%88%98/</url>
+    <content><![CDATA[<h2 id="外星人入侵游戏开发"><a href="#外星人入侵游戏开发" class="headerlink" title="外星人入侵游戏开发"></a>外星人入侵游戏开发</h2><p>一、开发框架</p>
+<p>总文件：alien_invasion</p>
+<p>包含文件：</p>
+<ul>
+<li>image文件</li>
+<li>alien_invasion.py</li>
+<li>game_functions.py</li>
+<li>ship.py</li>
+<li>settings.py</li>
+<li>bullet.py</li>
+</ul>
+<hr>
+<p><strong>alien.invasion.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#alien_invasion.py</span></span><br><span class="line"><span class="comment">#一系列整个游戏都要用到的对象,游戏的主循环</span></span><br><span class="line"><span class="keyword">import</span> pygame<span class="comment">#模块pygame包含开发游戏所需的功能</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> settings <span class="keyword">import</span> Settings</span><br><span class="line"><span class="keyword">from</span> ship <span class="keyword">import</span> Ship</span><br><span class="line"><span class="keyword">import</span> game_functions <span class="keyword">as</span> gf</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_game</span>():</span><br><span class="line">    <span class="comment">#初始化游戏并创建一个屏幕对象</span></span><br><span class="line">    pygame.init()<span class="comment">#初始化背景设置</span></span><br><span class="line">    ai_settings = Settings()</span><br><span class="line">    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    我们调用pygame.display.set_mode()来创建一个名为screen的显示窗口，这个游戏的所有图形元素都将在其中绘制。</span></span><br><span class="line"><span class="string">    通过将这些尺寸值传递给pygame.display.set_mode()，我们创建了一个宽1200像素、高800像素的游戏窗口</span></span><br><span class="line"><span class="string">    （你可以根据自己的显示器尺寸调整这些值）。</span></span><br><span class="line"><span class="string">    surface是屏幕的一部分，用于显示游戏元素。在这个游戏中，每个元素（如外星人或飞船）都是一个surface。</span></span><br><span class="line"><span class="string">    display.set_mode()返回的surface表示整个游戏窗口。</span></span><br><span class="line"><span class="string">    我们激活游戏的动画循环后，每经过一次循环都将自动重绘这个surface。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    pygame.display.set_caption(<span class="string">&quot;Alien Invasion&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#设置背景色</span></span><br><span class="line">    bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#创建一艘飞船</span></span><br><span class="line">    ship = Ship(ai_settings,screen)<span class="comment">#创建一个名为ship的Ship实例</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#开始游戏的主循环</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        gf.check_events(ship)</span><br><span class="line">        gf.ship.updat()<span class="comment">#玩家输入时，飞船位置更新</span></span><br><span class="line">        gf.update_screen(ai_settings,screen,ship)</span><br><span class="line"></span><br><span class="line">run_game()</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>game_functions.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#game_functions.py</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;包含一系列函数，由它完成游戏的大部分工作.</span></span><br><span class="line"><span class="string">check_events()检测相关事件，按键的按下与松开，并且辅助check_keydown_events()和check_keyup_events()处理事件</span></span><br><span class="line"><span class="string">包含模块update_screen()用于每次执行主循环时的屏幕绘制</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keydown_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键按下</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RITGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">elif</span> event.key == pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keyup_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键松开</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RIGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">elif</span> event.key ==pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_events</span>(<span class="params">event,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> events <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">        <span class="keyword">if</span> events.<span class="built_in">type</span> == pygame.QUIT:</span><br><span class="line">            sys.exit()</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> == pygame.KEYDOWN:<span class="comment">#鼠标键按下时</span></span><br><span class="line">            check_keydown_events(event,ship)</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> ==pygame.KEYUP:<span class="comment">#鼠标键松开时</span></span><br><span class="line">            check_keyup_events(event,ship)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_screen</span>(<span class="params">ai_settings,screen,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;更新屏幕上的图像，并切换到新屏幕&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 每次循环都重新绘制屏幕</span></span><br><span class="line">    screen.fill(ai_settings.bg_color)  <span class="comment"># 这个方法只接受一个实参：一种颜色。</span></span><br><span class="line">    ship.blitme()  <span class="comment"># 将飞船绘制到屏幕</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 让最近绘制的屏幕可见</span></span><br><span class="line">    pygame.display.flip()  <span class="comment"># 命令Pygame让最近绘制的屏幕可见。营造平滑移动的效果。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>ship.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Ship.py</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;包含__init__()、管理飞船位置的方法update()以及在屏幕上绘制飞船的方法blitme()&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ship</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,ai_settings,screen</span>):<span class="comment">#screen指定了要将飞船绘制到什么地方</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;初始化飞船并设置其初始位置&quot;&quot;&quot;</span></span><br><span class="line">        self.screen = screen</span><br><span class="line">        self.ai_settings = ai_settings</span><br><span class="line">        <span class="comment">#加载飞船图像并获取其外接矩形</span></span><br><span class="line">        self.image = pygame.image.load(<span class="string">&#x27;.\images\ship.bmp&#x27;</span>)</span><br><span class="line">        self.rect = self.image.get_rect()<span class="comment">#飞船图像</span></span><br><span class="line">        self.screen_rect = screen.get_rect()<span class="comment">#屏幕</span></span><br><span class="line">        <span class="comment">#将每艘新飞船放在屏幕底部中央</span></span><br><span class="line">        self.rect.centerx = self.screen_rect.centerx<span class="comment">#self.rect.centerx（飞船中心的x坐标）</span></span><br><span class="line">        self.rect.bottom = self.screen_rect.bottom<span class="comment">#self.rect.bottom（飞船下边缘的y坐标）</span></span><br><span class="line">        <span class="comment">#在飞船的属性center中存储小数值</span></span><br><span class="line">        self.center = <span class="built_in">float</span>(self.rect.centerx)</span><br><span class="line">        <span class="comment">#移动标志</span></span><br><span class="line">        self.moving_right = <span class="literal">False</span>  <span class="comment">#向右移动标志</span></span><br><span class="line">        self.mobing_left = <span class="literal">False</span> <span class="comment">#向左移动标志</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">updat</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;根据移动标志调整飞船的位置&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新飞船的center值，而不是rect</span></span><br><span class="line">        <span class="comment">#self.rect.right返回飞船外接矩形的右边缘的x坐标，如果这个值小于self.screen_rect.right的值，就说明飞船未触及屏幕右边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_right <span class="keyword">and</span> self.rect.right &lt; self.screen_rect.right:</span><br><span class="line">            self.rect.centerx += self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#如果rect的左边缘的x坐标大于零，就说明飞船未触及屏幕左边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_left <span class="keyword">and</span> self.rect.left &gt; <span class="number">0</span>:</span><br><span class="line">            self.rect.centerx -= self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#根据self.rect.center更新rect对象</span></span><br><span class="line">        self.rect.centerx = self.center</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">blitme</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;</span></span><br><span class="line">        self.screen.blit(self.image,self.rect)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>settings.py</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#setting.py</span></span><br><span class="line"><span class="comment">#包含Setting类，只含有__init__()，初始化控制游戏外观和飞船的速度属性,射击子弹的属性</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Settings</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;存储《外星入侵》的所有设置的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment">#初始化游戏的设置</span></span><br><span class="line">        <span class="comment">#屏幕设置</span></span><br><span class="line">        self.screen_width = <span class="number">1200</span></span><br><span class="line">        self.screen_height = <span class="number">800</span></span><br><span class="line">        self.bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)<span class="comment">#灰色</span></span><br><span class="line">        <span class="comment">#飞船的设置</span></span><br><span class="line">        self.ship_speed_factor = <span class="number">1.5</span></span><br><span class="line">        <span class="comment">#设置子弹</span></span><br><span class="line">        self.bullet_speed_factor = <span class="number">1</span></span><br><span class="line">        self.bullet_width = <span class="number">3</span></span><br><span class="line">        self.bullet_hight = <span class="number">15</span></span><br><span class="line">        self.bullet_color = <span class="number">60</span>,<span class="number">60</span>,<span class="number">60</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>bullet.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#bullet.py</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.sprite <span class="keyword">import</span> Sprite<span class="comment">#精灵，可将游戏中相关的元素编组，进而同时操作编组中的所有元素。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bullet</span>(<span class="title class_ inherited__">Sprite</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个对飞船发射的子弹进行管理的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, ai_settings, screen,ship</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在飞船所处的位置创建一个子弹对象&quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">super</span>(Bullet,self)._init__()</span><br><span class="line">        self.screen = screen</span><br><span class="line"></span><br><span class="line">        <span class="comment">#在(0,0)处创建一个表示子弹的矩形，在设置正确的位置</span></span><br><span class="line">        self.rect = pygame.Rect(<span class="number">0</span>,<span class="number">0</span>,ai_settings.bullet_width,ai_settings.bullet_height)</span><br><span class="line">        self.rect.centerx = ship.rect.centerx</span><br><span class="line">        self.rect.top = ship.rect.top</span><br><span class="line"></span><br><span class="line">        <span class="comment">#存储用小数表示的位置</span></span><br><span class="line">        self.y = <span class="built_in">float</span>(self.rect.y)</span><br><span class="line">        self.color  = ai_settings.bullet_color</span><br><span class="line">        self.speed_factor  = ai_settings.bullet_speed_factor</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;向上移动子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新表示子弹的位置的小数值</span></span><br><span class="line">        self.y -= self.speed_factor</span><br><span class="line">        <span class="comment">#更新表示子弹的rect位置</span></span><br><span class="line">        self.rect.y = self.y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">draw_bullet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在屏幕上绘制子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;函数draw.rect()使用存储在self.color中的颜色填充表示子弹的rect占据的屏幕部分&quot;&quot;&quot;</span></span><br><span class="line">        pygame.draw.rect(self.screen,self.color,self.rect)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<hr>
+<p><strong>images文件</strong></p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/ship.bmp"
+                      alt="ship.bmp"
+                ></li>
+</ul>
+<hr>
+<p>项目进度：12.6.4</p>
+<p>敬请T期待</p>
+]]></content>
+      <categories>
+        <category>Languages</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>实战项目</tag>
       </tags>
   </entry>
   <entry>
@@ -854,67 +1150,9 @@ over</p>
         <category>Languages</category>
       </categories>
       <tags>
+        <tag>笔记</tag>
         <tag>python</tag>
         <tag>Learn</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python实战</title>
-    <url>/2024/02/07/Python%E5%AE%9E%E6%88%98/</url>
-    <content><![CDATA[<h2 id="外星人入侵游戏开发"><a href="#外星人入侵游戏开发" class="headerlink" title="外星人入侵游戏开发"></a>外星人入侵游戏开发</h2><p>一、开发框架</p>
-<p>总文件：alien_invasion</p>
-<p>包含文件：</p>
-<ul>
-<li>image文件</li>
-<li>alien_invasion.py</li>
-<li>game_functions.py</li>
-<li>ship.py</li>
-<li>settings.py</li>
-<li>bullet.py</li>
-</ul>
-<hr>
-<p><strong>alien.invasion.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#alien_invasion.py</span></span><br><span class="line"><span class="comment">#一系列整个游戏都要用到的对象,游戏的主循环</span></span><br><span class="line"><span class="keyword">import</span> pygame<span class="comment">#模块pygame包含开发游戏所需的功能</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> settings <span class="keyword">import</span> Settings</span><br><span class="line"><span class="keyword">from</span> ship <span class="keyword">import</span> Ship</span><br><span class="line"><span class="keyword">import</span> game_functions <span class="keyword">as</span> gf</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_game</span>():</span><br><span class="line">    <span class="comment">#初始化游戏并创建一个屏幕对象</span></span><br><span class="line">    pygame.init()<span class="comment">#初始化背景设置</span></span><br><span class="line">    ai_settings = Settings()</span><br><span class="line">    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    我们调用pygame.display.set_mode()来创建一个名为screen的显示窗口，这个游戏的所有图形元素都将在其中绘制。</span></span><br><span class="line"><span class="string">    通过将这些尺寸值传递给pygame.display.set_mode()，我们创建了一个宽1200像素、高800像素的游戏窗口</span></span><br><span class="line"><span class="string">    （你可以根据自己的显示器尺寸调整这些值）。</span></span><br><span class="line"><span class="string">    surface是屏幕的一部分，用于显示游戏元素。在这个游戏中，每个元素（如外星人或飞船）都是一个surface。</span></span><br><span class="line"><span class="string">    display.set_mode()返回的surface表示整个游戏窗口。</span></span><br><span class="line"><span class="string">    我们激活游戏的动画循环后，每经过一次循环都将自动重绘这个surface。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    pygame.display.set_caption(<span class="string">&quot;Alien Invasion&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#设置背景色</span></span><br><span class="line">    bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#创建一艘飞船</span></span><br><span class="line">    ship = Ship(ai_settings,screen)<span class="comment">#创建一个名为ship的Ship实例</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#开始游戏的主循环</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        gf.check_events(ship)</span><br><span class="line">        gf.ship.updat()<span class="comment">#玩家输入时，飞船位置更新</span></span><br><span class="line">        gf.update_screen(ai_settings,screen,ship)</span><br><span class="line"></span><br><span class="line">run_game()</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>game_functions.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#game_functions.py</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;包含一系列函数，由它完成游戏的大部分工作.</span></span><br><span class="line"><span class="string">check_events()检测相关事件，按键的按下与松开，并且辅助check_keydown_events()和check_keyup_events()处理事件</span></span><br><span class="line"><span class="string">包含模块update_screen()用于每次执行主循环时的屏幕绘制</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keydown_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键按下</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RITGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">elif</span> event.key == pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keyup_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键松开</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RIGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">elif</span> event.key ==pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_events</span>(<span class="params">event,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> events <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">        <span class="keyword">if</span> events.<span class="built_in">type</span> == pygame.QUIT:</span><br><span class="line">            sys.exit()</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> == pygame.KEYDOWN:<span class="comment">#鼠标键按下时</span></span><br><span class="line">            check_keydown_events(event,ship)</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> ==pygame.KEYUP:<span class="comment">#鼠标键松开时</span></span><br><span class="line">            check_keyup_events(event,ship)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_screen</span>(<span class="params">ai_settings,screen,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;更新屏幕上的图像，并切换到新屏幕&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 每次循环都重新绘制屏幕</span></span><br><span class="line">    screen.fill(ai_settings.bg_color)  <span class="comment"># 这个方法只接受一个实参：一种颜色。</span></span><br><span class="line">    ship.blitme()  <span class="comment"># 将飞船绘制到屏幕</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 让最近绘制的屏幕可见</span></span><br><span class="line">    pygame.display.flip()  <span class="comment"># 命令Pygame让最近绘制的屏幕可见。营造平滑移动的效果。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>ship.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Ship.py</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;包含__init__()、管理飞船位置的方法update()以及在屏幕上绘制飞船的方法blitme()&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ship</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,ai_settings,screen</span>):<span class="comment">#screen指定了要将飞船绘制到什么地方</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;初始化飞船并设置其初始位置&quot;&quot;&quot;</span></span><br><span class="line">        self.screen = screen</span><br><span class="line">        self.ai_settings = ai_settings</span><br><span class="line">        <span class="comment">#加载飞船图像并获取其外接矩形</span></span><br><span class="line">        self.image = pygame.image.load(<span class="string">&#x27;.\images\ship.bmp&#x27;</span>)</span><br><span class="line">        self.rect = self.image.get_rect()<span class="comment">#飞船图像</span></span><br><span class="line">        self.screen_rect = screen.get_rect()<span class="comment">#屏幕</span></span><br><span class="line">        <span class="comment">#将每艘新飞船放在屏幕底部中央</span></span><br><span class="line">        self.rect.centerx = self.screen_rect.centerx<span class="comment">#self.rect.centerx（飞船中心的x坐标）</span></span><br><span class="line">        self.rect.bottom = self.screen_rect.bottom<span class="comment">#self.rect.bottom（飞船下边缘的y坐标）</span></span><br><span class="line">        <span class="comment">#在飞船的属性center中存储小数值</span></span><br><span class="line">        self.center = <span class="built_in">float</span>(self.rect.centerx)</span><br><span class="line">        <span class="comment">#移动标志</span></span><br><span class="line">        self.moving_right = <span class="literal">False</span>  <span class="comment">#向右移动标志</span></span><br><span class="line">        self.mobing_left = <span class="literal">False</span> <span class="comment">#向左移动标志</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">updat</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;根据移动标志调整飞船的位置&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新飞船的center值，而不是rect</span></span><br><span class="line">        <span class="comment">#self.rect.right返回飞船外接矩形的右边缘的x坐标，如果这个值小于self.screen_rect.right的值，就说明飞船未触及屏幕右边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_right <span class="keyword">and</span> self.rect.right &lt; self.screen_rect.right:</span><br><span class="line">            self.rect.centerx += self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#如果rect的左边缘的x坐标大于零，就说明飞船未触及屏幕左边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_left <span class="keyword">and</span> self.rect.left &gt; <span class="number">0</span>:</span><br><span class="line">            self.rect.centerx -= self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#根据self.rect.center更新rect对象</span></span><br><span class="line">        self.rect.centerx = self.center</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">blitme</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;</span></span><br><span class="line">        self.screen.blit(self.image,self.rect)</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p>settings.py</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#setting.py</span></span><br><span class="line"><span class="comment">#包含Setting类，只含有__init__()，初始化控制游戏外观和飞船的速度属性,射击子弹的属性</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Settings</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;存储《外星入侵》的所有设置的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment">#初始化游戏的设置</span></span><br><span class="line">        <span class="comment">#屏幕设置</span></span><br><span class="line">        self.screen_width = <span class="number">1200</span></span><br><span class="line">        self.screen_height = <span class="number">800</span></span><br><span class="line">        self.bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)<span class="comment">#灰色</span></span><br><span class="line">        <span class="comment">#飞船的设置</span></span><br><span class="line">        self.ship_speed_factor = <span class="number">1.5</span></span><br><span class="line">        <span class="comment">#设置子弹</span></span><br><span class="line">        self.bullet_speed_factor = <span class="number">1</span></span><br><span class="line">        self.bullet_width = <span class="number">3</span></span><br><span class="line">        self.bullet_hight = <span class="number">15</span></span><br><span class="line">        self.bullet_color = <span class="number">60</span>,<span class="number">60</span>,<span class="number">60</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>bullet.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#bullet.py</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.sprite <span class="keyword">import</span> Sprite<span class="comment">#精灵，可将游戏中相关的元素编组，进而同时操作编组中的所有元素。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bullet</span>(<span class="title class_ inherited__">Sprite</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个对飞船发射的子弹进行管理的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, ai_settings, screen,ship</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在飞船所处的位置创建一个子弹对象&quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">super</span>(Bullet,self)._init__()</span><br><span class="line">        self.screen = screen</span><br><span class="line"></span><br><span class="line">        <span class="comment">#在(0,0)处创建一个表示子弹的矩形，在设置正确的位置</span></span><br><span class="line">        self.rect = pygame.Rect(<span class="number">0</span>,<span class="number">0</span>,ai_settings.bullet_width,ai_settings.bullet_height)</span><br><span class="line">        self.rect.centerx = ship.rect.centerx</span><br><span class="line">        self.rect.top = ship.rect.top</span><br><span class="line"></span><br><span class="line">        <span class="comment">#存储用小数表示的位置</span></span><br><span class="line">        self.y = <span class="built_in">float</span>(self.rect.y)</span><br><span class="line">        self.color  = ai_settings.bullet_color</span><br><span class="line">        self.speed_factor  = ai_settings.bullet_speed_factor</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;向上移动子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新表示子弹的位置的小数值</span></span><br><span class="line">        self.y -= self.speed_factor</span><br><span class="line">        <span class="comment">#更新表示子弹的rect位置</span></span><br><span class="line">        self.rect.y = self.y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">draw_bullet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在屏幕上绘制子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;函数draw.rect()使用存储在self.color中的颜色填充表示子弹的rect占据的屏幕部分&quot;&quot;&quot;</span></span><br><span class="line">        pygame.draw.rect(self.screen,self.color,self.rect)</span><br></pre></td></tr></table></figure></div>
-
-
-
-<hr>
-<p><strong>images文件</strong></p>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/ship.bmp"
-                      alt="ship.bmp"
-                ></li>
-</ul>
-<hr>
-<p>项目进度：12.6.4</p>
-<p>敬请T期待</p>
-]]></content>
-      <categories>
-        <category>Languages</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>实战项目</tag>
       </tags>
   </entry>
   <entry>
@@ -927,7 +1165,31 @@ over</p>
 <p><u>使用include()函数接收url参数,include()函数包含的文件会被执行,从而造成任意代码执行,或者配合伪协议获取敏感文件甚至getshell;</u></p>
 <p>本题伪协议不起作用,我们可以通过日志注入进行任意命令执行,从而getshell</p>
 </blockquote>
-<h3 id="Web5"><a href="#Web5" class="headerlink" title="Web5"></a>Web5</h3><blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_1.png"
+                      alt="ctf.show_web4_1"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_2.png"
+                      alt="ctf.show_web4_2"
+                ></p>
+<h3 id="Web5"><a href="#Web5" class="headerlink" title="Web5"></a>Web5</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_1.png"
+                      alt="ctf.show_web5_1"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_2.png"
+                      alt="ctf.show_web5_2"
+                ></p>
+<blockquote>
 <p>传递两个参数,一个字符串,一个数字,并且两个参数的md5值必须相同,我们可以利用<strong>md5的0e漏洞进行绕过</strong></p>
 <p>通过GET请求传递两个参数v1和v2,并且参数v1必须是纯字母字符串,参数v2必须是数字或者数字字符串,并且两个参数的md5值必须相等</p>
 </blockquote>
@@ -964,244 +1226,6 @@ over</p>
         <tag>笔记</tag>
         <tag>CTF</tag>
         <tag>ctf.show</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web_白帽子</title>
-    <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
-    <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
-<p>知识点罗列：</p>
-<ul>
-<li>URL概念、结构格式</li>
-<li>HTTP报文结构</li>
-<li>cookie含义</li>
-<li>Set-cookie含义</li>
-<li>Referer的作用</li>
-<li>状态码301和302的含义</li>
-<li>Location的含义</li>
-</ul>
-</blockquote>
-<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><blockquote>
-<p>统一资源定位符（Uniform Resource Locator）</p>
-</blockquote>
-<blockquote>
-<p>作用：定位服务器资源</p>
-</blockquote>
-<blockquote>
-<p>URL格式：schemna:&#x2F;&#x2F;host[:post#]&#x2F;path&#x2F;…&#x2F;[?query-string][#anchor]</p>
-<p>schemna	底层协议(例如：http,https,ftp…)</p>
-<p>host		  服务器的域名或IP地址</p>
-<p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
-<p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
-<p>？query-string 发送给http服务器的数据</p>
-<p>[#anchor]	 锚</p>
-</blockquote>
-<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
-<p>超文本传输协议（Hyper Text Transfer Protocol）</p>
-</blockquote>
-<blockquote>
-<p>作用：Web通信时使用的协议</p>
-</blockquote>
-<blockquote>
-<ol>
-<li><p>HTTP报文</p>
-<p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
-</li>
-<li><p>HTTP报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
-                      alt="http报文结构"
-                ></p>
-<p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
-<p>空行</p>
-<p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
-</li>
-<li><p>HTTP请求报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
-                      alt="HTTP请求报文结构"
-                ></p>
-<p>GET和POST的区别：</p>
-<blockquote>
-<p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
-</blockquote>
-</li>
-<li><p>HTTP响应报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
-                      alt="HTTP响应报文结构"
-                ></p>
-</li>
-</ol>
-<hr>
-<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
-<p>参考文章</p>
-<p>原文链接：<a class="link"   href="https://blog.csdn.net/qq_35887546/article/details/104216286" >https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<blockquote>
-<p>HTTP请求的方式</p>
-<p>–GET</p>
-<p>–POST</p>
-<p>–HEAD				 与GET请求类似，不同在于与服务器只返回HTTP头部信息，没有页面内容</p>
-<p>–PUT					上传指定URL的描述</p>
-<p>–DELETE			 删除指定资源</p>
-<p>–OPTIONS 		 返回服务器支持的HTTP方法</p>
-</blockquote>
-<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
-<p>cookie:相当于用户的凭证，类似与用户的通行证，很重要。</p>
-<p>set-cookie:服务器要求浏览器设置cookie</p>
-</blockquote>
-<h3 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h3><blockquote>
-<p>Referer的作用：</p>
-<p>–告知服务器该请求的来源（浏览器自动加上）</p>
-<p>–统计流量</p>
-<p>–判断来源合法性：防止盗链，防止CSRF漏洞</p>
-</blockquote>
-<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><blockquote>
-<p>Location：跳转到地址</p>
-</blockquote>
-<h3 id="响应报文状态码"><a href="#响应报文状态码" class="headerlink" title="响应报文状态码"></a>响应报文状态码</h3><blockquote>
-<p>响应报文状态码</p>
-<p><strong>3</strong>：完成此请求必须进一步处理**</p>
-<p>301——删除请求数据</p>
-<p>302——在其他地址发现了请求数据</p>
-<hr>
-<p>详细状态码：<a class="link"   href="https://blog.csdn.net/qq_35887546/article/details/104216807" >https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<h2 id="前端开发基础知识"><a href="#前端开发基础知识" class="headerlink" title="前端开发基础知识"></a>前端开发基础知识</h2><blockquote>
-<p>知识点罗列：</p>
-<p>​	–JavaScript</p>
-<p>​	–DOM</p>
-<p>​	–BOM</p>
-</blockquote>
-<h3 id="javaScript"><a href="#javaScript" class="headerlink" title="javaScript"></a>javaScript</h3><blockquote>
-<p>javaScript运行位置：</p>
-<ul>
-<li>HTML的<script></script></li>
-<li>HTML的事件属性中</li>
-<li>浏览器中的JavaScript控制台中的Console中</li>
-</ul>
-</blockquote>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
-<p>DOM本质：链接Web页面和编程语言</p>
-<p>JavaScript + DOM：访问和操作HTML文档的标准方法</p>
-</blockquote>
-<blockquote>
-<p>获取一个HTML元素内容</p>
-<ul>
-<li><p>tep1：获取元素</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()<span class="comment">//获取元素</span></span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep2：获取元素的内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span><span class="comment">//获取元素的内容</span></span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep3：显示获取信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p><strong>alert()方法在JavaScript中表示弹出一个警告框，可以用来展示信息</strong></p>
-</li>
-</ul>
-</blockquote>
-<p>示例</p>
-<blockquote>
-  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       <span class="title function_">alert</span>(<span class="string">&#x27;id为intro元素的文本是：&#x27;</span>+x.<span class="property">innerHTML</span>);  </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<blockquote>
-<p>修改一个HTML元素</p>
-<ul>
-<li><p>tep1：获取元素</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep2：获取元素内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span></span><br></pre></td></tr></table></figure></div></li>
-</ul>
-</blockquote>
-<p>示例</p>
-<blockquote>
-  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       x.<span class="property">innerHTML</span>=<span class="string">&#x27;HELLO WORLD!&#x27;</span>; </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<blockquote>
-<p>将元素该为框架iframe框架</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>=<span class="string">&quot;&lt;ifream src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifream&gt;&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>动态创建HTML内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title class_">Date</span>());<span class="comment">//向页面中写入当前时间</span></span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&lt;ifrema src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifrema&gt;&quot;</span>)<span class="comment">//向页面中写入框架</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p>示例</p>
-<blockquote>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">         Hello!敬请T期待</span><br><span class="line">     <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     	<span class="keyword">function</span> <span class="title function_">changetext</span>(<span class="params">id</span>)</span></span><br><span class="line"><span class="language-javascript">         &#123;</span></span><br><span class="line"><span class="language-javascript">             id.<span class="property">innerHTML</span>=<span class="string">&quot;Kingwempity@敬请T期待&quot;</span>;<span class="comment">//点击后变化的内容</span></span></span><br><span class="line"><span class="language-javascript">         &#125;</span></span><br><span class="line"><span class="language-javascript">     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">h1</span> <span class="attr">onclick</span>=<span class="string">&quot;changetext(this)&quot;</span>&gt;</span></span><br><span class="line">         点我会发生变化o_o哦！</span><br><span class="line">     <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><blockquote>
-<p>BOM:浏览器对象模型(Browser Object Model)</p>
-</blockquote>
-<blockquote>
-<p>让浏览器来警告用户:</p>
-<p>警告弹窗alert()</p>
-<p>确认弹窗confirm()</p>
-<p>提示弹窗prompt()</p>
-<p>以上弹窗常用于简单的调试和信息展示。例如XSS漏洞测试</p>
-</blockquote>
-<blockquote>
-<p>获取用户cookie（通常为浏览器发给用户客户端的一小段文本信息）</p>
-<blockquote>
-<p>常见场景：</p>
-<p>用户输入用户名和密码成功登录网站后，网站会生成一个cookie给用户，当作用户凭证</p>
-</blockquote>
-<p>cookie一般在控制台的network或Application中可以查看</p>
-<ul>
-<li><p>获取Cookie</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">cookie</span><span class="comment">//获取cookie</span></span><br></pre></td></tr></table></figure></div>
-
-
-</li>
-<li><p>修改写入Cookie</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">doucment.<span class="property">cookie</span>=<span class="string">&quot;写入值&quot;</span>#值的形式key=value</span><br></pre></td></tr></table></figure></div>
-
-
-</li>
-<li><p>显示cookie</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(document.cookie)</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-</blockquote>
-<blockquote>
-<p>获取浏览器屏幕信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)screen</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>获取&#x2F;控制用户页面的URL</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;https://kingwempity.github.io/&quot;</span><span class="comment">//控制当前页面url</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>获取访问者浏览器信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)navigator</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>操作浏览器窗口</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">open</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//打开页面</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">close</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//关闭页面</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-</blockquote>
-<p>敬请T期待！</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Web</tag>
-        <tag>安全</tag>
       </tags>
   </entry>
   <entry>

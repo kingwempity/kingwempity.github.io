@@ -700,41 +700,26 @@
 <p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
 </li>
 <li><p>HTTP报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
-                      alt="http报文结构"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="http报文结构"></p>
 <p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
 <p>空行</p>
 <p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
 </li>
 <li><p>HTTP请求报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
-                      alt="HTTP请求报文结构"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP请求报文结构"></p>
 <p>GET和POST的区别：</p>
 <blockquote>
 <p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
 </blockquote>
 </li>
 <li><p>HTTP响应报文结构</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png"
-                      alt="HTTP响应报文结构"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP响应报文结构"></p>
 </li>
 </ol>
 <hr>
 <p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
 <p>参考文章</p>
-<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35887546/article/details/104216286" >https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>原文链接：<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35887546/article/details/104216286">https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 </blockquote>
 <blockquote>
 <p>HTTP请求的方式</p>
@@ -764,7 +749,7 @@
 <p>301——删除请求数据</p>
 <p>302——在其他地址发现了请求数据</p>
 <hr>
-<p>详细状态码：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35887546/article/details/104216807" >https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>详细状态码：<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35887546/article/details/104216807">https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 </blockquote>
 <h2 id="前端开发基础知识"><a href="#前端开发基础知识" class="headerlink" title="前端开发基础知识"></a>前端开发基础知识</h2><blockquote>
 <p>知识点罗列：</p>

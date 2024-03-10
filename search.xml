@@ -1182,12 +1182,57 @@ over</p>
 <blockquote>
 <p>​    QNKCDZO<br>​    240610708<br>​    byGcY<br>​    sonZ7y<br>​    aabg7XSs<br>​    aabC9RqS<br>​    s878926199a<br>​    s155964671a<br>​    s214587387a<br>​    s1091221200a</p>
 </blockquote>
-<h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><p>WEB_请求方式</p>
+<h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
+<hr>
 <p>用burpsuit抓包,重放，将GET改成<strong>CTFHUB</strong>，发送即可获得flag</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_1.png" alt="BURPSUIT"></p>
 <p>falg</p>
+<hr>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_2.png" alt="flag"></p>
+<hr>
+<h3 id="信息页面隐藏"><a href="#信息页面隐藏" class="headerlink" title="信息页面隐藏"></a>信息页面隐藏</h3><hr>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_1.png" alt="CTFHUB_WEB_2_1" style="zoom: 80%;">
+
+<p>看见页面信息繁杂，flag可能就隐藏在页面中，火狐快捷键*<u><strong>Ctrl+f</strong></u>*快捷查找，输入flag找到FLAG。</p>
+<hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_2.png" alt="CTFHUB_WEB_2_2"></p>
+<hr>
+<h3 id="备份文件下载——网站源码"><a href="#备份文件下载——网站源码" class="headerlink" title="备份文件下载——网站源码"></a>备份文件下载——网站源码</h3><p><strong>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</strong></p>
+<hr>
+<blockquote>
+<h4 id="常见的网站源码备份文件后缀"><a href="#常见的网站源码备份文件后缀" class="headerlink" title="常见的网站源码备份文件后缀"></a>常见的网站源码备份文件后缀</h4><hr>
+<ul>
+<li>tar</li>
+<li>tar.gz</li>
+<li>zip</li>
+<li>rar</li>
+</ul>
+<h4 id="常见的网站源码备份文件名"><a href="#常见的网站源码备份文件名" class="headerlink" title="常见的网站源码备份文件名"></a>常见的网站源码备份文件名</h4><hr>
+<ul>
+<li>web</li>
+<li>website</li>
+<li>backup</li>
+<li>back</li>
+<li>www</li>
+<li>wwwroot</li>
+<li>temp</li>
+</ul>
+</blockquote>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_1.png" alt="CTFHUB_WEB_3_1" style="zoom:50%;">
+
+<p>文件下载，用python脚本，requests</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/&quot;</span></span><br><span class="line"></span><br><span class="line">li1=[<span class="string">&quot;web&quot;</span>,<span class="string">&quot;website&quot;</span>,<span class="string">&quot;backup&quot;</span>,<span class="string">&quot;back&quot;</span>,<span class="string">&quot;www&quot;</span>,<span class="string">&quot;wwwroot&quot;</span>,<span class="string">&quot;temp&quot;</span>]</span><br><span class="line">li2=[<span class="string">&quot; tar&quot;</span>,<span class="string">&quot;tar.gz&quot;</span>,<span class="string">&quot;zip&quot;</span>,<span class="string">&quot;rar&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li1:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> li2:</span><br><span class="line">        url_final = url +<span class="string">&quot;/&quot;</span>+i+<span class="string">&quot;.&quot;</span>+j</span><br><span class="line">        r=requests.get(url_final)</span><br><span class="line">        <span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;Response [404]&gt;//1</span><br><span class="line">&lt;Response [404]&gt;//2</span><br><span class="line">&lt;Response [404]&gt;//3</span><br><span class="line">&lt;Response [404]&gt;//4</span><br><span class="line">&lt;Response [404]&gt;//5</span><br><span class="line">&lt;Response [404]&gt;//6</span><br><span class="line">&lt;Response [404]&gt;//7</span><br><span class="line">&lt;Response [404]&gt;//8</span><br><span class="line">&lt;Response [404]&gt;//9</span><br><span class="line">&lt;Response [404]&gt;//10</span><br><span class="line">&lt;Response [404]&gt;//11</span><br><span class="line">&lt;Response [404]&gt;//12</span><br><span class="line">&lt;Response [404]&gt;//13</span><br><span class="line">&lt;Response [404]&gt;//14</span><br><span class="line">&lt;Response [404]&gt;//15</span><br><span class="line">&lt;Response [404]&gt;//16</span><br><span class="line">&lt;Response [404]&gt;//17</span><br><span class="line">&lt;Response [404]&gt;//18</span><br><span class="line">&lt;Response [200]&gt;//[200]19</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>得到备份文件”<a class="link" href="http://www.zip/">www.zip <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“</p>
+<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AEwww.zip%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%BE%97%E5%88%B0%E5%8E%8B%E7%BC%A9%E5%8C%85www.zip%EF%BC%8C%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip直接访问www.zip下载，得到压缩包www.zip，解压打开文件，如图： <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_2.png" alt="CTFHUB_WEB_3_2"></p>
+<p>打开flag文件，发现没有flag</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
+<p>直接用</p>
+<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
       <tags>
         <tag>笔记</tag>

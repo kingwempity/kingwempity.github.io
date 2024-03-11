@@ -41,8 +41,12 @@
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_1.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_2.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png">
 <meta property="article:published_time" content="2024-02-20T07:41:29.000Z">
-<meta property="article:modified_time" content="2024-03-10T11:12:52.476Z">
+<meta property="article:modified_time" content="2024-03-11T15:28:40.137Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="CTF">
@@ -545,7 +549,7 @@
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -599,8 +603,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-10 19:12:52</span>
-            <span class="mobile">2024-03-10 19:12:52</span>
+            <span class="desktop">2024-03-11 23:28:40</span>
+            <span class="mobile">2024-03-11 23:28:40</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -630,12 +634,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>830 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
         </span>
     
     
@@ -750,6 +754,19 @@
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
 <p>直接用</p>
 <p><a class="link" target="_blank" rel="noopener" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="Web-弱口令"><a href="#Web-弱口令" class="headerlink" title="Web_弱口令"></a>Web_弱口令</h2><blockquote>
+<p><strong>弱口令</strong></p>
+<p>通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。 </p>
+</blockquote>
+<p>使用<code>BurpSuite</code>中<code>Intruder</code>模块 ，即暴力破解模块(或在fuzz中使用)</p>
+<p>开启burp代理</p>
+<p>登录信息随便填，抓到request请求如下</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">POST / HTTP/1.1</span><br><span class="line">Host: challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 35</span><br><span class="line">Origin: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">Connection: close</span><br><span class="line">Referer: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line"></span><br><span class="line">name=admin&amp;password=ctfhub&amp;referer=</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png" alt="CTFHUB_WEB_4_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png" alt="CTFHUB_WEB_4_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png" alt="CTFHUB_WEB_4_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png" alt="CTFHUB_WEB_4_5"></p>
 
         </div>
 
@@ -764,7 +781,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-03-10 19:12:52
+                    :</strong> 2024-03-11 23:28:40
             </li>
         
         <li>
@@ -808,6 +825,21 @@
 
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/03/11/CTF_WEB/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
                 
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
@@ -918,11 +950,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        9 posts in total
+                        10 posts in total
                     </span>
                     
                         <span>
-                            21.8k words in total
+                            22.9k words in total
                         </span>
                     
                 </p>

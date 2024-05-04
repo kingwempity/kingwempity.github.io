@@ -1802,4 +1802,62 @@ over</p>
         <tag>c++</tag>
       </tags>
   </entry>
+  <entry>
+    <title>NISP1</title>
+    <url>/2024/05/03/NISP1/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/image-20240503165404974.png" alt="image-20240503165404974"></p>
+<blockquote>
+<p>PRAC是基于角色的访问控制模型</p>
+<p>BLP模型、Biba模型、Clark-Wilson模型、Chinese Wall模型是基于强制访问控制模型</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp2.png" alt="image-20240503170104551"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp1" alt="image-20240503170311884"></p>
+<blockquote>
+<p>交换机和可以接入交换机的任意两个网络结点提供独享的电信号通路</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp3" alt="image-20240503170614449"></p>
+<blockquote>
+<p>用户名&#x2F;密码（实体所知），手机短信验证码（实体所有）</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp4" alt="哈希算法"></p>
+<blockquote>
+<p>哈希算法：MD5 、SHA-1、SHA-256</p>
+<p>对称加密：RC5</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BF%9B%E5%85%A5%E8%BF%91%E4%BB%A3%E5%AF%86%E7%A0%81%E9%98%B6%E6%AE%B5%E7%9A%84%E6%A0%87%E5%BF%97.png" alt="进入近代密码阶段的标志"></p>
+<blockquote>
+<p>1949年香农发表的划时代论文””保密系统的通信理论”为近代密码学的标志</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp5.png" alt="nisp5"></p>
+<blockquote>
+<p>Enigma密码机属于古典密码学</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BD%9C%E7%94%A8.png" alt="防火墙的作用"></p>
+<blockquote>
+<p>防火墙保障的是内部网络数据的安全</p>
+<p>防火墙隔离两个不同安全要求的网络</p>
+<p>防火墙根据定义控制策略，检查并控制两个安全域之间的流量</p>
+<p>防火墙对进出网络边界的数据进行保护，防止恶意入侵，恶意代码的传播</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%BB%E6%9C%BA%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F.png" alt="主机入侵检测系统"></p>
+<blockquote>
+<p>主机入侵检测系统能供用于加密网络环境，可移植性差，开发、测试的压力比较大，能够监视所有系统</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E7%BC%96%E7%A0%81%E5%AD%A6%E5%92%8C%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E5%AD%A6.png" alt="密码编码学和密码分析学"></p>
+<blockquote>
+<p>密码编码学：主要研究信息的编码，构建各种安全有效的密码算法和协议，用于信息的加密、认证等方面。</p>
+<p>密码分析学：主要研究破译密码获得消息，或对消息进行伪造。</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="D:/blog/source/_posts/NISP1/%E6%B6%89%E5%AF%86%E8%BD%BD%E4%BD%93.png" alt="涉密载体"></p>
+<blockquote>
+<p>涉密计算机禁止和外网连接</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>nisp</tag>
+      </tags>
+  </entry>
 </search>

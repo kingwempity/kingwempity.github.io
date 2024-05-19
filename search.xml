@@ -402,12 +402,17 @@ over</p>
 
 <h3 id="访问控制模型"><a href="#访问控制模型" class="headerlink" title="访问控制模型"></a>访问控制模型</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/image-20240503165404974.png" alt="image-20240503165404974"></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%87%AA%E4%B8%BB%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%AD%96%E7%95%A5.png" alt="自主访问控制"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Biba%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B.png" alt="Biba访问控制模型"></p>
 <blockquote>
 <p>PRAC是基于角色的访问控制模型</p>
 <p>BLP模型、Biba模型、Clark-Wilson模型、Chinese Wall模型是基于强制访问控制模型</p>
 </blockquote>
 <blockquote>
 <p>“针对每个用户指明能够访问的资源”属于自主访问控制。</p>
+</blockquote>
+<blockquote>
+<p>Biba模型解决了系统内数据的完整性问题</p>
+<p>BLP模型解决 了系统内数据的保密性问题</p>
 </blockquote>
 <h3 id="网络设备——集线器、路由器"><a href="#网络设备——集线器、路由器" class="headerlink" title="网络设备——集线器、路由器"></a>网络设备——集线器、路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp2.png" alt="image-20240503170104551"></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp1" alt="image-20240503170311884"></p>
@@ -417,6 +422,7 @@ over</p>
 </blockquote>
 <h3 id="身份鉴别方式——实体所知、所有、特征"><a href="#身份鉴别方式——实体所知、所有、特征" class="headerlink" title="身份鉴别方式——实体所知、所有、特征"></a>身份鉴别方式——实体所知、所有、特征</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp3" alt="image-20240503170614449"></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB.png" alt="身份鉴别"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E3%80%81%E5%8F%A3%E4%BB%A4%E5%B1%9E%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5.png" alt="密码、口令属于实体所知"></p>
 <blockquote>
 <p>用户名&#x2F;密码、登入账号（实体所知），手机短信验证码（实体所有）、刷脸识别（实体特征）</p>
 </blockquote>
@@ -425,7 +431,7 @@ over</p>
 <blockquote>
 <p>哈希算法：MD5 、SHA-1、SHA-256</p>
 <p>对称加密：RC5、DES、AES</p>
-<p>非对称密码算法：RSA</p>
+<p>非对称密码算法：RSA，Rabin，ECC</p>
 </blockquote>
 <h3 id="密码学的发展阶段——香农论文（近代密码学）"><a href="#密码学的发展阶段——香农论文（近代密码学）" class="headerlink" title="密码学的发展阶段——香农论文（近代密码学）"></a>密码学的发展阶段——香农论文（近代密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BF%9B%E5%85%A5%E8%BF%91%E4%BB%A3%E5%AF%86%E7%A0%81%E9%98%B6%E6%AE%B5%E7%9A%84%E6%A0%87%E5%BF%97.png" alt="进入近代密码阶段的标志"></p>
 <blockquote>
@@ -469,10 +475,13 @@ over</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/SMTP%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A325.png" alt="SMTP默认端口25"></p>
 <blockquote>
 <p>FTP默认端口21</p>
-<p>SFTP默认端口22</p>
+<p>SFTP默认端口22(SSH文件传输协议)</p>
 <p>POP3默认端口110</p>
 <p>DNS默认端口53</p>
 <p>SMTP默认端口25</p>
+<p>共享文件夹默认端口445</p>
+<p>远程桌面端口3389</p>
+<p>Telnet端口23</p>
 </blockquote>
 <h3 id="计算机网络的节点——转换节点和访问节点"><a href="#计算机网络的节点——转换节点和访问节点" class="headerlink" title="计算机网络的节点——转换节点和访问节点"></a>计算机网络的节点——转换节点和访问节点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E8%8A%82%E7%82%B9.png" alt="计算机网络的节点"></p>
 <blockquote>
@@ -524,6 +533,7 @@ over</p>
 <p>状态检查防火墙允许规则的动态变化。</p>
 <p>状态防火墙通过采用状态监视器，对网络通信的各层（包括网络层、传输层以及应用层）实施检测，抽取其中部分数据，形成网络连接的动态状态信息。</p>
 </blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BC%98%E7%82%B9.png" alt="状态检测防火墙的优点"></p>
 <h3 id="上网行为管理"><a href="#上网行为管理" class="headerlink" title="上网行为管理"></a>上网行为管理</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%8A%E7%BD%91%E8%A1%8C%E4%B8%BA%E7%AE%A1%E7%90%86.png" alt="上网行为管理"></p>
 <blockquote>
 <p>上网行为管理目前可实现的功能：上网身份管控、互联网浏览管控、邮件外发管控、用户行为管控、上网应用管控。</p>
@@ -564,8 +574,8 @@ over</p>
 </blockquote>
 <h3 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE.png" alt="应用层协议"></p>
 <blockquote>
-<p>应用层协议：HTTP协议，FTP协议，Telent</p>
-<p>传输层协议：UDP协议</p>
+<p>应用层协议：HTTP协议，FTP协议，Telnet</p>
+<p>传输层协议：UDP协议，TCP协议</p>
 </blockquote>
 <h3 id="交换机的物理分层方式"><a href="#交换机的物理分层方式" class="headerlink" title="交换机的物理分层方式"></a>交换机的物理分层方式</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E7%89%A9%E7%90%86%E5%88%86%E5%B1%82%E6%96%B9%E5%BC%8F.png" alt="交换机的物理分层方式"></p>
 <blockquote>
@@ -581,6 +591,9 @@ over</p>
 </blockquote>
 <h3 id="无线局域网"><a href="#无线局域网" class="headerlink" title="无线局域网"></a>无线局域网</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91.png" alt="无线局域网"></p>
 <h3 id="网卡作用OSI七层的位置"><a href="#网卡作用OSI七层的位置" class="headerlink" title="网卡作用OSI七层的位置"></a>网卡作用OSI七层的位置</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E5%8D%A1%E4%BD%9C%E7%94%A8OSI%E4%B8%83%E5%B1%82%E7%9A%84%E4%BD%8D%E7%BD%AE.png" alt="网卡作用OSI七层的位置"></p>
+<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><h3 id><a href="#" class="headerlink" title></a><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0.png" alt="哈希函数"></h3><blockquote>
+<p>哈希函数：单向散列函数，它可以将任意有限长度信息映射为固定长度的值</p>
+</blockquote>
 ]]></content>
       <tags>
         <tag>nisp</tag>

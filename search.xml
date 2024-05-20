@@ -89,6 +89,215 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>NISP1</title>
+    <url>/2024/05/03/NISP1/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+
+
+<h3 id="访问控制模型"><a href="#访问控制模型" class="headerlink" title="访问控制模型"></a>访问控制模型</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/image-20240503165404974.png" alt="image-20240503165404974"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%87%AA%E4%B8%BB%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%AD%96%E7%95%A5.png" alt="自主访问控制"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Biba%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B.png" alt="Biba访问控制模型"></p>
+<blockquote>
+<p>PRAC是基于角色的访问控制模型</p>
+<p>BLP模型、Biba模型、Clark-Wilson模型、Chinese Wall模型是基于强制访问控制模型</p>
+</blockquote>
+<blockquote>
+<p>“针对每个用户指明能够访问的资源”属于自主访问控制。</p>
+</blockquote>
+<blockquote>
+<p>Biba模型解决了系统内数据的完整性问题</p>
+<p>BLP模型解决 了系统内数据的保密性问题</p>
+</blockquote>
+<h3 id="网络设备——集线器、路由器"><a href="#网络设备——集线器、路由器" class="headerlink" title="网络设备——集线器、路由器"></a>网络设备——集线器、路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp2.png" alt="image-20240503170104551"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp1" alt="image-20240503170311884"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%B7%AF%E7%94%B1%E5%99%A8%E5%92%8C%E7%BD%91%E5%8D%A1.png" alt="路由器和网卡"></p>
+<blockquote>
+<p>交换机和可以接入交换机的任意两个网络结点提供独享的电信号通路</p>
+</blockquote>
+<h3 id="身份鉴别方式——实体所知、所有、特征"><a href="#身份鉴别方式——实体所知、所有、特征" class="headerlink" title="身份鉴别方式——实体所知、所有、特征"></a>身份鉴别方式——实体所知、所有、特征</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp3" alt="image-20240503170614449"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB.png" alt="身份鉴别"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E3%80%81%E5%8F%A3%E4%BB%A4%E5%B1%9E%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5.png" alt="密码、口令属于实体所知"></p>
+<blockquote>
+<p>用户名&#x2F;密码、登入账号（实体所知），手机短信验证码（实体所有）、刷脸识别（实体特征）</p>
+</blockquote>
+<h3 id="密码加密算法"><a href="#密码加密算法" class="headerlink" title="密码加密算法"></a>密码加密算法</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp4" alt="哈希算法"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81%E7%AE%97%E6%B3%95.png" alt="对称密码算法"></p>
+<blockquote>
+<p>哈希算法：MD5 、SHA-1、SHA-256</p>
+<p>对称加密：RC5、DES、AES</p>
+<p>非对称密码算法：RSA，Rabin，ECC</p>
+</blockquote>
+<h3 id="密码学的发展阶段——香农论文（近代密码学）"><a href="#密码学的发展阶段——香农论文（近代密码学）" class="headerlink" title="密码学的发展阶段——香农论文（近代密码学）"></a>密码学的发展阶段——香农论文（近代密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BF%9B%E5%85%A5%E8%BF%91%E4%BB%A3%E5%AF%86%E7%A0%81%E9%98%B6%E6%AE%B5%E7%9A%84%E6%A0%87%E5%BF%97.png" alt="进入近代密码阶段的标志"></p>
+<blockquote>
+<p>1949年香农发表的划时代论文””保密系统的通信理论”为近代密码学的标志</p>
+</blockquote>
+<h3 id="密码学的发展阶段——密码机（古典密码学）"><a href="#密码学的发展阶段——密码机（古典密码学）" class="headerlink" title="密码学的发展阶段——密码机（古典密码学）"></a>密码学的发展阶段——密码机（古典密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp5.png" alt="nisp5"></p>
+<blockquote>
+<p>Enigma密码机属于古典密码学</p>
+</blockquote>
+<h3 id="防火墙的作用"><a href="#防火墙的作用" class="headerlink" title="防火墙的作用"></a>防火墙的作用</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BD%9C%E7%94%A8.png" alt="防火墙的作用"></p>
+<blockquote>
+<p>防火墙保障的是内部网络数据的安全</p>
+<p>防火墙隔离两个不同安全要求的网络</p>
+<p>防火墙根据定义控制策略，检查并控制两个安全域之间的流量</p>
+<p>防火墙对进出网络边界的数据进行保护，防止恶意入侵，恶意代码的传播</p>
+</blockquote>
+<h3 id="入侵检测机制"><a href="#入侵检测机制" class="headerlink" title="入侵检测机制"></a>入侵检测机制</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%BB%E6%9C%BA%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F.png" alt="主机入侵检测系统"></p>
+<blockquote>
+<p>主机入侵检测系统能供用于加密网络环境，可移植性差，开发、测试的压力比较大，能够监视所有系统</p>
+</blockquote>
+<h3 id="密码编码学和密码分析学"><a href="#密码编码学和密码分析学" class="headerlink" title="密码编码学和密码分析学"></a>密码编码学和密码分析学</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E7%BC%96%E7%A0%81%E5%AD%A6%E5%92%8C%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E5%AD%A6.png" alt="密码编码学和密码分析学"></p>
+<blockquote>
+<p>密码编码学：主要研究信息的编码，构建各种安全有效的密码算法和协议，用于信息的加密、认证等方面。</p>
+<p>密码分析学：主要研究破译密码获得消息，或对消息进行伪造。</p>
+</blockquote>
+<h3 id="涉密载体"><a href="#涉密载体" class="headerlink" title="涉密载体"></a>涉密载体</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%B6%89%E5%AF%86%E8%BD%BD%E4%BD%93.png" alt="涉密载体"></p>
+<blockquote>
+<p>涉密计算机禁止和外网连接</p>
+</blockquote>
+<h3 id="状态检测机制的缺点"><a href="#状态检测机制的缺点" class="headerlink" title="状态检测机制的缺点"></a>状态检测机制的缺点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E6%9C%BA%E5%88%B6.png" alt="状态检测机制"></p>
+<blockquote>
+<p>状态检测机制的缺点：检查内容比包过滤检测技术多，对防火墙的性能提出了更高要求；状态检测防火墙的配置非常复杂，对于用户的能力要求较高，使用起来不太方便。</p>
+</blockquote>
+<h3 id="信息安全目标"><a href="#信息安全目标" class="headerlink" title="信息安全目标"></a>信息安全目标</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%BF%9D%E5%AF%86%E6%80%A7.png" alt="密码学保密性"></p>
+<blockquote>
+<p>保密性事确保信息被合法用户访问，而不呗泄露给非授权的用户、实体或过程，或供其利用的特性。</p>
+</blockquote>
+<h3 id="传输服务的默认端口"><a href="#传输服务的默认端口" class="headerlink" title="传输服务的默认端口"></a>传输服务的默认端口</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ftp%E7%AB%AF%E5%8F%A321.png" alt="ftp端口21"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/POP3%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3.png" alt="POP3默认端口"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DNS%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A353.png" alt="DNS默认端口53"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/SMTP%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A325.png" alt="SMTP默认端口25"></p>
+<blockquote>
+<p>FTP默认端口21</p>
+<p>SFTP默认端口22(SSH文件传输协议)</p>
+<p>POP3默认端口110</p>
+<p>DNS默认端口53</p>
+<p>SMTP默认端口25</p>
+<p>共享文件夹默认端口445</p>
+<p>远程桌面端口3389</p>
+<p>Telnet端口23</p>
+<p>HTTPS默认端口443</p>
+</blockquote>
+<h3 id="计算机网络的节点——转换节点和访问节点"><a href="#计算机网络的节点——转换节点和访问节点" class="headerlink" title="计算机网络的节点——转换节点和访问节点"></a>计算机网络的节点——转换节点和访问节点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E8%8A%82%E7%82%B9.png" alt="计算机网络的节点"></p>
+<blockquote>
+<p>计算机网络的节点包括：转换节点和访问节点</p>
+</blockquote>
+<h3 id="物联网体系结构"><a href="#物联网体系结构" class="headerlink" title="物联网体系结构"></a>物联网体系结构</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%89%A9%E8%81%94%E7%BD%91%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%BD%9C%E7%94%A8.png" alt="物联网体系结构作用"></p>
+<blockquote>
+<p>物联网体系结构的作用：</p>
+<ul>
+<li>感知层：全面感知外界信息，本层主要设备是各种信息收集器</li>
+<li>传输层：主要用于把感知层收集的信息安全可靠地传输到信息支撑层，然后根据不同的应用需求进行信息处理。</li>
+<li>支撑层：对节点采集的信息处理，对信息进行分析和过滤，需要判断接受的信息是否真实有用，过滤掉垃圾升值恶意信息。</li>
+<li>应用层：具体的应用业务，所涉及的安全问题与业务特性相关，例如隐私保护、知识产权保护、取证、数据销毁等方面。</li>
+</ul>
+</blockquote>
+<h3 id="网络信息安全基本属性"><a href="#网络信息安全基本属性" class="headerlink" title="网络信息安全基本属性"></a>网络信息安全基本属性</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7.png" alt="数据完整性"></p>
+<blockquote>
+<ul>
+<li>完整性：保证信息系统中的数据处于完整的状态，确保信息没有遭受篡改和破坏。</li>
+<li>机密性：网络信息不泄露给非授权用户、实体或程序，能够防止非授权者获取信息。</li>
+<li>可用性：合法许可的用户能后及时获取网络信息或服务的特性。</li>
+<li>抗抵抗性：防止网络信息系统相关用户否认活动行为的特性。</li>
+<li>可控性：网络信息系统责任主体对其具有管理、支配能力的属性。</li>
+</ul>
+</blockquote>
+<h3 id="大数据的生命周期"><a href="#大数据的生命周期" class="headerlink" title="大数据的生命周期"></a>大数据的生命周期</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="大数据的生命周期"></p>
+<blockquote>
+<p>大数据的生命周期：数据采集、数据存储、数据处理、数据分发、数据删除</p>
+</blockquote>
+<h3 id="七个任务、四项措施"><a href="#七个任务、四项措施" class="headerlink" title="七个任务、四项措施"></a>七个任务、四项措施</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%8A%A0%E5%BC%BA%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8%E5%B7%A5%E8%B5%84%E7%9A%84%E6%8C%87%E5%AF%BC%E6%84%8F%E8%A7%81.png" alt="加强工业互联网安全工资的指导意见"></p>
+<blockquote>
+<p>《意见》提出达成七个主要任务和四项保障措施</p>
+</blockquote>
+<h3 id="网络钓鱼攻击手段"><a href="#网络钓鱼攻击手段" class="headerlink" title="网络钓鱼攻击手段"></a>网络钓鱼攻击手段</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E7%BB%9C%E9%92%93%E9%B1%BC%E6%94%BB%E5%87%BB.png" alt="网络钓鱼攻击"></p>
+<blockquote>
+<ul>
+<li>网络钓鱼攻击手段：邮件地址欺骗、伪造网站页面、社会工程学</li>
+<li>主动防御技术：蜜罐技术。</li>
+</ul>
+</blockquote>
+<h3 id="可实现保密性的传输协议——SSL协议"><a href="#可实现保密性的传输协议——SSL协议" class="headerlink" title="可实现保密性的传输协议——SSL协议"></a>可实现保密性的传输协议——SSL协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%BF%9D%E5%AF%86%E6%80%A7.png" alt="协议的保密性"></p>
+<blockquote>
+<p>SSL协议中，使用握手协商加密和MAC算法以及保密密钥使用握手协议交换的数据进行加密和签名，使用报警协议定义数据传输过程中，出现问题如何去解决。<br>FTP协议、POP3协议、HTTP协议无法保证保密性。、</p>
+</blockquote>
+<h3 id="状态检测防火墙功能"><a href="#状态检测防火墙功能" class="headerlink" title="状态检测防火墙功能"></a>状态检测防火墙功能</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99.png" alt="状态检测防火墙"></p>
+<blockquote>
+<p>状态检测防火墙又称动态包过滤防火墙，是对传统包过滤的功能拓展。</p>
+<p>状态检测防火墙实质上是包过滤，但它不仅对IP包头信息进行检查过滤，而且还要检查包的TCP头部信息甚至包的内容。</p>
+<p>状态检查防火墙允许规则的动态变化。</p>
+<p>状态防火墙通过采用状态监视器，对网络通信的各层（包括网络层、传输层以及应用层）实施检测，抽取其中部分数据，形成网络连接的动态状态信息。</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BC%98%E7%82%B9.png" alt="状态检测防火墙的优点"></p>
+<h3 id="上网行为管理"><a href="#上网行为管理" class="headerlink" title="上网行为管理"></a>上网行为管理</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%8A%E7%BD%91%E8%A1%8C%E4%B8%BA%E7%AE%A1%E7%90%86.png" alt="上网行为管理"></p>
+<blockquote>
+<p>上网行为管理目前可实现的功能：上网身份管控、互联网浏览管控、邮件外发管控、用户行为管控、上网应用管控。</p>
+</blockquote>
+<h3 id="IPV6-的地址空间——128位"><a href="#IPV6-的地址空间——128位" class="headerlink" title="IPV6 的地址空间——128位"></a>IPV6 的地址空间——128位</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/IPV6%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4.png" alt="IPV6地址空间"></p>
+<blockquote>
+<p>IPV6是128位的地址空间，IPV4是32位地址空间</p>
+</blockquote>
+<h3 id="IPS-入侵防御系统-主要功能"><a href="#IPS-入侵防御系统-主要功能" class="headerlink" title="IPS(入侵防御系统)主要功能"></a>IPS(入侵防御系统)主要功能</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%85%A5%E4%BE%B5%E9%98%B2%E5%BE%A1%E7%B3%BB%E7%BB%9FIPS.png" alt="入侵防御系统IPS"></p>
+<blockquote>
+<p>IPS(入侵防御系统)主要功能：实时监视和拦截攻击；保护客户端；虚拟补丁。</p>
+</blockquote>
+<h3 id="VLAN之间数据传递的设备——路由器"><a href="#VLAN之间数据传递的设备——路由器" class="headerlink" title="VLAN之间数据传递的设备——路由器"></a>VLAN之间数据传递的设备——路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/VLAN%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92%E8%AE%BE%E5%A4%87.png" alt="VLAN数据传递设备"></p>
+<blockquote>
+<p>能完成不同VLAN之间的数据传递的设备是路由器。路由器适用于不同网络之间。</p>
+</blockquote>
+<h3 id="系统对用户的身份单向鉴别"><a href="#系统对用户的身份单向鉴别" class="headerlink" title="系统对用户的身份单向鉴别"></a>系统对用户的身份单向鉴别</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%93%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8D%95%E5%90%91%E9%89%B4%E5%88%AB.png" alt="个人网银系统的单向鉴别"></p>
+<blockquote>
+<p>账号、密码、和验证码成功登陆个人网银系统，系统对用户身份的的单向鉴别。</p>
+</blockquote>
+<h3 id="基于实体所知的鉴别威胁"><a href="#基于实体所知的鉴别威胁" class="headerlink" title="基于实体所知的鉴别威胁"></a>基于实体所知的鉴别威胁</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5%E7%9A%84%E9%89%B4%E5%88%AB%E5%A8%81%E8%83%81.png" alt="基于实体所知的鉴别威胁"></p>
+<blockquote>
+<p>基于实体所知的鉴别威胁：暴力破解攻击，窃听攻击，重放攻击</p>
+</blockquote>
+<h3 id="证书管理器的调用"><a href="#证书管理器的调用" class="headerlink" title="证书管理器的调用"></a>证书管理器的调用</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AF%81%E4%B9%A6%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E8%B0%83%E7%94%A8.png" alt="证书管理器的调用"></p>
+<blockquote>
+<p>cmd打开certmgr.msc</p>
+</blockquote>
+<h3 id="IGMP协议"><a href="#IGMP协议" class="headerlink" title="IGMP协议"></a>IGMP协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/IGMP%E5%8D%8F%E8%AE%AE.png" alt="IGMP协议"></p>
+<blockquote>
+<p>IGMP协议：Internet组织管理协议 ，位于TCP&#x2F;IP协议的网络层</p>
+</blockquote>
+<h3 id="TCP网络安全协议"><a href="#TCP网络安全协议" class="headerlink" title="TCP网络安全协议"></a>TCP网络安全协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/TCP%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE.png" alt="TCP网络安全协议"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/TCP%E5%8D%8F%E8%AE%AE%E6%89%80%E5%9C%A8%E5%B1%82.png" alt="TCP协议所在层"></p>
+<blockquote>
+<p>IPSec工作再网络层</p>
+<p>PP2P和L2TP工作在数据链路层</p>
+<p>SSL工作在传输层。</p>
+</blockquote>
+<h3 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE.png" alt="应用层协议"></p>
+<blockquote>
+<p>应用层协议：HTTP协议，FTP协议，Telnet</p>
+<p>传输层协议：UDP协议，TCP协议</p>
+</blockquote>
+<h3 id="交换机的物理分层方式"><a href="#交换机的物理分层方式" class="headerlink" title="交换机的物理分层方式"></a>交换机的物理分层方式</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E7%89%A9%E7%90%86%E5%88%86%E5%B1%82%E6%96%B9%E5%BC%8F.png" alt="交换机的物理分层方式"></p>
+<blockquote>
+<p>交换机的物理分层方式：接入层、汇聚层、核心层</p>
+</blockquote>
+<h3 id="网闸-物理隔离系统"><a href="#网闸-物理隔离系统" class="headerlink" title="网闸(物理隔离系统)"></a>网闸(物理隔离系统)</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E9%97%B8(%E7%89%A9%E7%90%86%E9%9A%94%E7%A6%BB%E7%B3%BB%E7%BB%9F).png" alt="网闸(物理隔离系统)"></p>
+<blockquote>
+<p>网闸（物理隔离网络）：外部处理单元+内部处理单元+冲裁处理单元</p>
+</blockquote>
+<h3 id="局域网中MAC-介质访问控制子层"><a href="#局域网中MAC-介质访问控制子层" class="headerlink" title="局域网中MAC(介质访问控制子层)"></a>局域网中MAC(介质访问控制子层)</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%ADMAC(%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%AD%90%E5%B1%82).png" alt="局域网中MAC(介质访问控制子层)"></p>
+<blockquote>
+<p>在局域网中，MAC指的是介质访问控制子层</p>
+</blockquote>
+<h3 id="无线局域网"><a href="#无线局域网" class="headerlink" title="无线局域网"></a>无线局域网</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91.png" alt="无线局域网"></p>
+<h3 id="网卡作用OSI七层的位置"><a href="#网卡作用OSI七层的位置" class="headerlink" title="网卡作用OSI七层的位置"></a>网卡作用OSI七层的位置</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E5%8D%A1%E4%BD%9C%E7%94%A8OSI%E4%B8%83%E5%B1%82%E7%9A%84%E4%BD%8D%E7%BD%AE.png" alt="网卡作用OSI七层的位置"></p>
+<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><h3 id><a href="#" class="headerlink" title></a><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0.png" alt="哈希函数"></h3><blockquote>
+<p>哈希函数：单向散列函数，它可以将任意有限长度信息映射为固定长度的值</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>nisp</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux——基础</title>
     <url>/2024/04/16/Linux%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="linux系统入门："><a href="#linux系统入门：" class="headerlink" title="linux系统入门："></a>linux系统入门：</h1><h2 id="1-操作系统介绍"><a href="#1-操作系统介绍" class="headerlink" title="1.操作系统介绍"></a>1.操作系统介绍</h2><p>软件：驱动硬件</p>
@@ -391,213 +600,6 @@ over</p>
 ]]></content>
       <tags>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NISP1</title>
-    <url>/2024/05/03/NISP1/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-
-
-<h3 id="访问控制模型"><a href="#访问控制模型" class="headerlink" title="访问控制模型"></a>访问控制模型</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/image-20240503165404974.png" alt="image-20240503165404974"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%87%AA%E4%B8%BB%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%AD%96%E7%95%A5.png" alt="自主访问控制"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Biba%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B.png" alt="Biba访问控制模型"></p>
-<blockquote>
-<p>PRAC是基于角色的访问控制模型</p>
-<p>BLP模型、Biba模型、Clark-Wilson模型、Chinese Wall模型是基于强制访问控制模型</p>
-</blockquote>
-<blockquote>
-<p>“针对每个用户指明能够访问的资源”属于自主访问控制。</p>
-</blockquote>
-<blockquote>
-<p>Biba模型解决了系统内数据的完整性问题</p>
-<p>BLP模型解决 了系统内数据的保密性问题</p>
-</blockquote>
-<h3 id="网络设备——集线器、路由器"><a href="#网络设备——集线器、路由器" class="headerlink" title="网络设备——集线器、路由器"></a>网络设备——集线器、路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp2.png" alt="image-20240503170104551"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp1" alt="image-20240503170311884"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%B7%AF%E7%94%B1%E5%99%A8%E5%92%8C%E7%BD%91%E5%8D%A1.png" alt="路由器和网卡"></p>
-<blockquote>
-<p>交换机和可以接入交换机的任意两个网络结点提供独享的电信号通路</p>
-</blockquote>
-<h3 id="身份鉴别方式——实体所知、所有、特征"><a href="#身份鉴别方式——实体所知、所有、特征" class="headerlink" title="身份鉴别方式——实体所知、所有、特征"></a>身份鉴别方式——实体所知、所有、特征</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp3" alt="image-20240503170614449"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB.png" alt="身份鉴别"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E3%80%81%E5%8F%A3%E4%BB%A4%E5%B1%9E%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5.png" alt="密码、口令属于实体所知"></p>
-<blockquote>
-<p>用户名&#x2F;密码、登入账号（实体所知），手机短信验证码（实体所有）、刷脸识别（实体特征）</p>
-</blockquote>
-<h3 id="密码加密算法"><a href="#密码加密算法" class="headerlink" title="密码加密算法"></a>密码加密算法</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp4" alt="哈希算法"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81%E7%AE%97%E6%B3%95.png" alt="对称密码算法"></p>
-<blockquote>
-<p>哈希算法：MD5 、SHA-1、SHA-256</p>
-<p>对称加密：RC5、DES、AES</p>
-<p>非对称密码算法：RSA，Rabin，ECC</p>
-</blockquote>
-<h3 id="密码学的发展阶段——香农论文（近代密码学）"><a href="#密码学的发展阶段——香农论文（近代密码学）" class="headerlink" title="密码学的发展阶段——香农论文（近代密码学）"></a>密码学的发展阶段——香农论文（近代密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BF%9B%E5%85%A5%E8%BF%91%E4%BB%A3%E5%AF%86%E7%A0%81%E9%98%B6%E6%AE%B5%E7%9A%84%E6%A0%87%E5%BF%97.png" alt="进入近代密码阶段的标志"></p>
-<blockquote>
-<p>1949年香农发表的划时代论文””保密系统的通信理论”为近代密码学的标志</p>
-</blockquote>
-<h3 id="密码学的发展阶段——密码机（古典密码学）"><a href="#密码学的发展阶段——密码机（古典密码学）" class="headerlink" title="密码学的发展阶段——密码机（古典密码学）"></a>密码学的发展阶段——密码机（古典密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp5.png" alt="nisp5"></p>
-<blockquote>
-<p>Enigma密码机属于古典密码学</p>
-</blockquote>
-<h3 id="防火墙的作用"><a href="#防火墙的作用" class="headerlink" title="防火墙的作用"></a>防火墙的作用</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BD%9C%E7%94%A8.png" alt="防火墙的作用"></p>
-<blockquote>
-<p>防火墙保障的是内部网络数据的安全</p>
-<p>防火墙隔离两个不同安全要求的网络</p>
-<p>防火墙根据定义控制策略，检查并控制两个安全域之间的流量</p>
-<p>防火墙对进出网络边界的数据进行保护，防止恶意入侵，恶意代码的传播</p>
-</blockquote>
-<h3 id="入侵检测机制"><a href="#入侵检测机制" class="headerlink" title="入侵检测机制"></a>入侵检测机制</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%BB%E6%9C%BA%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F.png" alt="主机入侵检测系统"></p>
-<blockquote>
-<p>主机入侵检测系统能供用于加密网络环境，可移植性差，开发、测试的压力比较大，能够监视所有系统</p>
-</blockquote>
-<h3 id="密码编码学和密码分析学"><a href="#密码编码学和密码分析学" class="headerlink" title="密码编码学和密码分析学"></a>密码编码学和密码分析学</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E7%BC%96%E7%A0%81%E5%AD%A6%E5%92%8C%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E5%AD%A6.png" alt="密码编码学和密码分析学"></p>
-<blockquote>
-<p>密码编码学：主要研究信息的编码，构建各种安全有效的密码算法和协议，用于信息的加密、认证等方面。</p>
-<p>密码分析学：主要研究破译密码获得消息，或对消息进行伪造。</p>
-</blockquote>
-<h3 id="涉密载体"><a href="#涉密载体" class="headerlink" title="涉密载体"></a>涉密载体</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%B6%89%E5%AF%86%E8%BD%BD%E4%BD%93.png" alt="涉密载体"></p>
-<blockquote>
-<p>涉密计算机禁止和外网连接</p>
-</blockquote>
-<h3 id="状态检测机制的缺点"><a href="#状态检测机制的缺点" class="headerlink" title="状态检测机制的缺点"></a>状态检测机制的缺点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E6%9C%BA%E5%88%B6.png" alt="状态检测机制"></p>
-<blockquote>
-<p>状态检测机制的缺点：检查内容比包过滤检测技术多，对防火墙的性能提出了更高要求；状态检测防火墙的配置非常复杂，对于用户的能力要求较高，使用起来不太方便。</p>
-</blockquote>
-<h3 id="信息安全目标"><a href="#信息安全目标" class="headerlink" title="信息安全目标"></a>信息安全目标</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%BF%9D%E5%AF%86%E6%80%A7.png" alt="密码学保密性"></p>
-<blockquote>
-<p>保密性事确保信息被合法用户访问，而不呗泄露给非授权的用户、实体或过程，或供其利用的特性。</p>
-</blockquote>
-<h3 id="传输服务的默认端口"><a href="#传输服务的默认端口" class="headerlink" title="传输服务的默认端口"></a>传输服务的默认端口</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ftp%E7%AB%AF%E5%8F%A321.png" alt="ftp端口21"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/POP3%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3.png" alt="POP3默认端口"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DNS%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A353.png" alt="DNS默认端口53"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/SMTP%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A325.png" alt="SMTP默认端口25"></p>
-<blockquote>
-<p>FTP默认端口21</p>
-<p>SFTP默认端口22(SSH文件传输协议)</p>
-<p>POP3默认端口110</p>
-<p>DNS默认端口53</p>
-<p>SMTP默认端口25</p>
-<p>共享文件夹默认端口445</p>
-<p>远程桌面端口3389</p>
-<p>Telnet端口23</p>
-</blockquote>
-<h3 id="计算机网络的节点——转换节点和访问节点"><a href="#计算机网络的节点——转换节点和访问节点" class="headerlink" title="计算机网络的节点——转换节点和访问节点"></a>计算机网络的节点——转换节点和访问节点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E8%8A%82%E7%82%B9.png" alt="计算机网络的节点"></p>
-<blockquote>
-<p>计算机网络的节点包括：转换节点和访问节点</p>
-</blockquote>
-<h3 id="物联网体系结构"><a href="#物联网体系结构" class="headerlink" title="物联网体系结构"></a>物联网体系结构</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%89%A9%E8%81%94%E7%BD%91%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%BD%9C%E7%94%A8.png" alt="物联网体系结构作用"></p>
-<blockquote>
-<p>物联网体系结构的作用：</p>
-<ul>
-<li>感知层：全面感知外界信息，本层主要设备是各种信息收集器</li>
-<li>传输层：主要用于把感知层收集的信息安全可靠地传输到信息支撑层，然后根据不同的应用需求进行信息处理。</li>
-<li>支撑层：对节点采集的信息处理，对信息进行分析和过滤，需要判断接受的信息是否真实有用，过滤掉垃圾升值恶意信息。</li>
-<li>应用层：具体的应用业务，所涉及的安全问题与业务特性相关，例如隐私保护、知识产权保护、取证、数据销毁等方面。</li>
-</ul>
-</blockquote>
-<h3 id="网络信息安全基本属性"><a href="#网络信息安全基本属性" class="headerlink" title="网络信息安全基本属性"></a>网络信息安全基本属性</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7.png" alt="数据完整性"></p>
-<blockquote>
-<ul>
-<li>完整性：保证信息系统中的数据处于完整的状态，确保信息没有遭受篡改和破坏。</li>
-<li>机密性：网络信息不泄露给非授权用户、实体或程序，能够防止非授权者获取信息。</li>
-<li>可用性：合法许可的用户能后及时获取网络信息或服务的特性。</li>
-<li>抗抵抗性：防止网络信息系统相关用户否认活动行为的特性。</li>
-<li>可控性：网络信息系统责任主体对其具有管理、支配能力的属性。</li>
-</ul>
-</blockquote>
-<h3 id="大数据的生命周期"><a href="#大数据的生命周期" class="headerlink" title="大数据的生命周期"></a>大数据的生命周期</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="大数据的生命周期"></p>
-<blockquote>
-<p>大数据的生命周期：数据采集、数据存储、数据处理、数据分发、数据删除</p>
-</blockquote>
-<h3 id="七个任务、四项措施"><a href="#七个任务、四项措施" class="headerlink" title="七个任务、四项措施"></a>七个任务、四项措施</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%8A%A0%E5%BC%BA%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8%E5%B7%A5%E8%B5%84%E7%9A%84%E6%8C%87%E5%AF%BC%E6%84%8F%E8%A7%81.png" alt="加强工业互联网安全工资的指导意见"></p>
-<blockquote>
-<p>《意见》提出达成七个主要任务和四项保障措施</p>
-</blockquote>
-<h3 id="网络钓鱼攻击手段"><a href="#网络钓鱼攻击手段" class="headerlink" title="网络钓鱼攻击手段"></a>网络钓鱼攻击手段</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E7%BB%9C%E9%92%93%E9%B1%BC%E6%94%BB%E5%87%BB.png" alt="网络钓鱼攻击"></p>
-<blockquote>
-<ul>
-<li>网络钓鱼攻击手段：邮件地址欺骗、伪造网站页面、社会工程学</li>
-<li>主动防御技术：蜜罐技术。</li>
-</ul>
-</blockquote>
-<h3 id="可实现保密性的传输协议——SSL协议"><a href="#可实现保密性的传输协议——SSL协议" class="headerlink" title="可实现保密性的传输协议——SSL协议"></a>可实现保密性的传输协议——SSL协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%BF%9D%E5%AF%86%E6%80%A7.png" alt="协议的保密性"></p>
-<blockquote>
-<p>SSL协议中，使用握手协商加密和MAC算法以及保密密钥使用握手协议交换的数据进行加密和签名，使用报警协议定义数据传输过程中，出现问题如何去解决。<br>FTP协议、POP3协议、HTTP协议无法保证保密性。、</p>
-</blockquote>
-<h3 id="状态检测防火墙功能"><a href="#状态检测防火墙功能" class="headerlink" title="状态检测防火墙功能"></a>状态检测防火墙功能</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99.png" alt="状态检测防火墙"></p>
-<blockquote>
-<p>状态检测防火墙又称动态包过滤防火墙，是对传统包过滤的功能拓展。</p>
-<p>状态检测防火墙实质上是包过滤，但它不仅对IP包头信息进行检查过滤，而且还要检查包的TCP头部信息甚至包的内容。</p>
-<p>状态检查防火墙允许规则的动态变化。</p>
-<p>状态防火墙通过采用状态监视器，对网络通信的各层（包括网络层、传输层以及应用层）实施检测，抽取其中部分数据，形成网络连接的动态状态信息。</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BC%98%E7%82%B9.png" alt="状态检测防火墙的优点"></p>
-<h3 id="上网行为管理"><a href="#上网行为管理" class="headerlink" title="上网行为管理"></a>上网行为管理</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%8A%E7%BD%91%E8%A1%8C%E4%B8%BA%E7%AE%A1%E7%90%86.png" alt="上网行为管理"></p>
-<blockquote>
-<p>上网行为管理目前可实现的功能：上网身份管控、互联网浏览管控、邮件外发管控、用户行为管控、上网应用管控。</p>
-</blockquote>
-<h3 id="IPV6-的地址空间——128位"><a href="#IPV6-的地址空间——128位" class="headerlink" title="IPV6 的地址空间——128位"></a>IPV6 的地址空间——128位</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/IPV6%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4.png" alt="IPV6地址空间"></p>
-<blockquote>
-<p>IPV6是128位的地址空间，IPV4是32位地址空间</p>
-</blockquote>
-<h3 id="IPS-入侵防御系统-主要功能"><a href="#IPS-入侵防御系统-主要功能" class="headerlink" title="IPS(入侵防御系统)主要功能"></a>IPS(入侵防御系统)主要功能</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%85%A5%E4%BE%B5%E9%98%B2%E5%BE%A1%E7%B3%BB%E7%BB%9FIPS.png" alt="入侵防御系统IPS"></p>
-<blockquote>
-<p>IPS(入侵防御系统)主要功能：实时监视和拦截攻击；保护客户端；虚拟补丁。</p>
-</blockquote>
-<h3 id="VLAN之间数据传递的设备——路由器"><a href="#VLAN之间数据传递的设备——路由器" class="headerlink" title="VLAN之间数据传递的设备——路由器"></a>VLAN之间数据传递的设备——路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/VLAN%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92%E8%AE%BE%E5%A4%87.png" alt="VLAN数据传递设备"></p>
-<blockquote>
-<p>能完成不同VLAN之间的数据传递的设备是路由器。路由器适用于不同网络之间。</p>
-</blockquote>
-<h3 id="系统对用户的身份单向鉴别"><a href="#系统对用户的身份单向鉴别" class="headerlink" title="系统对用户的身份单向鉴别"></a>系统对用户的身份单向鉴别</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%93%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8D%95%E5%90%91%E9%89%B4%E5%88%AB.png" alt="个人网银系统的单向鉴别"></p>
-<blockquote>
-<p>账号、密码、和验证码成功登陆个人网银系统，系统对用户身份的的单向鉴别。</p>
-</blockquote>
-<h3 id="基于实体所知的鉴别威胁"><a href="#基于实体所知的鉴别威胁" class="headerlink" title="基于实体所知的鉴别威胁"></a>基于实体所知的鉴别威胁</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5%E7%9A%84%E9%89%B4%E5%88%AB%E5%A8%81%E8%83%81.png" alt="基于实体所知的鉴别威胁"></p>
-<blockquote>
-<p>基于实体所知的鉴别威胁：暴力破解攻击，窃听攻击，重放攻击</p>
-</blockquote>
-<h3 id="证书管理器的调用"><a href="#证书管理器的调用" class="headerlink" title="证书管理器的调用"></a>证书管理器的调用</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AF%81%E4%B9%A6%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E8%B0%83%E7%94%A8.png" alt="证书管理器的调用"></p>
-<blockquote>
-<p>cmd打开certmgr.msc</p>
-</blockquote>
-<h3 id="IGMP协议"><a href="#IGMP协议" class="headerlink" title="IGMP协议"></a>IGMP协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/IGMP%E5%8D%8F%E8%AE%AE.png" alt="IGMP协议"></p>
-<blockquote>
-<p>IGMP协议：Internet组织管理协议 ，位于TCP&#x2F;IP协议的网络层</p>
-</blockquote>
-<h3 id="TCP网络安全协议"><a href="#TCP网络安全协议" class="headerlink" title="TCP网络安全协议"></a>TCP网络安全协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/TCP%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE.png" alt="TCP网络安全协议"></p>
-<blockquote>
-<p>IPSec工作再网络层</p>
-<p>PP2P和L2TP工作在数据链路层</p>
-<p>SSL工作在传输层。</p>
-</blockquote>
-<h3 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE.png" alt="应用层协议"></p>
-<blockquote>
-<p>应用层协议：HTTP协议，FTP协议，Telnet</p>
-<p>传输层协议：UDP协议，TCP协议</p>
-</blockquote>
-<h3 id="交换机的物理分层方式"><a href="#交换机的物理分层方式" class="headerlink" title="交换机的物理分层方式"></a>交换机的物理分层方式</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E7%89%A9%E7%90%86%E5%88%86%E5%B1%82%E6%96%B9%E5%BC%8F.png" alt="交换机的物理分层方式"></p>
-<blockquote>
-<p>交换机的物理分层方式：接入层、汇聚层、核心层</p>
-</blockquote>
-<h3 id="网闸-物理隔离系统"><a href="#网闸-物理隔离系统" class="headerlink" title="网闸(物理隔离系统)"></a>网闸(物理隔离系统)</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E9%97%B8(%E7%89%A9%E7%90%86%E9%9A%94%E7%A6%BB%E7%B3%BB%E7%BB%9F).png" alt="网闸(物理隔离系统)"></p>
-<blockquote>
-<p>网闸（物理隔离网络）：外部处理单元+内部处理单元+冲裁处理单元</p>
-</blockquote>
-<h3 id="局域网中MAC-介质访问控制子层"><a href="#局域网中MAC-介质访问控制子层" class="headerlink" title="局域网中MAC(介质访问控制子层)"></a>局域网中MAC(介质访问控制子层)</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%ADMAC(%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%AD%90%E5%B1%82).png" alt="局域网中MAC(介质访问控制子层)"></p>
-<blockquote>
-<p>在局域网中，MAC指的是介质访问控制子层</p>
-</blockquote>
-<h3 id="无线局域网"><a href="#无线局域网" class="headerlink" title="无线局域网"></a>无线局域网</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91.png" alt="无线局域网"></p>
-<h3 id="网卡作用OSI七层的位置"><a href="#网卡作用OSI七层的位置" class="headerlink" title="网卡作用OSI七层的位置"></a>网卡作用OSI七层的位置</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E5%8D%A1%E4%BD%9C%E7%94%A8OSI%E4%B8%83%E5%B1%82%E7%9A%84%E4%BD%8D%E7%BD%AE.png" alt="网卡作用OSI七层的位置"></p>
-<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><h3 id><a href="#" class="headerlink" title></a><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0.png" alt="哈希函数"></h3><blockquote>
-<p>哈希函数：单向散列函数，它可以将任意有限长度信息映射为固定长度的值</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>nisp</tag>
-        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1369,61 +1371,6 @@ over</p>
       </tags>
   </entry>
   <entry>
-    <title>Python实战</title>
-    <url>/2024/02/07/Python%E5%AE%9E%E6%88%98/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<h2 id="外星人入侵游戏开发"><a href="#外星人入侵游戏开发" class="headerlink" title="外星人入侵游戏开发"></a>外星人入侵游戏开发</h2><p>一、开发框架</p>
-<p>总文件：alien_invasion</p>
-<p>包含文件：</p>
-<ul>
-<li>image文件</li>
-<li>alien_invasion.py</li>
-<li>game_functions.py</li>
-<li>ship.py</li>
-<li>settings.py</li>
-<li>bullet.py</li>
-</ul>
-<hr>
-<p><strong>alien.invasion.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#alien_invasion.py</span></span><br><span class="line"><span class="comment">#一系列整个游戏都要用到的对象,游戏的主循环</span></span><br><span class="line"><span class="keyword">import</span> pygame<span class="comment">#模块pygame包含开发游戏所需的功能</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> settings <span class="keyword">import</span> Settings</span><br><span class="line"><span class="keyword">from</span> ship <span class="keyword">import</span> Ship</span><br><span class="line"><span class="keyword">import</span> game_functions <span class="keyword">as</span> gf</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_game</span>():</span><br><span class="line">    <span class="comment">#初始化游戏并创建一个屏幕对象</span></span><br><span class="line">    pygame.init()<span class="comment">#初始化背景设置</span></span><br><span class="line">    ai_settings = Settings()</span><br><span class="line">    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    我们调用pygame.display.set_mode()来创建一个名为screen的显示窗口，这个游戏的所有图形元素都将在其中绘制。</span></span><br><span class="line"><span class="string">    通过将这些尺寸值传递给pygame.display.set_mode()，我们创建了一个宽1200像素、高800像素的游戏窗口</span></span><br><span class="line"><span class="string">    （你可以根据自己的显示器尺寸调整这些值）。</span></span><br><span class="line"><span class="string">    surface是屏幕的一部分，用于显示游戏元素。在这个游戏中，每个元素（如外星人或飞船）都是一个surface。</span></span><br><span class="line"><span class="string">    display.set_mode()返回的surface表示整个游戏窗口。</span></span><br><span class="line"><span class="string">    我们激活游戏的动画循环后，每经过一次循环都将自动重绘这个surface。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    pygame.display.set_caption(<span class="string">&quot;Alien Invasion&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#设置背景色</span></span><br><span class="line">    bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#创建一艘飞船</span></span><br><span class="line">    ship = Ship(ai_settings,screen)<span class="comment">#创建一个名为ship的Ship实例</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#开始游戏的主循环</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        gf.check_events(ship)</span><br><span class="line">        gf.ship.updat()<span class="comment">#玩家输入时，飞船位置更新</span></span><br><span class="line">        gf.update_screen(ai_settings,screen,ship)</span><br><span class="line"></span><br><span class="line">run_game()</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>game_functions.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#game_functions.py</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;包含一系列函数，由它完成游戏的大部分工作.</span></span><br><span class="line"><span class="string">check_events()检测相关事件，按键的按下与松开，并且辅助check_keydown_events()和check_keyup_events()处理事件</span></span><br><span class="line"><span class="string">包含模块update_screen()用于每次执行主循环时的屏幕绘制</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keydown_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键按下</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RITGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">elif</span> event.key == pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keyup_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键松开</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RIGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">elif</span> event.key ==pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_events</span>(<span class="params">event,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> events <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">        <span class="keyword">if</span> events.<span class="built_in">type</span> == pygame.QUIT:</span><br><span class="line">            sys.exit()</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> == pygame.KEYDOWN:<span class="comment">#鼠标键按下时</span></span><br><span class="line">            check_keydown_events(event,ship)</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> ==pygame.KEYUP:<span class="comment">#鼠标键松开时</span></span><br><span class="line">            check_keyup_events(event,ship)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_screen</span>(<span class="params">ai_settings,screen,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;更新屏幕上的图像，并切换到新屏幕&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 每次循环都重新绘制屏幕</span></span><br><span class="line">    screen.fill(ai_settings.bg_color)  <span class="comment"># 这个方法只接受一个实参：一种颜色。</span></span><br><span class="line">    ship.blitme()  <span class="comment"># 将飞船绘制到屏幕</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 让最近绘制的屏幕可见</span></span><br><span class="line">    pygame.display.flip()  <span class="comment"># 命令Pygame让最近绘制的屏幕可见。营造平滑移动的效果。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>ship.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Ship.py</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;包含__init__()、管理飞船位置的方法update()以及在屏幕上绘制飞船的方法blitme()&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ship</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,ai_settings,screen</span>):<span class="comment">#screen指定了要将飞船绘制到什么地方</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;初始化飞船并设置其初始位置&quot;&quot;&quot;</span></span><br><span class="line">        self.screen = screen</span><br><span class="line">        self.ai_settings = ai_settings</span><br><span class="line">        <span class="comment">#加载飞船图像并获取其外接矩形</span></span><br><span class="line">        self.image = pygame.image.load(<span class="string">&#x27;.\images\ship.bmp&#x27;</span>)</span><br><span class="line">        self.rect = self.image.get_rect()<span class="comment">#飞船图像</span></span><br><span class="line">        self.screen_rect = screen.get_rect()<span class="comment">#屏幕</span></span><br><span class="line">        <span class="comment">#将每艘新飞船放在屏幕底部中央</span></span><br><span class="line">        self.rect.centerx = self.screen_rect.centerx<span class="comment">#self.rect.centerx（飞船中心的x坐标）</span></span><br><span class="line">        self.rect.bottom = self.screen_rect.bottom<span class="comment">#self.rect.bottom（飞船下边缘的y坐标）</span></span><br><span class="line">        <span class="comment">#在飞船的属性center中存储小数值</span></span><br><span class="line">        self.center = <span class="built_in">float</span>(self.rect.centerx)</span><br><span class="line">        <span class="comment">#移动标志</span></span><br><span class="line">        self.moving_right = <span class="literal">False</span>  <span class="comment">#向右移动标志</span></span><br><span class="line">        self.mobing_left = <span class="literal">False</span> <span class="comment">#向左移动标志</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">updat</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;根据移动标志调整飞船的位置&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新飞船的center值，而不是rect</span></span><br><span class="line">        <span class="comment">#self.rect.right返回飞船外接矩形的右边缘的x坐标，如果这个值小于self.screen_rect.right的值，就说明飞船未触及屏幕右边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_right <span class="keyword">and</span> self.rect.right &lt; self.screen_rect.right:</span><br><span class="line">            self.rect.centerx += self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#如果rect的左边缘的x坐标大于零，就说明飞船未触及屏幕左边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_left <span class="keyword">and</span> self.rect.left &gt; <span class="number">0</span>:</span><br><span class="line">            self.rect.centerx -= self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#根据self.rect.center更新rect对象</span></span><br><span class="line">        self.rect.centerx = self.center</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">blitme</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;</span></span><br><span class="line">        self.screen.blit(self.image,self.rect)</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p>settings.py</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#setting.py</span></span><br><span class="line"><span class="comment">#包含Setting类，只含有__init__()，初始化控制游戏外观和飞船的速度属性,射击子弹的属性</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Settings</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;存储《外星入侵》的所有设置的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment">#初始化游戏的设置</span></span><br><span class="line">        <span class="comment">#屏幕设置</span></span><br><span class="line">        self.screen_width = <span class="number">1200</span></span><br><span class="line">        self.screen_height = <span class="number">800</span></span><br><span class="line">        self.bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)<span class="comment">#灰色</span></span><br><span class="line">        <span class="comment">#飞船的设置</span></span><br><span class="line">        self.ship_speed_factor = <span class="number">1.5</span></span><br><span class="line">        <span class="comment">#设置子弹</span></span><br><span class="line">        self.bullet_speed_factor = <span class="number">1</span></span><br><span class="line">        self.bullet_width = <span class="number">3</span></span><br><span class="line">        self.bullet_hight = <span class="number">15</span></span><br><span class="line">        self.bullet_color = <span class="number">60</span>,<span class="number">60</span>,<span class="number">60</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p><strong>bullet.py</strong></p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#bullet.py</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.sprite <span class="keyword">import</span> Sprite<span class="comment">#精灵，可将游戏中相关的元素编组，进而同时操作编组中的所有元素。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bullet</span>(<span class="title class_ inherited__">Sprite</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个对飞船发射的子弹进行管理的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, ai_settings, screen,ship</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在飞船所处的位置创建一个子弹对象&quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">super</span>(Bullet,self)._init__()</span><br><span class="line">        self.screen = screen</span><br><span class="line"></span><br><span class="line">        <span class="comment">#在(0,0)处创建一个表示子弹的矩形，在设置正确的位置</span></span><br><span class="line">        self.rect = pygame.Rect(<span class="number">0</span>,<span class="number">0</span>,ai_settings.bullet_width,ai_settings.bullet_height)</span><br><span class="line">        self.rect.centerx = ship.rect.centerx</span><br><span class="line">        self.rect.top = ship.rect.top</span><br><span class="line"></span><br><span class="line">        <span class="comment">#存储用小数表示的位置</span></span><br><span class="line">        self.y = <span class="built_in">float</span>(self.rect.y)</span><br><span class="line">        self.color  = ai_settings.bullet_color</span><br><span class="line">        self.speed_factor  = ai_settings.bullet_speed_factor</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;向上移动子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新表示子弹的位置的小数值</span></span><br><span class="line">        self.y -= self.speed_factor</span><br><span class="line">        <span class="comment">#更新表示子弹的rect位置</span></span><br><span class="line">        self.rect.y = self.y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">draw_bullet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在屏幕上绘制子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;函数draw.rect()使用存储在self.color中的颜色填充表示子弹的rect占据的屏幕部分&quot;&quot;&quot;</span></span><br><span class="line">        pygame.draw.rect(self.screen,self.color,self.rect)</span><br></pre></td></tr></table></figure></div>
-
-
-
-<hr>
-<p><strong>images文件</strong></p>
-<ul>
-<li><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ship.bmp" alt="ship"></li>
-</ul>
-<hr>
-<p>项目进度：12.6.4</p>
-<p>敬请T期待s</p>
-]]></content>
-      <categories>
-        <category>Languages</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>实战项目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Web_白帽子</title>
     <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
     <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
@@ -1644,6 +1591,61 @@ over</p>
         <tag>笔记</tag>
         <tag>Web</tag>
         <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python实战</title>
+    <url>/2024/02/07/Python%E5%AE%9E%E6%88%98/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h2 id="外星人入侵游戏开发"><a href="#外星人入侵游戏开发" class="headerlink" title="外星人入侵游戏开发"></a>外星人入侵游戏开发</h2><p>一、开发框架</p>
+<p>总文件：alien_invasion</p>
+<p>包含文件：</p>
+<ul>
+<li>image文件</li>
+<li>alien_invasion.py</li>
+<li>game_functions.py</li>
+<li>ship.py</li>
+<li>settings.py</li>
+<li>bullet.py</li>
+</ul>
+<hr>
+<p><strong>alien.invasion.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#alien_invasion.py</span></span><br><span class="line"><span class="comment">#一系列整个游戏都要用到的对象,游戏的主循环</span></span><br><span class="line"><span class="keyword">import</span> pygame<span class="comment">#模块pygame包含开发游戏所需的功能</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> settings <span class="keyword">import</span> Settings</span><br><span class="line"><span class="keyword">from</span> ship <span class="keyword">import</span> Ship</span><br><span class="line"><span class="keyword">import</span> game_functions <span class="keyword">as</span> gf</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_game</span>():</span><br><span class="line">    <span class="comment">#初始化游戏并创建一个屏幕对象</span></span><br><span class="line">    pygame.init()<span class="comment">#初始化背景设置</span></span><br><span class="line">    ai_settings = Settings()</span><br><span class="line">    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    我们调用pygame.display.set_mode()来创建一个名为screen的显示窗口，这个游戏的所有图形元素都将在其中绘制。</span></span><br><span class="line"><span class="string">    通过将这些尺寸值传递给pygame.display.set_mode()，我们创建了一个宽1200像素、高800像素的游戏窗口</span></span><br><span class="line"><span class="string">    （你可以根据自己的显示器尺寸调整这些值）。</span></span><br><span class="line"><span class="string">    surface是屏幕的一部分，用于显示游戏元素。在这个游戏中，每个元素（如外星人或飞船）都是一个surface。</span></span><br><span class="line"><span class="string">    display.set_mode()返回的surface表示整个游戏窗口。</span></span><br><span class="line"><span class="string">    我们激活游戏的动画循环后，每经过一次循环都将自动重绘这个surface。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    pygame.display.set_caption(<span class="string">&quot;Alien Invasion&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#设置背景色</span></span><br><span class="line">    bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#创建一艘飞船</span></span><br><span class="line">    ship = Ship(ai_settings,screen)<span class="comment">#创建一个名为ship的Ship实例</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#开始游戏的主循环</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        gf.check_events(ship)</span><br><span class="line">        gf.ship.updat()<span class="comment">#玩家输入时，飞船位置更新</span></span><br><span class="line">        gf.update_screen(ai_settings,screen,ship)</span><br><span class="line"></span><br><span class="line">run_game()</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>game_functions.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#game_functions.py</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;包含一系列函数，由它完成游戏的大部分工作.</span></span><br><span class="line"><span class="string">check_events()检测相关事件，按键的按下与松开，并且辅助check_keydown_events()和check_keyup_events()处理事件</span></span><br><span class="line"><span class="string">包含模块update_screen()用于每次执行主循环时的屏幕绘制</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keydown_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键按下</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RITGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">elif</span> event.key == pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_keyup_events</span>(<span class="params">event,ship</span>):<span class="comment">#检查鼠标键松开</span></span><br><span class="line">    <span class="keyword">if</span> event.key == pygame.K_RIGHT:</span><br><span class="line">        ship.moving_right = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">elif</span> event.key ==pygame.K_LEFT:</span><br><span class="line">        ship.moving_left = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_events</span>(<span class="params">event,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> events <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">        <span class="keyword">if</span> events.<span class="built_in">type</span> == pygame.QUIT:</span><br><span class="line">            sys.exit()</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> == pygame.KEYDOWN:<span class="comment">#鼠标键按下时</span></span><br><span class="line">            check_keydown_events(event,ship)</span><br><span class="line">        <span class="keyword">elif</span> events.<span class="built_in">type</span> ==pygame.KEYUP:<span class="comment">#鼠标键松开时</span></span><br><span class="line">            check_keyup_events(event,ship)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">update_screen</span>(<span class="params">ai_settings,screen,ship</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;更新屏幕上的图像，并切换到新屏幕&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 每次循环都重新绘制屏幕</span></span><br><span class="line">    screen.fill(ai_settings.bg_color)  <span class="comment"># 这个方法只接受一个实参：一种颜色。</span></span><br><span class="line">    ship.blitme()  <span class="comment"># 将飞船绘制到屏幕</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 让最近绘制的屏幕可见</span></span><br><span class="line">    pygame.display.flip()  <span class="comment"># 命令Pygame让最近绘制的屏幕可见。营造平滑移动的效果。</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>ship.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Ship.py</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;包含__init__()、管理飞船位置的方法update()以及在屏幕上绘制飞船的方法blitme()&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ship</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,ai_settings,screen</span>):<span class="comment">#screen指定了要将飞船绘制到什么地方</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;初始化飞船并设置其初始位置&quot;&quot;&quot;</span></span><br><span class="line">        self.screen = screen</span><br><span class="line">        self.ai_settings = ai_settings</span><br><span class="line">        <span class="comment">#加载飞船图像并获取其外接矩形</span></span><br><span class="line">        self.image = pygame.image.load(<span class="string">&#x27;.\images\ship.bmp&#x27;</span>)</span><br><span class="line">        self.rect = self.image.get_rect()<span class="comment">#飞船图像</span></span><br><span class="line">        self.screen_rect = screen.get_rect()<span class="comment">#屏幕</span></span><br><span class="line">        <span class="comment">#将每艘新飞船放在屏幕底部中央</span></span><br><span class="line">        self.rect.centerx = self.screen_rect.centerx<span class="comment">#self.rect.centerx（飞船中心的x坐标）</span></span><br><span class="line">        self.rect.bottom = self.screen_rect.bottom<span class="comment">#self.rect.bottom（飞船下边缘的y坐标）</span></span><br><span class="line">        <span class="comment">#在飞船的属性center中存储小数值</span></span><br><span class="line">        self.center = <span class="built_in">float</span>(self.rect.centerx)</span><br><span class="line">        <span class="comment">#移动标志</span></span><br><span class="line">        self.moving_right = <span class="literal">False</span>  <span class="comment">#向右移动标志</span></span><br><span class="line">        self.mobing_left = <span class="literal">False</span> <span class="comment">#向左移动标志</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">updat</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;根据移动标志调整飞船的位置&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新飞船的center值，而不是rect</span></span><br><span class="line">        <span class="comment">#self.rect.right返回飞船外接矩形的右边缘的x坐标，如果这个值小于self.screen_rect.right的值，就说明飞船未触及屏幕右边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_right <span class="keyword">and</span> self.rect.right &lt; self.screen_rect.right:</span><br><span class="line">            self.rect.centerx += self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#如果rect的左边缘的x坐标大于零，就说明飞船未触及屏幕左边缘</span></span><br><span class="line">        <span class="keyword">if</span> self.moving_left <span class="keyword">and</span> self.rect.left &gt; <span class="number">0</span>:</span><br><span class="line">            self.rect.centerx -= self.ai_settings.ship_speed_factor</span><br><span class="line">        <span class="comment">#根据self.rect.center更新rect对象</span></span><br><span class="line">        self.rect.centerx = self.center</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">blitme</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;</span></span><br><span class="line">        self.screen.blit(self.image,self.rect)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>settings.py</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#setting.py</span></span><br><span class="line"><span class="comment">#包含Setting类，只含有__init__()，初始化控制游戏外观和飞船的速度属性,射击子弹的属性</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Settings</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;存储《外星入侵》的所有设置的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment">#初始化游戏的设置</span></span><br><span class="line">        <span class="comment">#屏幕设置</span></span><br><span class="line">        self.screen_width = <span class="number">1200</span></span><br><span class="line">        self.screen_height = <span class="number">800</span></span><br><span class="line">        self.bg_color = (<span class="number">230</span>,<span class="number">230</span>,<span class="number">230</span>)<span class="comment">#灰色</span></span><br><span class="line">        <span class="comment">#飞船的设置</span></span><br><span class="line">        self.ship_speed_factor = <span class="number">1.5</span></span><br><span class="line">        <span class="comment">#设置子弹</span></span><br><span class="line">        self.bullet_speed_factor = <span class="number">1</span></span><br><span class="line">        self.bullet_width = <span class="number">3</span></span><br><span class="line">        self.bullet_hight = <span class="number">15</span></span><br><span class="line">        self.bullet_color = <span class="number">60</span>,<span class="number">60</span>,<span class="number">60</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p><strong>bullet.py</strong></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#bullet.py</span></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.sprite <span class="keyword">import</span> Sprite<span class="comment">#精灵，可将游戏中相关的元素编组，进而同时操作编组中的所有元素。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bullet</span>(<span class="title class_ inherited__">Sprite</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个对飞船发射的子弹进行管理的类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, ai_settings, screen,ship</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在飞船所处的位置创建一个子弹对象&quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">super</span>(Bullet,self)._init__()</span><br><span class="line">        self.screen = screen</span><br><span class="line"></span><br><span class="line">        <span class="comment">#在(0,0)处创建一个表示子弹的矩形，在设置正确的位置</span></span><br><span class="line">        self.rect = pygame.Rect(<span class="number">0</span>,<span class="number">0</span>,ai_settings.bullet_width,ai_settings.bullet_height)</span><br><span class="line">        self.rect.centerx = ship.rect.centerx</span><br><span class="line">        self.rect.top = ship.rect.top</span><br><span class="line"></span><br><span class="line">        <span class="comment">#存储用小数表示的位置</span></span><br><span class="line">        self.y = <span class="built_in">float</span>(self.rect.y)</span><br><span class="line">        self.color  = ai_settings.bullet_color</span><br><span class="line">        self.speed_factor  = ai_settings.bullet_speed_factor</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;向上移动子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment">#更新表示子弹的位置的小数值</span></span><br><span class="line">        self.y -= self.speed_factor</span><br><span class="line">        <span class="comment">#更新表示子弹的rect位置</span></span><br><span class="line">        self.rect.y = self.y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">draw_bullet</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;在屏幕上绘制子弹&quot;&quot;&quot;</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;函数draw.rect()使用存储在self.color中的颜色填充表示子弹的rect占据的屏幕部分&quot;&quot;&quot;</span></span><br><span class="line">        pygame.draw.rect(self.screen,self.color,self.rect)</span><br></pre></td></tr></table></figure></div>
+
+
+
+<hr>
+<p><strong>images文件</strong></p>
+<ul>
+<li><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ship.bmp" alt="ship"></li>
+</ul>
+<hr>
+<p>项目进度：12.6.4</p>
+<p>敬请T期待s</p>
+]]></content>
+      <categories>
+        <category>Languages</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>实战项目</tag>
       </tags>
   </entry>
   <entry>
@@ -1955,6 +1957,20 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>敬请T期待</title>
+    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
+    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
+<p>敬请T期待</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Begin</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++小型公司工资管理系统</title>
     <url>/2024/01/17/%E5%B0%8F%E5%9E%8B%E5%85%AC%E5%8F%B8%E5%B7%A5%E8%B5%84%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fcpp/</url>
     <content><![CDATA[<h2 id="课题要求"><a href="#课题要求" class="headerlink" title="课题要求"></a>课题要求</h2><p><em><strong>“小型公司工资管理系统设计”</strong></em></p>
@@ -1993,20 +2009,6 @@ over</p>
       </categories>
       <tags>
         <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敬请T期待</title>
-    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
-    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
-<p>敬请T期待</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Begin</tag>
       </tags>
   </entry>
 </search>

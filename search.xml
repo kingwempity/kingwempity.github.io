@@ -135,11 +135,11 @@ over</p>
 <p><strong>习题：</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%B1%87%E7%BC%96%E6%A3%80%E6%B5%8B1.1.png" alt="汇编检测1.1"></p>
 <p><u>（1）1个CPU的寻址能力为8KB，那么它的地址总线的宽度为 <strong>13</strong>位。</u></p>
-<p>答：8KB&#x3D;8*1024Byte&#x3D;2^3✖2^10&#x3D;2^13Byte 所以13位</p>
+<p>答：8 KB&#x3D;8*1024 Byte&#x3D;2^3^*2^10^&#x3D;2^13^ Byte 所以13位</p>
 <p><u>（2）1KB的存储器有 <strong>1024</strong> 个存储单元，存储单元的编号从 <strong>0</strong> 到 <strong>1023</strong> 。</u></p>
-<p>答：一个存储字长为8bit，1KB&#x3D;1024Byte&#x3D;1024 * 8 bit 有1024 存储单元</p>
-<p><u>（3）1KB的存储器可以存储 <strong>8192</strong>（2^13） 个bit， <strong>1024</strong>个Byte。</u></p>
-<p>答：1KB&#x3D;1024Byte&#x3D;1024 * 8 bit </p>
+<p>答：一个存储字长为8 bit，1 KB&#x3D;1024 Byte&#x3D;1024 * 8 bit 有1024 存储单元</p>
+<p>（3）1KB的存储器可以存储 <u><strong>8192（2^13）</strong></u> 个bit， <u><strong>1024</strong></u>个Byte。</p>
+<p>答：1 KB&#x3D;1024 Byte&#x3D;1024 * 8 bit </p>
 <p>（4）1GB是 <u><strong>1073741824 （2^30）</strong></u> 个Byte、1MB是 <strong><u>1048576（2^20）</u></strong> 个Byte、1KB是 **<u>1024（2^10）</u>**个Byte。</p>
 <p>（5）8080、8088、80296、80386的地址总线宽度分别为16根、20根、24根、32根，则它们的寻址能力分别为: <u><strong>64</strong> （KB）</u>、 <u><strong>1</strong> （MB）</u>、 <u><strong>16</strong> （MB）</u>、 <u><strong>4</strong> （GB）</u>。</p>
 <p>答：16根：2^16&#x3D;2^10 * 2^6  2^10是1024就是1KB   然后乘2^6 &#x3D;64 就是64KB，后面一次类推 </p>
@@ -295,18 +295,19 @@ over</p>
 </tr>
 </tbody></table>
 </blockquote>
-<h1 id="3-寄存器-内存访问"><a href="#3-寄存器-内存访问" class="headerlink" title="3.寄存器(内存访问)"></a>3.寄存器(内存访问)</h1><h2 id="3-1-内存中的字存储"><a href="#3-1-内存中的字存储" class="headerlink" title="3.1.内存中的字存储"></a>3.1.内存中的字存储</h2><p>CPU中用16位寄存器存储一个字，高8位存放高位字节，低8位存放低位字节。<strong>内存单元是字节单元，一个单元存放一个字节</strong>，一个字需要使用两个连续的内存单元进行存放，这个字的低位字节存放在低地址单元，高位字节存放在高地址单元</p>
+<h1 id="3-寄存器-内存访问"><a href="#3-寄存器-内存访问" class="headerlink" title="3.寄存器(内存访问)"></a>3.寄存器(内存访问)</h1><h2 id="3-1-内存中的字存储"><a href="#3-1-内存中的字存储" class="headerlink" title="3.1.内存中的字存储"></a>3.1.内存中的字存储</h2><p>CPU中用16位寄存器存储一个字，高8位存放高位字节，低8位存放低位字节。<strong>内存单元是字节单元，一个单元存放一个字节，一个字需要使用两个连续的内存单元进行存放</strong>，这个字的低位字节存放在低地址单元，高位字节存放在高地址单元。<strong>双字需要使用四个连续的内存单元进行存放</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603853188787.png" alt="1603853188787"></p>
 <p><strong>问题：</strong></p>
 <ol>
-<li>0地址单元存放的字节型数据是多少？<strong>20</strong></li>
-<li>0地址单元存放的字型数据是多少？<strong>4E20</strong></li>
-<li>2地址单元存放的字节型数据是多少？<strong>12</strong></li>
-<li>2地址单元存放的字型数是多少？<strong>0012</strong></li>
-<li>1地址单元存放的字型数据是多少？<strong>124E</strong></li>
+<li>0地址单元存放的<u>字节型</u>数据是多少？<strong>20 H</strong></li>
+<li>0地址单元存放的<u>字型</u>数据是多少？<strong>4E20 H</strong></li>
+<li>2地址单元存放的<u>字节型</u>数据是多少？<strong>12 H</strong></li>
+<li>2地址单元存放的<u>字型</u>数是多少？<strong>0012 H</strong></li>
+<li>1地址单元存放的<u>字型</u>数据是多少？<strong>124E H</strong></li>
+<li>0地址单元存放的<u>双字型</u>数据是多少？<strong>00124E20 H</strong></li>
 </ol>
 <h2 id="3-2-DS和-address"><a href="#3-2-DS和-address" class="headerlink" title="3.2.DS和[address]"></a>3.2.DS和[address]</h2><p><strong>CPU 要读写一个内存单元的时候，必须给出这个内存单元的地址。内存单元的地址由段地址和偏移地址组成。DS寄存器通常需要存放访问数据的段地址</strong></p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">mov bx,1000H</span><br><span class="line">mov ds,bx</span><br><span class="line">mov al,[0]</span><br><span class="line"></span><br><span class="line">[0]:表示内存单元的偏移地址</span><br><span class="line">指令执行的时候，CPU自动取ds中的数据作为内存单元的段地址</span><br><span class="line">mov al,[0]：表示数据从1000:0 单元到al 的传送</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">mov bx,1000H</span><br><span class="line">mov ds,bx</span><br><span class="line">mov al,[0]</span><br><span class="line"></span><br><span class="line">[0]:表示内存单元的偏移地址</span><br><span class="line">指令执行的时候，CPU自动取DS中的数据作为内存单元的段地址</span><br><span class="line">mov al,[0]：表示数据从1000:0 单元到al 的传送</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="3-3-字的传送"><a href="#3-3-字的传送" class="headerlink" title="3.3.字的传送"></a>3.3.字的传送</h2><p>CPU是16位结构，有16根数据线，可以一次性传送16位数据，就是一个字</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603855203907.png" alt="1603855203907"></p>
@@ -315,17 +316,18 @@ over</p>
 <blockquote>
 <ol>
 <li>字在内存中存储，使用两个地址连续的内存单元存放，低位字节存放在低地址单元，高位字节存放在高地址单元</li>
+<li>双字在内存中存储，使用四个地址连续的内存单元存放，即两个字型数据的存储单元</li>
 <li>使用mov指令访问内存单元，可以在mov指令中只给出单元的偏移地址，此时段地址默认在DS寄存器中</li>
-<li>[address]表示一个偏移地址位address的内存单元</li>
-<li>在内存和寄存器之间传动数据的时候，高地址单元和高8位寄存器，低地址单元和低8位寄存器相对应</li>
+<li>[address]表示一个偏移地址位address的内存单元，例如[2]表示偏移地址为2的内存单元</li>
+<li>在内存和寄存器之间传动数据的时候，高地址单元和高8位寄存器相对应，低地址单元和低8位寄存器相对应</li>
 </ol>
 </blockquote>
 <h2 id="3-5-栈"><a href="#3-5-栈" class="headerlink" title="3.5.栈"></a>3.5.栈</h2><ol>
-<li>入栈：就是将一个新的元素放到栈顶</li>
-<li>出栈：就是从栈顶取出一个新的元素</li>
-<li>栈顶的元素总是LIFO(Last In First Out)</li>
+<li>入栈：就是将一个新的元素放到栈顶，栈顶指针减小；</li>
+<li>出栈：就是从栈顶取出一个新的元素，栈顶指针增大；</li>
+<li>栈顶的元素总是LIFO(Last In First Out)：“先进后出”；</li>
 </ol>
-<h2 id="3-6-CPU提供栈机制"><a href="#3-6-CPU提供栈机制" class="headerlink" title="3.6.CPU提供栈机制"></a>3.6.CPU提供栈机制</h2><p>基本命令就是PUSH和POP，push ax 表示将寄存器ax中的数据送入栈中，pop ax 表示从栈顶中取出数据送入到ax，CPU入栈和出栈操作都是已字为单位进行的</p>
+<h2 id="3-6-CPU提供栈机制"><a href="#3-6-CPU提供栈机制" class="headerlink" title="3.6.CPU提供栈机制"></a>3.6.CPU提供栈机制</h2><p>基本命令就是PUSH和POP，push ax 表示将寄存器ax中的数据送入栈中，pop ax 表示从栈顶中取出数据送入到ax，CPU入栈和出栈操作都是以字为单位进行的。</p>
 <p><strong>段寄存器SS和SP，栈顶的段地址存放在SS中，偏移地址存放在SP中，任意时刻SS:SP指向栈顶元素</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603856276469.png" alt="1603856276469"></p>
 <h2 id="3-7-栈顶超解问题"><a href="#3-7-栈顶超解问题" class="headerlink" title="3.7.栈顶超解问题"></a>3.7.栈顶超解问题</h2><p>CPU不会保证我们对栈的操作不会超界。CPU只知道栈顶(SS:SP)在何处,不知道安排的栈的空间由多大。所以编程的时候操心栈顶超界的问题。</p>
@@ -346,9 +348,9 @@ over</p>
 <p>我们用一个段存放数据，可以定义为 <strong>数据段</strong></p>
 <p>我们用一个段存放代码，可以定义为 <strong>代码段</strong></p>
 <p>我们用一个段当作栈，可以定义为 <strong>栈段</strong></p>
-<p>**数据段:**将段地址存放在DS中</p>
-<p><strong>代码段</strong>：将它们的段地址存放在cs中，将段中的第一条指令的偏移地址存放在IP中，这样CPU就将执行我们定义的代码段中的指令</p>
-<p><strong>栈段</strong>：段地址存放在ss中，将栈顶单元的偏移地址存放在sp中</p>
+<p><strong>数据段</strong>：将段地址存放在DS中</p>
+<p><strong>代码段</strong>：将它们的段地址存放在CS中，将段中的第一条指令的偏移地址存放在IP中，这样CPU就将执行我们定义的代码段中的指令</p>
+<p><strong>栈段</strong>：段地址存放在SS中，将栈顶单元的偏移地址存放在SP中</p>
 </blockquote>
 <h1 id="4-第一个程序"><a href="#4-第一个程序" class="headerlink" title="4.第一个程序"></a>4.第一个程序</h1><h2 id="4-1-一个源程序从写出到执行的过程"><a href="#4-1-一个源程序从写出到执行的过程" class="headerlink" title="4.1.一个源程序从写出到执行的过程"></a>4.1.一个源程序从写出到执行的过程</h2><ul>
 <li>第一步：编写汇编程序</li>
@@ -368,22 +370,62 @@ over</p>
 <p>将源程序文件中所有内容称之为源程序，然后通过编译连接后转变为机器码，存储在可执行文件中</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604027748325.png" alt="1604027748325"></p>
 <p><strong>标号</strong></p>
-<p>一个标号指代了一个地址，作为一个段的名称，这个端的名称最终会编译一个段的段地址</p>
+<p>一个标号指代了一个地址，作为一个段的名称，这个段的名称最终会编译一个段的段地址。</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604028015173.png" alt="1604028015173"></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mov ax,4c00H</span><br><span class="line">int 21H			;执行4c号功能，程序返回功能</span><br></pre></td></tr></table></figure></div>
+
 <h1 id="5-BX-和loop指令"><a href="#5-BX-和loop指令" class="headerlink" title="5.[BX]和loop指令"></a>5.[BX]和loop指令</h1><h2 id="5-1-bx"><a href="#5-1-bx" class="headerlink" title="5.1.[bx]"></a>5.1.[bx]</h2><blockquote>
 <p>mov ax,[bx]</p>
-<p>说明：bx中存放的数据作为一个偏移地址EA，段地址SA默认在ds中，将SA:EA处的数据送到ax中</p>
+<p>说明：bx中存放的数据作为一个偏移地址EA，段地址SA默认在DS中，将SA:EA处的数据送到ax中</p>
 <p>mov [bx],ax</p>
-<p>说明：bx中存放的数据作为要给偏移地址EA，段地址默认在ds中，将ax中的数据送入到内存中</p>
+<p>说明：bx中存放的数据作为要给偏移地址EA，段地址默认在DS中，将ax中的数据送入到内存中</p>
 </blockquote>
-<h2 id="5-2-Loop指令"><a href="#5-2-Loop指令" class="headerlink" title="5.2.Loop指令"></a>5.2.Loop指令</h2><p>就是循环指令</p>
+<h2 id="5-2-Loop指令"><a href="#5-2-Loop指令" class="headerlink" title="5.2.Loop指令"></a>5.2.Loop指令</h2><p>就是循环指令,它会减少CX的值并检查是否为0，如果不为0则跳转回标签继续循环。</p>
 <h2 id="5-3-Loop指令和-bx-使用"><a href="#5-3-Loop指令和-bx-使用" class="headerlink" title="5.3.Loop指令和[bx]使用"></a>5.3.Loop指令和[bx]使用</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604544565226.png" alt="1604544565226"></p>
+<blockquote>
+<p>这段汇编语言代码主要实现了一个简单的功能，即计算从内存中某个地址开始的12个字节数据之和，并最终通过DOS中断调用返回到操作系统。</p>
+<p>下面是详细的分析和解释：</p>
+<ol>
+<li><p><strong>段定义</strong>:</p>
+<ul>
+<li><strong><code>assume cs:code</code></strong> 命令告诉汇编器代码将位于名为**<code>code</code>**的代码段中。</li>
+<li><strong><code>code segment</code></strong> 和 <strong><code>code ends</code></strong> 之间的内容定义了实际的代码段。</li>
+</ul>
+</li>
+<li><p><strong>初始化寄存器</strong>:</p>
+<ul>
+<li>**<code>mov ax,0fffH</code>**将十六进制数0fffH送入AX寄存器。通常，这是为了设置DS（数据段）寄存器以指向内存中的某个数据段，但此处的值似乎用于演示目的，实际上可能会导致访问内存错误，因为0fffH对于大多数程序来说不是一个有效的段地址。</li>
+<li><strong><code>mov ds,ax</code></strong> 将AX的内容送入DS寄存器，设定数据段的基地址。</li>
+<li><strong><code>mov bx,0</code></strong> 初始化BX为0，BX将作为偏移地址来访问内存中的数据。</li>
+<li><strong><code>mov dx,0</code></strong> 初始化DX为0，DX将用来累加数据之和。</li>
+<li><strong><code>mov cx,12</code></strong> <u>初始化CX为12，CX将作为循环计数器，控制循环执行12次。</u></li>
+</ul>
+</li>
+<li><p><strong>循环求和</strong>:</p>
+<ul>
+<li><strong><code>s:</code></strong> 标签定义了一个循环开始的位置。</li>
+<li><strong><code>mov al,[bx]</code></strong> 将BX寄存器指向的内存单元中的字节数据加载到AL寄存器中。</li>
+<li><strong><code>mov ah,0</code></strong> 清零AH寄存器，确保AL中的字节数据在后续操作中被视为无符号数。</li>
+<li><strong><code>add dx,ax</code></strong> 将AX寄存器的内容（此时为AL中的数据加上AH中的0）加到DX中，累计总和。</li>
+<li><strong><code>inc bx</code></strong> 将BX的值增加1，以便下一次循环读取下一个字节。</li>
+<li><strong><code>loop s</code></strong> 是一个循环指令，它会减少CX的值并检查是否为0，如果不为0则跳转回标签<code>s</code>继续循环。</li>
+</ul>
+</li>
+<li><p><strong>退出程序</strong>:</p>
+<ul>
+<li><code>mov ax,4C00H</code> 将4C00H送入AX寄存器，这是DOS中断21H的功能号，用于请求程序终止并返回到操作系统，其中4CH表示退出程序，00H是返回给操作系统的错误码，通常表示正常退出。</li>
+<li><code>int 21H</code> 执行DOS中断调用，结束程序。</li>
+</ul>
+</li>
+</ol>
+<p>注意：此代码中的DS段寄存器设置为0fffH，这在实际应用中很可能会导致访问冲突或错误，除非程序在特定的内存布局中运行，该布局中0fffH是合法且预期的数据段起始地址。在常规的实模式DOS程序中，数据段地址应由程序加载时正确设置，通常不会直接设置为这么高的地址。</p>
+</blockquote>
 <h2 id="5-4-段前缀"><a href="#5-4-段前缀" class="headerlink" title="5.4.段前缀"></a>5.4.段前缀</h2><ul>
 <li><code>mov ax,ds:[bx]</code>:将一个内存单元的内容送入ax中，这个内存单元存放两个字节，偏移地址在<code>bx</code>中，段地址在<code>ds</code>中</li>
-<li><code>mov  ax,cs:[bx]</code>,<code>mov ax,cs:[bx]</code>,<code>mov ax,es:[bx]</code>,<code>mov ax,ss:[0]</code>,<code>mov ax,cs:[0]</code></li>
+<li><code>mov  ax,cs:[bx]</code>,<code>mov ax,es:[bx]</code>,<code>mov ax,ss:[0]</code>,<code>mov ax,cs:[0]</code></li>
 </ul>
 <p>这些出现在访问内存单元的指令中，用于显示的指明内存单元的段地址的<code>ds</code>:,<code>cs:</code>,<code>ss:</code>,<code>es:</code>,我们称之为段前缀</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">段寄存器:CS、DS、ES、SS</span><br><span class="line">代码段：CS 比如：IP执行地址都是CS代码段的内容</span><br><span class="line">数据段：DS 比如：如mov ax,[bx]间接寻址法所指的都是数据段的数据</span><br><span class="line">堆栈段：SS 比如：SP堆栈数据，都是指堆栈段的</span><br><span class="line">附加段：ES 比如：mov ax,es:[di] 利用間接寻址法取ES段的数据</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">段寄存器:CS、DS、ES、SS</span><br><span class="line">代码段：CS 比如：IP执行地址都是CS代码段的内容</span><br><span class="line">数据段：DS 比如：如mov ax,[bx]间接寻址法所指的都是数据段的数据</span><br><span class="line">堆栈段：SS 比如：SP堆栈数据、BP基指针，都是指堆栈段的</span><br><span class="line">附加段：ES 比如：mov ax,es:[di] 利用间接寻址法取ES段的数据</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="5-5-一段安全的段空间"><a href="#5-5-一段安全的段空间" class="headerlink" title="5.5.一段安全的段空间"></a>5.5.一段安全的段空间</h2><p><code>0:200~0:2ff</code>的256字节空间，这个段空间是安全的</p>
 <h1 id="6-包含多个段的程序"><a href="#6-包含多个段的程序" class="headerlink" title="6.包含多个段的程序"></a>6.包含多个段的程序</h1><h2 id="6-1-在代码段中使用数据"><a href="#6-1-在代码段中使用数据" class="headerlink" title="6.1.在代码段中使用数据"></a>6.1.在代码段中使用数据</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604557474529.png" alt="1604557474529"></p>
@@ -393,12 +435,59 @@ over</p>
 <p>答：程序在运行的时候CS中存放代码段的的段地址。dw定义的数据处于代码段的最开始，所以偏移地址为0，这8个数据在代码段的偏移0，2，4，6，8，A，C，E处。</p>
 </blockquote>
 <p><strong>ends start</strong>:指明程序的入口，被转化为一个入口地址</p>
+<blockquote>
+<p>这段汇编语言代码的功能是累加一组双字节（word）数据，并存储结果在寄存器AX中。下面是详细的代码分析：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">assume cs:code</span><br></pre></td></tr></table></figure></div>
+<p>这一行声明段寄存器CS指向名为<code>code</code>的段。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">code segment</span><br><span class="line">dw  0123h, 0456h, 0789h, 0abch, 0defh, 0fedh, 0cbah, 0987h</span><br></pre></td></tr></table></figure></div>
+<p>定义了一个名为<code>code</code>的段，在这个段中存放了8个双字节（word）的数据：0123h, 0456h, … , 0987h。这些数据以双字节为单位连续存储在内存中，每两个数据之间默认间隔一个字节地址（因为每个数据占2字节）。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">start:  mov bx,0</span><br><span class="line">mov ax,0</span><br><span class="line">mov cx,8</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li><code>start:</code> 标记了程序的起始执行点。</li>
+<li><code>mov bx,0</code> 初始化基址寄存器BX为0，BX将用来作为数据数组的指针。</li>
+<li><code>mov ax,0</code> 将累加和的寄存器AX清零，用于存放最终的累加结果。</li>
+<li><code>mov cx,8</code> 初始化计数寄存器CX为8，表示循环将执行8次，对应于数据数组中的8个元素。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">s:   </span><br><span class="line">add ax,[bx]</span><br><span class="line">add bx,2</span><br><span class="line">loop s</span><br></pre></td></tr></table></figure></div>
+<p>这是一个循环结构，用以累加数据段中的所有数据：</p>
+<ul>
+<li><code>s:</code> 是循环的标签。</li>
+<li><code>add ax,[bx]</code> 将BX指向的内存单元中的数据（当前元素）加到AX中，实现累加操作。</li>
+<li><code>add bx,2</code> 每次循环后，BX增加2，这是因为每个数据项是双字节（word），即2个字节，所以要跳过当前数据到下一个数据。</li>
+<li><code>loop s</code> 是循环控制指令，它会自动将CX的值减1，如果CX不为0，则跳转回标签<code>s</code>继续执行循环，直到CX减到0为止，此时循环结束。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mov ax,4c00h</span><br><span class="line">int 21h</span><br></pre></td></tr></table></figure></div>
+
+<p>最后，使用DOS中断21h的服务号4Ch来结束程序，返回操作系统，其中AX寄存器的低字节00h表示程序正常退出。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">code ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li><code>code ends</code> 表示<code>code</code>段定义结束。</li>
+<li><code>end start</code> 指定程序的入口点为<code>start</code>，同时告知汇编器程序汇编结束。</li>
+</ul>
+<p>综上所述，这段代码的作用是从内存中预先设定的一组双字节数据（0123h至0987h）开始，将这些数据累加起来，并将累加的结果存储在AX寄存器中。</p>
+</blockquote>
 <h2 id="6-2-在代码段中使用栈"><a href="#6-2-在代码段中使用栈" class="headerlink" title="6.2.在代码段中使用栈"></a>6.2.在代码段中使用栈</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604563764138.png" alt="1604563764138"></p>
 <p><strong>对于sp的理解:</strong></p>
 <p>第一步：看计算机系统内存：</p>
 <p>SA:10: 23 12 56 04 ……….09              16个字节</p>
 <p>SA:20:0…………………………..0              对应 第二个dw:00000000</p>
 <p>SA:30:0…………………………..0               对应 第二个dw:00000000</p>
+<blockquote>
+<p>这段汇编代码完成了一个特定的任务，即通过堆栈在代码段中移动一个16字节数据块。具体分析如下：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">assume code</span><br><span class="line">code segment</span><br><span class="line">dw 0123h,0456h,0789h, 0abch, 0defh, 0fedh, 0cbah, 0987h</span><br><span class="line">dw 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</span><br></pre></td></tr></table></figure></div>
+<p>首先，定义了两组双字节（word）数据。前8个是非零数据，后16个初始化为0。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">start: mov ax,cs</span><br><span class="line">       mov  ss,ax</span><br><span class="line">       mov  sp,30h</span><br></pre></td></tr></table></figure></div>
+<p>这部分代码设置了堆栈段（SS）与代码段（CS）相同，并将堆栈指针（SP）设置为30h，意味着堆栈从地址CS:30h开始向下增长，预留了一定的空间用于存储数据。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">       mov bx,0</span><br><span class="line">       mov cx,8</span><br><span class="line">s:     push cs:[bx]</span><br><span class="line">       add bx,2</span><br><span class="line">       loop s</span><br></pre></td></tr></table></figure></div>
+<p>这里开始一个循环，将前8个非零数据通过<code>push</code>指令压入堆栈。<code>cs:[bx]</code>访问的是代码段中的数据，从偏移量BX开始的双字节。每次循环，BX增加2，指向下一个数据，总共循环8次，将所有非零数据压栈。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">       mov bx,0</span><br><span class="line">       mov cx,8</span><br><span class="line">s0:    pop cs:[bx]</span><br><span class="line">       add bx,2</span><br><span class="line">       loop s0</span><br></pre></td></tr></table></figure></div>
+<p>接着，进行第二个循环<code>s0</code>，这次是从堆栈中弹出数据并存回到代码段中原来初始化为0的部分。同样循环8次，每次<code>pop</code>后，BX增加2，确保数据被正确地放置到代码段的对应位置。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mov ax,4c00h</span><br><span class="line">int 21h</span><br></pre></td></tr></table></figure></div>
+<p>最后，使用DOS中断21h的服务号4Ch来结束程序，返回操作系统，其中AX寄存器的低字节00h表示程序正常退出。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">code ends</span><br><span class="line">end</span><br></pre></td></tr></table></figure></div>
+<p>标记代码段结束，并告知汇编器程序的结尾。</p>
+<p>总结来说，这段代码通过堆栈实现了代码段内部的数据搬移，具体是从一段非零数据移到另一段初始为0的数据区域，展示了汇编语言中堆栈操作和循环控制的应用。</p>
+</blockquote>
 <h2 id="6-3-将数据、代码、栈放入到不同的段"><a href="#6-3-将数据、代码、栈放入到不同的段" class="headerlink" title="6.3.将数据、代码、栈放入到不同的段"></a>6.3.将数据、代码、栈放入到不同的段</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604564239260.png" alt="1604564239260"></p>
 <p><strong>对于sp的理解</strong></p>
 <p>c 等于开辟了一块空间，在这段空间中</p>

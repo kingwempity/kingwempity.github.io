@@ -133,20 +133,21 @@ over</p>
 </ol>
 </blockquote>
 <p><strong>习题：</strong></p>
-<p>（1）1个CPU的寻址能力为8KB，那么它的地址总线的宽度为 <strong>13</strong>位。</p>
+<p><img lazyload src="/images/loading.svg" data-src="D:/blog/source/_posts/Assembley-language/%E6%B1%87%E7%BC%96%E6%A3%80%E6%B5%8B1.1.png" alt="汇编检测1.1"></p>
+<p><u>（1）1个CPU的寻址能力为8KB，那么它的地址总线的宽度为 <strong>13</strong>位。</u></p>
 <p>答：8KB&#x3D;8*1024Byte&#x3D;2^3✖2^10&#x3D;2^13Byte 所以13位</p>
-<p>（2）1KB的存储器有 <strong>1024</strong> 个存储单元，存储单元的编号从 <strong>0</strong> 到 <strong>1023</strong> 。</p>
+<p><u>（2）1KB的存储器有 <strong>1024</strong> 个存储单元，存储单元的编号从 <strong>0</strong> 到 <strong>1023</strong> 。</u></p>
 <p>答：一个存储字长为8bit，1KB&#x3D;1024Byte&#x3D;1024 * 8 bit 有1024 存储单元</p>
-<p>（3）1KB的存储器可以存储 <strong>8192</strong>（2^13） 个bit， <strong>1024</strong>个Byte。</p>
+<p><u>（3）1KB的存储器可以存储 <strong>8192</strong>（2^13） 个bit， <strong>1024</strong>个Byte。</u></p>
 <p>答：1KB&#x3D;1024Byte&#x3D;1024 * 8 bit </p>
-<p>（4）1GB是 <strong>1073741824 （2^30）</strong> 个Byte、1MB是 <strong>1048576（2^20）</strong> 个Byte、1KB是 <strong>1024（2^10）</strong>个Byte。</p>
-<p>（5）8080、8088、80296、80386的地址总线宽度分别为16根、20根、24根、32根，则它们的寻址能力分别为: <strong>64</strong> （KB）、 <strong>1</strong> （MB）、 <strong>16</strong> （MB）、 <strong>4</strong> （GB）。</p>
+<p>（4）1GB是 <u><strong>1073741824 （2^30）</strong></u> 个Byte、1MB是 <strong><u>1048576（2^20）</u></strong> 个Byte、1KB是 **<u>1024（2^10）</u>**个Byte。</p>
+<p>（5）8080、8088、80296、80386的地址总线宽度分别为16根、20根、24根、32根，则它们的寻址能力分别为: <u><strong>64</strong> （KB）</u>、 <u><strong>1</strong> （MB）</u>、 <u><strong>16</strong> （MB）</u>、 <u><strong>4</strong> （GB）</u>。</p>
 <p>答：16根：2^16&#x3D;2^10 * 2^6  2^10是1024就是1KB   然后乘2^6 &#x3D;64 就是64KB，后面一次类推 </p>
-<p>（6）8080、8088、8086、80286、80386的数据总线宽度分别为8根、8根、16根、16根、32根。则它们一次可以传送的数据为: <strong>1</strong> （B）、 <strong>1</strong> （B）、 <strong>2</strong> （B）、 <strong>2</strong> （B）、 <strong>4</strong> （B）。</p>
+<p>（6）8080、8088、8086、80286、80386的数据总线宽度分别为8根、8根、16根、16根、32根。则它们一次可以传送的数据为: <u><strong>1</strong> （B）</u>、 <u><strong>1</strong> （B）</u>、 <u><strong>2</strong> （B）</u>、 <u><strong>2</strong> （B）</u>、 <u><strong>4</strong> （B）</u>。</p>
 <p>答：8根就是8bit&#x3D;1B ，后面一次类推</p>
-<p>（7）从内存中读取1024字节的数据，8086至少要读 <strong>512</strong> 次，80386至少要读 <strong>256</strong> 次。</p>
+<p>（7）从内存中读取1024字节的数据，8086至少要读 <u><strong>512</strong></u> 次，80386至少要读 <u><strong>256</strong></u> 次。</p>
 <p>答：8086 数据总线宽度为16 1024 * 8 &#x2F;16 &#x3D; 512  80386数据总线宽度为32 1024 * 8 &#x2F;32 &#x3D; 256</p>
-<p>（8）在存储器中，数据和程序以 <strong>二进制</strong> 形式存放。</p>
+<p>（8）在存储器中，数据和程序以 <u><strong>二进制</strong></u> 形式存放。</p>
 <h1 id="2-寄存器"><a href="#2-寄存器" class="headerlink" title="2.寄存器"></a>2.寄存器</h1><blockquote>
 <p>一个CPU由运算器，控制器，寄存器等器件构成，这些器件靠内部总线进行相连。简单的说CPU中：</p>
 <ul>
@@ -158,13 +159,17 @@ over</p>
 <p>寄存器是CPU中程序员可以用指令读写的部件，程序员可以通过改变各种寄存器的内容实现对CPU的控制</p>
 <p>8086CPU由14个寄存器：AX，BX，CX，DX，SI，DI，SP，BP，IP，CS，SS,DS,ES,PSW</p>
 </blockquote>
-<h2 id="2-1-同用寄存器"><a href="#2-1-同用寄存器" class="headerlink" title="2.1.同用寄存器"></a>2.1.同用寄存器</h2><blockquote>
+<h2 id="2-1-通用寄存器"><a href="#2-1-通用寄存器" class="headerlink" title="2.1.通用寄存器"></a>2.1.通用寄存器</h2><blockquote>
 <p>所有的寄存器都是16位，可以存放两个字节。AX，BX，CX，DX 这4个通用寄存器，每一个寄存器可以分为两个可独立使用的8位寄存器来使用</p>
 <ul>
-<li>AX 可以分为AH和AL</li>
-<li>BX可以分为BH和BL</li>
-<li>CX可以分为CH和CL</li>
-<li>DX可以分为DH和DL</li>
+<li>AX 可以分为AH和AL，累加器；可以与DX组合成为EAX&lt;&#x3D;&gt;DX:AX</li>
+<li>CX可以分为CH和CL，计数器</li>
+<li>DX可以分为DH和DL，累加器扩展</li>
+<li>BX可以分为BH和BL，基址;可以和CX组合成为EBX&lt;&#x3D;&gt;CX:BX</li>
+<li>BP基指针</li>
+<li>SI源变址</li>
+<li>DI目的变址</li>
+<li>SP堆栈指针</li>
 </ul>
 </blockquote>
 <h2 id="2-2-物理地址"><a href="#2-2-物理地址" class="headerlink" title="2.2.物理地址"></a>2.2.物理地址</h2><blockquote>
@@ -179,11 +184,16 @@ over</p>
 <li>输入和输出控制电路将20 位物理地址送上地址总线</li>
 <li>20位物理地址被地址总线传送到存储器</li>
 </ol>
-<p><strong>地址加法器采用：物理地址&#x3D;段地址*16+偏移地址</strong></p>
+<p><strong>地址加法器采用：</strong></p>
+<p><strong>物理地址&#x3D;段地址*16+偏移地址</strong>[这里的16是十进制]</p>
+<p><strong>物理地址&#x3D;段地址*(10)H+偏移地址</strong>[这里的10是十六进制]</p>
 <h2 id="2-4-段的概念"><a href="#2-4-段的概念" class="headerlink" title="2.4.段的概念"></a>2.4.段的概念</h2><p>在编程时可以根据需要，将若干地址连续的内存单元看作一个段。偏移地址位16位，16位地址的最大寻址能力位64KB，所以要给段的长度最大位64KB</p>
 <h2 id="2-5-段寄存器"><a href="#2-5-段寄存器" class="headerlink" title="2.5.段寄存器"></a>2.5.段寄存器</h2><blockquote>
 <p>段寄存器：CS、DS、SS、ES</p>
 <p>CS:<strong>代码段寄存器</strong></p>
+<p>DS:<strong>数据段寄存器</strong></p>
+<p>ES:<strong>附加段寄存器</strong></p>
+<p>SS:<strong>堆栈段寄存器</strong></p>
 <p>IP：<strong>指令指针寄存器</strong></p>
 </blockquote>
 <h2 id="2-6-CS和IP"><a href="#2-6-CS和IP" class="headerlink" title="2.6.CS和IP"></a>2.6.CS和IP</h2><p>假设CS中的内容位M，IP中内容位N，8086CPU将从内存M✖16+N单元开始，读取一条指令并执行</p>
@@ -208,6 +218,83 @@ over</p>
 <li>T命令执行一条机器指令s</li>
 <li>A命令已汇编指令的格式在内存中写入一条机器指令</li>
 </ul>
+<blockquote>
+<p>DEBUG调试命令中的标志表示</p>
+<table>
+<thead>
+<tr>
+<th align="center">标志</th>
+<th align="left">名称</th>
+<th align="left">标志为1</th>
+<th align="left">标志为0</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">OF</td>
+<td align="left">溢出标志(Overflow flag)</td>
+<td align="left">OF&#x3D;1|是(OV)</td>
+<td align="left">否(NV)</td>
+<td>运算结果超出机器用补码所能表示的范围，则为溢出</td>
+</tr>
+<tr>
+<td align="center">DF</td>
+<td align="left">方向标志(Direction flag)</td>
+<td align="left">DF&#x3D;1|递减(DN)</td>
+<td align="left">递增(UP)</td>
+<td>DF为串操作指定规定增减方向</td>
+</tr>
+<tr>
+<td align="center">TF</td>
+<td align="left">陷阱标志(Trap flag)</td>
+<td align="left">TF&#x3D;1|产生中断</td>
+<td align="left">未产生中断</td>
+<td>TF供调试指令程序使用</td>
+</tr>
+<tr>
+<td align="center">IF</td>
+<td align="left">中断标志(Interrupt flag)</td>
+<td align="left">IF&#x3D;1|允许(EI)</td>
+<td align="left">关闭(DI)</td>
+<td>可用开中断指令STI和关中断指令CLI设置IF的状态</td>
+</tr>
+<tr>
+<td align="center">SF</td>
+<td align="left">符号标志(Sign flag)</td>
+<td align="left">SF&#x3D;1|负(NG)</td>
+<td align="left">正(PL)</td>
+<td>运算结果的正负</td>
+</tr>
+<tr>
+<td align="center">ZF</td>
+<td align="left">零标志(Zero flag)</td>
+<td align="left">ZF&#x3D;1|是(ZR)</td>
+<td align="left">否(NZ)</td>
+<td>运算结果全为0则ZF置1，否则置0</td>
+</tr>
+<tr>
+<td align="center">AF</td>
+<td align="left">辅助进位标志(Auxiliary carry flag)</td>
+<td align="left">AF&#x3D;1|有(AC)</td>
+<td align="left">无(NA)</td>
+<td>进行算数运算时，低半字节向高半字节产生进位(加法)或借位(减法)则AF&#x3D;1，否则为0</td>
+</tr>
+<tr>
+<td align="center">PF</td>
+<td align="left">奇偶标志(Parity flag)</td>
+<td align="left">PF&#x3D;1|偶(PE)</td>
+<td align="left">奇(PO)</td>
+<td>操作结果中低八位中含1的个数的奇偶性，对应1的个数为偶数则PF&#x3D;1；</td>
+</tr>
+<tr>
+<td align="center">CF</td>
+<td align="left">进位标志(Carry flag)</td>
+<td align="left">CF&#x3D;1|是(CY)</td>
+<td align="left">否(NC)</td>
+<td>算数运算时，最高位产生进位或借位，则CF&#x3D;1</td>
+</tr>
+</tbody></table>
+</blockquote>
 <h1 id="3-寄存器-内存访问"><a href="#3-寄存器-内存访问" class="headerlink" title="3.寄存器(内存访问)"></a>3.寄存器(内存访问)</h1><h2 id="3-1-内存中的字存储"><a href="#3-1-内存中的字存储" class="headerlink" title="3.1.内存中的字存储"></a>3.1.内存中的字存储</h2><p>CPU中用16位寄存器存储一个字，高8位存放高位字节，低8位存放低位字节。<strong>内存单元是字节单元，一个单元存放一个字节</strong>，一个字需要使用两个连续的内存单元进行存放，这个字的低位字节存放在低地址单元，高位字节存放在高地址单元</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603853188787.png" alt="1603853188787"></p>
 <p><strong>问题：</strong></p>

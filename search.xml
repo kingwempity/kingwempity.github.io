@@ -133,7 +133,7 @@ over</p>
 </ol>
 </blockquote>
 <p><strong>习题：</strong></p>
-<p><img lazyload src="/images/loading.svg" data-src="D:/blog/source/_posts/Assembley-language/%E6%B1%87%E7%BC%96%E6%A3%80%E6%B5%8B1.1.png" alt="汇编检测1.1"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%B1%87%E7%BC%96%E6%A3%80%E6%B5%8B1.1.png" alt="汇编检测1.1"></p>
 <p><u>（1）1个CPU的寻址能力为8KB，那么它的地址总线的宽度为 <strong>13</strong>位。</u></p>
 <p>答：8KB&#x3D;8*1024Byte&#x3D;2^3✖2^10&#x3D;2^13Byte 所以13位</p>
 <p><u>（2）1KB的存储器有 <strong>1024</strong> 个存储单元，存储单元的编号从 <strong>0</strong> 到 <strong>1023</strong> 。</u></p>

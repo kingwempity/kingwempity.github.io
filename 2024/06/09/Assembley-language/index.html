@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="敬请T期待">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2024/06/09/assembley-language/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="1.第一章基础知识1.1.机器语言机器语言就是机器指令的集合，机器指令展开来讲就是一台机器可以正确执行的命令 1.2.汇编语言的产生汇编指令和机器指令的差别在于指令的表示方法上，汇编指令是机器指令便于记忆的书写格式  操作 ：寄存器BX内容送到AX中 机器指令：1000100111011000 汇编指令：mov ax，bx  因为计算机只能读懂机器指令，需要使用编译器将汇编指令编译成机器指令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Assembley_language">
+<meta property="og:url" content="http://example.com/2024/06/09/Assembley-language/index.html">
+<meta property="og:site_name" content="敬请T期待">
+<meta property="og:description" content="1.第一章基础知识1.1.机器语言机器语言就是机器指令的集合，机器指令展开来讲就是一台机器可以正确执行的命令 1.2.汇编语言的产生汇编指令和机器指令的差别在于指令的表示方法上，汇编指令是机器指令便于记忆的书写格式  操作 ：寄存器BX内容送到AX中 机器指令：1000100111011000 汇编指令：mov ax，bx  因为计算机只能读懂机器指令，需要使用编译器将汇编指令编译成机器指令">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/a1.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/a2.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1602839784794.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1603261636487.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1603262922153.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1603853188787.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1603855203907.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1603855360712.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1603856276469.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604027358862.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604027748325.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604028015173.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604544565226.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604557474529.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604563764138.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604564239260.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604630532787.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604630773520.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604631336930.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604631454682.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604631552612.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604631868136.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604631917384.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604631953216.png">
+<meta property="og:image" content="d:/blog/source/_posts/Assembley-language/1604631995576.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604632157945.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604634131753.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604634144346.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604906127084.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604908133361.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1604990737283.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/1605247814500.png">
+<meta property="article:published_time" content="2024-06-09T08:29:27.000Z">
+<meta property="article:modified_time" content="2024-06-09T09:11:24.614Z">
+<meta property="article:author" content="kingwempity">
+<meta property="article:tag" content="汇编语言">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kingwempity/images/raw/master/images/a1.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/avatar.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/avatar.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Assembley_language -
+        
+        KingWempity&#39;s Blog
+    </title>
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/anime.min.js"></script>
+    <h1 class="ml13">
+        KingWempity&#39;s Blog
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/fonts/fonts.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/fonts/Satoshi/satoshi.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":false,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"KingWempity","subtitle":{"text":["KingWempity@敬请T期待"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/kingwempity","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Something Just Like This","artist":"Coldplay","url":"https://evan.beee.top/music/Something%20Just%20Like%20This%20-%20The%20Chainsmokers%E3%80%81Coldplay.mp3","cover":"https://evan.beee.top/music/covers/Something_Just_Like_This.png"},{"name":"如果我们在余生相遇","artist":"RE-D&是二哈ya","url":"http://music.163.com/song/media/outer/url?id=2123230314.mp3","conver":"https://y.qq.com/music/photo_new/T002R300x300M0000047tG5d1GZ4lz_4.jpg"},{"name":"Imagine","artist":"John Lennon","url":"https://evan.beee.top/music/Imagine%20-%20John%20Lennon.mp3","cover":"https://evan.beee.top/music/covers/Lennon_Imagine_Sleeve_1975.jpg"}]},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.6.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Being":{"path":"https://cn.bing.com/","icon":"fa-brands fa-google"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Github":"https://github.com/kingwempity"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives/","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags/","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Pictures":{"icon":"fa-solid fa-image","path":"/masonry/"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/1/12 12:34:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                KingWempity&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://cn.bing.com/"
+                                        >
+                                    <i class="fa-brands fa-google fa-fw"></i>
+                                    BEING
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/kingwempity">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://cn.bing.com/"
+                        >
+                            <span>
+                                BEING
+                            </span>
+                            
+                                <i class="fa-brands fa-google fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/kingwempity">GITHUB</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags/"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/masonry/"
+                        >
+                            <span>Pictures</span>
+                            <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">24</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">14</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">Assembley_language</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">敬请T期待</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-06-09 16:29:27</span>
+        <span class="mobile">2024-06-09 16:29:27</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-06-09 17:11:24</span>
+            <span class="mobile">2024-06-09 17:11:24</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">汇编语言</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>6.4k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>24 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <meta name="referrer" content="no-referrer">
+
+<h1 id="1-第一章基础知识"><a href="#1-第一章基础知识" class="headerlink" title="1.第一章基础知识"></a>1.第一章基础知识</h1><h2 id="1-1-机器语言"><a href="#1-1-机器语言" class="headerlink" title="1.1.机器语言"></a>1.1.机器语言</h2><p>机器语言就是机器指令的集合，机器指令展开来讲就是一台机器可以正确执行的命令</p>
+<h2 id="1-2-汇编语言的产生"><a href="#1-2-汇编语言的产生" class="headerlink" title="1.2.汇编语言的产生"></a>1.2.汇编语言的产生</h2><p>汇编指令和机器指令的差别在于指令的表示方法上，汇编指令是机器指令便于记忆的书写格式</p>
+<blockquote>
+<p>操作 ：寄存器BX内容送到AX中</p>
+<p>机器指令：1000100111011000</p>
+<p>汇编指令：mov ax，bx</p>
+</blockquote>
+<p>因为计算机只能读懂机器指令，需要使用编译器将汇编指令编译成机器指令</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/a1.png" alt="a1"></p>
+<h2 id="1-3-存储器"><a href="#1-3-存储器" class="headerlink" title="1.3.存储器"></a>1.3.存储器</h2><p>就是我们平常所说的内存</p>
+<h2 id="1-4-存储单元"><a href="#1-4-存储单元" class="headerlink" title="1.4.存储单元"></a>1.4.存储单元</h2><p>存储器会被划分若干个存储单元</p>
+<h2 id="1-5-CPU对存储器的读写"><a href="#1-5-CPU对存储器的读写" class="headerlink" title="1.5.CPU对存储器的读写"></a>1.5.CPU对存储器的读写</h2><p>通过地址总线，数据总线，控制总线对存储芯片中的数据进行读写</p>
+<h2 id="1-6-主板"><a href="#1-6-主板" class="headerlink" title="1.6.主板"></a>1.6.主板</h2><p>每一台PC中，都有一个主板，通过地址总线，数据总线，控制总线将核心器件和主要器件进行相连</p>
+<h2 id="1-7-接口卡"><a href="#1-7-接口卡" class="headerlink" title="1.7.接口卡"></a>1.7.接口卡</h2><p>计算机系统中，所有可用程序控制其工作的设备，必须收到CPU控制，CPU对外部设备都不能直接控制，比如显示器，音响，打印机等，直接控制这些设备进行工作的是<code>插在扩展插槽上的接口卡</code>，扩展插槽通过总线和CPU相连，接口卡也通过总线和CPU进行相连。<strong>CPU通过总线向接口卡发送命令，接口卡根据CPU的命令控制外设进行工作</strong></p>
+<h2 id="1-8-各类存储器芯片"><a href="#1-8-各类存储器芯片" class="headerlink" title="1.8.各类存储器芯片"></a>1.8.各类存储器芯片</h2><p>一个PC中装有多个存储器芯片，从读写属性中分为</p>
+<ul>
+<li>RAM（随机存储器）：必须带电存储，关机后存储的内容丢失<ul>
+<li>第一种:存放CPU和绝大部分程序和数据，主随机存储器一般由两个位置上的RAM组成，装在主板上的RAM和装在扩展槽上的RAM</li>
+<li>第二种：接口卡上的RAM：某些接口需要对大批量数据，数据数据进行暂时存储，在其上安装RAM，最典型的就是显卡上的RAM，称之为<strong>显存</strong>，将要写入的内容写入显存中，显示卡随时将显存的数据在显示器上输出</li>
+</ul>
+</li>
+<li>ROM（只读存储器）：只能读取，不能写入，关机之后内容不丢失<ul>
+<li>装有BIOS（Basic Input&#x2F;Output System，基本输入&#x2F;输出系统）的ROM，BIOS 是主板和各类接口卡（如显卡，网卡等）厂商提供的软件系统，可以通过它利用该硬件设备进行最基本的输入和输出。例如：主板的ROM中存储的主板的BIOS（系统BIOS），显卡上存储着显卡的BIOS，网卡上安装网卡的BIOS</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/a2.png" alt="a2"></p>
+<h2 id="1-9-内存地址空间"><a href="#1-9-内存地址空间" class="headerlink" title="1.9.内存地址空间"></a>1.9.内存地址空间</h2><p>上述的那些存储器，在物理上是独立的器件，但是一些两点比较相同</p>
+<ul>
+<li>都和CPU总线进行相连</li>
+<li>CPU对它进行读写时候都是通过控制线发出内存读写命令</li>
+</ul>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1602839784794.png" alt="1602839784794"></p>
+<p>在上图中，所有的物理存储器被看作一个有若干个存储单元组成的<code>逻辑存储器</code>，每个物理存储器在这个逻辑存储器中占有一个地址段，即一段地址空间，CPU在在这段地址空间读写数据，实际上就是在相对应的物理存储器上读写数据</p>
+<h2 id="1-10-总结"><a href="#1-10-总结" class="headerlink" title="1.10.总结"></a>1.10.总结</h2><blockquote>
+<p><strong>总结：</strong></p>
+<ol>
+<li>汇编指令是机器指令的助记符，同机器指令一一对应</li>
+<li>每一种CPU都有自己的汇编指令集</li>
+<li>CPU可以直接使用的信息在存储器中存放</li>
+<li>在存储器中指令和数据没有任何区别，都是二进制信息</li>
+<li>存储单元从零开始顺序编号</li>
+<li>一个存储单元可以存储8个bit，即8位二进制数</li>
+<li>1Byte&#x3D;8bit 1KB&#x3D;1024B 1MB&#x3D;1024KB 1GB&#x3D;1024MB  <strong>类比：2^10 1KB 2^20 1MB 2^30 1GB</strong></li>
+<li>每一个CPU芯片都有许多管脚，这些管脚和总线进行相连，也可以说，这些管脚引出总线。CPU引出3种总线的宽度标志这个CPU的不同方面的性能</li>
+<li>地址总线宽度决定了CPU的寻址能力</li>
+<li>数据总线的宽度决定了CPU和其它器件进行数据传送时的一次数据传送量</li>
+<li>控制总线宽度决定了CPU对系统中器件的控制能力</li>
+<li>内存地址空间：使用汇编语言编程时候，必须从CPU的角度考虑问题，对CPU来说，系统中的所有存储器中的存储单元都处于一个统一的逻辑存储器中，它的容量受CPU的寻址能力限制，这个逻辑CPU就是我们所说的内存地址空间</li>
+</ol>
+</blockquote>
+<p><strong>习题：</strong></p>
+<p>（1）1个CPU的寻址能力为8KB，那么它的地址总线的宽度为 <strong>13</strong>位。</p>
+<p>答：8KB&#x3D;8*1024Byte&#x3D;2^3✖2^10&#x3D;2^13Byte 所以13位</p>
+<p>（2）1KB的存储器有 <strong>1024</strong> 个存储单元，存储单元的编号从 <strong>0</strong> 到 <strong>1023</strong> 。</p>
+<p>答：一个存储字长为8bit，1KB&#x3D;1024Byte&#x3D;1024 * 8 bit 有1024 存储单元</p>
+<p>（3）1KB的存储器可以存储 <strong>8192</strong>（2^13） 个bit， <strong>1024</strong>个Byte。</p>
+<p>答：1KB&#x3D;1024Byte&#x3D;1024 * 8 bit </p>
+<p>（4）1GB是 <strong>1073741824 （2^30）</strong> 个Byte、1MB是 <strong>1048576（2^20）</strong> 个Byte、1KB是 <strong>1024（2^10）</strong>个Byte。</p>
+<p>（5）8080、8088、80296、80386的地址总线宽度分别为16根、20根、24根、32根，则它们的寻址能力分别为: <strong>64</strong> （KB）、 <strong>1</strong> （MB）、 <strong>16</strong> （MB）、 <strong>4</strong> （GB）。</p>
+<p>答：16根：2^16&#x3D;2^10 * 2^6  2^10是1024就是1KB   然后乘2^6 &#x3D;64 就是64KB，后面一次类推 </p>
+<p>（6）8080、8088、8086、80286、80386的数据总线宽度分别为8根、8根、16根、16根、32根。则它们一次可以传送的数据为: <strong>1</strong> （B）、 <strong>1</strong> （B）、 <strong>2</strong> （B）、 <strong>2</strong> （B）、 <strong>4</strong> （B）。</p>
+<p>答：8根就是8bit&#x3D;1B ，后面一次类推</p>
+<p>（7）从内存中读取1024字节的数据，8086至少要读 <strong>512</strong> 次，80386至少要读 <strong>256</strong> 次。</p>
+<p>答：8086 数据总线宽度为16 1024 * 8 &#x2F;16 &#x3D; 512  80386数据总线宽度为32 1024 * 8 &#x2F;32 &#x3D; 256</p>
+<p>（8）在存储器中，数据和程序以 <strong>二进制</strong> 形式存放。</p>
+<h1 id="2-寄存器"><a href="#2-寄存器" class="headerlink" title="2.寄存器"></a>2.寄存器</h1><blockquote>
+<p>一个CPU由运算器，控制器，寄存器等器件构成，这些器件靠内部总线进行相连。简单的说CPU中：</p>
+<ul>
+<li>运算器进行信息处理</li>
+<li>寄存器进行信息存储</li>
+<li>控制器控制各种器件进行工作</li>
+<li>内部总线连接各个器件，在他们之间进行各种数据的传送</li>
+</ul>
+<p>寄存器是CPU中程序员可以用指令读写的部件，程序员可以通过改变各种寄存器的内容实现对CPU的控制</p>
+<p>8086CPU由14个寄存器：AX，BX，CX，DX，SI，DI，SP，BP，IP，CS，SS,DS,ES,PSW</p>
+</blockquote>
+<h2 id="2-1-同用寄存器"><a href="#2-1-同用寄存器" class="headerlink" title="2.1.同用寄存器"></a>2.1.同用寄存器</h2><blockquote>
+<p>所有的寄存器都是16位，可以存放两个字节。AX，BX，CX，DX 这4个通用寄存器，每一个寄存器可以分为两个可独立使用的8位寄存器来使用</p>
+<ul>
+<li>AX 可以分为AH和AL</li>
+<li>BX可以分为BH和BL</li>
+<li>CX可以分为CH和CL</li>
+<li>DX可以分为DH和DL</li>
+</ul>
+</blockquote>
+<h2 id="2-2-物理地址"><a href="#2-2-物理地址" class="headerlink" title="2.2.物理地址"></a>2.2.物理地址</h2><blockquote>
+<p>CPU访问内存单元，要给出内存单元的地址。没一个内存单元在这个空间中都有一个唯一的地址，我们将这个唯一的地址称之为<code>物理地址</code></p>
+</blockquote>
+<h2 id="2-3-8086CPU给出物理地址的方法"><a href="#2-3-8086CPU给出物理地址的方法" class="headerlink" title="2.3.8086CPU给出物理地址的方法"></a>2.3.8086CPU给出物理地址的方法</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603261636487.png" alt="1603261636487"></p>
+<ol>
+<li>CPU中的相关部件提供两个16位地址，一个称之为段地址，一个称之为偏移地址</li>
+<li>段地址和偏移地址通过内部总线送入一个称之为地址加法器的部件</li>
+<li>地址加法器将两个16位地址合成一个20位的物理地址</li>
+<li>地址加法器通过内部总线将20位物理地址送入到输入和输出控制电路</li>
+<li>输入和输出控制电路将20 位物理地址送上地址总线</li>
+<li>20位物理地址被地址总线传送到存储器</li>
+</ol>
+<p><strong>地址加法器采用：物理地址&#x3D;段地址*16+偏移地址</strong></p>
+<h2 id="2-4-段的概念"><a href="#2-4-段的概念" class="headerlink" title="2.4.段的概念"></a>2.4.段的概念</h2><p>在编程时可以根据需要，将若干地址连续的内存单元看作一个段。偏移地址位16位，16位地址的最大寻址能力位64KB，所以要给段的长度最大位64KB</p>
+<h2 id="2-5-段寄存器"><a href="#2-5-段寄存器" class="headerlink" title="2.5.段寄存器"></a>2.5.段寄存器</h2><blockquote>
+<p>段寄存器：CS、DS、SS、ES</p>
+<p>CS:<strong>代码段寄存器</strong></p>
+<p>IP：<strong>指令指针寄存器</strong></p>
+</blockquote>
+<h2 id="2-6-CS和IP"><a href="#2-6-CS和IP" class="headerlink" title="2.6.CS和IP"></a>2.6.CS和IP</h2><p>假设CS中的内容位M，IP中内容位N，8086CPU将从内存M✖16+N单元开始，读取一条指令并执行</p>
+<blockquote>
+<p><strong>CPU将CS：IP指向内存单元中的内容看作指令</strong></p>
+</blockquote>
+<h2 id="2-7-总结"><a href="#2-7-总结" class="headerlink" title="2.7.总结"></a>2.7.总结</h2><blockquote>
+<ul>
+<li>CS 存放指令的段地址，IP存放指令的偏移地址，任意时刻，CPU将CS:IP指向内容当作指令的执行</li>
+<li>CPU工作的流程</li>
+<li>从CS：IP指向内存单元读取指令，读取的指令进入指令的缓冲器</li>
+<li>IP指向下一条指令</li>
+<li>执行指令</li>
+</ul>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603262922153.png" alt="1603262922153"></p>
+<h2 id="2-8-Debug"><a href="#2-8-Debug" class="headerlink" title="2.8.Debug"></a>2.8.Debug</h2><ul>
+<li>R命令查看、改变CPU寄存器的内容</li>
+<li>D命令查看内存中的内容</li>
+<li>E命令改写内存中的内容</li>
+<li>U命令将内存中的机器指令翻译成汇编指令</li>
+<li>T命令执行一条机器指令s</li>
+<li>A命令已汇编指令的格式在内存中写入一条机器指令</li>
+</ul>
+<h1 id="3-寄存器-内存访问"><a href="#3-寄存器-内存访问" class="headerlink" title="3.寄存器(内存访问)"></a>3.寄存器(内存访问)</h1><h2 id="3-1-内存中的字存储"><a href="#3-1-内存中的字存储" class="headerlink" title="3.1.内存中的字存储"></a>3.1.内存中的字存储</h2><p>CPU中用16位寄存器存储一个字，高8位存放高位字节，低8位存放低位字节。<strong>内存单元是字节单元，一个单元存放一个字节</strong>，一个字需要使用两个连续的内存单元进行存放，这个字的低位字节存放在低地址单元，高位字节存放在高地址单元</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603853188787.png" alt="1603853188787"></p>
+<p><strong>问题：</strong></p>
+<ol>
+<li>0地址单元存放的字节型数据是多少？<strong>20</strong></li>
+<li>0地址单元存放的字型数据是多少？<strong>4E20</strong></li>
+<li>2地址单元存放的字节型数据是多少？<strong>12</strong></li>
+<li>2地址单元存放的字型数是多少？<strong>0012</strong></li>
+<li>1地址单元存放的字型数据是多少？<strong>124E</strong></li>
+</ol>
+<h2 id="3-2-DS和-address"><a href="#3-2-DS和-address" class="headerlink" title="3.2.DS和[address]"></a>3.2.DS和[address]</h2><p><strong>CPU 要读写一个内存单元的时候，必须给出这个内存单元的地址。内存单元的地址由段地址和偏移地址组成。DS寄存器通常需要存放访问数据的段地址</strong></p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mov bx,1000H</span><br><span class="line">mov ds,bx</span><br><span class="line">mov al,[0]</span><br><span class="line"></span><br><span class="line">[0]:表示内存单元的偏移地址</span><br><span class="line">指令执行的时候，CPU自动取ds中的数据作为内存单元的段地址</span><br><span class="line">mov al,[0]：表示数据从1000:0 单元到al 的传送</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="3-3-字的传送"><a href="#3-3-字的传送" class="headerlink" title="3.3.字的传送"></a>3.3.字的传送</h2><p>CPU是16位结构，有16根数据线，可以一次性传送16位数据，就是一个字</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603855203907.png" alt="1603855203907"></p>
+<h2 id="3-4-数据段"><a href="#3-4-数据段" class="headerlink" title="3.4.数据段"></a>3.4.数据段</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603855360712.png" alt="1603855360712"></p>
+<p><strong>总结</strong></p>
+<blockquote>
+<ol>
+<li>字在内存中存储，使用两个地址连续的内存单元存放，低位字节存放在低地址单元，高位字节存放在高地址单元</li>
+<li>使用mov指令访问内存单元，可以在mov指令中只给出单元的偏移地址，此时段地址默认在DS寄存器中</li>
+<li>[address]表示一个偏移地址位address的内存单元</li>
+<li>在内存和寄存器之间传动数据的时候，高地址单元和高8位寄存器，低地址单元和低8位寄存器相对应</li>
+</ol>
+</blockquote>
+<h2 id="3-5-栈"><a href="#3-5-栈" class="headerlink" title="3.5.栈"></a>3.5.栈</h2><ol>
+<li>入栈：就是将一个新的元素放到栈顶</li>
+<li>出栈：就是从栈顶取出一个新的元素</li>
+<li>栈顶的元素总是LIFO(Last In First Out)</li>
+</ol>
+<h2 id="3-6-CPU提供栈机制"><a href="#3-6-CPU提供栈机制" class="headerlink" title="3.6.CPU提供栈机制"></a>3.6.CPU提供栈机制</h2><p>基本命令就是PUSH和POP，push ax 表示将寄存器ax中的数据送入栈中，pop ax 表示从栈顶中取出数据送入到ax，CPU入栈和出栈操作都是已字为单位进行的</p>
+<p><strong>段寄存器SS和SP，栈顶的段地址存放在SS中，偏移地址存放在SP中，任意时刻SS:SP指向栈顶元素</strong></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1603856276469.png" alt="1603856276469"></p>
+<h2 id="3-7-栈顶超解问题"><a href="#3-7-栈顶超解问题" class="headerlink" title="3.7.栈顶超解问题"></a>3.7.栈顶超解问题</h2><p>CPU不会保证我们对栈的操作不会超界。CPU只知道栈顶(SS:SP)在何处,不知道安排的栈的空间由多大。所以编程的时候操心栈顶超界的问题。</p>
+<h2 id="3-8-栈的总结"><a href="#3-8-栈的总结" class="headerlink" title="3.8.栈的总结"></a>3.8.栈的总结</h2><blockquote>
+<ol>
+<li>在ss,sp中存放栈顶的段地址和偏移地址：提供入栈和出栈的指令，他们根据SS:SP指示的地址，按照栈的方式访问内存单元</li>
+<li>push指令的执行步骤：①sp&#x3D;sp-2 ②向ss:sp指向的字单元中送入数据</li>
+<li>pop指令的执行步骤：①从ss：sp指向的字单元中读取数据②sp&#x3D;sp+2</li>
+<li>任意时刻，ss：sp指向栈顶元素</li>
+<li>CPU只记录栈顶，栈空间的大小由我们自己管理</li>
+<li>用栈来暂存以后需要恢复的寄存器的内容时，寄存器出栈的顺序要和入栈的相反</li>
+<li>push，pop实质是一种内存传送指令，注意他们灵活使用</li>
+</ol>
+<p><strong>总结：栈是一种非常重要的机制，一定要深入理解，灵活掌握</strong></p>
+</blockquote>
+<h2 id="3-9-段的综述"><a href="#3-9-段的综述" class="headerlink" title="3.9.段的综述"></a>3.9.段的综述</h2><blockquote>
+<p>我们可以将一段内存定义为一个段，用一个段地址指示段，用偏移地址访问段内的单元</p>
+<p>我们用一个段存放数据，可以定义为 <strong>数据段</strong></p>
+<p>我们用一个段存放代码，可以定义为 <strong>代码段</strong></p>
+<p>我们用一个段当作栈，可以定义为 <strong>栈段</strong></p>
+<p>**数据段:**将段地址存放在DS中</p>
+<p><strong>代码段</strong>：将它们的段地址存放在cs中，将段中的第一条指令的偏移地址存放在IP中，这样CPU就将执行我们定义的代码段中的指令</p>
+<p><strong>栈段</strong>：段地址存放在ss中，将栈顶单元的偏移地址存放在sp中</p>
+</blockquote>
+<h1 id="4-第一个程序"><a href="#4-第一个程序" class="headerlink" title="4.第一个程序"></a>4.第一个程序</h1><h2 id="4-1-一个源程序从写出到执行的过程"><a href="#4-1-一个源程序从写出到执行的过程" class="headerlink" title="4.1.一个源程序从写出到执行的过程"></a>4.1.一个源程序从写出到执行的过程</h2><ul>
+<li>第一步：编写汇编程序</li>
+<li>第二步：对源程序进行编译连接</li>
+<li>第三步：执行可执行文件中的程序</li>
+</ul>
+<h2 id="4-2-源程序"><a href="#4-2-源程序" class="headerlink" title="4.2.源程序"></a>4.2.源程序</h2><blockquote>
+<p>汇编语言中包含两种指令：<strong>汇编指令</strong>和 <strong>伪指令</strong></p>
+<ul>
+<li>汇编指令：有对应机器码的指令，最终被CPU执行</li>
+<li>伪指令：由编译器进行执行，进行相关的编译动作</li>
+</ul>
+</blockquote>
+<p><strong>伪指令：</strong></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604027358862.png" alt="1604027358862"></p>
+<p><strong>源程序中的程序</strong></p>
+<p>将源程序文件中所有内容称之为源程序，然后通过编译连接后转变为机器码，存储在可执行文件中</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604027748325.png" alt="1604027748325"></p>
+<p><strong>标号</strong></p>
+<p>一个标号指代了一个地址，作为一个段的名称，这个端的名称最终会编译一个段的段地址</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604028015173.png" alt="1604028015173"></p>
+<h1 id="5-BX-和loop指令"><a href="#5-BX-和loop指令" class="headerlink" title="5.[BX]和loop指令"></a>5.[BX]和loop指令</h1><h2 id="5-1-bx"><a href="#5-1-bx" class="headerlink" title="5.1.[bx]"></a>5.1.[bx]</h2><blockquote>
+<p>mov ax,[bx]</p>
+<p>说明：bx中存放的数据作为一个偏移地址EA，段地址SA默认在ds中，将SA:EA处的数据送到ax中</p>
+<p>mov [bx],ax</p>
+<p>说明：bx中存放的数据作为要给偏移地址EA，段地址默认在ds中，将ax中的数据送入到内存中</p>
+</blockquote>
+<h2 id="5-2-Loop指令"><a href="#5-2-Loop指令" class="headerlink" title="5.2.Loop指令"></a>5.2.Loop指令</h2><p>就是循环指令</p>
+<h2 id="5-3-Loop指令和-bx-使用"><a href="#5-3-Loop指令和-bx-使用" class="headerlink" title="5.3.Loop指令和[bx]使用"></a>5.3.Loop指令和[bx]使用</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604544565226.png" alt="1604544565226"></p>
+<h2 id="5-4-段前缀"><a href="#5-4-段前缀" class="headerlink" title="5.4.段前缀"></a>5.4.段前缀</h2><ul>
+<li><code>mov ax,ds:[bx]</code>:将一个内存单元的内容送入ax中，这个内存单元存放两个字节，偏移地址在<code>bx</code>中，段地址在<code>ds</code>中</li>
+<li><code>mov  ax,cs:[bx]</code>,<code>mov ax,cs:[bx]</code>,<code>mov ax,es:[bx]</code>,<code>mov ax,ss:[0]</code>,<code>mov ax,cs:[0]</code></li>
+</ul>
+<p>这些出现在访问内存单元的指令中，用于显示的指明内存单元的段地址的<code>ds</code>:,<code>cs:</code>,<code>ss:</code>,<code>es:</code>,我们称之为段前缀</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">段寄存器:CS、DS、ES、SS</span><br><span class="line">代码段：CS 比如：IP执行地址都是CS代码段的内容</span><br><span class="line">数据段：DS 比如：如mov ax,[bx]间接寻址法所指的都是数据段的数据</span><br><span class="line">堆栈段：SS 比如：SP堆栈数据，都是指堆栈段的</span><br><span class="line">附加段：ES 比如：mov ax,es:[di] 利用間接寻址法取ES段的数据</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="5-5-一段安全的段空间"><a href="#5-5-一段安全的段空间" class="headerlink" title="5.5.一段安全的段空间"></a>5.5.一段安全的段空间</h2><p><code>0:200~0:2ff</code>的256字节空间，这个段空间是安全的</p>
+<h1 id="6-包含多个段的程序"><a href="#6-包含多个段的程序" class="headerlink" title="6.包含多个段的程序"></a>6.包含多个段的程序</h1><h2 id="6-1-在代码段中使用数据"><a href="#6-1-在代码段中使用数据" class="headerlink" title="6.1.在代码段中使用数据"></a>6.1.在代码段中使用数据</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604557474529.png" alt="1604557474529"></p>
+<p>**dw含义:**全称<code>define word</code>,在这里定义了8个字型数据，它们所占的内存空间大小为16字节</p>
+<blockquote>
+<p>程序中的指令需要对这8个数据进行累加，8个数据放在哪里呢？</p>
+<p>答：程序在运行的时候CS中存放代码段的的段地址。dw定义的数据处于代码段的最开始，所以偏移地址为0，这8个数据在代码段的偏移0，2，4，6，8，A，C，E处。</p>
+</blockquote>
+<p><strong>ends start</strong>:指明程序的入口，被转化为一个入口地址</p>
+<h2 id="6-2-在代码段中使用栈"><a href="#6-2-在代码段中使用栈" class="headerlink" title="6.2.在代码段中使用栈"></a>6.2.在代码段中使用栈</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604563764138.png" alt="1604563764138"></p>
+<p><strong>对于sp的理解:</strong></p>
+<p>第一步：看计算机系统内存：</p>
+<p>SA:10: 23 12 56 04 ……….09              16个字节</p>
+<p>SA:20:0…………………………..0              对应 第二个dw:00000000</p>
+<p>SA:30:0…………………………..0               对应 第二个dw:00000000</p>
+<h2 id="6-3-将数据、代码、栈放入到不同的段"><a href="#6-3-将数据、代码、栈放入到不同的段" class="headerlink" title="6.3.将数据、代码、栈放入到不同的段"></a>6.3.将数据、代码、栈放入到不同的段</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604564239260.png" alt="1604564239260"></p>
+<p><strong>对于sp的理解</strong></p>
+<p>c 等于开辟了一块空间，在这段空间中</p>
+<p>SA:0:00000000</p>
+<p>SA:10:000000000</p>
+<p>然后就sp 就指向了20h</p>
+<h1 id="7-更灵活的定位内存地址的方法"><a href="#7-更灵活的定位内存地址的方法" class="headerlink" title="7.更灵活的定位内存地址的方法"></a>7.更灵活的定位内存地址的方法</h1><h2 id="7-1-and-和-or-指令"><a href="#7-1-and-和-or-指令" class="headerlink" title="7.1.and 和 or 指令"></a>7.1.and 和 or 指令</h2><blockquote>
+<p><strong>and 指令：只有全为1，才为1</strong></p>
+<p>mov al，01100011B</p>
+<p>and  al,   00111011B</p>
+<p><strong>or 指令：只用全为0，才为0</strong></p>
+<p>or  al,   00111011B</p>
+</blockquote>
+<h2 id="7-2-以字符的形式给出数据"><a href="#7-2-以字符的形式给出数据" class="headerlink" title="7.2.以字符的形式给出数据"></a>7.2.以字符的形式给出数据</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604630532787.png" alt="1604630532787"></p>
+<h2 id="7-3-bx-idata"><a href="#7-3-bx-idata" class="headerlink" title="7.3. [bx+idata]"></a>7.3. [bx+idata]</h2><p>[bx+idata]表示一个内存单元，它的偏移地址为（bx）+（itda）</p>
+<h2 id="7-4-SI和DI"><a href="#7-4-SI和DI" class="headerlink" title="7.4.SI和DI"></a>7.4.SI和DI</h2><p>si 和 di 是与bx 功能相近的寄存器，si 和di 不能够分成两个8为寄存器来使用，下面是3组指令实现了相同的功能</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604630773520.png" alt="1604630773520"></p>
+<h2 id="7-5-bx-si-和-bx-di"><a href="#7-5-bx-si-和-bx-di" class="headerlink" title="7.5.[bx + si] 和 [bx + di]"></a>7.5.[bx + si] 和 [bx + di]</h2><h2 id="7-6-bx-si-idata-和-bx-di-idtata"><a href="#7-6-bx-si-idata-和-bx-di-idtata" class="headerlink" title="7.6.[bx + si + idata] 和 [bx + di + idtata]"></a>7.6.[bx + si + idata] 和 [bx + di + idtata]</h2><h1 id="8-数据处理的两个基本问题"><a href="#8-数据处理的两个基本问题" class="headerlink" title="8.数据处理的两个基本问题"></a>8.数据处理的两个基本问题</h1><p>定义了两个描述符号：</p>
+<ul>
+<li>reg包含了：ax，bx，cx，dx，ah，al，bh，bl，ch，cl，dh，dl，sp，bp，si，di</li>
+<li>sreg包含了：ds，ss，cs，es</li>
+</ul>
+<h2 id="8-1-bx，si，di-和bp"><a href="#8-1-bx，si，di-和bp" class="headerlink" title="8.1.bx，si，di 和bp"></a>8.1.bx，si，di 和bp</h2><blockquote>
+<p>只有bx，si，di和bp4 个寄存器可以用[…]中进行内存单元寻址</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631336930.png" alt="1604631336930"></p>
+<blockquote>
+<p>在[…]中，这4个寄存器可以单个出现，或者只能以4中组合出现：bx 和 si，bx 和 di，bp 和si，bp和di，比如下面指令是正确的：</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631454682.png" alt="1604631454682"></p>
+<blockquote>
+<p>只要在[…]中使用寄存器bp，而指令中没有显性的给出段地址，段地址就默认在ss中，比如下面的指令</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631552612.png" alt="1604631552612"></p>
+<h2 id="8-2-汇编语言中数据位置的表达"><a href="#8-2-汇编语言中数据位置的表达" class="headerlink" title="8.2.汇编语言中数据位置的表达"></a>8.2.汇编语言中数据位置的表达</h2><blockquote>
+<p>立即数：对于直接包含在机器指令中的数据（执行前在CPU的指令缓冲器中），在汇编语言中称之为立即数，在汇编指令中直接给出</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631868136.png" alt="1604631868136"></p>
+<blockquote>
+<p>寄存器：要处理的数据在寄存器中</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631917384.png" alt="1604631917384"></p>
+<h2 id="8-3-段地址和偏移地址"><a href="#8-3-段地址和偏移地址" class="headerlink" title="8.3.段地址和偏移地址"></a>8.3.段地址和偏移地址</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631953216.png" alt="1604631953216"></p>
+<h2 id="8-4-寻址方式"><a href="#8-4-寻址方式" class="headerlink" title="8.4.寻址方式"></a>8.4.寻址方式</h2><p><img lazyload src="/images/loading.svg" data-src="D:/blog/source/_posts/Assembley-language/1604631995576.png" alt="1604631995576"></p>
+<h2 id="8-5-指令要处理的数据有多长"><a href="#8-5-指令要处理的数据有多长" class="headerlink" title="8.5.指令要处理的数据有多长"></a>8.5.指令要处理的数据有多长</h2><blockquote>
+<p>使用操作符X ptr 指明内存单元的长度，X 在汇编中可以指定为word 或者 byte</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604632157945.png" alt="1604632157945"></p>
+<h2 id="8-6-div指令"><a href="#8-6-div指令" class="headerlink" title="8.6.div指令"></a>8.6.div指令</h2><p>div 是除法指令，使用div 做除法的时候注意以下问题</p>
+<p>要求被除数默认存放在ax,或者dx和ax中，而且要求被除数的位数，必须是除数的2倍，比如说，除数位8位，被除数就为16位。为什么被除数的位数一定要为除数的2倍呢？</p>
+<blockquote>
+<p>因为CPU只会做加法运算，把其它一切的算法都转换成加法，比如说，除数 就先转换加法，例如36&#x2F;6  当CPU看到这个运算时，就会这样想，需要多少个6 相加才能得到36呢，然后CPU就从1个6 ，2个6………..这样一种算下去，终于最后发现原来是6个6啊，从这我们可以看出，CPU是不断的用除数相加，知道找到结果为止，这就出现问题了，如果被除数不是除数位数的2倍，再相加的过程中，就可能超出除数的位数所能表达的最大数值，从而越界，如果能保证 被除数是除数的2倍 ，这问题就能解决了，例如：8 &#x2F;5   5+ 5 &#x3D;10 超出所能表达的位数，08 &#x2F;5 就可以解决这个问题</p>
+</blockquote>
+<ol>
+<li>除数：有8位和16位两种，在一个reg或者内存单元中</li>
+<li>被除数：默认放在AX或者 DX和AX中，<strong>如果除数为8位，被除数为16位，默认在AX中存放；如果除数为16位，被除数为32位，在DX和AX中存放，DX存高16位，AX存低16位</strong></li>
+<li>商：如果除数为8位，AL存储除法操作的商，AH存储除法操作的余数；如果除数为16位，AX存储除法操作的商，DX村存储除法操作的余数</li>
+</ol>
+<h2 id="8-7-伪指令dd"><a href="#8-7-伪指令dd" class="headerlink" title="8.7.伪指令dd"></a>8.7.伪指令dd</h2><p>db 和 dw 定义字节型数据和字型数据，dd 用来定义dword（double world，双字）型数据</p>
+<h2 id="dup"><a href="#dup" class="headerlink" title="dup"></a>dup</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604634131753.png" alt="1604634131753"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604634144346.png" alt="1604634144346"></p>
+<h1 id="9-转义指令"><a href="#9-转义指令" class="headerlink" title="9.转义指令"></a>9.转义指令</h1><h2 id="9-1-操作符-offset"><a href="#9-1-操作符-offset" class="headerlink" title="9.1.操作符 offset"></a>9.1.操作符 offset</h2><blockquote>
+<p>功能：取得标号的偏移地址</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604906127084.png" alt="1604906127084"></p>
+<p>上图的案例：取得标号start和s的偏移地址为0和3</p>
+<h2 id="9-2-根据位移进行转移的jmp指令"><a href="#9-2-根据位移进行转移的jmp指令" class="headerlink" title="9.2.根据位移进行转移的jmp指令"></a>9.2.根据位移进行转移的jmp指令</h2><blockquote>
+<p>jmp short 标号(转到标号处执行指令)</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604908133361.png" alt="1604908133361"></p>
+<h2 id="9-3-转移的目的地址在指令中的jmp指令"><a href="#9-3-转移的目的地址在指令中的jmp指令" class="headerlink" title="9.3.转移的目的地址在指令中的jmp指令"></a>9.3.转移的目的地址在指令中的jmp指令</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604990737283.png" alt="1604990737283"></p>
+<p>将跳转到<strong>CS:IP</strong>所在的地址</p>
+<h2 id="9-4-转移指令在寄存器中的jmp指令"><a href="#9-4-转移指令在寄存器中的jmp指令" class="headerlink" title="9.4.转移指令在寄存器中的jmp指令"></a>9.4.转移指令在寄存器中的jmp指令</h2><blockquote>
+<p>指令格式：jmp 16 位 reg</p>
+<p>功能：(IP)&#x3D;（16位reg）</p>
+</blockquote>
+<h2 id="9-5-转移指令在内存中jmp指令"><a href="#9-5-转移指令在内存中jmp指令" class="headerlink" title="9.5.转移指令在内存中jmp指令"></a>9.5.转移指令在内存中jmp指令</h2><blockquote>
+<p>jmp word ptr 内存单元地址（段内转移）</p>
+</blockquote>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov ax,0123H</span><br><span class="line">mov ds:[0],ax</span><br><span class="line">jmp word ptr ds:[0]</span><br><span class="line">执行后，（IP）=0123H</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>jmp dword ptr 内存单元地址（段间转移）</p>
+</blockquote>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mov ax,0123H</span><br><span class="line">mov ds:[0],ax</span><br><span class="line">mov word ptr ds:[2],0</span><br><span class="line">jmp dword ptr ds:[0]</span><br><span class="line"></span><br><span class="line">执行后，（cs）=0,（IP）=0123H，CS:IP指向0000:0123</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="9-6-jcxz指令"><a href="#9-6-jcxz指令" class="headerlink" title="9.6.jcxz指令"></a>9.6.jcxz指令</h2><blockquote>
+<p>当（cx）不等于0时，什么也不做，程序向下执行</p>
+<p>当cx&#x3D;&#x3D;0，jmp short 标号；</p>
+</blockquote>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">补全编程，利用jcxz指令，实现在内存2000H段中查找第一个值为0的字节，找到后，将它的偏移地址存贮在dx中。</span></span><br><span class="line"></span><br><span class="line">code segment</span><br><span class="line">start: mov ax,2000h</span><br><span class="line"> mov ds,ax</span><br><span class="line"> mov bx,0</span><br><span class="line"> s: mov cl, [bx]  # 注意需要保存字节</span><br><span class="line"> mov ch,0</span><br><span class="line"> jcxz ok</span><br><span class="line"> inc bx</span><br><span class="line"> jmp short s</span><br><span class="line"> ok:mov dx,bx</span><br><span class="line"> mov ax,4c00h</span><br><span class="line"> int 21h</span><br><span class="line">code ends</span><br><span class="line">end star</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="9-7-loop指令"><a href="#9-7-loop指令" class="headerlink" title="9.7.loop指令"></a>9.7.loop指令</h2><blockquote>
+<p>loop指令位循环指令，为短转移，相当于</p>
+<p>(cx)–</p>
+<p>if ((cx)≠0) jmp short 标号；</p>
+</blockquote>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">;************************************************************</span><br><span class="line">;利用loop指令,实现在内存2000H段中查找第一个值为零的byte,找到后 </span><br><span class="line">;将它的偏移地址存储到dx中 </span><br><span class="line">;************************************************************* </span><br><span class="line">assume cs:code </span><br><span class="line"></span><br><span class="line">code segment </span><br><span class="line"></span><br><span class="line">start: </span><br><span class="line">   mov ax,2000H</span><br><span class="line">   mov ds,ax</span><br><span class="line">   mov bx,0</span><br><span class="line">s: </span><br><span class="line">   mov cl,[bx]</span><br><span class="line">   mov ch,0</span><br><span class="line">   inc cx      # 当cx为0，然后加一</span><br><span class="line">   inc bx</span><br><span class="line">   loop s     # 这边会减一，然后当cx等于0 就会直接跳到下一步ok</span><br><span class="line">ok: </span><br><span class="line">   dec bx</span><br><span class="line">   mov dx,bx</span><br><span class="line"></span><br><span class="line">   mov ax,4c00h</span><br><span class="line">   int 21h</span><br><span class="line"></span><br><span class="line">code ends </span><br><span class="line"></span><br><span class="line">end start</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="10-CALL和RET指令"><a href="#10-CALL和RET指令" class="headerlink" title="10.CALL和RET指令"></a>10.CALL和RET指令</h1><h2 id="10-1-ret和retf指令"><a href="#10-1-ret和retf指令" class="headerlink" title="10.1.ret和retf指令"></a>10.1.ret和retf指令</h2><blockquote>
+<p>CPU执行ret指令，相当于<strong>pop IP</strong></p>
+<p>CPU执行retf指令，相当于<strong>pop IP 和 pop CS</strong></p>
+</blockquote>
+<p>监测点：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">补全程序，实现从内存1000：0000处开始执行指令。</span><br><span class="line"></span><br><span class="line">assume cs:code</span><br><span class="line"></span><br><span class="line">stack segment</span><br><span class="line">	db 16 dup (0)</span><br><span class="line">stack ends</span><br><span class="line"></span><br><span class="line">code segment</span><br><span class="line">start: mov ax,stack</span><br><span class="line">	   mov ss,ax</span><br><span class="line">	   mov sp,16</span><br><span class="line">	   mov ax,1000h</span><br><span class="line">	   push ax</span><br><span class="line">	   mov ax,0</span><br><span class="line">	   push ax</span><br><span class="line">	   retf</span><br><span class="line">code ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="10-2-根据位移进行转移的call指令"><a href="#10-2-根据位移进行转移的call指令" class="headerlink" title="10.2.根据位移进行转移的call指令"></a>10.2.根据位移进行转移的call指令</h2><blockquote>
+<p>CPU执行call 标号，相当于进行</p>
+<ul>
+<li>push IP</li>
+<li>jmp near ptr 标号</li>
+</ul>
+</blockquote>
+<p>检测点</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 下面程序执行后，ax中的数值是多少？</span><br><span class="line">1000：0 	mov ax,0		;读取此条指令后IP=3 ，执行完该指令后IP=3</span><br><span class="line">1000：3 	call s			;读取此条指令后IP=6 ，所以IP=6入栈，执行完该指令后IP=7，跳转到s处</span><br><span class="line">1000：6 	inc ax</span><br><span class="line">1000：7 	s:pop ax		；所以POP后，ax=6</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="10-3-转移目的地址在指令中的call指令"><a href="#10-3-转移目的地址在指令中的call指令" class="headerlink" title="10.3.转移目的地址在指令中的call指令"></a>10.3.转移目的地址在指令中的call指令</h2><blockquote>
+<p>call far ptr 标号：实现段间转移。相当于进行如下操作</p>
+<p>push CS</p>
+<p>push IP</p>
+<p>jmp far ptr 标号</p>
+</blockquote>
+<p>监测点</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">下面程序执行后,ax中的数值为多少?</span><br><span class="line"></span><br><span class="line">内存地址	             机器码	                  汇编指令</span><br><span class="line">1000:0	             b8 00 00                 mov ax,0</span><br><span class="line">1000:3               9a 09 00 00 10           call far ptr s </span><br><span class="line">1000:8               40                       inc ax</span><br><span class="line">1000:9               58                     s:pop ax</span><br><span class="line">                                              add ax,ax  * 8h+8h=10h</span><br><span class="line">                                              pop bx</span><br><span class="line">                                              add ax,bx  * 1000h+10h=1010h</span><br><span class="line"></span><br><span class="line">call far ptr s :此时IP为8h push 1000h push 8h</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="10-4-转移地址在寄存器中的call指令"><a href="#10-4-转移地址在寄存器中的call指令" class="headerlink" title="10.4.转移地址在寄存器中的call指令"></a>10.4.转移地址在寄存器中的call指令</h2><blockquote>
+<p>指令格式：call 16位 reg</p>
+<p>功能：</p>
+<ul>
+<li>push IP</li>
+<li>jmp 16 位 reg</li>
+</ul>
+</blockquote>
+<p>检测点</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">这儿用到了bp，除了之前这样用过bp外 [bx+bp] ，还会在栈中用到。</span><br><span class="line">比如说，堆栈中压入了很多数据或者地址，你肯定想通过SP来访问这些数据或者地址，但SP是要指向栈顶的，是不能随便乱改的，这时候你就需要使用BP，把SP的值传递给BP，通过BP来寻找堆栈里数据或者地址</span><br><span class="line"></span><br><span class="line">1000:0    mov ax,6</span><br><span class="line">1000:2    call ax	;相当于push IP=5 ,jmp ax=6 ,此指令未改变CS的值</span><br><span class="line">1000:5    inc ax	;未执行</span><br><span class="line">1000:6    mov bp,sp</span><br><span class="line">          add ax,[bp]	;相当于add ax,[sp],默认段地址ss，所以即把栈顶元素弹出和AX相加6+5=11=BH</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="10-5-转移地址在内存中的call指令"><a href="#10-5-转移地址在内存中的call指令" class="headerlink" title="10.5.转移地址在内存中的call指令"></a>10.5.转移地址在内存中的call指令</h2><blockquote>
+<p>call word ptr 内存单元地址，相当于进行：</p>
+<p>push IP</p>
+<p>jmp word ptr 内存单元地址</p>
+</blockquote>
+<p>实例：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mov sp,10h,</span><br><span class="line">mov ax,0123h</span><br><span class="line">mov ds:[0],ax</span><br><span class="line">call word ptr ds:[0]</span><br><span class="line"></span><br><span class="line">执行后，IP=0123h，sp=10h-2=0Eh</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>call dword ptr 内存单元地址，相当于进行：</p>
+<p>push CS</p>
+<p>push IP</p>
+<p>jmp dwod ptr 内存单元地址</p>
+</blockquote>
+<p>实例：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mov sp,10h</span><br><span class="line">mov ax,0123h</span><br><span class="line">mov ds:[0],ax</span><br><span class="line">mov word ptr ds:[2],0</span><br><span class="line">call dword ptr ds:[0]</span><br><span class="line"></span><br><span class="line">执行后，cs=0 IP=0123h sp=10h-4=0Ch</span><br></pre></td></tr></table></figure></div>
+
+<p>检测点</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1605247814500.png" alt="1605247814500"></p>
+<hr>
+<hr>
+<h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍"></a>参考书籍</h1><p><a class="link" target="_blank" rel="noopener" href="https://kingwempity.github.io/PDF/Assembly_Languages_BY_ShuangWang.pdf">《汇编语言(第3版) 》王爽著.pdf <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Assembley_language</li>
+        <li><strong>Author:</strong> 敬请T期待</li>
+        <li><strong>Created at
+                :</strong> 2024-06-09 16:29:27</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-06-09 17:11:24
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://kingwempity.github.io/2024/06/09/Assembley-language/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">#汇编语言</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/06/09/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-swup-reload-script
+            src="//cdn.staticfile.org/gitalk/1.8.0/gitalk.min.js"></script>
+    <script data-swup-reload-script>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'fccf7af8f3c022b90387',
+                    clientSecret: 'fc7f407a40b2244ed04f721d84d4f860971603fa',
+                    repo: 'gitalk',
+                    owner: 'kingwempity',
+                    admin: ['kingwempity'],
+                    id: __gitalk__pathname,
+                    language: 'en',
+                    proxy: 'https://github.com/kingwempity/gitalk.git'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">Assembley_language</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-text">1.第一章基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80"><span class="nav-text">1.1.机器语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E4%BA%A7%E7%94%9F"><span class="nav-text">1.2.汇编语言的产生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-text">1.3.存储器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%AD%98%E5%82%A8%E5%8D%95%E5%85%83"><span class="nav-text">1.4.存储单元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-CPU%E5%AF%B9%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E8%AF%BB%E5%86%99"><span class="nav-text">1.5.CPU对存储器的读写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-%E4%B8%BB%E6%9D%BF"><span class="nav-text">1.6.主板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-%E6%8E%A5%E5%8F%A3%E5%8D%A1"><span class="nav-text">1.7.接口卡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-%E5%90%84%E7%B1%BB%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87"><span class="nav-text">1.8.各类存储器芯片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9-%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="nav-text">1.9.内存地址空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-10-%E6%80%BB%E7%BB%93"><span class="nav-text">1.10.总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-text">2.寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%90%8C%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-text">2.1.同用寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80"><span class="nav-text">2.2.物理地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-8086CPU%E7%BB%99%E5%87%BA%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">2.3.8086CPU给出物理地址的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E6%AE%B5%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">2.4.段的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E6%AE%B5%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-text">2.5.段寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-CS%E5%92%8CIP"><span class="nav-text">2.6.CS和IP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-%E6%80%BB%E7%BB%93"><span class="nav-text">2.7.总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-Debug"><span class="nav-text">2.8.Debug</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98%E8%AE%BF%E9%97%AE"><span class="nav-text">3.寄存器(内存访问)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E5%AD%97%E5%AD%98%E5%82%A8"><span class="nav-text">3.1.内存中的字存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-DS%E5%92%8C-address"><span class="nav-text">3.2.DS和[address]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E5%AD%97%E7%9A%84%E4%BC%A0%E9%80%81"><span class="nav-text">3.3.字的传送</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%95%B0%E6%8D%AE%E6%AE%B5"><span class="nav-text">3.4.数据段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E6%A0%88"><span class="nav-text">3.5.栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-CPU%E6%8F%90%E4%BE%9B%E6%A0%88%E6%9C%BA%E5%88%B6"><span class="nav-text">3.6.CPU提供栈机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-7-%E6%A0%88%E9%A1%B6%E8%B6%85%E8%A7%A3%E9%97%AE%E9%A2%98"><span class="nav-text">3.7.栈顶超解问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-8-%E6%A0%88%E7%9A%84%E6%80%BB%E7%BB%93"><span class="nav-text">3.8.栈的总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-9-%E6%AE%B5%E7%9A%84%E7%BB%BC%E8%BF%B0"><span class="nav-text">3.9.段的综述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F"><span class="nav-text">4.第一个程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E4%B8%80%E4%B8%AA%E6%BA%90%E7%A8%8B%E5%BA%8F%E4%BB%8E%E5%86%99%E5%87%BA%E5%88%B0%E6%89%A7%E8%A1%8C%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-text">4.1.一个源程序从写出到执行的过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E6%BA%90%E7%A8%8B%E5%BA%8F"><span class="nav-text">4.2.源程序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-BX-%E5%92%8Cloop%E6%8C%87%E4%BB%A4"><span class="nav-text">5.[BX]和loop指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-bx"><span class="nav-text">5.1.[bx]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-Loop%E6%8C%87%E4%BB%A4"><span class="nav-text">5.2.Loop指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-Loop%E6%8C%87%E4%BB%A4%E5%92%8C-bx-%E4%BD%BF%E7%94%A8"><span class="nav-text">5.3.Loop指令和[bx]使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-%E6%AE%B5%E5%89%8D%E7%BC%80"><span class="nav-text">5.4.段前缀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-%E4%B8%80%E6%AE%B5%E5%AE%89%E5%85%A8%E7%9A%84%E6%AE%B5%E7%A9%BA%E9%97%B4"><span class="nav-text">5.5.一段安全的段空间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%8C%85%E5%90%AB%E5%A4%9A%E4%B8%AA%E6%AE%B5%E7%9A%84%E7%A8%8B%E5%BA%8F"><span class="nav-text">6.包含多个段的程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%95%B0%E6%8D%AE"><span class="nav-text">6.1.在代码段中使用数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E5%9C%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%A0%88"><span class="nav-text">6.2.在代码段中使用栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E5%B0%86%E6%95%B0%E6%8D%AE%E3%80%81%E4%BB%A3%E7%A0%81%E3%80%81%E6%A0%88%E6%94%BE%E5%85%A5%E5%88%B0%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AE%B5"><span class="nav-text">6.3.将数据、代码、栈放入到不同的段</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E6%9B%B4%E7%81%B5%E6%B4%BB%E7%9A%84%E5%AE%9A%E4%BD%8D%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">7.更灵活的定位内存地址的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-and-%E5%92%8C-or-%E6%8C%87%E4%BB%A4"><span class="nav-text">7.1.and 和 or 指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-%E4%BB%A5%E5%AD%97%E7%AC%A6%E7%9A%84%E5%BD%A2%E5%BC%8F%E7%BB%99%E5%87%BA%E6%95%B0%E6%8D%AE"><span class="nav-text">7.2.以字符的形式给出数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-bx-idata"><span class="nav-text">7.3. [bx+idata]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-SI%E5%92%8CDI"><span class="nav-text">7.4.SI和DI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-5-bx-si-%E5%92%8C-bx-di"><span class="nav-text">7.5.[bx + si] 和 [bx + di]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-6-bx-si-idata-%E5%92%8C-bx-di-idtata"><span class="nav-text">7.6.[bx + si + idata] 和 [bx + di + idtata]</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="nav-text">8.数据处理的两个基本问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1-bx%EF%BC%8Csi%EF%BC%8Cdi-%E5%92%8Cbp"><span class="nav-text">8.1.bx，si，di 和bp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%95%B0%E6%8D%AE%E4%BD%8D%E7%BD%AE%E7%9A%84%E8%A1%A8%E8%BE%BE"><span class="nav-text">8.2.汇编语言中数据位置的表达</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3-%E6%AE%B5%E5%9C%B0%E5%9D%80%E5%92%8C%E5%81%8F%E7%A7%BB%E5%9C%B0%E5%9D%80"><span class="nav-text">8.3.段地址和偏移地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-4-%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F"><span class="nav-text">8.4.寻址方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-5-%E6%8C%87%E4%BB%A4%E8%A6%81%E5%A4%84%E7%90%86%E7%9A%84%E6%95%B0%E6%8D%AE%E6%9C%89%E5%A4%9A%E9%95%BF"><span class="nav-text">8.5.指令要处理的数据有多长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-6-div%E6%8C%87%E4%BB%A4"><span class="nav-text">8.6.div指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-7-%E4%BC%AA%E6%8C%87%E4%BB%A4dd"><span class="nav-text">8.7.伪指令dd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dup"><span class="nav-text">dup</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-%E8%BD%AC%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="nav-text">9.转义指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-%E6%93%8D%E4%BD%9C%E7%AC%A6-offset"><span class="nav-text">9.1.操作符 offset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-%E6%A0%B9%E6%8D%AE%E4%BD%8D%E7%A7%BB%E8%BF%9B%E8%A1%8C%E8%BD%AC%E7%A7%BB%E7%9A%84jmp%E6%8C%87%E4%BB%A4"><span class="nav-text">9.2.根据位移进行转移的jmp指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-%E8%BD%AC%E7%A7%BB%E7%9A%84%E7%9B%AE%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9C%A8%E6%8C%87%E4%BB%A4%E4%B8%AD%E7%9A%84jmp%E6%8C%87%E4%BB%A4"><span class="nav-text">9.3.转移的目的地址在指令中的jmp指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-4-%E8%BD%AC%E7%A7%BB%E6%8C%87%E4%BB%A4%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84jmp%E6%8C%87%E4%BB%A4"><span class="nav-text">9.4.转移指令在寄存器中的jmp指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-5-%E8%BD%AC%E7%A7%BB%E6%8C%87%E4%BB%A4%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%ADjmp%E6%8C%87%E4%BB%A4"><span class="nav-text">9.5.转移指令在内存中jmp指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-6-jcxz%E6%8C%87%E4%BB%A4"><span class="nav-text">9.6.jcxz指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-7-loop%E6%8C%87%E4%BB%A4"><span class="nav-text">9.7.loop指令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-CALL%E5%92%8CRET%E6%8C%87%E4%BB%A4"><span class="nav-text">10.CALL和RET指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-1-ret%E5%92%8Cretf%E6%8C%87%E4%BB%A4"><span class="nav-text">10.1.ret和retf指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-2-%E6%A0%B9%E6%8D%AE%E4%BD%8D%E7%A7%BB%E8%BF%9B%E8%A1%8C%E8%BD%AC%E7%A7%BB%E7%9A%84call%E6%8C%87%E4%BB%A4"><span class="nav-text">10.2.根据位移进行转移的call指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-3-%E8%BD%AC%E7%A7%BB%E7%9B%AE%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9C%A8%E6%8C%87%E4%BB%A4%E4%B8%AD%E7%9A%84call%E6%8C%87%E4%BB%A4"><span class="nav-text">10.3.转移目的地址在指令中的call指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-4-%E8%BD%AC%E7%A7%BB%E5%9C%B0%E5%9D%80%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%AD%E7%9A%84call%E6%8C%87%E4%BB%A4"><span class="nav-text">10.4.转移地址在寄存器中的call指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-5-%E8%BD%AC%E7%A7%BB%E5%9C%B0%E5%9D%80%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84call%E6%8C%87%E4%BB%A4"><span class="nav-text">10.5.转移地址在内存中的call指令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D"><span class="nav-text">参考书籍</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">敬请T期待</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        14 posts in total
+                    </span>
+                    
+                        <span>
+                            44.9k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.1</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/Swup.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/SwupSlideTheme.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/SwupScriptsPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/SwupProgressPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/SwupScrollPlugin.min.js"></script><script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/SwupPreloadPlugin.min.js"></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/tools/imageViewer.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/utils.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/main.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/layouts/navbarShrink.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/tools/scrollTopBottom.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/tools/lightDarkSwitch.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/layouts/categoryList.js"></script>
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/tools/localSearch.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/tools/runtime.js"></script>
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/Typed.min.js"></script>
+  <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/plugins/typed.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/mermaid.min.js"></script>
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/plugins/mermaid.js"></script>
+
+
+
+    <script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/minimasonry.min.js"></script>
+    <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/plugins/masonry.js"></script>
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        <script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/tools/tocToggle.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/layouts/toc.js"></script><script type="module" src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <div id="aplayer"></div>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/libs/APlayer.min.js"></script>
+<script src="https://evan.beee.top/projects/hexo-theme-redefine@2.6.1/source/js/plugins/aplayer.js"></script>
+
+</body>
+</html>

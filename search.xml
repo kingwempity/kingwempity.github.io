@@ -506,24 +506,113 @@ over</p>
 <p>SA:0:00000000</p>
 <p>SA:10:000000000</p>
 <p>然后就sp 就指向了20h</p>
-<h1 id="7-更灵活的定位内存地址的方法"><a href="#7-更灵活的定位内存地址的方法" class="headerlink" title="7.更灵活的定位内存地址的方法"></a>7.更灵活的定位内存地址的方法</h1><h2 id="7-1-and-和-or-指令"><a href="#7-1-and-和-or-指令" class="headerlink" title="7.1.and 和 or 指令"></a>7.1.and 和 or 指令</h2><blockquote>
+<blockquote>
+<p>这段汇编代码演示了如何在不同的段之间移动数据，具体是从数据段A到堆栈段C，然后又从堆栈段C返回到另一个位置在数据段A中。以下是详细分析：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">assume cs:b,ds:a,ss:c</span><br></pre></td></tr></table></figure></div>
+<p>这一行指定了代码段寄存器CS指向段b，数据段寄存器DS指向段a，堆栈段寄存器SS指向段c。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">a segment</span><br><span class="line">dw 0123h,0456h,0789h,0abch,0defh,0fedh,0cbah,0987h</span><br><span class="line">a ends</span><br></pre></td></tr></table></figure></div>
+<p>段a定义了8个双字节（word）的数据，这是原始数据集合。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">c segment</span><br><span class="line">dw 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</span><br><span class="line">c ends</span><br></pre></td></tr></table></figure></div>
+<p>段c定义了16个双字节的空数据空间，准备用于临时存储从段a中移动过来的数据。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">b segment</span><br><span class="line">d:     mov ax,c</span><br><span class="line">mov ss,ax</span><br><span class="line">mov sp,20h</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>这段代码位于代码段b中，从标号d开始执行。</li>
+<li>首先，将段c的段地址加载到AX寄存器中，然后将AX的内容赋给SS，设置堆栈段指向段c。</li>
+<li>接着，设置堆栈指针SP为20h，这意味着堆栈将从段c的地址20h处开始向下增长。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mov ax,a</span><br><span class="line">mov ds,ax</span><br><span class="line">mov bx,0</span><br><span class="line">mov cx,8</span><br><span class="line">s:      push [bx]</span><br><span class="line">add bx,2</span><br><span class="line">loop s</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>将段a的段地址加载到AX，再将AX赋给DS，使得数据段寄存器指向段a。</li>
+<li>初始化BX为0，CX为8，用于后续循环操作。</li>
+<li>进入循环s，将段a中由BX指向的数据通过<code>push</code>指令压入堆栈，之后BX加2指向下一个数据，使用<code>loop s</code>循环直到CX减到0。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mov bx,0</span><br><span class="line">mov cx,8</span><br><span class="line">s0:    pop [bx]</span><br><span class="line">add bx,2</span><br><span class="line">loop s0</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>重置BX为0，CX为8，开始另一个循环s0。</li>
+<li>在此循环中，从堆栈中弹出数据到段a中新的位置（之前清零的16个位置的前8个），BX每次加2指向下一个目标地址，直至循环结束。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mov ax,4c00h</span><br><span class="line">int 21h</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>最后，设置AX为4C00h，调用DOS中断21h来结束程序。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">b ends</span><br><span class="line">end   d</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li><strong><u>标记代码段b的结束，并告知汇编器程序的起始标签为d。</u></strong></li>
+</ul>
+<p>综上所述，这段代码首先设置好段寄存器以指向正确的段，然后通过堆栈机制，将段a中前8个双字节数据复制到段c中暂存，随后立即从段c中将这些数据弹出并覆盖段a中另一块预先清零的区域，完成了一次数据在段内的“转移”操作，并最终结束程序。</p>
+</blockquote>
+<h1 id="7-更灵活的定位内存地址的方法"><a href="#7-更灵活的定位内存地址的方法" class="headerlink" title="7.更灵活的定位内存地址的方法"></a>7.更灵活的定位内存地址的方法</h1><h2 id="7-1-and-和-or-指令、xor和not指令"><a href="#7-1-and-和-or-指令、xor和not指令" class="headerlink" title="7.1.and 和 or 指令、xor和not指令"></a>7.1.and 和 or 指令、xor和not指令</h2><blockquote>
 <p><strong>and 指令：只有全为1，才为1</strong></p>
 <p>mov al，01100011B</p>
 <p>and  al,   00111011B</p>
 <p><strong>or 指令：只用全为0，才为0</strong></p>
 <p>or  al,   00111011B</p>
-</blockquote>
-<h2 id="7-2-以字符的形式给出数据"><a href="#7-2-以字符的形式给出数据" class="headerlink" title="7.2.以字符的形式给出数据"></a>7.2.以字符的形式给出数据</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604630532787.png" alt="1604630532787"></p>
-<h2 id="7-3-bx-idata"><a href="#7-3-bx-idata" class="headerlink" title="7.3. [bx+idata]"></a>7.3. [bx+idata]</h2><p>[bx+idata]表示一个内存单元，它的偏移地址为（bx）+（itda）</p>
-<h2 id="7-4-SI和DI"><a href="#7-4-SI和DI" class="headerlink" title="7.4.SI和DI"></a>7.4.SI和DI</h2><p>si 和 di 是与bx 功能相近的寄存器，si 和di 不能够分成两个8为寄存器来使用，下面是3组指令实现了相同的功能</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604630773520.png" alt="1604630773520"></p>
-<h2 id="7-5-bx-si-和-bx-di"><a href="#7-5-bx-si-和-bx-di" class="headerlink" title="7.5.[bx + si] 和 [bx + di]"></a>7.5.[bx + si] 和 [bx + di]</h2><h2 id="7-6-bx-si-idata-和-bx-di-idtata"><a href="#7-6-bx-si-idata-和-bx-di-idtata" class="headerlink" title="7.6.[bx + si + idata] 和 [bx + di + idtata]"></a>7.6.[bx + si + idata] 和 [bx + di + idtata]</h2><h1 id="8-数据处理的两个基本问题"><a href="#8-数据处理的两个基本问题" class="headerlink" title="8.数据处理的两个基本问题"></a>8.数据处理的两个基本问题</h1><p>定义了两个描述符号：</p>
+<p>xor cx,cx  			;CX清零，同时清除进位标志</p>
+<p>AND  AX,AX		 ;自身相与值不变，该语句常用于清进位标志</p>
+<p>AND AL,0FH		;分离出AL中低四位，高四位被清0</p>
+<p>AND AL,0F0FH	;分离出AL中高四位，低四位被清0</p>
+<p>XOR DL,80H		 ;DL中最高位置1</p>
+<blockquote>
+<p>总结</p>
 <ul>
-<li>reg包含了：ax，bx，cx，dx，ah，al，bh，bl，ch，cl，dh，dl，sp，bp，si，di</li>
-<li>sreg包含了：ds，ss，cs，es</li>
+<li><p>NOT指令对标志位没有影响</p>
+</li>
+<li><p>执行除NOT指令外的逻辑指令后，OF和CF两个标志都被清0，而AF的状态不确定，其他标志反应操作结果的状态。</p>
+</li>
+<li><p>TEST指令对两个操作数进行“与”操作，但是不保留“与”的结果，只是通过标志状态的判断，得出测试结果。</p>
+</li>
+<li></li>
 </ul>
-<h2 id="8-1-bx，si，di-和bp"><a href="#8-1-bx，si，di-和bp" class="headerlink" title="8.1.bx，si，di 和bp"></a>8.1.bx，si，di 和bp</h2><blockquote>
-<p>只有bx，si，di和bp4 个寄存器可以用[…]中进行内存单元寻址</p>
+</blockquote>
+</blockquote>
+<h2 id="7-2-位移和循环位移"><a href="#7-2-位移和循环位移" class="headerlink" title="7.2.位移和循环位移"></a>7.2.位移和循环位移</h2><blockquote>
+<p><strong>非循环移位指令：</strong></p>
+<p>SAL　　——　　算术左移　　——　　最高位移入标志状态位CF，最低位补0</p>
+<p>SAR　　——　　算术右移　　——　　最低位移入CF，最高位不变，最高位原来是1，右移过后最高位就补1</p>
+<p>比如说：将10000000算术右移7位，应该变成11111111，而逻辑右移7位，则不考虑符号位，变为00000001</p>
+<p>SHL　　——　　逻辑左移　　——　　最高位移入标志状态位CF，最低位补0</p>
+<p>SHR　　——　　逻辑右移　　——　　最低位移入CF，最高位补0</p>
+<p><strong>循环移位指令：</strong></p>
+<p>ROL　　——　　循环左移　　——　　不带进位位的循环左移，最高位移入CF和最低位</p>
+<p>ROR　　——　　循环右移　　——　　不带进位位的循环右移，最低位移入CF和最高位</p>
+<p>RCL　　——　　带进位的循环左移　　——　　带进位位的循环左移，最高位移入CF，原来的CF进入最低位</p>
+<p>RCR　　——　　带进位的循环右移　　——　　带进位位的循环右移，最低位移入CF，原来的CF进入最高位</p>
+<blockquote>
+<p>说明：</p>
+<ul>
+<li>CF的值总是最后一次被移入的值</li>
+<li>位移指令影响标志位CF,OF,SF,ZF。而循环位移指令仅影响CF和OF位。</li>
+<li>对OF位的影响：在移动1位的情况下，如果位移后的操作数是最高位改变了，OF就置1，否则置0.若位移次数大于1，那么OF 不确定。</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="7-3-以字符的形式给出数据"><a href="#7-3-以字符的形式给出数据" class="headerlink" title="7.3.以字符的形式给出数据"></a>7.3.以字符的形式给出数据</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604630532787.png" alt="1604630532787"></p>
+<blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">assume cs:code,ds:data</span><br></pre></td></tr></table></figure></div>
+
+<p>这一行定义了代码段（CS）和数据段（DS）的段寄存器分别指向名为<code>code</code>和<code>data</code>的段。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">assembly</span><br><span class="line"></span><br><span class="line">data segment</span><br><span class="line">        db &quot;unIX&quot;</span><br><span class="line">        db &quot;foRK&quot;</span><br><span class="line">data ends</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>data segment</code> 定义了数据段的开始。</li>
+<li><code>db &quot;unIX&quot;</code> 和 <code>db &quot;foRK&quot;</code> 分别定义了两个字符串常量，每个字符串包含四个字符，存储在数据段中。”unIX” 和 “foRK” 会按顺序占据内存中的位置。</li>
+<li><code>data ends</code> 标志数据段的结束。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">end start</span><br></pre></td></tr></table></figure></div>
+
+<p>这一行指示汇编器程序的结束，并且指定程序的起始地址为 <code>start</code> 标签所在的位置。</p>
+<p>总结：这个程序主要做了两件事情：定义了包含两个字符串的数据段，并在代码段中执行了一些基本的寄存器操作，最后通过调用 DOS 中断21h的4C号功能来结束程序。字符串”unIX”和”foRK”虽然被定义，但在程序中并没有被使用，它们的存在更多是为了演示数据段的定义。</p>
+</blockquote>
+<h2 id="7-4-bx-idata"><a href="#7-4-bx-idata" class="headerlink" title="7.4. [bx+idata]"></a>7.4. [bx+idata]</h2><p>[bx+idata]表示一个内存单元，它的偏移地址为（bx）+（itda）</p>
+<h2 id="7-5-SI和DI"><a href="#7-5-SI和DI" class="headerlink" title="7.5.SI和DI"></a>7.5.SI和DI</h2><p>si 和 di 是与bx 功能相近的寄存器，si 和di 不能够分成两个8为寄存器来使用，下面是3组指令实现了相同的功能</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604630773520.png" alt="1604630773520"></p>
+<h2 id="7-6-bx-si-和-bx-di"><a href="#7-6-bx-si-和-bx-di" class="headerlink" title="7.6.[bx + si] 和 [bx + di]"></a>7.6.[bx + si] 和 [bx + di]</h2><h2 id="7-7-bx-si-idata-和-bx-di-idata"><a href="#7-7-bx-si-idata-和-bx-di-idata" class="headerlink" title="7.7.[bx + si + idata] 和 [bx + di + idata]"></a>7.7.[bx + si + idata] 和 [bx + di + idata]</h2><h1 id="8-数据处理的两个基本问题"><a href="#8-数据处理的两个基本问题" class="headerlink" title="8.数据处理的两个基本问题"></a>8.数据处理的两个基本问题</h1><p>定义了两个描述符号：</p>
+<ul>
+<li>通用寄存器reg包含了：ax，bx，cx，dx，（ah，al，bh，bl，ch，cl，dh，dl），sp，bp，si，di</li>
+<li>段寄存器sreg包含了：ds，ss，cs，es</li>
+</ul>
+<h2 id="8-1-bx，si，di-和bp-基址变址寻址"><a href="#8-1-bx，si，di-和bp-基址变址寻址" class="headerlink" title="8.1.bx，si，di 和bp[基址变址寻址]"></a>8.1.bx，si，di 和bp[基址变址寻址]</h2><blockquote>
+<p>只有BX，SI，DI和BP这4 个寄存器可以用于[…]中进行内存单元寻址</p>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631336930.png" alt="1604631336930"></p>
 <blockquote>
@@ -531,7 +620,7 @@ over</p>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631454682.png" alt="1604631454682"></p>
 <blockquote>
-<p>只要在[…]中使用寄存器bp，而指令中没有显性的给出段地址，段地址就默认在ss中，比如下面的指令</p>
+<p><strong>只要在[…]中使用寄存器bp，而指令中没有显性的给出段地址，段地址就默认在SS中，</strong>比如下面的指令</p>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631552612.png" alt="1604631552612"></p>
 <h2 id="8-2-汇编语言中数据位置的表达"><a href="#8-2-汇编语言中数据位置的表达" class="headerlink" title="8.2.汇编语言中数据位置的表达"></a>8.2.汇编语言中数据位置的表达</h2><blockquote>
@@ -544,18 +633,24 @@ over</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631917384.png" alt="1604631917384"></p>
 <h2 id="8-3-段地址和偏移地址"><a href="#8-3-段地址和偏移地址" class="headerlink" title="8.3.段地址和偏移地址"></a>8.3.段地址和偏移地址</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604631953216.png" alt="1604631953216"></p>
 <h2 id="8-4-寻址方式"><a href="#8-4-寻址方式" class="headerlink" title="8.4.寻址方式"></a>8.4.寻址方式</h2><p><img lazyload src="/images/loading.svg" data-src="D:/blog/source/_posts/Assembley-language/1604631995576.png" alt="1604631995576"></p>
+<blockquote>
+<ul>
+<li>用BX,DX,SI做间址寄存器寻找操作数时，隐含规定段基址由DS提供</li>
+<li>当BP做间址寄存器寻找操作数时，隐含规定段基址由SS提供</li>
+</ul>
+</blockquote>
 <h2 id="8-5-指令要处理的数据有多长"><a href="#8-5-指令要处理的数据有多长" class="headerlink" title="8.5.指令要处理的数据有多长"></a>8.5.指令要处理的数据有多长</h2><blockquote>
 <p>使用操作符X ptr 指明内存单元的长度，X 在汇编中可以指定为word 或者 byte</p>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604632157945.png" alt="1604632157945"></p>
 <h2 id="8-6-div指令"><a href="#8-6-div指令" class="headerlink" title="8.6.div指令"></a>8.6.div指令</h2><p>div 是除法指令，使用div 做除法的时候注意以下问题</p>
-<p>要求被除数默认存放在ax,或者dx和ax中，而且要求被除数的位数，必须是除数的2倍，比如说，除数位8位，被除数就为16位。为什么被除数的位数一定要为除数的2倍呢？</p>
+<p>**<u>要求被除数默认存放在ax,或者dx和ax中，而且要求被除数的位数，必须是除数的2倍</u>**，比如说，除数位8位，被除数就为16位。为什么被除数的位数一定要为除数的2倍呢？</p>
 <blockquote>
 <p>因为CPU只会做加法运算，把其它一切的算法都转换成加法，比如说，除数 就先转换加法，例如36&#x2F;6  当CPU看到这个运算时，就会这样想，需要多少个6 相加才能得到36呢，然后CPU就从1个6 ，2个6………..这样一种算下去，终于最后发现原来是6个6啊，从这我们可以看出，CPU是不断的用除数相加，知道找到结果为止，这就出现问题了，如果被除数不是除数位数的2倍，再相加的过程中，就可能超出除数的位数所能表达的最大数值，从而越界，如果能保证 被除数是除数的2倍 ，这问题就能解决了，例如：8 &#x2F;5   5+ 5 &#x3D;10 超出所能表达的位数，08 &#x2F;5 就可以解决这个问题</p>
 </blockquote>
 <ol>
 <li>除数：有8位和16位两种，在一个reg或者内存单元中</li>
-<li>被除数：默认放在AX或者 DX和AX中，<strong>如果除数为8位，被除数为16位，默认在AX中存放；如果除数为16位，被除数为32位，在DX和AX中存放，DX存高16位，AX存低16位</strong></li>
+<li>被除数：默认放在AX或者 DX和AX中，<strong>如果除数为8位，被除数为16位，默认在AX中存放；<u>如果除数为16位，被除数为32位，在DX和AX中存放，DX存高16位，AX存低16位</u></strong></li>
 <li>商：如果除数为8位，AL存储除法操作的商，AH存储除法操作的余数；如果除数为16位，AX存储除法操作的商，DX村存储除法操作的余数</li>
 </ol>
 <h2 id="8-7-伪指令dd"><a href="#8-7-伪指令dd" class="headerlink" title="8.7.伪指令dd"></a>8.7.伪指令dd</h2><p>db 和 dw 定义字节型数据和字型数据，dd 用来定义dword（double world，双字）型数据</p>

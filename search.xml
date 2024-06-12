@@ -467,13 +467,9 @@
 <blockquote>
 <p>总结</p>
 <ul>
-<li><p>NOT指令对标志位没有影响</p>
-</li>
-<li><p>执行除NOT指令外的逻辑指令后，OF和CF两个标志都被清0，而AF的状态不确定，其他标志反应操作结果的状态。</p>
-</li>
-<li><p>TEST指令对两个操作数进行“与”操作，但是不保留“与”的结果，只是通过标志状态的判断，得出测试结果。</p>
-</li>
-<li></li>
+<li>NOT指令对标志位没有影响</li>
+<li>执行除NOT指令外的逻辑指令后，OF和CF两个标志都被清0，而AF的状态不确定，其他标志反应操作结果的状态。</li>
+<li>TEST指令对两个操作数进行“与”操作，但是不保留“与”的结果，只是通过标志状态的判断，得出测试结果。</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -497,20 +493,29 @@
 <li>对OF位的影响：在移动1位的情况下，如果位移后的操作数是最高位改变了，OF就置1，否则置0.若位移次数大于1，那么OF 不确定。</li>
 </ul>
 </blockquote>
+<blockquote>
+<p>1、算术左移、逻辑左移</p>
+<p>算术左移和逻辑左移一样都是<strong>右边补0</strong></p>
+<p>[例] 00101011<br> 算术左移一位:01010110<br> 逻辑左移一位:01010110</p>
+<p>2、逻辑右移：将二进制数整体右移，左边补0</p>
+<p>[例]10101101逻辑右移一位为01010110</p>
+<p>3、算术右移：<strong>符号位</strong>要一起移动，并且在左边补上符号位</p>
+<p>[例]11100算术右移一位为11110（符号位1跟着一起移动并且左边补了1）</p>
+</blockquote>
 </blockquote>
 <h2 id="7-3-以字符的形式给出数据"><a href="#7-3-以字符的形式给出数据" class="headerlink" title="7.3.以字符的形式给出数据"></a>7.3.以字符的形式给出数据</h2><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604630532787.png" alt="1604630532787"></p>
 <blockquote>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">assume cs:code,ds:data</span><br></pre></td></tr></table></figure></div>
 
 <p>这一行定义了代码段（CS）和数据段（DS）的段寄存器分别指向名为<code>code</code>和<code>data</code>的段。</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">assembly</span><br><span class="line"></span><br><span class="line">data segment</span><br><span class="line">        db &quot;unIX&quot;</span><br><span class="line">        db &quot;foRK&quot;</span><br><span class="line">data ends</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">data segment</span><br><span class="line">     db &quot;unIX&quot;</span><br><span class="line">     db &quot;foRK&quot;</span><br><span class="line">   data ends</span><br></pre></td></tr></table></figure></div>
 
 <ul>
 <li><code>data segment</code> 定义了数据段的开始。</li>
 <li><code>db &quot;unIX&quot;</code> 和 <code>db &quot;foRK&quot;</code> 分别定义了两个字符串常量，每个字符串包含四个字符，存储在数据段中。”unIX” 和 “foRK” 会按顺序占据内存中的位置。</li>
 <li><code>data ends</code> 标志数据段的结束。</li>
 </ul>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">end start</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;end start</span><br></pre></td></tr></table></figure></div>
 
 <p>这一行指示汇编器程序的结束，并且指定程序的起始地址为 <code>start</code> 标签所在的位置。</p>
 <p>总结：这个程序主要做了两件事情：定义了包含两个字符串的数据段，并在代码段中执行了一些基本的寄存器操作，最后通过调用 DOS 中断21h的4C号功能来结束程序。字符串”unIX”和”foRK”虽然被定义，但在程序中并没有被使用，它们的存在更多是为了演示数据段的定义。</p>
@@ -555,7 +560,80 @@
 <p>使用操作符X ptr 指明内存单元的长度，X 在汇编中可以指定为word 或者 byte</p>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/1604632157945.png" alt="1604632157945"></p>
-<h2 id="8-6-div指令"><a href="#8-6-div指令" class="headerlink" title="8.6.div指令"></a>8.6.div指令</h2><p>div 是除法指令，使用div 做除法的时候注意以下问题</p>
+<h2 id="8-6-算术运算类指令"><a href="#8-6-算术运算类指令" class="headerlink" title="8.6.算术运算类指令"></a>8.6.算术运算类指令</h2><h3 id="ADD加法指令"><a href="#ADD加法指令" class="headerlink" title="ADD加法指令"></a>ADD加法指令</h3><p>格式：ADD	DEST,	SCR</p>
+<p>功能：将源操作数SCR和目的操作数DEST相加，结果存入DEST中</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ADD AX,X</span><br><span class="line">ADD AL,0A4H			;十六进制开头如果是A~F，需在开头加上一个数字0，不占位</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="ADC带进位加指令"><a href="#ADC带进位加指令" class="headerlink" title="ADC带进位加指令"></a>ADC带进位加指令</h3><p>格式：ADC	DEST,	SCR</p>
+<p>功能：将源操作数SCR和目的操作数DEST以及进位标志CF位相加，结果存入DEST中</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ADC BX,9F88H</span><br><span class="line">ADC AX,208AH</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="XADD交换加法指令"><a href="#XADD交换加法指令" class="headerlink" title="XADD交换加法指令"></a>XADD交换加法指令</h3><p>格式：XADD	DEST,	SCR</p>
+<p>功能：将源操作数SCR和目的操作数DEST相加，结果存入DEST中，原来的目的操作数DEST放入源操作数SRC中</p>
+<p>DEST+SCR—&gt;DEST,    原DEST—&gt;SCR</p>
+<h3 id="INC自增指令"><a href="#INC自增指令" class="headerlink" title="INC自增指令"></a>INC自增指令</h3><p>格式：INC 	DEST</p>
+<p>功能：将目的操作数DEST自身增加1，结果存入DEST中，即DEST&lt;-DEST+1</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">INC SI</span><br></pre></td></tr></table></figure></div>
+
+<p>注：INC指令对CF进位标志位无影响</p>
+<h3 id="SUB减法指令"><a href="#SUB减法指令" class="headerlink" title="SUB减法指令"></a>SUB减法指令</h3><p>格式：SUB	DEST,	SRC</p>
+<p>功能：将目的操作数DEST内容减去源操作数SRC内容，结果输入DEST中，即DEST&lt;-DEST-SRC</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">SUB EAX,EBX	;CF=1	EAX=00000034H	EBX=00000052H</span><br><span class="line">;结果为EAX=FFFFFFE2H		CF=1</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="SBB带借位减法"><a href="#SBB带借位减法" class="headerlink" title="SBB带借位减法"></a>SBB带借位减法</h3><p>格式：SBB	DEST,	SRC</p>
+<p>功能：将目的操作数DEST内容减去源操作数SRC内容及CF位，结果输入DEST中，即DEST&lt;-DEST-SRC-CF</p>
+<p>说明：SBB指令主要用于大于16位的多精度的减法，把低位部分相减的借位引入高位部分的减法中</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">SBB AX, BX;CF=1		AX=4037H		BX=2342H</span><br><span class="line">;结果为AX=1CF4H		CF=0</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="DEC自减指令"><a href="#DEC自减指令" class="headerlink" title="DEC自减指令"></a>DEC自减指令</h3><p>格式：DEC	DEST</p>
+<p>格式：将目的操作数DEST自身减1，结果存入DEST中，即DEST&lt;-DEST-1</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">DEC SI</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="CMP比较指令"><a href="#CMP比较指令" class="headerlink" title="CMP比较指令"></a>CMP比较指令</h3><p>格式：CMP	DEST,	SRC</p>
+<p>功能：目的操作数DEST减去源操作数SRC，即DEST-SRC</p>
+<p>说明：CMP比较指令将两个操作数相减，但相减的结果并不保留，两个操作数都保留原值不变，只是将相减的结果的特征反应在各个状态标志位上。</p>
+<blockquote>
+<p><strong>执行CMP指令后，如果标志位ZF&#x3D;1，说明被比较的两个数相等；</strong></p>
+<p><strong>两个数的大小查看CF标志位，如果标志位CF&#x3D;1，说明出现借位，SRC更大；</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">CMP AX,BX		;AX-BX</span><br><span class="line">JE	NEXT		;JE表示如果两个数相等，即AX=BX，则跳转至标号NEXT</span><br><span class="line">;JE[Jump Equal]</span><br></pre></td></tr></table></figure></div>
+
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>大于</th>
+<th>小于</th>
+<th>等于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>带符号数</td>
+<td>G</td>
+<td>L</td>
+<td>E</td>
+</tr>
+<tr>
+<td>无符号数</td>
+<td>A</td>
+<td>B</td>
+<td>E</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h3 id="NEG取补指令"><a href="#NEG取补指令" class="headerlink" title="NEG取补指令"></a>NEG取补指令</h3><p>格式：NEG	DEST</p>
+<p>功能：零0减去目的操作数DEST，结果存入目的操作数DEST,即DEST&lt;—0-DEST</p>
+<p>说明：NEG指令是求操作数的负数，即改变操作数的符号，这对带符号数即为求其补码。NEG对标志位的影响：如果被取补的操作数非0，NEG操作后，CF置1，否则CF&#x3D;0;</p>
+<h3 id="MUL无符号数乘法指令"><a href="#MUL无符号数乘法指令" class="headerlink" title="MUL无符号数乘法指令"></a>MUL无符号数乘法指令</h3><p>格式：MUL	SRC</p>
+<p>功能：若SRC为字节长度，则AX&lt;—AL*SRC;若SRC为字长度，则DX:AX&lt;—AX*SRC[EAX&lt;—AX*SRC]</p>
+<p>说明：乘法指令格式中只出现源操作数SRC，根据操作数的类型决定是8位乘法还是16位乘法。<u><strong>SRC不能是立即数(立即数无类型属性)</strong></u>，目的操作数（被乘数）隐含约定为累加器AL(8位乘)或AX(16位乘)，运算结果约定在AX(8位乘法的积)或EAX(16位乘法的积)</p>
+<blockquote>
+<p>若乘积的高半部全为0，则CF&#x3D;OF&#x3D;0</p>
+<p>若乘积的高半部不全为0，则CF&#x3D;OF&#x3D;1</p>
+</blockquote>
+<h3 id="IMUL带符号数乘法指令"><a href="#IMUL带符号数乘法指令" class="headerlink" title="IMUL带符号数乘法指令"></a>IMUL带符号数乘法指令</h3><p>格式：IMUL	SRC</p>
+<p>功能：若SRC为字节长度，则AX&lt;—AL*SRC;若SRC为字长度，则DX:AX&lt;—AX*SRC[EAX&lt;—AX*SRC]</p>
+<p>说明： </p>
+<h3 id="div指令"><a href="#div指令" class="headerlink" title="div指令"></a>div指令</h3><p>div 是除法指令，使用div 做除法的时候注意以下问题</p>
 <p>**<u>要求被除数默认存放在ax,或者dx和ax中，而且要求被除数的位数，必须是除数的2倍</u>**，比如说，除数位8位，被除数就为16位。为什么被除数的位数一定要为除数的2倍呢？</p>
 <blockquote>
 <p>因为CPU只会做加法运算，把其它一切的算法都转换成加法，比如说，除数 就先转换加法，例如36&#x2F;6  当CPU看到这个运算时，就会这样想，需要多少个6 相加才能得到36呢，然后CPU就从1个6 ，2个6………..这样一种算下去，终于最后发现原来是6个6啊，从这我们可以看出，CPU是不断的用除数相加，知道找到结果为止，这就出现问题了，如果被除数不是除数位数的2倍，再相加的过程中，就可能超出除数的位数所能表达的最大数值，从而越界，如果能保证 被除数是除数的2倍 ，这问题就能解决了，例如：8 &#x2F;5   5+ 5 &#x3D;10 超出所能表达的位数，08 &#x2F;5 就可以解决这个问题</p>

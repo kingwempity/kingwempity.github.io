@@ -30,7 +30,7 @@
 <meta property="og:description" content="1&lt;meta name&#x3D;&quot;referrer&quot; content&#x3D;&quot;no-referrer&quot; &#x2F;&gt;  1、在OSI参考模型中，控制两个对等实体进行逻辑通信的规则的集合称为（协议  ）。  在OSI参考模型中，控制两个对等实体进行逻辑通信的规则的集合称为协议。以下是关于OSI参考模型中协议及其作用的详细解释：  协议的定义：协议是控制两个对等实体进行逻">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-10T10:36:45.000Z">
-<meta property="article:modified_time" content="2024-06-10T13:11:38.144Z">
+<meta property="article:modified_time" content="2024-06-12T00:08:50.055Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="internet">
@@ -585,8 +585,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-10 21:11:38</span>
-            <span class="mobile">2024-06-10 21:11:38</span>
+            <span class="desktop">2024-06-12 08:08:50</span>
+            <span class="mobile">2024-06-12 08:08:50</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -612,12 +612,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.5k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>4.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>15 Mins</span>
         </span>
     
     
@@ -754,13 +754,83 @@
 </ol>
 </blockquote>
 <hr>
-<p>8.A、B、C三个站点采用CDMA技术进行通信，A、B要向C发送数据，设A的码片序列为+1，-1，-1，+1，+1，+1，+1，-1。则B可以选用的码片序列为（  ）。</p>
+<p>8、A、B、C三个站点采用CDMA技术进行通信，A、B要向C发送数据，设A的码片序列为+1，-1，-1，+1，+1，+1，+1，-1。则B可以选用的码片序列为（  ）。</p>
 <blockquote>
 <p>-1，+1，-1，+1，-1，+1，+1，+1</p>
 <p>(−1×+1)+(+1×−1)+(−1×−1)+(+1×+1)+(−1×+1)+(+1×+1)+(+1×+1)+(−1×−1)</p>
 <p>&#x3D;−1−1+1+1−1+1+1+1</p>
 <p>&#x3D;0</p>
 </blockquote>
+<hr>
+<p>9、下列网络连接设备工作在数据链路层的是（ 交换机）。</p>
+<blockquote>
+<p>在网络中，设备根据其工作的OSI（Open Systems Interconnection）模型层次来分类。数据链路层（Data Link Layer）是OSI模型中的第二层，主要负责在相邻的两个网络节点间无差错的传送数据帧，并进行流量控制。</p>
+<p>现在，我们分析下列常见的网络连接设备，以确定哪些设备工作在数据链路层：</p>
+<ol>
+<li><strong>路由器（Router）</strong>：路由器工作在网络层，主要负责路由选择和转发数据包。</li>
+<li><strong>交换机（Switch）</strong>：交换机工作在数据链路层，主要负责数据的转发和过滤。交换机通过识别数据帧中的MAC地址来决定将数据转发到哪个端口。</li>
+<li><strong>集线器（Hub）</strong>：集线器工作在物理层，主要用于将多个网络设备连接在一起，起到信号放大和重生的作用。</li>
+<li><strong>网关（Gateway）</strong>：网关可以是任何设备或软件，它负责在不同协议或网络之间转换数据。通常，网关工作在网络层以上，但在具体实现中可能涉及多个层次。</li>
+<li><strong>网桥（Bridge）</strong>：网桥工作在数据链路层，用于连接两个或多个局域网（LAN）。网桥通过识别数据帧中的MAC地址来决定是否转发数据。</li>
+</ol>
+</blockquote>
+<hr>
+<p>10、下列不能隔离碰撞域的设备是(集线器)</p>
+<p>A、网桥</p>
+<p>B、集线器</p>
+<p>C、交换机</p>
+<p>D、路由器</p>
+<blockquote>
+<p>A、网桥（Bridge） - 网桥工作在数据链路层，能够隔离碰撞域。它可以根据数据帧中的MAC地址来转发数据，确保数据只在需要的链路上传输，从而减少了碰撞的可能性。</p>
+<p>B、集线器（Hub） - 集线器工作在物理层，采用广播方式传输数据。当集线器连接的任何一台设备发送数据时，所有数据都会被发送到集线器的每一个端口，这意味着所有的设备都处于同一个碰撞域中。</p>
+<p>C、交换机（Switch） - 交换机同样工作在数据链路层，但它能够识别每个端口的MAC地址，并根据这些信息智能地转发数据。因此，交换机能够隔离碰撞域，确保每个端口下的设备都处于独立的碰撞域中。</p>
+<p>D、路由器（Router） - 路由器工作在网络层，它可以根据IP地址来转发数据包。由于路由器连接的是不同的网络段，因此它天然地隔离了碰撞域。此外，路由器还可以隔离广播域。</p>
+</blockquote>
+<hr>
+<p>11、10台用户主机通过一台交换机连接成10Mb&#x2F;s的交换式以太网，每个用户能够占有的带宽是（ 10Mb&#x2F;s）。</p>
+<blockquote>
+<p>在交换式以太网中，每个用户主机通过交换机连接时，都能获得独立的、与交换机接口速率相等的带宽。这是因为交换机工作在数据链路层，能够识别每个用户主机发送的数据帧中的源MAC地址和目的MAC地址，并根据这些信息将数据帧转发到目标用户主机。</p>
+<p>在本题中，有10台用户主机通过一台交换机连接成10Mb&#x2F;s的交换式以太网。由于交换机能够隔离碰撞域并为每个用户主机提供独立的带宽，因此每个用户主机能够占有的带宽就是交换机接口的速率，即10Mb&#x2F;s。</p>
+<p>总结答案：每个用户能够占有的带宽是10Mb&#x2F;s。</p>
+</blockquote>
+<hr>
+<p>12、通过集线器连接的一组主机（<strong>既是一个冲突域，又是一个广播域</strong> ）。通过交换机连接的一组主机（ <strong>组成一个广播域，但不是一个冲突域</strong>）。</p>
+<p>A、组成一个冲突域，但不是一个广播域</p>
+<p>B、组成一个广播域，但不是一个冲突域</p>
+<p>C、既是一个冲突域，又是一个广播域</p>
+<p>D、既不是冲突域，也不是广播域</p>
+<blockquote>
+<ol>
+<li><strong>冲突域</strong>：集线器（Hub）是一种物理层设备，它采用广播方式发送数据。当集线器下连接的主机设备间传输数据时，数据包是以广播的方式进行传输的。因为集线器不能识别MAC地址和IP地址，所以同一时刻由集线器连接的网络中只能传输一组数据。如果有多台设备同时尝试发送数据，就会发生碰撞，导致数据需要重新发送。因此，通过集线器连接的所有主机都处于同一个冲突域中。</li>
+<li><strong>广播域</strong>：广播域是指网络中所有能接收到同样广播消息的设备的集合。由于集线器无法识别MAC地址，它会将接收到的所有数据广播到所有连接的端口上。这意味着，当一台主机发送一个广播数据包时，所有通过集线器连接的主机都能接收到这个广播数据包。因此，通过集线器连接的所有主机也处于同一个广播域中。</li>
+</ol>
+</blockquote>
+<hr>
+<p>13、根据NAT协议，下列IP地址中不允许出现在因特网上的是（ ）。</p>
+<p>A、192.172.56.23</p>
+<p>B、172.15.34.128</p>
+<p>C、192.168.32.17</p>
+<p>D、172.128.56.65</p>
+<blockquote>
+<p>根据NAT协议，<u>不允许出现在因特网上的IP地址是私有IP地址。</u>私有IP地址是指在内部网络中使用的IP地址，这些地址不会在互联网上被分配，因此不能直接在互联网上使用。</p>
+<blockquote>
+<p><strong>RFC1918为私有网络预留出了三个IP地址块：</strong></p>
+<ul>
+<li>A类：10.0.0.0～10.255.255.255</li>
+<li>B类：172.16.0.0～172.31.255.255</li>
+<li>C类：192.168.0.0～192.168.255.255</li>
+</ul>
+</blockquote>
+<p>对比上述私有IP地址范围，我们可以看出：</p>
+<ul>
+<li>A选项 192.172.56.23 不属于上述任何一个私有IP地址范围，因此它可以出现在因特网上。</li>
+<li>B选项 172.15.34.128 虽然以172开头，但它的第二段数字是15，不在172.16.0.0～172.31.255.255的范围内，因此它也可以出现在因特网上。</li>
+<li>C选项 192.168.32.17 属于C类私有IP地址范围192.168.0.0～192.168.255.255，因此它不允许出现在因特网上。</li>
+<li>D选项 172.128.56.65 虽然以172开头，但它的第二段数字是128，同样不在172.16.0.0～172.31.255.255的范围内，因此它也可以出现在因特网上。</li>
+</ul>
+<p>综上所述，不允许出现在因特网上的IP地址是C选项 192.168.32.17。</p>
+</blockquote>
+<hr>
 
         </div>
 
@@ -775,7 +845,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-10 21:11:38
+                    :</strong> 2024-06-12 08:08:50
             </li>
         
         <li>
@@ -940,7 +1010,7 @@
                     </span>
                     
                         <span>
-                            44.8k words in total
+                            46.5k words in total
                         </span>
                     
                 </p>

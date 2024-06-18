@@ -31,8 +31,11 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%BB%E5%AD%98%E7%9A%84%E7%BC%96%E5%9D%80.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/4-14.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/4-15-1.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/4-15-2.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/4-16-1.png">
 <meta property="article:published_time" content="2024-06-16T11:16:55.000Z">
-<meta property="article:modified_time" content="2024-06-16T13:54:56.374Z">
+<meta property="article:modified_time" content="2024-06-18T00:14:26.324Z">
 <meta property="article:author" content="kingwempity">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%BB%E5%AD%98%E7%9A%84%E7%BC%96%E5%9D%80.png">
@@ -586,8 +589,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-16 21:54:56</span>
-            <span class="mobile">2024-06-16 21:54:56</span>
+            <span class="desktop">2024-06-18 08:14:26</span>
+            <span class="mobile">2024-06-18 08:14:26</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -598,12 +601,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>978 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
         </span>
     
     
@@ -758,25 +761,111 @@
 </li>
 <li><p>例题【4.14】某8位微型计算机地址码位18位，若使用4KX4位的RAM芯片组成模块板结构的存储器，试问：</p>
 <ol>
-<li>该机所允许的组大主存空间是多少？<ul>
+<li><p>该机所允许的组大主存空间是多少？</p>
+<ul>
 <li>2^18^X8位&#x3D;2^8^K X8b&#x3D;256KB</li>
 </ul>
 </li>
-<li>若每个模块板为32KX8位，共需要多少个模块板？<ul>
+<li><p>若每个模块板为32KX8位，共需要多少个模块板？</p>
+<ul>
 <li>(2^8^KX8b)&#x2F;(32KX8b)&#x3D;2^3^&#x3D;8片</li>
 </ul>
 </li>
-<li>每个模板块内共有多少片RAM芯片？<ul>
+<li><p>每个模板块内共有多少片RAM芯片？</p>
+<ul>
 <li>(32KX8b)&#x2F;(4KX4b)&#x3D;8*2&#x3D;16片</li>
 </ul>
 </li>
-<li>共有多少片RAM？<ul>
+<li><p>共有多少片RAM？</p>
+<ul>
 <li>​	16*8&#x3D;128片</li>
 </ul>
 </li>
-<li>CPU如何选择各模板？<ul>
+<li><p>CPU如何选择各模板？</p>
+<ul>
 <li><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/4-14.png" alt="4—14"></li>
 </ul>
+</li>
+<li><p>例题【4-15】设CPU共有16根地址线,8根数据线,并用$\overline{\text{MREQ}}$(低电平有效)作访存控制信号， $\overline{\text{R&#x2F;W}}$作读&#x2F;写命令信号(高电平为读,低电平为写)。现有这些存储芯片:ROM(2K×8位,4K×4位,8K×8位),RAM(1K×4位，2K×8位，4K×8位)及74138译码器和其他门电路(门电路自定)。</p>
+<p>试从上述规格中选用合适的芯片,画出CPU和存储芯片的连接图。要求如下:<br>(1)最小4K地址为系统程序区.4096~16383地址范围为用户程序区。<br>(2)指出选用的存储芯片类型及数量。<br>(3)详细画出片选逻辑。<br>答：<br>(1)地址空间分配图:<br>系统程序区(ROM共4KB):0000H-0FFFH<br>用户程序区(RAM共12KB):1000H-3FFFH[(4096-16383)]<br>(2)选片:<br>ROM:选择4K×4位芯片2片,位并联<br>RAM:选择4K×8位芯片3片,字串联(RAM1地址范围为:1000H-1FFFH,RAM2地址范围为2000H-2FFFH, RAM3地址范围为:3000H-3FFFH)</p>
+<p>(3)各芯片二进制地址分配如下</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/4-15-1.png" alt="4-15-1"></p>
+<p>CPU和存储器连接逻辅图及片选逻辑如下图所示:</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/4-15-2.png" alt="4-15-2"></p>
+<p>原文链接：<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45735391/article/details/127178726">https://blog.csdn.net/weixin_45735391/article/details/127178726 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>CPU假设同上题，现有8片8K×8位的RAM芯片与CPU相连。</p>
+<p>(1)用74138译码器画出CPU与存储芯片的连接图。<br>(2)写出每片RAM的地址范围。<br>(3)如果运行时发现不论往哪片RAM写入数据，以A000H为起始地址的存储芯片都有与其相同的数据分析故障原因。<br>(4)根据(1)的连接图,若出现地址线 A 13 A_{13} A13与CPU断线,并搭接到高电平上,将出现什么后果?<br>答:<br>(1)CPU与存储器芯片连接逻辑图:<br><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/4-16-1.png" alt="4-16-1"></p>
+<p>(2)地址空间分配图:<br>RAM0:0000H-1FFFH<br>RAM1:2000H-3FFFH<br>RAM2:4000H-5FFFH<br>RAM3:6000H-7FFFH<br>RAM4:8000H-9FFFH<br>RAM5:A000H-BFFFH<br>RAM6:C000H-DFFFH<br>RAM7:E000H-FFFFH</p>
+<p>(3)如果运行时发现不论往哪片RAM写入数据后，以A000H为起始地址的存储芯片(RAM5)都有与其相同的数据，则根本的故障原因为:该存储芯片的片选输入端很可能总是处于低电平。<br>假设芯片与译码器本身都是好的，可能的情况有:<br>①该片的 $\overline{\text{CS}}$端与 $\overline{\text{WE}}$端错连或短路:<br>②该片的 $\overline{\text{CS}}$端与CPU的 $\overline{\text{MREQ}}$端错连或短路；<br>③该片的 $\overline{\text{CS}}$端与地线错连或短路。</p>
+<p>(4)如果地址线A13与CPU断线，并搭接到高电平上，将会出现A13恒为“1”的情况。此时存储器只能寻址A13&#x3D;1的地址空间(奇数片)，A13&#x3D;0的另一半地址空间(偶数片)将永远访问不到。若对A13&#x3D;0的地址空间(偶数片)进行访问，只能错误地访问到A13&#x3D;1的对应空间(奇数片)中去。</p>
+<p>原文链接：<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45735391/article/details/127178726">https://blog.csdn.net/weixin_45735391/article/details/127178726 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</li>
+<li><p>提高访存数度的措施：</p>
+<ul>
+<li>采用高速器件</li>
+<li>采用层次结构Cash-主存结构</li>
+<li>调整主存结构</li>
+</ul>
+</li>
+<li><p>多体并行系统</p>
+<ul>
+<li>​	高位交叉编址<ul>
+<li>顺序编址</li>
+<li>能够增加内存的容量，但不能提高速度</li>
+</ul>
+</li>
+<li>低位交叉编址<ul>
+<li>个体轮流编址，能够增加速度带宽</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>排队器优先级判断:</p>
+<ul>
+<li>严重影响CPU工作的请求源给予次高优先级</li>
+<li>易发生代码丢失的请求源给予最高优先级</li>
+</ul>
+</li>
+<li><p>cache-主存地址映射：</p>
+<ul>
+<li>直接映射</li>
+<li>全相联映射</li>
+<li>组相联映射</li>
+</ul>
+</li>
+<li><p>替换策略：</p>
+<ul>
+<li>先进先出策略</li>
+<li>近期最少使用算法</li>
+<li>随机法</li>
+</ul>
+</li>
+</ol>
+<h2 id="第五章：输入输出系统"><a href="#第五章：输入输出系统" class="headerlink" title="第五章：输入输出系统"></a>第五章：输入输出系统</h2><ol>
+<li><p>输入输出系统发展的4个阶段：</p>
+<ol>
+<li>早期阶段 </li>
+<li>接口模块和DMA阶段</li>
+<li>具有通道结构的阶段</li>
+<li>具有I&#x2F;O处理机的阶段</li>
+</ol>
+</li>
+<li><p>I&#x2F;O设备与主机设备交换信息时，控制方式有：</p>
+<ol>
+<li>程序查询方式</li>
+<li>程序中断方式</li>
+<li>直接存储器存取 方式</li>
+<li>I&#x2F;O通道方式 </li>
+<li>I&#x2F;O处理机方式</li>
+</ol>
+</li>
+<li><p>I&#x2F;O 设备的分类 ：</p>
+<ol>
+<li>人机交互设备 </li>
+<li>计算机的信息 存储设备</li>
+<li>机-——机通信设备</li>
+</ol>
 </li>
 </ol>
 </li>
@@ -795,7 +884,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-16 21:54:56
+                    :</strong> 2024-06-18 08:14:26
             </li>
         
         <li>
@@ -911,7 +1000,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">计算机组成原理</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">第一章：计算机系统概论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF"><span class="nav-number">2.</span> <span class="nav-text">第三章：系统总线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">第四章：存储器</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">第一章：计算机系统概论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BA%BF"><span class="nav-number">2.</span> <span class="nav-text">第三章：系统总线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">第四章：存储器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">第五章：输入输出系统</span></a></li></ol>
 
     </div>
 </div>
@@ -948,7 +1037,7 @@
                     </span>
                     
                         <span>
-                            48.7k words in total
+                            49.7k words in total
                         </span>
                     
                 </p>

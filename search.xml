@@ -2788,7 +2788,7 @@ over</p>
   <entry>
     <title>计算机网络</title>
     <url>/2024/06/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-referrer&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
 
 <p>1、在OSI参考模型中，控制两个对等实体进行逻辑通信的规则的集合称为（协议  ）。</p>
 <blockquote>

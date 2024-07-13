@@ -26,8 +26,9 @@
 <meta property="og:description" content="《外星人入侵小游戏开发》">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/ship.bmp">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/cherry.png">
 <meta property="article:published_time" content="2024-02-07T02:17:45.000Z">
-<meta property="article:modified_time" content="2024-03-10T02:36:58.067Z">
+<meta property="article:modified_time" content="2024-07-13T15:17:08.439Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="实战项目">
@@ -596,8 +597,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-10 10:36:58</span>
-            <span class="mobile">2024-03-10 10:36:58</span>
+            <span class="desktop">2024-07-13 23:17:08</span>
+            <span class="mobile">2024-07-13 23:17:08</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -639,12 +640,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.5k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.9k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 Mins</span>
         </span>
     
     
@@ -705,7 +706,14 @@
 </ul>
 <hr>
 <p>项目进度：12.6.4</p>
-<p>敬请T期待s</p>
+<p>敬请T期待</p>
+<h2 id="樱花树"><a href="#樱花树" class="headerlink" title="樱花树"></a>樱花树</h2><blockquote>
+<p>原文链接：<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/sxc1414749109/article/details/139392284">https://blog.csdn.net/sxc1414749109/article/details/139392284 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">#cherry.py</span><br><span class="line">from turtle import *</span><br><span class="line">from random import random</span><br><span class="line">from math import cos,radians</span><br><span class="line"></span><br><span class="line">def draw_tree(branch_length,level):</span><br><span class="line">    #递归绘制树干</span><br><span class="line">    pendown()</span><br><span class="line">    #根据当前的方向和角度改变颜色</span><br><span class="line">    t=cos(radians(heading()+45))/8+0.25</span><br><span class="line">    pencolor(t,t,t)</span><br><span class="line">    pensize(branch_length/10)</span><br><span class="line">    forward(branch_length)</span><br><span class="line"></span><br><span class="line">    if level &gt; 0 :#如果还有分支级别</span><br><span class="line">        #随意生成分支角度和长度</span><br><span class="line">        angle1=random()*15+10</span><br><span class="line">        angle2=random()*15+10</span><br><span class="line">        new_length=branch_length*(random()*0.25+0.7)</span><br><span class="line"></span><br><span class="line">        #绘制右侧分支</span><br><span class="line">        right(angle1)</span><br><span class="line">        draw_tree(new_length,level-1)</span><br><span class="line"></span><br><span class="line">        #绘制左侧分支</span><br><span class="line">        left(angle1+angle2)</span><br><span class="line">        draw_tree(new_length,level-1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        right(angle2)</span><br><span class="line">    else: # 如果已经到达最底层</span><br><span class="line">        # 在分支末端绘制花朵</span><br><span class="line">        draw_flower()</span><br><span class="line"></span><br><span class="line">    penup()</span><br><span class="line">    backward(branch_length)</span><br><span class="line"></span><br><span class="line">#绘制树枝末端树叶</span><br><span class="line">def draw_flower():</span><br><span class="line"></span><br><span class="line">    right(90)#调整方向，准备绘制花朵</span><br><span class="line">    pencolor(&quot;pink&quot;)</span><br><span class="line">    circle(3)#绘制花朵</span><br><span class="line"></span><br><span class="line">    left(90)#调整方向，准备绘制其他元素</span><br><span class="line"></span><br><span class="line">    #偶尔在地面上绘制落花</span><br><span class="line">    if random() &gt; 0.7:</span><br><span class="line">        penup()#抬笔，停止绘画</span><br><span class="line">        current_heading=heading()#记录当前方向</span><br><span class="line">        angle = -40+random()*80</span><br><span class="line">        setheading(angle)#设置方向</span><br><span class="line">        #计算落花的距离</span><br><span class="line">        distance=int(800 * random() * 0.5 + 400 * random() * 0.3 + 200 * random() * 0.2)</span><br><span class="line">        forward(distance)</span><br><span class="line">        #落笔</span><br><span class="line">        pendown()</span><br><span class="line">        right(90)</span><br><span class="line">        #根据当前的方向和角度计算颜色</span><br><span class="line">        n=cos(radians(heading()-45))/4+0.5</span><br><span class="line">        pencolor(n*0.5+0.5, 0.4+n*0.4, 0.4+n*0.4)</span><br><span class="line">        circle(2)</span><br><span class="line"></span><br><span class="line">        left(90)</span><br><span class="line">        penup()</span><br><span class="line">        setheading(angle)</span><br><span class="line">        backward(distance)#后退回原来的位置</span><br><span class="line">        setheading(current_heading)#恢复至原始方向</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;主函数用于设置绘图环境并开始绘制过程&quot;&quot;&quot;</span><br><span class="line">    bgcolor(0.956, 0.9255, 0.9882)  # 设置背景颜色为浅紫色</span><br><span class="line">    speed(10)</span><br><span class="line">    hideturtle()</span><br><span class="line">    tracer(100)#设置追踪延迟</span><br><span class="line"></span><br><span class="line">    penup()#抬笔</span><br><span class="line">    backward(100)#后退一段距离</span><br><span class="line">    left(90)</span><br><span class="line">    backward(300)</span><br><span class="line"></span><br><span class="line">    draw_tree(100, 12)</span><br><span class="line">    done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main() #主函数</span><br></pre></td></tr></table></figure></div>
+
+<p>效果图：</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/cherry.png" alt="cherry"></p>
 
         </div>
 
@@ -720,7 +728,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-03-10 10:36:58
+                    :</strong> 2024-07-13 23:17:08
             </li>
         
         <li>
@@ -848,7 +856,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">Python实战</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E6%98%9F%E4%BA%BA%E5%85%A5%E4%BE%B5%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">外星人入侵游戏开发</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E6%98%9F%E4%BA%BA%E5%85%A5%E4%BE%B5%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">外星人入侵游戏开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%B1%E8%8A%B1%E6%A0%91"><span class="nav-number">2.</span> <span class="nav-text">樱花树</span></a></li></ol>
 
     </div>
 </div>
@@ -887,7 +895,7 @@
                     </span>
                     
                         <span>
-                            50.4k words in total
+                            50.8k words in total
                         </span>
                     
                 </p>

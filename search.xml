@@ -127,311 +127,6 @@ over</p>
       </tags>
   </entry>
   <entry>
-    <title>Linux——基础</title>
-    <url>/2024/04/16/Linux%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="linux系统入门："><a href="#linux系统入门：" class="headerlink" title="linux系统入门："></a>linux系统入门：</h1><h2 id="1-操作系统介绍"><a href="#1-操作系统介绍" class="headerlink" title="1.操作系统介绍"></a>1.操作系统介绍</h2><p>软件：驱动硬件</p>
-<p>硬件：看得见，摸得着</p>
-<p>操作系统：特殊的软件，控制硬件，内核+软件 </p>
-<p>操作系统：</p>
-<p>unix(1969年诞生于贝尔实验室)</p>
-<p>硬件-系统(hp-ux)-软件</p>
-<p>BSD:  freeBSD  黑莓</p>
-<p>ios，mac os，<em>苹果</em>的 第一代 操作系统于1984年 发布</p>
-<p>ms-dos  单任务</p>
-<p>window 1.0  1985年发布  windows NT</p>
-<p>开源  闭源</p>
-<p>minix</p>
-<p>linux:  1991年  林纳斯.托瓦兹 linux内核 1.0&#x2F;GPL</p>
-<p>现在的操作系统：多任务，多用户</p>
-<p>GNU:  贡献了很多免费使用的软件</p>
-<p>GPL 协议</p>
-<p>gnu&#x2F;linux:</p>
-<p>中科麒麟</p>
-<p>linux发行版：</p>
-<p>linux内核</p>
-<p>红帽redhat ： fedora   centos  最稳定企业服务器操作系统centos6 2.6.32 centos7  3.10  centos8 4.10</p>
-<p>debian： ubuntu  kali  国产linux   内核 5.10 版本新 人工智能 自动驾驶 大数据</p>
-<p>suse： opensuse  suse企业版</p>
-<h2 id="2-centos系统的安装"><a href="#2-centos系统的安装" class="headerlink" title="2.centos系统的安装"></a>2.centos系统的安装</h2><p>ios镜像下载地址：</p>
-<p><a class="link" href="https://mirrors.tuna.tsinghua.edu.cn/centos-vault/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso">https://mirrors.tuna.tsinghua.edu.cn/centos-vault/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>install 安装</p>
-<p>test</p>
-<p>media 媒体 媒介 光盘</p>
-<p>lvm：逻辑卷</p>
-<p>el7:  enterprise linux 7</p>
-<p>linux远程控制：</p>
-<p>telnet协议： 明文</p>
-<p>ssh协议： 加密</p>
-<h2 id="3-远程连接linux"><a href="#3-远程连接linux" class="headerlink" title="3.远程连接linux"></a>3.远程连接linux</h2><p>第一步：查看ip地址  ip addr</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">远程登录linux系统</span></span><br><span class="line">ssh  root@192.168.202.136</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">断开连接</span></span><br><span class="line">exit</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重启系统</span></span><br><span class="line">reboot</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">立即关机</span></span><br><span class="line">shutdown  -h  now</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">十分钟之后关机</span></span><br><span class="line">shutdown  -h  10</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h2 id="4-文件操作"><a href="#4-文件操作" class="headerlink" title="4.文件操作"></a>4.文件操作</h2><p>命令1：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">切换目录</span></span><br><span class="line">cd  #全称change directory</span><br><span class="line">例子1：</span><br><span class="line">cd  local    #切换到子目录local</span><br><span class="line">cd  /usr/local  #切换到目录/usr/local</span><br><span class="line">cd  ..       #切换到上一级目录</span><br></pre></td></tr></table></figure></div>
-
-<p>命令2：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">print</span> work directory</span></span><br><span class="line">pwd</span><br></pre></td></tr></table></figure></div>
-
-<p>命令3：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">新建文件</span></span><br><span class="line">touch</span><br><span class="line">例子1： touch 1.txt  #创建单个文件</span><br><span class="line">例子2： touch test&#123;01..10&#125;.txt #批量创建文件</span><br><span class="line">例子3： touch /root/4.txt  #在制定的/root目录下，创建文件4.txt</span><br></pre></td></tr></table></figure></div>
-
-<p>命令4：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看目录下的文件</span></span><br><span class="line">ls全称list</span><br><span class="line">例子1：ls  test09.txt   #查看test09.txt是否存在</span><br><span class="line">例子2：ls  *.txt        #查看以txt结尾的所有文件</span><br><span class="line">例子3：ls  -1           #以一行一个文件的方式显示</span><br><span class="line">例子4：ls  -a           #查看所有文件，包括隐藏文件</span><br><span class="line">例子5：ls -a -1         #查看所有文件，以一行一个来显示</span><br><span class="line">例子6：ls -l            #以长格式查看文件</span><br></pre></td></tr></table></figure></div>
-
-<p>以.开头的文件是隐藏文件，默认不显示</p>
-<p>命令5：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重命名</span></span><br><span class="line">mv全称move</span><br><span class="line">例子1：mv .123.txt 123.txt   #将.123.txt文件重命名为123.txt</span><br><span class="line">例子2：mv 123.txt /opt       #将当前目录下的123.txt移动到/opt目录下</span><br></pre></td></tr></table></figure></div>
-
-<p>命令6：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">复制</span></span><br><span class="line">cp全称copy</span><br><span class="line">例子1：cp test01.txt /opt/   #将当前目录下的test01.txt复制到/opt目录下</span><br><span class="line">例子2：cp -a dev04 /opt/     #将目录dev04复制到/opt下</span><br></pre></td></tr></table></figure></div>
-
-<p>命令7：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除</span></span><br><span class="line">例子1:  rm /opt/123.txt  #将/opt目录下的123.txt文件删除，需要回复y确认删除</span><br><span class="line">例子2： rm -f /opt/test01.txt #将/opt目录下的test01.txt文件删除，不需要回复</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除一个目录，linux的参数大部分没有先后顺序</span></span><br><span class="line">[root@localhost ~]# rm -fr dev</span><br><span class="line">[root@localhost ~]# rm -rf dev01</span><br><span class="line">[root@localhost ~]# rm -f -r dev02</span><br><span class="line">[root@localhost ~]# rm -r -f dev03</span><br></pre></td></tr></table></figure></div>
-
-<p>命令8：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建文件夹 创建目录directory</span></span><br><span class="line">mkdir 全称make directory </span><br><span class="line">例子1：mkdir dev   #创建一个dev目录</span><br><span class="line">例子2：mkdir dev&#123;01..10&#125;     #批量创建多个目录</span><br><span class="line">例子3：mkdir -p 1/2/3/4/5/6  #一次性创建多级子目录</span><br></pre></td></tr></table></figure></div>
-
-<p>命令9：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">vi编辑器</span></span><br><span class="line">例子1： vi  test03.txt   #编辑文件test03.txt</span><br><span class="line">默认是常规模式，按ioa键进入编辑模式</span><br><span class="line">在编辑模式中按esc回到常规模式</span><br><span class="line">常规模式按:进入命令模式</span><br><span class="line">命令模式按esc回到常规模式</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>命令10：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从上往下顺序查看文本内容</span></span><br><span class="line">cat</span><br><span class="line">例子1：cat  test03.txt  #查看test03.txt的全部内容</span><br><span class="line">例子2：cat -n test03.txt #查看内容的时候显示行号</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从下往上倒着查看文本内容</span></span><br><span class="line">tac</span><br><span class="line">例子1：tac  test03.txt  #倒着查看test03.txt的全部内容</span><br></pre></td></tr></table></figure></div>
-
-<p>命令11：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看文件头几行</span></span><br><span class="line">head</span><br><span class="line">例子1： head  test03.txt       #查看文件的前十行，默认</span><br><span class="line">例子2： head  -n 5 test03.txt  #查看文件的前5行</span><br><span class="line">例子3： head  -5  test03.txt   #查看文件的前5行</span><br></pre></td></tr></table></figure></div>
-
-<p>命令12：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看文件倒数几行</span></span><br><span class="line">tail</span><br><span class="line">例子1： tail  test03.txt       #查看文件的倒数十行，默认</span><br><span class="line">例子2： tail  -n 5 test03.txt  #查看文件的倒数5行</span><br><span class="line">例子3： tail  -5  test03.txt   #查看文件的倒数5行</span><br></pre></td></tr></table></figure></div>
-
-<p>管道</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# ip addr</span><br><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span><br><span class="line">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">    inet 127.0.0.1/8 scope host lo</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 ::1/128 scope host </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">2: ens33: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000</span><br><span class="line">    link/ether 00:0c:29:83:e4:d9 brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 10.0.0.128/24 brd 10.0.0.255 scope global noprefixroute dynamic ens33</span><br><span class="line">       valid_lft 1253sec preferred_lft 1253sec</span><br><span class="line">    inet6 fe80::ffe1:31ed:56dc:d9aa/64 scope link noprefixroute </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">[root@localhost ~]# ip addr|tail -4</span><br><span class="line">    inet 10.0.0.128/24 brd 10.0.0.255 scope global noprefixroute dynamic ens33</span><br><span class="line">       valid_lft 1224sec preferred_lft 1224sec</span><br><span class="line">    inet6 fe80::ffe1:31ed:56dc:d9aa/64 scope link noprefixroute </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">[root@localhost ~]# ip addr|tail -4|head -1</span><br><span class="line">    inet 10.0.0.128/24 brd 10.0.0.255 scope global noprefixroute dynamic ens33</span><br><span class="line">[root@localhost ~]# ip addr|tail -4|head -1|cut -c 10-19</span><br><span class="line">10.0.0.128</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="5-目录结构"><a href="#5-目录结构" class="headerlink" title="5.目录结构"></a>5.目录结构</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">/bin      #存放二进制的可执行文件，命令，特别重要，不能删除!</span><br><span class="line">/boot     #开机启动需要的文件， 特别重要，不能删除!</span><br><span class="line">/dev      #device设备文件，特别重要，不能删除!</span><br><span class="line">/etc      #存放配置文件，特别重要，不能删除!</span><br><span class="line">/home     #普通用户的家目录</span><br><span class="line">/lib      #library 32位库，一般是so结尾，特别重要，不能删除!</span><br><span class="line">/lib64    #library 64位库，一般是so结尾，特别重要，不能删除!</span><br><span class="line">/media    #多媒体</span><br><span class="line">/mnt      #mount挂载光盘，U盘</span><br><span class="line">/opt      #部分软件安装存储目录</span><br><span class="line">/proc     #process进程 ， 特别重要，不能删除!</span><br><span class="line">/root     #root用户的家目录，特别重要，不能删除!</span><br><span class="line">/run      #运行，程序运行的时候产生的文件</span><br><span class="line">/sbin     #super bin超级用户才能使用的命令 ，特别重要，不能删除!</span><br><span class="line">/srv      #源代码</span><br><span class="line">/sys      #system系统目录 ，特别重要，不能删除!</span><br><span class="line">/tmp      #用来存放临时文件的目录</span><br><span class="line">/usr      #用户级的目录，特别重要，不能删除!</span><br><span class="line">/var      #variable 变化的文件，特别重要，不能删除!</span><br></pre></td></tr></table></figure></div>
-
-<p>命令13</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">统计</span></span><br><span class="line">wc</span><br><span class="line">wc -l按行统计，不会单独使用，需要接在管道后面</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# cat test03.txt |wc -l</span><br><span class="line">18</span><br><span class="line">[root@localhost ~]# cat -n test03.txt </span><br><span class="line">     1	sdsdsdsdsdsdsd是的是的</span><br><span class="line">     2	</span><br><span class="line">     3	sdsd</span><br><span class="line">     4	65656</span><br><span class="line">     5	sdsd</span><br><span class="line">     6	sdsd</span><br><span class="line">     7	sdsd</span><br><span class="line">     8	33333</span><br><span class="line">     9	565656565</span><br><span class="line">    10	33333</span><br><span class="line">    11	565656565</span><br><span class="line">    12	33333</span><br><span class="line">    13	565656565</span><br><span class="line">    14	33333</span><br><span class="line">    15	565656565</span><br><span class="line">    16	</span><br><span class="line">    17	</span><br><span class="line">    18	sdssds  ;;;;</span><br></pre></td></tr></table></figure></div>
-
-<p>命令14</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">生成数字序列</span></span><br><span class="line">seq</span><br><span class="line">例子1：产生一个5到12的序列</span><br><span class="line">[root@localhost ~]# seq 5 12</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line"></span><br><span class="line">例子2：产生一个5到12等宽的序列</span><br><span class="line">[root@localhost ~]# seq -w 5 12</span><br><span class="line">05</span><br><span class="line">06</span><br><span class="line">07</span><br><span class="line">08</span><br><span class="line">09</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td></tr></table></figure></div>
-
-<p>命令15</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">按行过滤字符串</span></span><br><span class="line">grep</span><br><span class="line">例子1： #普通过滤</span><br><span class="line">[root@localhost ~]# grep &#x27;3&#x27; test03.txt </span><br><span class="line">33333</span><br><span class="line">33333</span><br><span class="line">33333</span><br><span class="line">33333</span><br><span class="line">例子2： #显示行号</span><br><span class="line">[root@localhost ~]# grep -n &#x27;3&#x27; test03.txt </span><br><span class="line">8:33333</span><br><span class="line">10:33333</span><br><span class="line">12:33333</span><br><span class="line">14:33333</span><br></pre></td></tr></table></figure></div>
-
-<p>grep精准匹配-w</p>
-<p>命令16</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">按列过滤</span></span><br><span class="line">awk</span><br><span class="line">例子1： 取列,$1代表第一列，$2代表第二列，$NF代表最后一列</span><br><span class="line">[root@localhost ~]# cat test01.txt </span><br><span class="line">row 1, cell 1	row 1, cell 2</span><br><span class="line">row 2, cell 1	row 2, cell 2</span><br><span class="line">[root@localhost ~]# awk &#x27;&#123;print $1&#125;&#x27; test01.txt </span><br><span class="line">row</span><br><span class="line">row</span><br><span class="line">[root@localhost ~]# awk &#x27;&#123;print $2&#125;&#x27; test01.txt </span><br><span class="line">1,</span><br><span class="line">2,</span><br><span class="line">例子2：以逗号,做分隔符</span><br><span class="line">[root@localhost ~]# cat test01.txt </span><br><span class="line">row 1, cell 1	row 1, cell 2</span><br><span class="line">row 2, cell 1	row 2, cell 2</span><br><span class="line">[root@localhost ~]# awk -F &#x27;,&#x27;   &#x27;&#123;print $1&#125;&#x27; test01.txt </span><br><span class="line">row 1</span><br><span class="line">row 2</span><br><span class="line">[root@localhost ~]# awk -F &#x27;,&#x27;   &#x27;&#123;print $NF&#125;&#x27; test01.txt </span><br><span class="line"> cell 2</span><br><span class="line"> cell 2</span><br></pre></td></tr></table></figure></div>
-
-<p>命令17</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">排序</span></span><br><span class="line">sort</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# cat test02.txt</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">6</span><br><span class="line">4</span><br><span class="line">8</span><br><span class="line">7</span><br><span class="line">5</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">9</span><br><span class="line">1</span><br><span class="line">5</span><br><span class="line">7</span><br><span class="line">[root@localhost ~]# cat test02.txt|sort -n</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td></tr></table></figure></div>
-
-<p>命令18：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">统计去重</span></span><br><span class="line">uniq</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# cat test02.txt|sort -n</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">[root@localhost ~]# cat test02.txt|sort -n|uniq -c</span><br><span class="line">      2 1</span><br><span class="line">      3 2</span><br><span class="line">      3 3</span><br><span class="line">      2 4</span><br><span class="line">      3 5</span><br><span class="line">      2 6</span><br><span class="line">      2 7</span><br><span class="line">      1 8</span><br><span class="line">      1 9</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="6-用户和用户组管理"><a href="#6-用户和用户组管理" class="headerlink" title="6.用户和用户组管理"></a>6.用户和用户组管理</h2><p>命令19</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">作用查看所有用户最后的登录时间</span></span><br><span class="line">lastlog</span><br><span class="line">例子：</span><br><span class="line">[root@qstack ~]# lastlog </span><br><span class="line">Username         Port     From             Latest</span><br><span class="line">root             pts/0    111.198.38.138   Mon Sep  6 11:17:25 +0800 2021</span><br><span class="line">bin                                        **Never logged in**</span><br><span class="line">daemon                                     **Never logged in**</span><br><span class="line">adm                                        **Never logged in**</span><br><span class="line">lp                                         **Never logged in**</span><br><span class="line">sync                                       **Never logged in**</span><br><span class="line">shutdown                                   **Never logged in**</span><br><span class="line">halt                                       **Never logged in**</span><br><span class="line">mail                                       **Never logged in**</span><br><span class="line">uucp                                       **Never logged in**</span><br><span class="line">operator                                   **Never logged in**</span><br><span class="line">games                                      **Never logged in**</span><br><span class="line">gopher                                     **Never logged in**</span><br></pre></td></tr></table></figure></div>
-
-<p>命令20：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建用户</span></span><br><span class="line">useradd </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建一个用户</span></span><br><span class="line">例子1：useradd  test1</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建用户，并给用户指定用户组</span></span><br><span class="line">例子2：</span><br><span class="line">[root@localhost tmp]# useradd  -g test1  test3</span><br><span class="line">[root@localhost tmp]# id test3</span><br><span class="line">uid=1002(test3) gid=1000(test1) 组=1000(test1)</span><br></pre></td></tr></table></figure></div>
-
-<p>命令21：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置密码</span></span><br><span class="line">passwd</span><br><span class="line">例子1：passwd  test1</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">用root用户给普通用户修改密码</span></span><br><span class="line">[root@localhost ~]# passwd test1</span><br><span class="line">更改用户 test1 的密码 。</span><br><span class="line">新的 密码：</span><br><span class="line">无效的密码： 密码是一个回文</span><br><span class="line">重新输入新的 密码：</span><br><span class="line">passwd：所有的身份验证令牌已经成功更新。</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">普通用户自己修改密码</span></span><br><span class="line">[test1@localhost ~]$ passwd </span><br><span class="line">更改用户 test1 的密码 。</span><br><span class="line">为 test1 更改 STRESS 密码。</span><br><span class="line">（当前）UNIX 密码：</span><br><span class="line">新的 密码：</span><br><span class="line">无效的密码： 密码少于 8 个字符</span><br><span class="line">新的 密码：</span><br><span class="line">无效的密码： 密码少于 8 个字符</span><br><span class="line">新的 密码：</span><br><span class="line">无效的密码： 密码未通过字典检查 - 过于简单化/系统化</span><br><span class="line">passwd: 已经超出服务重试的最多次数</span><br><span class="line"></span><br><span class="line">例子3：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">免交互修改密码</span></span><br><span class="line">echo 123456|passwd --stdin test1</span><br></pre></td></tr></table></figure></div>
-
-<p>命令22：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">检查用户是否存在</span></span><br><span class="line">id</span><br><span class="line">例子1: </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">用户存在，系统的返回结果</span></span><br><span class="line">[root@localhost ~]# id test1</span><br><span class="line">uid=1000(test1) gid=1000(test1) 组=1000(test1)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">用户不存在，系统的返回结果</span></span><br><span class="line">[root@localhost ~]# id test2</span><br><span class="line">id: test2: no such user</span><br></pre></td></tr></table></figure></div>
-
-<p>命令23：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除用户</span></span><br><span class="line">userdel</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">被删除的用户还在登录状态</span></span><br><span class="line">[root@localhost ~]# userdel test1</span><br><span class="line">userdel: user test1 is currently used by process 2356</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">被删除的用户，退出登录之后，可以正常删除</span></span><br><span class="line">[root@localhost ~]# userdel test1</span><br></pre></td></tr></table></figure></div>
-
-<p>命令24：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改用户信息</span></span><br><span class="line">usermode</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">锁定用户</span></span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# usermod -L test1  -U 解锁</span><br><span class="line">[root@localhost ~]# lchage -l test1</span><br><span class="line">帐号被锁。</span><br><span class="line">至少:	0</span><br><span class="line">至多:	99999</span><br><span class="line">警告:	7</span><br><span class="line">不活跃：	从不</span><br><span class="line">最后一次改变：	2021年07月20日</span><br><span class="line">密码过期：	从不</span><br><span class="line">密码不活跃：	从不</span><br><span class="line">帐号过期：	从不</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">禁止用户登录</span></span><br><span class="line">[root@localhost ~]# usermod -s /sbin/nologin test2</span><br><span class="line">[root@localhost ~]# grep -w &#x27;test2&#x27; /etc/passwd</span><br><span class="line">test2:x:1001:1001::/home/test2:/sbin/nologin</span><br></pre></td></tr></table></figure></div>
-
-<p>命令25：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看用户详细信息</span></span><br><span class="line">lchage</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# lchage -l test1</span><br><span class="line">帐号没被锁。</span><br><span class="line">至少:	0</span><br><span class="line">至多:	99999</span><br><span class="line">警告:	7</span><br><span class="line">不活跃：	从不</span><br><span class="line">最后一次改变：	2021年07月20日</span><br><span class="line">密码过期：	从不</span><br><span class="line">密码不活跃：	从不</span><br><span class="line">帐号过期：	从不</span><br></pre></td></tr></table></figure></div>
-
-<p>所有的用户信息存储在&#x2F;etc&#x2F;passwd文件中</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">bin:x:1:1:bin:/bin:/sbin/nologin</span><br><span class="line">daemon:x:2:2:daemon:/sbin:/sbin/nologin</span><br><span class="line">adm:x:3:4:adm:/var/adm:/sbin/nologin</span><br><span class="line">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</span><br><span class="line">sync:x:5:0:sync:/sbin:/bin/sync</span><br><span class="line">shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown</span><br><span class="line">halt:x:7:0:halt:/sbin:/sbin/halt</span><br><span class="line">mail:x:8:12:mail:/var/spool/mail:/sbin/nologin</span><br><span class="line">operator:x:11:0:operator:/root:/sbin/nologin</span><br><span class="line">games:x:12:100:games:/usr/games:/sbin/nologin</span><br><span class="line">ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin</span><br><span class="line">nobody:x:99:99:Nobody:/:/sbin/nologin</span><br><span class="line">systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin</span><br><span class="line">dbus:x:81:81:System message bus:/:/sbin/nologin</span><br><span class="line">polkitd:x:999:998:User for polkitd:/:/sbin/nologin</span><br><span class="line">tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin</span><br><span class="line">abrt:x:173:173::/etc/abrt:/sbin/nologin</span><br><span class="line">sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin</span><br><span class="line">postfix:x:89:89::/var/spool/postfix:/sbin/nologin</span><br><span class="line">chrony:x:998:996::/var/lib/chrony:/sbin/nologin</span><br><span class="line">test1:x:1000:1000::/home/test1:/bin/bash</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">passwd文件解释</span></span><br><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">test1:x:1000:1000::/home/test1:/bin/bash</span><br><span class="line">test2:x:1001:1001::/home/test2:/sbin/nologin</span><br><span class="line">test3:x:1002:1000::/home/test3:/sbin/nologin</span><br><span class="line">haha:x:1004:1004:putong user:/home/haha:/bin/bash</span><br><span class="line">第一列：用户名</span><br><span class="line">第二列：x</span><br><span class="line">第三列：uid</span><br><span class="line">第四列：gid</span><br><span class="line">第五列：注释，备注，一般为空</span><br><span class="line">第六列：家目录的位置</span><br><span class="line">第七列：使用shell的名称，默认使用/bin/bash</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>所有的用户密码信息存储&#x2F;etc&#x2F;shadow</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# cat /etc/shadow</span><br><span class="line">root:$6$QM3AHtFflOvGbCnt$2wTYZrnO8c66vycaxprE79G.I7hiy8EqXntG86FXxqlSawjtKoTjAnAa9xFA3ad1QpFskJRPt0QeDPBnZZAdx0::0:99999:7:::</span><br><span class="line">bin:*:18353:0:99999:7:::</span><br><span class="line">daemon:*:18353:0:99999:7:::</span><br><span class="line">adm:*:18353:0:99999:7:::</span><br><span class="line">lp:*:18353:0:99999:7:::</span><br><span class="line">sync:*:18353:0:99999:7:::</span><br><span class="line">shutdown:*:18353:0:99999:7:::</span><br><span class="line">halt:*:18353:0:99999:7:::</span><br><span class="line">mail:*:18353:0:99999:7:::</span><br><span class="line">operator:*:18353:0:99999:7:::</span><br><span class="line">games:*:18353:0:99999:7:::</span><br><span class="line">ftp:*:18353:0:99999:7:::</span><br><span class="line">nobody:*:18353:0:99999:7:::</span><br><span class="line">systemd-network:!!:18827::::::</span><br><span class="line">dbus:!!:18827::::::</span><br><span class="line">polkitd:!!:18827::::::</span><br><span class="line">tss:!!:18827::::::</span><br><span class="line">abrt:!!:18827::::::</span><br><span class="line">sshd:!!:18827::::::</span><br><span class="line">postfix:!!:18827::::::</span><br><span class="line">chrony:!!:18827::::::</span><br><span class="line">test1:$6$7PLnhlcr$4SCHINbWrameVSn6rxYgDOeUBwvYOHVbEOIudtNxWXIl5ULSt1Om8FvK6R3s9fI0qNef1vq8NhVMNJwudmfkM1:18828:0:99999:7:::</span><br></pre></td></tr></table></figure></div>
-
-<p>用户组管理</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">增  groupadd</span><br><span class="line">删  groupdel</span><br><span class="line">改  groupmod </span><br><span class="line">查  看/etc/group</span><br></pre></td></tr></table></figure></div>
-
-<p>命令26</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">增加一个用户组</span></span><br><span class="line">groupadd</span><br><span class="line">例子：</span><br><span class="line">groupadd test  #创建用户的时候可以制定组   useradd -g test test2</span><br></pre></td></tr></table></figure></div>
-
-<p>命令27</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除一个用户组</span></span><br><span class="line">groupdel</span><br><span class="line">例子： groupdel test</span><br></pre></td></tr></table></figure></div>
-
-<p>命令28</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改一个用户组</span></span><br><span class="line">groupmod</span><br><span class="line">例子1：groupmod -g 999 test #修改用户组的组id</span><br><span class="line">例子2：groupmod -n haha test #讲用户组test修改为新的组名haha</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h2 id="7-权限管理"><a href="#7-权限管理" class="headerlink" title="7.权限管理"></a>7.权限管理</h2><p>root用户权限最高</p>
-<p>user普通用户</p>
-<p>users用户组</p>
-<p>文件权限</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">r 4 代表读权限 read</span><br><span class="line">w 2 代表写权限 write</span><br><span class="line">x 1 代表执行权限</span><br><span class="line">- 0 空权限位</span><br><span class="line"></span><br><span class="line">权限值表</span><br><span class="line">0 ---</span><br><span class="line">1 --x</span><br><span class="line">2 -w-</span><br><span class="line">3 -wx</span><br><span class="line">4 r--</span><br><span class="line">5 r-x</span><br><span class="line">6 rw-</span><br><span class="line">7 rwx</span><br><span class="line"></span><br><span class="line">rw-   r--    r-- </span><br><span class="line">user  group  other</span><br></pre></td></tr></table></figure></div>
-
-<p>命令25</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">改变文件的权限</span></span><br><span class="line">chmod</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改权限之前</span></span><br><span class="line">[test1@localhost tmp]$ ls -l</span><br><span class="line">总用量 4</span><br><span class="line">-rw-rw----. 1 test1 test1 8 7月  20 17:20 test1.txt</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改权限</span></span><br><span class="line">[test1@localhost tmp]$ chmod u+x test1.txt </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改权限之后</span></span><br><span class="line">[test1@localhost tmp]$ ls -l</span><br><span class="line">总用量 4</span><br><span class="line">-rwxrw----. 1 test1 test1 8 7月  20 17:20 test1.txt</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line">同时修改多个权限</span><br><span class="line">[test1@localhost tmp]$ chmod u-x,g-x,o+x test1.txt </span><br><span class="line">[test1@localhost tmp]$ ls -l</span><br><span class="line">总用量 4</span><br><span class="line">-rw-rw---x. 1 test1 test1 8 7月  20 17:20 test1.txt</span><br><span class="line"></span><br><span class="line">例子3：</span><br><span class="line">[test1@localhost tmp]$ chmod 777 test1.txt </span><br><span class="line">[test1@localhost tmp]$ ls -l</span><br><span class="line">总用量 4</span><br><span class="line">-rwxrwxrwx. 1 test1 test1 8 7月  20 17:20 test1.txt</span><br></pre></td></tr></table></figure></div>
-
-<p>命令26</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改文件的所属</span></span><br><span class="line">chown</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost tmp]# chown test2:test2 ls</span><br><span class="line">[root@localhost tmp]# ls -l</span><br><span class="line">总用量 404</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 159024 7月  20 17:43 grep</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 117608 7月  20 17:38 ls</span><br><span class="line">-rwxr-xr-x. 1 test1 test1 130360 7月  20 17:43 mv</span><br><span class="line">-rw-rw-rw-. 1 test1 test1     14 7月  20 17:38 test1.txt</span><br><span class="line">[root@localhost tmp]# chown test1 ls</span><br><span class="line">[root@localhost tmp]# ls -l</span><br><span class="line">总用量 404</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 159024 7月  20 17:43 grep</span><br><span class="line">-rwxr-xr-x. 1 test1 test2 117608 7月  20 17:38 ls</span><br><span class="line">-rwxr-xr-x. 1 test1 test1 130360 7月  20 17:43 mv</span><br><span class="line">-rw-rw-rw-. 1 test1 test1     14 7月  20 17:38 test1.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用uid和gid修改文件的所属用户和所属用户组  属主，属组</span></span><br><span class="line">例子2：</span><br><span class="line">[root@localhost tmp]# ls -l</span><br><span class="line">总用量 404</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 159024 7月  20 17:43 grep</span><br><span class="line">-rwxr-xr-x. 1 test1 test2 117608 7月  20 17:38 ls</span><br><span class="line">-rwxr-xr-x. 1 test1 test1 130360 7月  20 17:43 mv</span><br><span class="line">-rw-rw-rw-. 1 test1 test1     14 7月  20 17:38 test1.txt</span><br><span class="line">[root@localhost tmp]# id test1</span><br><span class="line">uid=1000(test1) gid=1000(test1) 组=1000(test1)</span><br><span class="line">[root@localhost tmp]# id test2</span><br><span class="line">uid=1001(test2) gid=1001(test2) 组=1001(test2)</span><br><span class="line">[root@localhost tmp]# useradd  -g test1  test3</span><br><span class="line">[root@localhost tmp]# id test3</span><br><span class="line">uid=1002(test3) gid=1000(test1) 组=1000(test1)</span><br><span class="line">[root@localhost tmp]# chown 1001:1001 test1.txt </span><br><span class="line">[root@localhost tmp]# ls -l </span><br><span class="line">总用量 404</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 159024 7月  20 17:43 grep</span><br><span class="line">-rwxr-xr-x. 1 test1 test2 117608 7月  20 17:38 ls</span><br><span class="line">-rwxr-xr-x. 1 test1 test1 130360 7月  20 17:43 mv</span><br><span class="line">-rw-rw-rw-. 1 test2 test2     14 7月  20 17:38 test1.txt</span><br></pre></td></tr></table></figure></div>
-
-<p>文件属性</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">文件属性</span></span><br><span class="line">[root@localhost ~]# ls -l /tmp/123.txt</span><br><span class="line">-rw-r--r--. 1 root root 0 7月  20 23:17 /tmp/123.txt</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段的第一个字符，表示文件类型 -文件 d目录 l软链接 b块设备</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段第2-4字符，表示该文件所属用户的权限</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段第5-7字符，表示该文件所属用户组的权限</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段第8-10字符，表示其他用户对该文件的权限</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段的第11个字符，表示开启selinux的状态下创建的</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第二段的数字，表示该文件的硬链接数量</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第三段的字符串，表示该文件所属用户</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第四段的字符串，表示该文件所属用户组</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第五段的数字，表示该文件的大小</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第六段到倒数第二段，都是该文件的修改时间</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">最一段，该文件的名称</span></span><br></pre></td></tr></table></figure></div>
-
-<p>linux一切皆文件的系统</p>
-<h2 id="8-Linux-Shell"><a href="#8-Linux-Shell" class="headerlink" title="8.Linux Shell"></a>8.Linux Shell</h2><p>优化ssh登录速度</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改配置文件，先备份</span></span><br><span class="line">[root@localhost ~]# cp /etc/ssh/sshd_config /tmp/</span><br><span class="line">[root@localhost ~]# vi /etc/ssh/sshd_config </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">直接输入:79回车</span></span><br><span class="line">    79  GSSAPIAuthentication no</span><br><span class="line">    115 UseDNS no</span><br><span class="line">输入:wq保存退出</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重启sshd服务</span></span><br><span class="line">[root@localhost ~]# systemctl restart sshd</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果修改失败，还原配置文件</span></span><br><span class="line">[root@localhost ~]# cp  /tmp/sshd_config  /etc/ssh/sshd_config</span><br><span class="line">[root@localhost ~]# systemctl restart sshd</span><br></pre></td></tr></table></figure></div>
-
-<p>shell提示符</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">root用户提示符</span></span><br><span class="line">[root@localhost ~]# </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">普通用户test1的提示符</span></span><br><span class="line">[test1@localhost ~]$ </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">提示符格式定制</span></span><br><span class="line">原格式</span><br><span class="line">[root@test ~]# echo $PS1</span><br><span class="line">[\u@\h \W]\$   # \u是用户，\h是主机名，\W是相对路径 </span><br><span class="line">修改后</span><br><span class="line">[root@test ~]#cd /usr/local/bin/</span><br><span class="line">[root@test bin]#export  PS1=&#x27;[\u@\h \w]\$&#x27;</span><br><span class="line">[root@test /usr/local/bin]#</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">永久修改</span></span><br><span class="line">[root@test 10:23:39 /usr/local/bin]#cd</span><br><span class="line">[root@test 10:24:25 ~]#vi .bashrc </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">找个空白的地方，插入一行</span></span><br><span class="line">export  PS1=&#x27;[\u@\h \t \w]\$&#x27;</span><br></pre></td></tr></table></figure></div>
-
-<p>linux路径</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">相对路径  不完整路径，  例子../bin  bin</span><br><span class="line">绝对路径  也叫完整路径，例子/usr/local/bin/</span><br></pre></td></tr></table></figure></div>
-
-<p>命令hostname</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">临时修改主机名</span></span><br><span class="line">hostname</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# hostname test</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">需要重新登录生效</span></span><br></pre></td></tr></table></figure></div>
-
-<p>命令hostnamectl</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">hostnamectl</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看主机的信息</span></span><br><span class="line">[root@localhost ~]# hostnamectl </span><br><span class="line">   Static hostname: localhost.localdomain</span><br><span class="line">         Icon name: computer-vm</span><br><span class="line">           Chassis: vm</span><br><span class="line">        Machine ID: f8a89169114741a8ac6de82954c5fbcb</span><br><span class="line">           Boot ID: dcf65386ccda42e29699d56101af8cf1</span><br><span class="line">    Virtualization: vmware</span><br><span class="line">  Operating System: CentOS Linux 7 (Core)</span><br><span class="line">       CPE OS Name: cpe:/o:centos:centos:7</span><br><span class="line">            Kernel: Linux 3.10.0-1127.el7.x86_64</span><br><span class="line">      Architecture: x86-64</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">永久修改主机名</span></span><br><span class="line">[root@localhost ~]# hostnamectl set-hostname test</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">需要重新登录生效</span></span><br></pre></td></tr></table></figure></div>
-
-<p>命令reboot</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重启系统</span></span><br><span class="line">reboot</span><br><span class="line">例子1：</span><br><span class="line">[root@test ~]# reboot</span><br></pre></td></tr></table></figure></div>
-
-<p>命令shutdown</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">关闭或者重启linux</span></span><br><span class="line">shutdown</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">立即关机</span></span><br><span class="line">[root@localhost ~]# shutdown -h now</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">5分钟之后关机，可以使用shutdown -c取消</span></span><br><span class="line">[root@localhost ~]# shutdown -h 5</span><br><span class="line"></span><br><span class="line">例子3：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">5分钟之后重启系统，可以使用shutdown -c取消</span></span><br><span class="line">[root@localhost ~]# shutdown -r 5</span><br></pre></td></tr></table></figure></div>
-
-<p>shell基础语法</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">命令   参数   目标</span><br><span class="line">ls   -a -l   /opt </span><br><span class="line">rm   -rf    /opt/test1</span><br><span class="line"></span><br><span class="line">命令   目标1...   目标2</span><br><span class="line">mv    源路径     目标路径</span><br><span class="line">cp    </span><br><span class="line"></span><br><span class="line">命令</span><br><span class="line">reboot</span><br><span class="line"></span><br><span class="line">[root@test 11:12:02 /opt]#mv --help</span><br><span class="line">用法：mv [选项]... [-T] 源文件 目标文件</span><br><span class="line">　或：mv [选项]... 源文件... 目录</span><br><span class="line">　或：mv [选项]... -t 目录 源文件...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">格式解释</span></span><br><span class="line">[选项] 可选的</span><br><span class="line">...    可以有多个</span><br></pre></td></tr></table></figure></div>
-
-<p>tab键补全</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">补全命令</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果预选的特别多</span></span><br><span class="line">[root@test 11:25:24 ~]#</span><br><span class="line">Display all 1400 possibilities? (y or n)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果预选少</span></span><br><span class="line">[root@test 11:25:24 ~]#cha</span><br><span class="line">chacl   chage   chattr </span><br><span class="line"></span><br><span class="line">补全路径</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果预选的特别多</span></span><br><span class="line">[root@test 11:25:24 ~]#cd /etc/</span><br><span class="line">Display all 188 possibilities? (y or n)</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果预选少</span></span><br><span class="line">[root@test 11:25:24 ~]#cd /usr/src/</span><br><span class="line">debug/   kernels/ </span><br></pre></td></tr></table></figure></div>
-
-<p>快捷键</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">Ctrl + a    #光标跳转至正在输入的命令行的首部</span><br><span class="line">Ctrl + e    #光标跳转至正在输入的命令行的尾部</span><br><span class="line">Ctrl + c    #终止前台运行的程序</span><br><span class="line">Ctrl + d    #在shell中，ctrl-d表示推出当前shell。</span><br><span class="line">Ctrl + z    #将任务暂停，挂至后台, 执行fg命令继续运行</span><br><span class="line">Ctrl + l    #清屏，和clear命令等效。</span><br><span class="line">Ctrl + k    #删除从光标到行末的所有字符</span><br><span class="line">Ctrl + u    #删除从光标到行首的所有字符</span><br><span class="line">Ctrl + r    #搜索历史命令, 利用关键字</span><br><span class="line">ctrl + w    #光标往前删除一个参数</span><br><span class="line">esc + .     #上一条命令的最后一个参数，或者目标</span><br></pre></td></tr></table></figure></div>
-
-<p>history历史命令</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">历史</span></span><br><span class="line">history</span><br><span class="line">例子1:</span><br><span class="line">[root@test 14:32:10 ~]#history</span><br><span class="line">    1  exit</span><br><span class="line">    2  ls</span><br><span class="line">    3  head -1 test03.txt </span><br><span class="line">    4  head -1 test03.txt|cat</span><br><span class="line">    5  head -1 test03.txt|tac</span><br><span class="line">    6  head -2 test03.txt|tac</span><br><span class="line">    7  head -2 test03.txt|cat</span><br><span class="line">    8  ip addr</span><br><span class="line">    9  ip addr|tail -4</span><br><span class="line">   10  ip addr|tail -4|head -1</span><br><span class="line">   ......</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用!调用历史命令</span></span><br><span class="line">[root@test 14:32:10 ~]#history|head -5</span><br><span class="line">    1  exit</span><br><span class="line">    2  ls</span><br><span class="line">    3  head -1 test03.txt </span><br><span class="line">    4  head -1 test03.txt|cat</span><br><span class="line">    5  head -1 test03.txt|tac</span><br><span class="line">[root@test 14:32:26 ~]# !3</span><br><span class="line"> head -1 test03.txt </span><br><span class="line">head: 无法打开&quot;test03.txt&quot; 读取数据: 没有那个文件或目录</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用!调用<span class="built_in">mv</span>开头的命令</span></span><br><span class="line">[root@test 14:42:17 ~]#history </span><br><span class="line">    1  ls -a -l .bash_history </span><br><span class="line">    2  history </span><br><span class="line">    3  ls</span><br><span class="line">    4  history </span><br><span class="line">    5  mv aaaaa.txt /tmp/</span><br><span class="line">    6  history </span><br><span class="line">[root@test 14:42:19 ~]#!mv</span><br><span class="line">mv aaaaa.txt /tmp/</span><br><span class="line">mv: 无法获取&quot;aaaaa.txt&quot; 的文件状态(stat): 没有那个文件或目录</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">例子4：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">清除历史记录</span></span><br><span class="line">history -c</span><br></pre></td></tr></table></figure></div>
-
-<p>历史记录保存在家目录下的.bash_history文件中</p>
-<p>命令别名</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">别名</span></span><br><span class="line">alias</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看别名</span></span><br><span class="line">[root@test 15:23:17 ~]#alias </span><br><span class="line">alias cp=&#x27;cp -i&#x27;</span><br><span class="line">alias egrep=&#x27;egrep --color=auto&#x27;</span><br><span class="line">alias fgrep=&#x27;fgrep --color=auto&#x27;</span><br><span class="line">alias grep=&#x27;grep --color=auto&#x27;</span><br><span class="line">alias l.=&#x27;ls -d .* --color=auto&#x27;</span><br><span class="line">alias ll=&#x27;ls -l --color=auto&#x27;</span><br><span class="line">alias ls=&#x27;ls --color=auto&#x27;</span><br><span class="line">alias mv=&#x27;mv -i&#x27;</span><br><span class="line">alias rm=&#x27;rm -i&#x27;</span><br><span class="line">alias which=&#x27;alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde&#x27;</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">添加别名</span></span><br><span class="line">[test1@test 15:24:23 ~]$alias rm=&#x27;rm -i&#x27;</span><br><span class="line">[test1@test 15:27:08 ~]$alias |grep rm</span><br><span class="line">alias rm=&#x27;rm -i&#x27;</span><br><span class="line"></span><br><span class="line">例子3：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取消别名</span></span><br><span class="line">[test1@test 15:27:13 ~]$unalias rm </span><br><span class="line">[test1@test 15:27:47 ~]$alias |grep rm</span><br><span class="line"></span><br><span class="line">例子4：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">alias</span>永久生效</span></span><br><span class="line">[root@localhost ~]# vi .bashrc </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">空白处，增加一行</span></span><br><span class="line">alias rm=&#x27;echo -bash: rm: 未找到命令&#x27;</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="9-linux输入输出"><a href="#9-linux输入输出" class="headerlink" title="9.linux输入输出"></a>9.linux输入输出</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"> 重定向， 将命令执行结果不输出到屏幕上，输出到文件里，会清空原文件</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">&gt; 追加重定向，不会清空原文件</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">输入</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">标准输入0</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">输出</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">标准正确输出1</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">标准错误输出2</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="10-linux压缩打包"><a href="#10-linux压缩打包" class="headerlink" title="10.linux压缩打包"></a>10.linux压缩打包</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">打包和解压缩</span></span><br><span class="line">tar</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">归档，不压缩</span></span><br><span class="line">tar cf test.tar vmlinuz-*</span><br></pre></td></tr></table></figure></div>
-
-
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">压缩并归档</span></span><br><span class="line">tar zcf test2.tar.gz vmlinuz-*</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子3：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看压缩包内容</span></span><br><span class="line">[root@localhost ~]# tar tf test.tar </span><br><span class="line">vmlinuz-0-rescue-f8a89169114741a8ac6de82954c5fbcb</span><br><span class="line">vmlinuz-3.10.0-1127.el7.x86_64	</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子4：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压缩</span></span><br><span class="line">tar xf test.tar</span><br></pre></td></tr></table></figure></div>
-
-
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">打包和压缩</span></span><br><span class="line">gzip</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">压缩单个文件</span></span><br><span class="line">gzip protocols</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">压缩多个文件，每一个文件产生一个单独的压缩包</span></span><br><span class="line">gzip  hosts passwd shadow</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压缩</span></span><br><span class="line">gzip -d hosts.gz passwd.gz protocols.gz shadow.gz </span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">压缩</span></span><br><span class="line">zip</span><br><span class="line">例子1：</span><br><span class="line">zip -r 123.zip day01</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压</span></span><br><span class="line">unzip</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost file]# unzip 123.zip</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压rar包</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">需要安装软件</span></span><br><span class="line">yum install epel-release -y</span><br><span class="line">yum install unar -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">再进行解压</span></span><br><span class="line">unar -o /opt 456.rar</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载文件</span></span><br><span class="line">curl</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载文件</span></span><br><span class="line">curl -o 123.zip http://192.168.18.10/day01.zip</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">检查网络畅通</span></span><br><span class="line">ping</span><br><span class="line">例子1：ping 223.5.5.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果网不通，重启网络服务</span></span><br><span class="line">systemctl restart network</span><br></pre></td></tr></table></figure></div>
-
-<p>查看文件类型file</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看文件类型</span></span><br><span class="line">file</span><br><span class="line">例子1：</span><br><span class="line">file 123.zip</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h2 id="11-文件传输"><a href="#11-文件传输" class="headerlink" title="11.文件传输"></a>11.文件传输</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">上传和下载</span></span><br><span class="line">rz  #上传</span><br><span class="line">sz  #下载</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">先安装lrzsz软件包</span></span><br><span class="line">yum  install lrzsz  -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">上传的例子</span></span><br><span class="line">如果使用xshell，直接鼠标拖拽，或者执行rz -E选择要上传的文件</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载的例子</span></span><br><span class="line">sz /root/test3.tar.gz</span><br></pre></td></tr></table></figure></div>
-
-<p>xftp上传下载</p>
-<p>scp传输</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">主要用于linux和linux服务器之间传输文件</span></span><br><span class="line">scp typora-setup-x64.exe  root@10.0.0.128:/tmp</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="12-软件的安装"><a href="#12-软件的安装" class="headerlink" title="12.软件的安装"></a>12.软件的安装</h2><p>编译安装</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">1.下载源码包</span><br><span class="line">cd /opt/</span><br><span class="line">rm -fr *</span><br><span class="line">curl -o nginx.tar.gz http://nginx.org/download/nginx-1.20.1.tar.gz</span><br><span class="line"></span><br><span class="line">2.编译</span><br><span class="line">tar xf nginx.tar.gz </span><br><span class="line">cd nginx-1.20.1/</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">编译参数</span></span><br><span class="line">./configure --prefix=/usr/local/nginx --without-pcre --without-http_rewrite_module --without-http_gzip_module</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">编译</span></span><br><span class="line">make</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装</span></span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">3.运行</span><br><span class="line">/usr/local/nginx/sbin/nginx</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用浏览器访问http://&lt;虚拟机的ip地址&gt;</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">关闭防火墙</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取消防火墙的开机自启</span></span><br><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure></div>
-
-<p>rpm安装</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">redhat package manager包管理器</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装wget</span></span><br><span class="line">yum install wget -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用wget下载rpm包</span></span><br><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/centos/7/os/x86_64/Packages/tree-1.6.0-10.el7.x86_64.rpm</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装rpm包</span></span><br><span class="line">rpm -ivh tree-1.6.0-10.el7.x86_64.rpm </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">卸载</span></span><br><span class="line">rpm -e tree</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">升级</span></span><br><span class="line">rpm -Uvh  xxx.rpm</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看已安装的软件</span></span><br><span class="line">rpm -qa|grep httpd</span><br></pre></td></tr></table></figure></div>
-
-<p>命令</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">以树状的显示指定目录下的目录和文件的名称</span></span><br><span class="line">tree</span><br><span class="line">例子1：</span><br><span class="line">下载路径  yum install tree -y</span><br><span class="line">tree /usr/local</span><br></pre></td></tr></table></figure></div>
-
-<p>yum安装</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">自动解决rpm依赖</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">yum安装扩展yum仓库</span></span><br><span class="line">yum install epel-release -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">yum安装nginx</span></span><br><span class="line">yum install nginx -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">yum移除nginx</span></span><br><span class="line">yum remove nginx -y</span><br><span class="line">yum list|grep ^bash 查找tab 安装包</span><br><span class="line">yum install bash-completion.noarch bash-completion-extras.noarch -y 所有tab</span><br></pre></td></tr></table></figure></div>
-
-<p>安装方法总结</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">编译安装：优点： 自由定制  痛点：难度高，步骤繁琐</span><br><span class="line">rpm安装：优点：安装简单   痛点：需要自己解决依赖，不支持定制</span><br><span class="line">yum安装：优点：自动解决依赖，默认安装最新版  痛点：不支持定制</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="13-find文件查找"><a href="#13-find文件查找" class="headerlink" title="13.find文件查找"></a>13.find文件查找</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">文件查找</span></span><br><span class="line">例子1：普通查询</span><br><span class="line">find   /etc    -maxdepth 1  -type f  -name &quot;pa*&quot;</span><br><span class="line">命令   目录...   查找深度      类型      文件名称</span><br></pre></td></tr></table></figure></div>
-
-
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子2：</span><br><span class="line">忽略大小写查询</span><br><span class="line">find /etc -maxdepth 1    -iname &quot;pa*&quot;</span><br></pre></td></tr></table></figure></div>
-
-
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子3：</span><br><span class="line">根据修改时间查找文件</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">时间单位为天</span></span><br><span class="line">find /opt -type f -mtime -1   #-1代表一天以内，+1一天以前</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">时间单位为分钟</span></span><br><span class="line">[root@localhost ~]# find /root -type f -mmin -20</span><br><span class="line">/root/.bash_history</span><br><span class="line">/root/ReadMe.txt</span><br><span class="line">/root/.lesshst</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">atime：最后访问时间</span><br><span class="line">mtime：文件内容修改时间</span><br><span class="line">ctime：文件属性修改时间</span><br></pre></td></tr></table></figure></div>
-
-
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子5：</span><br><span class="line">对找出的文件进行处理</span><br><span class="line">find /root -type f -mmin -30  ! -name &quot;.*&quot;  -exec rm &#123;&#125; \;</span><br><span class="line">find /root  -maxdepth 1  -type d  -name &quot;Apa*&quot;   -mmin -30 -exec cp -a &#123;&#125; /tmp \;</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="14-进程管理"><a href="#14-进程管理" class="headerlink" title="14.进程管理"></a>14.进程管理</h2><p>进程：正在运行的程序</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看进程</span></span><br><span class="line">ps</span><br><span class="line">参数1：ps -ef</span><br></pre></td></tr></table></figure></div>
-
-
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">关闭进程</span></span><br><span class="line">kill</span><br><span class="line">例子1： kill  7851  #使用进程id号，来终止进程</span><br><span class="line">pkill </span><br><span class="line">例子1： pkill sleep  #使用进程的命令名称，来终止进程</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#查看计算机的cpu，内存，进程等信息</span><br><span class="line">top</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="15-定时任务"><a href="#15-定时任务" class="headerlink" title="15.定时任务"></a>15.定时任务</h2><p>定期执行任务</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">时间命令</span></span><br><span class="line">date</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看时间</span></span><br><span class="line">[root@localhost ~]# date</span><br><span class="line">2021年 07月 23日 星期五 14:38:19 CST</span><br><span class="line">[root@localhost ~]# date +%F</span><br><span class="line">2021-07-23</span><br><span class="line">[root@localhost ~]# date +%T</span><br><span class="line">14:35:47</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改时间</span></span><br><span class="line">[root@localhost ~]# date -s &#x27;20200723 14:40:00&#x27;</span><br><span class="line">2020年 07月 23日 星期四 14:40:00 CST</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">定时任务的格式</span></span><br><span class="line">*  *  * *  *    cmd</span><br><span class="line">分 时 日 月 周    命令</span><br><span class="line">分：0-59</span><br><span class="line">时：0-23</span><br><span class="line">日：0-31</span><br><span class="line">月：1-12</span><br><span class="line">周：1-7</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每5分钟执行一次</span></span><br><span class="line">*/5  *  * *  *</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每1小时执行一次</span></span><br><span class="line">01 */1 * * *</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每半个小时执行一次</span></span><br><span class="line">00,30  */1 * * *</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每天晚上8:00执行一次</span></span><br><span class="line">00 20 */1 * *</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每周1晚上8:00执行一次</span></span><br><span class="line">00 20 */1 * 1,3,5</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看定时任务，遇到特殊符号%,需要添加转义符号\;</span></span><br><span class="line">[root@localhost ~]# crontab -l</span><br><span class="line">* * * * *  echo `date +\%T` &gt;&gt;/tmp/time.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">编辑定时任务</span></span><br><span class="line">[root@localhost ~]# crontab -e</span><br><span class="line"></span><br><span class="line">如果定时任务的格式，或者内容有问题，系统都会发邮件提示</span><br></pre></td></tr></table></figure></div>
-
-
-
-<h2 id="16-服务管理"><a href="#16-服务管理" class="headerlink" title="16.服务管理"></a>16.服务管理</h2><p>优化系统：</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">1.优化ssh</span><br><span class="line">vi /etc/ssh/sshd_config</span><br><span class="line">79行：GSSAPIAuthentication no</span><br><span class="line">115行：UseDNS no</span><br><span class="line">systemctl restart sshd</span><br><span class="line"></span><br><span class="line">2.优化selinux</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改配置文件，永久关闭</span></span><br><span class="line">vi /etc/selinux/config</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第7行修改为</span></span><br><span class="line">SELINUX=disabled</span><br><span class="line">需要重启生效</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">立即生效，临时的</span></span><br><span class="line">setenforce 0</span><br></pre></td></tr></table></figure></div>
-
-
-
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">3.关闭firewalld</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br><span class="line"></span><br><span class="line">4.优化yum源</span><br><span class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line"></span><br><span class="line">5.安装常用软件</span><br><span class="line">yum install lrzsz vim tree wget net-tools screen tcpdump bash-completion -y</span><br></pre></td></tr></table></figure></div>
-
-<p>安装httpd</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">yum install httpd -y</span><br></pre></td></tr></table></figure></div>
-
-<p>服务管理</p>
-<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">启动服务</span><br><span class="line">systemctl  start  httpd  #start启动</span><br><span class="line">停止服务</span><br><span class="line">systemctl  stop   httpd  #stop停止</span><br><span class="line">重启服务</span><br><span class="line">systemctl  restart   httpd #restart重启</span><br><span class="line">查看服务状态</span><br><span class="line">systemctl  status   httpd  #查看服务状态</span><br><span class="line">把服务设置为开机启动</span><br><span class="line">systemctl enable httpd.service</span><br><span class="line">取消服务的开机自启</span><br><span class="line">systemctl disable httpd.service</span><br></pre></td></tr></table></figure></div>
-
-<p>软件和服务都是程序</p>
-<p>软件一般是客户端curl</p>
-<p>服务一般是给客户端提供某一个功能，7*24一直运行</p>
-]]></content>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Assembley_language</title>
     <url>/2024/06/09/Assembley-language/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -1206,6 +901,311 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>Linux——基础</title>
+    <url>/2024/04/16/Linux%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="linux系统入门："><a href="#linux系统入门：" class="headerlink" title="linux系统入门："></a>linux系统入门：</h1><h2 id="1-操作系统介绍"><a href="#1-操作系统介绍" class="headerlink" title="1.操作系统介绍"></a>1.操作系统介绍</h2><p>软件：驱动硬件</p>
+<p>硬件：看得见，摸得着</p>
+<p>操作系统：特殊的软件，控制硬件，内核+软件 </p>
+<p>操作系统：</p>
+<p>unix(1969年诞生于贝尔实验室)</p>
+<p>硬件-系统(hp-ux)-软件</p>
+<p>BSD:  freeBSD  黑莓</p>
+<p>ios，mac os，<em>苹果</em>的 第一代 操作系统于1984年 发布</p>
+<p>ms-dos  单任务</p>
+<p>window 1.0  1985年发布  windows NT</p>
+<p>开源  闭源</p>
+<p>minix</p>
+<p>linux:  1991年  林纳斯.托瓦兹 linux内核 1.0&#x2F;GPL</p>
+<p>现在的操作系统：多任务，多用户</p>
+<p>GNU:  贡献了很多免费使用的软件</p>
+<p>GPL 协议</p>
+<p>gnu&#x2F;linux:</p>
+<p>中科麒麟</p>
+<p>linux发行版：</p>
+<p>linux内核</p>
+<p>红帽redhat ： fedora   centos  最稳定企业服务器操作系统centos6 2.6.32 centos7  3.10  centos8 4.10</p>
+<p>debian： ubuntu  kali  国产linux   内核 5.10 版本新 人工智能 自动驾驶 大数据</p>
+<p>suse： opensuse  suse企业版</p>
+<h2 id="2-centos系统的安装"><a href="#2-centos系统的安装" class="headerlink" title="2.centos系统的安装"></a>2.centos系统的安装</h2><p>ios镜像下载地址：</p>
+<p><a class="link" href="https://mirrors.tuna.tsinghua.edu.cn/centos-vault/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso">https://mirrors.tuna.tsinghua.edu.cn/centos-vault/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>install 安装</p>
+<p>test</p>
+<p>media 媒体 媒介 光盘</p>
+<p>lvm：逻辑卷</p>
+<p>el7:  enterprise linux 7</p>
+<p>linux远程控制：</p>
+<p>telnet协议： 明文</p>
+<p>ssh协议： 加密</p>
+<h2 id="3-远程连接linux"><a href="#3-远程连接linux" class="headerlink" title="3.远程连接linux"></a>3.远程连接linux</h2><p>第一步：查看ip地址  ip addr</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">远程登录linux系统</span></span><br><span class="line">ssh  root@192.168.202.136</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">断开连接</span></span><br><span class="line">exit</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重启系统</span></span><br><span class="line">reboot</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">立即关机</span></span><br><span class="line">shutdown  -h  now</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">十分钟之后关机</span></span><br><span class="line">shutdown  -h  10</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="4-文件操作"><a href="#4-文件操作" class="headerlink" title="4.文件操作"></a>4.文件操作</h2><p>命令1：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">切换目录</span></span><br><span class="line">cd  #全称change directory</span><br><span class="line">例子1：</span><br><span class="line">cd  local    #切换到子目录local</span><br><span class="line">cd  /usr/local  #切换到目录/usr/local</span><br><span class="line">cd  ..       #切换到上一级目录</span><br></pre></td></tr></table></figure></div>
+
+<p>命令2：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">print</span> work directory</span></span><br><span class="line">pwd</span><br></pre></td></tr></table></figure></div>
+
+<p>命令3：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">新建文件</span></span><br><span class="line">touch</span><br><span class="line">例子1： touch 1.txt  #创建单个文件</span><br><span class="line">例子2： touch test&#123;01..10&#125;.txt #批量创建文件</span><br><span class="line">例子3： touch /root/4.txt  #在制定的/root目录下，创建文件4.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>命令4：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看目录下的文件</span></span><br><span class="line">ls全称list</span><br><span class="line">例子1：ls  test09.txt   #查看test09.txt是否存在</span><br><span class="line">例子2：ls  *.txt        #查看以txt结尾的所有文件</span><br><span class="line">例子3：ls  -1           #以一行一个文件的方式显示</span><br><span class="line">例子4：ls  -a           #查看所有文件，包括隐藏文件</span><br><span class="line">例子5：ls -a -1         #查看所有文件，以一行一个来显示</span><br><span class="line">例子6：ls -l            #以长格式查看文件</span><br></pre></td></tr></table></figure></div>
+
+<p>以.开头的文件是隐藏文件，默认不显示</p>
+<p>命令5：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重命名</span></span><br><span class="line">mv全称move</span><br><span class="line">例子1：mv .123.txt 123.txt   #将.123.txt文件重命名为123.txt</span><br><span class="line">例子2：mv 123.txt /opt       #将当前目录下的123.txt移动到/opt目录下</span><br></pre></td></tr></table></figure></div>
+
+<p>命令6：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">复制</span></span><br><span class="line">cp全称copy</span><br><span class="line">例子1：cp test01.txt /opt/   #将当前目录下的test01.txt复制到/opt目录下</span><br><span class="line">例子2：cp -a dev04 /opt/     #将目录dev04复制到/opt下</span><br></pre></td></tr></table></figure></div>
+
+<p>命令7：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除</span></span><br><span class="line">例子1:  rm /opt/123.txt  #将/opt目录下的123.txt文件删除，需要回复y确认删除</span><br><span class="line">例子2： rm -f /opt/test01.txt #将/opt目录下的test01.txt文件删除，不需要回复</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除一个目录，linux的参数大部分没有先后顺序</span></span><br><span class="line">[root@localhost ~]# rm -fr dev</span><br><span class="line">[root@localhost ~]# rm -rf dev01</span><br><span class="line">[root@localhost ~]# rm -f -r dev02</span><br><span class="line">[root@localhost ~]# rm -r -f dev03</span><br></pre></td></tr></table></figure></div>
+
+<p>命令8：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建文件夹 创建目录directory</span></span><br><span class="line">mkdir 全称make directory </span><br><span class="line">例子1：mkdir dev   #创建一个dev目录</span><br><span class="line">例子2：mkdir dev&#123;01..10&#125;     #批量创建多个目录</span><br><span class="line">例子3：mkdir -p 1/2/3/4/5/6  #一次性创建多级子目录</span><br></pre></td></tr></table></figure></div>
+
+<p>命令9：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">vi编辑器</span></span><br><span class="line">例子1： vi  test03.txt   #编辑文件test03.txt</span><br><span class="line">默认是常规模式，按ioa键进入编辑模式</span><br><span class="line">在编辑模式中按esc回到常规模式</span><br><span class="line">常规模式按:进入命令模式</span><br><span class="line">命令模式按esc回到常规模式</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>命令10：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从上往下顺序查看文本内容</span></span><br><span class="line">cat</span><br><span class="line">例子1：cat  test03.txt  #查看test03.txt的全部内容</span><br><span class="line">例子2：cat -n test03.txt #查看内容的时候显示行号</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从下往上倒着查看文本内容</span></span><br><span class="line">tac</span><br><span class="line">例子1：tac  test03.txt  #倒着查看test03.txt的全部内容</span><br></pre></td></tr></table></figure></div>
+
+<p>命令11：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看文件头几行</span></span><br><span class="line">head</span><br><span class="line">例子1： head  test03.txt       #查看文件的前十行，默认</span><br><span class="line">例子2： head  -n 5 test03.txt  #查看文件的前5行</span><br><span class="line">例子3： head  -5  test03.txt   #查看文件的前5行</span><br></pre></td></tr></table></figure></div>
+
+<p>命令12：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看文件倒数几行</span></span><br><span class="line">tail</span><br><span class="line">例子1： tail  test03.txt       #查看文件的倒数十行，默认</span><br><span class="line">例子2： tail  -n 5 test03.txt  #查看文件的倒数5行</span><br><span class="line">例子3： tail  -5  test03.txt   #查看文件的倒数5行</span><br></pre></td></tr></table></figure></div>
+
+<p>管道</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# ip addr</span><br><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span><br><span class="line">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">    inet 127.0.0.1/8 scope host lo</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 ::1/128 scope host </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">2: ens33: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000</span><br><span class="line">    link/ether 00:0c:29:83:e4:d9 brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 10.0.0.128/24 brd 10.0.0.255 scope global noprefixroute dynamic ens33</span><br><span class="line">       valid_lft 1253sec preferred_lft 1253sec</span><br><span class="line">    inet6 fe80::ffe1:31ed:56dc:d9aa/64 scope link noprefixroute </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">[root@localhost ~]# ip addr|tail -4</span><br><span class="line">    inet 10.0.0.128/24 brd 10.0.0.255 scope global noprefixroute dynamic ens33</span><br><span class="line">       valid_lft 1224sec preferred_lft 1224sec</span><br><span class="line">    inet6 fe80::ffe1:31ed:56dc:d9aa/64 scope link noprefixroute </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">[root@localhost ~]# ip addr|tail -4|head -1</span><br><span class="line">    inet 10.0.0.128/24 brd 10.0.0.255 scope global noprefixroute dynamic ens33</span><br><span class="line">[root@localhost ~]# ip addr|tail -4|head -1|cut -c 10-19</span><br><span class="line">10.0.0.128</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="5-目录结构"><a href="#5-目录结构" class="headerlink" title="5.目录结构"></a>5.目录结构</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">/bin      #存放二进制的可执行文件，命令，特别重要，不能删除!</span><br><span class="line">/boot     #开机启动需要的文件， 特别重要，不能删除!</span><br><span class="line">/dev      #device设备文件，特别重要，不能删除!</span><br><span class="line">/etc      #存放配置文件，特别重要，不能删除!</span><br><span class="line">/home     #普通用户的家目录</span><br><span class="line">/lib      #library 32位库，一般是so结尾，特别重要，不能删除!</span><br><span class="line">/lib64    #library 64位库，一般是so结尾，特别重要，不能删除!</span><br><span class="line">/media    #多媒体</span><br><span class="line">/mnt      #mount挂载光盘，U盘</span><br><span class="line">/opt      #部分软件安装存储目录</span><br><span class="line">/proc     #process进程 ， 特别重要，不能删除!</span><br><span class="line">/root     #root用户的家目录，特别重要，不能删除!</span><br><span class="line">/run      #运行，程序运行的时候产生的文件</span><br><span class="line">/sbin     #super bin超级用户才能使用的命令 ，特别重要，不能删除!</span><br><span class="line">/srv      #源代码</span><br><span class="line">/sys      #system系统目录 ，特别重要，不能删除!</span><br><span class="line">/tmp      #用来存放临时文件的目录</span><br><span class="line">/usr      #用户级的目录，特别重要，不能删除!</span><br><span class="line">/var      #variable 变化的文件，特别重要，不能删除!</span><br></pre></td></tr></table></figure></div>
+
+<p>命令13</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">统计</span></span><br><span class="line">wc</span><br><span class="line">wc -l按行统计，不会单独使用，需要接在管道后面</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# cat test03.txt |wc -l</span><br><span class="line">18</span><br><span class="line">[root@localhost ~]# cat -n test03.txt </span><br><span class="line">     1	sdsdsdsdsdsdsd是的是的</span><br><span class="line">     2	</span><br><span class="line">     3	sdsd</span><br><span class="line">     4	65656</span><br><span class="line">     5	sdsd</span><br><span class="line">     6	sdsd</span><br><span class="line">     7	sdsd</span><br><span class="line">     8	33333</span><br><span class="line">     9	565656565</span><br><span class="line">    10	33333</span><br><span class="line">    11	565656565</span><br><span class="line">    12	33333</span><br><span class="line">    13	565656565</span><br><span class="line">    14	33333</span><br><span class="line">    15	565656565</span><br><span class="line">    16	</span><br><span class="line">    17	</span><br><span class="line">    18	sdssds  ;;;;</span><br></pre></td></tr></table></figure></div>
+
+<p>命令14</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">生成数字序列</span></span><br><span class="line">seq</span><br><span class="line">例子1：产生一个5到12的序列</span><br><span class="line">[root@localhost ~]# seq 5 12</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line"></span><br><span class="line">例子2：产生一个5到12等宽的序列</span><br><span class="line">[root@localhost ~]# seq -w 5 12</span><br><span class="line">05</span><br><span class="line">06</span><br><span class="line">07</span><br><span class="line">08</span><br><span class="line">09</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td></tr></table></figure></div>
+
+<p>命令15</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">按行过滤字符串</span></span><br><span class="line">grep</span><br><span class="line">例子1： #普通过滤</span><br><span class="line">[root@localhost ~]# grep &#x27;3&#x27; test03.txt </span><br><span class="line">33333</span><br><span class="line">33333</span><br><span class="line">33333</span><br><span class="line">33333</span><br><span class="line">例子2： #显示行号</span><br><span class="line">[root@localhost ~]# grep -n &#x27;3&#x27; test03.txt </span><br><span class="line">8:33333</span><br><span class="line">10:33333</span><br><span class="line">12:33333</span><br><span class="line">14:33333</span><br></pre></td></tr></table></figure></div>
+
+<p>grep精准匹配-w</p>
+<p>命令16</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">按列过滤</span></span><br><span class="line">awk</span><br><span class="line">例子1： 取列,$1代表第一列，$2代表第二列，$NF代表最后一列</span><br><span class="line">[root@localhost ~]# cat test01.txt </span><br><span class="line">row 1, cell 1	row 1, cell 2</span><br><span class="line">row 2, cell 1	row 2, cell 2</span><br><span class="line">[root@localhost ~]# awk &#x27;&#123;print $1&#125;&#x27; test01.txt </span><br><span class="line">row</span><br><span class="line">row</span><br><span class="line">[root@localhost ~]# awk &#x27;&#123;print $2&#125;&#x27; test01.txt </span><br><span class="line">1,</span><br><span class="line">2,</span><br><span class="line">例子2：以逗号,做分隔符</span><br><span class="line">[root@localhost ~]# cat test01.txt </span><br><span class="line">row 1, cell 1	row 1, cell 2</span><br><span class="line">row 2, cell 1	row 2, cell 2</span><br><span class="line">[root@localhost ~]# awk -F &#x27;,&#x27;   &#x27;&#123;print $1&#125;&#x27; test01.txt </span><br><span class="line">row 1</span><br><span class="line">row 2</span><br><span class="line">[root@localhost ~]# awk -F &#x27;,&#x27;   &#x27;&#123;print $NF&#125;&#x27; test01.txt </span><br><span class="line"> cell 2</span><br><span class="line"> cell 2</span><br></pre></td></tr></table></figure></div>
+
+<p>命令17</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">排序</span></span><br><span class="line">sort</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# cat test02.txt</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">6</span><br><span class="line">4</span><br><span class="line">8</span><br><span class="line">7</span><br><span class="line">5</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">9</span><br><span class="line">1</span><br><span class="line">5</span><br><span class="line">7</span><br><span class="line">[root@localhost ~]# cat test02.txt|sort -n</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td></tr></table></figure></div>
+
+<p>命令18：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">统计去重</span></span><br><span class="line">uniq</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# cat test02.txt|sort -n</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">[root@localhost ~]# cat test02.txt|sort -n|uniq -c</span><br><span class="line">      2 1</span><br><span class="line">      3 2</span><br><span class="line">      3 3</span><br><span class="line">      2 4</span><br><span class="line">      3 5</span><br><span class="line">      2 6</span><br><span class="line">      2 7</span><br><span class="line">      1 8</span><br><span class="line">      1 9</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="6-用户和用户组管理"><a href="#6-用户和用户组管理" class="headerlink" title="6.用户和用户组管理"></a>6.用户和用户组管理</h2><p>命令19</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">作用查看所有用户最后的登录时间</span></span><br><span class="line">lastlog</span><br><span class="line">例子：</span><br><span class="line">[root@qstack ~]# lastlog </span><br><span class="line">Username         Port     From             Latest</span><br><span class="line">root             pts/0    111.198.38.138   Mon Sep  6 11:17:25 +0800 2021</span><br><span class="line">bin                                        **Never logged in**</span><br><span class="line">daemon                                     **Never logged in**</span><br><span class="line">adm                                        **Never logged in**</span><br><span class="line">lp                                         **Never logged in**</span><br><span class="line">sync                                       **Never logged in**</span><br><span class="line">shutdown                                   **Never logged in**</span><br><span class="line">halt                                       **Never logged in**</span><br><span class="line">mail                                       **Never logged in**</span><br><span class="line">uucp                                       **Never logged in**</span><br><span class="line">operator                                   **Never logged in**</span><br><span class="line">games                                      **Never logged in**</span><br><span class="line">gopher                                     **Never logged in**</span><br></pre></td></tr></table></figure></div>
+
+<p>命令20：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建用户</span></span><br><span class="line">useradd </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建一个用户</span></span><br><span class="line">例子1：useradd  test1</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建用户，并给用户指定用户组</span></span><br><span class="line">例子2：</span><br><span class="line">[root@localhost tmp]# useradd  -g test1  test3</span><br><span class="line">[root@localhost tmp]# id test3</span><br><span class="line">uid=1002(test3) gid=1000(test1) 组=1000(test1)</span><br></pre></td></tr></table></figure></div>
+
+<p>命令21：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置密码</span></span><br><span class="line">passwd</span><br><span class="line">例子1：passwd  test1</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">用root用户给普通用户修改密码</span></span><br><span class="line">[root@localhost ~]# passwd test1</span><br><span class="line">更改用户 test1 的密码 。</span><br><span class="line">新的 密码：</span><br><span class="line">无效的密码： 密码是一个回文</span><br><span class="line">重新输入新的 密码：</span><br><span class="line">passwd：所有的身份验证令牌已经成功更新。</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">普通用户自己修改密码</span></span><br><span class="line">[test1@localhost ~]$ passwd </span><br><span class="line">更改用户 test1 的密码 。</span><br><span class="line">为 test1 更改 STRESS 密码。</span><br><span class="line">（当前）UNIX 密码：</span><br><span class="line">新的 密码：</span><br><span class="line">无效的密码： 密码少于 8 个字符</span><br><span class="line">新的 密码：</span><br><span class="line">无效的密码： 密码少于 8 个字符</span><br><span class="line">新的 密码：</span><br><span class="line">无效的密码： 密码未通过字典检查 - 过于简单化/系统化</span><br><span class="line">passwd: 已经超出服务重试的最多次数</span><br><span class="line"></span><br><span class="line">例子3：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">免交互修改密码</span></span><br><span class="line">echo 123456|passwd --stdin test1</span><br></pre></td></tr></table></figure></div>
+
+<p>命令22：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">检查用户是否存在</span></span><br><span class="line">id</span><br><span class="line">例子1: </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">用户存在，系统的返回结果</span></span><br><span class="line">[root@localhost ~]# id test1</span><br><span class="line">uid=1000(test1) gid=1000(test1) 组=1000(test1)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">用户不存在，系统的返回结果</span></span><br><span class="line">[root@localhost ~]# id test2</span><br><span class="line">id: test2: no such user</span><br></pre></td></tr></table></figure></div>
+
+<p>命令23：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除用户</span></span><br><span class="line">userdel</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">被删除的用户还在登录状态</span></span><br><span class="line">[root@localhost ~]# userdel test1</span><br><span class="line">userdel: user test1 is currently used by process 2356</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">被删除的用户，退出登录之后，可以正常删除</span></span><br><span class="line">[root@localhost ~]# userdel test1</span><br></pre></td></tr></table></figure></div>
+
+<p>命令24：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改用户信息</span></span><br><span class="line">usermode</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">锁定用户</span></span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# usermod -L test1  -U 解锁</span><br><span class="line">[root@localhost ~]# lchage -l test1</span><br><span class="line">帐号被锁。</span><br><span class="line">至少:	0</span><br><span class="line">至多:	99999</span><br><span class="line">警告:	7</span><br><span class="line">不活跃：	从不</span><br><span class="line">最后一次改变：	2021年07月20日</span><br><span class="line">密码过期：	从不</span><br><span class="line">密码不活跃：	从不</span><br><span class="line">帐号过期：	从不</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">禁止用户登录</span></span><br><span class="line">[root@localhost ~]# usermod -s /sbin/nologin test2</span><br><span class="line">[root@localhost ~]# grep -w &#x27;test2&#x27; /etc/passwd</span><br><span class="line">test2:x:1001:1001::/home/test2:/sbin/nologin</span><br></pre></td></tr></table></figure></div>
+
+<p>命令25：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看用户详细信息</span></span><br><span class="line">lchage</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# lchage -l test1</span><br><span class="line">帐号没被锁。</span><br><span class="line">至少:	0</span><br><span class="line">至多:	99999</span><br><span class="line">警告:	7</span><br><span class="line">不活跃：	从不</span><br><span class="line">最后一次改变：	2021年07月20日</span><br><span class="line">密码过期：	从不</span><br><span class="line">密码不活跃：	从不</span><br><span class="line">帐号过期：	从不</span><br></pre></td></tr></table></figure></div>
+
+<p>所有的用户信息存储在&#x2F;etc&#x2F;passwd文件中</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">bin:x:1:1:bin:/bin:/sbin/nologin</span><br><span class="line">daemon:x:2:2:daemon:/sbin:/sbin/nologin</span><br><span class="line">adm:x:3:4:adm:/var/adm:/sbin/nologin</span><br><span class="line">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</span><br><span class="line">sync:x:5:0:sync:/sbin:/bin/sync</span><br><span class="line">shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown</span><br><span class="line">halt:x:7:0:halt:/sbin:/sbin/halt</span><br><span class="line">mail:x:8:12:mail:/var/spool/mail:/sbin/nologin</span><br><span class="line">operator:x:11:0:operator:/root:/sbin/nologin</span><br><span class="line">games:x:12:100:games:/usr/games:/sbin/nologin</span><br><span class="line">ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin</span><br><span class="line">nobody:x:99:99:Nobody:/:/sbin/nologin</span><br><span class="line">systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin</span><br><span class="line">dbus:x:81:81:System message bus:/:/sbin/nologin</span><br><span class="line">polkitd:x:999:998:User for polkitd:/:/sbin/nologin</span><br><span class="line">tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin</span><br><span class="line">abrt:x:173:173::/etc/abrt:/sbin/nologin</span><br><span class="line">sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin</span><br><span class="line">postfix:x:89:89::/var/spool/postfix:/sbin/nologin</span><br><span class="line">chrony:x:998:996::/var/lib/chrony:/sbin/nologin</span><br><span class="line">test1:x:1000:1000::/home/test1:/bin/bash</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">passwd文件解释</span></span><br><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">test1:x:1000:1000::/home/test1:/bin/bash</span><br><span class="line">test2:x:1001:1001::/home/test2:/sbin/nologin</span><br><span class="line">test3:x:1002:1000::/home/test3:/sbin/nologin</span><br><span class="line">haha:x:1004:1004:putong user:/home/haha:/bin/bash</span><br><span class="line">第一列：用户名</span><br><span class="line">第二列：x</span><br><span class="line">第三列：uid</span><br><span class="line">第四列：gid</span><br><span class="line">第五列：注释，备注，一般为空</span><br><span class="line">第六列：家目录的位置</span><br><span class="line">第七列：使用shell的名称，默认使用/bin/bash</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>所有的用户密码信息存储&#x2F;etc&#x2F;shadow</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# cat /etc/shadow</span><br><span class="line">root:$6$QM3AHtFflOvGbCnt$2wTYZrnO8c66vycaxprE79G.I7hiy8EqXntG86FXxqlSawjtKoTjAnAa9xFA3ad1QpFskJRPt0QeDPBnZZAdx0::0:99999:7:::</span><br><span class="line">bin:*:18353:0:99999:7:::</span><br><span class="line">daemon:*:18353:0:99999:7:::</span><br><span class="line">adm:*:18353:0:99999:7:::</span><br><span class="line">lp:*:18353:0:99999:7:::</span><br><span class="line">sync:*:18353:0:99999:7:::</span><br><span class="line">shutdown:*:18353:0:99999:7:::</span><br><span class="line">halt:*:18353:0:99999:7:::</span><br><span class="line">mail:*:18353:0:99999:7:::</span><br><span class="line">operator:*:18353:0:99999:7:::</span><br><span class="line">games:*:18353:0:99999:7:::</span><br><span class="line">ftp:*:18353:0:99999:7:::</span><br><span class="line">nobody:*:18353:0:99999:7:::</span><br><span class="line">systemd-network:!!:18827::::::</span><br><span class="line">dbus:!!:18827::::::</span><br><span class="line">polkitd:!!:18827::::::</span><br><span class="line">tss:!!:18827::::::</span><br><span class="line">abrt:!!:18827::::::</span><br><span class="line">sshd:!!:18827::::::</span><br><span class="line">postfix:!!:18827::::::</span><br><span class="line">chrony:!!:18827::::::</span><br><span class="line">test1:$6$7PLnhlcr$4SCHINbWrameVSn6rxYgDOeUBwvYOHVbEOIudtNxWXIl5ULSt1Om8FvK6R3s9fI0qNef1vq8NhVMNJwudmfkM1:18828:0:99999:7:::</span><br></pre></td></tr></table></figure></div>
+
+<p>用户组管理</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">增  groupadd</span><br><span class="line">删  groupdel</span><br><span class="line">改  groupmod </span><br><span class="line">查  看/etc/group</span><br></pre></td></tr></table></figure></div>
+
+<p>命令26</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">增加一个用户组</span></span><br><span class="line">groupadd</span><br><span class="line">例子：</span><br><span class="line">groupadd test  #创建用户的时候可以制定组   useradd -g test test2</span><br></pre></td></tr></table></figure></div>
+
+<p>命令27</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除一个用户组</span></span><br><span class="line">groupdel</span><br><span class="line">例子： groupdel test</span><br></pre></td></tr></table></figure></div>
+
+<p>命令28</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改一个用户组</span></span><br><span class="line">groupmod</span><br><span class="line">例子1：groupmod -g 999 test #修改用户组的组id</span><br><span class="line">例子2：groupmod -n haha test #讲用户组test修改为新的组名haha</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="7-权限管理"><a href="#7-权限管理" class="headerlink" title="7.权限管理"></a>7.权限管理</h2><p>root用户权限最高</p>
+<p>user普通用户</p>
+<p>users用户组</p>
+<p>文件权限</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">r 4 代表读权限 read</span><br><span class="line">w 2 代表写权限 write</span><br><span class="line">x 1 代表执行权限</span><br><span class="line">- 0 空权限位</span><br><span class="line"></span><br><span class="line">权限值表</span><br><span class="line">0 ---</span><br><span class="line">1 --x</span><br><span class="line">2 -w-</span><br><span class="line">3 -wx</span><br><span class="line">4 r--</span><br><span class="line">5 r-x</span><br><span class="line">6 rw-</span><br><span class="line">7 rwx</span><br><span class="line"></span><br><span class="line">rw-   r--    r-- </span><br><span class="line">user  group  other</span><br></pre></td></tr></table></figure></div>
+
+<p>命令25</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">改变文件的权限</span></span><br><span class="line">chmod</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改权限之前</span></span><br><span class="line">[test1@localhost tmp]$ ls -l</span><br><span class="line">总用量 4</span><br><span class="line">-rw-rw----. 1 test1 test1 8 7月  20 17:20 test1.txt</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改权限</span></span><br><span class="line">[test1@localhost tmp]$ chmod u+x test1.txt </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改权限之后</span></span><br><span class="line">[test1@localhost tmp]$ ls -l</span><br><span class="line">总用量 4</span><br><span class="line">-rwxrw----. 1 test1 test1 8 7月  20 17:20 test1.txt</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line">同时修改多个权限</span><br><span class="line">[test1@localhost tmp]$ chmod u-x,g-x,o+x test1.txt </span><br><span class="line">[test1@localhost tmp]$ ls -l</span><br><span class="line">总用量 4</span><br><span class="line">-rw-rw---x. 1 test1 test1 8 7月  20 17:20 test1.txt</span><br><span class="line"></span><br><span class="line">例子3：</span><br><span class="line">[test1@localhost tmp]$ chmod 777 test1.txt </span><br><span class="line">[test1@localhost tmp]$ ls -l</span><br><span class="line">总用量 4</span><br><span class="line">-rwxrwxrwx. 1 test1 test1 8 7月  20 17:20 test1.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>命令26</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改文件的所属</span></span><br><span class="line">chown</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost tmp]# chown test2:test2 ls</span><br><span class="line">[root@localhost tmp]# ls -l</span><br><span class="line">总用量 404</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 159024 7月  20 17:43 grep</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 117608 7月  20 17:38 ls</span><br><span class="line">-rwxr-xr-x. 1 test1 test1 130360 7月  20 17:43 mv</span><br><span class="line">-rw-rw-rw-. 1 test1 test1     14 7月  20 17:38 test1.txt</span><br><span class="line">[root@localhost tmp]# chown test1 ls</span><br><span class="line">[root@localhost tmp]# ls -l</span><br><span class="line">总用量 404</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 159024 7月  20 17:43 grep</span><br><span class="line">-rwxr-xr-x. 1 test1 test2 117608 7月  20 17:38 ls</span><br><span class="line">-rwxr-xr-x. 1 test1 test1 130360 7月  20 17:43 mv</span><br><span class="line">-rw-rw-rw-. 1 test1 test1     14 7月  20 17:38 test1.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用uid和gid修改文件的所属用户和所属用户组  属主，属组</span></span><br><span class="line">例子2：</span><br><span class="line">[root@localhost tmp]# ls -l</span><br><span class="line">总用量 404</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 159024 7月  20 17:43 grep</span><br><span class="line">-rwxr-xr-x. 1 test1 test2 117608 7月  20 17:38 ls</span><br><span class="line">-rwxr-xr-x. 1 test1 test1 130360 7月  20 17:43 mv</span><br><span class="line">-rw-rw-rw-. 1 test1 test1     14 7月  20 17:38 test1.txt</span><br><span class="line">[root@localhost tmp]# id test1</span><br><span class="line">uid=1000(test1) gid=1000(test1) 组=1000(test1)</span><br><span class="line">[root@localhost tmp]# id test2</span><br><span class="line">uid=1001(test2) gid=1001(test2) 组=1001(test2)</span><br><span class="line">[root@localhost tmp]# useradd  -g test1  test3</span><br><span class="line">[root@localhost tmp]# id test3</span><br><span class="line">uid=1002(test3) gid=1000(test1) 组=1000(test1)</span><br><span class="line">[root@localhost tmp]# chown 1001:1001 test1.txt </span><br><span class="line">[root@localhost tmp]# ls -l </span><br><span class="line">总用量 404</span><br><span class="line">-rwxr-xr-x. 1 test2 test2 159024 7月  20 17:43 grep</span><br><span class="line">-rwxr-xr-x. 1 test1 test2 117608 7月  20 17:38 ls</span><br><span class="line">-rwxr-xr-x. 1 test1 test1 130360 7月  20 17:43 mv</span><br><span class="line">-rw-rw-rw-. 1 test2 test2     14 7月  20 17:38 test1.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>文件属性</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">文件属性</span></span><br><span class="line">[root@localhost ~]# ls -l /tmp/123.txt</span><br><span class="line">-rw-r--r--. 1 root root 0 7月  20 23:17 /tmp/123.txt</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段的第一个字符，表示文件类型 -文件 d目录 l软链接 b块设备</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段第2-4字符，表示该文件所属用户的权限</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段第5-7字符，表示该文件所属用户组的权限</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段第8-10字符，表示其他用户对该文件的权限</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第一段的第11个字符，表示开启selinux的状态下创建的</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第二段的数字，表示该文件的硬链接数量</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第三段的字符串，表示该文件所属用户</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第四段的字符串，表示该文件所属用户组</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第五段的数字，表示该文件的大小</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第六段到倒数第二段，都是该文件的修改时间</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">最一段，该文件的名称</span></span><br></pre></td></tr></table></figure></div>
+
+<p>linux一切皆文件的系统</p>
+<h2 id="8-Linux-Shell"><a href="#8-Linux-Shell" class="headerlink" title="8.Linux Shell"></a>8.Linux Shell</h2><p>优化ssh登录速度</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改配置文件，先备份</span></span><br><span class="line">[root@localhost ~]# cp /etc/ssh/sshd_config /tmp/</span><br><span class="line">[root@localhost ~]# vi /etc/ssh/sshd_config </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">直接输入:79回车</span></span><br><span class="line">    79  GSSAPIAuthentication no</span><br><span class="line">    115 UseDNS no</span><br><span class="line">输入:wq保存退出</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重启sshd服务</span></span><br><span class="line">[root@localhost ~]# systemctl restart sshd</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果修改失败，还原配置文件</span></span><br><span class="line">[root@localhost ~]# cp  /tmp/sshd_config  /etc/ssh/sshd_config</span><br><span class="line">[root@localhost ~]# systemctl restart sshd</span><br></pre></td></tr></table></figure></div>
+
+<p>shell提示符</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">root用户提示符</span></span><br><span class="line">[root@localhost ~]# </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">普通用户test1的提示符</span></span><br><span class="line">[test1@localhost ~]$ </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">提示符格式定制</span></span><br><span class="line">原格式</span><br><span class="line">[root@test ~]# echo $PS1</span><br><span class="line">[\u@\h \W]\$   # \u是用户，\h是主机名，\W是相对路径 </span><br><span class="line">修改后</span><br><span class="line">[root@test ~]#cd /usr/local/bin/</span><br><span class="line">[root@test bin]#export  PS1=&#x27;[\u@\h \w]\$&#x27;</span><br><span class="line">[root@test /usr/local/bin]#</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">永久修改</span></span><br><span class="line">[root@test 10:23:39 /usr/local/bin]#cd</span><br><span class="line">[root@test 10:24:25 ~]#vi .bashrc </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">找个空白的地方，插入一行</span></span><br><span class="line">export  PS1=&#x27;[\u@\h \t \w]\$&#x27;</span><br></pre></td></tr></table></figure></div>
+
+<p>linux路径</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">相对路径  不完整路径，  例子../bin  bin</span><br><span class="line">绝对路径  也叫完整路径，例子/usr/local/bin/</span><br></pre></td></tr></table></figure></div>
+
+<p>命令hostname</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">临时修改主机名</span></span><br><span class="line">hostname</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost ~]# hostname test</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">需要重新登录生效</span></span><br></pre></td></tr></table></figure></div>
+
+<p>命令hostnamectl</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">hostnamectl</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看主机的信息</span></span><br><span class="line">[root@localhost ~]# hostnamectl </span><br><span class="line">   Static hostname: localhost.localdomain</span><br><span class="line">         Icon name: computer-vm</span><br><span class="line">           Chassis: vm</span><br><span class="line">        Machine ID: f8a89169114741a8ac6de82954c5fbcb</span><br><span class="line">           Boot ID: dcf65386ccda42e29699d56101af8cf1</span><br><span class="line">    Virtualization: vmware</span><br><span class="line">  Operating System: CentOS Linux 7 (Core)</span><br><span class="line">       CPE OS Name: cpe:/o:centos:centos:7</span><br><span class="line">            Kernel: Linux 3.10.0-1127.el7.x86_64</span><br><span class="line">      Architecture: x86-64</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">永久修改主机名</span></span><br><span class="line">[root@localhost ~]# hostnamectl set-hostname test</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">需要重新登录生效</span></span><br></pre></td></tr></table></figure></div>
+
+<p>命令reboot</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">重启系统</span></span><br><span class="line">reboot</span><br><span class="line">例子1：</span><br><span class="line">[root@test ~]# reboot</span><br></pre></td></tr></table></figure></div>
+
+<p>命令shutdown</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">关闭或者重启linux</span></span><br><span class="line">shutdown</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">立即关机</span></span><br><span class="line">[root@localhost ~]# shutdown -h now</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">5分钟之后关机，可以使用shutdown -c取消</span></span><br><span class="line">[root@localhost ~]# shutdown -h 5</span><br><span class="line"></span><br><span class="line">例子3：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">5分钟之后重启系统，可以使用shutdown -c取消</span></span><br><span class="line">[root@localhost ~]# shutdown -r 5</span><br></pre></td></tr></table></figure></div>
+
+<p>shell基础语法</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">命令   参数   目标</span><br><span class="line">ls   -a -l   /opt </span><br><span class="line">rm   -rf    /opt/test1</span><br><span class="line"></span><br><span class="line">命令   目标1...   目标2</span><br><span class="line">mv    源路径     目标路径</span><br><span class="line">cp    </span><br><span class="line"></span><br><span class="line">命令</span><br><span class="line">reboot</span><br><span class="line"></span><br><span class="line">[root@test 11:12:02 /opt]#mv --help</span><br><span class="line">用法：mv [选项]... [-T] 源文件 目标文件</span><br><span class="line">　或：mv [选项]... 源文件... 目录</span><br><span class="line">　或：mv [选项]... -t 目录 源文件...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">格式解释</span></span><br><span class="line">[选项] 可选的</span><br><span class="line">...    可以有多个</span><br></pre></td></tr></table></figure></div>
+
+<p>tab键补全</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">补全命令</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果预选的特别多</span></span><br><span class="line">[root@test 11:25:24 ~]#</span><br><span class="line">Display all 1400 possibilities? (y or n)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果预选少</span></span><br><span class="line">[root@test 11:25:24 ~]#cha</span><br><span class="line">chacl   chage   chattr </span><br><span class="line"></span><br><span class="line">补全路径</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果预选的特别多</span></span><br><span class="line">[root@test 11:25:24 ~]#cd /etc/</span><br><span class="line">Display all 188 possibilities? (y or n)</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果预选少</span></span><br><span class="line">[root@test 11:25:24 ~]#cd /usr/src/</span><br><span class="line">debug/   kernels/ </span><br></pre></td></tr></table></figure></div>
+
+<p>快捷键</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">Ctrl + a    #光标跳转至正在输入的命令行的首部</span><br><span class="line">Ctrl + e    #光标跳转至正在输入的命令行的尾部</span><br><span class="line">Ctrl + c    #终止前台运行的程序</span><br><span class="line">Ctrl + d    #在shell中，ctrl-d表示推出当前shell。</span><br><span class="line">Ctrl + z    #将任务暂停，挂至后台, 执行fg命令继续运行</span><br><span class="line">Ctrl + l    #清屏，和clear命令等效。</span><br><span class="line">Ctrl + k    #删除从光标到行末的所有字符</span><br><span class="line">Ctrl + u    #删除从光标到行首的所有字符</span><br><span class="line">Ctrl + r    #搜索历史命令, 利用关键字</span><br><span class="line">ctrl + w    #光标往前删除一个参数</span><br><span class="line">esc + .     #上一条命令的最后一个参数，或者目标</span><br></pre></td></tr></table></figure></div>
+
+<p>history历史命令</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">历史</span></span><br><span class="line">history</span><br><span class="line">例子1:</span><br><span class="line">[root@test 14:32:10 ~]#history</span><br><span class="line">    1  exit</span><br><span class="line">    2  ls</span><br><span class="line">    3  head -1 test03.txt </span><br><span class="line">    4  head -1 test03.txt|cat</span><br><span class="line">    5  head -1 test03.txt|tac</span><br><span class="line">    6  head -2 test03.txt|tac</span><br><span class="line">    7  head -2 test03.txt|cat</span><br><span class="line">    8  ip addr</span><br><span class="line">    9  ip addr|tail -4</span><br><span class="line">   10  ip addr|tail -4|head -1</span><br><span class="line">   ......</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用!调用历史命令</span></span><br><span class="line">[root@test 14:32:10 ~]#history|head -5</span><br><span class="line">    1  exit</span><br><span class="line">    2  ls</span><br><span class="line">    3  head -1 test03.txt </span><br><span class="line">    4  head -1 test03.txt|cat</span><br><span class="line">    5  head -1 test03.txt|tac</span><br><span class="line">[root@test 14:32:26 ~]# !3</span><br><span class="line"> head -1 test03.txt </span><br><span class="line">head: 无法打开&quot;test03.txt&quot; 读取数据: 没有那个文件或目录</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用!调用<span class="built_in">mv</span>开头的命令</span></span><br><span class="line">[root@test 14:42:17 ~]#history </span><br><span class="line">    1  ls -a -l .bash_history </span><br><span class="line">    2  history </span><br><span class="line">    3  ls</span><br><span class="line">    4  history </span><br><span class="line">    5  mv aaaaa.txt /tmp/</span><br><span class="line">    6  history </span><br><span class="line">[root@test 14:42:19 ~]#!mv</span><br><span class="line">mv aaaaa.txt /tmp/</span><br><span class="line">mv: 无法获取&quot;aaaaa.txt&quot; 的文件状态(stat): 没有那个文件或目录</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">例子4：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">清除历史记录</span></span><br><span class="line">history -c</span><br></pre></td></tr></table></figure></div>
+
+<p>历史记录保存在家目录下的.bash_history文件中</p>
+<p>命令别名</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">别名</span></span><br><span class="line">alias</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看别名</span></span><br><span class="line">[root@test 15:23:17 ~]#alias </span><br><span class="line">alias cp=&#x27;cp -i&#x27;</span><br><span class="line">alias egrep=&#x27;egrep --color=auto&#x27;</span><br><span class="line">alias fgrep=&#x27;fgrep --color=auto&#x27;</span><br><span class="line">alias grep=&#x27;grep --color=auto&#x27;</span><br><span class="line">alias l.=&#x27;ls -d .* --color=auto&#x27;</span><br><span class="line">alias ll=&#x27;ls -l --color=auto&#x27;</span><br><span class="line">alias ls=&#x27;ls --color=auto&#x27;</span><br><span class="line">alias mv=&#x27;mv -i&#x27;</span><br><span class="line">alias rm=&#x27;rm -i&#x27;</span><br><span class="line">alias which=&#x27;alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde&#x27;</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">添加别名</span></span><br><span class="line">[test1@test 15:24:23 ~]$alias rm=&#x27;rm -i&#x27;</span><br><span class="line">[test1@test 15:27:08 ~]$alias |grep rm</span><br><span class="line">alias rm=&#x27;rm -i&#x27;</span><br><span class="line"></span><br><span class="line">例子3：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取消别名</span></span><br><span class="line">[test1@test 15:27:13 ~]$unalias rm </span><br><span class="line">[test1@test 15:27:47 ~]$alias |grep rm</span><br><span class="line"></span><br><span class="line">例子4：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">alias</span>永久生效</span></span><br><span class="line">[root@localhost ~]# vi .bashrc </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">空白处，增加一行</span></span><br><span class="line">alias rm=&#x27;echo -bash: rm: 未找到命令&#x27;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="9-linux输入输出"><a href="#9-linux输入输出" class="headerlink" title="9.linux输入输出"></a>9.linux输入输出</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"> 重定向， 将命令执行结果不输出到屏幕上，输出到文件里，会清空原文件</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash">&gt; 追加重定向，不会清空原文件</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">输入</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">标准输入0</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">输出</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">标准正确输出1</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">标准错误输出2</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="10-linux压缩打包"><a href="#10-linux压缩打包" class="headerlink" title="10.linux压缩打包"></a>10.linux压缩打包</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">打包和解压缩</span></span><br><span class="line">tar</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">归档，不压缩</span></span><br><span class="line">tar cf test.tar vmlinuz-*</span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">压缩并归档</span></span><br><span class="line">tar zcf test2.tar.gz vmlinuz-*</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子3：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看压缩包内容</span></span><br><span class="line">[root@localhost ~]# tar tf test.tar </span><br><span class="line">vmlinuz-0-rescue-f8a89169114741a8ac6de82954c5fbcb</span><br><span class="line">vmlinuz-3.10.0-1127.el7.x86_64	</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子4：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压缩</span></span><br><span class="line">tar xf test.tar</span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">打包和压缩</span></span><br><span class="line">gzip</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">压缩单个文件</span></span><br><span class="line">gzip protocols</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">压缩多个文件，每一个文件产生一个单独的压缩包</span></span><br><span class="line">gzip  hosts passwd shadow</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压缩</span></span><br><span class="line">gzip -d hosts.gz passwd.gz protocols.gz shadow.gz </span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">压缩</span></span><br><span class="line">zip</span><br><span class="line">例子1：</span><br><span class="line">zip -r 123.zip day01</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压</span></span><br><span class="line">unzip</span><br><span class="line">例子1：</span><br><span class="line">[root@localhost file]# unzip 123.zip</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压rar包</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">需要安装软件</span></span><br><span class="line">yum install epel-release -y</span><br><span class="line">yum install unar -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">再进行解压</span></span><br><span class="line">unar -o /opt 456.rar</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载文件</span></span><br><span class="line">curl</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载文件</span></span><br><span class="line">curl -o 123.zip http://192.168.18.10/day01.zip</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">检查网络畅通</span></span><br><span class="line">ping</span><br><span class="line">例子1：ping 223.5.5.5</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果网不通，重启网络服务</span></span><br><span class="line">systemctl restart network</span><br></pre></td></tr></table></figure></div>
+
+<p>查看文件类型file</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看文件类型</span></span><br><span class="line">file</span><br><span class="line">例子1：</span><br><span class="line">file 123.zip</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="11-文件传输"><a href="#11-文件传输" class="headerlink" title="11.文件传输"></a>11.文件传输</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">上传和下载</span></span><br><span class="line">rz  #上传</span><br><span class="line">sz  #下载</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">先安装lrzsz软件包</span></span><br><span class="line">yum  install lrzsz  -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">上传的例子</span></span><br><span class="line">如果使用xshell，直接鼠标拖拽，或者执行rz -E选择要上传的文件</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载的例子</span></span><br><span class="line">sz /root/test3.tar.gz</span><br></pre></td></tr></table></figure></div>
+
+<p>xftp上传下载</p>
+<p>scp传输</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">主要用于linux和linux服务器之间传输文件</span></span><br><span class="line">scp typora-setup-x64.exe  root@10.0.0.128:/tmp</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="12-软件的安装"><a href="#12-软件的安装" class="headerlink" title="12.软件的安装"></a>12.软件的安装</h2><p>编译安装</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">1.下载源码包</span><br><span class="line">cd /opt/</span><br><span class="line">rm -fr *</span><br><span class="line">curl -o nginx.tar.gz http://nginx.org/download/nginx-1.20.1.tar.gz</span><br><span class="line"></span><br><span class="line">2.编译</span><br><span class="line">tar xf nginx.tar.gz </span><br><span class="line">cd nginx-1.20.1/</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">编译参数</span></span><br><span class="line">./configure --prefix=/usr/local/nginx --without-pcre --without-http_rewrite_module --without-http_gzip_module</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">编译</span></span><br><span class="line">make</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装</span></span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">3.运行</span><br><span class="line">/usr/local/nginx/sbin/nginx</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用浏览器访问http://&lt;虚拟机的ip地址&gt;</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">关闭防火墙</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取消防火墙的开机自启</span></span><br><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure></div>
+
+<p>rpm安装</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">redhat package manager包管理器</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装wget</span></span><br><span class="line">yum install wget -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使用wget下载rpm包</span></span><br><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/centos/7/os/x86_64/Packages/tree-1.6.0-10.el7.x86_64.rpm</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装rpm包</span></span><br><span class="line">rpm -ivh tree-1.6.0-10.el7.x86_64.rpm </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">卸载</span></span><br><span class="line">rpm -e tree</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">升级</span></span><br><span class="line">rpm -Uvh  xxx.rpm</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看已安装的软件</span></span><br><span class="line">rpm -qa|grep httpd</span><br></pre></td></tr></table></figure></div>
+
+<p>命令</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">以树状的显示指定目录下的目录和文件的名称</span></span><br><span class="line">tree</span><br><span class="line">例子1：</span><br><span class="line">下载路径  yum install tree -y</span><br><span class="line">tree /usr/local</span><br></pre></td></tr></table></figure></div>
+
+<p>yum安装</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">自动解决rpm依赖</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">yum安装扩展yum仓库</span></span><br><span class="line">yum install epel-release -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">yum安装nginx</span></span><br><span class="line">yum install nginx -y</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">yum移除nginx</span></span><br><span class="line">yum remove nginx -y</span><br><span class="line">yum list|grep ^bash 查找tab 安装包</span><br><span class="line">yum install bash-completion.noarch bash-completion-extras.noarch -y 所有tab</span><br></pre></td></tr></table></figure></div>
+
+<p>安装方法总结</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">编译安装：优点： 自由定制  痛点：难度高，步骤繁琐</span><br><span class="line">rpm安装：优点：安装简单   痛点：需要自己解决依赖，不支持定制</span><br><span class="line">yum安装：优点：自动解决依赖，默认安装最新版  痛点：不支持定制</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="13-find文件查找"><a href="#13-find文件查找" class="headerlink" title="13.find文件查找"></a>13.find文件查找</h2><div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">文件查找</span></span><br><span class="line">例子1：普通查询</span><br><span class="line">find   /etc    -maxdepth 1  -type f  -name &quot;pa*&quot;</span><br><span class="line">命令   目录...   查找深度      类型      文件名称</span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子2：</span><br><span class="line">忽略大小写查询</span><br><span class="line">find /etc -maxdepth 1    -iname &quot;pa*&quot;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子3：</span><br><span class="line">根据修改时间查找文件</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">时间单位为天</span></span><br><span class="line">find /opt -type f -mtime -1   #-1代表一天以内，+1一天以前</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">时间单位为分钟</span></span><br><span class="line">[root@localhost ~]# find /root -type f -mmin -20</span><br><span class="line">/root/.bash_history</span><br><span class="line">/root/ReadMe.txt</span><br><span class="line">/root/.lesshst</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">atime：最后访问时间</span><br><span class="line">mtime：文件内容修改时间</span><br><span class="line">ctime：文件属性修改时间</span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">例子5：</span><br><span class="line">对找出的文件进行处理</span><br><span class="line">find /root -type f -mmin -30  ! -name &quot;.*&quot;  -exec rm &#123;&#125; \;</span><br><span class="line">find /root  -maxdepth 1  -type d  -name &quot;Apa*&quot;   -mmin -30 -exec cp -a &#123;&#125; /tmp \;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="14-进程管理"><a href="#14-进程管理" class="headerlink" title="14.进程管理"></a>14.进程管理</h2><p>进程：正在运行的程序</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看进程</span></span><br><span class="line">ps</span><br><span class="line">参数1：ps -ef</span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">关闭进程</span></span><br><span class="line">kill</span><br><span class="line">例子1： kill  7851  #使用进程id号，来终止进程</span><br><span class="line">pkill </span><br><span class="line">例子1： pkill sleep  #使用进程的命令名称，来终止进程</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#查看计算机的cpu，内存，进程等信息</span><br><span class="line">top</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="15-定时任务"><a href="#15-定时任务" class="headerlink" title="15.定时任务"></a>15.定时任务</h2><p>定期执行任务</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">时间命令</span></span><br><span class="line">date</span><br><span class="line">例子1：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看时间</span></span><br><span class="line">[root@localhost ~]# date</span><br><span class="line">2021年 07月 23日 星期五 14:38:19 CST</span><br><span class="line">[root@localhost ~]# date +%F</span><br><span class="line">2021-07-23</span><br><span class="line">[root@localhost ~]# date +%T</span><br><span class="line">14:35:47</span><br><span class="line"></span><br><span class="line">例子2：</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改时间</span></span><br><span class="line">[root@localhost ~]# date -s &#x27;20200723 14:40:00&#x27;</span><br><span class="line">2020年 07月 23日 星期四 14:40:00 CST</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">定时任务的格式</span></span><br><span class="line">*  *  * *  *    cmd</span><br><span class="line">分 时 日 月 周    命令</span><br><span class="line">分：0-59</span><br><span class="line">时：0-23</span><br><span class="line">日：0-31</span><br><span class="line">月：1-12</span><br><span class="line">周：1-7</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每5分钟执行一次</span></span><br><span class="line">*/5  *  * *  *</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每1小时执行一次</span></span><br><span class="line">01 */1 * * *</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每半个小时执行一次</span></span><br><span class="line">00,30  */1 * * *</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每天晚上8:00执行一次</span></span><br><span class="line">00 20 */1 * *</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">每周1晚上8:00执行一次</span></span><br><span class="line">00 20 */1 * 1,3,5</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看定时任务，遇到特殊符号%,需要添加转义符号\;</span></span><br><span class="line">[root@localhost ~]# crontab -l</span><br><span class="line">* * * * *  echo `date +\%T` &gt;&gt;/tmp/time.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">编辑定时任务</span></span><br><span class="line">[root@localhost ~]# crontab -e</span><br><span class="line"></span><br><span class="line">如果定时任务的格式，或者内容有问题，系统都会发邮件提示</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="16-服务管理"><a href="#16-服务管理" class="headerlink" title="16.服务管理"></a>16.服务管理</h2><p>优化系统：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">1.优化ssh</span><br><span class="line">vi /etc/ssh/sshd_config</span><br><span class="line">79行：GSSAPIAuthentication no</span><br><span class="line">115行：UseDNS no</span><br><span class="line">systemctl restart sshd</span><br><span class="line"></span><br><span class="line">2.优化selinux</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改配置文件，永久关闭</span></span><br><span class="line">vi /etc/selinux/config</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">第7行修改为</span></span><br><span class="line">SELINUX=disabled</span><br><span class="line">需要重启生效</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">立即生效，临时的</span></span><br><span class="line">setenforce 0</span><br></pre></td></tr></table></figure></div>
+
+
+
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">3.关闭firewalld</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br><span class="line"></span><br><span class="line">4.优化yum源</span><br><span class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line"></span><br><span class="line">5.安装常用软件</span><br><span class="line">yum install lrzsz vim tree wget net-tools screen tcpdump bash-completion -y</span><br></pre></td></tr></table></figure></div>
+
+<p>安装httpd</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">yum install httpd -y</span><br></pre></td></tr></table></figure></div>
+
+<p>服务管理</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">启动服务</span><br><span class="line">systemctl  start  httpd  #start启动</span><br><span class="line">停止服务</span><br><span class="line">systemctl  stop   httpd  #stop停止</span><br><span class="line">重启服务</span><br><span class="line">systemctl  restart   httpd #restart重启</span><br><span class="line">查看服务状态</span><br><span class="line">systemctl  status   httpd  #查看服务状态</span><br><span class="line">把服务设置为开机启动</span><br><span class="line">systemctl enable httpd.service</span><br><span class="line">取消服务的开机自启</span><br><span class="line">systemctl disable httpd.service</span><br></pre></td></tr></table></figure></div>
+
+<p>软件和服务都是程序</p>
+<p>软件一般是客户端curl</p>
+<p>服务一般是给客户端提供某一个功能，7*24一直运行</p>
+]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java实战</title>
     <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
     <content><![CDATA[]]></content>
@@ -1501,229 +1501,6 @@ over</p>
       <tags>
         <tag>Python</tag>
         <tag>实战项目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web_白帽子</title>
-    <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
-    <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
-<p>知识点罗列：</p>
-<ul>
-<li>URL概念、结构格式</li>
-<li>HTTP报文结构</li>
-<li>cookie含义</li>
-<li>Set-cookie含义</li>
-<li>Referer的作用</li>
-<li>状态码301和302的含义</li>
-<li>Location的含义</li>
-</ul>
-</blockquote>
-<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><blockquote>
-<p>统一资源定位符（Uniform Resource Locator）</p>
-</blockquote>
-<blockquote>
-<p>作用：定位服务器资源</p>
-</blockquote>
-<blockquote>
-<p>URL格式：schemna:&#x2F;&#x2F;host[:post#]&#x2F;path&#x2F;…&#x2F;[?query-string][#anchor]</p>
-<p>schemna	底层协议(例如：http,https,ftp…)</p>
-<p>host		  服务器的域名或IP地址</p>
-<p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
-<p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
-<p>？query-string 发送给http服务器的数据</p>
-<p>[#anchor]	 锚</p>
-</blockquote>
-<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
-<p>超文本传输协议（Hyper Text Transfer Protocol）</p>
-</blockquote>
-<blockquote>
-<p>作用：Web通信时使用的协议</p>
-</blockquote>
-<blockquote>
-<ol>
-<li><p>HTTP报文</p>
-<p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
-</li>
-<li><p>HTTP报文结构</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="http报文结构"></p>
-<p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
-<p>空行</p>
-<p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
-</li>
-<li><p>HTTP请求报文结构</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP请求报文结构"></p>
-<p>GET和POST的区别：</p>
-<blockquote>
-<p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
-</blockquote>
-</li>
-<li><p>HTTP响应报文结构</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP响应报文结构"></p>
-</li>
-</ol>
-<hr>
-<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
-<p>参考文章</p>
-<p>原文链接：<a class="link" href="https://blog.csdn.net/qq_35887546/article/details/104216286">https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<blockquote>
-<p>HTTP请求的方式</p>
-<p>–GET</p>
-<p>–POST</p>
-<p>–HEAD				 与GET请求类似，不同在于与服务器只返回HTTP头部信息，没有页面内容</p>
-<p>–PUT					上传指定URL的描述</p>
-<p>–DELETE			 删除指定资源</p>
-<p>–OPTIONS 		 返回服务器支持的HTTP方法</p>
-</blockquote>
-<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
-<p>cookie:相当于用户的凭证，类似与用户的通行证，很重要。</p>
-<p>set-cookie:服务器要求浏览器设置cookie</p>
-</blockquote>
-<h3 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h3><blockquote>
-<p>Referer的作用：</p>
-<p>–告知服务器该请求的来源（浏览器自动加上）</p>
-<p>–统计流量</p>
-<p>–判断来源合法性：防止盗链，防止CSRF漏洞</p>
-</blockquote>
-<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><blockquote>
-<p>Location：跳转到地址</p>
-</blockquote>
-<h3 id="响应报文状态码"><a href="#响应报文状态码" class="headerlink" title="响应报文状态码"></a>响应报文状态码</h3><blockquote>
-<p>响应报文状态码</p>
-<p><strong>3</strong>：完成此请求必须进一步处理**</p>
-<p>301——删除请求数据</p>
-<p>302——在其他地址发现了请求数据</p>
-<hr>
-<p>详细状态码：<a class="link" href="https://blog.csdn.net/qq_35887546/article/details/104216807">https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</blockquote>
-<h2 id="前端开发基础知识"><a href="#前端开发基础知识" class="headerlink" title="前端开发基础知识"></a>前端开发基础知识</h2><blockquote>
-<p>知识点罗列：</p>
-<p>​	–JavaScript</p>
-<p>​	–DOM</p>
-<p>​	–BOM</p>
-</blockquote>
-<h3 id="javaScript"><a href="#javaScript" class="headerlink" title="javaScript"></a>javaScript</h3><blockquote>
-<p>javaScript运行位置：</p>
-<ul>
-<li>HTML的<script></script></li>
-<li>HTML的事件属性中</li>
-<li>浏览器中的JavaScript控制台中的Console中</li>
-</ul>
-</blockquote>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
-<p>DOM本质：链接Web页面和编程语言</p>
-<p>JavaScript + DOM：访问和操作HTML文档的标准方法</p>
-</blockquote>
-<blockquote>
-<p>获取一个HTML元素内容</p>
-<ul>
-<li><p>tep1：获取元素</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()<span class="comment">//获取元素</span></span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep2：获取元素的内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span><span class="comment">//获取元素的内容</span></span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep3：显示获取信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p><strong>alert()方法在JavaScript中表示弹出一个警告框，可以用来展示信息</strong></p>
-</li>
-</ul>
-</blockquote>
-<p>示例</p>
-<blockquote>
-  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       <span class="title function_">alert</span>(<span class="string">&#x27;id为intro元素的文本是：&#x27;</span>+x.<span class="property">innerHTML</span>);  </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<blockquote>
-<p>修改一个HTML元素</p>
-<ul>
-<li><p>tep1：获取元素</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>tep2：获取元素内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span></span><br></pre></td></tr></table></figure></div></li>
-</ul>
-</blockquote>
-<p>示例</p>
-<blockquote>
-  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       x.<span class="property">innerHTML</span>=<span class="string">&#x27;HELLO WORLD!&#x27;</span>; </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<blockquote>
-<p>将元素该为框架iframe框架</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>=<span class="string">&quot;&lt;ifream src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifream&gt;&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>动态创建HTML内容</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title class_">Date</span>());<span class="comment">//向页面中写入当前时间</span></span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&lt;ifrema src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifrema&gt;&quot;</span>)<span class="comment">//向页面中写入框架</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<p>示例</p>
-<blockquote>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">         Hello!敬请T期待</span><br><span class="line">     <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     	<span class="keyword">function</span> <span class="title function_">changetext</span>(<span class="params">id</span>)</span></span><br><span class="line"><span class="language-javascript">         &#123;</span></span><br><span class="line"><span class="language-javascript">             id.<span class="property">innerHTML</span>=<span class="string">&quot;Kingwempity@敬请T期待&quot;</span>;<span class="comment">//点击后变化的内容</span></span></span><br><span class="line"><span class="language-javascript">         &#125;</span></span><br><span class="line"><span class="language-javascript">     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">h1</span> <span class="attr">onclick</span>=<span class="string">&quot;changetext(this)&quot;</span>&gt;</span></span><br><span class="line">         点我会发生变化o_o哦！</span><br><span class="line">     <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-</blockquote>
-<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><blockquote>
-<p>BOM:浏览器对象模型(Browser Object Model)</p>
-</blockquote>
-<blockquote>
-<p>让浏览器来警告用户:</p>
-<p>警告弹窗alert()</p>
-<p>确认弹窗confirm()</p>
-<p>提示弹窗prompt()</p>
-<p>以上弹窗常用于简单的调试和信息展示。例如XSS漏洞测试</p>
-</blockquote>
-<blockquote>
-<p>获取用户cookie（通常为浏览器发给用户客户端的一小段文本信息）</p>
-<blockquote>
-<p>常见场景：</p>
-<p>用户输入用户名和密码成功登录网站后，网站会生成一个cookie给用户，当作用户凭证</p>
-</blockquote>
-<p>cookie一般在控制台的network或Application中可以查看</p>
-<ul>
-<li><p>获取Cookie</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">cookie</span><span class="comment">//获取cookie</span></span><br></pre></td></tr></table></figure></div>
-
-
-</li>
-<li><p>修改写入Cookie</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">doucment.<span class="property">cookie</span>=<span class="string">&quot;写入值&quot;</span>#值的形式key=value</span><br></pre></td></tr></table></figure></div>
-
-
-</li>
-<li><p>显示cookie</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(document.cookie)</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-</blockquote>
-<blockquote>
-<p>获取浏览器屏幕信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)screen</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>获取&#x2F;控制用户页面的URL</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;https://kingwempity.github.io/&quot;</span><span class="comment">//控制当前页面url</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>获取访问者浏览器信息</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)navigator</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>操作浏览器窗口</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">open</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//打开页面</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">close</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//关闭页面</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-</blockquote>
-<p>敬请T期待！</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Web</tag>
-        <tag>安全</tag>
       </tags>
   </entry>
   <entry>
@@ -2480,6 +2257,229 @@ over</p>
       </tags>
   </entry>
   <entry>
+    <title>Web_白帽子</title>
+    <url>/2024/01/25/Web-%E7%99%BD%E5%B8%BD%E5%AD%90/</url>
+    <content><![CDATA[<h2 id="Web基础介绍"><a href="#Web基础介绍" class="headerlink" title="Web基础介绍"></a>Web基础介绍</h2><blockquote>
+<p>知识点罗列：</p>
+<ul>
+<li>URL概念、结构格式</li>
+<li>HTTP报文结构</li>
+<li>cookie含义</li>
+<li>Set-cookie含义</li>
+<li>Referer的作用</li>
+<li>状态码301和302的含义</li>
+<li>Location的含义</li>
+</ul>
+</blockquote>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><blockquote>
+<p>统一资源定位符（Uniform Resource Locator）</p>
+</blockquote>
+<blockquote>
+<p>作用：定位服务器资源</p>
+</blockquote>
+<blockquote>
+<p>URL格式：schemna:&#x2F;&#x2F;host[:post#]&#x2F;path&#x2F;…&#x2F;[?query-string][#anchor]</p>
+<p>schemna	底层协议(例如：http,https,ftp…)</p>
+<p>host		  服务器的域名或IP地址</p>
+<p>:post 		服务器的端口，HTTP默认端口是80(可省略)，其他端口需要指明</p>
+<p>&#x2F;path&#x2F;…&#x2F;	访问资源的路径</p>
+<p>？query-string 发送给http服务器的数据</p>
+<p>[#anchor]	 锚</p>
+</blockquote>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
+<p>超文本传输协议（Hyper Text Transfer Protocol）</p>
+</blockquote>
+<blockquote>
+<p>作用：Web通信时使用的协议</p>
+</blockquote>
+<blockquote>
+<ol>
+<li><p>HTTP报文</p>
+<p>HTTP报文是用于HTTP协议交互的信息，HTTP报文本身是由多行数据构成的字符串文本。客户端的HTTP报文叫做请求报文，服务器端的HTTP报文叫做响应报文。</p>
+</li>
+<li><p>HTTP报文结构</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="http报文结构"></p>
+<p><strong>报文首部</strong>是客户端或服务器端需处理的<code>请求或响应</code>的内容及属性， 可以传递额外的重要信息。报文首部包括请求行和请求头部。</p>
+<p>空行</p>
+<p><strong>报文主体</strong>主要包含应被发送的数据。通常，不一定有报文主体。</p>
+</li>
+<li><p>HTTP请求报文结构</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP请求报文结构"></p>
+<p>GET和POST的区别：</p>
+<blockquote>
+<p>（1）get是从服务器上获取数据（即下载），post是向服务器传送数据（即上传）。<br>（2）生成方式不同：<br>Get：URL输入；超连接；Form表单中method属性为get；Form表单中method为空。<br>Post只有一种：Form表单中method为Post。<br>（3）数据传送方式：Get传递的请求数据按照key-value的方式放在URL后面，在网址中可以直接看到，使用?分割URL和传输数据，传输的参数之间以&amp;相连，如：login.action?name&#x3D;user&amp;password&#x3D;123。所以安全性差。<br>POST方法会把请求的参数放到请求头部和空格下面的请求数据字段就是请求正文（请求体）中以&amp;分隔各个字段，请求行不包含参数，URL中不会额外附带参数。所以安全性高。<br>（3）发送数据大小的限制：通常GET请求可以用于获取轻量级的数据，而POST请求的内容数据量比较庞大些。<br>Get：1~2KB。get方法提交数据的大小直接影响到了URL的长度，但HTTP协议规范中其实是没有对URL限制长度的，限制URL长度的是客户端或服务器的支持的不同所影响。<br>Post：没有要求。post方式HTTP协议规范中也没有限定，起限制作用的是服务器的处理程序的能力。<br>（4）提交数据的安全：POST比GET方式的安全性要高。Get安全性差，Post安全性高。<br>通过GET提交数据，用户名和密码将明文出现在URL上，如果登录页面有浏览器缓存，或者其他人查看浏览器的历史记录，那么就可以拿到用户的账号和密码了。安全性将会很差。</p>
+</blockquote>
+</li>
+<li><p>HTTP响应报文结构</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://cdn.jsdelivr.net/gh/kingwempity/photo/images/http%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84.png" alt="HTTP响应报文结构"></p>
+</li>
+</ol>
+<hr>
+<p>版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</p>
+<p>参考文章</p>
+<p>原文链接：<a class="link" href="https://blog.csdn.net/qq_35887546/article/details/104216286">https://blog.csdn.net/qq_35887546/article/details/104216286 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<blockquote>
+<p>HTTP请求的方式</p>
+<p>–GET</p>
+<p>–POST</p>
+<p>–HEAD				 与GET请求类似，不同在于与服务器只返回HTTP头部信息，没有页面内容</p>
+<p>–PUT					上传指定URL的描述</p>
+<p>–DELETE			 删除指定资源</p>
+<p>–OPTIONS 		 返回服务器支持的HTTP方法</p>
+</blockquote>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
+<p>cookie:相当于用户的凭证，类似与用户的通行证，很重要。</p>
+<p>set-cookie:服务器要求浏览器设置cookie</p>
+</blockquote>
+<h3 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h3><blockquote>
+<p>Referer的作用：</p>
+<p>–告知服务器该请求的来源（浏览器自动加上）</p>
+<p>–统计流量</p>
+<p>–判断来源合法性：防止盗链，防止CSRF漏洞</p>
+</blockquote>
+<h3 id="Location"><a href="#Location" class="headerlink" title="Location"></a>Location</h3><blockquote>
+<p>Location：跳转到地址</p>
+</blockquote>
+<h3 id="响应报文状态码"><a href="#响应报文状态码" class="headerlink" title="响应报文状态码"></a>响应报文状态码</h3><blockquote>
+<p>响应报文状态码</p>
+<p><strong>3</strong>：完成此请求必须进一步处理**</p>
+<p>301——删除请求数据</p>
+<p>302——在其他地址发现了请求数据</p>
+<hr>
+<p>详细状态码：<a class="link" href="https://blog.csdn.net/qq_35887546/article/details/104216807">https://blog.csdn.net/qq_35887546/article/details/104216807 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<h2 id="前端开发基础知识"><a href="#前端开发基础知识" class="headerlink" title="前端开发基础知识"></a>前端开发基础知识</h2><blockquote>
+<p>知识点罗列：</p>
+<p>​	–JavaScript</p>
+<p>​	–DOM</p>
+<p>​	–BOM</p>
+</blockquote>
+<h3 id="javaScript"><a href="#javaScript" class="headerlink" title="javaScript"></a>javaScript</h3><blockquote>
+<p>javaScript运行位置：</p>
+<ul>
+<li>HTML的<script></script></li>
+<li>HTML的事件属性中</li>
+<li>浏览器中的JavaScript控制台中的Console中</li>
+</ul>
+</blockquote>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
+<p>DOM本质：链接Web页面和编程语言</p>
+<p>JavaScript + DOM：访问和操作HTML文档的标准方法</p>
+</blockquote>
+<blockquote>
+<p>获取一个HTML元素内容</p>
+<ul>
+<li><p>tep1：获取元素</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()<span class="comment">//获取元素</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep2：获取元素的内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span><span class="comment">//获取元素的内容</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep3：显示获取信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>alert()方法在JavaScript中表示弹出一个警告框，可以用来展示信息</strong></p>
+</li>
+</ul>
+</blockquote>
+<p>示例</p>
+<blockquote>
+  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       <span class="title function_">alert</span>(<span class="string">&#x27;id为intro元素的文本是：&#x27;</span>+x.<span class="property">innerHTML</span>);  </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<blockquote>
+<p>修改一个HTML元素</p>
+<ul>
+<li><p>tep1：获取元素</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>tep2：获取元素内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">.<span class="property">innerHTML</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</blockquote>
+<p>示例</p>
+<blockquote>
+  <div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>Kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">          Hello!敬请T期待</span><br><span class="line">       <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">       x=<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;intro&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       x.<span class="property">innerHTML</span>=<span class="string">&#x27;HELLO WORLD!&#x27;</span>; </span></span><br><span class="line"><span class="language-javascript">       </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<blockquote>
+<p>将元素该为框架iframe框架</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;id&quot;</span>).<span class="property">innerHTML</span>=<span class="string">&quot;&lt;ifream src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifream&gt;&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>动态创建HTML内容</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title class_">Date</span>());<span class="comment">//向页面中写入当前时间</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&lt;ifrema src=&#x27;https://kingwempity.github.io/&#x27;&gt;&lt;/ifrema&gt;&quot;</span>)<span class="comment">//向页面中写入框架</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>示例</p>
+<blockquote>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>kinwempity<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">P</span> <span class="attr">id</span>=<span class="string">&quot;intro&quot;</span>&gt;</span></span><br><span class="line">         Hello!敬请T期待</span><br><span class="line">     <span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">     	<span class="keyword">function</span> <span class="title function_">changetext</span>(<span class="params">id</span>)</span></span><br><span class="line"><span class="language-javascript">         &#123;</span></span><br><span class="line"><span class="language-javascript">             id.<span class="property">innerHTML</span>=<span class="string">&quot;Kingwempity@敬请T期待&quot;</span>;<span class="comment">//点击后变化的内容</span></span></span><br><span class="line"><span class="language-javascript">         &#125;</span></span><br><span class="line"><span class="language-javascript">     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">h1</span> <span class="attr">onclick</span>=<span class="string">&quot;changetext(this)&quot;</span>&gt;</span></span><br><span class="line">         点我会发生变化o_o哦！</span><br><span class="line">     <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><blockquote>
+<p>BOM:浏览器对象模型(Browser Object Model)</p>
+</blockquote>
+<blockquote>
+<p>让浏览器来警告用户:</p>
+<p>警告弹窗alert()</p>
+<p>确认弹窗confirm()</p>
+<p>提示弹窗prompt()</p>
+<p>以上弹窗常用于简单的调试和信息展示。例如XSS漏洞测试</p>
+</blockquote>
+<blockquote>
+<p>获取用户cookie（通常为浏览器发给用户客户端的一小段文本信息）</p>
+<blockquote>
+<p>常见场景：</p>
+<p>用户输入用户名和密码成功登录网站后，网站会生成一个cookie给用户，当作用户凭证</p>
+</blockquote>
+<p>cookie一般在控制台的network或Application中可以查看</p>
+<ul>
+<li><p>获取Cookie</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">cookie</span><span class="comment">//获取cookie</span></span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><p>修改写入Cookie</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">doucment.<span class="property">cookie</span>=<span class="string">&quot;写入值&quot;</span>#值的形式key=value</span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><p>显示cookie</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(document.cookie)</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>获取浏览器屏幕信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)screen</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>获取&#x2F;控制用户页面的URL</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span><span class="comment">//获取当前页面url</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>=<span class="string">&quot;https://kingwempity.github.io/&quot;</span><span class="comment">//控制当前页面url</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>获取访问者浏览器信息</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.)navigator</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>操作浏览器窗口</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">open</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//打开页面</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">close</span>(<span class="string">&quot;https://kingwempity.github.io/&quot;</span>)<span class="comment">//关闭页面</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+</blockquote>
+<p>敬请T期待！</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Web</tag>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ctf.show_web</title>
     <url>/2024/02/20/ctf-show-web/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -2582,7 +2582,7 @@ over</p>
 <img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_1.png" alt="ctfshow_web14_1" style="zoom:80%;">
 
 <blockquote>
-<p>尝试输入c获取$url,发现输入555555、3333、6000000时间过于漫长，输入1、2、3发现输入3时输出并非@A@,而是@<a class="link" href="mailto:&#x41;&#64;&#x68;&#x65;&#114;&#x65;&#x5f;&#49;&#x73;&#x5f;&#x79;&#x6f;&#x75;&#x72;&#95;&#x66;&#x31;&#x61;&#103;&#46;&#x70;&#104;&#x70;">&#x41;&#64;&#x68;&#x65;&#114;&#x65;&#x5f;&#49;&#x73;&#x5f;&#x79;&#x6f;&#x75;&#x72;&#95;&#x66;&#x31;&#x61;&#103;&#46;&#x70;&#104;&#x70; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>@A@，或许here_1s_your_f1ag.php里面就包含flag，查看here_1s_your_f1ag.php文件，发现查询页面，查看是否能进行SQL注入</p>
+<p>尝试输入c获取$url,发现输入555555、3333、6000000时间过于漫长，输入1、2、3发现输入3时输出并非@A@,而是@<a class="link" href="mailto:&#65;&#x40;&#x68;&#x65;&#x72;&#x65;&#x5f;&#49;&#115;&#95;&#121;&#111;&#117;&#x72;&#x5f;&#102;&#x31;&#97;&#x67;&#x2e;&#112;&#x68;&#x70;">&#65;&#x40;&#x68;&#x65;&#x72;&#x65;&#x5f;&#49;&#115;&#95;&#121;&#111;&#117;&#x72;&#x5f;&#102;&#x31;&#97;&#x67;&#x2e;&#112;&#x68;&#x70; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>@A@，或许here_1s_your_f1ag.php里面就包含flag，查看here_1s_your_f1ag.php文件，发现查询页面，查看是否能进行SQL注入</p>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_2.png" alt="ctfshow_web14_2"></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/ctfshow_web14_3.png" alt="ctfshow_web14_3"></p>

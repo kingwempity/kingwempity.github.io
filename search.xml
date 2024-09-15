@@ -2383,7 +2383,6 @@ over</p>
     </div>
   </div>
 
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% notel purple 模运算 %&#125;</span><br><span class="line">设 n 是一个正整数，a 是整数，如果用 n 除以 a ,得商为 q ,余数为 r ,则：</span><br><span class="line">a = q * n + r, 0 &lt;= r &lt; n, q = ⌊ a/n ⌋</span><br><span class="line">余数 r 用 a mod n 表示。</span><br><span class="line">若(a mod n) = (b mod n)，则称两个整数 a 和 b 模 n 同余，记为 a ≡ b mod n 。</span><br><span class="line">&#123;% endnotel %&#125;</span><br></pre></td></tr></table></figure></div>
 </blockquote>
 <blockquote>
 <p>例题：</p>

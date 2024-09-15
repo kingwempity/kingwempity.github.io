@@ -164,9 +164,9 @@ over</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E6%A1%86%E5%9B%BE.png" alt="DES加密算法框图"></p>
 <h2 id="二-加密算法分析"><a href="#二-加密算法分析" class="headerlink" title="(二)加密算法分析"></a>(二)加密算法分析</h2><h3 id="初始置换"><a href="#初始置换" class="headerlink" title="初始置换"></a>初始置换</h3><p>​																							<strong>(a)初始置换IP</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/(a)%E5%88%9D%E5%A7%8B%E7%BD%AE%E6%8D%A2IP.png" alt="(a)初始置换表"></p>
-<p>​																								<strong>(b)逆初始置换IP^-1^</strong></p>
+<p>​																								<strong>(b)逆初始置换$$IP^{-1}$$</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/(b)%E9%80%86%E5%88%9D%E5%A7%8B%E7%BD%AE%E6%8D%A2IP.png" alt="(b)逆初始置换IP"></p>
-<p>​															<strong>(c)选择扩展运算E</strong>												<strong>(d)置换运算P</strong></p>
+<p>​															<strong>(c)选择扩展运算E</strong>												       <strong>(d)置换运算P</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/(c)%E9%80%89%E6%8B%A9%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97E&(d)%E7%BD%AE%E6%8D%A2%E8%BF%90%E7%AE%97P.png" alt="(c)选择扩展运算E&amp;(d)置换运算P"></p>
 <h3 id="轮结构"><a href="#轮结构" class="headerlink" title="轮结构"></a><strong>轮结构</strong></h3><p>​																						<strong>DES算法的轮结构</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DES%E7%AE%97%E6%B3%95%E7%9A%84%E8%BD%AE%E7%BB%93%E6%9E%84.png" alt="DES算法的轮结构"></p>
@@ -174,8 +174,8 @@ over</p>
 <img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DES算法的轮结构_2.png" alt="DES算法的轮结构_2" style="zoom:50%;">
 
 <p><strong>轮函数公式：</strong></p>
-<p><strong>L<del>i</del> &#x3D; R<del>i-1</del></strong></p>
-<p><strong>R<del>i</del> &#x3D; L<del>i-1</del>  ⊕ F (R<del>i-1</del> , K<del>i</del>)</strong></p>
+<p><strong>$$L_i&#x3D;R_{i-1}$$</strong></p>
+<p><strong>$$R_i&#x3D;L_{i-1}\oplus F(R_{i-1},K_i)$$</strong></p>
 <p><strong>函数F(R,K)计算过程</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%87%BD%E6%95%B0F(R,K)%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B.png" alt="函数F(R,K)计算过程"></p>
 <p><strong>DES的S盒</strong></p>
@@ -2359,7 +2359,7 @@ over</p>
     <url>/2024/09/15/RSA/</url>
     <content><![CDATA[<mate name="referrer" content="no-referrer">
 
-<h1 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h1><h2 id="一-简介"><a href="#一-简介" class="headerlink" title="(一)简介"></a>(一)简介</h2><p>​		RSA 算法是**<u>非对称算法</u><strong>，由 Ronald Rivest 、 Adi Shamir 、 Leonard Adleman 三 人共同在 1977年公开发表。在 RSA 加密算法中，</strong>公钥和私钥都可以用于加密消息，用于加密消息的密钥与用于解密消息的密钥相反<strong>。 RSA 算法提供了一种保护网络通信和数据存储的</strong>机密性、完整性、真实性和不可否认性**的方法。</p>
+<h1 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h1><h2 id="一-简介"><a href="#一-简介" class="headerlink" title="(一)简介"></a>(一)简介</h2><p>​		RSA 算法是<strong>非对称算法</strong>，由 Ronald Rivest 、 Adi Shamir 、 Leonard Adleman 三 人共同在 1977年公开发表。在 RSA 加密算法中，<strong>公钥和私钥都可以用于加密消息，用于加密消息的密钥与用于解密消息的密钥相反</strong>。 RSA 算法提供了一种保护网络通信和数据存储的<strong>机密性、完整性、真实性和不可否认性</strong>的方法。</p>
 <p>​		目前， SSH 、 OpenPGP 、 S&#x2F;MIME 和 SSL&#x2F;TLS 都依赖千 RSA 进行加密和数字签名功能。 RSA 算法在浏览器中使用，能够在不可信任的互联网中建立安全连接。<strong>RSA 签名验证是网络连接系统中最常见的执行操作之一。</strong></p>
 <blockquote>
 <p>RSA 算法基于<strong>大整数因子分解</strong>的困难性，该算法的步骤如下：</p>
@@ -2367,7 +2367,7 @@ over</p>
 <p>第 二 步，计算这两个素数的乘积 n &#x3D; p q 。</p>
 <p>第三步，计算小于 n 并且与 n 互素的整数的个数，即欧拉函数妒 ( n )  &#x3D;  ( p - 1 ) ( q - 1 )  。</p>
 <p>第四步，选取 一 个随机数 e ，且满足  1 &lt; e &lt; ɸ ( 𝓷 ) ,并且 e 和 ɸ ( 𝓷 ) 互素，即 gad( e , ɸ ( 𝓷 ) ) &#x3D; 1. </p>
-<p>第五步，计算 d ≡ e ^-1^ mod ɸ ( 𝓷 )。 <strong>【e d ≡ 1 mod ɸ ( 𝓷 ) &#x3D; K * ɸ ( 𝓷 ) + 1 (K ∈ N^*^)】</strong> </p>
+<p>第五步，计算 $$d≡e^{-1}mod\phi(n)$$ <strong>【e d ≡ 1 mod ɸ ( 𝓷 ) &#x3D; K * ɸ ( 𝓷 ) + 1 (K ∈ N^*^)】</strong> </p>
 <p>第六步，保密 d 、 p 和 q, 而公开 n 和 e, 即 d 作为私钥，而 n 和 e 作为公钥。</p>
 
   <div class="note-large purple">
@@ -2377,12 +2377,11 @@ over</p>
     </div>
     <div class="notel-content">
       <blockquote>
-<p>设 n 是一个正整数，a 是整数，如果用 n 除以 a ,得商为 q ,余数为 r ,则：<br>a &#x3D; q * n + r, 0 &lt;&#x3D; r &lt; n, q &#x3D; ⌊ a&#x2F;n ⌋<br>余数 r 用 a mod n 表示。<br>若(a mod n) &#x3D; (b mod n)，则称两个整数 a 和 b 模 n 同余，记为 a ≡ b mod n 。</p>
+<p>设 n 是一个正整数，a 是整数，如果用 n 除以 a ,得商为 q ,余数为 r ,则：<br>a &#x3D; q * n + r, 0 &lt;&#x3D; r &lt; n, q &#x3D;  $$\lfloor \frac an \rfloor$$<br>余数 r 用 a mod n 表示。<br>若(a mod n) &#x3D; (b mod n)，则称两个整数 a 和 b 模 n 同余，记为 a ≡ b mod n 。</p>
 </blockquote>
 
     </div>
   </div>
-
 </blockquote>
 <blockquote>
 <p>例题：</p>
@@ -2391,12 +2390,12 @@ over</p>
 <p>1 &#x2F; ɸ ( 𝓷 ) &#x3D; 0 …… 1</p>
 <p>1 mod ɸ ( 𝓷 ) &#x3D; 1</p>
 </blockquote>
-<h2 id="二-加解密算法解析"><a href="#二-加解密算法解析" class="headerlink" title="(二)加解密算法解析"></a>(二)加解密算法解析</h2><h3 id="加密-C-≡-M-e-mod-n"><a href="#加密-C-≡-M-e-mod-n" class="headerlink" title="加密[C ≡ M ^e^ mod  n]"></a>加密[C ≡ M ^e^ mod  n]</h3><p>​		加密时首先将明文比特串分组，使得每个分组对应的十进制数小于 n ，即分组长度小于   log<del>2</del>n  。然后对每个明文分组   ，作加密运算：</p>
+<h2 id="二-加解密算法解析"><a href="#二-加解密算法解析" class="headerlink" title="(二)加解密算法解析"></a>(二)加解密算法解析</h2><h3 id="加密-C-≡-M-e-mod-n"><a href="#加密-C-≡-M-e-mod-n" class="headerlink" title="加密[$$C ≡ M^e\ mod\ n$$]"></a>加密[$$C ≡ M^e\ mod\ n$$]</h3><p>​		加密时首先将明文比特串分组，使得每个分组对应的十进制数小于 n ，即分组长度小于   log<del>2</del>n  。然后对每个明文分组   ，作加密运算：</p>
 <blockquote>
-<p>C ≡ M ^e^ mod  n</p>
+<p>$$C ≡ M^e\ mod\ n$$</p>
 </blockquote>
-<h3 id="解密-M-≡-C-d-mod-n"><a href="#解密-M-≡-C-d-mod-n" class="headerlink" title="解密[M ≡ C^d^  mod  n]"></a>解密[M ≡ C^d^  mod  n]</h3><blockquote>
-<p>M ≡ C ^d^  mod  n</p>
+<h3 id="解密-M≡C-d-mod-n"><a href="#解密-M≡C-d-mod-n" class="headerlink" title="解密[$$M≡C^d\ mod\ n$$]"></a>解密[$$M≡C^d\ mod\ n$$]</h3><blockquote>
+<p>$$M≡C^d\ mod\ n$$</p>
 </blockquote>
 <blockquote>
 <p>例题：</p>

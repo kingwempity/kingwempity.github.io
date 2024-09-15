@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/RSA%E7%AE%97%E6%B3%95%E9%A2%981.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/RSA%E7%AE%97%E6%B3%95%E9%A2%982.png">
 <meta property="article:published_time" content="2024-09-15T08:25:08.000Z">
-<meta property="article:modified_time" content="2024-09-15T10:39:21.233Z">
+<meta property="article:modified_time" content="2024-09-15T15:06:46.613Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="密码体制">
 <meta property="article:tag" content="密码学">
@@ -583,8 +583,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-09-15 18:39:21</span>
-            <span class="mobile">2024-09-15 18:39:21</span>
+            <span class="desktop">2024-09-15 23:06:46</span>
+            <span class="mobile">2024-09-15 23:06:46</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -634,7 +634,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>534 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>537 Words</span>
         </span>
     
     
@@ -660,7 +660,7 @@
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
             <mate name="referrer" content="no-referrer">
 
-<h1 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h1><h2 id="一-简介"><a href="#一-简介" class="headerlink" title="(一)简介"></a>(一)简介</h2><p>​		RSA 算法是**<u>非对称算法</u><strong>，由 Ronald Rivest 、 Adi Shamir 、 Leonard Adleman 三 人共同在 1977年公开发表。在 RSA 加密算法中，</strong>公钥和私钥都可以用于加密消息，用于加密消息的密钥与用于解密消息的密钥相反<strong>。 RSA 算法提供了一种保护网络通信和数据存储的</strong>机密性、完整性、真实性和不可否认性**的方法。</p>
+<h1 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h1><h2 id="一-简介"><a href="#一-简介" class="headerlink" title="(一)简介"></a>(一)简介</h2><p>​		RSA 算法是<strong>非对称算法</strong>，由 Ronald Rivest 、 Adi Shamir 、 Leonard Adleman 三 人共同在 1977年公开发表。在 RSA 加密算法中，<strong>公钥和私钥都可以用于加密消息，用于加密消息的密钥与用于解密消息的密钥相反</strong>。 RSA 算法提供了一种保护网络通信和数据存储的<strong>机密性、完整性、真实性和不可否认性</strong>的方法。</p>
 <p>​		目前， SSH 、 OpenPGP 、 S&#x2F;MIME 和 SSL&#x2F;TLS 都依赖千 RSA 进行加密和数字签名功能。 RSA 算法在浏览器中使用，能够在不可信任的互联网中建立安全连接。<strong>RSA 签名验证是网络连接系统中最常见的执行操作之一。</strong></p>
 <blockquote>
 <p>RSA 算法基于<strong>大整数因子分解</strong>的困难性，该算法的步骤如下：</p>
@@ -668,7 +668,7 @@
 <p>第 二 步，计算这两个素数的乘积 n &#x3D; p q 。</p>
 <p>第三步，计算小于 n 并且与 n 互素的整数的个数，即欧拉函数妒 ( n )  &#x3D;  ( p - 1 ) ( q - 1 )  。</p>
 <p>第四步，选取 一 个随机数 e ，且满足  1 &lt; e &lt; ɸ ( 𝓷 ) ,并且 e 和 ɸ ( 𝓷 ) 互素，即 gad( e , ɸ ( 𝓷 ) ) &#x3D; 1. </p>
-<p>第五步，计算 d ≡ e ^-1^ mod ɸ ( 𝓷 )。 <strong>【e d ≡ 1 mod ɸ ( 𝓷 ) &#x3D; K * ɸ ( 𝓷 ) + 1 (K ∈ N^*^)】</strong> </p>
+<p>第五步，计算 $$d≡e^{-1}mod\phi(n)$$ <strong>【e d ≡ 1 mod ɸ ( 𝓷 ) &#x3D; K * ɸ ( 𝓷 ) + 1 (K ∈ N^*^)】</strong> </p>
 <p>第六步，保密 d 、 p 和 q, 而公开 n 和 e, 即 d 作为私钥，而 n 和 e 作为公钥。</p>
 
   <div class="note-large purple">
@@ -678,12 +678,11 @@
     </div>
     <div class="notel-content">
       <blockquote>
-<p>设 n 是一个正整数，a 是整数，如果用 n 除以 a ,得商为 q ,余数为 r ,则：<br>a &#x3D; q * n + r, 0 &lt;&#x3D; r &lt; n, q &#x3D; ⌊ a&#x2F;n ⌋<br>余数 r 用 a mod n 表示。<br>若(a mod n) &#x3D; (b mod n)，则称两个整数 a 和 b 模 n 同余，记为 a ≡ b mod n 。</p>
+<p>设 n 是一个正整数，a 是整数，如果用 n 除以 a ,得商为 q ,余数为 r ,则：<br>a &#x3D; q * n + r, 0 &lt;&#x3D; r &lt; n, q &#x3D;  $$\lfloor \frac an \rfloor$$<br>余数 r 用 a mod n 表示。<br>若(a mod n) &#x3D; (b mod n)，则称两个整数 a 和 b 模 n 同余，记为 a ≡ b mod n 。</p>
 </blockquote>
 
     </div>
   </div>
-
 </blockquote>
 <blockquote>
 <p>例题：</p>
@@ -692,12 +691,12 @@
 <p>1 &#x2F; ɸ ( 𝓷 ) &#x3D; 0 …… 1</p>
 <p>1 mod ɸ ( 𝓷 ) &#x3D; 1</p>
 </blockquote>
-<h2 id="二-加解密算法解析"><a href="#二-加解密算法解析" class="headerlink" title="(二)加解密算法解析"></a>(二)加解密算法解析</h2><h3 id="加密-C-≡-M-e-mod-n"><a href="#加密-C-≡-M-e-mod-n" class="headerlink" title="加密[C ≡ M ^e^ mod  n]"></a>加密[C ≡ M ^e^ mod  n]</h3><p>​		加密时首先将明文比特串分组，使得每个分组对应的十进制数小于 n ，即分组长度小于   log<del>2</del>n  。然后对每个明文分组   ，作加密运算：</p>
+<h2 id="二-加解密算法解析"><a href="#二-加解密算法解析" class="headerlink" title="(二)加解密算法解析"></a>(二)加解密算法解析</h2><h3 id="加密-C-≡-M-e-mod-n"><a href="#加密-C-≡-M-e-mod-n" class="headerlink" title="加密[$$C ≡ M^e\ mod\ n$$]"></a>加密[$$C ≡ M^e\ mod\ n$$]</h3><p>​		加密时首先将明文比特串分组，使得每个分组对应的十进制数小于 n ，即分组长度小于   log<del>2</del>n  。然后对每个明文分组   ，作加密运算：</p>
 <blockquote>
-<p>C ≡ M ^e^ mod  n</p>
+<p>$$C ≡ M^e\ mod\ n$$</p>
 </blockquote>
-<h3 id="解密-M-≡-C-d-mod-n"><a href="#解密-M-≡-C-d-mod-n" class="headerlink" title="解密[M ≡ C^d^  mod  n]"></a>解密[M ≡ C^d^  mod  n]</h3><blockquote>
-<p>M ≡ C ^d^  mod  n</p>
+<h3 id="解密-M≡C-d-mod-n"><a href="#解密-M≡C-d-mod-n" class="headerlink" title="解密[$$M≡C^d\ mod\ n$$]"></a>解密[$$M≡C^d\ mod\ n$$]</h3><blockquote>
+<p>$$M≡C^d\ mod\ n$$</p>
 </blockquote>
 <blockquote>
 <p>例题：</p>
@@ -717,7 +716,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-09-15 18:39:21
+                    :</strong> 2024-09-15 23:06:46
             </li>
         
         <li>
@@ -838,7 +837,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">RSA</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA"><span class="nav-number">1.</span> <span class="nav-text">RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">(一)简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95%E8%A7%A3%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">(二)加解密算法解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86-C-%E2%89%A1-M-e-mod-n"><span class="nav-number">1.2.1.</span> <span class="nav-text">加密[C ≡ M ^e^ mod  n]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%AF%86-M-%E2%89%A1-C-d-mod-n"><span class="nav-number">1.2.2.</span> <span class="nav-text">解密[M ≡ C^d^  mod  n]</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA"><span class="nav-number">1.</span> <span class="nav-text">RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">(一)简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E5%8A%A0%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95%E8%A7%A3%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">(二)加解密算法解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86-C-%E2%89%A1-M-e-mod-n"><span class="nav-number">1.2.1.</span> <span class="nav-text">加密[$$C ≡ M^e\ mod\ n$$]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%AF%86-M%E2%89%A1C-d-mod-n"><span class="nav-number">1.2.2.</span> <span class="nav-text">解密[$$M≡C^d\ mod\ n$$]</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>

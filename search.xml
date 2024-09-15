@@ -174,8 +174,8 @@ over</p>
 <img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DES算法的轮结构_2.png" alt="DES算法的轮结构_2" style="zoom:50%;">
 
 <p><strong>轮函数公式：</strong></p>
-<p><strong>$$L_i&#x3D;R_{i-1}$$</strong></p>
-<p><strong>$$R_i&#x3D;L_{i-1}\oplus F(R_{i-1},K_i)$$</strong></p>
+<p>$$L_i&#x3D;R_{i-1}$$</p>
+<p>$$R_i&#x3D;L_{i-1}\oplus F(R_{i-1},K_i)$$</p>
 <p><strong>函数F(R,K)计算过程</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%87%BD%E6%95%B0F(R,K)%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B.png" alt="函数F(R,K)计算过程"></p>
 <p><strong>DES的S盒</strong></p>
@@ -184,7 +184,7 @@ over</p>
 <p>​	对每个盒Si，其6比特输入中，第1个和第6个比特形成一个2位二进制数，用来选择Si的四个代换中的一个。6比特输入中，中间4位用来选择列。</p>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/DES%E7%9A%84S%E7%9B%92.png" alt="DES的S盒"></p>
-<p>例如输入**<u>1</u> 0101 <u>1</u>**</p>
+<p>例如输入<u>1</u> 0101 <u>1</u></p>
 <p>行:<strong>下划线两位</strong>：11B&#x3D;3行</p>
 <p>列: <strong>无下划线的四位</strong>：0101B&#x3D;5列</p>
 <p>输出定位：9&#x3D;<strong>1001B</strong></p>

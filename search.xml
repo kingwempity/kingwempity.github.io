@@ -3591,4 +3591,58 @@ over</p>
         <tag>internet</tag>
       </tags>
   </entry>
+  <entry>
+    <title>单片机原理及应用</title>
+    <url>/2024/10/12/%E5%8D%95%E7%89%87%E6%9C%BA%E5%8E%9F%E7%90%86%E5%8F%8A%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h2 id="常见伪指令"><a href="#常见伪指令" class="headerlink" title="常见伪指令"></a>常见伪指令</h2><table>
+<thead>
+<tr>
+<th align="center">指令</th>
+<th>指令作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ORG m</td>
+<td>定位伪指令</td>
+<td>m为双字节数据据，m指出该伪指令后指令的汇编地址，也生成机器指令的其实存储地址。</td>
+</tr>
+<tr>
+<td align="center">符号名 EQU d</td>
+<td>数据赋值伪指令</td>
+<td>d为单字节或双字节数据或地址。该伪指令把数据和地址d赋值给前面的符号名。</td>
+</tr>
+<tr>
+<td align="center">符号名 EQU r</td>
+<td>寄存器名赋值伪指令</td>
+<td>r为寄存器名，可以是累加器A或工作寄存器R0~R7。把指定的寄存器名赋值给前面的符号名。</td>
+</tr>
+<tr>
+<td align="center">符号名 BIT n</td>
+<td>位地址赋值伪指令</td>
+<td>n可为寻址位的单字节地址。地址值可以是十进制或十六进制数。该伪指令把后指定位置地址赋给前面的符号名。</td>
+</tr>
+<tr>
+<td align="center">[标号:]DB X1,X2,…Xn或   [标号:]DB ‘字符串’</td>
+<td>定义字节伪指令</td>
+<td>Xi为单字节数据。两个单引号括起来的一个字符串。该伪指令以给定字节值初始化一个代码空间区域，把DB后面的X1,X2…Xn或字符串的ASCII码依次存放在程序存储器的一个连续存储单元区间。</td>
+</tr>
+<tr>
+<td align="center">[标号:]DW Y1,Y2…Yn,Yi为双字节数据</td>
+<td>定义字伪指令</td>
+<td>该伪指令以给定字节值初始化一个代码空间区域，把DW后面的Y1,Y2…Yn依次存放在程序存储器的一个连续存储单元区间。</td>
+</tr>
+<tr>
+<td align="center">END</td>
+<td>汇编结束伪指令</td>
+<td>控制汇编过程结束。</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>单片机原理及应用</tag>
+      </tags>
+  </entry>
 </search>

@@ -1307,6 +1307,14 @@ over</p>
 <p>软件和服务都是程序</p>
 <p>软件一般是客户端curl</p>
 <p>服务一般是给客户端提供某一个功能，7*24一直运行</p>
+<h2 id="17-审计信息"><a href="#17-审计信息" class="headerlink" title="17.审计信息"></a>17.审计信息</h2><blockquote>
+<p>系统启动日志(boot.log)</p>
+<p>记录用户执行命令日志(acct&#x2F;pacct)</p>
+<p>记录使用su命令的使用(sulog)</p>
+<p>记录但钱登录的用户信息(utmp)</p>
+<p>用户每次登录和退出信息(wtmp)</p>
+<p>最近几次成功登录及最后一次不成功登录日志(lastlog)</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>CTF</category>

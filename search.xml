@@ -1546,6 +1546,9 @@ over</p>
 <p>哈希函数：单向散列函数，它可以将任意有限长度信息映射为固定长度的值</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>certificate</category>
+      </categories>
       <tags>
         <tag>笔记</tag>
         <tag>nisp</tag>
@@ -3710,6 +3713,120 @@ over</p>
         <tag>操作系统</tag>
         <tag>C++</tag>
         <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息安全工程师[案例分析]</title>
+    <url>/2024/10/25/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h2 id="1-2017年"><a href="#1-2017年" class="headerlink" title="1-2017年"></a>1-2017年</h2><p>[说明]基于Windows32位系统分析下列代码，回答相关问题。</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Challenge</span><span class="params">(<span class="type">char</span> *str)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> temp[<span class="number">9</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">strcpy</span>(temp,str,<span class="number">8</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;temp=%s\n&quot;</span>,temp);</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strcmp</span>(temp,<span class="string">&quot;Please!@&quot;</span>)==<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;KEY:****&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc，<span class="type">char</span> *argv[ ])</span></span><br><span class="line">&#123;</span><br><span class="line">    Char buf2[<span class="number">16</span>]</span><br><span class="line">    Int check=<span class="number">1</span>;</span><br><span class="line">    Char buf[<span class="number">8</span>]</span><br><span class="line">    Strcpy (buf2, <span class="string">&quot;give me key! !&quot;</span>);</span><br><span class="line">    <span class="built_in">strcpy</span>(buf，argv[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">if</span>(check==<span class="number">65</span>) &#123;</span><br><span class="line">        Challenge(buf);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Check is not 65 (%d) \n Program terminated!!\n&quot;</span>，check)；</span><br><span class="line">    &#125;</span><br><span class="line">    Return <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>
+
+<p>[问题 1](3 分)</p>
+<blockquote>
+<p> main 函数内的三个本地变量所在的内存区域称为什么?它的两个最基本操作是什么?</p>
+<blockquote>
+<p>动态存储区，分配存储空间和释放存储空间</p>
+<p>（堆栈，压栈和出栈操作）</p>
+</blockquote>
+</blockquote>
+<p><a href="3%E5%88%86">问题 2</a></p>
+<blockquote>
+<p>画出buf，check，buf2 三个变量在内存的布局图。</p>
+<blockquote>
+<p>需要画出变量的先后关系，每个变量所占空间，增长方向（数组）</p>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/软考1.2.png" alt="1.2" style="zoom:50%;">
+</blockquote>
+</blockquote>
+<p><a href="2%E5%88%86">问题 3</a></p>
+<blockquote>
+<p>应该给程序提供什么样的命令行参数值(通过argv[]变量传递)才能使程序执行流程进入判断语句If(check&#x3D;65)..然后调用challenge()函数。</p>
+<blockquote>
+<p>让argv[8]&#x3D;A</p>
+</blockquote>
+</blockquote>
+<p><a href="4%E5%88%86">问题4</a></p>
+<blockquote>
+<p>上述代码所存在的漏洞名字是什么，针对本例 代码，请简要说明如何修正上述代码以修补此漏洞。</p>
+<blockquote>
+<p>缓冲区溢出漏洞</p>
+<p>使用安全的 strcpy 函数，检测边界。</p>
+</blockquote>
+</blockquote>
+<h2 id="2-2018年上半年"><a href="#2-2018年上半年" class="headerlink" title="2-2018年上半年"></a>2-2018年上半年</h2><p>阅读下列说明，回答问题1至问题4，将解答填入答题纸的对应栏内。</p>
+<p>【说明】恶意代码是指为达到恶意目的专门设计的程序或者代码。常见的恶意代码类型有特洛伊木马、蠕虫、病毒、后门、rootkit、僵尸程序、广告软件。2017年5月,勒索软件wanacry席卷全球,国内大量高校及企事业单位的计算机被攻击,文件及数据被加密后无法使用,系统或服务无法正常运行,损失巨大。</p>
+<p><a href="2%E5%88%86">问题1</a><br>按照恶意代码分类，此次爆发的恶意软件属于哪种类型?</p>
+<blockquote>
+<p>蠕虫</p>
+</blockquote>
+<p><a href="2%E5%88%86">问题2</a><br>此次勒索软件针对软件攻击目标是Windows还是Linux类系统?</p>
+<blockquote>
+<p>Windows系统</p>
+</blockquote>
+<p><a href="6%E5%88%86">问题3</a><br>恶意代码具有的共同特征是什么?</p>
+<blockquote>
+<ul>
+<li>具有恶意的目的</li>
+<li>自身是一个计算机程序</li>
+<li>通过执行发生作用</li>
+</ul>
+</blockquote>
+<p><a href="5%E5%88%86">问题4</a><br>由于此次勒索软件需要利用系统的SMB服务漏洞(端口号445)进行传播，我们可以配置防火墙过滤规则来阻止勒索软件的攻击，请填写表1-1中的空(1)-(5)，使该过滤规则完整。</p>
+<p>注:假设本机ip地址为:1.2.3.4,”*”表示通配符。</p>
+<table>
+<thead>
+<tr>
+<th>规则号</th>
+<th>源地址</th>
+<th>目的地址</th>
+<th>源端口</th>
+<th>目的端口</th>
+<th>协议</th>
+<th>ACK</th>
+<th>动作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>(1)*</td>
+<td>1.2.3.4</td>
+<td>(2)1024</td>
+<td>(3)445</td>
+<td>(4)TCP</td>
+<td>(5)*</td>
+<td>拒绝</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>…</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>拒绝</td>
+</tr>
+</tbody></table>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BD%AF%E8%80%832.png" alt="软考2"></p>
+]]></content>
+      <categories>
+        <category>certificate</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>案例分析</tag>
+        <tag>软考中级</tag>
       </tags>
   </entry>
 </search>

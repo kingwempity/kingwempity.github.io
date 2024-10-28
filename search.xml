@@ -3318,7 +3318,7 @@ over</p>
 <p>数据即服务DaaS</p>
 <p>存储即服务STaaS</p>
 </blockquote>
-<p><a href="3%E5%88%86">问题2</a><br>敏感数据处理是数据安全的重要内容。数据库脱敏是指利用数据脱敏技术将数据库中的数据进行变换处理,在保持数据按需使用目标的同时,又能避免敏感数据外泄。常见的数据脱敏技术方法有屏蔽、变形、替换、随机、加密,使得敏感数据不泄露给非授权用户或系统。<br>1)证件号码数据4346645400205379经过(4)脱敏后，变成4346  5379;</p>
+<p><a href="3%E5%88%86">问题2</a><br>敏感数据处理是数据安全的重要内容。数据库脱敏是指利用数据脱敏技术将数据库中的数据进行变换处理,在保持数据按需使用目标的同时,又能避免敏感数据外泄。常见的数据脱敏技术方法有屏蔽、变形、替换、随机、加密,使得敏感数据不泄露给非授权用户或系统。<br>1)证件号码数据4346645400205379经过(4)脱敏后，变成4346********5379;</p>
 <blockquote>
 <p>屏蔽</p>
 </blockquote>
@@ -3352,6 +3352,112 @@ over</p>
 <p>两地：同城、异地</p>
 <p>三中心：同城容灾中心、异地容灾中心、生产中心</p>
 </blockquote>
+<h2 id="7"><a href="#7" class="headerlink" title="7-"></a>7-</h2><p>阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。<br>【说明】<br>某企业的网络拓扑图如图所示，图中，网站服务器的 IP 地址是192.168.70.140，邮件服务器的 IP 地址是192.168.70.141。从运营商获取固定地址202.114.58.22。李工是该企业的信息安全管理员。</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%9F%90%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%9B%BE.png" alt="某企业网络拓扑图"></p>
+<p><a href="5%E5%88%86">问题1</a><br>防火墙在该企业网络当中起到了众多防护功能，但是该网络依然存在的风险(防火墙的不足之处)包括哪些?</p>
+<blockquote>
+<ul>
+<li>网络安全旁路。防火墙只能对通过它的网络通信进行访问控制，而未经过它的网络通信就无能为力。</li>
+<li>防火墙安全机制形成单点故障或特权威胁。</li>
+<li>防火墙不能防止感染病毒、防止后门攻击等功能缺陷，导致一些网络威胁无法阻断。</li>
+<li>防火墙无法有效防范内部威胁。</li>
+<li>防火墙受限于安全规则。防火墙依赖于安全规则的更新，特别是采用黑名单策略的防火墙，一旦安全规则跟新不及时，极易导致防火墙的保护功能失效。</li>
+</ul>
+</blockquote>
+<p><a href="6%E5%88%86">问题2</a><br>包过滤是防火墙的基本功能之一，李工需要完成以下防火墙过滤规则的配置，才满足只允许外网与该企业的邮件服务器进行邮件服务相关通信，以及人事部门的上网需求，其他全部禁止。请完善下面的过滤规则。</p>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/包过滤防火墙配置.png" alt="包过滤防火墙配置" style="zoom:67%;">
+
+<blockquote>
+<ol>
+<li>110</li>
+<li>143</li>
+<li>25</li>
+<li>192.168.12.0&#x2F;24    #人事部门的上网需求</li>
+<li>允许</li>
+<li>禁止</li>
+</ol>
+</blockquote>
+<p><a href="4%E5%88%86">问题3</a></p>
+<p>服务器上可以实现访问控制。Web服务器是Apache hto服务器，李工可以在(7)配置文件中设置以下访问控制，使得只有信息安全部的工作人员才可以访问lsecret目录资源。请完善以下配置。</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;Directory /full/path/to/(8)&gt;</span><br><span class="line">&lt;Limit GET POST&gt;</span><br><span class="line">Deny from(9)</span><br><span class="line">Allow from (10)</span><br><span class="line">&lt;/Limit&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>(7)access.conf</p>
+<p>(8) secret</p>
+<p>(9) all</p>
+<p>(10)192.168.11.2</p>
+</blockquote>
+<p><a href="5%E5%88%86">问题4</a><br>Web服务器是Linux服务器，Linux服务器自带的防火墙iptabies来实现包过滤等功能，假设只能允许人事部的用户访问该服务器的web服务。李工可以使用命令(11)查看现有的过滤规则。规则如下:</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Chain INPUT (policy ACCEPT)</span><br><span class="line">target prot opt <span class="built_in">source</span> destination</span><br><span class="line">ACCEPT tcp--anywhere anywherestate NEW tcp dpt:netscript</span><br><span class="line">Chain FORWARD (policy ACCEPT)</span><br><span class="line">target prot opt <span class="built_in">source</span> destination</span><br><span class="line">Chain OUTPUT (policy ACCEPT)</span><br><span class="line">targetprot opt <span class="built_in">source</span> destination</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -L</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>1)从上述规则可知，iptables的默认规则并不符合web服务的安全要求，所以需要配置三条规则链，请写出这三条规则链</p>
+<blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -P INPUT DROP</span><br><span class="line">iptables -P FORWARD DROP</span><br><span class="line">iptables -P OUTPUT DROP</span><br></pre></td></tr></table></figure></div>
+
+<p>题干所给的防火墙规则都是允许的，不符合要求，需要默认拒绝的规则链。</p>
+</blockquote>
+<p>2)请写出只能允许人事部的用户访问服务器的防火墙规则。</p>
+<blockquote>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -a input -s 192.168.12.0/24 --drop 80 -j ACCEPT</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<h2 id="8"><a href="#8" class="headerlink" title="8-"></a>8-</h2><p>阅读下列说明，回答问题1至问题5，将解答填入答题纸的对应栏内。<br>【说明】<br>下图为我国电子政务系统的架构示意图，主要有互联网、政务外网、政务内网构成，涉及到不同的安全等级的网络信息之间的交换,</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="电子政务系统架构图"></p>
+<p><a href="4%E5%88%86">问题1</a></p>
+<p>1)国家管理政策文件明确指出，电子政务网络有政务内网和政务外网构成，两网之间(1)隔离，政务外网与互联网之间(2)隔离。</p>
+<blockquote>
+<p>两网之间 <strong>物理隔离</strong></p>
+<p>政务外网与互联网之间 <strong>逻辑隔离</strong></p>
+</blockquote>
+<p>2)图2-1说是的设备①应该选用设备(3):设备应该选用设备(4)，<br>(3)-(4)备选答案:<br>A.交换机 B.路由器 C.防火墙 D.网闸E. 耦合器F. 集线器</p>
+<blockquote>
+<p>① C 防火墙</p>
+<p>② D 网闸</p>
+</blockquote>
+<p><a href="4%E5%88%86">间题2</a><br>政务外网服务子各级完委、人大、政府、政协、法和检察说等政务部门时政务公用网络。在各单位需要成工信息安全管理机构，行使单位信息安全管理职能。各个单位应设立(5)领导小组,作为本单位信息安全工作的最高领导決策机构。设立信息安全管理岗位并明确职责,至少应包含安全主管和“三员”岗位,其中“三员”岗位中，(6)岗位职责包括信息系统安全监督和网络安全管理,沟通、协调和组织处理信息安全事件等;(7)岗位职责包括网络安全设备和服务器的配置、部署、运行维护和日常管理等工作;(8)岗位职责包括对安全、网络、系统、应用、数据库等管理人员的操作行为进行审计,监督信息安全制度执行情况。</p>
+<blockquote>
+<p>各个单位应设立 <strong>信息安全领导小组</strong></p>
+<p>安全保密员岗位：管理</p>
+<p>系统管理员岗位 ：配置</p>
+<p>安全审计员岗位：审计</p>
+</blockquote>
+<p><a href="6%E5%88%86">问题3</a><br>审计是网络隔离技术的重要指标之一。网络流量数据获取是网络通信安全审计的关键技术，下图是通过交换机端口镜像，从网络流量采集设备通过图形化流量数据采集工具Wireshark采集的部分数据。</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Wireshark%E9%83%A8%E5%88%86%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE.png" alt="Wireshark部分采集数据"></p>
+<p>1)由上图可知，数据流量都是基于那种传输层协议?针对的是那种应用层协议?</p>
+<blockquote>
+<p>基于传输层的TCP协议（传输层协议有TCP和UDP）</p>
+<p>针对应用层的HTTP协议（图中的目的端口为80）</p>
+</blockquote>
+<p>2)可以基本判断流量异常，疑似针对什么服务器的何种攻击?</p>
+<blockquote>
+<p>针对Web服务器的SYN-Floodding攻击 </p>
+</blockquote>
+<p>3)在华为交换机上设置镜像端口的配置如下:</p>
+<p>observe-port 1interface GigabitEthernet0&#x2F;0&#x2F;2</p>
+<p>interface GigabitEthernet0&#x2F;0&#x2F;1</p>
+<p>port-mirroring to observe-port 1 inbound&#x2F;outbound&#x2F;both</p>
+<p>则下列说法正确的是哪个?<br>A.GigabitEthernet0&#x2F;0&#x2F;2是镜像端口<br>B.GigabitEthernet0&#x2F;0&#x2F;1是镜像端口<br>C.GigabitEthernet0&#x2F;0&#x2F;1是观察端口<br>D.GigabitEthernet0&#x2F;0&#x2F;2是隔离端口</p>
+<blockquote>
+<p>GigabitEthernet0&#x2F;0&#x2F;1 是镜像端口（prot-mirroring）</p>
+<p>GigabitEthernet0&#x2F;0&#x2F;2  是观察端口（observe-port）</p>
+</blockquote>
+<p><a href="3%E5%88%86">问题4</a><br>目前很多单位已经使用国产操作系统，国产操作基于Linux，<br>1)系统用户账号加密口令的文件是什么?请给出文件名。</p>
+<blockquote>
+<p>&#x2F;etc&#x2F;shadow</p>
+</blockquote>
+<p>2)在保证Linux某些关键性文件安全时，需要修改文件属性，将inetd.conf文件属性修改为600的命令是什么?600表示的权限含义是什么?</p>
+<blockquote>
+<p>chmod 600 &#x2F;etc&#x2F;intd.conf </p>
+<p>600表示仅有文件的拥有者能够对文件进行读、写操作</p>
+</blockquote>
+<p><a href="3%E5%88%86">问题5</a><br>方德方舟国产操作系统基于三权分立的管理机制，将普通操作系统中的超级管理员的权限分配给了(9)管理员、(10)管理员、(11)管理员，并形成了相互制约关系，防止管理员的恶意或偶然操作引起的系统安全问题。</p>
+<blockquote>
+<p>系统管理员</p>
+<p>安全管理员</p>
+<p>审计管理员</p>
+</blockquote>
 <h1 id="知识汇集"><a href="#知识汇集" class="headerlink" title="知识汇集"></a>知识汇集</h1><h2 id="信息安全基础知识"><a href="#信息安全基础知识" class="headerlink" title="信息安全基础知识"></a>信息安全基础知识</h2><ol>
 <li><p>访问控制机制由组成要素主要有：<strong>主体</strong>(Subject) 、<strong>参考监视器</strong>(Reference Monitor) 、<strong>客体</strong>(Object) 、<strong>访问控制数据库</strong>、<strong>审计库</strong>。</p>
 <blockquote>
@@ -3364,7 +3470,7 @@ over</p>
 </blockquote>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png" alt="访问控制参考模型"></p>
 </li>
-<li><p>自主访问控制模型、强制访问控制模型、基于角色的访问控制模型常用千操作系统、数据库系统的资源访问。</p>
+<li><p>自主访问控制模型、强制访问控制模型、基于角色的访问控制模型常用于操作系统、数据库系统的资源访问。</p>
 </li>
 <li><p>基于使用的访问控制模型则用于隐私保护、敏感信息安全限制、知识产权保护；</p>
 </li>
@@ -3599,7 +3705,8 @@ over</p>
 </li>
 <li><p>2最小化系统网络服务是在满定业务的前提下，尽量关闭不需要的服务和网络端口，在Linux系统中首先是将inetd.conf的文件权限设置为 <strong>600</strong></p>
 </li>
-<li></li>
+<li><p>Apache的access.conf配置文件负责设置文件的访问权限</p>
+</li>
 </ol>
 ]]></content>
       <categories>

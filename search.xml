@@ -152,7 +152,26 @@ over</p>
   <entry>
     <title>Java实战</title>
     <url>/2024/02/07/Java%E5%AE%9E%E6%88%98/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h2 id="案例一"><a href="#案例一" class="headerlink" title="案例一"></a>案例一</h2><blockquote>
+<p>1.案例:输出某年某个月的天数。年份中指定月份的天数。安全描述:本程序运行时，将屏幕上输出指定8，10，12月的天数技术要点:一年中有12个月，其中1，3，5，2月份的天数为29天，为31天;4，6，9，11月的天数为30天;闰年日其它年份为28天。份能被4整队，但不能被100整除，或者判断当前年份是否为闰年，如果为闰年，则该该年份能被400整除</p>
+</blockquote>
+<h3 id="demo1"><a href="#demo1" class="headerlink" title="demo1"></a>demo1</h3><h4 id="Main-java"><a href="#Main-java" class="headerlink" title="Main.java"></a>Main.java</h4><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> year,month;</span><br><span class="line">        System.out.println(<span class="string">&quot;===请输入需要判断的年份===&quot;</span>);</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        year = sc.nextInt();</span><br><span class="line">        System.out.println(<span class="string">&quot;===请输入需要判断的月份===&quot;</span>);</span><br><span class="line">        month = sc.nextInt();</span><br><span class="line">        <span class="keyword">while</span>(month &lt;=<span class="number">1</span> || month &gt;= <span class="number">12</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;===请输入正确的月份===&quot;</span>);</span><br><span class="line">            month = sc.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        DayInMonth.dayInMonth(year,month);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="DayInMonth-java"><a href="#DayInMonth-java" class="headerlink" title="DayInMonth.java"></a>DayInMonth.java</h4><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DayInMonth</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">dayInMonth</span><span class="params">(<span class="type">int</span> year,<span class="type">int</span> month)</span>&#123;</span><br><span class="line">        <span class="type">int</span>[] thrity_noe_for_month = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">10</span>,<span class="number">12</span>&#125;;</span><br><span class="line">        <span class="type">int</span>[] thirth_for_month = &#123;<span class="number">4</span>,<span class="number">6</span>,<span class="number">11</span>&#125;;</span><br><span class="line">        <span class="type">int</span>[] february =&#123;<span class="number">2</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> mo : thrity_noe_for_month)&#123;</span><br><span class="line">            <span class="keyword">if</span>(mo == month)&#123;</span><br><span class="line">                System.out.println(year+<span class="string">&quot;年&quot;</span>+month+<span class="string">&quot;月有31天！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> mo : thirth_for_month)&#123;</span><br><span class="line">            <span class="keyword">if</span>(mo == month)&#123;</span><br><span class="line">                System.out.println( year+<span class="string">&quot;年&quot;</span>+month+<span class="string">&quot;月有30天！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(month == <span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(IsLeapYear.isLeapYear(month))&#123;</span><br><span class="line">                System.out.println(year+<span class="string">&quot;年&quot;</span>+month+<span class="string">&quot;月有28天！&quot;</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                System.out.println(year+<span class="string">&quot;年&quot;</span>+month+<span class="string">&quot;月有29天！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="IsLeapYear-java"><a href="#IsLeapYear-java" class="headerlink" title="IsLeapYear.java"></a>IsLeapYear.java</h4><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IsLeapYear</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isLeapYear</span><span class="params">(<span class="type">int</span> year)</span> &#123;</span><br><span class="line">        <span class="comment">//平年</span></span><br><span class="line">        <span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span> || year % <span class="number">400</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果:"></a>运行结果:</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">===请输入需要判断的年份===</span><br><span class="line">2004</span><br><span class="line">===请输入需要判断的月份===</span><br><span class="line">7</span><br><span class="line">2004年7月有31天！</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="demo2"><a href="#demo2" class="headerlink" title="demo2"></a>demo2</h3><h4 id="DayInMonth-java-1"><a href="#DayInMonth-java-1" class="headerlink" title="DayInMonth.java"></a>DayInMonth.java</h4><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DayInMonth</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入年份:&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">year</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入月份（1-12）:&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">month</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (month == <span class="number">8</span> || month == <span class="number">10</span> || month == <span class="number">12</span>) &#123;</span><br><span class="line">            System.out.println(month + <span class="string">&quot;月有31天&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (month == <span class="number">4</span> || month == <span class="number">6</span> || month == <span class="number">9</span> || month == <span class="number">11</span>) &#123;</span><br><span class="line">            System.out.println(month + <span class="string">&quot;月有30天&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (month == <span class="number">2</span>) &#123; <span class="comment">// Check for February</span></span><br><span class="line">            <span class="keyword">if</span> (isLeapYear(year)) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;2月有29天&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;2月有28天&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (month == <span class="number">1</span> || month == <span class="number">3</span> || month == <span class="number">5</span> || month == <span class="number">7</span>) &#123;</span><br><span class="line">            System.out.println(month + <span class="string">&quot;月有31天&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;无效的月份&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isLeapYear</span><span class="params">(<span class="type">int</span> year)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (year % <span class="number">400</span> == <span class="number">0</span>) || ((year % <span class="number">4</span> == <span class="number">0</span>) &amp;&amp; (year % <span class="number">100</span> != <span class="number">0</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">请输入年份:</span><br><span class="line">2004</span><br><span class="line">请输入月份（1-12）:</span><br><span class="line">2</span><br><span class="line">2月有29天</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
       <categories>
         <category>Languages</category>
       </categories>
@@ -1627,7 +1646,7 @@ over</p>
 <p>RSA 算法基于<strong>大整数因子分解</strong>的困难性，该算法的步骤如下：</p>
 <p>第 一 步，生成两个大素数 p  和  q。</p>
 <p>第 二 步，计算这两个素数的乘积 n = p q 。</p>
-<p>第三步，计算小于 n 并且与 n 互素的整数的个数，即欧拉函数妒 ( n )  =  ( p - 1 ) ( q - 1 )  。</p>
+<p>第三步，计算小于 n 并且与 n 互素的整数的个数，即欧拉函数 ɸ ( 𝓷 )  =  ( p - 1 ) ( q - 1 )  。</p>
 <p>第四步，选取 一 个随机数 e ，且满足  1 &lt; e &lt; ɸ ( 𝓷 ) ,并且 e 和 ɸ ( 𝓷 ) 互素，即 gad( e , ɸ ( 𝓷 ) ) = 1. </p>
 <p>第五步，计算 <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="16.206ex" height="2.565ex" role="img" focusable="false" viewbox="0 -883.9 7163.2 1133.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"/></g><g data-mml-node="mo" transform="translate(797.8,0)"><path data-c="2261" d="M56 444Q56 457 70 464H707Q722 456 722 444Q722 430 706 424H72Q56 429 56 444ZM56 237T56 250T70 270H707Q722 262 722 250T707 230H70Q56 237 56 250ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"/></g><g data-mml-node="msup" transform="translate(1853.6,0)"><g data-mml-node="mi"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"/></g><g data-mml-node="TeXAtom" transform="translate(499,413) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"/></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/></g></g></g><g data-mml-node="mi" transform="translate(3306.2,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mi" transform="translate(4184.2,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"/></g><g data-mml-node="mi" transform="translate(4669.2,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"/></g><g data-mml-node="mi" transform="translate(5189.2,0)"><path data-c="1D719" d="M409 688Q413 694 421 694H429H442Q448 688 448 686Q448 679 418 563Q411 535 404 504T392 458L388 442Q388 441 397 441T429 435T477 418Q521 397 550 357T579 260T548 151T471 65T374 11T279 -10H275L251 -105Q245 -128 238 -160Q230 -192 227 -198T215 -205H209Q189 -205 189 -198Q189 -193 211 -103L234 -11Q234 -10 226 -10Q221 -10 206 -8T161 6T107 36T62 89T43 171Q43 231 76 284T157 370T254 422T342 441Q347 441 348 445L378 567Q409 686 409 688ZM122 150Q122 116 134 91T167 53T203 35T237 27H244L337 404Q333 404 326 403T297 395T255 379T211 350T170 304Q152 276 137 237Q122 191 122 150ZM500 282Q500 320 484 347T444 385T405 400T381 404H378L332 217L284 29Q284 27 285 27Q293 27 317 33T357 47Q400 66 431 100T475 170T494 234T500 282Z"/></g><g data-mml-node="mo" transform="translate(5785.2,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"/></g><g data-mml-node="mi" transform="translate(6174.2,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"/></g><g data-mml-node="mo" transform="translate(6774.2,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"/></g></g></g></svg></mjx-container> <strong>【e d ≡ 1 mod ɸ ( 𝓷 ) = K * ɸ ( 𝓷 ) + 1 (K ∈ N^*^)】</strong> </p>
 <p>第六步，保密 d 、 p 和 q, 而公开 n 和 e, 即 d 作为私钥，而 n 和 e 作为公钥。</p>
@@ -3458,6 +3477,121 @@ over</p>
 <p>安全管理员</p>
 <p>审计管理员</p>
 </blockquote>
+<h2 id="9"><a href="#9" class="headerlink" title="9-"></a>9-</h2><p>阅读下列说明和图，回答问题1至问题5,将解答填入答题纸的对应栏内<br>【说明】<br>某网络安全公司针对政府网站的保护要求，给出了相应的解决方案，并完成对应的网络安全透测试</p>
+<p><a href="4%E5%88%86">问题1</a></p>
+<p>1)根据国家有关政府门户网站的相关要求，政府网站的信息安全等级原则上不应低于二级，二级网站每几年测评一次?三级网站每几年测评一次?</p>
+<blockquote>
+<p>二级网站每两年测评一次</p>
+<p>三级网站每一年测评一次</p>
+</blockquote>
+<p>2)网站管理部门根据安全需求，采取监测、记录网络运行状态、网络安全事件的技术措施，并按照规定留存相关的网络日志不少于几个月?</p>
+<blockquote>
+<p>网络日志不少于6个月</p>
+</blockquote>
+<p><a href="6%E5%88%86">问题2</a></p>
+<p>假设网站有如下服务:<a class="link" href="http://duck/index.asp?category=food">http://duck/index.asp?category=food <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>其后台对应的web程序如下:<br>v cat &#x3D;request(category”)<br>Sqlstr&#x3D;”SELECT* FROM product WHERE Category&#x3D;”&amp; v cat &amp;”<br>Set rs&#x3D;conn.execute(salstr)<br>1)正常情况下，数据库对外部查询请求对应的执行程序语句是什么?用户能正常查询food相关信息。</p>
+<blockquote>
+<p>SELECT* FROM product WHERE Category&#x3D;”food”;</p>
+</blockquote>
+<p>2)如果一个恶意的用户提交htp:&#x2F;duck&#x2F;index.asp?category&#x3D;food’or 1&#x3D;1–，此时数据库对外部査询请求对应的执行程序语句是什么?将达到什么样的效果?</p>
+<blockquote>
+<p>SELECT* FROM product WHERE Category&#x3D;”food” or 1&#x3D;1–;</p>
+<p>用户查询到product表的所有信息。</p>
+</blockquote>
+<p>3)说明该web程序存在什么攻击漏洞?防范方法有哪些?</p>
+<blockquote>
+<p>SQL注入攻击漏洞：</p>
+<ul>
+<li>对应用程序输入进行安全过滤；</li>
+<li>设置应用程序最小化特权</li>
+<li>屏蔽应用程序错误提示信息</li>
+<li>对开源Web应用程序做安全适应性改造</li>
+</ul>
+</blockquote>
+<p><a href="2%E5%88%86">问题3</a></p>
+<p>在网络日志中，安全工程师发现了如下可疑URL:</p>
+<p><a class="link" href="http://wy.gov.cn/ebanking?url-http://evilsite.com/phishing/fakepage.htm">http://wy.gov.cn/ebanking?url-http://evilsite.com/phishing/fakepage.htm <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link" href="http://wy.gov.cn/ebanking?page=1&client=">http://wy.gov.cn/ebanking?page=1&amp;client= <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><script>evilcode</p>
+<p><a class="link"   href="http://wy.gov.cn/ebanking?page=l&response=evilsite.com%252levilcode.js&go=2" >http://wy.gov.cn/ebanking?page=l&amp;response=evilsite.com%2levilcode.js&amp;go=2 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>安全工程师初步判断可疑URL存在什么攻击?</p>
+<blockquote>
+<p>跨站脚本攻击</p>
+</blockquote>
+<p><a href="8%E5%88%86">问题4</a></p>
+<p>网站服务器使用Linux系统，使用Apache Web程序。<br>1)Apache安装后默认设置的文件宿主和权限都是比较合理和安全的，但是如果需要修改文件的拥有者，可使用什么命令?</p>
+<blockquote>
+<p>chown</p>
+</blockquote>
+<p>2)Apache的主配置文件是什么?(请写出文件名)</p>
+<blockquote>
+<p>httpd.conf</p>
+</blockquote>
+<p>3)Apache提供一个记录所有访问请求的机制,而且错误的请求也会记录。这些请求记录存放在哪两个文件中?</p>
+<blockquote>
+<p>accesslog</p>
+<p>errorlog</p>
+</blockquote>
+<h2 id="10"><a href="#10" class="headerlink" title="10"></a>10</h2><p>试题一(共20分)<br>阅读下列说明和图，回答问题1至问题5，将解答填入答题纸的对应栏内</p>
+<p>【说明】</p>
+<p>已知某公司网络环境结构主要由三个部分组成，分别是DMZ区、内网办公区和生产区，其拓扑结构如图1-1所示。信息安全部的王工正在按照等级保护2.0的要求对部分业务系统开展安全配置，图1.-1当中，网站服务器的!P地址是192.168.70.140，数据库服务器的IP地址是192.168.70.141，信息安全部计算机所在网段为192.168.1.124王工所使用的办公电脑IP地址为192.168.11.2。</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gitee.com/kingwempity/images/raw/master/images/屏蔽子网网络结构.png"
+                      alt="屏蔽子网网络结构" style="zoom:50%;" 
+                >
+
+<p><a href="2%E5%88%86">问题1</a></p>
+<p>为了防止生产网受到外部的网络安全威胁，安全策略要求生产网和其他网之间部署安全隔离装置，隔离强度达到接诉物理隔离。请问图中X最有可能代表的安全设备是什么?</p>
+<blockquote>
+<p>网闸</p>
+</blockquote>
+<p><a href="2%E5%88%86">问题2</a><br>防火墙是网络安全区域边界保护的重要技术，防火墙防御体系结构主要有基于双宿主主机防火墙、基于代理型防火墙和基于屏蔽子网的防火墙，图1-1拓扑图中的防火墙布局属于哪种体系结构类型?</p>
+<blockquote>
+<p>基于屏蔽子网的防火墙</p>
+</blockquote>
+<p><a href="2%E5%88%86">问题3</a><br>通常网络安全需要建立四道防线，第一道是保护，阻止网络入侵;第二道是监测，及时发现入侵和破坏;第三道是响应，攻击发生时确保网络打不塆;第四道是恢复，使网络在遭受攻击时能以最快速度起死回生。请问拓扑图1-1中防火墙1属于第几道防线?</p>
+<blockquote>
+<p>第一道防线</p>
+</blockquote>
+<p><a href="6%E5%88%86">问题4</a><br>图1-1中防火墙1和防火墙2都采用Ubuntu系统自带的iptables防火墙，其默认的过滤规则如图1-2所示</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gitee.com/kingwempity/images/raw/master/images/Ubuntu%E7%B3%BB%E7%BB%9Fiptables%E8%A7%84%E5%88%99.png"
+                      alt="Ubuntu系统iptables规则"
+                ></p>
+<p>(1)请说明上述防火墙采取的是白名单还是黑名单安全策略。</p>
+<blockquote>
+<p>黑名单</p>
+</blockquote>
+<p>(2)图1-2显示的是iptables哪个表的信息，请写出表名。</p>
+<blockquote>
+<p>Filter表</p>
+</blockquote>
+<p>(3)如果要设置iptables防火墙默认不允许任何数据包进入，请写出相应命令</p>
+<blockquote>
+<p>iptables -P FORWARD DROP</p>
+</blockquote>
+<p><a href="8%E5%88%86">问题5</a><br>DMZ区的网站服务器是允许互联网进行访问的，为了实现这个目标，王工需要对防火墙1进行有效配置。同时王工还需要通过防火墙2对网站服务器和数据库服务器进行日<br>常运维。<br>(1)防火墙1应该允许哪些端口通过?</p>
+<blockquote>
+<p>网站服务器实现的是web服务，对应的是HTTP服务和HTTPS服务，对应端口为80和443端口</p>
+</blockquote>
+<p>(2)请编写防火墙1上实现互联网只能访问网站服务器的iptables过滤规则。</p>
+<blockquote>
+<p>iptables -P FORWARD DROP</p>
+<p>iptables -A FORWARD -d 192.168.70.140 -p tcp --dport 80 -j ACCEPT</p>
+<p>iptables -A FORWARD -d 192.168.70.141 -p tcp --dport 80 -j ACCEPT</p>
+</blockquote>
+<p>(3)请写出王工电脑的子网掩码。</p>
+<blockquote>
+<p>255.255.255.0</p>
+</blockquote>
+<p>(4)为了使王工能通过SSH协议远程运维DMZ区中的服务器，请编写防火墙2的iptables过滤规则。</p>
+<blockquote>
+<p>iptables -t filter -A FORWARD -s 192.168.11.2 -d 192.168.70.140/24 -p tcp --dport 22 -j ACCEPT</p>
+<p>iptables -t filter -A FORWARD -s 192.168.70.140/24 -d 192.168.11.2 -p tcp --sport 22 -j ACCEPT</p>
+</blockquote>
 <h1 id="知识汇集"><a href="#知识汇集" class="headerlink" title="知识汇集"></a>知识汇集</h1><h2 id="信息安全基础知识"><a href="#信息安全基础知识" class="headerlink" title="信息安全基础知识"></a>信息安全基础知识</h2><ol>
 <li><p>访问控制机制由组成要素主要有：<strong>主体</strong>(Subject) 、<strong>参考监视器</strong>(Reference Monitor) 、<strong>客体</strong>(Object) 、<strong>访问控制数据库</strong>、<strong>审计库</strong>。</p>
 <blockquote>
@@ -3468,7 +3602,12 @@ over</p>
 <li>记录主体访问客体的权限及其访问方式的信息，提供访问控制决策判断的依据，也称为访<br>问控制策略库。</li>
 </ul>
 </blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png" alt="访问控制参考模型"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png"
+                      alt="访问控制参考模型"
+                ></p>
 </li>
 <li><p>自主访问控制模型、强制访问控制模型、基于角色的访问控制模型常用于操作系统、数据库系统的资源访问。</p>
 </li>
@@ -3536,7 +3675,7 @@ over</p>
 </li>
 <li><p>脆弱性指计算机系统和中与安全策略想相冲突的状态或错误，它将导致攻击者非授权访问、假冒用户执行操作及拒绝服务。</p>
 </li>
-<li><p>网络风险&#x3D;网络威胁发生的概率X所造成的影响</p>
+<li><p>网络风险=网络威胁发生的概率X所造成的影响</p>
 </li>
 <li><p><strong>避免风险：</strong>通过物理隔离设备将内部网和外部网分开，避免受到外部网的攻击。</p>
 </li>
@@ -3581,11 +3720,11 @@ over</p>
 </li>
 <li><p>软件安全能力成熟度模型分成五级</p>
 <blockquote>
-<p>CMMI级–补丁修补;</p>
-<p>CMM2级–渗透测试、安安全代码评审;</p>
-<p>CMM3级–漏洞评估、代码分析、安全编码标准;</p>
-<p>CMM4级–软件安全风险识别、SDLC实施不同安全检查点;</p>
-<p>CMM5级–改进软件安全风险覆盖率、评估安全差距。</p>
+<p>CMMI级--补丁修补;</p>
+<p>CMM2级--渗透测试、安安全代码评审;</p>
+<p>CMM3级--漏洞评估、代码分析、安全编码标准;</p>
+<p>CMM4级--软件安全风险识别、SDLC实施不同安全检查点;</p>
+<p>CMM5级--改进软件安全风险覆盖率、评估安全差距。</p>
 </blockquote>
 </li>
 <li><p>共识算法主要应用于区块链，验证交易的合法性和正确这一部分，从而保持了各个节点的交易和区块数据的一致性。</p>
@@ -3708,7 +3847,7 @@ over</p>
 <li><p>Apache的access.conf配置文件负责设置文件的访问权限</p>
 </li>
 </ol>
-]]></content>
+</script></p>]]></content>
       <categories>
         <category>certificate</category>
       </categories>

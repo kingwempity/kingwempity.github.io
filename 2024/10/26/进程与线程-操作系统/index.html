@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E8%BF%9B%E7%A8%8B.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E7%BA%BF%E7%A8%8B.png">
 <meta property="article:published_time" content="2024-10-26T11:13:20.000Z">
-<meta property="article:modified_time" content="2024-10-26T11:32:43.847Z">
+<meta property="article:modified_time" content="2024-10-31T13:57:06.863Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="操作系统">
 <meta property="article:tag" content="C">
@@ -581,8 +581,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-10-26 19:32:43</span>
-            <span class="mobile">2024-10-26 19:32:43</span>
+            <span class="desktop">2024-10-31 21:57:06</span>
+            <span class="mobile">2024-10-31 21:57:06</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -657,7 +657,8 @@
 </blockquote>
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//procssees.c</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">pid_t</span> son_pid,daughter_pid;</span><br><span class="line">    <span class="type">int</span> count =<span class="number">1</span>;</span><br><span class="line">    son_pid =fork();</span><br><span class="line">    <span class="keyword">if</span> (son_pid == <span class="number">0</span>)&#123;</span><br><span class="line">        count ++;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;i am son, count =%d\n&quot;</span>,count);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        daughter_pid = fork();</span><br><span class="line">        <span class="keyword">if</span>(daughter_pid == <span class="number">0</span> )&#123;</span><br><span class="line">            count ++;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;i am daughter,count=%d\n&quot;</span>,count);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            count ++;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;i am father,count=%d\n&quot;</span>,count);</span><br><span class="line">            waitpid(son_pid,<span class="literal">NULL</span>,<span class="number">0</span>);</span><br><span class="line">            waitpid(daughter_pid,<span class="literal">NULL</span>,<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>运行结果：<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/进程.png" alt="进程"></p>
+<p>运行结果：</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BF%9B%E7%A8%8B.png" alt="线程"></p>
 <blockquote>
 <p>为什么出现son、daughter、father三个进程顺序不一致情况？</p>
 <blockquote>
@@ -671,8 +672,7 @@
 <h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//thread.c</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> *<span class="title function_">daugther</span><span class="params">(<span class="type">void</span> *num)</span>&#123;</span><br><span class="line">    <span class="type">int</span>* a =(<span class="type">int</span> *)num;</span><br><span class="line">    *a += <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;I am a daughter,count=%d\n&quot;</span>,*a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> *<span class="title function_">son</span><span class="params">(<span class="type">void</span> *num)</span>&#123;</span><br><span class="line">    <span class="type">int</span> *a = (<span class="type">int</span> *)num;</span><br><span class="line">    *a += <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;I am son,count=%d\n&quot;</span>,*a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">pthread_t</span> son_tid,daugther_tid;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    pthread_create(&amp;son_tid,<span class="literal">NULL</span>,son,&amp;count);</span><br><span class="line">    pthread_create(&amp;daugther_tid,<span class="literal">NULL</span>,daugther,&amp;count);</span><br><span class="line"></span><br><span class="line">    count++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;I am parent,count:=%d\n&quot;</span>,count);</span><br><span class="line">    pthread_join(son_tid,<span class="literal">NULL</span>);</span><br><span class="line">    pthread_join(daugther_tid,<span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>代码结果：</p>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/线程.png" alt="线程" style="zoom:80%;">
-
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%BA%BF%E7%A8%8B.png" alt="线程"></p>
 <blockquote>
 <p>count变量为什么不一样？</p>
 <blockquote>
@@ -693,7 +693,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-10-26 19:32:43
+                    :</strong> 2024-10-31 21:57:06
             </li>
         
         <li>

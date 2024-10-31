@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/Ubuntu%E7%B3%BB%E7%BB%9Fiptables%E8%A7%84%E5%88%99.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png">
 <meta property="article:published_time" content="2024-10-25T07:28:08.000Z">
-<meta property="article:modified_time" content="2024-10-30T15:16:00.719Z">
+<meta property="article:modified_time" content="2024-10-31T07:04:16.093Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="软考中级">
@@ -592,8 +592,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-10-30 23:16</span>
-            <span class="mobile">2024-10-30 23:16</span>
+            <span class="desktop">2024-10-31 15:04:16</span>
+            <span class="mobile">2024-10-31 15:04:16</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -635,7 +635,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>9.9k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>10k Words</span>
         </span>
     
     
@@ -1088,8 +1088,8 @@
 <p><a href="2%E5%88%86">问题3</a></p>
 <p>在网络日志中，安全工程师发现了如下可疑URL:</p>
 <p><a class="link" target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?url-http://evilsite.com/phishing/fakepage.htm">http://wy.gov.cn/ebanking?url-http://evilsite.com/phishing/fakepage.htm <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link" target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?page=1&client=">http://wy.gov.cn/ebanking?page=1&amp;client= <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><script>evilcode</p>
-<p><a class="link"   target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?page=l&response=evilsite.com%252levilcode.js&go=2" >http://wy.gov.cn/ebanking?page=l&amp;response=evilsite.com%2levilcode.js&amp;go=2 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link" target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?page=1&client=%5C">http://wy.gov.cn/ebanking?page=1&amp;client=\ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>&lt;script&gt;evilcode</p>
+<p><a class="link" target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?page=l&response=evilsite.com%252levilcode.js&go=2">http://wy.gov.cn/ebanking?page=l&amp;response=evilsite.com%2levilcode.js&amp;go=2 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>安全工程师初步判断可疑URL存在什么攻击?</p>
 <blockquote>
 <p>跨站脚本攻击</p>
@@ -1111,12 +1111,7 @@
 <h2 id="10"><a href="#10" class="headerlink" title="10"></a>10</h2><p>试题一(共20分)<br>阅读下列说明和图，回答问题1至问题5，将解答填入答题纸的对应栏内</p>
 <p>【说明】</p>
 <p>已知某公司网络环境结构主要由三个部分组成，分别是DMZ区、内网办公区和生产区，其拓扑结构如图1-1所示。信息安全部的王工正在按照等级保护2.0的要求对部分业务系统开展安全配置，图1.-1当中，网站服务器的!P地址是192.168.70.140，数据库服务器的IP地址是192.168.70.141，信息安全部计算机所在网段为192.168.1.124王工所使用的办公电脑IP地址为192.168.11.2。</p>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://gitee.com/kingwempity/images/raw/master/images/屏蔽子网网络结构.png"
-                      alt="屏蔽子网网络结构" style="zoom:50%;" 
-                >
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/屏蔽子网网络结构.png" alt="屏蔽子网网络结构" style="zoom:50%;">
 
 <p><a href="2%E5%88%86">问题1</a></p>
 <p>为了防止生产网受到外部的网络安全威胁，安全策略要求生产网和其他网之间部署安全隔离装置，隔离强度达到接诉物理隔离。请问图中X最有可能代表的安全设备是什么?</p>
@@ -1132,12 +1127,7 @@
 <p>第一道防线</p>
 </blockquote>
 <p><a href="6%E5%88%86">问题4</a><br>图1-1中防火墙1和防火墙2都采用Ubuntu系统自带的iptables防火墙，其默认的过滤规则如图1-2所示</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://gitee.com/kingwempity/images/raw/master/images/Ubuntu%E7%B3%BB%E7%BB%9Fiptables%E8%A7%84%E5%88%99.png"
-                      alt="Ubuntu系统iptables规则"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Ubuntu%E7%B3%BB%E7%BB%9Fiptables%E8%A7%84%E5%88%99.png" alt="Ubuntu系统iptables规则"></p>
 <p>(1)请说明上述防火墙采取的是白名单还是黑名单安全策略。</p>
 <blockquote>
 <p>黑名单</p>
@@ -1157,8 +1147,8 @@
 <p>(2)请编写防火墙1上实现互联网只能访问网站服务器的iptables过滤规则。</p>
 <blockquote>
 <p>iptables -P FORWARD DROP</p>
-<p>iptables -A FORWARD -d 192.168.70.140 -p tcp --dport 80 -j ACCEPT</p>
-<p>iptables -A FORWARD -d 192.168.70.141 -p tcp --dport 80 -j ACCEPT</p>
+<p>iptables -A FORWARD -d 192.168.70.140 -p tcp –dport 80 -j ACCEPT</p>
+<p>iptables -A FORWARD -d 192.168.70.141 -p tcp –dport 80 -j ACCEPT</p>
 </blockquote>
 <p>(3)请写出王工电脑的子网掩码。</p>
 <blockquote>
@@ -1166,8 +1156,8 @@
 </blockquote>
 <p>(4)为了使王工能通过SSH协议远程运维DMZ区中的服务器，请编写防火墙2的iptables过滤规则。</p>
 <blockquote>
-<p>iptables -t filter -A FORWARD -s 192.168.11.2 -d 192.168.70.140/24 -p tcp --dport 22 -j ACCEPT</p>
-<p>iptables -t filter -A FORWARD -s 192.168.70.140/24 -d 192.168.11.2 -p tcp --sport 22 -j ACCEPT</p>
+<p>iptables -t filter -A FORWARD -s 192.168.11.2 -d 192.168.70.140&#x2F;24 -p tcp –dport 22 -j ACCEPT</p>
+<p>iptables -t filter -A FORWARD -s 192.168.70.140&#x2F;24 -d 192.168.11.2 -p tcp –sport 22 -j ACCEPT</p>
 </blockquote>
 <h1 id="知识汇集"><a href="#知识汇集" class="headerlink" title="知识汇集"></a>知识汇集</h1><h2 id="信息安全基础知识"><a href="#信息安全基础知识" class="headerlink" title="信息安全基础知识"></a>信息安全基础知识</h2><ol>
 <li><p>访问控制机制由组成要素主要有：<strong>主体</strong>(Subject) 、<strong>参考监视器</strong>(Reference Monitor) 、<strong>客体</strong>(Object) 、<strong>访问控制数据库</strong>、<strong>审计库</strong>。</p>
@@ -1179,12 +1169,7 @@
 <li>记录主体访问客体的权限及其访问方式的信息，提供访问控制决策判断的依据，也称为访<br>问控制策略库。</li>
 </ul>
 </blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png"
-                      alt="访问控制参考模型"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png" alt="访问控制参考模型"></p>
 </li>
 <li><p>自主访问控制模型、强制访问控制模型、基于角色的访问控制模型常用于操作系统、数据库系统的资源访问。</p>
 </li>
@@ -1252,7 +1237,7 @@
 </li>
 <li><p>脆弱性指计算机系统和中与安全策略想相冲突的状态或错误，它将导致攻击者非授权访问、假冒用户执行操作及拒绝服务。</p>
 </li>
-<li><p>网络风险=网络威胁发生的概率X所造成的影响</p>
+<li><p>网络风险&#x3D;网络威胁发生的概率X所造成的影响</p>
 </li>
 <li><p><strong>避免风险：</strong>通过物理隔离设备将内部网和外部网分开，避免受到外部网的攻击。</p>
 </li>
@@ -1297,11 +1282,11 @@
 </li>
 <li><p>软件安全能力成熟度模型分成五级</p>
 <blockquote>
-<p>CMMI级--补丁修补;</p>
-<p>CMM2级--渗透测试、安安全代码评审;</p>
-<p>CMM3级--漏洞评估、代码分析、安全编码标准;</p>
-<p>CMM4级--软件安全风险识别、SDLC实施不同安全检查点;</p>
-<p>CMM5级--改进软件安全风险覆盖率、评估安全差距。</p>
+<p>CMMI级–补丁修补;</p>
+<p>CMM2级–渗透测试、安安全代码评审;</p>
+<p>CMM3级–漏洞评估、代码分析、安全编码标准;</p>
+<p>CMM4级–软件安全风险识别、SDLC实施不同安全检查点;</p>
+<p>CMM5级–改进软件安全风险覆盖率、评估安全差距。</p>
 </blockquote>
 </li>
 <li><p>共识算法主要应用于区块链，验证交易的合法性和正确这一部分，从而保持了各个节点的交易和区块数据的一致性。</p>
@@ -1424,7 +1409,7 @@
 <li><p>Apache的access.conf配置文件负责设置文件的访问权限</p>
 </li>
 </ol>
-</script></p>
+
         </div>
 
         
@@ -1438,7 +1423,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-10-30 23:16:00
+                    :</strong> 2024-10-31 15:04:16
             </li>
         
         <li>
@@ -1566,7 +1551,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">信息安全工程师</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">案例分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2017%E5%B9%B4"><span class="nav-number">1.1.</span> <span class="nav-text">1-2017年</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4"><span class="nav-number">1.2.</span> <span class="nav-text">2-2018年上半年</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">1.3.</span> <span class="nav-text">3-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4"><span class="nav-number">1.4.</span> <span class="nav-text">4-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5"><span class="nav-number">1.5.</span> <span class="nav-text">5-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6"><span class="nav-number">1.6.</span> <span class="nav-text">6-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7"><span class="nav-number">1.7.</span> <span class="nav-text">7-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8"><span class="nav-number">1.8.</span> <span class="nav-text">8-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9"><span class="nav-number">1.9.</span> <span class="nav-text">9-</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">案例分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2017%E5%B9%B4"><span class="nav-number">1.1.</span> <span class="nav-text">1-2017年</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2018%E5%B9%B4%E4%B8%8A%E5%8D%8A%E5%B9%B4"><span class="nav-number">1.2.</span> <span class="nav-text">2-2018年上半年</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">1.3.</span> <span class="nav-text">3-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4"><span class="nav-number">1.4.</span> <span class="nav-text">4-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5"><span class="nav-number">1.5.</span> <span class="nav-text">5-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6"><span class="nav-number">1.6.</span> <span class="nav-text">6-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7"><span class="nav-number">1.7.</span> <span class="nav-text">7-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8"><span class="nav-number">1.8.</span> <span class="nav-text">8-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9"><span class="nav-number">1.9.</span> <span class="nav-text">9-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10"><span class="nav-number">1.10.</span> <span class="nav-text">10</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E6%B1%87%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">知识汇集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">信息安全基础知识</span></a></li></ol></li></ol>
 
     </div>
 </div>

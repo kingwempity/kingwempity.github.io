@@ -3971,7 +3971,7 @@ over</p>
 </li>
 <li><p>SM3杂凑算法，512数据分组长度，杂凑值长度为256位；</p>
 </li>
-<li><p>SM4对称密码，分组长度和密钥长度为128比特。</p>
+<li><p>SM4分组密码，对称密码，分组长度和密钥长度为128比特。</p>
 </li>
 <li><p>SM9标识密码算法。</p>
 </li>
@@ -4013,6 +4013,8 @@ over</p>
 </li>
 <li><p>等保标准中，要求计算机信息系统可信计算基满足访问监视器需求的是：访问验证保护级（第5级）。</p>
 </li>
+<li><p>等保标准中，要求对应用程序的所有执行环节进行动态可信验证：第4级。</p>
+</li>
 <li><p>Wi-Fi加密过程采用TKIP和AES</p>
 </li>
 <li><p>资产清单包括 <strong>服务</strong> 和 <strong>无形资产</strong> 、<strong>信息资产</strong>、<strong>人员</strong>。</p>
@@ -4023,7 +4025,65 @@ over</p>
 </li>
 <li><p>密钥协商算法使用 ECDH</p>
 </li>
-<li></li>
+<li><p>震网病毒攻击的是伊朗核电站西门子公司的SIMATIC WinCC系统。</p>
+</li>
+<li><p>要实现网络信息安全基本目标。网络应具备 <strong>防御</strong>  <strong>监测</strong> <strong>应急</strong> <strong>恢复</strong>等基本功能。</p>
+</li>
+<li><p>《中华人民共和国数据安全法》自<strong>2021年9月1日</strong>施行。</p>
+</li>
+<li><p>《中华人民共和国网络空间法》自<strong>2017年6月1日</strong>施行。</p>
+</li>
+<li><p>《中华人民共和国密码法》自<strong>2020年1月1日</strong>施行。</p>
+</li>
+<li><p><strong>安全审计</strong>属于安全管理中心。</p>
+</li>
+<li><p>现代操作系统提供的 金丝雀(Canary)漏洞缓解技术属于 <strong>堆栈保护</strong></p>
+</li>
+<li><p>对于受到治安管理处罚的人员，<strong>5年</strong> 内不得充实网络安全管理和网络安全运营关键岗位的工作。</p>
+</li>
+<li><p>网络攻击工具</p>
+<blockquote>
+<p>扫描器：扫描目标系统地址、端口、漏洞——NMAP、Nessus、Super Scan</p>
+<p>远程监控：代理软件，控制“肉鸡”——-冰河、网络精灵、Netcat</p>
+<p>网络嗅探：窃取、分析、破解网络信息——–Tcpdump、DSniff、WireShark</p>
+<p>安全渗透工具箱：漏洞利用、特权提升——–Metasploit、BackTrack</p>
+<p>密码破解：猜测、穷举、破解口令——–John the Ripper、LOphtCrack</p>
+</blockquote>
+</li>
+<li><p>在移动应用App程序插入无关代码属于 <strong>防反编译</strong></p>
+</li>
+<li><p>域名地址和端口地址无法转换</p>
+</li>
+<li><p>DHCP协议（动态主机配置协议）</p>
+</li>
+<li><p>PKI公钥基础设施技术：CA(证书授权机构：证书的颁发、废除、更新；认证机构负责签发、管理、撤销一组终端用户证书)、RA(证书登记权威机构：证书注册和担保)</p>
+</li>
+<li><p>按照访问控制的对象进行分类，对文件读写进行访问控制属于操作系统访问控制。</p>
+</li>
+<li><p>操作系统访问控制有：文件读写、进程、内存等访问控制。</p>
+</li>
+<li><p>IIS对文件的NTFS许可权限管理属于 <strong>文件授权</strong></p>
+</li>
+<li><p>防火墙无法实现网络物理隔离</p>
+</li>
+<li><p>包过滤防火墙只能基于IP层过滤网站恶意包</p>
+</li>
+<li><p>VPN不能提供网络隔离服务</p>
+</li>
+<li><p>数据链路层VPN的实现方式：ATM，Frame Relay，多协议标签交换MPLS</p>
+</li>
+<li><p>网络层VPN实现方式：受控路由过滤、隧道技术</p>
+</li>
+<li><p>传输层VPN实现方式：SSL技术</p>
+</li>
+<li><p>蜜罐为了实现一台计算机绑定多个IP地址，可以使用ARP协议实现。</p>
+</li>
+<li><p>物理断开技术需要保证不同安全域之间的网络 <strong>不能</strong> 以直接或间接的方式相连。</p>
+</li>
+<li><p>内外网路线切换器可以通过交换盒的开关设置控制计算机的网络物理连接。</p>
+</li>
+<li><p>文件传输审计主要针对FTP协议。</p>
+</li>
 </ol>
 ]]></content>
       <categories>

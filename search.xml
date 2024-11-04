@@ -3691,6 +3691,55 @@ over</p>
 <p>iptables -t filter -A FORWARD -s 192.168.11.2 -d 192.168.70.140&#x2F;24 -p tcp –dport 22 -j ACCEPT</p>
 <p>iptables -t filter -A FORWARD -s 192.168.70.140&#x2F;24 -d 192.168.11.2 -p tcp –sport 22 -j ACCEPT</p>
 </blockquote>
+<h2 id="11"><a href="#11" class="headerlink" title="11-"></a>11-</h2><p>阅读下列说明，<br>回签问题1至问题5<br>将解箜填入签锁纸的对应栏内<br>【说明】<br>Linux系统中所有内容都是以文件的形式保存和管理的，即一切皆文件。普通文本、音视频、二讲制程序是文件，目录是文件，硬件设备(键盘、监视器、硬盘、打印机)是文件，就连网络套接字等也都是文件。在Linux Ubuntu系统下执行is -1命令后显示的结果如图2-1所示。</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9010-1.png" alt="案例分析10-1"></p>
+<p><a href="2%E5%88%86">问题1</a>请问执行上述命令的用户是普通用户还是超级用户?</p>
+<blockquote>
+<p>普通用户</p>
+</blockquote>
+<p><a href="3%E5%88%86">问题2</a><br>(1)请给出图2-1中属于普通文件的文件名</p>
+<blockquote>
+<p>crond.pid </p>
+<p>abc</p>
+</blockquote>
+<p>(2)请给出图2-1中的目录文件名。</p>
+<blockquote>
+<p>openvpn</p>
+</blockquote>
+<p>(3)请给出图2-1中的符号链接文件名,</p>
+<blockquote>
+<p>sh-&gt;&#x2F;dev&#x2F;shm</p>
+</blockquote>
+<p><a href="2%E5%88%86">问题3</a><br>符号链接作为Linux系统中的一种文件类型，它指向计算机上的另一个文件或文件夹。符号链接类似于Windows中的快捷方式。如果要在当前目录下，创建图2-1中所示的符号链接，请给出相应命令。</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s dev/shm shm</span><br></pre></td></tr></table></figure></div>
+
+<p><a href="3%E5%88%86">问题4</a></p>
+<p>当源文件(或目录)被移动或者被删除时，指向它的符号链接就会失效。</p>
+<p>(1)请给出命令，实现列出&#x2F;home目录下各种类型(如:文件、目录及子目录)的所有失效链接</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">find /home -xtype | -<span class="built_in">print</span></span><br></pre></td></tr></table></figure></div>
+
+<p>(2)在(1)基础上，完善命令以实现删除所有失效链接。</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">find /home -xtype | -<span class="built_in">exec</span> <span class="built_in">rm</span> &#123;&#125; \</span><br></pre></td></tr></table></figure></div>
+
+<p><a href="10%E5%88%86">问题5</a><br>Linux系统的权限模型由文件的所有者、文件的组、所有其他用户以及读(r)、写(w)、执行(x)组成.<br>(1)请写出第一个文件的数字权限表示;</p>
+<blockquote>
+<p>755</p>
+</blockquote>
+<p>(2)请写出最后一个文件的数字权限表示;</p>
+<blockquote>
+<p>755</p>
+</blockquote>
+<p>(3)请写出普通用户执行最后一个文件后的有效权限</p>
+<blockquote>
+<p>可读、不可写、可执行</p>
+</blockquote>
+<p>(4)请给出去掉第一个文件的’x’权限的命令。</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">chomd 644 openvpn</span><br></pre></td></tr></table></figure></div>
+
+<p>(5)执行(4)给出的命令后，请说明root用户能否进入该文件</p>
+<blockquote>
+<p>去掉x可执行权限后，root对该文件可读可写但不能执行，则无法进入该文件。</p>
+</blockquote>
 <h1 id="知识汇集"><a href="#知识汇集" class="headerlink" title="知识汇集"></a>知识汇集</h1><h2 id="信息安全基础知识"><a href="#信息安全基础知识" class="headerlink" title="信息安全基础知识"></a>信息安全基础知识</h2><ol>
 <li><p>访问控制机制由组成要素主要有：<strong>主体</strong>(Subject) 、<strong>参考监视器</strong>(Reference Monitor) 、<strong>客体</strong>(Object) 、<strong>访问控制数据库</strong>、<strong>审计库</strong>。</p>
 <blockquote>

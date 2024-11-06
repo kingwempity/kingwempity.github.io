@@ -3726,10 +3726,10 @@ over</p>
 <p><a href="3%E5%88%86">问题4</a></p>
 <p>当源文件(或目录)被移动或者被删除时，指向它的符号链接就会失效。</p>
 <p>(1)请给出命令，实现列出&#x2F;home目录下各种类型(如:文件、目录及子目录)的所有失效链接</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">find /home -xtype | -<span class="built_in">print</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">find /home -xtype l -<span class="built_in">print</span></span><br></pre></td></tr></table></figure></div>
 
 <p>(2)在(1)基础上，完善命令以实现删除所有失效链接。</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">find /home -xtype | -<span class="built_in">exec</span> <span class="built_in">rm</span> &#123;&#125; \</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">find /home -xtype l -<span class="built_in">exec</span> <span class="built_in">rm</span> &#123;&#125; \</span><br></pre></td></tr></table></figure></div>
 
 <p><a href="10%E5%88%86">问题5</a><br>Linux系统的权限模型由文件的所有者、文件的组、所有其他用户以及读(r)、写(w)、执行(x)组成.<br>(1)请写出第一个文件的数字权限表示;</p>
 <blockquote>

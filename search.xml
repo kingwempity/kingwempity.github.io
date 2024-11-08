@@ -4061,6 +4061,21 @@ over</p>
 <blockquote>
 <p>①②③④⑤</p>
 </blockquote>
+<h2 id="18-2017年试题一"><a href="#18-2017年试题一" class="headerlink" title="18-2017年试题一"></a>18-2017年试题一</h2><p>阅读下列说明，回答问题1至问题3，将解答写在答题纸的对应栏内。</p>
+<p>【说明】<br>安全目标的关键是实现安全的三大要素:机密性、完整性和可用性。对于一般性的信息类型的安全分类有以下表达形式:{(机密性，影响等级)，(完整性，影响等级)，(可用性，影响等级)}在上述表达式中，”影响等级”的值可以取为低(L)、中(M)、高(H)三级以及不适用(NA)。<br><a href="6%E5%88%86">问题1</a><br>请简要说明机密性、完整性和可用性的含义。</p>
+<blockquote>
+<p>机密性：确保信息仅被合法用户访问，而不被泄露给非授权用户</p>
+<p>完整性：所有资源只能由授权方或以授权的方式进行修改，即信息未授权不可进行改变。</p>
+<p>可用性：所有资源在适当的时候可以由授权方访问，信息可悲授权实体访问并按需求使用。</p>
+</blockquote>
+<p><a href="6%E5%88%86">问题2</a><br>对于影响等级”不适用”通常只针对哪个安全要素?</p>
+<blockquote>
+<p>机密性</p>
+</blockquote>
+<p><a href="3%E5%88%86">问题3</a><br>如果一个普通人在它的个人Web服务器上管理其公开信息。请问这种公开信息的安全分类是什么?</p>
+<blockquote>
+<p>{(机密性：NA)，(完整性：M),(可用性：M)}</p>
+</blockquote>
 <h1 id="知识汇集"><a href="#知识汇集" class="headerlink" title="知识汇集"></a>知识汇集</h1><h2 id="信息安全基础知识"><a href="#信息安全基础知识" class="headerlink" title="信息安全基础知识"></a>信息安全基础知识</h2><ol>
 <li><p>访问控制机制由组成要素主要有：<strong>主体</strong>(Subject) 、<strong>参考监视器</strong>(Reference Monitor) 、<strong>客体</strong>(Object) 、<strong>访问控制数据库</strong>、<strong>审计库</strong>。</p>
 <blockquote>
@@ -4470,6 +4485,8 @@ over</p>
 <li><p>震网病毒攻击的是伊朗核电站西门子公司的SIMATIC WinCC系统。</p>
 </li>
 <li><p>要实现网络信息安全基本目标。网络应具备 <strong>防御</strong>  <strong>监测</strong> <strong>应急</strong> <strong>恢复</strong>等基本功能。</p>
+</li>
+<li><p>《中华人民共和国个人信息保护法》自2021年11月1日施行。</p>
 </li>
 <li><p>《中华人民共和国数据安全法》自<strong>2021年9月1日</strong>施行。</p>
 </li>

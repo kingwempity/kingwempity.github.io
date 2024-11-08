@@ -4610,7 +4610,9 @@ over</p>
 </li>
 <li><p>针对信息系统的访问控制包含三要素：主体、客体、访问控制</p>
 </li>
-<li><p>P2DR(动态安全模型)：防护、检测、响应、安全策略</p>
+<li><p>P2DR(动态安全模型)：防护(protection)、检测(detection)、响应(response)、安全策略(police)</p>
+</li>
+<li><p>PDRR模型：保护(protection),检测（detection），恢复（recovery），响应（response)</p>
 </li>
 </ol>
 ]]></content>

@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="敬请T期待">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://kingwempity.github.io/2024/11/19/owasp-top-10-2021/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="A01 Broken Access Control        访问控制失效DescriptionAccess control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OWASP_Top_10_2021">
+<meta property="og:url" content="https://kingwempity.github.io/2024/11/19/OWASP-Top-10-2021/index.html">
+<meta property="og:site_name" content="敬请T期待">
+<meta property="og:description" content="A01 Broken Access Control        访问控制失效DescriptionAccess control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-19T03:26:53.000Z">
+<meta property="article:modified_time" content="2024-11-19T04:11:14.760Z">
+<meta property="article:author" content="kingwempity">
+<meta property="article:tag" content="-security">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/avatar.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/avatar.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            OWASP_Top_10_2021 | Kingwempitys&#39;Blog
+        
+    </title>
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/fonts/Chillax/chillax.css">
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/assets/build/styles.css">
+    
+
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+    
+    
+        <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/anime.min.js" ></script>
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"kingwempity.github.io","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":5,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":false,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Kingwempitys'Blogs","subtitle":{"text":["敬请T期待"],"hitokoto":{"enable":true,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":"ture","family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/kingwempity","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Something Just Like This","artist":"Coldplay","url":"https://evan.beee.top/music/Something%20Just%20Like%20This%20-%20The%20Chainsmokers%E3%80%81Coldplay.mp3","cover":"https://evan.beee.top/music/covers/Something_Just_Like_This.png","lrc":null},{"name":"如果我们在余生相遇-双鱼座","artist":"RE-D/是二哈ya","url":"https://link.hhtjim.com/163/2123230314.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/music.jpg"},{"name":"小宇","artist":"刘大拿","url":"https://link.hhtjim.com/163/1954954129.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/小宇.png"},{"name":"偏爱","artist":"张芸京","url":"https://link.hhtjim.com/163/5238992.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/偏爱.jpg"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.3","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Being":{"path":"https://cn.bing.com","icon":"fa-solid fa-earth-americas"},"Links":{"icon":"fa-regular fa-link","submenus":{"Me":"/about","Github":"https://github.com/kingwempity","Blog":"https://kingwempity.github.io"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"敬请T期待","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Masonry":{"path":"/masonry","icon":"fa-solid fa-image"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":5}},"footerStart":"2024/1/20 12:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/fontawesome/regular.min.css">
+    
+    
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/fontawesome/duotone.min.css">
+    
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Kingwempitys&#39;Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container flex flex-col justify-between min-h-dvh">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/images/avatar.svg" class="w-full h-full rounded-sm">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                Kingwempitys&#39;Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://cn.bing.com"
+                                        >
+                                    <i class="fa-solid fa-earth-americas fa-fw"></i>
+                                    BEING
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/kingwempity">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://kingwempity.github.io">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://cn.bing.com"
+                        >
+                            <span>
+                                BEING
+                            </span>
+                            
+                                <i class="fa-solid fa-earth-americas fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/kingwempity">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="https://kingwempity.github.io">BLOG</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>Archives</span>
+                            <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/masonry"
+                        >
+                            <span>Masonry</span>
+                            <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">39</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                
+                
+                <img src="https://gitee.com/kingwempity/images/raw/master/images/TOP_10_logo_Final_Logo_Colour.png" alt="OWASP_Top_10_2021" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                
+                <div class="w-full flex items-center absolute bottom-0 justify-start">
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">OWASP_Top_10_2021</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">敬请T期待</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-11-19 11:26:53</span>
+        <span class="mobile">2024-11-19 11:26:53</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-11-19 12:11:14</span>
+            <span class="mobile">2024-11-19 12:11:14</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Security/">Security</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/security/">-security</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>14.8k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>66 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <meta name="referrer" content="no-referrer">
+
+<h2 id="A01-Broken-Access-Control-访问控制失效"><a href="#A01-Broken-Access-Control-访问控制失效" class="headerlink" title="A01 Broken Access Control       访问控制失效"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">A01 Broken Access Control        <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>访问控制失效</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user’s limits. Common access control vulnerabilities include:</p>
+<blockquote>
+<p>访问控制强制实施策略，以便用户无法超出其预期权限执行操作。故障通常会导致未经授权的信息泄露、修改或销毁所有数据，或执行超出用户限制的业务功能。常见的访问控制漏洞包括：</p>
+</blockquote>
+<ul>
+<li><p>Violation of the principle of least privilege or deny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone.</p>
+<blockquote>
+<p>违反了最低权限原则或默认拒绝原则，其中只应为特定功能、角色或用户授予访问权限，但任何人都可以访问。</p>
+</blockquote>
+</li>
+<li><p>Bypassing access control checks by modifying the URL (parameter tampering or force browsing), internal application state, or the HTML page, or by using an attack tool modifying API requests.</p>
+<blockquote>
+<p>通过修改 URL（参数篡改或强制浏览）、内部应用程序状态或 HTML 页面，或使用修改 API 请求的攻击工具来绕过访问控制检查。</p>
+</blockquote>
+</li>
+<li><p>Permitting viewing or editing someone else’s account, by providing its unique identifier (insecure direct object references)</p>
+<blockquote>
+<p>通过提供其唯一标识符（不安全的直接对象引用）来允许查看或编辑他人的帐户</p>
+</blockquote>
+</li>
+<li><p>Accessing API with missing access controls for POST, PUT and DELETE.</p>
+<blockquote>
+<p>访问缺少 POST、PUT 和 DELETE 访问控制的 API。</p>
+</blockquote>
+</li>
+<li><p>Elevation of privilege. Acting as a user without being logged in or acting as an admin when logged in as a user.</p>
+<blockquote>
+<p>特权提升。在未登录的情况下以用户身份行事，或在以用户身份登录时以管理员身份行事。</p>
+</blockquote>
+</li>
+<li><p>Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token, or a cookie or hidden field manipulated to elevate privileges or abusing JWT invalidation.</p>
+<blockquote>
+<p>元数据操作，例如重放或篡改 JSON Web 令牌 （JWT） 访问控制令牌，或者操纵 Cookie 或隐藏字段以提升权限或滥用 JWT 失效。</p>
+</blockquote>
+</li>
+<li><p>CORS misconfiguration allows API access from unauthorized&#x2F;untrusted origins.</p>
+<blockquote>
+<p>CORS 配置错误允许从未经授权&#x2F;不受信任的来源访问 API。</p>
+</blockquote>
+</li>
+<li><p>Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user.</p>
+<blockquote>
+<p>强制以未经身份验证的用户身份浏览到经过身份验证的页面，或以标准用户身份浏览到特权页面。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="How-to-Prevent"><a href="#How-to-Prevent" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><p>Access control is only effective in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.</p>
+<blockquote>
+<p>访问控制仅在受信任的服务器端代码或无服务器 API 中有效，攻击者无法修改访问控制检查或元数据。</p>
+</blockquote>
+<ul>
+<li><p>Except for public resources, deny by default.</p>
+<blockquote>
+<p>除公共资源外，默认为 deny。</p>
+</blockquote>
+</li>
+<li><p>Implement access control mechanisms once and re-use them throughout the application, including minimizing Cross-Origin Resource Sharing (CORS) usage.</p>
+<blockquote>
+<p>实施一次访问控制机制，然后在整个应用程序中重复使用它们，包括最大限度地减少跨域资源共享 （CORS） 的使用。</p>
+</blockquote>
+</li>
+<li><p>Model access controls should enforce record ownership rather than accepting that the user can create, read, update, or delete any record.</p>
+<blockquote>
+<p>模型访问控制应强制实施记录所有权，而不是接受用户可以创建、读取、更新或删除任何记录。</p>
+</blockquote>
+</li>
+<li><p>Unique application business limit requirements should be enforced by domain models.</p>
+<blockquote>
+<p>域模型应强制实施唯一的应用程序业务限制要求。</p>
+</blockquote>
+</li>
+<li><p>Disable web server directory listing and ensure file metadata (e.g., .git) and backup files are not present within web roots.</p>
+<blockquote>
+<p>禁用 Web 服务器目录列表，并确保 Web 根目录中不存在文件元数据（例如 .git）和备份文件。</p>
+</blockquote>
+</li>
+<li><p>Log access control failures, alert admins when appropriate (e.g., repeated failures).</p>
+<blockquote>
+<p>记录访问控制失败，在适当的时候提醒管理员（例如，重复失败）。</p>
+</blockquote>
+</li>
+<li><p>Rate limit API and controller access to minimize the harm from automated attack tooling.</p>
+<blockquote>
+<p>对 API 和控制器访问进行速率限制，以最大限度地减少自动攻击工具的危害。</p>
+</blockquote>
+</li>
+<li><p>Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should rather be short-lived so that the window of opportunity for an attacker is minimized. For longer lived JWTs it’s highly recommended to follow the OAuth standards to revoke access.</p>
+<blockquote>
+<p>注销后，应在服务器上使有状态会话标识符失效。无状态 JWT 令牌的生存期应该是短暂的，以便将攻击者的机会窗口降至最低。对于寿命较长的 JWT，强烈建议遵循 OAuth 标准来撤销访问权限。</p>
+</blockquote>
+</li>
+</ul>
+<p>Developers and QA staff should include functional access control unit and integration tests.</p>
+<blockquote>
+<p>开发人员和 QA 人员应包括功能访问控制单元和集成测试。</p>
+</blockquote>
+<h3 id="Example-Attack-Scenarios"><a href="#Example-Attack-Scenarios" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1:</strong> The application uses unverified data in a SQL call that is accessing account information:</p>
+<blockquote>
+<p><strong>场景 #1：</strong>应用程序在访问账户信息的 SQL 调用中使用未经验证的数据：</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pstmt.setString(1, request.getParameter(&quot;acct&quot;));</span><br><span class="line">ResultSet results = pstmt.executeQuery( );</span><br></pre></td></tr></table></figure></div>
+
+<p>An attacker simply modifies the browser’s ‘acct’ parameter to send whatever account number they want. If not correctly verified, the attacker can access any user’s account.</p>
+<blockquote>
+<p>攻击者只需修改浏览器的 ‘acct’ 参数即可发送他们想要的任何账号。如果未正确验证，攻击者可以访问任何用户的帐户。</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://example.com/app/accountInfo?acct=notmyacct</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Scenario #2:</strong> An attacker simply forces browses to target URLs. Admin rights are required for access to the admin page.</p>
+<blockquote>
+<p><strong>场景 #2：</strong>攻击者只是强制浏览目标 URL。需要管理员权限才能访问管理员页面。</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://example.com/app/getappInfo</span><br><span class="line">https://example.com/app/admin_getappInfo</span><br></pre></td></tr></table></figure></div>
+
+<p>If an unauthenticated user can access either page, it’s a flaw. If a non-admin can access the admin page, this is a flaw.</p>
+<blockquote>
+<p>如果未经身份验证的用户可以访问任一页面，则这是一个缺陷。如果非管理员可以访问管理员页面，则这是一个缺陷。</p>
+</blockquote>
+<h2 id="A02-Cryptographic-Failures-加密失败"><a href="#A02-Cryptographic-Failures-加密失败" class="headerlink" title="A02 Cryptographic Failures       加密失败"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A02_2021-Cryptographic_Failures/">A02 Cryptographic Failures        <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>加密失败</h2><h3 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h3><p>The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information, and business secrets require extra protection, mainly if that data falls under privacy laws, e.g., EU’s General Data Protection Regulation (GDPR), or regulations, e.g., financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:</p>
+<blockquote>
+<p>首先要确定传输中数据和静态数据的保护需求。例如，密码、信用卡号、健康记录、个人信息和商业秘密需要额外保护，主要是如果这些数据属于隐私法，例如欧盟的通用数据保护条例 （GDPR），或法规，例如 PCI 数据安全标准 （PCI DSS） 等金融数据保护。对于所有此类数据：</p>
+</blockquote>
+<ul>
+<li><p>Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, FTP also using TLS upgrades like STARTTLS. External internet traffic is hazardous. Verify all internal traffic, e.g., between load balancers, web servers, or back-end systems.</p>
+<blockquote>
+<p>是否有任何数据以明文形式传输？这涉及 HTTP、SMTP、FTP 等协议，也使用 STARTTLS 等 TLS 升级。外部 Internet 流量是危险的。验证所有内部流量，例如负载均衡器、Web 服务器或后端系统之间的流量。</p>
+</blockquote>
+</li>
+<li><p>Are any old or weak cryptographic algorithms or protocols used either by default or in older code?</p>
+<blockquote>
+<p>默认情况下或在较旧的代码中使用了任何旧的或较弱的加密算法或协议？</p>
+</blockquote>
+</li>
+<li><p>Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing? Are crypto keys checked into source code repositories?</p>
+<blockquote>
+<p>是否使用了默认加密密钥，生成或重复使用了弱加密密钥，或者是否缺少适当的密钥管理或轮换？加密密钥是否签入源代码存储库？</p>
+</blockquote>
+</li>
+<li><p>Is encryption not enforced, e.g., are any HTTP headers (browser) security directives or headers missing?</p>
+<blockquote>
+<p>是否未强制加密，例如，是否缺少任何 HTTP 标头（浏览器）安全指令或标头？</p>
+</blockquote>
+</li>
+<li><p>Is the received server certificate and the trust chain properly validated?</p>
+<blockquote>
+<p>收到的服务器证书和信任链是否经过正确验证？</p>
+</blockquote>
+</li>
+<li><p>Are initialization vectors ignored, reused, or not generated sufficiently secure for the cryptographic mode of operation? Is an insecure mode of operation such as ECB in use? Is encryption used when authenticated encryption is more appropriate?</p>
+<blockquote>
+<p>初始化向量是否被忽略、重复使用或生成的加密操作模式不够安全？是否正在使用 ECB 等不安全的操作模式？当经过身份验证的加密更合适时，是否使用加密？</p>
+</blockquote>
+</li>
+<li><p>Are passwords being used as cryptographic keys in absence of a password base key derivation function?</p>
+<blockquote>
+<p>在没有密码基密钥派生功能的情况下，密码是否被用作加密密钥？</p>
+</blockquote>
+</li>
+<li><p>Is randomness used for cryptographic purposes that was not designed to meet cryptographic requirements? Even if the correct function is chosen, does it need to be seeded by the developer, and if not, has the developer over-written the strong seeding functionality built into it with a seed that lacks sufficient entropy&#x2F;unpredictability?</p>
+<blockquote>
+<p>随机数是否用于并非旨在满足加密要求的加密目的？即使选择了正确的函数，它是否需要由开发人员进行种子设定，如果不需要，则开发人员是否用缺乏足够熵&#x2F;不可预测性的种子覆盖了其内置的强种子设定功能？</p>
+</blockquote>
+</li>
+<li><p>Are deprecated hash functions such as MD5 or SHA1 in use, or are non-cryptographic hash functions used when cryptographic hash functions are needed?</p>
+<blockquote>
+<p>是否正在使用已弃用的哈希函数（如 MD5 或 SHA1），或者当需要加密哈希函数时是否使用非加密哈希函数？</p>
+</blockquote>
+</li>
+<li><p>Are deprecated cryptographic padding methods such as PKCS number 1 v1.5 in use?</p>
+<blockquote>
+<p>是否正在使用已弃用的加密填充方法，例如 PKCS 编号 1 v1.5？</p>
+</blockquote>
+</li>
+<li><p>Are cryptographic error messages or side channel information exploitable, for example in the form of padding oracle attacks?</p>
+<blockquote>
+<p>加密错误消息或侧信道信息是否可被利用，例如以填充预言机攻击的形式？</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="How-to-Prevent-1"><a href="#How-to-Prevent-1" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><p>Do the following, at a minimum, and consult the references:</p>
+<blockquote>
+<p>至少执行以下操作，并查阅参考资料：</p>
+</blockquote>
+<ul>
+<li><p>Classify data processed, stored, or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.</p>
+<blockquote>
+<p>对应用程序处理、存储或传输的数据进行分类。根据隐私法律、法规要求或业务需求确定哪些数据是敏感的。</p>
+</blockquote>
+</li>
+<li><p>Don’t store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.</p>
+<blockquote>
+<p>不要不必要地存储敏感数据。尽快丢弃它或使用符合 PCI DSS 的标记化甚至截断。未保留的数据不会被盗。</p>
+</blockquote>
+</li>
+<li><p>Make sure to encrypt all sensitive data at rest.</p>
+<blockquote>
+<p>确保对所有静态敏感数据进行加密。</p>
+</blockquote>
+</li>
+<li><p>Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.</p>
+<blockquote>
+<p>确保最新且强大的标准算法、协议和密钥到位;使用适当的密钥管理。</p>
+</blockquote>
+</li>
+<li><p>Encrypt all data in transit with secure protocols such as TLS with forward secrecy (FS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).</p>
+<blockquote>
+<p>使用安全协议加密传输中的所有数据，例如使用前向保密 （FS） 密码的 TLS、服务器的密码优先级和安全参数。使用 HTTP 严格传输安全 （HSTS） 等指令强制加密。</p>
+</blockquote>
+</li>
+<li><p>Disable caching for response that contain sensitive data.</p>
+<blockquote>
+<p>对包含敏感数据的响应禁用缓存。</p>
+</blockquote>
+</li>
+<li><p>Apply required security controls as per the data classification.</p>
+<blockquote>
+<p>根据数据分类应用所需的安全控制。</p>
+</blockquote>
+</li>
+<li><p>Do not use legacy protocols such as FTP and SMTP for transporting sensitive data.</p>
+<blockquote>
+<p>请勿使用 FTP 和 SMTP 等传统协议来传输敏感数据。</p>
+</blockquote>
+</li>
+<li><p>Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, scrypt, bcrypt or PBKDF2.</p>
+<blockquote>
+<p>使用具有工作因子（延迟因子）的强自适应和加盐哈希函数（例如 Argon2、scrypt、bcrypt 或 PBKDF2）存储密码。</p>
+</blockquote>
+</li>
+<li><p>Initialization vectors must be chosen appropriate for the mode of operation. For many modes, this means using a CSPRNG (cryptographically secure pseudo random number generator). For modes that require a nonce, then the initialization vector (IV) does not need a CSPRNG. In all cases, the IV should never be used twice for a fixed key.</p>
+<blockquote>
+<p>必须选择适合操作模式的初始化向量。对于许多模式，这意味着使用 CSPRNG（加密安全伪随机数生成器）。对于需要 nonce 的模式，则初始化向量 （IV） 不需要 CSPRNG。在所有情况下，对于固定键，IV 绝不应使用两次。</p>
+</blockquote>
+</li>
+<li><p>Always use authenticated encryption instead of just encryption.</p>
+<blockquote>
+<p>始终使用经过身份验证的加密，而不仅仅是加密。</p>
+</blockquote>
+</li>
+<li><p>Keys should be generated cryptographically randomly and stored in memory as byte arrays. If a password is used, then it must be converted to a key via an appropriate password base key derivation function.</p>
+<blockquote>
+<p>密钥应以加密方式随机生成，并以字节数组的形式存储在内存中。如果使用了密码，则必须通过适当的密码基密钥派生功能将其转换为密钥。</p>
+</blockquote>
+</li>
+<li><p>Ensure that cryptographic randomness is used where appropriate, and that it has not been seeded in a predictable way or with low entropy. Most modern APIs do not require the developer to seed the CSPRNG to get security.</p>
+<blockquote>
+<p>确保在适当的情况下使用加密随机性，并且没有以可预测的方式或低熵进行种子植入。大多数现代 API 不需要开发人员为 CSPRNG 设定种子即可获得安全性。</p>
+</blockquote>
+</li>
+<li><p>Avoid deprecated cryptographic functions and padding schemes, such as MD5, SHA1, PKCS number 1 v1.5 .</p>
+<blockquote>
+<p>避免使用已弃用的加密函数和填充方案，例如 MD5、SHA1、PKCS 编号 1 v1.5 。</p>
+</blockquote>
+</li>
+<li><p>Verify independently the effectiveness of configuration and settings.</p>
+<blockquote>
+<p>独立验证配置和设置的有效性。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Example-Attack-Scenarios-1"><a href="#Example-Attack-Scenarios-1" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1</strong>: An application encrypts credit card numbers in a database using automatic database encryption. However, this data is automatically decrypted when retrieved, allowing a SQL injection flaw to retrieve credit card numbers in clear text.</p>
+<blockquote>
+<p><strong>场景 #1</strong>：应用程序使用自动数据库加密来加密数据库中的信用卡号。但是，此数据在检索时会自动解密，从而允许 SQL 注入缺陷以明文形式检索信用卡号。</p>
+</blockquote>
+<p><strong>Scenario #2</strong>: A site doesn’t use or enforce TLS for all pages or supports weak encryption. An attacker monitors network traffic (e.g., at an insecure wireless network), downgrades connections from HTTPS to HTTP, intercepts requests, and steals the user’s session cookie. The attacker then replays this cookie and hijacks the user’s (authenticated) session, accessing or modifying the user’s private data. Instead of the above they could alter all transported data, e.g., the recipient of a money transfer.</p>
+<blockquote>
+<p><strong>场景 #2</strong>：网站没有对所有页面使用或强制使用 TLS，或者支持弱加密。攻击者监控网络流量（例如，在不安全的无线网络上），将连接从 HTTPS 降级为 HTTP，拦截请求，并窃取用户的会话 Cookie。然后，攻击者重放此 cookie 并劫持用户的（经过身份验证的）会话，访问或修改用户的私人数据。相反，他们可以更改所有传输的数据，例如，汇款的接收者。</p>
+</blockquote>
+<p><strong>Scenario #3</strong>: The password database uses unsalted or simple hashes to store everyone’s passwords. A file upload flaw allows an attacker to retrieve the password database. All the unsalted hashes can be exposed with a rainbow table of pre-calculated hashes. Hashes generated by simple or fast hash functions may be cracked by GPUs, even if they were salted.</p>
+<blockquote>
+<p><strong>场景 #3</strong>：密码数据库使用未加盐或简单的哈希来存储每个人的密码。文件上传缺陷允许攻击者检索密码数据库。所有未加盐的哈希值都可以使用预先计算的哈希值的彩虹表来公开。由简单或快速哈希函数生成的哈希可能会被 GPU 破解，即使它们被加盐。</p>
+</blockquote>
+<h2 id="A03-Injection注入"><a href="#A03-Injection注入" class="headerlink" title="A03 Injection注入"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A03_2021-Injection/">A03 Injection <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>注入</h2><h3 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h3><p>An application is vulnerable to attack when:</p>
+<blockquote>
+<p>在以下情况下，应用程序容易受到攻击：</p>
+</blockquote>
+<ul>
+<li><p>User-supplied data is not validated, filtered, or sanitized by the application.</p>
+<blockquote>
+<p>应用程序不会验证、过滤或清理用户提供的数据。</p>
+</blockquote>
+</li>
+<li><p>Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.</p>
+<blockquote>
+<p>没有上下文感知转义的动态查询或非参数化调用直接在解释器中使用。</p>
+</blockquote>
+</li>
+<li><p>Hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records.</p>
+<blockquote>
+<p>恶意数据在对象关系映射 （ORM） 搜索参数中用于提取其他敏感记录。</p>
+</blockquote>
+</li>
+<li><p>Hostile data is directly used or concatenated. The SQL or command contains the structure and malicious data in dynamic queries, commands, or stored procedures.</p>
+<blockquote>
+<p>恶意数据被直接使用或连接。SQL 或命令包含动态查询、命令或存储过程中的结构和恶意数据。</p>
+</blockquote>
+</li>
+</ul>
+<p>Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection. The concept is identical among all interpreters. Source code review is the best method of detecting if applications are vulnerable to injections. Automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs is strongly encouraged. Organizations can include static (SAST), dynamic (DAST), and interactive (IAST) application security testing tools into the CI&#x2F;CD pipeline to identify introduced injection flaws before production deployment.</p>
+<blockquote>
+<p>一些更常见的注入是 SQL、NoSQL、OS 命令、对象关系映射 （ORM）、LDAP 和表达式语言 （EL） 或对象图导航库 （OGNL） 注入。这个概念在所有解释器中都是相同的。源代码审查是检测应用程序是否容易受到注入的最佳方法。强烈建议对所有参数、标头、URL、Cookie、JSON、SOAP 和 XML 数据输入进行自动测试。组织可以将静态 （SAST）、动态 （DAST） 和交互式 （IAST） 应用程序安全测试工具纳入 CI&#x2F;CD 管道，以便在生产部署之前识别引入的注入缺陷。</p>
+</blockquote>
+<h3 id="How-to-Prevent-2"><a href="#How-to-Prevent-2" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><p>Preventing injection requires keeping data separate from commands and queries:</p>
+<blockquote>
+<p>防止注入需要将数据与命令和查询分开：</p>
+</blockquote>
+<ul>
+<li><p>The preferred option is to use a safe API, which avoids using the interpreter entirely, provides a parameterized interface, or migrates to Object Relational Mapping Tools (ORMs).</p>
+<blockquote>
+<p>首选选项是使用安全的 API，这样可以避免使用 interpreter 提供参数化接口，或者 迁移到 Object Relational Mapping Tools （ORM）。<br><strong>Note:</strong> Even when parameterized, stored procedures can still introduce SQL injection if PL&#x2F;SQL or T-SQL concatenates queries and data or executes hostile data with EXECUTE IMMEDIATE or exec().<br><strong>注意：</strong>即使参数化，存储过程仍可以引入 SQL 注入（如果 PL&#x2F;SQL 或 T-SQL 连接查询和数据），或者 使用 EXECUTE IMMEDIATE 或 exec（） 执行恶意数据。</p>
+</blockquote>
+</li>
+<li><p>Use positive server-side input validation. This is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.</p>
+<blockquote>
+<p>使用积极的服务器端输入验证。这并不是一个完全的防御措施，因为许多应用程序需要特殊字符，例如文本区域或移动应用程序的 API。</p>
+</blockquote>
+</li>
+<li><p>For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter.</p>
+<blockquote>
+<p>对于任何残差动态查询，请使用 该解释器的特定转义语法。<br><strong>Note:</strong> SQL structures such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.<br><strong>注意：</strong>SQL 结构，例如表名、列名等 无法转义，因此用户提供的结构名称是 危险。这是报告编写软件中的常见问题。</p>
+</blockquote>
+</li>
+<li><p>Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.</p>
+<blockquote>
+<p>在查询中使用 LIMIT 和其他 SQL 控件，以防止在 SQL 注入的情况下大量泄露记录。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Example-Attack-Scenarios-2"><a href="#Example-Attack-Scenarios-2" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1:</strong> An application uses untrusted data in the construction of the following vulnerable SQL call:</p>
+<blockquote>
+<p><strong>场景 #1：</strong>应用程序在构造以下易受攻击的 SQL 调用时使用不受信任的数据：</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String query = &quot;SELECT \* FROM accounts WHERE custID=&#x27;&quot; + request.getParameter(&quot;id&quot;) + &quot;&#x27;&quot;;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Scenario #2:</strong> Similarly, an application’s blind trust in frameworks may result in queries that are still vulnerable, (e.g., Hibernate Query Language (HQL)):</p>
+<blockquote>
+<p><strong>场景 #2：</strong>同样，应用程序对框架的盲目信任可能会导致查询仍然容易受到攻击（例如，Hibernate 查询语言 （HQL））：</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Query HQLQuery = session.createQuery(&quot;FROM accounts WHERE custID=&#x27;&quot; + request.getParameter(&quot;id&quot;) + &quot;&#x27;&quot;);</span><br></pre></td></tr></table></figure></div>
+
+<p>In both cases, the attacker modifies the ‘id’ parameter value in their browser to send: ‘ UNION SLEEP(10);–. For example:</p>
+<blockquote>
+<p>在这两种情况下，攻击者都会修改浏览器中的 ‘id’ 参数值以发送： ‘ UNION SLEEP（10）;–.例如：</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://example.com/app/accountView?id=&#x27; UNION SELECT SLEEP(10);--</span><br></pre></td></tr></table></figure></div>
+
+<p>This changes the meaning of both queries to return all the records from the accounts table. More dangerous attacks could modify or delete data or even invoke stored procedures.</p>
+<blockquote>
+<p>这将更改两个查询的含义，以返回 accounts 表中的所有记录。更危险的攻击可能会修改或删除数据，甚至调用存储过程。</p>
+</blockquote>
+<h2 id="A04-Insecure-Design不安全的设计"><a href="#A04-Insecure-Design不安全的设计" class="headerlink" title="A04 Insecure Design不安全的设计"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A04_2021-Insecure_Design/">A04 Insecure Design <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>不安全的设计</h2><h3 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h3><p>Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.<br>不安全设计是一个广泛的类别，代表不同的弱点，表示为 “缺失或无效的控制设计”。不安全设计并不是所有其他 10 大风险类别的来源。不安全设计和不安全实现之间存在差异。我们区分设计缺陷和实现缺陷是有原因的，它们具有不同的根本原因和补救措施。安全设计仍可能存在实现缺陷，从而导致可能被利用的漏洞。不安全的设计无法通过完美的实现来解决，因为根据定义，从未创建过所需的安全控制来防御特定的攻击。导致不安全设计的因素之一是正在开发的软件或系统缺乏固有的业务风险分析，因此无法确定需要什么级别的安全设计。</p>
+<h4 id="Requirements-and-Resource-Management"><a href="#Requirements-and-Resource-Management" class="headerlink" title="Requirements and Resource Management"></a>Requirements and Resource Management</h4><p>Collect and negotiate the business requirements for an application with the business, including the protection requirements concerning confidentiality, integrity, availability, and authenticity of all data assets and the expected business logic. Take into account how exposed your application will be and if you need segregation of tenants (additionally to access control). Compile the technical requirements, including functional and non-functional security requirements. Plan and negotiate the budget covering all design, build, testing, and operation, including security activities.<br>收集并与业务部门协商应用程序的业务要求，包括有关所有数据资产的机密性、完整性、可用性和真实性以及预期业务逻辑的保护要求。考虑您的应用程序的暴露程度，以及您是否需要隔离租户（除了访问控制之外）。编译技术要求，包括功能性和非功能性安全要求。规划和协商涵盖所有设计、构建、测试和操作（包括安全活动）的预算。</p>
+<h4 id="Secure-Design"><a href="#Secure-Design" class="headerlink" title="Secure Design"></a>Secure Design</h4><p>Secure design is a culture and methodology that constantly evaluates threats and ensures that code is robustly designed and tested to prevent known attack methods. Threat modeling should be integrated into refinement sessions (or similar activities); look for changes in data flows and access control or other security controls. In the user story development determine the correct flow and failure states, ensure they are well understood and agreed upon by responsible and impacted parties. Analyze assumptions and conditions for expected and failure flows, ensure they are still accurate and desirable. Determine how to validate the assumptions and enforce conditions needed for proper behaviors. Ensure the results are documented in the user story. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.<br>安全设计是一种文化和方法，它不断评估威胁，并确保代码经过稳健的设计和测试，以防止已知的攻击方法。威胁建模应集成到优化会话（或类似活动）中;查找数据流和访问控制或其他安全控制的变化。在用户故事开发中，确定正确的流程和故障状态，确保责任方和受影响的各方充分理解并就它们达成一致。分析预期流和故障流的假设和条件，确保它们仍然是准确和理想的。确定如何验证假设并强制实施正确行为所需的条件。确保结果记录在用户情景中。从错误中吸取教训，并提供积极的激励措施来促进改进。安全设计既不是附加组件，也不是可以添加到软件中的工具。</p>
+<h4 id="Secure-Development-Lifecycle"><a href="#Secure-Development-Lifecycle" class="headerlink" title="Secure Development Lifecycle"></a>Secure Development Lifecycle</h4><p>Secure software requires a secure development lifecycle, some form of secure design pattern, paved road methodology, secured component library, tooling, and threat modeling. Reach out for your security specialists at the beginning of a software project throughout the whole project and maintenance of your software. Consider leveraging the <a class="link" target="_blank" rel="noopener" href="https://owaspsamm.org/">OWASP Software Assurance Maturity Model (SAMM) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> to help structure your secure software development efforts.<br>安全软件需要安全的开发生命周期、某种形式的安全设计模式、铺砌道路方法、安全组件库、工具和威胁建模。在软件项目开始时，在整个项目和软件维护过程中联系您的安全专家。考虑利用 <a class="link" target="_blank" rel="noopener" href="https://owaspsamm.org/">OWASP 软件保障成熟度模型 （SAMM） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 来帮助构建安全的软件开发工作。</p>
+<h3 id="How-to-Prevent-3"><a href="#How-to-Prevent-3" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><ul>
+<li>Establish and use a secure development lifecycle with AppSec professionals to help evaluate and design security and privacy-related controls<br>与 AppSec 专业人员一起建立和使用安全的开发生命周期，以帮助评估和设计与安全和隐私相关的控制措施</li>
+<li>Establish and use a library of secure design patterns or paved road ready to use components<br>建立并使用安全设计模式库或已铺设的即用型组件</li>
+<li>Use threat modeling for critical authentication, access control, business logic, and key flows<br>将威胁建模用于关键身份验证、访问控制、业务逻辑和密钥流</li>
+<li>Integrate security language and controls into user stories<br>将安全语言和控制集成到用户情景中</li>
+<li>Integrate plausibility checks at each tier of your application (from frontend to backend)<br>在应用程序的每一层（从前端到后端）集成合理性检查</li>
+<li>Write unit and integration tests to validate that all critical flows are resistant to the threat model. Compile use-cases <em>and</em> misuse-cases for each tier of your application.<br>编写单元和集成测试以验证所有关键流是否都能抵抗威胁模型。为应用程序的每一层编译使用案例<em>和</em>误用案例。</li>
+<li>Segregate tier layers on the system and network layers depending on the exposure and protection needs<br>根据暴露和保护需求，在系统和网络层上隔离层</li>
+<li>Segregate tenants robustly by design throughout all tiers<br>通过设计在所有层中稳健地隔离租户</li>
+<li>Limit resource consumption by user or service<br>限制用户或服务的资源消耗</li>
+</ul>
+<h3 id="Example-Attack-Scenarios-3"><a href="#Example-Attack-Scenarios-3" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1:</strong> A credential recovery workflow might include “questions and answers,” which is prohibited by NIST 800-63b, the OWASP ASVS, and the OWASP Top 10. Questions and answers cannot be trusted as evidence of identity as more than one person can know the answers, which is why they are prohibited. Such code should be removed and replaced with a more secure design.<br><strong>场景 #1：</strong>凭证恢复工作流程可能包括 NIST 800-63b、OWASP ASVS 和 OWASP Top 10 禁止的“问题和答案”。问题和答案不能被信任为身份证明，因为不止一个人可以知道答案，这就是它们被禁止的原因。应删除此类代码，并将其替换为更安全的设计。</p>
+<p><strong>Scenario #2:</strong> A cinema chain allows group booking discounts and has a maximum of fifteen attendees before requiring a deposit. Attackers could threat model this flow and test if they could book six hundred seats and all cinemas at once in a few requests, causing a massive loss of income.<br><strong>场景 #2：</strong>连锁电影院允许团体预订折扣，并且在需要押金之前最多可容纳 15 名参与者。攻击者可以威胁地模拟此流程，并测试他们是否可以在几个请求中同时预订 600 个座位和所有电影院，从而导致巨大的收入损失。</p>
+<p><strong>Scenario #3:</strong> A retail chain’s e-commerce website does not have protection against bots run by scalpers buying high-end video cards to resell auction websites. This creates terrible publicity for the video card makers and retail chain owners and enduring bad blood with enthusiasts who cannot obtain these cards at any price. Careful anti-bot design and domain logic rules, such as purchases made within a few seconds of availability, might identify inauthentic purchases and rejected such transactions.<br><strong>场景 #3：</strong>零售连锁店的电子商务网站没有保护措施来防止黄牛购买高端视频卡转售拍卖网站所运行的机器人。这给视频卡制造商和零售连锁店所有者带来了可怕的宣传，并与无法以任何价格获得这些卡的爱好者忍受了不满。仔细的反机器人设计和域逻辑规则（例如在可用后的几秒钟内进行购买）可能会识别出不真实的购买并拒绝此类交易。</p>
+<h2 id="A05-Security-Misconfiguration安全配置错误"><a href="#A05-Security-Misconfiguration安全配置错误" class="headerlink" title="A05 Security Misconfiguration安全配置错误"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">A05 Security Misconfiguration <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>安全配置错误</h2><h3 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h3><p>The application might be vulnerable if the application is:<br>如果应用程序处于以下状态，则应用程序可能容易受到攻击：</p>
+<ul>
+<li>Missing appropriate security hardening across any part of the application stack or improperly configured permissions on cloud services.<br>在应用程序堆栈的任何部分缺少适当的安全强化，或者对云服务的权限配置不正确。</li>
+<li>Unnecessary features are enabled or installed (e.g., unnecessary ports, services, pages, accounts, or privileges).<br>启用或安装了不必要的功能（例如，不必要的端口、服务、页面、帐户或权限）。</li>
+<li>Default accounts and their passwords are still enabled and unchanged.<br>默认帐户及其密码仍处于启用状态且保持不变。</li>
+<li>Error handling reveals stack traces or other overly informative error messages to users.<br>错误处理会向用户显示堆栈跟踪或其他信息过多的错误消息。</li>
+<li>For upgraded systems, the latest security features are disabled or not configured securely.<br>对于已升级的系统，最新的安全功能被禁用或未安全配置。</li>
+<li>The security settings in the application servers, application frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases, etc., are not set to secure values.<br>应用程序服务器、应用程序框架（例如 Struts、Spring、ASP.NET）、库、数据库等中的安全设置未设置为 secure 值。</li>
+<li>The server does not send security headers or directives, or they are not set to secure values.<br>服务器不发送安全标头或指令，或者它们未设置为 secure 值。</li>
+<li>The software is out of date or vulnerable (see <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/">A06:2021-Vulnerable and Outdated Components <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>).<br>软件已过期或易受攻击（请参阅 <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/">A06：2021 - 易受攻击和过时的组件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。</li>
+</ul>
+<p>Without a concerted, repeatable application security configuration process, systems are at a higher risk.<br>如果没有协调一致、可重复的应用程序安全配置过程，系统将面临更高的风险。</p>
+<h3 id="How-to-Prevent-4"><a href="#How-to-Prevent-4" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><p>Secure installation processes should be implemented, including:<br>应实施安全的安装过程，包括：</p>
+<ul>
+<li>A repeatable hardening process makes it fast and easy to deploy another environment that is appropriately locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to set up a new secure environment.<br>可重复的强化过程可以快速轻松地部署另一个适当锁定的环境。开发、QA 和生产环境都应该配置相同，每个环境使用不同的凭证。此过程应自动执行，以最大程度地减少设置新的安全环境所需的工作量。</li>
+<li>A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.<br>一个不包含任何不必要功能、组件、文档和示例的最小平台。删除或不安装未使用的功能和框架。</li>
+<li>A task to review and update the configurations appropriate to all security notes, updates, and patches as part of the patch management process (see <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/">A06:2021-Vulnerable and Outdated Components <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>). Review cloud storage permissions (e.g., S3 bucket permissions).<br>作为补丁管理流程的一部分，用于查看和更新适用于所有安全说明、更新和补丁的配置的任务（请参阅 <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/">A06：2021 - 易受攻击和过时的组件 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。查看云存储权限（例如 S3 存储桶权限）。</li>
+<li>A segmented application architecture provides effective and secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).<br>分段应用程序架构通过分段、容器化或云安全组 （ACL） 在组件或租户之间提供有效且安全的分离。</li>
+<li>Sending security directives to clients, e.g., Security Headers.<br>向客户端发送安全指令，例如 Security Headers。</li>
+<li>An automated process to verify the effectiveness of the configurations and settings in all environments.<br>一个自动化过程，用于验证所有环境中配置和设置的有效性。</li>
+</ul>
+<h3 id="Example-Attack-Scenarios-4"><a href="#Example-Attack-Scenarios-4" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1:</strong> The application server comes with sample applications not removed from the production server. These sample applications have known security flaws attackers use to compromise the server. Suppose one of these applications is the admin console, and default accounts weren’t changed. In that case, the attacker logs in with default passwords and takes over.<br><strong>场景 #1：</strong>应用程序服务器附带未从生产服务器中删除的示例应用程序。这些示例应用程序具有攻击者用来破坏服务器的已知安全漏洞。假设其中一个应用程序是 Admin Console，并且默认帐户未更改。在这种情况下，攻击者使用默认密码登录并接管。</p>
+<p><strong>Scenario #2:</strong> Directory listing is not disabled on the server. An attacker discovers they can simply list directories. The attacker finds and downloads the compiled Java classes, which they decompile and reverse engineer to view the code. The attacker then finds a severe access control flaw in the application.<br><strong>场景 #2：</strong>目录列表未在服务器上禁用。攻击者发现他们只需列出目录即可。攻击者找到并下载编译好的 Java 类，然后对其进行反编译和逆向工程以查看代码。然后，攻击者在应用程序中发现严重的访问控制缺陷。</p>
+<p><strong>Scenario #3:</strong> The application server’s configuration allows detailed error messages, e.g., stack traces, to be returned to users. This potentially exposes sensitive information or underlying flaws such as component versions that are known to be vulnerable.<br><strong>场景 #3：</strong>应用服务器的配置允许向用户返回详细的错误消息，例如堆栈跟踪。这可能会暴露敏感信息或潜在缺陷，例如已知易受攻击的组件版本。</p>
+<p><strong>Scenario #4:</strong> A cloud service provider (CSP) has default sharing permissions open to the Internet by other CSP users. This allows sensitive data stored within cloud storage to be accessed.<br><strong>场景 #4：</strong>云服务提供商 （CSP） 具有其他 CSP 用户向 Internet 开放的默认共享权限。这允许访问存储在云存储中的敏感数据。</p>
+<h2 id="A06-Vulnerable-and-Outdated-Components易损和过时的组件"><a href="#A06-Vulnerable-and-Outdated-Components易损和过时的组件" class="headerlink" title="A06 Vulnerable and Outdated Components易损和过时的组件"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/">A06 Vulnerable and Outdated Components <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>易损和过时的组件</h2><h3 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h3><p>You are likely vulnerable:<br>您可能容易受到攻击：</p>
+<ul>
+<li>If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.<br>如果您不知道使用的所有组件（客户端和服务器端）的版本。这包括您直接使用的组件以及嵌套的依赖项。</li>
+<li>If the software is vulnerable, unsupported, or out of date. This includes the OS, web&#x2F;application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.<br>如果软件易受攻击、不受支持或已过期。这包括操作系统、Web&#x2F;应用程序服务器、数据库管理系统 （DBMS）、应用程序、API 和所有组件、运行时环境和库。</li>
+<li>If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.<br>如果您不定期扫描漏洞并订阅与您使用的组件相关的安全公告。</li>
+<li>If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organizations open to days or months of unnecessary exposure to fixed vulnerabilities.<br>如果您未以基于风险的及时方式修复或升级底层平台、框架和依赖项。这通常发生在补丁是变更控制下的月度或季度任务的环境中，这使得组织面临数天或数月不必要地暴露于已修复漏洞的环境中。</li>
+<li>If software developers do not test the compatibility of updated, upgraded, or patched libraries.<br>如果软件开发人员不测试已更新、升级或修补的库的兼容性。</li>
+<li>If you do not secure the components’ configurations (see <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">A05:2021-Security Misconfiguration <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>).<br>如果不保护组件的配置（请参阅 <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">A05：2021 - 安全配置错误 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。</li>
+</ul>
+<h3 id="How-to-Prevent-5"><a href="#How-to-Prevent-5" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><p>There should be a patch management process in place to:<br>应该有一个补丁管理流程来：</p>
+<ul>
+<li>Remove unused dependencies, unnecessary features, components, files, and documentation.<br>删除未使用的依赖项、不必要的功能、组件、文件和文档。</li>
+<li>Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like versions, OWASP Dependency Check, retire.js, etc. Continuously monitor sources like Common Vulnerability and Exposures (CVE) and National Vulnerability Database (NVD) for vulnerabilities in the components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.<br>使用版本、OWASP Dependency Check 等工具持续清点客户端和服务器端组件（例如框架、库）的版本及其依赖项retire.js。持续监控常见漏洞和披露 （CVE） 和国家漏洞数据库 （NVD） 等来源，以查找组件中的漏洞。使用软件组件分析工具自动执行该过程。订阅电子邮件警报，了解与您使用的组件相关的安全漏洞。</li>
+<li>Only obtain components from official sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component (See A08:2021-Software and Data Integrity Failures).<br>仅通过安全链接从官方来源获取组件。首选已签名的软件包，以减少包含已修改的恶意组件的可能性（请参阅 A08：2021 - 软件和数据完整性故障）。</li>
+<li>Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.<br>监控未维护或未为旧版本创建安全补丁的库和组件。如果无法进行修补，请考虑部署虚拟补丁来监控、检测或防范发现的问题。</li>
+</ul>
+<p>Every organization must ensure an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.<br>每个组织都必须确保在应用程序或产品组合的生命周期内有一个持续的计划，用于监控、分类和应用更新或配置更改。</p>
+<h3 id="Example-Attack-Scenarios-5"><a href="#Example-Attack-Scenarios-5" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1:</strong> Components typically run with the same privileges as the application itself, so flaws in any component can result in serious impact. Such flaws can be accidental (e.g., coding error) or intentional (e.g., a backdoor in a component). Some example exploitable component vulnerabilities discovered are:<br><strong>场景 #1：</strong>组件通常使用与应用程序本身相同的权限运行，因此任何组件中的缺陷都可能导致严重影响。此类缺陷可能是意外的（例如，编码错误）或故意的（例如，组件中的后门）。发现的一些可利用组件漏洞示例包括：</p>
+<ul>
+<li>CVE-2017-5638, a Struts 2 remote code execution vulnerability that enables the execution of arbitrary code on the server, has been blamed for significant breaches.<br>CVE-2017-5638 是一个 Struts 2 远程代码执行漏洞，允许在服务器上执行任意代码，已被指责为重大违规事件的罪魁祸首。</li>
+<li>While the internet of things (IoT) is frequently difficult or impossible to patch, the importance of patching them can be great (e.g., biomedical devices).<br>虽然物联网 （IoT） 通常很难或不可能修补，但修补它们的重要性可能非常大（例如，生物医学设备）。</li>
+</ul>
+<p>There are automated tools to help attackers find unpatched or misconfigured systems. For example, the Shodan IoT search engine can help you find devices that still suffer from Heartbleed vulnerability patched in April 2014.<br>有一些自动化工具可以帮助攻击者找到未修补或配置错误的系统。例如，Shodan IoT 搜索引擎可以帮助您找到仍然存在 2014 年 4 月修补的 Heartbleed 漏洞的设备。</p>
+<h2 id="A07-Identification-and-Authentication-Failures识别和身份验证失败"><a href="#A07-Identification-and-Authentication-Failures识别和身份验证失败" class="headerlink" title="A07 Identification and Authentication Failures识别和身份验证失败"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/">A07 Identification and Authentication Failures <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>识别和身份验证失败</h2><h3 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h3><p>Confirmation of the user’s identity, authentication, and session management is critical to protect against authentication-related attacks. There may be authentication weaknesses if the application:<br>确认用户的身份、身份验证和会话管理对于防范与身份验证相关的攻击至关重要。如果应用程序：</p>
+<ul>
+<li>Permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames and passwords.<br>允许自动攻击，例如撞库攻击，其中攻击者拥有有效用户名和密码的列表。</li>
+<li>Permits brute force or other automated attacks.<br>允许暴力攻击或其他自动攻击。</li>
+<li>Permits default, weak, or well-known passwords, such as “Password1” or “admin&#x2F;admin”.<br>允许使用默认密码、弱密码或已知密码，例如 “Password1” 或 “admin&#x2F;admin”。</li>
+<li>Uses weak or ineffective credential recovery and forgot-password processes, such as “knowledge-based answers,” which cannot be made safe.<br>使用弱或无效的凭据恢复和忘记密码流程，例如“基于知识的答案”，这些流程无法确保安全。</li>
+<li>Uses plain text, encrypted, or weakly hashed passwords data stores (see <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A02_2021-Cryptographic_Failures/">A02:2021-Cryptographic Failures <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>).<br>使用纯文本、加密或弱哈希密码数据存储（请参阅 <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A02_2021-Cryptographic_Failures/">A02：2021 - 加密失败 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。</li>
+<li>Has missing or ineffective multi-factor authentication.<br>多重身份验证缺失或无效。</li>
+<li>Exposes session identifier in the URL.<br>在 URL 中公开会话标识符。</li>
+<li>Reuse session identifier after successful login.<br>成功登录后重用会话标识符。</li>
+<li>Does not correctly invalidate Session IDs. User sessions or authentication tokens (mainly single sign-on (SSO) tokens) aren’t properly invalidated during logout or a period of inactivity.<br>无法正确使会话 ID 失效。用户会话或身份验证令牌（主要是单点登录 （SSO） 令牌）在注销或处于非活动状态期间未正确失效。</li>
+</ul>
+<h3 id="How-to-Prevent-6"><a href="#How-to-Prevent-6" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><ul>
+<li>Where possible, implement multi-factor authentication to prevent automated credential stuffing, brute force, and stolen credential reuse attacks.<br>在可能的情况下，实施多因素身份验证，以防止自动撞库、暴力破解和被盗凭据重用攻击。</li>
+<li>Do not ship or deploy with any default credentials, particularly for admin users.<br>请勿使用任何默认凭证进行交付或部署，尤其是对于管理员用户。</li>
+<li>Implement weak password checks, such as testing new or changed passwords against the top 10,000 worst passwords list.<br>实施弱密码检查，例如根据前 10,000 个最差密码列表测试新密码或更改的密码。</li>
+<li>Align password length, complexity, and rotation policies with National Institute of Standards and Technology (NIST) 800-63b’s guidelines in section 5.1.1 for Memorized Secrets or other modern, evidence-based password policies.<br>使密码长度、复杂性和轮换策略与美国国家标准与技术研究院 （NIST） 第 5.1.1 节中关于记住的秘密的指南或其他现代、基于证据的密码策略保持一致。</li>
+<li>Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.<br>通过对所有结果使用相同的消息，确保注册、凭证恢复和 API 路径针对账户枚举攻击得到强化。</li>
+<li>Limit or increasingly delay failed login attempts, but be careful not to create a denial of service scenario. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected.<br>限制或逐渐延迟失败的登录尝试，但请注意不要创建拒绝服务场景。记录所有故障，并在检测到撞库攻击、暴力破解或其他攻击时提醒管理员。</li>
+<li>Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session identifier should not be in the URL, be securely stored, and invalidated after logout, idle, and absolute timeouts.<br>使用服务器端安全的内置会话管理器，该管理器在登录后生成具有高熵的新随机会话 ID。会话标识符不应位于 URL 中，不应被安全存储，并在注销、空闲和绝对超时后失效。</li>
+</ul>
+<h3 id="Example-Attack-Scenarios-6"><a href="#Example-Attack-Scenarios-6" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1:</strong> Credential stuffing, the use of lists of known passwords, is a common attack. Suppose an application does not implement automated threat or credential stuffing protection. In that case, the application can be used as a password oracle to determine if the credentials are valid.<br><strong>场景 #1：</strong>撞库攻击，即使用已知密码列表，是一种常见的攻击。假设应用程序未实现自动威胁或撞库保护。在这种情况下，应用程序可以用作密码 oracle 来确定凭证是否有效。</p>
+<p><strong>Scenario #2:</strong> Most authentication attacks occur due to the continued use of passwords as a sole factor. Once considered best practices, password rotation and complexity requirements encourage users to use and reuse weak passwords. Organizations are recommended to stop these practices per NIST 800-63 and use multi-factor authentication.<br><strong>场景 #2：</strong>大多数身份验证攻击的发生是由于持续使用密码作为唯一因素。一旦考虑了最佳实践，密码轮换和复杂性要求就会鼓励用户使用和重复使用弱密码。建议组织根据 NIST 800-63 停止这些做法，并使用多因素身份验证。</p>
+<p><strong>Scenario #3:</strong> Application session timeouts aren’t set correctly. A user uses a public computer to access an application. Instead of selecting “logout,” the user simply closes the browser tab and walks away. An attacker uses the same browser an hour later, and the user is still authenticated.<br><strong>场景 #3：</strong>应用程序会话超时设置不正确。用户使用公共计算机访问应用程序。用户无需选择 “注销”，只需关闭浏览器选项卡并走开即可。攻击者在一小时后使用相同的浏览器，并且用户仍然通过身份验证。</p>
+<h2 id="A08-Software-and-Data-Integrity-Failures软件和数据完整性故障"><a href="#A08-Software-and-Data-Integrity-Failures软件和数据完整性故障" class="headerlink" title="A08 Software and Data Integrity Failures软件和数据完整性故障"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/">A08 Software and Data Integrity Failures <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>软件和数据完整性故障</h2><h3 id="Description-7"><a href="#Description-7" class="headerlink" title="Description"></a>Description</h3><p>Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content delivery networks (CDNs). An insecure CI&#x2F;CD pipeline can introduce the potential for unauthorized access, malicious code, or system compromise. Lastly, many applications now include auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application. Attackers could potentially upload their own updates to be distributed and run on all installations. Another example is where objects or data are encoded or serialized into a structure that an attacker can see and modify is vulnerable to insecure deserialization.<br>软件和数据完整性故障与无法防止完整性违规的代码和基础设施有关。例如，应用程序依赖于来自不受信任的来源、存储库和内容交付网络 （CDN） 的插件、库或模块。不安全的 CI&#x2F;CD 管道可能会带来未经授权的访问、恶意代码或系统泄露的可能性。最后，许多应用程序现在都包含自动更新功能，在该功能中，在没有充分完整性验证的情况下下载更新，并将其应用于以前受信任的应用程序。攻击者可能会上传自己的更新，以便在所有安装上分发和运行。另一个示例是，对象或数据被编码或序列化为攻击者可以看到和修改的结构，该结构容易受到不安全反序列化的攻击。</p>
+<h3 id="How-to-Prevent-7"><a href="#How-to-Prevent-7" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><ul>
+<li>Use digital signatures or similar mechanisms to verify the software or data is from the expected source and has not been altered.<br>使用数字签名或类似机制来验证软件或数据是否来自预期来源，并且未被更改。</li>
+<li>Ensure libraries and dependencies, such as npm or Maven, are consuming trusted repositories. If you have a higher risk profile, consider hosting an internal known-good repository that’s vetted.<br>确保库和依赖项（如 npm 或 Maven）正在使用受信任的存储库。如果您的风险状况较高，请考虑托管经过审查的内部已知良好的存储库。</li>
+<li>Ensure that a software supply chain security tool, such as OWASP Dependency Check or OWASP CycloneDX, is used to verify that components do not contain known vulnerabilities<br>确保使用软件供应链安全工具（如 OWASP Dependency Check 或 OWASP CycloneDX）来验证组件不包含已知漏洞</li>
+<li>Ensure that there is a review process for code and configuration changes to minimize the chance that malicious code or configuration could be introduced into your software pipeline.<br>确保对代码和配置更改有一个审查流程，以最大程度地减少将恶意代码或配置引入软件管道的可能性。</li>
+<li>Ensure that your CI&#x2F;CD pipeline has proper segregation, configuration, and access control to ensure the integrity of the code flowing through the build and deploy processes.<br>确保您的 CI&#x2F;CD 管道具有适当的隔离、配置和访问控制，以确保流经构建和部署过程的代码的完整性。</li>
+<li>Ensure that unsigned or unencrypted serialized data is not sent to untrusted clients without some form of integrity check or digital signature to detect tampering or replay of the serialized data<br>确保未签名或未加密的序列化数据不会发送到不受信任的客户端，而无需进行某种形式的完整性检查或数字签名，以检测序列化数据的篡改或重放</li>
+</ul>
+<h3 id="Example-Attack-Scenarios-7"><a href="#Example-Attack-Scenarios-7" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1 Update without signing:</strong> Many home routers, set-top boxes, device firmware, and others do not verify updates via signed firmware. Unsigned firmware is a growing target for attackers and is expected to only get worse. This is a major concern as many times there is no mechanism to remediate other than to fix in a future version and wait for previous versions to age out.<br><strong>场景 #1 更新而不签名：</strong>许多家用路由器、机顶盒、设备固件和其他设备不通过签名固件验证更新。未签名的固件是攻击者日益增长的目标，而且预计只会变得更糟。这是一个主要问题，因为很多时候，除了在将来的版本中修复并等待以前的版本过期之外，没有其他补救机制。</p>
+<p><strong>Scenario #2 SolarWinds malicious update</strong>: Nation-states have been known to attack update mechanisms, with a recent notable attack being the SolarWinds Orion attack. The company that develops the software had secure build and update integrity processes. Still, these were able to be subverted, and for several months, the firm distributed a highly targeted malicious update to more than 18,000 organizations, of which around 100 or so were affected. This is one of the most far-reaching and most significant breaches of this nature in history.<br><strong>场景 #2 SolarWinds 恶意更新</strong>：已知民族国家会攻击更新机制，最近一次值得注意的攻击是 SolarWinds Orion 攻击。开发软件的公司具有安全的构建和更新完整性流程。尽管如此，这些仍然能够被破坏，并且在几个月内，该公司向 18,000 多个组织分发了高度针对性的恶意更新，其中大约 100 个组织受到影响。这是历史上影响最深远、最重大的此类违规行为之一。</p>
+<p><strong>Scenario #3 Insecure Deserialization:</strong> A React application calls a set of Spring Boot microservices. Being functional programmers, they tried to ensure that their code is immutable. The solution they came up with is serializing the user state and passing it back and forth with each request. An attacker notices the “rO0” Java object signature (in base64) and uses the Java Serial Killer tool to gain remote code execution on the application server.<br><strong>场景 #3 不安全的反序列化：</strong>React 应用程序调用一组 Spring Boot 微服务。作为函数式程序员，他们试图确保他们的代码是不可变的。他们提出的解决方案是序列化用户状态，并在每个请求中来回传递它。攻击者注意到 “rO0” Java 对象签名（以 base64 为单位），并使用 Java Serial Killer 工具在应用程序服务器上远程执行代码。</p>
+<h2 id="A09-Security-Logging-and-Monitoring-Failures-安全日志记录和监控故障"><a href="#A09-Security-Logging-and-Monitoring-Failures-安全日志记录和监控故障" class="headerlink" title="A09 Security Logging and Monitoring Failures       安全日志记录和监控故障"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/">A09 Security Logging and Monitoring Failures        <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>安全日志记录和监控故障</h2><h3 id="Description-8"><a href="#Description-8" class="headerlink" title="Description"></a>Description</h3><p>Returning to the OWASP Top 10 2021, this category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, detection, monitoring, and active response occurs any time:<br>回到 2021 年 OWASP Top 10，此类别旨在帮助检测、升级和响应主动泄露。如果没有日志记录和监控，就无法检测到违规行为。日志记录、检测、监控和主动响应不足随时发生：</p>
+<ul>
+<li>Auditable events, such as logins, failed logins, and high-value transactions, are not logged.<br>不会记录可审计的事件，例如登录、登录失败和高价值交易。</li>
+<li>Warnings and errors generate no, inadequate, or unclear log messages.<br>警告和错误会生成 no、inadequate 或不清楚的日志消息。</li>
+<li>Logs of applications and APIs are not monitored for suspicious activity.<br>不会监控应用程序和 API 的日志是否存在可疑活动。</li>
+<li>Logs are only stored locally.<br>日志仅存储在本地。</li>
+<li>Appropriate alerting thresholds and response escalation processes are not in place or effective.<br>适当的警报阈值和响应升级流程未到位或无效。</li>
+<li>Penetration testing and scans by dynamic application security testing (DAST) tools (such as OWASP ZAP) do not trigger alerts.<br>动态应用程序安全测试 （DAST） 工具（如 OWASP ZAP）的渗透测试和扫描不会触发警报。</li>
+<li>The application cannot detect, escalate, or alert for active attacks in real-time or near real-time.<br>应用程序无法实时或近乎实时地检测、升级或提醒主动攻击。</li>
+</ul>
+<p>You are vulnerable to information leakage by making logging and alerting events visible to a user or an attacker (see <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">A01:2021-Broken Access Control <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>).<br>通过使用户或攻击者可以看到日志记录和警报事件，您很容易受到信息泄露的影响（请参阅 <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">A01：2021 - Broken Access Control <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。</p>
+<h3 id="How-to-Prevent-8"><a href="#How-to-Prevent-8" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><p>Developers should implement some or all the following controls, depending on the risk of the application:<br>开发人员应根据应用程序的风险实现以下部分或全部控制措施：</p>
+<ul>
+<li>Ensure all login, access control, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts and held for enough time to allow delayed forensic analysis.<br>确保所有登录、访问控制和服务器端输入验证失败都可以使用足够的用户上下文进行记录，以识别可疑或恶意帐户，并保留足够的时间以允许延迟取证分析。</li>
+<li>Ensure that logs are generated in a format that log management solutions can easily consume.<br>确保以日志管理解决方案可以轻松使用的格式生成日志。</li>
+<li>Ensure log data is encoded correctly to prevent injections or attacks on the logging or monitoring systems.<br>确保对日志数据进行正确编码，以防止对日志记录或监控系统进行注入或攻击。</li>
+<li>Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.<br>确保高价值交易具有具有完整性控制的审计跟踪，以防止篡改或删除，例如仅附加数据库表或类似表。</li>
+<li>DevSecOps teams should establish effective monitoring and alerting such that suspicious activities are detected and responded to quickly.<br>DevSecOps 团队应建立有效的监控和警报，以便快速检测并响应可疑活动。</li>
+<li>Establish or adopt an incident response and recovery plan, such as National Institute of Standards and Technology (NIST) 800-61r2 or later.<br>建立或采用事件响应和恢复计划，例如美国国家标准与技术研究院 （NIST） 800-61r2 或更高版本。</li>
+</ul>
+<p>There are commercial and open-source application protection frameworks such as the OWASP ModSecurity Core Rule Set, and open-source log correlation software, such as the Elasticsearch, Logstash, Kibana (ELK) stack, that feature custom dashboards and alerting.<br>有商业和开源应用程序保护框架，例如 OWASP ModSecurity 核心规则集，以及开源日志关联软件，例如 Elasticsearch、Logstash、Kibana （ELK） 堆栈，它们具有自定义控制面板和警报功能。</p>
+<h3 id="Example-Attack-Scenarios-8"><a href="#Example-Attack-Scenarios-8" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p><strong>Scenario #1:</strong> A children’s health plan provider’s website operator couldn’t detect a breach due to a lack of monitoring and logging. An external party informed the health plan provider that an attacker had accessed and modified thousands of sensitive health records of more than 3.5 million children. A post-incident review found that the website developers had not addressed significant vulnerabilities. As there was no logging or monitoring of the system, the data breach could have been in progress since 2013, a period of more than seven years.<br><strong>场景 #1：</strong>由于缺乏监控和日志记录，儿童健康计划提供商的网站运营商无法检测到违规行为。外部方通知健康计划提供商，攻击者访问并修改了超过 350 万儿童的数千条敏感健康记录。事后审查发现，网站开发人员没有解决重大漏洞。由于没有对系统进行日志记录或监控，数据泄露可能自 2013 年以来一直在进行，时间超过 7 年。</p>
+<p><strong>Scenario #2:</strong> A major Indian airline had a data breach involving more than ten years’ worth of personal data of millions of passengers, including passport and credit card data. The data breach occurred at a third-party cloud hosting provider, who notified the airline of the breach after some time.<br><strong>场景 #2：</strong>印度一家大型航空公司发生了数据泄露事件，涉及数百万乘客十多年的个人数据，包括护照和信用卡数据。数据泄露发生在第三方云托管提供商处，该提供商在一段时间后通知了航空公司泄露事件。</p>
+<p><strong>Scenario #3:</strong> A major European airline suffered a GDPR reportable breach. The breach was reportedly caused by payment application security vulnerabilities exploited by attackers, who harvested more than 400,000 customer payment records. The airline was fined 20 million pounds as a result by the privacy regulator.<br><strong>场景 #3：</strong>一家大型欧洲航空公司遭遇了 GDPR 可报告的违规行为。据报道，此次泄露是由攻击者利用的支付应用程序安全漏洞引起的，攻击者收集了超过 400,000 条客户支付记录。该航空公司因此被隐私监管机构罚款 2000 万英镑。</p>
+<h2 id="A10-Server-Side-Request-Forgery-SSRF-服务器端请求伪造"><a href="#A10-Server-Side-Request-Forgery-SSRF-服务器端请求伪造" class="headerlink" title="A10 Server Side Request Forgery (SSRF)服务器端请求伪造"></a><a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_(SSRF)/">A10 Server Side Request Forgery (SSRF) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>服务器端请求伪造</h2><h3 id="Description-9"><a href="#Description-9" class="headerlink" title="Description"></a>Description</h3><p>SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected destination, even when protected by a firewall, VPN, or another type of network access control list (ACL).<br>每当 Web 应用程序在未验证用户提供的 URL 的情况下获取远程资源时，就会出现 SSRF 缺陷。它允许攻击者强制应用程序将构建的请求发送到意外的目的地，即使受到防火墙、VPN 或其他类型的网络访问控制列表 （ACL） 的保护。</p>
+<p>As modern web applications provide end-users with convenient features, fetching a URL becomes a common scenario. As a result, the incidence of SSRF is increasing. Also, the severity of SSRF is becoming higher due to cloud services and the complexity of architectures.<br>由于现代 Web 应用程序为最终用户提供了便捷的功能，因此获取 URL 成为一种常见方案。因此，SSRF 的发病率正在增加。此外，由于云服务和架构的复杂性，SSRF 的严重性也越来越高。</p>
+<h3 id="How-to-Prevent-9"><a href="#How-to-Prevent-9" class="headerlink" title="How to Prevent"></a>How to Prevent</h3><p>Developers can prevent SSRF by implementing some or all the following defense in depth controls:<br>开发者可以通过实施以下部分或全部深度防御控制措施来阻止 SSRF：</p>
+<h4 id="From-Network-layer-从网络层"><a href="#From-Network-layer-从网络层" class="headerlink" title="From Network layer 从网络层"></a><strong>From Network layer 从网络层</strong></h4><ul>
+<li>Segment remote resource access functionality in separate networks to reduce the impact of SSRF<br>将远程资源访问功能分段到单独的网络中，以减少 SSRF 的影响</li>
+<li>Enforce “deny by default” firewall policies or network access control rules to block all but essential intranet traffic.<br>强制实施“默认拒绝”防火墙策略或网络访问 控制规则以阻止除必要的 Intranet 流量之外的所有流量。<br><em>Hints: 提示：</em><br>~ Establish an ownership and a lifecycle for firewall rules based on applications.<br>~ 根据应用程序建立防火墙规则的所有权和生命周期。<br>~ Log all accepted <em>and</em> blocked network flows on firewalls (see <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/">A09:2021-Security Logging and Monitoring Failures <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>).<br>~ 记录防火墙上所有接受<em>和</em>阻止的网络流 （请参阅 <a class="link" target="_blank" rel="noopener" href="https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/">A09：2021 - 安全日志记录和监控故障 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）。</li>
+</ul>
+<h4 id="From-Application-layer-从应用层："><a href="#From-Application-layer-从应用层：" class="headerlink" title="From Application layer: 从应用层："></a><strong>From Application layer: 从应用层：</strong></h4><ul>
+<li>Sanitize and validate all client-supplied input data<br>清理和验证所有客户提供的输入数据</li>
+<li>Enforce the URL schema, port, and destination with a positive allow list<br>使用肯定的 allow 列表强制实施 URL 架构、端口和目标</li>
+<li>Do not send raw responses to clients<br>不向客户端发送原始响应</li>
+<li>Disable HTTP redirections<br>禁用 HTTP 重定向</li>
+<li>Be aware of the URL consistency to avoid attacks such as DNS rebinding and “time of check, time of use” (TOCTOU) race conditions<br>注意 URL 一致性，以避免 DNS 重新绑定和“检查时间、使用时间”（TOCTOU） 争用条件等攻击</li>
+</ul>
+<p>Do not mitigate SSRF via the use of a deny list or regular expression. Attackers have payload lists, tools, and skills to bypass deny lists.<br>不要通过使用拒绝列表或正则表达式来缓解 SSRF。攻击者拥有绕过拒绝列表的有效负载列表、工具和技能。</p>
+<h4 id="Additional-Measures-to-consider-需要考虑的其他措施："><a href="#Additional-Measures-to-consider-需要考虑的其他措施：" class="headerlink" title="Additional Measures to consider: 需要考虑的其他措施："></a><strong>Additional Measures to consider: 需要考虑的其他措施：</strong></h4><ul>
+<li>Don’t deploy other security relevant services on front systems (e.g. OpenID). Control local traffic on these systems (e.g. localhost)<br>不要在前端系统上部署其他与安全相关的服务（例如 OpenID）。控制这些系统（例如 localhost）上的本地流量</li>
+<li>For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs) on independent systems to consider very high protection needs<br>对于具有专用且可管理的用户组的前端，在独立系统上使用网络加密（例如 VPN），以考虑非常高的保护需求</li>
+</ul>
+<h3 id="Example-Attack-Scenarios-9"><a href="#Example-Attack-Scenarios-9" class="headerlink" title="Example Attack Scenarios"></a>Example Attack Scenarios</h3><p>Attackers can use SSRF to attack systems protected behind web application firewalls, firewalls, or network ACLs, using scenarios such as:<br>攻击者可以使用 SSRF 攻击受 Web 应用程序防火墙、防火墙或网络 ACL 保护的系统，使用场景如下：</p>
+<p><strong>Scenario #1:</strong> Port scan internal servers – If the network architecture is unsegmented, attackers can map out internal networks and determine if ports are open or closed on internal servers from connection results or elapsed time to connect or reject SSRF payload connections.<br><strong>场景 #1：</strong>端口扫描内部服务器 – 如果网络架构未分段，攻击者可以映射出内部网络，并根据连接结果或连接或拒绝 SSRF 有效负载连接的运行时间来确定内部服务器上的端口是打开还是关闭。</p>
+<p><strong>Scenario #2:</strong> Sensitive data exposure – Attackers can access local files or internal services to gain sensitive information such as <code>file:///etc/passwd</code> and <code>http://localhost:28017/</code>.<br><strong>场景 #2：</strong>敏感数据泄露 – 攻击者可以访问本地文件或内部服务以获取敏感信息，例如 <code>file:///etc/passwd</code> 和 <code>http://localhost:28017/</code>。</p>
+<p><strong>Scenario #3:</strong> Access metadata storage of cloud services – Most cloud providers have metadata storage such as <code>http://169.254.169.254/</code>. An attacker can read the metadata to gain sensitive information.<br><strong>场景 #3：</strong>访问云服务的元数据存储 – 大多数云提供商都有元数据存储，例如 <code>http://169.254.169.254/</code>。攻击者可以读取元数据以获取敏感信息。</p>
+<p><strong>Scenario #4:</strong> Compromise internal services – The attacker can abuse internal services to conduct further attacks such as Remote Code Execution (RCE) or Denial of Service (DoS).<br><strong>场景 #4：</strong>危害内部服务 – 攻击者可以滥用内部服务进行进一步的攻击，例如远程代码执行 （RCE） 或拒绝服务 （DoS）。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> OWASP_Top_10_2021</li>
+        <li><strong>Author:</strong> 敬请T期待</li>
+        <li><strong>Created at
+                :</strong> 2024-11-19 11:26:53</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-11-19 12:11:14
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://kingwempity.github.io/2024/11/19/OWASP-Top-10-2021/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/security/">#-security</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/11/17/%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">页面置换算法的实现</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="giscus-container"></div>
+    <script data-swup-reload-script defer>
+        async function loadGiscus() {
+            const giscusConfig = {
+                'src': 'https://giscus.app/client.js',
+                'data-repo': 'kingwempity/Guscus',
+                'data-repo-id': 'R_kgDONQjkwA',
+                'data-category': 'Announcements',
+                'data-category-id': 'DIC_kwDONQjkwM4CkV1Y',
+                'data-mapping': 'pathname',
+                'data-strict': '0',
+                'data-reactions-enabled': '1',
+                'data-emit-metadata': '1',
+                'data-theme': 'preferred_color_scheme',
+                'data-lang': 'zh-CN',
+                'data-input-position': 'bottom',
+                'data-loading': 'lazy',
+                'crossorigin': 'anonymous',
+                'async': true
+            }
+            const giscusScript = document.createElement('script');
+            for (const key in giscusConfig) {
+                giscusScript.setAttribute(key, giscusConfig[key]);
+            }
+            document.getElementById('giscus-container').appendChild(giscusScript);
+        }
+        if ('true') {
+            let loadGiscusTimeout = setTimeout(() => {
+                loadGiscus();
+                clearTimeout(loadGiscusTimeout);
+            }, 1000);
+        } else {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        }
+    </script>
+
+
+        
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">OWASP_Top_10_2021</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A01-Broken-Access-Control-%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%A4%B1%E6%95%88"><span class="nav-number">1.</span> <span class="nav-text">A01 Broken Access Control        访问控制失效</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent"><span class="nav-number">1.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios"><span class="nav-number">1.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A02-Cryptographic-Failures-%E5%8A%A0%E5%AF%86%E5%A4%B1%E8%B4%A5"><span class="nav-number">2.</span> <span class="nav-text">A02 Cryptographic Failures        加密失败</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-1"><span class="nav-number">2.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-1"><span class="nav-number">2.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-1"><span class="nav-number">2.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A03-Injection%E6%B3%A8%E5%85%A5"><span class="nav-number">3.</span> <span class="nav-text">A03 Injection 注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-2"><span class="nav-number">3.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-2"><span class="nav-number">3.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-2"><span class="nav-number">3.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A04-Insecure-Design%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text">A04 Insecure Design 不安全的设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-3"><span class="nav-number">4.1.</span> <span class="nav-text">Description</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Requirements-and-Resource-Management"><span class="nav-number">4.1.1.</span> <span class="nav-text">Requirements and Resource Management</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Secure-Design"><span class="nav-number">4.1.2.</span> <span class="nav-text">Secure Design</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Secure-Development-Lifecycle"><span class="nav-number">4.1.3.</span> <span class="nav-text">Secure Development Lifecycle</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-3"><span class="nav-number">4.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-3"><span class="nav-number">4.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A05-Security-Misconfiguration%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF"><span class="nav-number">5.</span> <span class="nav-text">A05 Security Misconfiguration 安全配置错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-4"><span class="nav-number">5.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-4"><span class="nav-number">5.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-4"><span class="nav-number">5.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A06-Vulnerable-and-Outdated-Components%E6%98%93%E6%8D%9F%E5%92%8C%E8%BF%87%E6%97%B6%E7%9A%84%E7%BB%84%E4%BB%B6"><span class="nav-number">6.</span> <span class="nav-text">A06 Vulnerable and Outdated Components 易损和过时的组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-5"><span class="nav-number">6.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-5"><span class="nav-number">6.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-5"><span class="nav-number">6.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A07-Identification-and-Authentication-Failures%E8%AF%86%E5%88%AB%E5%92%8C%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E5%A4%B1%E8%B4%A5"><span class="nav-number">7.</span> <span class="nav-text">A07 Identification and Authentication Failures 识别和身份验证失败</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-6"><span class="nav-number">7.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-6"><span class="nav-number">7.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-6"><span class="nav-number">7.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A08-Software-and-Data-Integrity-Failures%E8%BD%AF%E4%BB%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E6%95%85%E9%9A%9C"><span class="nav-number">8.</span> <span class="nav-text">A08 Software and Data Integrity Failures 软件和数据完整性故障</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-7"><span class="nav-number">8.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-7"><span class="nav-number">8.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-7"><span class="nav-number">8.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A09-Security-Logging-and-Monitoring-Failures-%E5%AE%89%E5%85%A8%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E5%92%8C%E7%9B%91%E6%8E%A7%E6%95%85%E9%9A%9C"><span class="nav-number">9.</span> <span class="nav-text">A09 Security Logging and Monitoring Failures        安全日志记录和监控故障</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-8"><span class="nav-number">9.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-8"><span class="nav-number">9.2.</span> <span class="nav-text">How to Prevent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-8"><span class="nav-number">9.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A10-Server-Side-Request-Forgery-SSRF-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0"><span class="nav-number">10.</span> <span class="nav-text">A10 Server Side Request Forgery (SSRF) 服务器端请求伪造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-9"><span class="nav-number">10.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Prevent-9"><span class="nav-number">10.2.</span> <span class="nav-text">How to Prevent</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#From-Network-layer-%E4%BB%8E%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-number">10.2.1.</span> <span class="nav-text">From Network layer 从网络层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#From-Application-layer-%E4%BB%8E%E5%BA%94%E7%94%A8%E5%B1%82%EF%BC%9A"><span class="nav-number">10.2.2.</span> <span class="nav-text">From Application layer: 从应用层：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Additional-Measures-to-consider-%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E7%9A%84%E5%85%B6%E4%BB%96%E6%8E%AA%E6%96%BD%EF%BC%9A"><span class="nav-number">10.2.3.</span> <span class="nav-text">Additional Measures to consider: 需要考虑的其他措施：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Attack-Scenarios-9"><span class="nav-number">10.3.</span> <span class="nav-text">Example Attack Scenarios</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">路漫漫其修远兮，吾将上下而求索</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">敬请T期待</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        25 posts in total
+                    </span>
+                    
+                        <span>
+                            100.2k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.3</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/Swup.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/SwupSlideTheme.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/SwupProgressPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/SwupScrollPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/tools/imageViewer.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/utils.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/main.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/layouts/navbarShrink.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/tools/scrollTopBottom.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/tools/lightDarkSwitch.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/tools/runtime.js" ></script>
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/Typed.min.js" ></script>
+  <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/plugins/typed.js" ></script>
+
+
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/minimasonry.min.js" ></script>
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/plugins/masonry.js" ></script>
+
+
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+    <div id="aplayer"></div>
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/libs/APlayer.min.js" ></script>
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.7.3/files/source/js/plugins/aplayer.js" ></script>
+
+</body>
+</html>

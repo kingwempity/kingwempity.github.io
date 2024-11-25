@@ -42,9 +42,11 @@
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/demo_min_DFA_1.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86-%E6%8E%A8%E5%AF%BC.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86-%E5%BD%92%E7%BA%A6.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/first_follow.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E7%82%B9%E8%AE%B0%E7%AC%A6.png">
 <meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%8C%E4%B9%89%E5%88%86%E6%9E%90%E6%A0%91.png">
 <meta property="article:published_time" content="2024-11-21T07:02:31.000Z">
-<meta property="article:modified_time" content="2024-11-25T03:35:28.601Z">
+<meta property="article:modified_time" content="2024-11-25T10:03:00.080Z">
 <meta property="article:author" content="kingwempity">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="编译原理">
@@ -699,8 +701,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-11-25 11:35:28</span>
-            <span class="mobile">2024-11-25 11:35:28</span>
+            <span class="desktop">2024-11-25 18:03</span>
+            <span class="mobile">2024-11-25 18:03</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -742,12 +744,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.5k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>4.1k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>15 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>18 Mins</span>
         </span>
     
     
@@ -1181,7 +1183,7 @@ V -&gt; e
 <li>T-&gt;FT’</li>
 <li>T’-&gt;*FT’|ɛ</li>
 <li>F-&gt;(E)|id<ul>
-<li>FIRST(E)=FIRST(T)=FIRST(F)={(,id}</li>
+<li>FIRST(E)=FIRST(TE’)=FIRST(T)=FIRST(F)={(,id}</li>
 <li>FIRST(E’)={+,ɛ}</li>
 <li>FIRST(T’)={*,ɛ}</li>
 </ul>
@@ -1203,6 +1205,23 @@ V -&gt; e
 <li>FOLLOW(E)=FOLLOW(E’)={),$}</li>
 <li>FOLLOW(T)=FOLLOW(T’)={+,),$}</li>
 <li>FOLLOW(F)={+,*,),$}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>FIRST和FOOLLOW总结：</strong></p>
+<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/first_follow.png" style="zoom:80%;">
+
+<p>[推荐B站视频]: <a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Cu411m7VX/?share_source=copy_web&amp;vd_source=89bd71848ae8204999c9aa3e48cc5694">https://www.bilibili.com/video/BV1Cu411m7VX/?share_source=copy_web&amp;vd_source=89bd71848ae8204999c9aa3e48cc5694<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>	“【3编译原理如何求first集和follow集（更正版）】”</p>
+<p><strong>NULLABLE集合：</strong></p>
+<ul>
+<li>非终结符X属于集合NULLABLE，当且仅当：<ul>
+<li>基本情况：X-&gt; <ul>
+<li>归纳情况：X-&gt;Y1,Y2…Yn<ul>
+<li>Y1,Y2…,Yn是n个非终结符，且都属于NULLABLE集</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1244,6 +1263,126 @@ V -&gt; e
 
   - 对N的两条产生式规则N-&gt;β和N-&gt;γ，要求FIRST(β)∩FIRST(γ)=\{\}
 </code></pre>
+</li>
+<li><p><strong>构造预测分析表（利用FIRST集合和FOLLOW集合）</strong></p>
+<ul>
+<li><p>对文法的每个产生式A-&gt;α</p>
+</li>
+<li><p>步骤1：对FIRST(α)的每个终结符α，把A-&gt;α加入M[A,α]</p>
+</li>
+<li><p>步骤2：若ɛ在FIRST(α)中，对FOLLOW(A)中每个终结符b(包含$),加入A-&gt;α加入M[A,b]</p>
+</li>
+<li><p>例：</p>
+<ul>
+<li><p>1:E-&gt;TE’</p>
+</li>
+<li><p>2:E’-&gt;+TE’</p>
+</li>
+<li><p>3:E’-&gt;ɛ</p>
+</li>
+<li><p>4:T-&gt;FT’</p>
+</li>
+<li><p>5:T’-&gt;*FT’</p>
+</li>
+<li><p>6:T’-&gt;ɛ</p>
+</li>
+<li><p>7:F-&gt;(E)</p>
+</li>
+<li><p>8:F-&gt;id</p>
+<ul>
+<li>FIRST(E)=FIRST(TE’)=FIRST(T)=FIRST(F)={(,id}</li>
+<li>FIRST(E’)={+,ɛ}</li>
+<li>FIRST(T’)={*,ɛ}</li>
+<li>FOLLOW(E)=FOLLOW(E’)={),$}</li>
+<li>FOLLOW(T)=FOLLOW(T’)={+,),$}</li>
+<li>FOLLOW(F)={+,*,),$}</li>
+</ul>
+</li>
+<li><p>预测分析表</p>
+<table>
+<thead>
+<tr>
+<th align="center">非终结符\终结符</th>
+<th align="center">id</th>
+<th align="center">+</th>
+<th align="center">*</th>
+<th align="center">(</th>
+<th align="center">)</th>
+<th align="center">$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">E</td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">E’</td>
+<td align="center"></td>
+<td align="center">2</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">T</td>
+<td align="center">4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">4</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">T’</td>
+<td align="center"></td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center"></td>
+<td align="center">6</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td align="center">8</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">7</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>自底向上分析算法：</strong></p>
+<ul>
+<li><strong>LR分析算法（移进-归约算法）</strong></li>
+<li>目前应用最广泛的一类语法分析器自动生成器中采用的算法</li>
+<li>自底向上分析的基本思想：最右推导的逆过程</li>
+<li>引入点记符<ul>
+<li><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%82%B9%E8%AE%B0%E7%AC%A6.png" alt="点记符"></li>
+</ul>
+</li>
+<li>两个重要步骤：<ul>
+<li>移进：一个记号到栈顶上</li>
+<li>归约：栈顶上的n个符号（产生式的右部）到左部的非终结符<ul>
+<li>对产生式A-&gt;β<del>1</del>…β<del>n</del><ul>
+<li>如果β<del>n~~1</del>…β<del>1</del>在栈顶上，则弹出β<del>n~~1</del>…β<del>1</del></li>
+<li>压入A</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p><strong>例题1：</strong>试着构造下列语言的文法</p>
@@ -1333,7 +1472,76 @@ V -&gt; e
 <p>(b)</p>
 <p>学不动了，后面再学吧，救救孩子吧</p>
 <h4 id><a href="#" class="headerlink" title></a></h4></blockquote>
-<p>​                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </p>
+<p><strong>例题4：</strong>选择题</p>
+<ul>
+<li>下列关于LL(1)分析表的说法中正确的是(A)<ul>
+<li>A.LL(1)分析表指示栈顶为非终结符时面临输入符号应该选择的产生式。</li>
+<li>B.LL(1)文法的LL(1)分析表可以有多重定义。</li>
+<li>C.一个产生式只能在LL(1)分析表中填写一次。</li>
+<li>D.LL(1)分析表也可用于自底向上语法分析。</li>
+</ul>
+</li>
+</ul>
+<p><strong>例题5：</strong></p>
+<p>求下面文法每个非终结符号的FIRST集和FOLLOW集，并构造下面文法的LL(1)分析表。</p>
+<ul>
+<li>S:=aAd</li>
+<li>A:=BC</li>
+<li>B:=b|ɛ</li>
+<li>C:=c|ɛ</li>
+</ul>
+<blockquote>
+<p>FIRST(S)={a}							   |FOLLOW(S)={$}</p>
+<p>FIRRST(A)={b,c,ɛ}						  |FOLLOW(A)={d,$}</p>
+<p>FIRRST(B)={b,ɛ}							|FOLLOW(B)={c,d,$}</p>
+<p>FIRRST(C)={c,ɛ}                            |FOLLOW(C)={d,$}</p>
+<p>LL(1)分析表</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>d</th>
+<th>$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A</td>
+<td></td>
+<td>2</td>
+<td>2</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>B</td>
+<td></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>C</td>
+<td></td>
+<td></td>
+<td>5</td>
+<td></td>
+<td>6</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p>​                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </p>
 <h2 id="语义分析"><a href="#语义分析" class="headerlink" title="语义分析"></a>语义分析</h2><p><strong>语义分析</strong>：检查抽象语法树的合法性</p>
 <p>语义分析：类型检查、变量声明检查、参数类型检查、参数数量检查、函数是否声明、函数是否定义</p>
 <h2 id="语法制导翻译"><a href="#语法制导翻译" class="headerlink" title="语法制导翻译"></a>语法制导翻译</h2>
@@ -1350,7 +1558,7 @@ V -&gt; e
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-11-25 11:35:28
+                    :</strong> 2024-11-25 18:03:00
             </li>
         
         <li>
@@ -1504,7 +1712,7 @@ V -&gt; e
                     </span>
                     
                         <span>
-                            103.7k words in total
+                            104.2k words in total
                         </span>
                     
                 </p>

@@ -6093,6 +6093,12 @@ V -&gt; e
 </ul>
 </li>
 </ul>
+<p><strong>LL(1)文法</strong></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/LL(1)%E6%96%87%E6%B3%95%E5%88%A4%E6%96%AD.png"></p>
+<p><strong>LL(1)文法判断</strong></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/LL(1)%E6%96%87%E6%B3%95%E5%88%A4%E6%96%AD_1.png" alt="LL(1)文法判断_1"></p>
+<p>LR(0)分析表</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/LR(0)%E5%88%86%E6%9E%90.png" alt="LR(0)分析"></p>
 <p><strong>SLR算法：</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/SLR%E5%88%86%E6%9E%90%E8%A1%A8.png" alt="SLR分析表"></p>
 <p><strong>LR(1)</strong></p>

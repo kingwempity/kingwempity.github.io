@@ -6002,64 +6002,126 @@ V -&gt; e
 </ul>
 </li>
 <li><p>预测分析表</p>
-<table>
+</li>
+<li><table>
 <thead>
 <tr>
-<th align="center">非终结符\终结符</th>
-<th align="center">id</th>
-<th align="center">+</th>
-<th align="center">*</th>
-<th align="center">(</th>
-<th align="center">)</th>
-<th align="center">$</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">E</td>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td align="center">E’</td>
-<td align="center"></td>
-<td align="center">2</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">3</td>
-<td align="center">3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td align="center">T</td>
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td align="center">T’</td>
-<td align="center"></td>
-<td align="center">6</td>
-<td align="center">5</td>
-<td align="center"></td>
-<td align="center">6</td>
-<td align="center">6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td align="center">F</td>
-<td align="center">8</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">7</td>
-<td align="center"></td>
-<td align="center"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th>非终结符\终结符</th>
+<th>id</th>
+<th>+</th>
+<th>*</th>
+<th>(</th>
+<th>)</th>
+<th>$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>E’</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>T</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T’</td>
+<td></td>
+<td>6</td>
+<td>5</td>
+<td></td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>F</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
 </li>
 </ul>
 </li>

@@ -5620,31 +5620,31 @@ over</p>
 <p>界限符：，、{、}、(、)</p>
 </blockquote>
 <p><strong>作业2.3</strong>：叙述下列正规式描述的语言</p>
-<p>(a) <strong>0(0|1)^*^0</strong></p>
+<p>(a) 0(0|1)^*^0</p>
 <blockquote>
 <p>以0开头和结尾的由0和1组成的串</p>
 </blockquote>
-<p>(b)<strong>((ɛ|0)1^<em>^)^</em>^</strong></p>
+<p>(b)((ɛ|0)1^<em>^)^</em>^</p>
 <blockquote>
 <p>包含空串的由0和1组成的串</p>
 </blockquote>
-<p>(c)<strong>(0|1)^*^0(0|1)(0|1)</strong></p>
+<p>(c)(0|1)^*^0(0|1)(0|1)</p>
 <blockquote>
 <p>倒数第三个字符为0的由0和1组成的串</p>
 </blockquote>
-<p>(d)<strong>0^<em>^10^</em>^10^<em>^10^</em>^</strong></p>
+<p>(d)0^<em>^10^</em>^10^<em>^10^</em>^</p>
 <blockquote>
 <p>只含有三个1，由0和1组成的串</p>
 </blockquote>
-<p>(e)<strong>(00|11)^<em>^((01|10)(00|11)^</em>^(01|10)(00|11)^<em>^)^</em>^</strong></p>
+<p>(e)(00|11)^<em>^((01|10)(00|11)^</em>^(01|10)(00|11)^<em>^)^</em>^</p>
 <blockquote>
 <p>由偶数个0和偶数个1组成的所有0和1的串</p>
 </blockquote>
-<p>(f)*<em>1^</em>^(01|0)^*^   **</p>
+<p>(f)1^<em>^(01|0)^</em>^   </p>
 <blockquote>
 <p>不包含011子串的所有由0和1组成串</p>
 </blockquote>
-<p>(g)<strong>(01|1)^<em>^0^</em>^</strong></p>
+<p>(g)(01|1)^<em>^0^</em>^</p>
 <blockquote>
 <p>不包含001子串的所有由0和1组成的串</p>
 </blockquote>

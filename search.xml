@@ -5537,7 +5537,7 @@ over</p>
 <p><strong>a(b|c)^*^    NFA</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/nfa.png" alt="a(b|c)\*"></p>
 <h3 id="子集构造法："><a href="#子集构造法：" class="headerlink" title="子集构造法："></a><strong>子集构造法：</strong></h3><p>q0={n0}</p>
-<p>q0-a-&gt;{n1,n2,n3,n4,n6,n8,n9}=q1</p>
+<p>q0-a-&gt;{n1,n2,n3,n4,n6,n9}=q1</p>
 <p>q1-b-&gt;{n4,n5,n8,n9,n3,n6}=q2</p>
 <p>q1-c-&gt;{n6,n7,n8,n9,n3,n4}=q3</p>
 <p>q2-b-&gt;{n4,n5,n8,n9,n3,n6}=q2</p>

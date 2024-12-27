@@ -6575,4 +6575,96 @@ V -&gt; e
         <tag>C</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网络安全技术与应用</title>
+    <url>/2024/12/26/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="网络安全概述"><a href="#网络安全概述" class="headerlink" title="网络安全概述"></a>网络安全概述</h1><h2 id="网络安全的定义"><a href="#网络安全的定义" class="headerlink" title="网络安全的定义"></a>网络安全的定义</h2><p>网络安全保证网络中信息及数据的保密性，完整性，和可用性。</p>
+<h2 id="网络安全的发展历史"><a href="#网络安全的发展历史" class="headerlink" title="网络安全的发展历史"></a>网络安全的发展历史</h2><ol>
+<li>通信安全时期</li>
+<li>信息安全时期<ul>
+<li><strong>保密性</strong>：确保信息只能由授权的人员获取及使用，以及确保数据即使被攻击者窃取，也不能被正确读出。</li>
+<li><strong>完整性</strong>：确保信息在传输过程中不被篡改，且接收方能够是被信息是否被篡改。</li>
+<li><strong>可用性</strong>：确保被授权人员在需要时可以获取和使用相关的信息。</li>
+</ul>
+</li>
+<li>信息保障时期<ul>
+<li><strong>可控性</strong>：对信息和信息系统实施安全监控与管理，防止信息和信息系统被非法利用。</li>
+<li><strong>不可否认性</strong>：防止信息源用户对其发送的信息不承认，或者用户接收到信息之后不认账。</li>
+</ul>
+</li>
+<li>网络空间安全时期</li>
+</ol>
+<h2 id="网络安全的发展趋势"><a href="#网络安全的发展趋势" class="headerlink" title="网络安全的发展趋势"></a>网络安全的发展趋势</h2><h3 id="网络安全动态感知"><a href="#网络安全动态感知" class="headerlink" title="网络安全动态感知"></a>网络安全动态感知</h3><blockquote>
+<p>当前，企业网络环境中部署的各类安全设备主要使用 <strong>单点检测</strong>，无法应对 **高级持续性威胁(Advanced Persistent Threat APT)**为代表的新型网络威胁</p>
+</blockquote>
+<p>网络安全动态感知是指基于环境动态、整体地洞悉安全风险的能力。</p>
+<blockquote>
+<p>主要功能：</p>
+<p><strong>安全要素采集</strong>：采集各类安全设备中的海量要素，包括流量数据、各类日志、漏洞、木马和病毒样本。</p>
+<p><strong>安全数据处理</strong>：对采集到的安全要素数据进行清洗、分类、标准化、关联补齐和添加标签等操作，将标准数据加载到存储的数据中。</p>
+<p><strong>安全数据分析和结果展示</strong>：利用数据挖掘及智能分析等技术，提取系统安全特征和指标，发现网络安全风险。</p>
+</blockquote>
+<h3 id="零信任"><a href="#零信任" class="headerlink" title="零信任"></a>零信任</h3><blockquote>
+<p>零信任的核心思想：默认情况下不信任任何网络内部和外部的任何用户、设备和系统，需要基于认证和授权重构访问控制的信任基础。</p>
+</blockquote>
+<blockquote>
+<p>零信任建立的是以 <strong>身份认证为中心，以识别、持续认证、动态访问控制、授权、审计和检测为链条</strong>，以多维信任为基础、以最小化实时授权为核心，认证可覆盖网络末端的动态安全架构</p>
+</blockquote>
+<blockquote>
+<p><strong>核心目标：</strong>消除边界问题带来的安全风险</p>
+</blockquote>
+<h2 id="网络安全的标准和规范"><a href="#网络安全的标准和规范" class="headerlink" title="网络安全的标准和规范"></a>网络安全的标准和规范</h2><h3 id="PDCA流程（Plan-Do-Check-Action"><a href="#PDCA流程（Plan-Do-Check-Action" class="headerlink" title="PDCA流程（Plan,Do,Check,Action)"></a>PDCA流程（Plan,Do,Check,Action)</h3><ol>
+<li>计划：ISMS的策划与准备</li>
+<li>实施：ISMS文件的编制</li>
+<li>检查：运行ISMS。</li>
+<li>改进：ISMS的审核、评审和持续改进</li>
+</ol>
+<h3 id="网络安全等级保护制度"><a href="#网络安全等级保护制度" class="headerlink" title="网络安全等级保护制度"></a>网络安全等级保护制度</h3><ol>
+<li><p>安全保护等级</p>
+<ul>
+<li><p>第一级：用户自主保护级</p>
+</li>
+<li><p>第二级：指导保护级，二级及以上的等保对象，其网络运营单位需依据定级标准，组织进行专家评审，主管部门审核和备案审查，最终确定其安全保护等级。</p>
+</li>
+<li><p>第三级：监督保护级</p>
+</li>
+<li><p>第四级：强制保护级</p>
+</li>
+<li><p>第五级：专控保护级</p>
+</li>
+</ul>
+</li>
+<li><p>等级保护工作流程</p>
+<ol>
+<li>定级</li>
+<li>备案</li>
+<li>建设整改</li>
+<li>等级测评</li>
+<li>监督检查</li>
+</ol>
+</li>
+</ol>
+<h2 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h2><h3 id="网络体系结构"><a href="#网络体系结构" class="headerlink" title="网络体系结构"></a>网络体系结构</h3><h4 id><a href="#" class="headerlink" title></a></h4><h4 id="-1"><a href="#-1" class="headerlink" title></a></h4><h4 id="-2"><a href="#-2" class="headerlink" title></a></h4><h4 id="OSI体系结构"><a href="#OSI体系结构" class="headerlink" title="OSI体系结构"></a>OSI体系结构</h4><ol>
+<li><strong>OSI体系结构</strong>（7层）<ul>
+<li>应用层</li>
+<li>表示层</li>
+<li>会话层</li>
+<li>传输层</li>
+<li>网络层</li>
+<li>数据链路层</li>
+<li>物理层</li>
+</ul>
+</li>
+<li>TCP&#x2F;IP</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
 </search>

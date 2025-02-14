@@ -6909,4 +6909,43 @@ V -&gt; e
         <tag>洛谷</tag>
       </tags>
   </entry>
+  <entry>
+    <title>解压查看vsix插件脚本</title>
+    <url>/2025/02/14/%E8%A7%A3%E5%8E%8B%E6%9F%A5%E7%9C%8Bvsix%E6%8F%92%E4%BB%B6%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<p><code>.vsix</code> 文件是 Visual Studio Code 扩展的安装包，实际上是一个 ZIP 压缩文件。你可以通过解压缩 <code>.vsix</code> 文件来查看其源代码和内容。以下是一个 Python 脚本，用于解压 <code>.vsix</code> 文件并提取其中的内容到指定目录。</p>
+<hr>
+<h3 id="Python-脚本：解压-vsix-文件"><a href="#Python-脚本：解压-vsix-文件" class="headerlink" title="Python 脚本：解压 .vsix 文件"></a><strong>Python 脚本：解压 <code>.vsix</code> 文件</strong></h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_vsix</span>(<span class="params">vsix_path, extract_dir</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    解压 .vsix 文件到指定目录</span></span><br><span class="line"><span class="string">    :param vsix_path: .vsix 文件的路径</span></span><br><span class="line"><span class="string">    :param extract_dir: 解压目标目录</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 检查 .vsix 文件是否存在</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(vsix_path):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error: 文件 <span class="subst">&#123;vsix_path&#125;</span> 不存在&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建解压目录</span></span><br><span class="line">    os.makedirs(extract_dir, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 解压 .vsix 文件</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">with</span> zipfile.ZipFile(vsix_path, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> zip_ref:</span><br><span class="line">            zip_ref.extractall(extract_dir)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;解压完成：<span class="subst">&#123;vsix_path&#125;</span> 已解压到 <span class="subst">&#123;extract_dir&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;解压失败：<span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># 设置 .vsix 文件路径和解压目标目录</span></span><br><span class="line">    vsix_file = <span class="string">&quot;example.vsix&quot;</span>  <span class="comment"># 替换为你的 .vsix 文件路径</span></span><br><span class="line">    output_dir = <span class="string">&quot;extracted_vsix&quot;</span>  <span class="comment"># 解压目标目录</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调用解压函数</span></span><br><span class="line">    extract_vsix(vsix_file, output_dir)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a><strong>使用说明</strong></h3><ol>
+<li>将脚本保存为 <code>extract_vsix.py</code>。</li>
+<li>修改 <code>vsix_file</code> 变量为你要解压的 <code>.vsix</code> 文件路径。</li>
+<li>修改 <code>output_dir</code> 变量为你希望解压到的目标目录。</li>
+<li>运行脚本：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">python extract_vsix.py</span><br></pre></td></tr></table></figure></div></li>
+<li>解压完成后，可以在 <code>output_dir</code> 目录中查看 <code>.vsix</code> 文件的内容，包括源代码和资源文件。</li>
+</ol>
+<hr>
+<h3 id="解压后的文件内容"><a href="#解压后的文件内容" class="headerlink" title="解压后的文件内容"></a><strong>解压后的文件内容</strong></h3><p>解压后的目录可能包含以下内容：</p>
+<ul>
+<li><code>extension/</code>：扩展的核心代码和资源文件。</li>
+<li><code>package.json</code>：扩展的元数据信息（如名称、版本、依赖等）。</li>
+<li><code>README.md</code>：扩展的说明文档。</li>
+<li>其他资源文件（如图片、配置文件等）。</li>
+</ul>
+<hr>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a><strong>注意事项</strong></h3><ul>
+<li>确保 <code>.vsix</code> 文件是合法的扩展包。</li>
+<li>如果 <code>.vsix</code> 文件包含加密或混淆的代码，解压后可能无法直接查看源代码。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>TOOL</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
 </search>

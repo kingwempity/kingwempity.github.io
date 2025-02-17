@@ -1,207 +1,732 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head prefix="og: https://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  
-  <title>CtfWeb_TOOL - 敬请T期待</title>
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    <link rel='manifest' href='/manifest.json'>
-  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="敬请T期待">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  
-  
-  
-  <meta property="og:title" content="CtfWeb_TOOL - 敬请T期待" />
-  
-  <meta property="og:type" content="article" />
-  
-  <meta property="og:url" content="https://kingwempity.github.io/2024/07/08/CtfWeb-TOOL/index.html" />
-  
-  <meta property="og:image" content="/favicon.png" />
-  
-  <meta property="og:article:published_time" content="2024-07-08T15:17:00.000Z" />
-  
-  <meta property="og:article:author" content="kingwempity" />
-  
-  
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://kingwempity.github.io/2024/07/08/ctfweb-tool/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="CTFweb实战中使用的部分工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CtfWeb_TOOL">
+<meta property="og:url" content="https://kingwempity.github.io/2024/07/08/CtfWeb-TOOL/index.html">
+<meta property="og:site_name" content="敬请T期待">
+<meta property="og:description" content="CTFweb实战中使用的部分工具">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/dirmap1.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/dirmap2.png">
+<meta property="article:published_time" content="2024-07-08T15:17:00.000Z">
+<meta property="article:modified_time" content="2025-01-30T14:26:08.975Z">
+<meta property="article:author" content="kingwempity">
+<meta property="article:tag" content="TOOL">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="WEB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kingwempity/images/raw/master/images/dirmap1.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/avatar.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/avatar.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            CtfWeb_TOOL | Kingwempitys&#39;Blog
+        
+    </title>
 
-  
-<link rel="stylesheet" href="/css/var.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Chillax/chillax.css">
 
-  
-<link rel="stylesheet" href="/css/main.css">
+    <!--- Inject Part-->
+    
 
-  
-<link rel="stylesheet" href="/css/typography.css">
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  
-<link rel="stylesheet" href="/css/code-highlighting.css">
 
-  
-<link rel="stylesheet" href="/css/components.css">
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/css/build/tailwind.css">
+    
 
-  
-<link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+    
+    
+        <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/anime.min.js" ></script>
+    
 
-  
-<link rel="stylesheet" href="/css/paginator.css">
-
-  
-<link rel="stylesheet" href="/css/footer.css">
-
-  
-<link rel="stylesheet" href="/css/post-list.css">
-
-  
-  
-<link rel="stylesheet" href="/css/rainbow-banner.css">
-
-  
-  
-  
-<link rel="stylesheet" href="/css/toc.css">
-
-  
-  
-  
-  
-  
-<link rel="stylesheet" href="/css/post.css">
-
-  
-  
-  
-  
-  
-
-  
+    <script id="hexo-configurations">
+    window.config = {"hostname":"kingwempity.github.io","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":5,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":false,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/image.jpg","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Kingwempitys'Blogs","subtitle":{"text":["敬请T期待"],"hitokoto":{"enable":true,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":"ture","family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/kingwempity","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Something Just Like This","artist":"Coldplay","url":"https://evan.beee.top/music/Something%20Just%20Like%20This%20-%20The%20Chainsmokers%E3%80%81Coldplay.mp3","cover":"https://evan.beee.top/music/covers/Something_Just_Like_This.png","lrc":null},{"name":"如果我们在余生相遇-双鱼座","artist":"RE-D/是二哈ya","url":"https://link.hhtjim.com/163/2123230314.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/music.jpg"},{"name":"小宇","artist":"刘大拿","url":"https://link.hhtjim.com/163/1954954129.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/小宇.png"},{"name":"偏爱","artist":"张芸京","url":"https://link.hhtjim.com/163/5238992.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/偏爱.jpg"}]},"mermaid":{"enable":"enable","version":"9.3.0"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Being":{"path":"https://cn.bing.com","icon":"fa-solid fa-earth-americas"},"Links":{"icon":"fa-regular fa-link","submenus":{"Me":"/about","Github":"https://github.com/kingwempity","Blog":"https://kingwempity.github.io"}},"masonry":{"icon":"fa-solid fa-image","path":"/masonry/"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"敬请T期待","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Masonry":{"path":"/masonry","icon":"fa-solid fa-image"},"ArtiTalk":{"path":"/shuoshuo","icon":"fa-solid fa-comment"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":5}},"footerStart":"2024/1/20 12:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/regular.min.css">
+    
+    
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/duotone.min.css">
+    
+    
 <meta name="generator" content="Hexo 7.0.0"></head>
-    <body
-        data-color-scheme="auto"
-        data-uppercase-categories="true"
-        
-        data-rainbow-banner="true"
-        data-rainbow-banner-shown="auto"
-        data-rainbow-banner-month="6"
-        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
-        
-        data-config-root="/"
-        
-        data-toc="true"
-        data-toc-max-depth="2"
-        
-        
-    >
-        <nav id="theme-nav">
-    <div class="inner">
-        <a class="title" href="/">Blog</a>
-        <div class="nav-arrow"></div>
-        <div class="nav-items">
-            <a class="nav-item nav-item-home" href="/">Home</a>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Kingwempitys&#39;Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
             
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/images/avatar.svg" class="w-full h-full rounded-sm">
+                </a>
             
-            <a class="nav-item" href="/archives">Archives</a>
-            
-            
-            
-            <a class="nav-item" href="/friends">Friends</a>
-            
-            
-            
-            <a class="nav-item" href="/projects">Projects</a>
-            
-            
-            
-            <a class="nav-item" href="/about">About</a>
-            
-            
-            
-            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/MrWillCom" target="_blank" aria-label="GitHub">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-codepen nav-item-icon" href="https://codepen.io/mrwillcom" target="_blank" aria-label="CodePen">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-patreon nav-item-icon" href="https://www.patreon.com/MrWillCom" target="_blank" aria-label="Patreon">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-mastodon nav-item-icon" href="https://noc.social/@MrWillCom" target="_blank" aria-label="Mastodon">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-discord nav-item-icon" href="https://discord.gg/UKuFDjcfY8" target="_blank" aria-label="Discord">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-search nav-item-icon" href="/search" target="_blank" aria-label="Search">&nbsp;</a>
-            
-            
+            <a class="logo-title" href="/">
+                
+                Kingwempitys&#39;Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://cn.bing.com"
+                                        >
+                                    <i class="fa-solid fa-earth-americas fa-fw"></i>
+                                    BEING
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/kingwempity">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://kingwempity.github.io">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/masonry/"
+                                        >
+                                    <i class="fa-solid fa-image fa-fw"></i>
+                                    MASONRY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
-        
-<article class="post">
-    <div class="meta">
-        
-        <div class="categories text-uppercase">
-        
-            <a href="/categories/CTF/">CTF</a>
-        
-        </div>
-        
 
-        
-        <div class="date" id="date">
-            <span>July</span>
-            <span>8,</span>
-            <span>2024</span>
-        </div>
-        
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
 
-        <h1 class="title">CtfWeb_TOOL</h1>
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://cn.bing.com"
+                        >
+                            <span>
+                                BEING
+                            </span>
+                            
+                                <i class="fa-solid fa-earth-americas fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/kingwempity">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="https://kingwempity.github.io">BLOG</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/masonry/"
+                        >
+                            <span>
+                                MASONRY
+                            </span>
+                            
+                                <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>Archives</span>
+                            <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/masonry"
+                        >
+                            <span>Masonry</span>
+                            <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/shuoshuo"
+                        >
+                            <span>ArtiTalk</span>
+                            <i class="fa-solid fa-comment fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">44</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
     </div>
 
-    <div class="divider"></div>
+    <div class="window-mask"></div>
 
-    <div class="content">
-        <meta name="referrer" content="no-referrer">
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			<div class="w-full flex items-center pt-6 justify-start">
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">CtfWeb_TOOL</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">敬请T期待</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-07-08 23:17</span>
+        <span class="mobile">2024-07-08 23:17</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-01-30 22:26:08</span>
+            <span class="mobile">2025-01-30 22:26:08</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/CTF/">CTF</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/TOOL/">TOOL</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/CTF/">CTF</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/WEB/">WEB</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.3k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>9 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<meta name="referrer" content="no-referrer">
 
 <h2 id="扫描篇"><a href="#扫描篇" class="headerlink" title="扫描篇"></a>扫描篇</h2><h4 id="dirmap"><a href="#dirmap" class="headerlink" title="dirmap"></a>dirmap</h4><p><strong>(一)介绍</strong></p>
 <p>一个高级web目录扫描工具，功能将会强于DirBuster、Dirsearch、cansina、御剑</p>
 <p><strong>(二)安装</strong></p>
 <p>github中搜索dirmap</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/dirmap1.png" alt="dirmap1"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/dirmap1.png" alt="dirmap1"></p>
 <p>复制链接于linux 中使用git clone下载</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~]</span><br><span class="line">└─<span class="comment"># git clone https://github.com/H4ckForJob/dirmap.git </span></span><br><span class="line">正克隆到 <span class="string">&#x27;dirmap&#x27;</span>...</span><br><span class="line">remote: Enumerating objects: 449, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (193/193), <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (82/82), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 449 (delta 124), reused 131 (delta 111), pack-reused 256</span><br><span class="line">接收对象中: 100% (449/449), 1.86 MiB | 2.02 MiB/s, 完成.</span><br><span class="line">处理 delta 中: 100% (229/229), 完成.</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~]</span><br><span class="line">└─<span class="comment"># git clone https://github.com/H4ckForJob/dirmap.git </span></span><br><span class="line">正克隆到 <span class="string">&#x27;dirmap&#x27;</span>...</span><br><span class="line">remote: Enumerating objects: 449, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (193/193), <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (82/82), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 449 (delta 124), reused 131 (delta 111), pack-reused 256</span><br><span class="line">接收对象中: 100% (449/449), 1.86 MiB | 2.02 MiB/s, 完成.</span><br><span class="line">处理 delta 中: 100% (229/229), 完成.</span><br></pre></td></tr></table></figure>
 
 <p>下载完成，使用cd 切换至安装目录</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~]</span><br><span class="line">└─<span class="comment"># cd dirmap   </span></span><br><span class="line">                                                                               </span><br><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># ls</span></span><br><span class="line">data         dirmap.py  lib      README_EN.md  requirement.txt</span><br><span class="line">dirmap.conf  doc        LICENSE  README.md     thirdlib</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~]</span><br><span class="line">└─<span class="comment"># cd dirmap   </span></span><br><span class="line">                                                                               </span><br><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># ls</span></span><br><span class="line">data         dirmap.py  lib      README_EN.md  requirement.txt</span><br><span class="line">dirmap.conf  doc        LICENSE  README.md     thirdlib</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>利用python3 使用dirmap.py</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># python3 dirmap.py</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;/root/dirmap/dirmap.py&quot;</span>, line 14, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    from gevent import monkey</span><br><span class="line">ModuleNotFoundError: No module named <span class="string">&#x27;gevent&#x27;</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># python3 dirmap.py</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;/root/dirmap/dirmap.py&quot;</span>, line 14, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    from gevent import monkey</span><br><span class="line">ModuleNotFoundError: No module named <span class="string">&#x27;gevent&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>发现需要安装依赖包，查看reqirement.txt</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># cat requirement.txt </span></span><br><span class="line">gevent</span><br><span class="line">requests</span><br><span class="line">progressbar2</span><br><span class="line">lxml     </span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># cat requirement.txt </span></span><br><span class="line">gevent</span><br><span class="line">requests</span><br><span class="line">progressbar2</span><br><span class="line">lxml     </span><br></pre></td></tr></table></figure>
 
 <p>安装依赖包</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># pip3 install requests progressbar2 lxml gevent</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># pip3 install requests progressbar2 lxml gevent</span></span><br></pre></td></tr></table></figure>
 
 <p>使用dirmap.py</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># python3 dirmap.py </span></span><br><span class="line"></span><br><span class="line">                     <span class="comment">#####  # #####  #    #   ##   #####</span></span><br><span class="line">                     <span class="comment">#    # # #    # ##  ##  #  #  #    #</span></span><br><span class="line">                     <span class="comment">#    # # #    # # ## # #    # #    #</span></span><br><span class="line">                     <span class="comment">#    # # #####  #    # ###### #####</span></span><br><span class="line">                     <span class="comment">#    # # #   #  #    # #    # #</span></span><br><span class="line">                     <span class="comment">#####  # #    # #    # #    # #   v1.0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[~/dirmap]</span><br><span class="line">└─<span class="comment"># python3 dirmap.py </span></span><br><span class="line"></span><br><span class="line">                     <span class="comment">#####  # #####  #    #   ##   #####</span></span><br><span class="line">                     <span class="comment">#    # # #    # ##  ##  #  #  #    #</span></span><br><span class="line">                     <span class="comment">#    # # #    # # ## # #    # #    #</span></span><br><span class="line">                     <span class="comment">#    # # #####  #    # ###### #####</span></span><br><span class="line">                     <span class="comment">#    # # #   #  #    # #    # #</span></span><br><span class="line">                     <span class="comment">#####  # #    # #    # #    # #   v1.0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>安装成功！</p>
 <p><strong>使用方法</strong></p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">usage: python3 dirmap.py -i https://target.com -lcf</span><br><span class="line"></span><br><span class="line">options:</span><br><span class="line">  -h, --<span class="built_in">help</span>            show this <span class="built_in">help</span> message and <span class="built_in">exit</span></span><br><span class="line"></span><br><span class="line">Engine:</span><br><span class="line">  Engine config</span><br><span class="line"></span><br><span class="line">  -t THREAD_NUM, --thread THREAD_NUM</span><br><span class="line">                        num of threads, default 30</span><br><span class="line"></span><br><span class="line">Target:</span><br><span class="line">  Target config</span><br><span class="line"></span><br><span class="line">  -i TARGET             scan a target or network (e.g. [http://]target.com ,</span><br><span class="line">                        192.168.1.1[/24] , 192.168.1.1-192.168.1.100)</span><br><span class="line">  -iF FILE              load targets from targetFile (e.g. urls.txt)</span><br><span class="line"></span><br><span class="line">Bruter:</span><br><span class="line">  Bruter config</span><br><span class="line"></span><br><span class="line">  -lcf, --loadConfigFile</span><br><span class="line">                        Load the configuration through the configuration file</span><br><span class="line">  --debug               Print payloads and <span class="built_in">exit</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">usage: python3 dirmap.py -i https://target.com -lcf</span><br><span class="line"></span><br><span class="line">options:</span><br><span class="line">  -h, --<span class="built_in">help</span>            show this <span class="built_in">help</span> message and <span class="built_in">exit</span></span><br><span class="line"></span><br><span class="line">Engine:</span><br><span class="line">  Engine config</span><br><span class="line"></span><br><span class="line">  -t THREAD_NUM, --thread THREAD_NUM</span><br><span class="line">                        num of threads, default 30</span><br><span class="line"></span><br><span class="line">Target:</span><br><span class="line">  Target config</span><br><span class="line"></span><br><span class="line">  -i TARGET             scan a target or network (e.g. [http://]target.com ,</span><br><span class="line">                        192.168.1.1[/24] , 192.168.1.1-192.168.1.100)</span><br><span class="line">  -iF FILE              load targets from targetFile (e.g. urls.txt)</span><br><span class="line"></span><br><span class="line">Bruter:</span><br><span class="line">  Bruter config</span><br><span class="line"></span><br><span class="line">  -lcf, --loadConfigFile</span><br><span class="line">                        Load the configuration through the configuration file</span><br><span class="line">  --debug               Print payloads and <span class="built_in">exit</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/dirmap2.png" alt="dirmap2"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/dirmap2.png" alt="dirmap2"></p>
 <blockquote>
 <p><strong>用法：python3 dirmap.py -i 目标网址 -lcf 载入配置文件</strong></p>
 <p><strong>其他参数 ：</strong></p>
@@ -216,9 +741,9 @@
 <p>dirsearch是一个基于python的命令行工具，用于暴力扫描页面结构，包括网页中的目录和文件。</p>
 <p><strong>(二)安装</strong></p>
 <p>github中搜索dirsearch</p>
-<p>github下载地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/maurosoria/dirsearch">https://github.com/maurosoria/dirsearch<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>github下载地址：<a target="_blank" rel="noopener" href="https://github.com/maurosoria/dirsearch">https://github.com/maurosoria/dirsearch</a></p>
 <p><strong>(三)使用方法</strong></p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Options:</span><br><span class="line">  --version             show program<span class="string">&#x27;s version number and exit</span></span><br><span class="line"><span class="string">  -h, --help            show this help message and exit</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  Mandatory:</span></span><br><span class="line"><span class="string">    -u URL, --url=URL   Target URL(s), can use multiple flags</span></span><br><span class="line"><span class="string">    -l PATH, --url-file=PATH</span></span><br><span class="line"><span class="string">                        URL list file</span></span><br><span class="line"><span class="string">    --stdin             Read URL(s) from STDIN</span></span><br><span class="line"><span class="string">    --cidr=CIDR         Target CIDR</span></span><br><span class="line"><span class="string">    --raw=PATH          Load raw HTTP request from file (use `--scheme` flag</span></span><br><span class="line"><span class="string">                        to set the scheme)</span></span><br><span class="line"><span class="string">    -s SESSION_FILE, --session=SESSION_FILE</span></span><br><span class="line"><span class="string">                        Session file</span></span><br><span class="line"><span class="string">    --config=PATH       Full path to config file, see &#x27;</span>config.ini<span class="string">&#x27; for example</span></span><br><span class="line"><span class="string">                        (Default: config.ini)</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Options:</span><br><span class="line">  --version             show program<span class="string">&#x27;s version number and exit</span></span><br><span class="line"><span class="string">  -h, --help            show this help message and exit</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  Mandatory:</span></span><br><span class="line"><span class="string">    -u URL, --url=URL   Target URL(s), can use multiple flags</span></span><br><span class="line"><span class="string">    -l PATH, --url-file=PATH</span></span><br><span class="line"><span class="string">                        URL list file</span></span><br><span class="line"><span class="string">    --stdin             Read URL(s) from STDIN</span></span><br><span class="line"><span class="string">    --cidr=CIDR         Target CIDR</span></span><br><span class="line"><span class="string">    --raw=PATH          Load raw HTTP request from file (use `--scheme` flag</span></span><br><span class="line"><span class="string">                        to set the scheme)</span></span><br><span class="line"><span class="string">    -s SESSION_FILE, --session=SESSION_FILE</span></span><br><span class="line"><span class="string">                        Session file</span></span><br><span class="line"><span class="string">    --config=PATH       Full path to config file, see &#x27;</span>config.ini<span class="string">&#x27; for example</span></span><br><span class="line"><span class="string">                        (Default: config.ini)</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <pre><code>-u URL, --url=URL                        URL目标
@@ -231,161 +756,426 @@
 </code></pre>
 </blockquote>
 <p>例子：</p>
-<p>dirsearch -u <a class="link" target="_blank" rel="noopener" href="https://8549d992-7179-4cf6-9ecf-233632ea3429.challenge.ctf.show/">https://8549d992-7179-4cf6-9ecf-233632ea3429.challenge.ctf.show/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>dirsearch -u <a target="_blank" rel="noopener" href="https://8549d992-7179-4cf6-9ecf-233632ea3429.challenge.ctf.show/">https://8549d992-7179-4cf6-9ecf-233632ea3429.challenge.ctf.show/</a></p>
 <h4 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h4><p><strong>(一)介绍</strong></p>
 <p>Nmap(Network Mapper(网络映射器））一款开源的网络探测和安全审核工具</p>
 <p><strong>(二)安装</strong></p>
 <p>kali虚拟机自带，或安装Namp GUI</p>
 <p><strong>(三)使用方法</strong></p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line">Nmap 7.94（https://nmap.org）</span><br><span class="line">用法：nmap [扫描类型] [选项] &#123;目标指定&#125;</span><br><span class="line"></span><br><span class="line">目标指定：</span><br><span class="line">可以传递主机名、IP 地址、网络等。</span><br><span class="line">例如：scanme.nmap.org、microsoft.com/24、192.168.0.1；10.0.0-255.1-254</span><br><span class="line">-iL &lt;输入文件名&gt;：从主机/网络列表中输入</span><br><span class="line">-iR &lt;主机数量&gt;：选择随机目标</span><br><span class="line">--exclude &lt;主机1[，主机2][，主机3]，...&gt;：排除主机/网络</span><br><span class="line">--excludefile &lt;排除文件&gt;：从文件中排除列表</span><br><span class="line"></span><br><span class="line">主机发现：</span><br><span class="line">-sL：列表扫描 - 仅列出要扫描的目标</span><br><span class="line">-sn：Ping 扫描 - 禁用端口扫描</span><br><span class="line">-Pn：将所有主机视为在线 - 跳过主机发现</span><br><span class="line">-PS/PA/PU/PY[portlist]：对给定端口进行 TCP SYN/ACK、UDP 或 SCTP 发现</span><br><span class="line">-PE/PP/PM：ICMP 回显、时间戳和子网掩码请求发现探测</span><br><span class="line">-PO[协议列表]：IP 协议 Ping</span><br><span class="line">-n/-R：从不进行 DNS 解析/始终解析 [默认：有时]</span><br><span class="line">--dns-servers &lt;服务器1[，服务器2]，...&gt;：指定自定义 DNS 服务器</span><br><span class="line">--system-dns：使用操作系统的 DNS 解析器</span><br><span class="line">--traceroute：跟踪到每个主机的跳转路径</span><br><span class="line"></span><br><span class="line">扫描技术：</span><br><span class="line">-sS/sT/sA/sW/sM：TCP SYN/Connect()/ACK/Window/Maimon 扫描</span><br><span class="line">-sU：UDP 扫描</span><br><span class="line">-sN/sF/sX：TCP 空、FIN 和 Xmas 扫描</span><br><span class="line">--scanflags &lt;标志&gt;：自定义 TCP 扫描标志</span><br><span class="line">-sI &lt;僵尸主机[：探测端口]&gt;：空闲扫描-sY/sZ：SCTP 初始化/COOKIE-ECHO 扫描</span><br><span class="line">-sO：IP 协议扫描</span><br><span class="line">-b &lt;FTP 中继主机&gt;：FTP 反弹扫描</span><br><span class="line"></span><br><span class="line">端口指定和扫描顺序：</span><br><span class="line">-p &lt;端口范围&gt;：仅扫描指定的端口</span><br><span class="line">例如：-p22；-p1-65535；-p U：53，111，137,T：21-25，80，139，8080,S：9</span><br><span class="line">--exclude-ports &lt;端口范围&gt;：排除指定的端口不进行扫描</span><br><span class="line">-F：快速模式 - 扫描的端口少于默认扫描</span><br><span class="line">-r：按顺序扫描端口 - 不随机化</span><br><span class="line">--top-ports &lt;数量&gt;：扫描最常见的 &lt;数量&gt; 个端口</span><br><span class="line">--port-ratio &lt;比率&gt;：扫描比 &lt;比率&gt; 更常见的端口</span><br><span class="line"></span><br><span class="line">服务/版本检测：</span><br><span class="line">-sV：探测开放端口以确定服务/版本信息</span><br><span class="line">--version-intensity &lt;级别&gt;：设置从 0（轻度）到 9（尝试所有探测）</span><br><span class="line">--version-light：限制为最有可能的探测（强度 2）</span><br><span class="line">--version-all：尝试每一个探测（强度 9）</span><br><span class="line">--version-trace：显示详细版本扫描活动（用于调试）</span><br><span class="line"></span><br><span class="line">脚本扫描：</span><br><span class="line">-sC：等同于 --script=default</span><br><span class="line">--script=&lt;Lua 脚本&gt;：&lt;Lua 脚本&gt; 是一个以逗号分隔的目录、脚本文件或脚本类别的列表</span><br><span class="line">--script-args=&lt;n1=v1,[n2=v2,...]&gt;：为脚本提供参数</span><br><span class="line">--script-args-file=文件名：在文件中提供 NSE 脚本参数</span><br><span class="line">--script-trace：显示所有发送和接收的数据--script-updatedb：更新脚本数据库。</span><br><span class="line">--script-help=&lt;Lua 脚本&gt;：显示有关脚本的帮助信息。</span><br><span class="line">&lt;Lua 脚本&gt; 是脚本文件或脚本类别的逗号分隔列表。</span><br><span class="line"></span><br><span class="line">操作系统检测：</span><br><span class="line">-O：启用操作系统检测</span><br><span class="line">--osscan-limit：将操作系统检测限制在有希望的目标上</span><br><span class="line">--osscan-guess：更积极地猜测操作系统</span><br><span class="line"></span><br><span class="line">定时和性能：</span><br><span class="line">选项中带 &lt;time&gt; 的参数以秒为单位，或者在值后附加 <span class="string">&#x27;ms&#x27;</span>（毫秒）、<span class="string">&#x27;s&#x27;</span>（秒）、<span class="string">&#x27;m&#x27;</span>（分钟）或 <span class="string">&#x27;h&#x27;</span>（小时）（例如 30m）。</span><br><span class="line">-T&lt;0-5&gt;：设置定时模板（数值越大越快）</span><br><span class="line">--min-hostgroup/max-hostgroup &lt;大小&gt;：并行主机扫描组大小</span><br><span class="line">--min-parallelism/max-parallelism &lt;数量&gt;：探测并行化</span><br><span class="line">--min-rtt-timeout/max-rtt-timeout/initial-rtt-timeout &lt;时间&gt;：指定探测往返时间。</span><br><span class="line">--max-retries &lt;次数&gt;：限制端口扫描探测重传次数。</span><br><span class="line">--host-timeout &lt;时间&gt;：在指定时间后放弃目标</span><br><span class="line">--scan-delay/--max-scan-delay &lt;时间&gt;：调整探测之间的延迟</span><br><span class="line">--min-rate &lt;数量&gt;：每秒发送数据包的速度不低于 &lt;数量&gt;</span><br><span class="line">--max-rate &lt;数量&gt;：每秒发送数据包的速度不高于 &lt;数量&gt;</span><br><span class="line"></span><br><span class="line">防火墙/入侵检测系统规避和欺骗：</span><br><span class="line">-f； --mtu &lt;值&gt;：分段数据包（可选指定 MTU 值）-D &lt;诱饵1，诱饵2[,ME],...&gt;： 使用诱饵掩盖扫描</span><br><span class="line">-S &lt;IP地址&gt;： 源地址欺骗</span><br><span class="line">-e &lt;接口&gt;： 使用指定接口</span><br><span class="line">-g/--source-port &lt;端口号&gt;： 使用给定的端口号</span><br><span class="line">--proxies &lt;url1,[url2],...&gt;： 通过 HTTP/SOCKS4 代理中继连接</span><br><span class="line">--data &lt;十六进制字符串&gt;： 向发送的数据包附加自定义负载</span><br><span class="line">--data-string &lt;字符串&gt;： 向发送的数据包附加自定义 ASCII 字符串</span><br><span class="line">--data-length &lt;数字&gt;： 向发送的数据包附加随机数据</span><br><span class="line">--ip-options &lt;选项&gt;： 发送带有指定 IP 选项的数据包</span><br><span class="line">--ttl &lt;值&gt;： 设置 IP 生存时间字段</span><br><span class="line">--spoof-mac &lt;MAC 地址/前缀/供应商名称&gt;： 欺骗您的 MAC 地址</span><br><span class="line">--badsum： 发送带有错误 TCP/UDP/SCTP 校验和的数据包</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line">-oN/-oX/-oS/-oG &lt;文件&gt;： 分别以普通、XML、脚本小子和可grep格式输出扫描结果到给定的文件名。</span><br><span class="line">-oA &lt;文件名&gt;： 同时以三种主要格式输出</span><br><span class="line">-v： 增加详细程度（使用 -vv 或更多以获得更大效果）</span><br><span class="line">-d： 增加调试级别（使用 -<span class="built_in">dd</span> 或更多以获得更大效果）</span><br><span class="line">--reason： 显示端口处于特定状态的原因</span><br><span class="line">--open： 只显示打开（或可能打开）的端口</span><br><span class="line">--packet-trace： 显示发送和接收的所有数据包--iflist：打印主机接口和路由（用于调试）</span><br><span class="line">--append-output：追加到指定的输出文件，而不是覆盖</span><br><span class="line">--resume &lt;文件名&gt;：恢复中止的扫描</span><br><span class="line">--noninteractive：禁用通过键盘进行的运行时交互</span><br><span class="line">--stylesheet &lt;路径/URL&gt;：用于将 XML 输出转换为 HTML 的 XSL 样式表</span><br><span class="line">--webxml：从 Nmap.Org 引用样式表以获得更通用的 XML</span><br><span class="line">--no-stylesheet：防止将 XSL 样式表与 XML 输出关联</span><br><span class="line"></span><br><span class="line">杂项：</span><br><span class="line">-6：启用 IPv6 扫描</span><br><span class="line">-A：启用操作系统检测、版本检测、脚本扫描和跟踪路由</span><br><span class="line">--datadir &lt;目录名&gt;：指定自定义 Nmap 数据文件位置</span><br><span class="line">--send-eth/--send-ip：使用原始以太网帧或 IP 数据包发送</span><br><span class="line">--privileged：假定用户具有完全权限</span><br><span class="line">--unprivileged：假定用户没有原始套接字权限</span><br><span class="line">-V：打印版本号</span><br><span class="line">-h：打印此帮助摘要页面。</span><br><span class="line"></span><br><span class="line">示例：</span><br><span class="line">nmap -v -A scanme.nmap.org</span><br><span class="line">nmap -v -sn 192.168.0.0/16 10.0.0.0/8</span><br><span class="line">nmap -v -iR 10000 -Pn -p 80</span><br><span class="line">有关更多选项和示例，请参阅手册页（https://nmap.org/book/man.html）</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line">Nmap 7.94（https://nmap.org）</span><br><span class="line">用法：nmap [扫描类型] [选项] &#123;目标指定&#125;</span><br><span class="line"></span><br><span class="line">目标指定：</span><br><span class="line">可以传递主机名、IP 地址、网络等。</span><br><span class="line">例如：scanme.nmap.org、microsoft.com/24、192.168.0.1；10.0.0-255.1-254</span><br><span class="line">-iL &lt;输入文件名&gt;：从主机/网络列表中输入</span><br><span class="line">-iR &lt;主机数量&gt;：选择随机目标</span><br><span class="line">--exclude &lt;主机1[，主机2][，主机3]，...&gt;：排除主机/网络</span><br><span class="line">--excludefile &lt;排除文件&gt;：从文件中排除列表</span><br><span class="line"></span><br><span class="line">主机发现：</span><br><span class="line">-sL：列表扫描 - 仅列出要扫描的目标</span><br><span class="line">-sn：Ping 扫描 - 禁用端口扫描</span><br><span class="line">-Pn：将所有主机视为在线 - 跳过主机发现</span><br><span class="line">-PS/PA/PU/PY[portlist]：对给定端口进行 TCP SYN/ACK、UDP 或 SCTP 发现</span><br><span class="line">-PE/PP/PM：ICMP 回显、时间戳和子网掩码请求发现探测</span><br><span class="line">-PO[协议列表]：IP 协议 Ping</span><br><span class="line">-n/-R：从不进行 DNS 解析/始终解析 [默认：有时]</span><br><span class="line">--dns-servers &lt;服务器1[，服务器2]，...&gt;：指定自定义 DNS 服务器</span><br><span class="line">--system-dns：使用操作系统的 DNS 解析器</span><br><span class="line">--traceroute：跟踪到每个主机的跳转路径</span><br><span class="line"></span><br><span class="line">扫描技术：</span><br><span class="line">-sS/sT/sA/sW/sM：TCP SYN/Connect()/ACK/Window/Maimon 扫描</span><br><span class="line">-sU：UDP 扫描</span><br><span class="line">-sN/sF/sX：TCP 空、FIN 和 Xmas 扫描</span><br><span class="line">--scanflags &lt;标志&gt;：自定义 TCP 扫描标志</span><br><span class="line">-sI &lt;僵尸主机[：探测端口]&gt;：空闲扫描-sY/sZ：SCTP 初始化/COOKIE-ECHO 扫描</span><br><span class="line">-sO：IP 协议扫描</span><br><span class="line">-b &lt;FTP 中继主机&gt;：FTP 反弹扫描</span><br><span class="line"></span><br><span class="line">端口指定和扫描顺序：</span><br><span class="line">-p &lt;端口范围&gt;：仅扫描指定的端口</span><br><span class="line">例如：-p22；-p1-65535；-p U：53，111，137,T：21-25，80，139，8080,S：9</span><br><span class="line">--exclude-ports &lt;端口范围&gt;：排除指定的端口不进行扫描</span><br><span class="line">-F：快速模式 - 扫描的端口少于默认扫描</span><br><span class="line">-r：按顺序扫描端口 - 不随机化</span><br><span class="line">--top-ports &lt;数量&gt;：扫描最常见的 &lt;数量&gt; 个端口</span><br><span class="line">--port-ratio &lt;比率&gt;：扫描比 &lt;比率&gt; 更常见的端口</span><br><span class="line"></span><br><span class="line">服务/版本检测：</span><br><span class="line">-sV：探测开放端口以确定服务/版本信息</span><br><span class="line">--version-intensity &lt;级别&gt;：设置从 0（轻度）到 9（尝试所有探测）</span><br><span class="line">--version-light：限制为最有可能的探测（强度 2）</span><br><span class="line">--version-all：尝试每一个探测（强度 9）</span><br><span class="line">--version-trace：显示详细版本扫描活动（用于调试）</span><br><span class="line"></span><br><span class="line">脚本扫描：</span><br><span class="line">-sC：等同于 --script=default</span><br><span class="line">--script=&lt;Lua 脚本&gt;：&lt;Lua 脚本&gt; 是一个以逗号分隔的目录、脚本文件或脚本类别的列表</span><br><span class="line">--script-args=&lt;n1=v1,[n2=v2,...]&gt;：为脚本提供参数</span><br><span class="line">--script-args-file=文件名：在文件中提供 NSE 脚本参数</span><br><span class="line">--script-trace：显示所有发送和接收的数据--script-updatedb：更新脚本数据库。</span><br><span class="line">--script-help=&lt;Lua 脚本&gt;：显示有关脚本的帮助信息。</span><br><span class="line">&lt;Lua 脚本&gt; 是脚本文件或脚本类别的逗号分隔列表。</span><br><span class="line"></span><br><span class="line">操作系统检测：</span><br><span class="line">-O：启用操作系统检测</span><br><span class="line">--osscan-limit：将操作系统检测限制在有希望的目标上</span><br><span class="line">--osscan-guess：更积极地猜测操作系统</span><br><span class="line"></span><br><span class="line">定时和性能：</span><br><span class="line">选项中带 &lt;time&gt; 的参数以秒为单位，或者在值后附加 <span class="string">&#x27;ms&#x27;</span>（毫秒）、<span class="string">&#x27;s&#x27;</span>（秒）、<span class="string">&#x27;m&#x27;</span>（分钟）或 <span class="string">&#x27;h&#x27;</span>（小时）（例如 30m）。</span><br><span class="line">-T&lt;0-5&gt;：设置定时模板（数值越大越快）</span><br><span class="line">--min-hostgroup/max-hostgroup &lt;大小&gt;：并行主机扫描组大小</span><br><span class="line">--min-parallelism/max-parallelism &lt;数量&gt;：探测并行化</span><br><span class="line">--min-rtt-timeout/max-rtt-timeout/initial-rtt-timeout &lt;时间&gt;：指定探测往返时间。</span><br><span class="line">--max-retries &lt;次数&gt;：限制端口扫描探测重传次数。</span><br><span class="line">--host-timeout &lt;时间&gt;：在指定时间后放弃目标</span><br><span class="line">--scan-delay/--max-scan-delay &lt;时间&gt;：调整探测之间的延迟</span><br><span class="line">--min-rate &lt;数量&gt;：每秒发送数据包的速度不低于 &lt;数量&gt;</span><br><span class="line">--max-rate &lt;数量&gt;：每秒发送数据包的速度不高于 &lt;数量&gt;</span><br><span class="line"></span><br><span class="line">防火墙/入侵检测系统规避和欺骗：</span><br><span class="line">-f； --mtu &lt;值&gt;：分段数据包（可选指定 MTU 值）-D &lt;诱饵1，诱饵2[,ME],...&gt;： 使用诱饵掩盖扫描</span><br><span class="line">-S &lt;IP地址&gt;： 源地址欺骗</span><br><span class="line">-e &lt;接口&gt;： 使用指定接口</span><br><span class="line">-g/--source-port &lt;端口号&gt;： 使用给定的端口号</span><br><span class="line">--proxies &lt;url1,[url2],...&gt;： 通过 HTTP/SOCKS4 代理中继连接</span><br><span class="line">--data &lt;十六进制字符串&gt;： 向发送的数据包附加自定义负载</span><br><span class="line">--data-string &lt;字符串&gt;： 向发送的数据包附加自定义 ASCII 字符串</span><br><span class="line">--data-length &lt;数字&gt;： 向发送的数据包附加随机数据</span><br><span class="line">--ip-options &lt;选项&gt;： 发送带有指定 IP 选项的数据包</span><br><span class="line">--ttl &lt;值&gt;： 设置 IP 生存时间字段</span><br><span class="line">--spoof-mac &lt;MAC 地址/前缀/供应商名称&gt;： 欺骗您的 MAC 地址</span><br><span class="line">--badsum： 发送带有错误 TCP/UDP/SCTP 校验和的数据包</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line">-oN/-oX/-oS/-oG &lt;文件&gt;： 分别以普通、XML、脚本小子和可grep格式输出扫描结果到给定的文件名。</span><br><span class="line">-oA &lt;文件名&gt;： 同时以三种主要格式输出</span><br><span class="line">-v： 增加详细程度（使用 -vv 或更多以获得更大效果）</span><br><span class="line">-d： 增加调试级别（使用 -<span class="built_in">dd</span> 或更多以获得更大效果）</span><br><span class="line">--reason： 显示端口处于特定状态的原因</span><br><span class="line">--open： 只显示打开（或可能打开）的端口</span><br><span class="line">--packet-trace： 显示发送和接收的所有数据包--iflist：打印主机接口和路由（用于调试）</span><br><span class="line">--append-output：追加到指定的输出文件，而不是覆盖</span><br><span class="line">--resume &lt;文件名&gt;：恢复中止的扫描</span><br><span class="line">--noninteractive：禁用通过键盘进行的运行时交互</span><br><span class="line">--stylesheet &lt;路径/URL&gt;：用于将 XML 输出转换为 HTML 的 XSL 样式表</span><br><span class="line">--webxml：从 Nmap.Org 引用样式表以获得更通用的 XML</span><br><span class="line">--no-stylesheet：防止将 XSL 样式表与 XML 输出关联</span><br><span class="line"></span><br><span class="line">杂项：</span><br><span class="line">-6：启用 IPv6 扫描</span><br><span class="line">-A：启用操作系统检测、版本检测、脚本扫描和跟踪路由</span><br><span class="line">--datadir &lt;目录名&gt;：指定自定义 Nmap 数据文件位置</span><br><span class="line">--send-eth/--send-ip：使用原始以太网帧或 IP 数据包发送</span><br><span class="line">--privileged：假定用户具有完全权限</span><br><span class="line">--unprivileged：假定用户没有原始套接字权限</span><br><span class="line">-V：打印版本号</span><br><span class="line">-h：打印此帮助摘要页面。</span><br><span class="line"></span><br><span class="line">示例：</span><br><span class="line">nmap -v -A scanme.nmap.org</span><br><span class="line">nmap -v -sn 192.168.0.0/16 10.0.0.0/8</span><br><span class="line">nmap -v -iR 10000 -Pn -p 80</span><br><span class="line">有关更多选项和示例，请参阅手册页（https://nmap.org/book/man.html）</span><br></pre></td></tr></table></figure>
 
 
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> CtfWeb_TOOL</li>
+        <li><strong>Author:</strong> 敬请T期待</li>
+        <li><strong>Created at
+                :</strong> 2024-07-08 23:17:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-01-30 22:26:08
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://kingwempity.github.io/2024/07/08/CtfWeb-TOOL/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/TOOL/">#TOOL</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/CTF/">#CTF</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/WEB/">#WEB</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2024/09/13/DES/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">DES</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2024/06/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">计算机组成原理</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
     </div>
-
     
-    <div class="about">
-        <h1>About this Post</h1>
-        <div class="details">
-            <p>This post is written by kingwempity, licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC 4.0</a>.</p>
+
+        
+            
+    <div id="giscus-container"></div>
+    <script data-swup-reload-script defer>
+        async function loadGiscus() {
+            const giscusConfig = {
+                'src': 'https://giscus.app/client.js',
+                'data-repo': 'kingwempity/Guscus',
+                'data-repo-id': 'R_kgDONQjkwA',
+                'data-category': 'Announcements',
+                'data-category-id': 'DIC_kwDONQjkwM4CkV1Y',
+                'data-mapping': 'pathname',
+                'data-strict': '0',
+                'data-reactions-enabled': '1',
+                'data-emit-metadata': '1',
+                'data-theme': 'preferred_color_scheme',
+                'data-lang': 'zh-CN',
+                'data-input-position': 'bottom',
+                'data-loading': 'not-lazy',
+                'crossorigin': 'anonymous',
+                'async': true
+            }
+            const giscusScript = document.createElement('script');
+            for (const key in giscusConfig) {
+                giscusScript.setAttribute(key, giscusConfig[key]);
+            }
+            document.getElementById('giscus-container').appendChild(giscusScript);
+        }
+        if ('true') {
+            let loadGiscusTimeout = setTimeout(() => {
+                loadGiscus();
+                clearTimeout(loadGiscusTimeout);
+            }, 1000);
+        } else {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        }
+    </script>
+
+
+        
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">CtfWeb_TOOL</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%AB%E6%8F%8F%E7%AF%87"><span class="nav-number">1.</span> <span class="nav-text">扫描篇</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dirmap"><span class="nav-number">1.0.1.</span> <span class="nav-text">dirmap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dirsearch"><span class="nav-number">1.0.2.</span> <span class="nav-text">dirsearch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nmap"><span class="nav-number">1.0.3.</span> <span class="nav-text">Nmap</span></a></li></ol></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">路漫漫其修远兮，吾将上下而求索</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">敬请T期待</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        29 posts in total
+                    </span>
+                    
+                        <span>
+                            111.4k words in total
+                        </span>
+                    
+                </p>
+            
         </div>
         
-        <p class="tags">
-            
-            <i class="icon"></i>
-            <a href="/tags/TOOL/" class="tag">#TOOL</a><a href="/tags/CTF/" class="tag">#CTF</a><a href="/tags/WEB/" class="tag">#WEB</a>
-        </p>
-        
-    </div>
-    
-
-    <div class="container post-prev-next">
-        
-        <a href="/2024/09/13/DES/" class="next">
-            <div>
-                <div class="text">
-                    <p class="label">Next</p>
-                    <h3 class="title">DES</h3>
-                </div>
-            </div>
-        </a>
-        
-        
-        <a href="/2024/06/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="prev">
-            <div>
-                <div class="text">
-                    <p class="label">Previous</p>
-                    <h3 class="title">计算机组成原理</>
-                </div>
-            </div>
-        </a>
-        
-    </div>
-
-    
-        
-        
-    
-</article>
-
-        <footer>
-    <div class="inner">
-        <div class="links">
-            
-            <div class="group">
-                <h2 class="title">Blog</h2>
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
                 
-                <a href="/" class="item">Blog</a>
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
                 
-                <a href="/archives" class="item">Archives</a>
                 
-                <a href="/tags" class="item">Tags</a>
-                
-                <a href="/categories" class="item">Categories</a>
-                
-                <a href="/search" class="item">Search</a>
-                
-                <a href="/friends" class="item">Friends</a>
-                
-                <a href="/projects" class="item">Projects</a>
-                
-                <a href="/resume" class="item">Resume</a>
-                
-                <a href="/about" class="item">About</a>
-                
-                <a href="/atom.xml" class="item">RSS</a>
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
                 
             </div>
-            
-            <div class="group">
-                <h2 class="title">Projects</h2>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/rsa-cli" class="item">RSA CLI</a>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/hexo-theme-cupertino" class="item">Hexo Theme Cupertino</a>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/a-calendar" class="item">A Calendar</a>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/auto-mirroring-bucket" class="item">Auto Mirroring Bucket</a>
-                
-            </div>
-            
-            <div class="group">
-                <h2 class="title">Me</h2>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom" class="item">GitHub</a>
-                
-                <a target="_blank" rel="noopener" href="https://codepen.io/mrwillcom" class="item">CodePen</a>
-                
-                <a target="_blank" rel="noopener" href="https://www.patreon.com/MrWillCom" class="item">Patreon</a>
-                
-                <a target="_blank" rel="noopener" href="https://noc.social/@MrWillCom" class="item">Mastodon</a>
-                
-                <a target="_blank" rel="noopener" href="https://discord.gg/UKuFDjcfY8" class="item">Discord</a>
-                
-                <a href="mailto:mr.will.com@outlook.com" class="item">Email</a>
-                
-            </div>
-            
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
         </div>
-        <span>&copy; 2025 kingwempity<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
         
         
-            <br>
-            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
-                <label>
-                    <input type="radio" value="light">
-                    <span>Light</span>
-                </label>
-                <label>
-                    <input type="radio" value="dark">
-                    <span>Dark</span>
-                </label>
-                <label>
-                    <input type="radio" value="auto">
-                    <span>Auto</span>
-                </label>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
             </div>
         
-    </div>
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
 </footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
 
 
-        
-<script src="/js/main.js"></script>
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Swup.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
 
-        
-        
-        
 
-        
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script>
-            window.addEventListener('load', () => {
-                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
-                ScrollReveal().reveal('.post-list-item .cover-img img')
-                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
-            })
-        </script>
-        
-    </body>
+
+
+	<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/utils.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/main.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/typed.js" ></script>
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js"></script>
+    
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/mermaid.js" ></script>
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/minimasonry.min.js" ></script>
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/masonry.js" ></script>
+
+
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+	
+	<div id="aplayer"></div>
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/APlayer.min.js" ></script>
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/aplayer.js" ></script>
+
+	
+</body>
+
 </html>

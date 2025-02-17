@@ -1,181 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head prefix="og: https://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  
-  <title>信息安全工程师 - 敬请T期待</title>
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    <link rel='manifest' href='/manifest.json'>
-  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="敬请T期待">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  
-  
-  
-  <meta property="og:title" content="信息安全工程师 - 敬请T期待" />
-  
-  <meta property="og:type" content="article" />
-  
-  <meta property="og:url" content="https://kingwempity.github.io/2024/10/25/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/index.html" />
-  
-  <meta property="og:image" content="/favicon.png" />
-  
-  <meta property="og:article:published_time" content="2024-10-25T07:28:08.000Z" />
-  
-  <meta property="og:article:author" content="kingwempity" />
-  
-  
+    
+        
+        
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://kingwempity.github.io/2024/10/25/信息安全工程师-案例分析/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="信息安全工程师案例分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息安全工程师">
+<meta property="og:url" content="https://kingwempity.github.io/2024/10/25/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88-%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="敬请T期待">
+<meta property="og:description" content="信息安全工程师案例分析">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E8%BD%AF%E8%80%831.2.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E8%BD%AF%E8%80%832.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E6%9F%90%E5%9C%B0%E6%94%BF%E5%8A%A1%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E6%8B%93%E6%89%91%E5%9B%BE.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%92%E8%81%94%E7%BD%91%E6%8E%A5%E5%85%A5%E5%8C%BA%E9%98%B2%E7%81%AB%E5%A2%99%E6%97%A5%E5%BF%97.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/W32.Blaster.Worm%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%8C%851.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E6%9F%90%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%9B%BE.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E5%8C%85%E8%BF%87%E6%BB%A4%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/Wireshark%E9%83%A8%E5%88%86%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E5%B1%8F%E8%94%BD%E5%AD%90%E7%BD%91%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/Ubuntu%E7%B3%BB%E7%BB%9Fiptables%E8%A7%84%E5%88%99.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9010-1.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9012-1.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9014-1.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9014-2.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9014-3.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9016-1.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.png">
+<meta property="article:published_time" content="2024-10-25T07:28:08.000Z">
+<meta property="article:modified_time" content="2024-11-18T07:44:07.787Z">
+<meta property="article:author" content="kingwempity">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="软考中级">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kingwempity/images/raw/master/images/%E8%BD%AF%E8%80%831.2.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/avatar.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/avatar.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            信息安全工程师 | Kingwempitys&#39;Blog
+        
+    </title>
 
-  
-<link rel="stylesheet" href="/css/var.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Chillax/chillax.css">
 
-  
-<link rel="stylesheet" href="/css/main.css">
+    <!--- Inject Part-->
+    
 
-  
-<link rel="stylesheet" href="/css/typography.css">
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  
-<link rel="stylesheet" href="/css/code-highlighting.css">
 
-  
-<link rel="stylesheet" href="/css/components.css">
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/css/build/tailwind.css">
+    
 
-  
-<link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/GeistMono/geist-mono.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fonts/Geist/geist.css">
+    <!--- Font Part-->
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+    
+    
+        <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/anime.min.js" ></script>
+    
 
-  
-<link rel="stylesheet" href="/css/paginator.css">
-
-  
-<link rel="stylesheet" href="/css/footer.css">
-
-  
-<link rel="stylesheet" href="/css/post-list.css">
-
-  
-  
-<link rel="stylesheet" href="/css/rainbow-banner.css">
-
-  
-  
-  
-<link rel="stylesheet" href="/css/toc.css">
-
-  
-  
-  
-  
-  
-<link rel="stylesheet" href="/css/post.css">
-
-  
-  
-  
-  
-  
-
-  
+    <script id="hexo-configurations">
+    window.config = {"hostname":"kingwempity.github.io","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":5,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":false,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/image.jpg","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Kingwempitys'Blogs","subtitle":{"text":["敬请T期待"],"hitokoto":{"enable":true,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":"ture","family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/kingwempity","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"Something Just Like This","artist":"Coldplay","url":"https://evan.beee.top/music/Something%20Just%20Like%20This%20-%20The%20Chainsmokers%E3%80%81Coldplay.mp3","cover":"https://evan.beee.top/music/covers/Something_Just_Like_This.png","lrc":null},{"name":"如果我们在余生相遇-双鱼座","artist":"RE-D/是二哈ya","url":"https://link.hhtjim.com/163/2123230314.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/music.jpg"},{"name":"小宇","artist":"刘大拿","url":"https://link.hhtjim.com/163/1954954129.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/小宇.png"},{"name":"偏爱","artist":"张芸京","url":"https://link.hhtjim.com/163/5238992.mp3","cover":"https://gitee.com/kingwempity/images/raw/master/images/偏爱.jpg"}]},"mermaid":{"enable":"enable","version":"9.3.0"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Being":{"path":"https://cn.bing.com","icon":"fa-solid fa-earth-americas"},"Links":{"icon":"fa-regular fa-link","submenus":{"Me":"/about","Github":"https://github.com/kingwempity","Blog":"https://kingwempity.github.io"}},"masonry":{"icon":"fa-solid fa-image","path":"/masonry/"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"敬请T期待","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Masonry":{"path":"/masonry","icon":"fa-solid fa-image"},"ArtiTalk":{"path":"/shuoshuo","icon":"fa-solid fa-comment"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":5}},"footerStart":"2024/1/20 12:00:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/regular.min.css">
+    
+    
+    
+        <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/fontawesome/duotone.min.css">
+    
+    
 <meta name="generator" content="Hexo 7.0.0"></head>
-    <body
-        data-color-scheme="auto"
-        data-uppercase-categories="true"
-        
-        data-rainbow-banner="true"
-        data-rainbow-banner-shown="auto"
-        data-rainbow-banner-month="6"
-        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
-        
-        data-config-root="/"
-        
-        data-toc="true"
-        data-toc-max-depth="2"
-        
-        
-    >
-        <nav id="theme-nav">
-    <div class="inner">
-        <a class="title" href="/">Blog</a>
-        <div class="nav-arrow"></div>
-        <div class="nav-items">
-            <a class="nav-item nav-item-home" href="/">Home</a>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+	<span class="scroll-progress-bar"></span>
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Kingwempitys&#39;Blog
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
             
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/images/avatar.svg" class="w-full h-full rounded-sm">
+                </a>
             
-            <a class="nav-item" href="/archives">Archives</a>
-            
-            
-            
-            <a class="nav-item" href="/friends">Friends</a>
-            
-            
-            
-            <a class="nav-item" href="/projects">Projects</a>
-            
-            
-            
-            <a class="nav-item" href="/about">About</a>
-            
-            
-            
-            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/MrWillCom" target="_blank" aria-label="GitHub">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-codepen nav-item-icon" href="https://codepen.io/mrwillcom" target="_blank" aria-label="CodePen">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-patreon nav-item-icon" href="https://www.patreon.com/MrWillCom" target="_blank" aria-label="Patreon">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-mastodon nav-item-icon" href="https://noc.social/@MrWillCom" target="_blank" aria-label="Mastodon">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-discord nav-item-icon" href="https://discord.gg/UKuFDjcfY8" target="_blank" aria-label="Discord">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item nav-item-search nav-item-icon" href="/search" target="_blank" aria-label="Search">&nbsp;</a>
-            
-            
+            <a class="logo-title" href="/">
+                
+                Kingwempitys&#39;Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://cn.bing.com"
+                                        >
+                                    <i class="fa-solid fa-earth-americas fa-fw"></i>
+                                    BEING
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/kingwempity">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://kingwempity.github.io">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/masonry/"
+                                        >
+                                    <i class="fa-solid fa-image fa-fw"></i>
+                                    MASONRY
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
-        
-<article class="post">
-    <div class="meta">
-        
-        <div class="categories text-uppercase">
-        
-            <a href="/categories/certificate/">certificate</a>
-        
-        </div>
-        
 
-        
-        <div class="date" id="date">
-            <span>October</span>
-            <span>25,</span>
-            <span>2024</span>
-        </div>
-        
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
 
-        <h1 class="title">信息安全工程师</h1>
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://cn.bing.com"
+                        >
+                            <span>
+                                BEING
+                            </span>
+                            
+                                <i class="fa-solid fa-earth-americas fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/kingwempity">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="https://kingwempity.github.io">BLOG</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/masonry/"
+                        >
+                            <span>
+                                MASONRY
+                            </span>
+                            
+                                <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/archives"
+                        >
+                            <span>Archives</span>
+                            <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/masonry"
+                        >
+                            <span>Masonry</span>
+                            <i class="fa-solid fa-image fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/shuoshuo"
+                        >
+                            <span>ArtiTalk</span>
+                            <i class="fa-solid fa-comment fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">44</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">29</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
     </div>
 
-    <div class="divider"></div>
+    <div class="window-mask"></div>
 
-    <div class="content">
-        <meta name="referrer" content="no-referrer">
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="https://gitee.com/kingwempity/images/raw/master/images/DALL·E security engineer.webp" alt="信息安全工程师" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">信息安全工程师</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/avatar.svg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">敬请T期待</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-10-25 15:28:08</span>
+        <span class="mobile">2024-10-25 15:28:08</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-11-18 15:44:07</span>
+            <span class="mobile">2024-11-18 15:44:07</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/certificate/">certificate</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E8%BD%AF%E8%80%83%E4%B8%AD%E7%BA%A7/">软考中级</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>20.4k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>75 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<meta name="referrer" content="no-referrer">
 
 <h1 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h1><h2 id="1-2017年"><a href="#1-2017年" class="headerlink" title="1-2017年"></a>1-2017年</h2><p>[说明]基于Windows32位系统分析下列代码，回答相关问题。</p>
-<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Challenge</span><span class="params">(<span class="type">char</span> *str)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> temp[<span class="number">9</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">strcpy</span>(temp,str,<span class="number">8</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;temp=%s\n&quot;</span>,temp);</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strcmp</span>(temp,<span class="string">&quot;Please!@&quot;</span>)==<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;KEY:****&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc，<span class="type">char</span> *argv[ ])</span></span><br><span class="line">&#123;</span><br><span class="line">    Char buf2[<span class="number">16</span>]</span><br><span class="line">    Int check=<span class="number">1</span>;</span><br><span class="line">    Char buf[<span class="number">8</span>]</span><br><span class="line">    Strcpy (buf2, <span class="string">&quot;give me key! !&quot;</span>);</span><br><span class="line">    <span class="built_in">strcpy</span>(buf，argv[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">if</span>(check==<span class="number">65</span>) &#123;</span><br><span class="line">        Challenge(buf);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Check is not 65 (%d) \n Program terminated!!\n&quot;</span>，check)；</span><br><span class="line">    &#125;</span><br><span class="line">    Return <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Challenge</span><span class="params">(<span class="type">char</span> *str)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> temp[<span class="number">9</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="built_in">strcpy</span>(temp,str,<span class="number">8</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;temp=%s\n&quot;</span>,temp);</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strcmp</span>(temp,<span class="string">&quot;Please!@&quot;</span>)==<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;KEY:****&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc，<span class="type">char</span> *argv[ ])</span></span><br><span class="line">&#123;</span><br><span class="line">    Char buf2[<span class="number">16</span>]</span><br><span class="line">    Int check=<span class="number">1</span>;</span><br><span class="line">    Char buf[<span class="number">8</span>]</span><br><span class="line">    Strcpy (buf2, <span class="string">&quot;give me key! !&quot;</span>);</span><br><span class="line">    <span class="built_in">strcpy</span>(buf，argv[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">if</span>(check==<span class="number">65</span>) &#123;</span><br><span class="line">        Challenge(buf);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Check is not 65 (%d) \n Program terminated!!\n&quot;</span>，check)；</span><br><span class="line">    &#125;</span><br><span class="line">    Return <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
 <p>[问题 1](3 分)</p>
 <blockquote>
@@ -190,7 +732,7 @@
 <p>画出buf，check，buf2 三个变量在内存的布局图。</p>
 <blockquote>
 <p>需要画出变量的先后关系，每个变量所占空间，增长方向（数组）</p>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/软考1.2.png" alt="1.2" style="zoom:50%;">
+<img src="https://gitee.com/kingwempity/images/raw/master/images/软考1.2.png" alt="1.2" style="zoom:50%;">
 </blockquote>
 </blockquote>
 <p><a href="2%E5%88%86">问题 3</a></p>
@@ -272,11 +814,11 @@
 <td>拒绝</td>
 </tr>
 </tbody></table>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BD%AF%E8%80%832.png" alt="软考2"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E8%BD%AF%E8%80%832.png" alt="软考2"></p>
 <h2 id="3"><a href="#3" class="headerlink" title="3-"></a>3-</h2><p>阅读下列说明和图，回答问题</p>
 <p>【说明】</p>
 <p>如图1-1为某地方政府政务数据中心的拓扑图。其中对外服务器内部配置有虚拟化云平台，为办公区域和互联网提供相关政务服务。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%9F%90%E5%9C%B0%E6%94%BF%E5%8A%A1%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E6%8B%93%E6%89%91%E5%9B%BE.png" alt="某地政务数据中心拓扑图"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E6%9F%90%E5%9C%B0%E6%94%BF%E5%8A%A1%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E6%8B%93%E6%89%91%E5%9B%BE.png" alt="某地政务数据中心拓扑图"></p>
 <p><a href="6%E5%88%86">问题1</a></p>
 <p>1、按照等级保护2.0要求，该虚拟化平台的定级不应低于（1）级？需要（2）年测评一次。</p>
 <blockquote>
@@ -301,7 +843,7 @@
 </blockquote>
 <p><a href="6%E5%88%86">问题2</a></p>
 <p>按照网络安全测评购实施万式，测评丰要包挂安全功能检测安全管理检测、代码安全审查、安全渗透、信息系统攻干测计王工调说了部分后台处理代码，发现密码验证阶段存在安全漏洞，代码如下:</p>
-<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> PASSWORD<span class="string">&quot;1234567&quot;</span></span></span><br><span class="line"><span class="type">int</span> verify <span class="title function_">password</span> <span class="params">(<span class="type">char</span> *password)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> authenticated:</span><br><span class="line">    <span class="type">char</span> buffer[<span class="number">8</span>];</span><br><span class="line">    authenticated=<span class="built_in">strcmp</span>(password,PASSWORD);</span><br><span class="line">    <span class="built_in">strcpy</span>(buffer,password);</span><br><span class="line">    <span class="keyword">return</span> authenticated:</span><br><span class="line">&#125;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> valid_flag = <span class="number">0</span>;</span><br><span class="line">	<span class="type">char</span> password[<span class="number">1024</span>];</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;please input password:&quot;</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,password);</span><br><span class="line">		valid_flag=verify_password(password);</span><br><span class="line">		<span class="keyword">if</span>(valid_flag)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;incorrect password!\n&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;Congratulation! You have passed the verification&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> PASSWORD<span class="string">&quot;1234567&quot;</span></span></span><br><span class="line"><span class="type">int</span> verify <span class="title function_">password</span> <span class="params">(<span class="type">char</span> *password)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> authenticated:</span><br><span class="line">    <span class="type">char</span> buffer[<span class="number">8</span>];</span><br><span class="line">    authenticated=<span class="built_in">strcmp</span>(password,PASSWORD);</span><br><span class="line">    <span class="built_in">strcpy</span>(buffer,password);</span><br><span class="line">    <span class="keyword">return</span> authenticated:</span><br><span class="line">&#125;</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> valid_flag = <span class="number">0</span>;</span><br><span class="line">	<span class="type">char</span> password[<span class="number">1024</span>];</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;please input password:&quot;</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,password);</span><br><span class="line">		valid_flag=verify_password(password);</span><br><span class="line">		<span class="keyword">if</span>(valid_flag)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;incorrect password!\n&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;Congratulation! You have passed the verification&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>(1)请问上述代码存在哪种漏洞?</p>
 <blockquote>
@@ -321,7 +863,7 @@
 </blockquote>
 <p><a href="4%E5%88%86">问题3</a></p>
 <p>某日，网站管理员王工宝宝高网站访问慢，他查看了互联网接入区防火墙的日志。日志如图。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%92%E8%81%94%E7%BD%91%E6%8E%A5%E5%85%A5%E5%8C%BA%E9%98%B2%E7%81%AB%E5%A2%99%E6%97%A5%E5%BF%97.png" alt="互联网接入区防火墙日志"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E4%BA%92%E8%81%94%E7%BD%91%E6%8E%A5%E5%85%A5%E5%8C%BA%E9%98%B2%E7%81%AB%E5%A2%99%E6%97%A5%E5%BF%97.png" alt="互联网接入区防火墙日志"></p>
 <p>（1）根据上述日志显示，可以判断该公司服务器遭受到（1）攻击。该攻击除了ACK Flooding之外还有例如（2）（3）（4）等多种方式。</p>
 <blockquote>
 <ol>
@@ -346,7 +888,7 @@
 <h2 id="4"><a href="#4" class="headerlink" title="4-"></a>4-</h2><p>阅读下列说明和图，回答问题</p>
 <p>【说明】</p>
 <p>W32 Blaster.Worm网络攻击示意图如图所示</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/W32.Blaster.Worm%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="W32.Blaster.Worm网络攻击示意图"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/W32.Blaster.Worm%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="W32.Blaster.Worm网络攻击示意图"></p>
 <p><a href="8%E5%88%86">问题1</a></p>
 <p>(1)W32.Blaster.Worm利用的是什么漏洞?该漏洞对应的是TCP还是UDP的多少号端口?</p>
 <blockquote>
@@ -404,7 +946,7 @@
 <p>保护、检测、响应、安全策略</p>
 </blockquote>
 <p><a href="2%E5%88%86">问题3</a><br>假如某入侵检测系统记录了如图所示的网络数据包:</p>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/网络数据包1.png" alt="网络数据包1" style="zoom: 67%;">
+<img src="https://gitee.com/kingwempity/images/raw/master/images/网络数据包1.png" alt="网络数据包1" style="zoom: 67%;">
 
 <p>请问图中的数据包属于哪种网络攻击?该攻击的具体名字是什么?</p>
 <blockquote>
@@ -462,7 +1004,7 @@
 <p>三中心：同城容灾中心、异地容灾中心、生产中心</p>
 </blockquote>
 <h2 id="7"><a href="#7" class="headerlink" title="7-"></a>7-</h2><p>阅读下列说明和图，回答问题1至问题4，将解答填入答题纸的对应栏内。<br>【说明】<br>某企业的网络拓扑图如图所示，图中，网站服务器的 IP 地址是192.168.70.140，邮件服务器的 IP 地址是192.168.70.141。从运营商获取固定地址202.114.58.22。李工是该企业的信息安全管理员。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%9F%90%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%9B%BE.png" alt="某企业网络拓扑图"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E6%9F%90%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%9B%BE.png" alt="某企业网络拓扑图"></p>
 <p><a href="5%E5%88%86">问题1</a><br>防火墙在该企业网络当中起到了众多防护功能，但是该网络依然存在的风险(防火墙的不足之处)包括哪些?</p>
 <blockquote>
 <ul>
@@ -474,7 +1016,7 @@
 </ul>
 </blockquote>
 <p><a href="6%E5%88%86">问题2</a><br>包过滤是防火墙的基本功能之一，李工需要完成以下防火墙过滤规则的配置，才满足只允许外网与该企业的邮件服务器进行邮件服务相关通信，以及人事部门的上网需求，其他全部禁止。请完善下面的过滤规则。</p>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/包过滤防火墙配置.png" alt="包过滤防火墙配置" style="zoom:67%;">
+<img src="https://gitee.com/kingwempity/images/raw/master/images/包过滤防火墙配置.png" alt="包过滤防火墙配置" style="zoom:67%;">
 
 <blockquote>
 <ol>
@@ -488,7 +1030,7 @@
 </blockquote>
 <p><a href="4%E5%88%86">问题3</a></p>
 <p>服务器上可以实现访问控制。Web服务器是Apache hto服务器，李工可以在(7)配置文件中设置以下访问控制，使得只有信息安全部的工作人员才可以访问lsecret目录资源。请完善以下配置。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /full/path/to/(8)&gt;</span><br><span class="line">&lt;Limit GET POST&gt;</span><br><span class="line">Deny from(9)</span><br><span class="line">Allow from (10)</span><br><span class="line">&lt;/Limit&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /full/path/to/(8)&gt;</span><br><span class="line">&lt;Limit GET POST&gt;</span><br><span class="line">Deny from(9)</span><br><span class="line">Allow from (10)</span><br><span class="line">&lt;/Limit&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>(7)access.conf</p>
@@ -497,23 +1039,23 @@
 <p>(10)192.168.11.2</p>
 </blockquote>
 <p><a href="5%E5%88%86">问题4</a><br>Web服务器是Linux服务器，Linux服务器自带的防火墙iptabies来实现包过滤等功能，假设只能允许人事部的用户访问该服务器的web服务。李工可以使用命令(11)查看现有的过滤规则。规则如下:</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Chain INPUT (policy ACCEPT)</span><br><span class="line">target prot opt <span class="built_in">source</span> destination</span><br><span class="line">ACCEPT tcp--anywhere anywherestate NEW tcp dpt:netscript</span><br><span class="line">Chain FORWARD (policy ACCEPT)</span><br><span class="line">target prot opt <span class="built_in">source</span> destination</span><br><span class="line">Chain OUTPUT (policy ACCEPT)</span><br><span class="line">targetprot opt <span class="built_in">source</span> destination</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Chain INPUT (policy ACCEPT)</span><br><span class="line">target prot opt <span class="built_in">source</span> destination</span><br><span class="line">ACCEPT tcp--anywhere anywherestate NEW tcp dpt:netscript</span><br><span class="line">Chain FORWARD (policy ACCEPT)</span><br><span class="line">target prot opt <span class="built_in">source</span> destination</span><br><span class="line">Chain OUTPUT (policy ACCEPT)</span><br><span class="line">targetprot opt <span class="built_in">source</span> destination</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -L</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -L</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>1)从上述规则可知，iptables的默认规则并不符合web服务的安全要求，所以需要配置三条规则链，请写出这三条规则链</p>
 <blockquote>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iptables -P INPUT DROP</span><br><span class="line">iptables -P FORWARD DROP</span><br><span class="line">iptables -P OUTPUT DROP</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iptables -P INPUT DROP</span><br><span class="line">iptables -P FORWARD DROP</span><br><span class="line">iptables -P OUTPUT DROP</span><br></pre></td></tr></table></figure>
 
 <p>题干所给的防火墙规则都是允许的，不符合要求，需要默认拒绝的规则链。</p>
 </blockquote>
 <p>2)请写出只能允许人事部的用户访问服务器的防火墙规则。</p>
 <blockquote>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -a input -s 192.168.12.0/24 --drop 80 -j ACCEPT</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -a input -s 192.168.12.0/24 --drop 80 -j ACCEPT</span><br></pre></td></tr></table></figure>
 </blockquote>
 <h2 id="8"><a href="#8" class="headerlink" title="8-"></a>8-</h2><p>阅读下列说明，回答问题1至问题5，将解答填入答题纸的对应栏内。<br>【说明】<br>下图为我国电子政务系统的架构示意图，主要有互联网、政务外网、政务内网构成，涉及到不同的安全等级的网络信息之间的交换,</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="电子政务系统架构图"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="电子政务系统架构图"></p>
 <p><a href="4%E5%88%86">问题1</a></p>
 <p>1)国家管理政策文件明确指出，电子政务网络有政务内网和政务外网构成，两网之间(1)隔离，政务外网与互联网之间(2)隔离。</p>
 <blockquote>
@@ -533,7 +1075,7 @@
 <p>安全审计员岗位：审计</p>
 </blockquote>
 <p><a href="6%E5%88%86">问题3</a><br>审计是网络隔离技术的重要指标之一。网络流量数据获取是网络通信安全审计的关键技术，下图是通过交换机端口镜像，从网络流量采集设备通过图形化流量数据采集工具Wireshark采集的部分数据。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Wireshark%E9%83%A8%E5%88%86%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE.png" alt="Wireshark部分采集数据"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/Wireshark%E9%83%A8%E5%88%86%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE.png" alt="Wireshark部分采集数据"></p>
 <p>1)由上图可知，数据流量都是基于那种传输层协议?针对的是那种应用层协议?</p>
 <blockquote>
 <p>基于传输层的TCP协议（传输层协议有TCP和UDP）</p>
@@ -579,7 +1121,7 @@
 <p>网络日志不少于6个月</p>
 </blockquote>
 <p><a href="6%E5%88%86">问题2</a></p>
-<p>假设网站有如下服务:<a class="link" target="_blank" rel="noopener" href="http://duck/index.asp?category=food">http://duck/index.asp?category=food<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>其后台对应的web程序如下:<br>v cat &#x3D;request(category”)<br>Sqlstr&#x3D;”SELECT* FROM product WHERE Category&#x3D;”&amp; v cat &amp;”<br>Set rs&#x3D;conn.execute(salstr)<br>1)正常情况下，数据库对外部查询请求对应的执行程序语句是什么?用户能正常查询food相关信息。</p>
+<p>假设网站有如下服务:<a target="_blank" rel="noopener" href="http://duck/index.asp?category=food">http://duck/index.asp?category=food</a><br>其后台对应的web程序如下:<br>v cat &#x3D;request(category”)<br>Sqlstr&#x3D;”SELECT* FROM product WHERE Category&#x3D;”&amp; v cat &amp;”<br>Set rs&#x3D;conn.execute(salstr)<br>1)正常情况下，数据库对外部查询请求对应的执行程序语句是什么?用户能正常查询food相关信息。</p>
 <blockquote>
 <p>SELECT* FROM product WHERE Category&#x3D;”food”;</p>
 </blockquote>
@@ -600,9 +1142,9 @@
 </blockquote>
 <p><a href="2%E5%88%86">问题3</a></p>
 <p>在网络日志中，安全工程师发现了如下可疑URL:</p>
-<p><a class="link" target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?url-http://evilsite.com/phishing/fakepage.htm">http://wy.gov.cn/ebanking?url-http://evilsite.com/phishing/fakepage.htm<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><a class="link" target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?page=1&client=%5C">http://wy.gov.cn/ebanking?page=1&amp;client=\<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>&lt;script&gt;evilcode</p>
-<p><a class="link" target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?page=l&response=evilsite.com%252levilcode.js&go=2">http://wy.gov.cn/ebanking?page=l&amp;response=evilsite.com%2levilcode.js&amp;go=2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?url-http://evilsite.com/phishing/fakepage.htm">http://wy.gov.cn/ebanking?url-http://evilsite.com/phishing/fakepage.htm</a></p>
+<p><a target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?page=1&client=%5C">http://wy.gov.cn/ebanking?page=1&amp;client=\</a>&lt;script&gt;evilcode</p>
+<p><a target="_blank" rel="noopener" href="http://wy.gov.cn/ebanking?page=l&response=evilsite.com%252levilcode.js&go=2">http://wy.gov.cn/ebanking?page=l&amp;response=evilsite.com%2levilcode.js&amp;go=2</a></p>
 <p>安全工程师初步判断可疑URL存在什么攻击?</p>
 <blockquote>
 <p>跨站脚本攻击</p>
@@ -624,7 +1166,7 @@
 <h2 id="10"><a href="#10" class="headerlink" title="10"></a>10</h2><p>试题一(共20分)<br>阅读下列说明和图，回答问题1至问题5，将解答填入答题纸的对应栏内</p>
 <p>【说明】</p>
 <p>已知某公司网络环境结构主要由三个部分组成，分别是DMZ区、内网办公区和生产区，其拓扑结构如图1-1所示。信息安全部的王工正在按照等级保护2.0的要求对部分业务系统开展安全配置，图1.-1当中，网站服务器的!P地址是192.168.70.140，数据库服务器的IP地址是192.168.70.141，信息安全部计算机所在网段为192.168.1.124王工所使用的办公电脑IP地址为192.168.11.2。</p>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/屏蔽子网网络结构.png" alt="屏蔽子网网络结构" style="zoom:50%;">
+<img src="https://gitee.com/kingwempity/images/raw/master/images/屏蔽子网网络结构.png" alt="屏蔽子网网络结构" style="zoom:50%;">
 
 <p><a href="2%E5%88%86">问题1</a></p>
 <p>为了防止生产网受到外部的网络安全威胁，安全策略要求生产网和其他网之间部署安全隔离装置，隔离强度达到接诉物理隔离。请问图中X最有可能代表的安全设备是什么?</p>
@@ -640,7 +1182,7 @@
 <p>第一道防线</p>
 </blockquote>
 <p><a href="6%E5%88%86">问题4</a><br>图1-1中防火墙1和防火墙2都采用Ubuntu系统自带的iptables防火墙，其默认的过滤规则如图1-2所示</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/Ubuntu%E7%B3%BB%E7%BB%9Fiptables%E8%A7%84%E5%88%99.png" alt="Ubuntu系统iptables规则"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/Ubuntu%E7%B3%BB%E7%BB%9Fiptables%E8%A7%84%E5%88%99.png" alt="Ubuntu系统iptables规则"></p>
 <p>(1)请说明上述防火墙采取的是白名单还是黑名单安全策略。</p>
 <blockquote>
 <p>黑名单</p>
@@ -683,7 +1225,7 @@
 <p>iptables -t filter -A FORWARD -s 192.168.70.140&#x2F;24 -d 192.168.11.2 -p tcp –sport 22 -j ACCEPT</p>
 </blockquote>
 <h2 id="11"><a href="#11" class="headerlink" title="11-"></a>11-</h2><p>阅读下列说明，<br>回签问题1至问题5<br>将解箜填入签锁纸的对应栏内<br>【说明】<br>Linux系统中所有内容都是以文件的形式保存和管理的，即一切皆文件。普通文本、音视频、二讲制程序是文件，目录是文件，硬件设备(键盘、监视器、硬盘、打印机)是文件，就连网络套接字等也都是文件。在Linux Ubuntu系统下执行is -1命令后显示的结果如图2-1所示。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9010-1.png" alt="案例分析10-1"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9010-1.png" alt="案例分析10-1"></p>
 <p><a href="2%E5%88%86">问题1</a>请问执行上述命令的用户是普通用户还是超级用户?</p>
 <blockquote>
 <p>普通用户</p>
@@ -702,15 +1244,15 @@
 <p>sh-&gt;&#x2F;dev&#x2F;shm</p>
 </blockquote>
 <p><a href="2%E5%88%86">问题3</a><br>符号链接作为Linux系统中的一种文件类型，它指向计算机上的另一个文件或文件夹。符号链接类似于Windows中的快捷方式。如果要在当前目录下，创建图2-1中所示的符号链接，请给出相应命令。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s dev/shm shm</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s dev/shm shm</span><br></pre></td></tr></table></figure>
 
 <p><a href="3%E5%88%86">问题4</a></p>
 <p>当源文件(或目录)被移动或者被删除时，指向它的符号链接就会失效。</p>
 <p>(1)请给出命令，实现列出&#x2F;home目录下各种类型(如:文件、目录及子目录)的所有失效链接</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home -xtype l -<span class="built_in">print</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home -xtype l -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 
 <p>(2)在(1)基础上，完善命令以实现删除所有失效链接。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home -xtype l -<span class="built_in">exec</span> <span class="built_in">rm</span> &#123;&#125; \</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home -xtype l -<span class="built_in">exec</span> <span class="built_in">rm</span> &#123;&#125; \</span><br></pre></td></tr></table></figure>
 
 <p><a href="10%E5%88%86">问题5</a><br>Linux系统的权限模型由文件的所有者、文件的组、所有其他用户以及读(r)、写(w)、执行(x)组成.<br>(1)请写出第一个文件的数字权限表示;</p>
 <blockquote>
@@ -725,7 +1267,7 @@
 <p>可读、不可写、可执行</p>
 </blockquote>
 <p>(4)请给出去掉第一个文件的’x’权限的命令。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chomd 644 openvpn</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chomd 644 openvpn</span><br></pre></td></tr></table></figure>
 
 <p>(5)执行(4)给出的命令后，请说明root用户能否进入该文件</p>
 <blockquote>
@@ -733,7 +1275,7 @@
 </blockquote>
 <h2 id="12-2021年试题三"><a href="#12-2021年试题三" class="headerlink" title="12-2021年试题三"></a>12-2021年试题三</h2><p>试题三(共18分)<br>阅读下列说明和图，回答问题1至问题9，将解答填入答题纸的对应栏内。<br>【说明】<br>Windows系统日志是记录系统中硬件、软件和系统问题的信息，同时还可以监视系统中发生的事件。用户可以通过它来检査错误发生的原因，或者寻找受到攻击时攻击者留下的痕迹。</p>
 <p>有一天，王工在夜间的例行安全巡检过程中，发现有异常日志告警，通过査看NTA全流量分析设备，找到了对应的可疑流量，请分析其中可能的安全事<br>件。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9012-1.png" alt="案例分析12-1"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9012-1.png" alt="案例分析12-1"></p>
 <p><a href="2%E5%88%86">问题4</a><br>Windows系统通过事件ID来记录不同的系统行为，图3-1的事件!D为4625，请结合任务类别，判断导致上述日志的最有可能的情况</p>
 <blockquote>
 <p>B.网络失败登录</p>
@@ -809,14 +1351,14 @@
 <p>(4)请写出对该用户名进行加密的计算公式。</p>
 <p>$$C\ &#x3D;\ M^e\ mod\ n$$</p>
 <h2 id="14-2021年试题一"><a href="#14-2021年试题一" class="headerlink" title="14-2021年试题一"></a>14-2021年试题一</h2><p>试题一(共20分)<br>阅读下列说明和图，回答问题1至问题5，将解答填入答题纸的对应栏内。<br>【说明】<br>在某政府单位信息中心工作的李工要负责网站的设计、开发工作。为了确保部门新业务的顺利上线，李工邀请信息安全部门的干工按照等级保护2.0的要求对其开展安全测评，李工提供网站所在的网络拓扑图如图1-1所示，图中，网站服务器的!P地址是192.168.70.140，数据库服务器的IP地址是192.168.0.141.</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9014-1.png" alt="案例分析14-1"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9014-1.png" alt="案例分析14-1"></p>
 <p>王工接到网站安全测评任务以后，决定在内网办公区的信息安全部开展各项运维工作，王工使用的办公电脑|P地址为192.168.11.2。</p>
 <p><a href="2%E5%88%86">问题1</a><br>按照等级保护2.0的要求，政府网站的定级不应低于几级?该等级的测评每几年开展一次?</p>
 <blockquote>
 <p>政府网站的定级不应低于二级，每两年测评一次</p>
 </blockquote>
 <p><a href="6%E5%88%86">问题2</a><br>按照网络安全测评的实施方式，测评主要包括安全功能检测、安全管理检测、代码安全审查、安全渗透、信息系统攻击测试等。王工调阅了部分网站后台处理代码，发现网站某页面的数据库<br>查询代码存在安全漏洞，代码如下:</p>
-<img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/案例分析14-2.png" alt="案例分析14-2" style="zoom:67%;">
+<img src="https://gitee.com/kingwempity/images/raw/master/images/案例分析14-2.png" alt="案例分析14-2" style="zoom:67%;">
 
 <p>(1)请问上述代码存在哪种漏洞?</p>
 <blockquote>
@@ -860,19 +1402,19 @@
 <p>D</p>
 </blockquote>
 <p>A.</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">observe-port 1interface GiqabitEthernet1/0/2</span><br><span class="line">interface GigabitEthemet1/0/1</span><br><span class="line">port-mirroring to observe-port 1 inbound/outbound/both</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">observe-port 1interface GiqabitEthernet1/0/2</span><br><span class="line">interface GigabitEthemet1/0/1</span><br><span class="line">port-mirroring to observe-port 1 inbound/outbound/both</span><br></pre></td></tr></table></figure>
 
 <p>B.</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">observe-port 2 interface GiqabitEthernet1/0/2</span><br><span class="line">interface GigabitEthemet1/0/1</span><br><span class="line">port-mirroring to observe-port 1 inbound/outbound/both</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">observe-port 2 interface GiqabitEthernet1/0/2</span><br><span class="line">interface GigabitEthemet1/0/1</span><br><span class="line">port-mirroring to observe-port 1 inbound/outbound/both</span><br></pre></td></tr></table></figure>
 
 <p>C.</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">port-mirroring to observe-port 1 inbound/outbound/both</span><br><span class="line">observe-port 1interfaceGiqabiEthenet1/0/2</span><br><span class="line">interface GigabitEthenet1/0/1</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">port-mirroring to observe-port 1 inbound/outbound/both</span><br><span class="line">observe-port 1interfaceGiqabiEthenet1/0/2</span><br><span class="line">interface GigabitEthenet1/0/1</span><br></pre></td></tr></table></figure>
 
 <p>D.</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">observe-port 1interface GiqabitEthernet1/0/1</span><br><span class="line">interface GiqabitEthemet1/0/2</span><br><span class="line">port-mirrorina to observe-port 1 inbound/outbound/both</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">observe-port 1interface GiqabitEthernet1/0/1</span><br><span class="line">interface GiqabitEthemet1/0/2</span><br><span class="line">port-mirrorina to observe-port 1 inbound/outbound/both</span><br></pre></td></tr></table></figure>
 
 <p>(4)Snort入侵检测系统部署不久，就发现了一起网络攻击。李工打开攻击分组查看，发现很多字符看起来不像是正常字母，如图下图所示，请问该用哪种编码方式去解码该网络分组内容?(1分)</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9014-3.png" alt="案例分析14-3"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9014-3.png" alt="案例分析14-3"></p>
 <blockquote>
 <p>URL编码（URL encode）</p>
 </blockquote>
@@ -898,7 +1440,7 @@
 </blockquote>
 <p><a href="4%E5%88%86">问题3</a></p>
 <p>日志包含设备、系统和应用软件的各种运行信息，是安全运维的重点关注对象。李工在定期巡检服务器的SSH日志时，发现了以下可疑记录:</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Jul 22 17: 17: 52 humen systed-logiad [1182] : Waching sytem buttons on/dev/input/evet0 (Power Button)</span><br><span class="line">Jul 22 17: 17: 52 humen systed-logiad [1182] : Waching sytem buttons on/dev/inputlevet1(AT Translated Set 2 keyboard)</span><br><span class="line">Jul 23 09: 33: 41 humen sshd [5423] :pam unix (sshd:auth) authentication falure, logame= uid=0 euid=0 ty=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 43 humen sshd [5423] :Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 40231 ssh2</span><br><span class="line">Jul 23 09: 33: 43 humen sshd [5423] :Connection closed by authenticating user humen 192.168.107.130 port 40231[reauth]</span><br><span class="line">Jul 23 09: 33: 43 humen sshd [5425] :pam unix (sshd:auth) :authentication failure; <span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 45 humen sshd [5425]: Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 37223 ssh2</span><br><span class="line">Jul 23 09: 33: 45 humen sshd [54251 : Connection closed by authenticating user humen192.168.107.130 port 37223 [preauth]</span><br><span class="line">Jul 23 09: 33: 45 humen sshd [5427] : pam unix (sshd:auth) :authentication failure;<span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 47 humen sshd [5427] : Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 41365 ssh2</span><br><span class="line">Jul 23 09: 33: 47 humen sshd [5427] :Connection closed by authenticaing user humen 192.168.107.130 port 41365 [preauth]</span><br><span class="line">Jul 23 09: 33: 47 humen sshd [5429] : pam unix (sshd:auth) :authentication falure;<span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 49 humen sshd [5429] : Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 45627 ssh2</span><br><span class="line">Jul 23 09: 33: 49 humen sshd [5429] :Connection closed by authenticating user humen 192.168.107.130 port 45627 [preauth]</span><br><span class="line">Jul 23 09: 33: 49 humen sshd [5431] : pam unix (sshd:auth) :authentication failure;<span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 51 humen sshd [5431]: Failed password <span class="keyword">for</span> humen from192.168.107.130 port 42271 ssh2</span><br><span class="line">Jul 23 09: 33: 51 humen sshd [5431] :Connection closed by authenticaing user humen 192.168.107.130 port 42271 [preauth]</span><br><span class="line">Jul 23 09: 33: 51 humen sshd [5433] : pam unix (sshd:auth) :authentication failure;<span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 53 humen sshd [5433] : Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 45149 ssh2</span><br><span class="line">Jul23 09: 33: 53 humen sshd [5433l :Connection closed by authenticating user humen 192.168.107.130 port 45149 [preauth]</span><br><span class="line">Jul 23 09: 33:54 humen sshd [5435] :Accepted password <span class="keyword">for</span> humen from 192.168.107.130 port 45671 ssh2</span><br><span class="line">Jul 23 09: 33: 54 humen sshd [5435]: pam unix (sshd:auth) : session opened <span class="keyword">for</span> user humen by (uid=0)</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Jul 22 17: 17: 52 humen systed-logiad [1182] : Waching sytem buttons on/dev/input/evet0 (Power Button)</span><br><span class="line">Jul 22 17: 17: 52 humen systed-logiad [1182] : Waching sytem buttons on/dev/inputlevet1(AT Translated Set 2 keyboard)</span><br><span class="line">Jul 23 09: 33: 41 humen sshd [5423] :pam unix (sshd:auth) authentication falure, logame= uid=0 euid=0 ty=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 43 humen sshd [5423] :Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 40231 ssh2</span><br><span class="line">Jul 23 09: 33: 43 humen sshd [5423] :Connection closed by authenticating user humen 192.168.107.130 port 40231[reauth]</span><br><span class="line">Jul 23 09: 33: 43 humen sshd [5425] :pam unix (sshd:auth) :authentication failure; <span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 45 humen sshd [5425]: Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 37223 ssh2</span><br><span class="line">Jul 23 09: 33: 45 humen sshd [54251 : Connection closed by authenticating user humen192.168.107.130 port 37223 [preauth]</span><br><span class="line">Jul 23 09: 33: 45 humen sshd [5427] : pam unix (sshd:auth) :authentication failure;<span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 47 humen sshd [5427] : Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 41365 ssh2</span><br><span class="line">Jul 23 09: 33: 47 humen sshd [5427] :Connection closed by authenticaing user humen 192.168.107.130 port 41365 [preauth]</span><br><span class="line">Jul 23 09: 33: 47 humen sshd [5429] : pam unix (sshd:auth) :authentication falure;<span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 49 humen sshd [5429] : Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 45627 ssh2</span><br><span class="line">Jul 23 09: 33: 49 humen sshd [5429] :Connection closed by authenticating user humen 192.168.107.130 port 45627 [preauth]</span><br><span class="line">Jul 23 09: 33: 49 humen sshd [5431] : pam unix (sshd:auth) :authentication failure;<span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 51 humen sshd [5431]: Failed password <span class="keyword">for</span> humen from192.168.107.130 port 42271 ssh2</span><br><span class="line">Jul 23 09: 33: 51 humen sshd [5431] :Connection closed by authenticaing user humen 192.168.107.130 port 42271 [preauth]</span><br><span class="line">Jul 23 09: 33: 51 humen sshd [5433] : pam unix (sshd:auth) :authentication failure;<span class="built_in">logname</span>= uid=0 euid=0 <span class="built_in">tty</span>=ssh</span><br><span class="line">ruser=rhost=192.168.107.130 user=humen</span><br><span class="line">Jul 23 09: 33: 53 humen sshd [5433] : Failed password <span class="keyword">for</span> humen from 192.168.107.130 port 45149 ssh2</span><br><span class="line">Jul23 09: 33: 53 humen sshd [5433l :Connection closed by authenticating user humen 192.168.107.130 port 45149 [preauth]</span><br><span class="line">Jul 23 09: 33:54 humen sshd [5435] :Accepted password <span class="keyword">for</span> humen from 192.168.107.130 port 45671 ssh2</span><br><span class="line">Jul 23 09: 33: 54 humen sshd [5435]: pam unix (sshd:auth) : session opened <span class="keyword">for</span> user humen by (uid=0)</span><br></pre></td></tr></table></figure>
 
 <p>(1)请问李工打开的系统日志文件的路径和名称?</p>
 <blockquote>
@@ -914,22 +1456,22 @@
 <p>&#x2F;etc&#x2F;ssh&#x2F;sshd_config</p>
 </blockquote>
 <p>(2)李工在创建证书后需要拷贝公钥信息到服务器中。他在终端输入了以下拷贝命令，请说明命令中“&gt;&gt;”的含义。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh xiaoming@server <span class="built_in">cat</span>/home/xiaoming/.ssh/id rsa.pub &gt;&gt; authorized keys</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh xiaoming@server <span class="built_in">cat</span>/home/xiaoming/.ssh/id rsa.pub &gt;&gt; authorized keys</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>&gt;&gt;表示向文件中进行追加内容</p>
 </blockquote>
 <p>(3)服务器中的authorized keys文件详细信息如下，请给出文件权限的数字表示。</p>
-<div class="code-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rw-------1 root root 0 10月18 2018&#x27;authorized keys</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rw-------1 root root 0 10月18 2018&#x27;authorized keys</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>600</p>
 </blockquote>
 <p>(4)李工完成SSH配置修改后需要重启服务，请给出systemctl 重启SSH服务的命令。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd</span><br></pre></td></tr></table></figure>
 
 <p>(5)在上述服务配置过程中，配置命令中可能包含各种敏感信息，因此在配置结束后应及时清除历史命令信息，请给出清除系统历史记录应执行的命令。</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">history</span> -c</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">history</span> -c</span><br></pre></td></tr></table></figure>
 
 <p><a href="2%E5%88%86">问题5</a></p>
 <p>SSH之所以可以实现安全的远程访问，归根结底还是密码技术的有效使用。对于SSH协议，不管是李工刚开始使用的基于口令的认证还是后来的基于密钥的免密认证，都是密码算法和密码协议在为李工的远程访问保驾护航。请问上述安全能力是基于对称密码体制还是非对称密码体制来实现的?</p>
@@ -937,14 +1479,14 @@
 <p>非对称密码体制</p>
 </blockquote>
 <h2 id="16-2021年试题三"><a href="#16-2021年试题三" class="headerlink" title="16-2021年试题三"></a>16-2021年试题三</h2><p>试题三(共20分)<br>阅读下列说明和图，回答问题1至问题5,将解答填入答题纸的对应栏内。<br>【说明】<br>域名系统是网络空间的中枢神经系统，其安全性影响范围大，也是网络攻防的重点。李工在日常的流量监控中，发现以下可疑流量，请协助分析其中可能的安全事件。</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9016-1.png" alt="案例分析16-1"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%9016-1.png" alt="案例分析16-1"></p>
 <p><a href="4%E5%88%86">问题1</a><br>域名系统采用授权的分布式数据查询系统，完成域名和!P地址的解析。李工通过上述流量可以判断域名解析是否正常、有无域名劫持攻击等安全事件发生。<br>(1)域名系统的服务端程序工作在网络的哪一层?</p>
 <blockquote>
 <p>应用层</p>
 </blockquote>
 <p>(2)图3-1中的第一个网络分组要解析的域名是什么?</p>
 <blockquote>
-<p><a class="link" target="_blank" rel="noopener" href="http://www.humen.com/">www.humen.com<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a target="_blank" rel="noopener" href="http://www.humen.com/">www.humen.com</a></p>
 </blockquote>
 <p>(3)给出上述域名在DNS查询包中的表示形式(16进制)。</p>
 <blockquote>
@@ -1025,15 +1567,15 @@
 <p>storage</p>
 </blockquote>
 <p>(3)假如有移动应用A提供了如下服务 AService，对应的权限描述如下:</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;permission</span><br><span class="line">	android:name=<span class="string">&quot;USER INFO&quot;</span></span><br><span class="line">	android:label=<span class="string">&quot;read user information&quot;</span></span><br><span class="line">	android:description=<span class="string">&quot;get user information&quot;</span></span><br><span class="line">	android:ProtectionLevel=<span class="string">&quot;signature&quot;</span></span><br><span class="line">/&gt;</span><br><span class="line">&lt;service android:name=<span class="string">&quot;com.demo.AService&quot;</span></span><br><span class="line">	android:exported=<span class="string">&quot;true&quot;</span></span><br><span class="line">	android:permission=<span class="string">&quot;com.demo.permission.USER_INFO&quot;</span></span><br><span class="line">&lt;/serVice&gt;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;permission</span><br><span class="line">	android:name=<span class="string">&quot;USER INFO&quot;</span></span><br><span class="line">	android:label=<span class="string">&quot;read user information&quot;</span></span><br><span class="line">	android:description=<span class="string">&quot;get user information&quot;</span></span><br><span class="line">	android:ProtectionLevel=<span class="string">&quot;signature&quot;</span></span><br><span class="line">/&gt;</span><br><span class="line">&lt;service android:name=<span class="string">&quot;com.demo.AService&quot;</span></span><br><span class="line">	android:exported=<span class="string">&quot;true&quot;</span></span><br><span class="line">	android:permission=<span class="string">&quot;com.demo.permission.USER_INFO&quot;</span></span><br><span class="line">&lt;/serVice&gt;</span><br></pre></td></tr></table></figure>
 
 <p>如果其它应用B要访问该服务，应该申明使用该服务，将以下申明语句补充完整。</p>
 <p>1.&lt;				android : name &#x3D; “com.demo.ASeryice”&#x2F;&gt;</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;service android:name = <span class="string">&quot;com.demo.ASerryice&quot;</span>/&gt;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;service android:name = <span class="string">&quot;com.demo.ASerryice&quot;</span>/&gt;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>【说明】当一个应用要使用服务时，必须在应用的清单文件中声明所有的服务。必须添加sercive元素作为application元素作为子元素。例如</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">manifest...</span><br><span class="line">...</span><br><span class="line">applicationn ...</span><br><span class="line">service andrrod:name=.ExampleService /</span><br><span class="line">...</span><br><span class="line">/application</span><br><span class="line">/manifest</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">manifest...</span><br><span class="line">...</span><br><span class="line">applicationn ...</span><br><span class="line">service andrrod:name=.ExampleService /</span><br><span class="line">...</span><br><span class="line">/application</span><br><span class="line">/manifest</span><br></pre></td></tr></table></figure>
 
 
 </blockquote>
@@ -1067,7 +1609,7 @@
 <li>记录主体访问客体的权限及其访问方式的信息，提供访问控制决策判断的依据，也称为访<br>问控制策略库。</li>
 </ul>
 </blockquote>
-<p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png" alt="访问控制参考模型"></p>
+<p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.png" alt="访问控制参考模型"></p>
 </li>
 <li><p>自主访问控制模型、强制访问控制模型、基于角色的访问控制模型常用于操作系统、数据库系统的资源访问。</p>
 </li>
@@ -1314,7 +1856,7 @@
 </li>
 <li><p>计算机取证时首先必须隔离目标计算机系统，不给犯罪嫌疑人破坏证据的机会。对现场计算机的一个处理原则：已经开机的计算机不要关机，关机的计算机不要开机。</p>
 </li>
-<li><p>注入语句<a class="link" target="_blank" rel="noopener" href="http://xxx.xxx.xxx/abc.asp?pYY">http://xxx.xxx.xxx/abc.asp?pYY<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>  and user&gt;0 可以判断服务器的后台数据库是否为SQL-SERVER,还可得到 <strong>当前连接数据库的用户名</strong></p>
+<li><p>注入语句<a target="_blank" rel="noopener" href="http://xxx.xxx.xxx/abc.asp?pYY">http://xxx.xxx.xxx/abc.asp?pYY</a>  and user&gt;0 可以判断服务器的后台数据库是否为SQL-SERVER,还可得到 <strong>当前连接数据库的用户名</strong></p>
 </li>
 <li><p>在访问Internet时，为防止Web页面中恶意代码对自己计算机的损害，可采取的措施是 <strong>将要访问的Web站点按其可信度分配道浏览器的不同安全区域</strong></p>
 </li>
@@ -1573,7 +2115,7 @@
 </li>
 <li><p>基于网络的入侵检测系统NIDS：国外[Session Wall , ISS RealSecure , Cisco Secure IDS];开源Snort。</p>
 </li>
-<li><p><img lazyload src="/images/loading.svg" data-src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.png" alt="安全漏洞"></p>
+<li><p><img src="https://gitee.com/kingwempity/images/raw/master/images/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E.png" alt="安全漏洞"></p>
 </li>
 <li><p>僵尸网络是指攻击者利用入侵手段，将恶意代码植入目标计算机，进而操纵受害机执行恶意活动。</p>
 </li>
@@ -1597,152 +2139,413 @@
 </li>
 </ol>
 
-    </div>
+		</div>
 
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 信息安全工程师</li>
+        <li><strong>Author:</strong> 敬请T期待</li>
+        <li><strong>Created at
+                :</strong> 2024-10-25 15:28:08</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-11-18 15:44:07
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://kingwempity.github.io/2024/10/25/信息安全工程师-案例分析/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E8%BD%AF%E8%80%83%E4%B8%AD%E7%BA%A7/">#软考中级</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2024/10/26/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">进程与线程-操作系统</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2024/10/19/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">进程调度-操作系统</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
     
-    <div class="about">
-        <h1>About this Post</h1>
-        <div class="details">
-            <p>This post is written by kingwempity, licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC 4.0</a>.</p>
+
+        
+            
+    <div id="giscus-container"></div>
+    <script data-swup-reload-script defer>
+        async function loadGiscus() {
+            const giscusConfig = {
+                'src': 'https://giscus.app/client.js',
+                'data-repo': 'kingwempity/Guscus',
+                'data-repo-id': 'R_kgDONQjkwA',
+                'data-category': 'Announcements',
+                'data-category-id': 'DIC_kwDONQjkwM4CkV1Y',
+                'data-mapping': 'pathname',
+                'data-strict': '0',
+                'data-reactions-enabled': '1',
+                'data-emit-metadata': '1',
+                'data-theme': 'preferred_color_scheme',
+                'data-lang': 'zh-CN',
+                'data-input-position': 'bottom',
+                'data-loading': 'not-lazy',
+                'crossorigin': 'anonymous',
+                'async': true
+            }
+            const giscusScript = document.createElement('script');
+            for (const key in giscusConfig) {
+                giscusScript.setAttribute(key, giscusConfig[key]);
+            }
+            document.getElementById('giscus-container').appendChild(giscusScript);
+        }
+        if ('true') {
+            let loadGiscusTimeout = setTimeout(() => {
+                loadGiscus();
+                clearTimeout(loadGiscusTimeout);
+            }, 1000);
+        } else {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        }
+    </script>
+
+
+        
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">信息安全工程师</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">案例分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2017%E5%B9%B4"><span class="nav-number">1.1.</span> <span class="nav-text">1-2017年</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2018%E8%AF%95%E9%A2%98%E4%B8%80"><span class="nav-number">1.2.</span> <span class="nav-text">2-2018试题一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">1.3.</span> <span class="nav-text">3-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4"><span class="nav-number">1.4.</span> <span class="nav-text">4-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5"><span class="nav-number">1.5.</span> <span class="nav-text">5-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6"><span class="nav-number">1.6.</span> <span class="nav-text">6-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7"><span class="nav-number">1.7.</span> <span class="nav-text">7-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8"><span class="nav-number">1.8.</span> <span class="nav-text">8-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9"><span class="nav-number">1.9.</span> <span class="nav-text">9-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10"><span class="nav-number">1.10.</span> <span class="nav-text">10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11"><span class="nav-number">1.11.</span> <span class="nav-text">11-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-2021%E5%B9%B4%E8%AF%95%E9%A2%98%E4%B8%89"><span class="nav-number">1.12.</span> <span class="nav-text">12-2021年试题三</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-2021%E5%B9%B4%E8%AF%95%E9%A2%98%E5%9B%9B"><span class="nav-number">1.13.</span> <span class="nav-text">13-2021年试题四</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-2021%E5%B9%B4%E8%AF%95%E9%A2%98%E4%B8%80"><span class="nav-number">1.14.</span> <span class="nav-text">14-2021年试题一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-2021%E5%B9%B4%E8%AF%95%E9%A2%98%E4%BA%8C"><span class="nav-number">1.15.</span> <span class="nav-text">15-2021年试题二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-2021%E5%B9%B4%E8%AF%95%E9%A2%98%E4%B8%89"><span class="nav-number">1.16.</span> <span class="nav-text">16-2021年试题三</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-2021%E5%B9%B4%E8%AF%95%E9%A2%98%E5%9B%9B"><span class="nav-number">1.17.</span> <span class="nav-text">17-2021年试题四</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-2017%E5%B9%B4%E8%AF%95%E9%A2%98%E4%B8%80"><span class="nav-number">1.18.</span> <span class="nav-text">18-2017年试题一</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E6%B1%87%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">知识汇集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">信息安全基础知识</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">路漫漫其修远兮，吾将上下而求索</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">敬请T期待</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        29 posts in total
+                    </span>
+                    
+                        <span>
+                            111.4k words in total
+                        </span>
+                    
+                </p>
+            
         </div>
         
-        <p class="tags">
-            
-            <i class="icon"></i>
-            <a href="/tags/笔记/" class="tag">#笔记</a><a href="/tags/软考中级/" class="tag">#软考中级</a>
-        </p>
-        
-    </div>
-    
-
-    <div class="container post-prev-next">
-        
-        <a href="/2024/10/26/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="next">
-            <div>
-                <div class="text">
-                    <p class="label">Next</p>
-                    <h3 class="title">进程与线程-操作系统</h3>
-                </div>
-            </div>
-        </a>
-        
-        
-        <a href="/2024/10/19/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="prev">
-            <div>
-                <div class="text">
-                    <p class="label">Previous</p>
-                    <h3 class="title">进程调度-操作系统</>
-                </div>
-            </div>
-        </a>
-        
-    </div>
-
-    
-        
-        
-    
-</article>
-
-        <footer>
-    <div class="inner">
-        <div class="links">
-            
-            <div class="group">
-                <h2 class="title">Blog</h2>
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
                 
-                <a href="/" class="item">Blog</a>
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
                 
-                <a href="/archives" class="item">Archives</a>
                 
-                <a href="/tags" class="item">Tags</a>
-                
-                <a href="/categories" class="item">Categories</a>
-                
-                <a href="/search" class="item">Search</a>
-                
-                <a href="/friends" class="item">Friends</a>
-                
-                <a href="/projects" class="item">Projects</a>
-                
-                <a href="/resume" class="item">Resume</a>
-                
-                <a href="/about" class="item">About</a>
-                
-                <a href="/atom.xml" class="item">RSS</a>
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
                 
             </div>
-            
-            <div class="group">
-                <h2 class="title">Projects</h2>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/rsa-cli" class="item">RSA CLI</a>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/hexo-theme-cupertino" class="item">Hexo Theme Cupertino</a>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/a-calendar" class="item">A Calendar</a>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom/auto-mirroring-bucket" class="item">Auto Mirroring Bucket</a>
-                
-            </div>
-            
-            <div class="group">
-                <h2 class="title">Me</h2>
-                
-                <a target="_blank" rel="noopener" href="https://github.com/MrWillCom" class="item">GitHub</a>
-                
-                <a target="_blank" rel="noopener" href="https://codepen.io/mrwillcom" class="item">CodePen</a>
-                
-                <a target="_blank" rel="noopener" href="https://www.patreon.com/MrWillCom" class="item">Patreon</a>
-                
-                <a target="_blank" rel="noopener" href="https://noc.social/@MrWillCom" class="item">Mastodon</a>
-                
-                <a target="_blank" rel="noopener" href="https://discord.gg/UKuFDjcfY8" class="item">Discord</a>
-                
-                <a href="mailto:mr.will.com@outlook.com" class="item">Email</a>
-                
-            </div>
-            
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
         </div>
-        <span>&copy; 2025 kingwempity<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
         
         
-            <br>
-            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
-                <label>
-                    <input type="radio" value="light">
-                    <span>Light</span>
-                </label>
-                <label>
-                    <input type="radio" value="dark">
-                    <span>Dark</span>
-                </label>
-                <label>
-                    <input type="radio" value="auto">
-                    <span>Auto</span>
-                </label>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
             </div>
         
-    </div>
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
 </footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
 
 
-        
-<script src="/js/main.js"></script>
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Swup.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupSlideTheme.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScriptsPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupProgressPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupScrollPlugin.min.js" ></script><script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/SwupPreloadPlugin.min.js" ></script>
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
 
-        
-        
-        
 
-        
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script>
-            window.addEventListener('load', () => {
-                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
-                ScrollReveal().reveal('.post-list-item .cover-img img')
-                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
-            })
-        </script>
-        
-    </body>
+
+
+	<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/imageViewer.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/utils.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/main.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/navbarShrink.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/scrollTopBottom.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/lightDarkSwitch.js" ></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/categoryList.js" ></script>
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/localSearch.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/codeBlock.js" ></script>
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/lazyload.js" ></script>
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/runtime.js" ></script>
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/odometer.min.js" ></script>
+    <link rel="stylesheet" href="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/Typed.min.js" ></script>
+  <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/typed.js" ></script>
+
+
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js"></script>
+    
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/mermaid.js" ></script>
+
+
+
+    <script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/minimasonry.min.js" ></script>
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/masonry.js" ></script>
+
+
+
+
+
+
+    <script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/tools/tocToggle.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/toc.js" data-swup-reload-script></script><script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/tabs.js" data-swup-reload-script></script>
+
+
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/moment-with-locales.min.js" data-swup-reload-script></script>
+<script type="module" src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/layouts/essays.js" data-swup-reload-script></script>
+
+
+
+
+	
+	<div id="aplayer"></div>
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/libs/APlayer.min.js" ></script>
+<script  src="https://registry.npmmirror.com/hexo-theme-redefine/2.8.2/files/source/js/build/plugins/aplayer.js" ></script>
+
+	
+</body>
+
 </html>
